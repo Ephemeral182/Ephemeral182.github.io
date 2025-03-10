@@ -92,10 +92,6 @@ body {
   margin: 0;
   line-height: 0;
   font-size: 0; /* 消除可能的空白 */
-  display: flex; /* 添加flex布局 */
-  align-items: center; /* 垂直居中 */
-  justify-content: center; /* 水平居中 */
-  height: 100%; /* 确保容器高度占满父元素 */
 }
 
 .image-wrapper img {
@@ -104,7 +100,7 @@ body {
   display: block;
   border-radius: 12px;
   /* 调整阴影大小，使其更贴近图片边缘 */
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
   margin: 0;
 }
@@ -112,31 +108,30 @@ body {
 .image-wrapper:hover img {
   transform: translateY(-5px);
   /* 调整悬停时的阴影，使其更贴近图片边缘 */
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* 特别处理右侧空白问题 */
-td.image-wrapper {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* 移除可能的右侧内边距 */
-.image-wrapper img {
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* 修复表格单元格样式 */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
+/* 确保表格单元格没有额外空间 */
 td {
   padding: 10px;
-  vertical-align: middle; /* 从top改为middle，使内容垂直居中 */
+  vertical-align: top;
+  font-size: initial; /* 恢复正常字体大小 */
+}
+
+td.image-wrapper {
+  padding: 0;
+  white-space: nowrap; /* 防止可能的空白 */
+}
+
+/* 添加特定的左右阴影控制 */
+.image-wrapper img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
+}
+
+.image-wrapper:hover img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
 }
 
 /* 确保没有额外的边距 */

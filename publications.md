@@ -407,6 +407,17 @@ td {
 .text-wrapper {
   font-size: 0.9em; /* 减小作者和其他信息的字体 */
 }
+
+/* 鼠标流光粒子样式 */
+.mouse-particle {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
+  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
 </style>
 
 <!-- 添加摘要部分 -->
@@ -1177,5 +1188,73 @@ td {
 
 
 <!-- --- -->
+
+<script>
+// 鼠标流光特效
+document.addEventListener('DOMContentLoaded', function() {
+  // 创建粒子
+  function createParticle(x, y, size) {
+    const particle = document.createElement('div');
+    particle.className = 'mouse-particle';
+    
+    // 随机大小变化
+    const actualSize = size * (0.5 + Math.random() * 0.5);
+    particle.style.width = actualSize + 'px';
+    particle.style.height = actualSize + 'px';
+    
+    // 彩虹渐变效果 - 随机选择一个起始色相
+    const hue = Math.floor(Math.random() * 360);
+    particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
+    particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
+    
+    // 设置位置
+    particle.style.left = x + 'px';
+    particle.style.top = y + 'px';
+    
+    // 添加到页面
+    document.body.appendChild(particle);
+    
+    // 粒子消失动画
+    setTimeout(() => {
+      particle.style.opacity = '0';
+      particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
+      particle.style.transition = 'all 0.6s ease-out';
+      
+      // 移除粒子
+      setTimeout(() => {
+        document.body.removeChild(particle);
+      }, 600);
+    }, 10);
+  }
+  
+  // 跟踪鼠标移动
+  let lastX = 0;
+  let lastY = 0;
+  let throttle = false;
+  
+  document.addEventListener('mousemove', function(e) {
+    if (throttle) return;
+    throttle = true;
+    
+    // 限制粒子生成频率
+    setTimeout(() => {
+      throttle = false;
+    }, 10);
+    
+    const x = e.clientX;
+    const y = e.clientY;
+    
+    // 计算移动速度
+    const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
+    const size = Math.min(16, Math.max(5, speed * 0.4)); // 减小粒子尺寸
+    
+    // 创建粒子
+    createParticle(x, y, size);
+    
+    lastX = x;
+    lastY = y;
+  });
+});
+</script>
 
 

@@ -4,6 +4,36 @@ layout: page
 <style>
 body {
   background-color: #f0f5fa;  /* 非常淡的蓝色背景 */
+  position: relative;
+  overflow-x: hidden; /* 防止水平滚动条出现 */
+}
+
+/* 页面流光特效 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(100, 180, 255, 0.2), 
+    transparent
+  );
+  z-index: -1;
+  animation: page-flow-light 8s infinite linear;
+  pointer-events: none; /* 确保不会干扰页面交互 */
+}
+
+/* 页面流光动画 */
+@keyframes page-flow-light {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .scrollable-news {

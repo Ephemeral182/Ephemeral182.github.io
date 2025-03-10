@@ -92,6 +92,10 @@ body {
   margin: 0;
   line-height: 0;
   font-size: 0; /* 消除可能的空白 */
+  display: flex; /* 添加flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  height: 100%; /* 确保容器高度占满父元素 */
 }
 
 .image-wrapper img {
@@ -132,7 +136,7 @@ table {
 
 td {
   padding: 10px;
-  vertical-align: top;
+  vertical-align: middle; /* 从top改为middle，使内容垂直居中 */
 }
 
 /* 确保没有额外的边距 */

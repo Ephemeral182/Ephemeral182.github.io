@@ -88,8 +88,8 @@ body::before {
   pointer-events: none;
   position: fixed;
   border-radius: 50%;
-  background: rgba(255, 215, 0, 0.15); /* 金色背景，低不透明度 */
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* 金色阴影，低不透明度 */
+  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
+  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
   z-index: 10000;
   transform: translate(-50%, -50%);
 }
@@ -201,6 +201,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const actualSize = size * (0.5 + Math.random() * 0.5);
     particle.style.width = actualSize + 'px';
     particle.style.height = actualSize + 'px';
+    
+    // 彩虹渐变效果 - 随机选择一个起始色相
+    const hue = Math.floor(Math.random() * 360);
+    particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
+    particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
     
     // 设置位置
     particle.style.left = x + 'px';

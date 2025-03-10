@@ -451,7 +451,7 @@ td {
   <tbody>
     <tr>
       <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr25_snowmaster.png" alt="dise"> 
+        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="dise"> 
       </td>
       <td width="75%" valign="center" class="text-wrapper"> 
           <papertitle>

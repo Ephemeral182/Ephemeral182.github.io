@@ -608,8 +608,10 @@ td {
               Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint
             </strong>
           </papertitle><br>
+          <div>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Real-world Generalization, Prompt Learning</span>
+          </div>
           <strong><u>Sixiang Chen</u></strong>, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
@@ -634,8 +636,10 @@ td {
               Semi-Supervised Video Desnowing Network via Temporal Decoupling Experts and Distribution-Driven Contrastive Regularization
             </strong>
           </papertitle><br>
+          <div>
           <span class="paper-tag tag-method">MoE for Video Restoration</span>
           <span class="paper-tag tag-application">Semi-Supervised Learning, New Benchmark</span>
+          </div>
           Hongtao Wu, Yijun Yang, Angelica Aviles-Rivero, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
@@ -660,8 +664,10 @@ td {
               Cross-conditioned Diffusion Model for medical image-to-image translation
             </strong>
           </papertitle><br>
+          <div>
           <span class="paper-tag tag-method">Generative Model for  Medical Image Translation</span>
           <span class="paper-tag tag-application">Conditional Generation</span>
+          </div>
           Zhaohu Xing, Sicheng Yang, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Medical Image Computing and Computer Assisted Intervention <strong>(MICCAI)</strong></em>, 2024
@@ -686,8 +692,10 @@ td {
               Learning Diffusion Texture Priors for Image Restoration
             </strong>
           </papertitle><br>
+          <div>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Diffusion Model for Textural Learning</span>
+          </div>
           Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong></em>, 2024
@@ -717,9 +725,10 @@ td {
               Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks
             </strong>
           </papertitle><br>
-          <br>
+          <div>
           <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
           <span class="paper-tag tag-application">Uncertainty-Driven Consideration, Sparse Sampling</span>
+          </div>
           <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jinbin Bai, Jun Shi, Erkang Chen, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
@@ -745,8 +754,10 @@ td {
         Adverse Weather Removal with Codebook Priors
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Codebook Priors</span>
+        </div>
         Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
         <br>  
         <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
@@ -771,8 +782,10 @@ td {
           Uncertainty-Driven Dynamic Degradation Perceiving and Background Modeling for Efficient Single Image Desnowing
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
           <span class="paper-tag tag-application">Novel Perspective for Desnowing</span>
+        </div>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Chenghao Xue*, Haoyu Chen, Yun Liu, Erkang Chen, Lei Zhu<sup>✉️</sup>.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -797,8 +810,10 @@ td {
           CPLFormer: Cross-scale Prototype Learning Transformer for Image Snow Removal
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Prototype Learning for Image Restoration</span>
           <span class="paper-tag tag-application">Cross-scale Prototype </span>
+        </div>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Jinbin Bai, Haoyu Chen, Yunlong Lin, Jun Shi, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -823,8 +838,10 @@ td {
           Sequential Affinity Learning for Video Restoration
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Sequential Affinity for Video Restoration</span>
           <span class="paper-tag tag-application">Sequential Affinity Learning</span>
+        </div>
         Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Yun Liu<sup>✉️</sup>, Wenhao Chai, Jinbin Bai, Wenbin Zou, Yunchen Zhang, jiang mingchao, Erkang Chen, Chenghao Xue.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -847,8 +864,10 @@ td {
           NightHazeFormer: Single Nighttime Haze Removal Using Prior Query Transformer
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Prior Query Transformer for Image Restoration</span>
           <span class="paper-tag tag-application">Physical Prior, New Benchmark</span>
+        </div>
         Yun Liu, Zhongsheng Yan, <strong><u>Sixiang Chen</u><sup>✉️</sup></strong>, Tian Ye<sup>✉️</sup>, Wenqi Ren, Erkang Chen.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -871,8 +890,10 @@ td {
           Five A+ Network: You Only Need 9K Parameters for Underwater Image Enhancement
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Efficient Image Restoration</span>
         <span class="paper-tag tag-application">Only 9K Parameters</span>
+        </div>
         Jingxia Jiang*, Tian Ye*, Jinbin Bai*, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Jun Shi, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>British Machine Vision Conference (BMVC)</em>, 2023
@@ -895,8 +916,10 @@ td {
           DEHRFormer: Real-time Transformer for Depth Estimation and Haze Removal from Varicolored Haze Scenes
         </strong>
         </papertitle><br>
+        <div>
           <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
           <span class="paper-tag tag-application">Real-time, New Benchmark for Vari-color Haze</span>
+        </div>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jun Shi, Yun Liu, JingXia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
         <br>  
         <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
@@ -919,8 +942,10 @@ td {
           MSP-Former: Multi-Scale Projection Transformer for Single Image Desnowing
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">Multi-Scale Projection, First Vision Transformer for Desnowing</span>
+        </div>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Taodong Liao, Jingxia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
         <br>  
         <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
@@ -950,8 +975,10 @@ td {
           SnowFormer: Context Interaction Transformer with Scale-awareness for Single Image Desnowing
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">SOTA Desnowing, Significant Performance Improvement</span>
+        </div>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Arxiv (Under review)</em>, 2022
@@ -974,8 +1001,10 @@ td {
           Towards Real-time High-Definition Image Snow Removal: Efficient Pyramid Network with Asymmetrical Encoder-decoder Architecture
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Efficient Image Restoration</span>
         <span class="paper-tag tag-application">Real-time, High-Definition</span>
+        </div>
         Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Asian Conference on Computer Vision <strong>(ACCV)</strong></em>, 2022
@@ -999,8 +1028,10 @@ td {
           Efficient Image Restoration
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">Latent-based Self-attention</span>
+        </div>
         <strong><u>Sixiang Chen</u></strong>, Tian Ye, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Digital Signal Processing</em>, 2024
@@ -1023,8 +1054,10 @@ td {
           Perceiving and Modeling Density for Image Dehazing
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Novel Attention for Image Restoration</span>
         <span class="paper-tag tag-application">New Perspective for Image Dehazing</span>
+        </div>
         Tian Ye*, Mingchao Jiang*, Yunchen Zhang*, Liang Chen, Yun Liu, <strong><u>Sixiang Chen</u></strong>, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>European Conference on Computer Vision <strong>(ECCV Oral)</strong></em>, 2022
@@ -1046,8 +1079,10 @@ td {
           Underwater Light Field Retention: Neural Rendering for Underwater Imaging
         </strong>
         </papertitle><br>
+        <div>
         <span class="paper-tag tag-method">Neural Rendering for Image Generation</span>
         <span class="paper-tag tag-application">Light Field Retention, New Benchmark</span>
+        </div>
         Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>, Yuche Li.
         <br>  
         <em>Conference on Computer Vision and Pattern Recognition Workshop <strong>(CVPRW)</strong></em>, 2022

@@ -80,32 +80,58 @@ body {
   color: #4CAF50;
 }
 
-/* 添加图片容器悬停效果 */
+/* 添加图片容器悬停效果 - 进一步优化 */
 .image-wrapper {
   position: relative;
-  overflow: visible; /* 改为visible以允许阴影可见 */
-  border-radius: 0; /* 移除容器的圆角 */
+  overflow: visible; /* 允许阴影可见 */
+  border-radius: 0;
   transition: all 0.3s ease;
   width: 100%;
-  box-shadow: none; /* 确保容器没有阴影 */
-  padding: 0; /* 移除内边距 */
-  margin: 0; /* 移除外边距 */
-  line-height: 0; /* 移除行高可能造成的额外空间 */
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  font-size: 0; /* 消除可能的空白 */
 }
 
 .image-wrapper img {
   width: 100%;
   height: auto;
-  display: block; /* 确保图片是块级元素 */
-  border-radius: 12px; /* 保持图片圆角 */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 图片阴影 */
+  display: block;
+  border-radius: 12px;
+  /* 调整阴影大小，使其更贴近图片边缘 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
-  margin: 0; /* 确保图片没有外边距 */
+  margin: 0;
 }
 
 .image-wrapper:hover img {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  /* 调整悬停时的阴影，使其更贴近图片边缘 */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* 确保表格单元格没有额外空间 */
+td {
+  padding: 10px;
+  vertical-align: top;
+  font-size: initial; /* 恢复正常字体大小 */
+}
+
+td.image-wrapper {
+  padding: 0;
+  white-space: nowrap; /* 防止可能的空白 */
+}
+
+/* 添加特定的左右阴影控制 */
+.image-wrapper img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05);
+}
+
+.image-wrapper:hover img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
 }
 
 /* 论文条目样式优化 */
@@ -346,17 +372,6 @@ body {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: flex-start;
-}
-
-/* 调整表格单元格样式 */
-td {
-  padding: 10px; /* 减少单元格内边距 */
-  vertical-align: top; /* 确保垂直对齐在顶部 */
-}
-
-/* 特别是包含图片的单元格 */
-td.image-wrapper {
-  padding: 0; /* 移除包含图片的单元格的内边距 */
 }
 </style>
 

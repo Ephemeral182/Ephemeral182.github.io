@@ -39,6 +39,9 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ---
 
 ## News and Updates
+- **Feb. 2025：**&#127752; Fortunately, three papers have been accepted by**CVPR'2025**.
+- **Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.
+- **Jan. 2025：**&#127752; I start to serve as a reviewer in **TIP**.
 - **Dec. 2024：**&#127752; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.
 - **Dec. 2024：**&#128640; Serendipitously, four papers have been accepted by **AAAI'2025**.
 - **Sept. 2024：**&#127873; Luckily, one paper has been accepted by **NeurIPS'2024**.
@@ -68,6 +71,9 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ## Academic Service & Awards
 
 **Program Committee / Reviewer:**
+ -  International Conference on Computer Vision (**ICCV'2025**)
+ - Conference on Neural Information Processing Systems (**NeurIPS'2025**)
+ - IEEE Transactions on Image Processing (**TIP**)
  - International Conference on Machine Learning (**ICML'2025**)
  - Conference on Computer Vision and Pattern Recognition (**CVPR'2025**)
  - International Conference on Learning Representations (**ICLR'2025**)

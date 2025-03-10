@@ -87,19 +87,22 @@ body {
   border-radius: 12px;
   transition: all 0.3s ease;
   width: 100%;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);  /* 修改阴影效果，使其更轻微 */
+  box-shadow: none; /* 移除默认阴影 */
 }
 
 .image-wrapper img {
   width: 100%;
-  height: auto;  /* 改为auto以保持图片比例 */
+  height: auto;
   object-fit: cover;
-  display: block;  /* 确保没有额外空间 */
+  display: block;
+  border-radius: 12px; /* 确保图片也有圆角 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 直接给图片添加阴影 */
+  transition: all 0.3s ease;
 }
 
-.image-wrapper:hover {
-  transform: translateY(-5px);  /* 悬停时向上移动 */
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);  /* 悬停时增加阴影 */
+.image-wrapper:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
 /* 论文条目样式优化 */

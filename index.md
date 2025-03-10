@@ -81,34 +81,32 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ## News and Updates
 
 <div class="scrollable-news">
-  <ul>
-  <li>**Feb. 2025：**&#127873; Fortunately, three papers have been accepted by **CVPR'2025**.</li>
-  <li>**Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.</li>
-  <li>**Jan. 2025：**&#127942; I start to serve as a reviewer in **TIP**.</li>
-  <li>**Dec. 2024：**&#127881; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.</li>
-  <li>**Dec. 2024：**&#128640; Serendipitously, four papers have been accepted by **AAAI'2025**.</li>
-  <li>**Sept. 2024：**&#127873; Luckily, one paper has been accepted by **NeurIPS'2024**.</li>
-  <li>**Jun. 2024：**&#127752; I start to serve as a reviewer in **TITS**.</li>
-  <li>**Aug. 2024：**&#127752; I start to serve as a reviewer in **ICLR'2025**.</li>
-  <li>**Jul. 2024：**&#128640; Fortunately, two papers have been accepted by **ECCV'2024**.</li>
-  <li>**Jun. 2024：**&#127873; Serendipitously, one paper has been accepted by **MICCAI'2024**.</li>
-  <li>**Jun. 2024：**&#127752; I start to serve as a reviewer in **TCSVT**.</li>
-  <li>**May 2024：**&#127752; I start to serve as a reviewer in **NeurIPS'2024**.</li>
-  <li>**Apr. 2024：**&#127942; Luckily, one paper has been accepted by **CVPR'2024** as a **Highlight**.</li>
-  <li>**Nov. 2023：**&#127881; Serendipitously, one paper has been accepted by **AAAI'2024**.</li>
-  <li>**Aug. 2023：**&#128640; Serendipitously, one paper has been accepted by **BMVC'2023**.</li>
-  <li>**Jul. 2023：**&#127881; Luckily, four papers have been accepted by **ACM MM'2023**.</li>
-  <li>**Jul. 2023：**&#127942; To my good fortune, two papers have been accepted by **ICCV'2023**.</li>
-  <li>**Jul. 2023：**&#128640; I start to serve as a reviewer in **TMM**.</li>
-  <li>**Jun. 2023：**&#127881; I am awarded the honor of **outstanding graduate** from Jimei University.</li>
-  <li>**May 2023：** One paper has been presented in **Arxiv'2023 (Under review)** .</li>
-  <li>**Feb. 2023：**&#128640; Luckily, two papers are accepted to **ICASSP'2023**.</li>
-  <li>**Dec. 2022：** One paper submits to **Arxiv'2023 (Under review)** .</li>
-  <li>**Sept. 2022：**&#127881; Fortunately, one paper has been accepted by **ACCV'2022**.</li>
-  <li>**Sept. 2022：** One paper has been submited to **Arxiv'2023 (Under review)** .</li>
-  <li>**Jul. 2022：**&#127752; Fortunately, one paper has been accepted as an **oral presentation** by **ECCV'2022**.</li>
-  <li>**Jun. 2022：**&#127873; Serendipitously, one paper has been accepted by **CVPRW'2022**.</li>
-  </ul>
+  - **Feb. 2025：**&#127873; Fortunately, three papers have been accepted by **CVPR'2025**.
+  - **Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.
+  - **Jan. 2025：**&#127942; I start to serve as a reviewer in **TIP**.
+  - **Dec. 2024：**&#127881; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.
+  - **Dec. 2024：**&#128640; Serendipitously, four papers have been accepted by **AAAI'2025**.
+  - **Sept. 2024：**&#127873; Luckily, one paper has been accepted by **NeurIPS'2024**.
+  - **Jun. 2024：**&#127752; I start to serve as a reviewer in **TITS**.
+  - **Aug. 2024：**&#127752; I start to serve as a reviewer in **ICLR'2025**.
+  - **Jul. 2024：**&#128640; Fortunately, two papers have been accepted by **ECCV'2024**.
+  - **Jun. 2024：**&#127873; Serendipitously, one paper has been accepted by **MICCAI'2024**. 
+  - **Jun. 2024：**&#127752; I start to serve as a reviewer in **TCSVT**.
+  - **May 2024：**&#127752; I start to serve as a reviewer in **NeurIPS'2024**.
+  - **Apr. 2024：**&#127942; Luckily, one paper has been accepted by **CVPR'2024** as a **Highlight**.
+  - **Nov. 2023：**&#127881; Serendipitously, one paper has been accepted by **AAAI'2024**.
+  - **Aug. 2023：**&#128640; Serendipitously, one paper has been accepted by **BMVC'2023**.
+  - **Jul. 2023：**&#127881; Luckily, four papers have been accepted by **ACM MM'2023**.
+  - **Jul. 2023：**&#127942; To my good fortune, two papers have been accepted by **ICCV'2023**.
+  - **Jul. 2023：**&#128640; I start to serve as a reviewer in **TMM**.
+  - **Jun. 2023：**&#127881; I am awarded the honor of **outstanding graduate** from Jimei University.
+  - **May 2023：** One paper has been presented in **Arxiv'2023 (Under review)** .
+  - **Feb. 2023：**&#128640; Luckily, two papers are accepted to **ICASSP'2023**.
+  - **Dec. 2022：** One paper submits to **Arxiv'2023 (Under review)** .
+  - **Sept. 2022：**&#127881; Fortunately, one paper has been accepted by **ACCV'2022**.
+  - **Sept. 2022：** One paper has been submited to **Arxiv'2023 (Under review)** .
+  - **Jul. 2022：**&#127752; Fortunately, one paper has been accepted as an **oral presentation** by **ECCV'2022**.
+  - **Jun. 2022：**&#127873; Serendipitously, one paper has been accepted by **CVPRW'2022**. 
 </div>
 
 ---

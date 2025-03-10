@@ -86,32 +86,20 @@ body {
   overflow: hidden;
   border-radius: 12px;
   transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);  /* 修改阴影效果，使其更轻微 */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;  /* 改为auto以保持图片比例 */
+  object-fit: cover;
+  display: block;  /* 确保没有额外空间 */
 }
 
 .image-wrapper:hover {
-  transform: scale(1.02);
-}
-
-.image-wrapper:hover::before {
-  content: attr( data-description);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 15px;
-  font-size: 14px;
-  opacity: 0;
-  transform: translateY(100%);
-  animation: slideUp 0.3s forwards;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: translateY(-5px);  /* 悬停时向上移动 */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);  /* 悬停时增加阴影 */
 }
 
 /* 论文条目样式优化 */
@@ -354,14 +342,14 @@ body {
   justify-content: flex-start;
 }
 
-/* 添加图片容器悬停效果 */
+/* 调整图片容器的右边距 */
 .image-wrapper {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   transition: all 0.3s ease;
-  width: 100%;  /* 确保容器宽度与父元素一致 */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);  /* 柔和的阴影 */
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  /* 柔和的阴影 */
 }
 
 .image-wrapper img {
@@ -373,18 +361,6 @@ body {
 .image-wrapper:hover {
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-
-/* 调整图片容器的右边距 */
-.image-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-right: 40px;  /* 增加右边距 */
 }
 
 /* 或者可以调整单元格的内边距 */

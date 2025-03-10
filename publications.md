@@ -720,7 +720,6 @@ td {
           <br>
           <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
           <span class="paper-tag tag-application">Uncertainty-Driven Consideration, Sparse Sampling</span>
-          <br>
           <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jinbin Bai, Jun Shi, Erkang Chen, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
@@ -748,7 +747,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Codebook Priors</span>
-        <br>
         Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
         <br>  
         <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
@@ -775,7 +773,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
           <span class="paper-tag tag-application">Novel Perspective for Desnowing</span>
-        <br>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Chenghao Xue*, Haoyu Chen, Yun Liu, Erkang Chen, Lei Zhu<sup>✉️</sup>.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -802,7 +799,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Prototype Learning for Image Restoration</span>
           <span class="paper-tag tag-application">Cross-scale Prototype </span>
-        <br>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Jinbin Bai, Haoyu Chen, Yunlong Lin, Jun Shi, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -829,7 +825,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Sequential Affinity for Video Restoration</span>
           <span class="paper-tag tag-application">Sequential Affinity Learning</span>
-        <br>
         Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Yun Liu<sup>✉️</sup>, Wenhao Chai, Jinbin Bai, Wenbin Zou, Yunchen Zhang, jiang mingchao, Erkang Chen, Chenghao Xue.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -854,7 +849,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Prior Query Transformer for Image Restoration</span>
           <span class="paper-tag tag-application">Physical Prior, New Benchmark</span>
-        <br>
         Yun Liu, Zhongsheng Yan, <strong><u>Sixiang Chen</u><sup>✉️</sup></strong>, Tian Ye<sup>✉️</sup>, Wenqi Ren, Erkang Chen.
         <br>  
         <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
@@ -879,7 +873,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Efficient Image Restoration</span>
         <span class="paper-tag tag-application">Only 9K Parameters</span>
-        <br>
         Jingxia Jiang*, Tian Ye*, Jinbin Bai*, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Jun Shi, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>British Machine Vision Conference (BMVC)</em>, 2023
@@ -904,7 +897,6 @@ td {
         </papertitle><br>
           <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
           <span class="paper-tag tag-application">Real-time, New Benchmark for Vari-color Haze</span>
-        <br>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jun Shi, Yun Liu, JingXia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
         <br>  
         <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
@@ -929,7 +921,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">Multi-Scale Projection, First Vision Transformer for Desnowing</span>
-        <br>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Taodong Liao, Jingxia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
         <br>  
         <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
@@ -961,7 +952,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">SOTA Desnowing, Significant Performance Improvement</span>
-        <br>
         <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Arxiv (Under review)</em>, 2022
@@ -986,7 +976,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Efficient Image Restoration</span>
         <span class="paper-tag tag-application">Real-time, High-Definition</span>
-        <br>
         Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Asian Conference on Computer Vision <strong>(ACCV)</strong></em>, 2022
@@ -1012,7 +1001,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
         <span class="paper-tag tag-application">Latent-based Self-attention</span>
-        <br>
         <strong><u>Sixiang Chen</u></strong>, Tian Ye, Yun Liu, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>Digital Signal Processing</em>, 2024
@@ -1037,7 +1025,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Novel Attention for Image Restoration</span>
         <span class="paper-tag tag-application">New Perspective for Image Dehazing</span>
-        <br>
         Tian Ye*, Mingchao Jiang*, Yunchen Zhang*, Liang Chen, Yun Liu, <strong><u>Sixiang Chen</u></strong>, Erkang Chen<sup>✉️</sup>.
         <br>  
         <em>European Conference on Computer Vision <strong>(ECCV Oral)</strong></em>, 2022
@@ -1061,7 +1048,6 @@ td {
         </papertitle><br>
         <span class="paper-tag tag-method">Neural Rendering for Image Generation</span>
         <span class="paper-tag tag-application">Light Field Retention, New Benchmark</span>
-        <br>
         Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>, Yuche Li.
         <br>  
         <em>Conference on Computer Vision and Pattern Recognition Workshop <strong>(CVPRW)</strong></em>, 2022

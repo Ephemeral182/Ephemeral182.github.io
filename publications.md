@@ -471,9 +471,9 @@ td {
   <h1>Selected Papers</h1>
   
 <!-- 符号说明 -->
-<div class="symbols-legend" style="margin: 15px 0; font-size: 0.9em; color: #666;">
-  <span style="margin-right: 15px;"><strong>*</strong> - Equal Contribution</span>
-  <span style="margin-right: 15px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
+<div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
+  <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
+  <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
   <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 

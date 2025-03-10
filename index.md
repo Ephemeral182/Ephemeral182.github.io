@@ -81,6 +81,7 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ## News and Updates
 
 <div class="scrollable-news">
+ <ul>
   - **Feb. 2025：**&#127873; Fortunately, three papers have been accepted by **CVPR'2025**.
   - **Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.
   - **Jan. 2025：**&#127942; I start to serve as a reviewer in **TIP**.
@@ -107,6 +108,7 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
   - **Sept. 2022：** One paper has been submited to **Arxiv'2023 (Under review)** .
   - **Jul. 2022：**&#127752; Fortunately, one paper has been accepted as an **oral presentation** by **ECCV'2022**.
   - **Jun. 2022：**&#127873; Serendipitously, one paper has been accepted by **CVPRW'2022**. 
+  </ul>
 </div>
 
 ---

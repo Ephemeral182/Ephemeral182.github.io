@@ -519,7 +519,6 @@ td {
           <span class="paper-tag tag-method">Prompt Learning for Image Restoration</span>
           <span class="paper-tag tag-application">Real-world Generalization, Depth Anything Model</span>
           </div>
-          <br>
           Tian Ye, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025
@@ -549,7 +548,6 @@ td {
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Unsupervised Training-free, Real-world Generalization</span>
           </div>
-          <br>
           Yunlong Lin* ,Tian Ye*, <strong><u>Sixiang Chen*</u></strong> ,Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding<sup>✉️</sup>.
           <br>  
           <em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025
@@ -584,7 +582,6 @@ td {
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
           <span class="paper-tag tag-application">Intelligent Agent</span>
           </div>
-          <br>
           Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong></em>, 2024
@@ -613,7 +610,6 @@ td {
           </papertitle><br>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Real-world Generalization, Prompt Learning</span>
-          <br>
           <strong><u>Sixiang Chen</u></strong>, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
@@ -640,7 +636,6 @@ td {
           </papertitle><br>
           <span class="paper-tag tag-method">MoE for Video Restoration</span>
           <span class="paper-tag tag-application">Semi-Supervised Learning, New Benchmark</span>
-          <br>
           Hongtao Wu, Yijun Yang, Angelica Aviles-Rivero, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
@@ -667,7 +662,6 @@ td {
           </papertitle><br>
           <span class="paper-tag tag-method">Generative Model for  Medical Image Translation</span>
           <span class="paper-tag tag-application">Conditional Generation</span>
-          <br>
           Zhaohu Xing, Sicheng Yang, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Medical Image Computing and Computer Assisted Intervention <strong>(MICCAI)</strong></em>, 2024
@@ -694,7 +688,6 @@ td {
           </papertitle><br>
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
           <span class="paper-tag tag-application">Diffusion Model for Textural Learning</span>
-          <br>
           Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong></em>, 2024

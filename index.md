@@ -88,8 +88,8 @@ body::before {
   pointer-events: none;
   position: fixed;
   border-radius: 50%;
-  background: rgba(100, 180, 255, 0.35); /* 降低不透明度到0.15 */
-  box-shadow: 0 0 10px rgba(100, 180, 255, 0.3); /* 降低阴影不透明度到0.2 */
+  background: rgba(255, 215, 0, 0.15); /* 金色背景，低不透明度 */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* 金色阴影，低不透明度 */
   z-index: 10000;
   transform: translate(-50%, -50%);
 }

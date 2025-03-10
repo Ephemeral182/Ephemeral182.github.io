@@ -39,10 +39,10 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ---
 
 ## News and Updates
-- **Feb. 2025：**&#127752; Fortunately, three papers have been accepted by **CVPR'2025**.
+- **Feb. 2025：**&#127873; Fortunately, three papers have been accepted by **CVPR'2025**.
 - **Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.
-- **Jan. 2025：**&#127752; I start to serve as a reviewer in **TIP**.
-- **Dec. 2024：**&#127752; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.
+- **Jan. 2025：**&#127942; I start to serve as a reviewer in **TIP**.
+- **Dec. 2024：**&#127881; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.
 - **Dec. 2024：**&#128640; Serendipitously, four papers have been accepted by **AAAI'2025**.
 - **Sept. 2024：**&#127873; Luckily, one paper has been accepted by **NeurIPS'2024**.
 - **Jun. 2024：**&#127752; I start to serve as a reviewer in **TITS**.
@@ -88,7 +88,8 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
  - Asian Conference on Computer Vision (**ACCV'2022**)
 
 **Awards:**
- - **Outstanding Graduate in Jimei University, 2023:** Rewarding excellent students during bachelor study.
+ - **PG Scholarship of HKUST(GZ), 2024**
+ - **Outstanding Graduate in Jimei University, 2023** 
  - **International Third Price, Team Leader:** Mathematical Contest In Modeling, 2022.
  - **National Second Prize, Team Leader:** China Undergraduate Mathematical Contest in Modeling, 2021.
  - **National Second Prize, Team Leader:** Mathorcup Mathematical Contest in Modeling, 2021.

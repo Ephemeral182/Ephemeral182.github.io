@@ -86,23 +86,20 @@ body {
   overflow: visible; /* 允许阴影可见 */
   border-radius: 0;
   transition: all 0.3s ease;
-  width: 100%; /* 确保容器宽度为100% */
+  width: 100%;
   box-shadow: none;
   padding: 0;
   margin: 0;
   line-height: 0;
-  font-size: 0;
-  /* 保持垂直居中但不影响大小 */
-  display: flex;
-  align-items: center;
+  font-size: 0; /* 消除可能的空白 */
 }
 
 .image-wrapper img {
-  width: 100%; /* 确保图片宽度为100% */
-  max-width: none; /* 移除可能的最大宽度限制 */
+  width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
+  /* 调整阴影大小，使其更贴近图片边缘 */
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
   transition: all 0.3s ease;
   margin: 0;
@@ -116,10 +113,8 @@ body {
 
 /* 特别处理右侧空白问题 */
 td.image-wrapper {
-  width: 35%; /* 恢复原来的宽度设置 */
-  max-width: 40%; /* 恢复原来的最大宽度设置 */
-  padding: 5px !important; /* 添加少量内边距 */
-  vertical-align: middle !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* 移除可能的右侧内边距 */
@@ -133,17 +128,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  table-layout: fixed; /* 使用固定表格布局 */
 }
 
 td {
   padding: 10px;
-  vertical-align: middle; /* 修改为垂直居中 */
-}
-
-/* 确保文本单元格也垂直居中 */
-.text-wrapper {
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 /* 确保没有额外的边距 */

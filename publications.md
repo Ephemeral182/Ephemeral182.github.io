@@ -100,7 +100,7 @@ body {
   display: block;
   border-radius: 12px;
   /* 调整阴影大小，使其更贴近图片边缘 */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
   transition: all 0.3s ease;
   margin: 0;
 }
@@ -108,30 +108,31 @@ body {
 .image-wrapper:hover img {
   transform: translateY(-5px);
   /* 调整悬停时的阴影，使其更贴近图片边缘 */
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
 }
 
-/* 确保表格单元格没有额外空间 */
+/* 解决右侧空白问题 */
+td.image-wrapper {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* 移除可能的右侧内边距 */
+.image-wrapper img {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 修复表格单元格样式 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
 td {
   padding: 10px;
   vertical-align: top;
-  font-size: initial; /* 恢复正常字体大小 */
-}
-
-td.image-wrapper {
-  padding: 0;
-  white-space: nowrap; /* 防止可能的空白 */
-}
-
-/* 添加特定的左右阴影控制 */
-.image-wrapper img {
-  /* 使用更精确的阴影控制 */
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
-}
-
-.image-wrapper:hover img {
-  /* 使用更精确的阴影控制 */
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
 }
 
 /* 确保没有额外的边距 */

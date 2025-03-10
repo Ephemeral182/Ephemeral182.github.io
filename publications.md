@@ -379,6 +379,21 @@ td {
   gap: 12px;
   justify-content: flex-start;
 }
+
+/* 移除元素之间的空白 */
+.tag-container, .author-info {
+  margin: 0;
+  padding: 0;
+}
+
+.tag-container + .author-info {
+  margin-top: -10px; /* 负边距可以拉近两个元素 */
+}
+
+/* 或者使用这种方法 */
+.tag-container {
+  margin-bottom: -10px;
+}
 </style>
 
 <!-- 添加摘要部分 -->
@@ -461,7 +476,7 @@ td {
           </papertitle><br>
           <div>
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-          <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
+          <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization, New Benchmark</span>
           </div>
           <br>
           Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.

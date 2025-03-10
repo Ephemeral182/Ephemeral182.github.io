@@ -11,7 +11,7 @@ body {
   overflow-y: auto; /* 添加垂直滚动条 */
   border-radius: 12px; /* 圆角边框 */
   padding: 15px; /* 从20px减少到15px */
-  background-color: #ffffff; /* 白色背景 */
+  background-color: #f8fbff; /* 更改为非常浅的蓝色背景 */
   box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 轻微阴影 */
   margin: 15px 0; /* 从20px减少到15px */
   list-style: none; /* 去除列表标记 */
@@ -20,8 +20,19 @@ body {
 .scrollable-news li {
   margin-bottom: 4px; /* 从10px减少到4px */
   padding: 5px; /* 从10px减少到5px */
-  border-bottom: 1px solid #eee; /* 条目之间的分隔线 */
+  border-bottom: 1px solid #e6f0ff; /* 更改为浅蓝色分隔线 */
   line-height: 1.4; /* 添加行高控制 */
+}
+
+/* 添加交替行颜色，增强可读性 */
+.scrollable-news li:nth-child(odd) {
+  background-color: #f0f7ff; /* 浅蓝色背景 */
+}
+
+/* 鼠标悬停效果 */
+.scrollable-news li:hover {
+  background-color: #e6f2ff; /* 稍深一点的浅蓝色 */
+  transition: background-color 0.3s ease;
 }
 
 .scrollable-news li:last-child {

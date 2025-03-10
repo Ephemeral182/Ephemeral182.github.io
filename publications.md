@@ -92,6 +92,11 @@ body {
   margin: 0;
   line-height: 0;
   font-size: 0; /* 消除可能的空白 */
+  /* 添加垂直居中的样式 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* 确保容器高度充满父元素 */
 }
 
 .image-wrapper img {
@@ -115,6 +120,7 @@ body {
 td.image-wrapper {
   padding: 0 !important;
   margin: 0 !important;
+  vertical-align: middle !important; /* 确保单元格内容垂直居中 */
 }
 
 /* 移除可能的右侧内边距 */
@@ -132,7 +138,12 @@ table {
 
 td {
   padding: 10px;
-  vertical-align: top;
+  vertical-align: middle; /* 修改为垂直居中 */
+}
+
+/* 确保文本单元格也垂直居中 */
+.text-wrapper {
+  vertical-align: middle;
 }
 
 /* 确保没有额外的边距 */

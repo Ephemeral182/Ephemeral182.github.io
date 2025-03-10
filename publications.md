@@ -126,12 +126,12 @@ td.image-wrapper {
 /* 添加特定的左右阴影控制 */
 .image-wrapper img {
   /* 使用更精确的阴影控制 */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
 }
 
 .image-wrapper:hover img {
   /* 使用更精确的阴影控制 */
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
 }
 
 /* 确保没有额外的边距 */

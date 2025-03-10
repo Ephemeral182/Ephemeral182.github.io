@@ -88,8 +88,8 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
  - Asian Conference on Computer Vision (**ACCV'2022**)
 
 **Awards:**
- - **PG Scholarship of HKUST(GZ), 2024**
- - **Outstanding Graduate in Jimei University, 2023** 
+ - **PG Scholarship of HKUST(GZ), 2024.**
+ - **Outstanding Graduate in Jimei University, 2023.** 
  - **International Third Price, Team Leader:** Mathematical Contest In Modeling, 2022.
  - **National Second Prize, Team Leader:** China Undergraduate Mathematical Contest in Modeling, 2021.
  - **National Second Prize, Team Leader:** Mathorcup Mathematical Contest in Modeling, 2021.

@@ -10,17 +10,18 @@ body {
   max-height: 400px; /* 设置容器的最大高度 */
   overflow-y: auto; /* 添加垂直滚动条 */
   border-radius: 12px; /* 圆角边框 */
-  padding: 20px; /* 内边距 */
+  padding: 15px; /* 从20px减少到15px */
   background-color: #ffffff; /* 白色背景 */
   box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 轻微阴影 */
-  margin: 20px 0; /* 上下外边距 */
+  margin: 15px 0; /* 从20px减少到15px */
   list-style: none; /* 去除列表标记 */
 }
 
 .scrollable-news li {
-  margin-bottom: 10px; /* 每个条目之间的间距 */
-  padding: 10px; /* 条目的内边距 */
+  margin-bottom: 4px; /* 从10px减少到4px */
+  padding: 5px; /* 从10px减少到5px */
   border-bottom: 1px solid #eee; /* 条目之间的分隔线 */
+  line-height: 1.4; /* 添加行高控制 */
 }
 
 .scrollable-news li:last-child {

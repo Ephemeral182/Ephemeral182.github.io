@@ -82,45 +82,56 @@ body {
 
 /* 完全重写图片容器样式 */
 .image-wrapper {
-  display: inline-block;
-  line-height: 0;
-  font-size: 0;
+  position: relative;
+  overflow: visible; /* 允许阴影可见 */
+  border-radius: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: none;
   padding: 0;
   margin: 0;
-  border: none;
-  background: none;
-  vertical-align: top;
+  line-height: 0;
+  font-size: 0; /* 消除可能的空白 */
 }
 
 .image-wrapper img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
   border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  /* 调整阴影大小，使其更贴近图片边缘 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
   margin: 0;
-  padding: 0;
 }
 
 .image-wrapper:hover img {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  /* 调整悬停时的阴影，使其更贴近图片边缘 */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
-/* 移除表格单元格的所有额外空间 */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
+/* 确保表格单元格没有额外空间 */
 td {
   padding: 10px;
   vertical-align: top;
+  font-size: initial; /* 恢复正常字体大小 */
 }
 
 td.image-wrapper {
   padding: 0;
+  white-space: nowrap; /* 防止可能的空白 */
+}
+
+/* 添加特定的左右阴影控制 */
+.image-wrapper img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.05);
+}
+
+.image-wrapper:hover img {
+  /* 使用更精确的阴影控制 */
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.1);
 }
 
 /* 确保没有额外的边距 */

@@ -464,7 +464,7 @@ td {
           <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
           </div>
           <br>
-          Jianyu Lai*, <strong><u>Sixiang Chen*&#9828;</u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
+          Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
           <br>  
           <em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025
           <br>

@@ -21,9 +21,9 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 
 ## Education
 
-- **Sept. 2019 - Jun. 2023: Jimei University** (B.Eng.)
-- **Aug. 2023 - Aug. 2024: Hong Kong University of Science and Technology (Guangzhou)** (RA)
 - **Sept. 2024 - Present: Hong Kong University of Science and Technology (Guangzhou)** (PhD)
+- **Aug. 2023 - Aug. 2024: Hong Kong University of Science and Technology (Guangzhou)** (RA)
+- **Sept. 2019 - Jun. 2023: Jimei University** (B.Eng.)
 <br>
 
 ---
@@ -39,7 +39,7 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
 ---
 
 ## News and Updates
-- **Feb. 2025：**&#127752; Fortunately, three papers have been accepted by**CVPR'2025**.
+- **Feb. 2025：**&#127752; Fortunately, three papers have been accepted by **CVPR'2025**.
 - **Feb. 2025：**&#127752; I start to serve as a reviewer in **NeurIPS'2025** and **ICCV'2025**.
 - **Jan. 2025：**&#127752; I start to serve as a reviewer in **TIP**.
 - **Dec. 2024：**&#127752; I start to serve as a reviewer in **CVPR'2025** and **ICML'2025**.
@@ -92,5 +92,5 @@ My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Commun
  - **International Third Price, Team Leader:** Mathematical Contest In Modeling, 2022.
  - **National Second Prize, Team Leader:** China Undergraduate Mathematical Contest in Modeling, 2021.
  - **National Second Prize, Team Leader:** Mathorcup Mathematical Contest in Modeling, 2021.
-
+  
 <br>

@@ -469,6 +469,14 @@ td {
 
 <!-- Selected Papers -->
   <h1>Selected Papers</h1>
+  
+<!-- 符号说明 -->
+<div class="symbols-legend" style="margin: 15px 0; font-size: 0.9em; color: #666;">
+  <span style="margin-right: 15px;"><strong>*</strong> - Equal Contribution</span>
+  <span style="margin-right: 15px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
+  <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
+</div>
+
 <!-- 2025年论文 -->
 <div class="year-section">
   <div class="year-divider">
@@ -1104,7 +1112,7 @@ td {
   <tr>
         <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ECCV'2022 (Oral)">
         <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/ECCV.png" alt="dise"> 
-      </td>
+        </td>
       <td width="75%" valign="center" class="text-wrapper"> 
         <papertitle>
         <strong>
@@ -1151,9 +1159,6 @@ td {
   </tbody>
 </table>
 <!-- </div> -->
-
-<!-- <div class="content-wrapper"> -->
-  
 
 <!-- # Publications -->
 

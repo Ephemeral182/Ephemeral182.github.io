@@ -446,6 +446,36 @@ td {
   <div class="year-divider">
     <h2 class="year-2025">2025</h2>
   </div>
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
+        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr25_snowmaster.png" alt="dise"> 
+      </td>
+      <td width="75%" valign="center" class="text-wrapper"> 
+          <papertitle>
+            <strong>
+              SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization
+            </strong>
+          </papertitle><br>
+          <div>
+          <span class="paper-tag tag-method">MLLM for Image Restoration</span>
+          <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
+          </div>
+          <br>
+          Jianyu Lai*, <strong><u>Sixiang Chen*&#9828;</u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
+          <br>  
+          <em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025
+          <br>
+          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
+          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+          <a href="Ephemeral182.github.io" class="custom-link—project">[Project]</a>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
     <tr>

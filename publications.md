@@ -17,6 +17,7 @@ body {
   border-radius: 16px;
   margin-bottom: 40px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-size: 1em; /* 保持原始大小 */
 }
 
 .summary-stats {
@@ -59,9 +60,9 @@ body {
 /* 论文类型标签样式优化 */
 .paper-tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 3px 10px; /* 调整标签内边距以匹配较小的字体 */
   border-radius: 12px;
-  font-size: 12px;
+  font-size: 0.8em; /* 减小标签字体 */
   margin: 5px;
 }
 
@@ -147,6 +148,7 @@ td {
   margin-bottom: 25px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-size: 0.95em; /* 略微减小字体 */
 }
 
 .publication-item:hover {
@@ -157,11 +159,12 @@ td {
 /* 链接样式美化 */
 .custom-link {
   display: inline-block;
-  padding: 6px 12px;
+  padding: 5px 10px; /* 调整按钮内边距 */
   border-radius: 6px;
   text-decoration: none;
   margin: 0 5px;
   transition: all 0.3s ease;
+  font-size: 0.85em; /* 减小链接按钮字体 */
 }
 
 .custom-link—paper {
@@ -393,6 +396,16 @@ td {
 /* 或者使用这种方法 */
 .tag-container {
   margin-bottom: -10px;
+}
+
+/* 调整文章标题字体大小 */
+.text-wrapper papertitle {
+  font-size: 1.05em; /* 保持标题稍大 */
+}
+
+/* 调整作者名字和其他信息的字体大小 */
+.text-wrapper {
+  font-size: 0.9em; /* 减小作者和其他信息的字体 */
 }
 </style>
 

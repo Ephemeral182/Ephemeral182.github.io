@@ -83,21 +83,24 @@ body {
 /* 添加图片容器悬停效果 */
 .image-wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 12px;
+  overflow: visible; /* 改为visible以允许阴影可见 */
+  border-radius: 0; /* 移除容器的圆角 */
   transition: all 0.3s ease;
   width: 100%;
-  box-shadow: none; /* 移除默认阴影 */
+  box-shadow: none; /* 确保容器没有阴影 */
+  padding: 0; /* 移除内边距 */
+  margin: 0; /* 移除外边距 */
+  line-height: 0; /* 移除行高可能造成的额外空间 */
 }
 
 .image-wrapper img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px; /* 确保图片也有圆角 */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 直接给图片添加阴影 */
+  display: block; /* 确保图片是块级元素 */
+  border-radius: 12px; /* 保持图片圆角 */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 图片阴影 */
   transition: all 0.3s ease;
+  margin: 0; /* 确保图片没有外边距 */
 }
 
 .image-wrapper:hover img {
@@ -345,35 +348,15 @@ body {
   justify-content: flex-start;
 }
 
-/* 调整图片容器的右边距 */
-.image-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);  /* 柔和的阴影 */
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* 确保图片填充容器 */
-}
-
-.image-wrapper:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-}
-
-/* 或者可以调整单元格的内边距 */
+/* 调整表格单元格样式 */
 td {
-  padding: 20px 40px;  /* 增加单元格的内边距 */
+  padding: 10px; /* 减少单元格内边距 */
+  vertical-align: top; /* 确保垂直对齐在顶部 */
 }
 
-/* 特别是右侧文字单元格的左内边距 */
-.text-wrapper {
-  padding-left: 40px;  /* 增加文字部分的左内边距 */
+/* 特别是包含图片的单元格 */
+td.image-wrapper {
+  padding: 0; /* 移除包含图片的单元格的内边距 */
 }
 </style>
 

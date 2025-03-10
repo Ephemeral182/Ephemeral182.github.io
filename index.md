@@ -88,13 +88,10 @@ body::before {
   pointer-events: none;
   position: fixed;
   border-radius: 50%;
-  background: rgba(100, 180, 255, 0.3); /* 降低不透明度从0.6到0.3 */
-  box-shadow: 0 0 15px rgba(100, 180, 255, 0.4), /* 主要阴影 */
-              0 0 5px rgba(255, 255, 255, 0.6), /* 白色内发光 */
-              0 0 25px rgba(70, 130, 255, 0.2); /* 更大范围的淡蓝色外发光 */
+  background: rgba(100, 180, 255, 0.15); /* 降低不透明度到0.15 */
+  box-shadow: 0 0 10px rgba(100, 180, 255, 0.2); /* 降低阴影不透明度到0.2 */
   z-index: 10000;
   transform: translate(-50%, -50%);
-  mix-blend-mode: screen; /* 添加混合模式使颜色更加绚丽 */
 }
 </style>
 
@@ -205,15 +202,6 @@ document.addEventListener('DOMContentLoaded', function() {
     particle.style.width = actualSize + 'px';
     particle.style.height = actualSize + 'px';
     
-    // 随机颜色变化，增加流光溢彩效果
-    const hue = 190 + Math.random() * 40; // 在蓝色范围内随机色相
-    const saturation = 70 + Math.random() * 30; // 随机饱和度
-    const lightness = 60 + Math.random() * 20; // 随机亮度
-    particle.style.background = `hsla(${hue}, ${saturation}%, ${lightness}%, 0.3)`;
-    particle.style.boxShadow = `0 0 15px hsla(${hue}, ${saturation}%, ${lightness}%, 0.4),
-                               0 0 5px rgba(255, 255, 255, 0.6),
-                               0 0 25px hsla(${hue+10}, ${saturation-10}%, ${lightness+10}%, 0.2)`;
-    
     // 设置位置
     particle.style.left = x + 'px';
     particle.style.top = y + 'px';
@@ -225,12 +213,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
       particle.style.opacity = '0';
       particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
-      particle.style.transition = 'all 0.8s ease-out'; // 延长消失时间从0.6秒到0.8秒
+      particle.style.transition = 'all 0.6s ease-out';
       
       // 移除粒子
       setTimeout(() => {
         document.body.removeChild(particle);
-      }, 800);
+      }, 600);
     }, 10);
   }
   
@@ -246,14 +234,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 限制粒子生成频率
     setTimeout(() => {
       throttle = false;
-    }, 12); // 稍微降低频率，从10ms到12ms
+    }, 10);
     
     const x = e.clientX;
     const y = e.clientY;
     
     // 计算移动速度
     const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
-    const size = Math.min(18, Math.max(6, speed * 0.4)); // 稍微减小粒子尺寸
+    const size = Math.min(16, Math.max(5, speed * 0.4)); // 减小粒子尺寸
     
     // 创建粒子
     createParticle(x, y, size);

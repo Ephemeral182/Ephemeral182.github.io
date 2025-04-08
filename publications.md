@@ -8,6 +8,8 @@ title: Publications
 /* 整体背景色 */
 body {
   background-color: #f0f5fa;  /* 非常淡的蓝色背景 */
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* 摘要部分样式 */
@@ -462,7 +464,55 @@ td {
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
+
+/* 动态背景效果 */
+.dynamic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(0, 188, 212, 0.05));
+  filter: blur(40px);
+  opacity: 0.6;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(5%, 5%); }
+  50% { transform: translate(0, 10%); }
+  75% { transform: translate(-5%, 5%); }
+}
+
+/* 渐变网格背景 */
+.grid-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
 </style>
+
+<!-- 动态背景元素 -->
+<div class="dynamic-bg">
+  <div class="grid-pattern"></div>
+</div>
 
 <!-- 添加摘要部分 -->
 <div class="summary-section">
@@ -1296,6 +1346,51 @@ document.addEventListener('DOMContentLoaded', function() {
     
     lastX = x;
     lastY = y;
+  });
+  
+  // 创建动态背景圆形
+  function createBackgroundCircles() {
+    const bg = document.querySelector('.dynamic-bg');
+    const colors = [
+      'rgba(33, 150, 243, 0.03)',  // 蓝色
+      'rgba(0, 188, 212, 0.03)',   // 青色
+      'rgba(76, 175, 80, 0.03)',   // 绿色
+      'rgba(156, 39, 176, 0.03)'   // 紫色
+    ];
+    
+    for (let i = 0; i < 6; i++) {
+      const circle = document.createElement('div');
+      circle.className = 'bg-circle';
+      
+      // 随机大小和位置
+      const size = Math.random() * 30 + 20;
+      circle.style.width = size + 'vw';
+      circle.style.height = size + 'vw';
+      circle.style.left = Math.random() * 100 + 'vw';
+      circle.style.top = Math.random() * 100 + 'vh';
+      
+      // 随机颜色
+      circle.style.background = colors[Math.floor(Math.random() * colors.length)];
+      
+      // 随机动画延迟
+      circle.style.animationDelay = (Math.random() * 5) + 's';
+      circle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+      
+      bg.appendChild(circle);
+    }
+  }
+  
+  createBackgroundCircles();
+  
+  // 页面滚动时添加视差效果
+  window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    const circles = document.querySelectorAll('.bg-circle');
+    
+    circles.forEach((circle, index) => {
+      const speed = 0.05 + (index % 3) * 0.02;
+      circle.style.transform = `translateY(${scrollY * speed}px)`;
+    });
   });
 });
 

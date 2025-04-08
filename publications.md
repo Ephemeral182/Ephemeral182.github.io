@@ -512,6 +512,7 @@ td {
 <!-- 动态背景元素 -->
 <div class="dynamic-bg">
   <div class="grid-pattern"></div>
+  <div id="nodes-container"></div>
 </div>
 
 <!-- 添加摘要部分 -->

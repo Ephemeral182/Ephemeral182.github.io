@@ -1289,66 +1289,73 @@ document.addEventListener('DOMContentLoaded', function() {
   // 创建粒子
   function createParticle(x, y, size) {
     const particle = document.createElement('div');
-    particle.className = 'mouse-particle';
-    
+    particle.className = 'mouse-particle'; // 确保 CSS 中有 .mouse-particle 样式
+
     // 随机大小变化
     const actualSize = size * (0.5 + Math.random() * 0.5);
     particle.style.width = actualSize + 'px';
     particle.style.height = actualSize + 'px';
-    
-    // 彩虹渐变效果 - 随机选择一个起始色相
+
+    // 彩虹渐变效果 - 随机选择一个起始色相 (如果需要，可以改回原来的金色)
     const hue = Math.floor(Math.random() * 360);
     particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
     particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
-    
+    // 或者使用原来的金色:
+    // particle.style.background = 'rgba(255, 215, 0, 0.25)';
+    // particle.style.boxShadow = '0 0 10px rgba(207, 187, 74, 0.3)';
+
+
     // 设置位置
     particle.style.left = x + 'px';
     particle.style.top = y + 'px';
-    
+
     // 添加到页面
     document.body.appendChild(particle);
-    
+
     // 粒子消失动画
     setTimeout(() => {
       particle.style.opacity = '0';
       particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
       particle.style.transition = 'all 0.6s ease-out';
-      
+
       // 移除粒子
       setTimeout(() => {
-        document.body.removeChild(particle);
+        // 安全移除，检查父节点是否存在
+        if (particle.parentNode) {
+            particle.parentNode.removeChild(particle);
+        }
       }, 600);
     }, 10);
   }
-  
+
   // 跟踪鼠标移动
   let lastX = 0;
   let lastY = 0;
   let throttle = false;
-  
+
   document.addEventListener('mousemove', function(e) {
     if (throttle) return;
     throttle = true;
-    
+
     // 限制粒子生成频率
     setTimeout(() => {
       throttle = false;
-    }, 10);
-    
+    }, 10); // 可以调整这个值来改变粒子密度
+
     const x = e.clientX;
     const y = e.clientY;
-    
+
     // 计算移动速度
     const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
     const size = Math.min(16, Math.max(5, speed * 0.4)); // 减小粒子尺寸
-    
+
     // 创建粒子
     createParticle(x, y, size);
-    
+
     lastX = x;
     lastY = y;
   });
-  
+
   // 创建动态背景圆形
   function createBackgroundCircles() {
     const bg = document.querySelector('.dynamic-bg');
@@ -1420,6 +1427,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   function initNodes() {
     const container = document.getElementById('nodes-container');
+    if (!container) {
+      console.error('节点容器未找到');
+      return;
+    }
+
     const nodeCount = 30; // 节点数量
     const nodes = [];
     const canvas = document.createElement('canvas');
@@ -1512,7 +1524,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // 鼠标交互 - 靠近鼠标的节点会被吸引
-    document.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', (e) => { // 注意：这里也有一个 mousemove 监听器
       const mouseX = e.clientX;
       const mouseY = e.clientY;
       
@@ -1524,18 +1536,19 @@ document.addEventListener('DOMContentLoaded', function() {
         if (distance < 150) {
           // 计算吸引力
           const force = 0.2 * (1 - distance / 150);
-          node.vx += dx * force * 0.01;
-          node.vy += dy * force * 0.01;
+          // 稍微减弱吸引力，避免与粒子效果冲突感太强
+          node.vx += dx * force * 0.005;
+          node.vy += dy * force * 0.005;
           
           // 限制最大速度
           const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
-          if (speed > 2) {
-            node.vx = (node.vx / speed) * 2;
-            node.vy = (node.vy / speed) * 2;
+          if (speed > 1) { // 减小最大速度
+            node.vx = (node.vx / speed) * 1;
+            node.vy = (node.vy / speed) * 1;
           }
         }
       });
-    });
+    }); // 结束 tech network 的 mousemove 监听器
   }
   
   // 初始化背景

@@ -418,6 +418,50 @@ td {
   z-index: 10000;
   transform: translate(-50%, -50%);
 }
+
+/* 动态背景效果 - 科技连线网络 */
+.dynamic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* 科技网格背景 */
+.tech-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 40px 40px;
+  opacity: 0.2;
+  background-image: 
+    radial-gradient(circle, rgba(33, 150, 243, 0.1) 1px, transparent 1px);
+}
+
+/* 连接线容器 */
+#nodes-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 节点样式 */
+.node {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: rgba(33, 150, 243, 0.5);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
 </style>
 
 <!-- 添加摘要部分 -->
@@ -873,11 +917,10 @@ td {
   </tbody>
   </table>
 
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
+    <tr>
+      <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
         <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cpl.png" alt="dise"> 
       </td>
       <td width="75%" valign="center" class="text-wrapper"> 
@@ -1253,6 +1296,163 @@ document.addEventListener('DOMContentLoaded', function() {
     
     lastX = x;
     lastY = y;
+  });
+});
+
+// 添加到页面底部的脚本
+document.addEventListener('DOMContentLoaded', function() {
+  // 创建科技连线网络背景
+  function createTechNetwork() {
+    const container = document.createElement('div');
+    container.className = 'dynamic-bg';
+    
+    // 添加网格
+    const grid = document.createElement('div');
+    grid.className = 'tech-grid';
+    container.appendChild(grid);
+    
+    // 添加节点容器
+    const nodesContainer = document.createElement('div');
+    nodesContainer.id = 'nodes-container';
+    container.appendChild(nodesContainer);
+    
+    document.body.prepend(container);
+    
+    // 创建节点和连线
+    initNodes();
+  }
+  
+  function initNodes() {
+    const container = document.getElementById('nodes-container');
+    const nodeCount = 30; // 节点数量
+    const nodes = [];
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.position = 'absolute';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.pointerEvents = 'none';
+    container.appendChild(canvas);
+    
+    // 创建节点
+    for (let i = 0; i < nodeCount; i++) {
+      const node = document.createElement('div');
+      node.className = 'node';
+      
+      // 随机位置
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      
+      node.style.left = x + 'px';
+      node.style.top = y + 'px';
+      
+      // 随机速度
+      const vx = (Math.random() - 0.5) * 0.5;
+      const vy = (Math.random() - 0.5) * 0.5;
+      
+      nodes.push({
+        element: node,
+        x: x,
+        y: y,
+        vx: vx,
+        vy: vy
+      });
+      
+      container.appendChild(node);
+    }
+    
+    // 动画循环
+    function animate() {
+      // 清除画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // 更新节点位置
+      nodes.forEach(node => {
+        node.x += node.vx;
+        node.y += node.vy;
+        
+        // 边界检测
+        if (node.x < 0 || node.x > window.innerWidth) node.vx *= -1;
+        if (node.y < 0 || node.y > window.innerHeight) node.vy *= -1;
+        
+        // 更新DOM位置
+        node.element.style.transform = `translate(${node.x}px, ${node.y}px)`;
+        
+        // 绘制连线
+        nodes.forEach(otherNode => {
+          if (node === otherNode) return;
+          
+          const dx = node.x - otherNode.x;
+          const dy = node.y - otherNode.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          // 只连接一定距离内的节点
+          if (distance < 200) {
+            // 距离越远，线越透明
+            const opacity = 1 - distance / 200;
+            
+            ctx.beginPath();
+            ctx.moveTo(node.x, node.y);
+            ctx.lineTo(otherNode.x, otherNode.y);
+            ctx.strokeStyle = `rgba(33, 150, 243, ${opacity * 0.2})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        });
+      });
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+    
+    // 响应窗口大小变化
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+    
+    // 鼠标交互 - 靠近鼠标的节点会被吸引
+    document.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+      
+      nodes.forEach(node => {
+        const dx = mouseX - node.x;
+        const dy = mouseY - node.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 150) {
+          // 计算吸引力
+          const force = 0.2 * (1 - distance / 150);
+          node.vx += dx * force * 0.01;
+          node.vy += dy * force * 0.01;
+          
+          // 限制最大速度
+          const speed = Math.sqrt(node.vx * node.vx + node.vy * node.vy);
+          if (speed > 2) {
+            node.vx = (node.vx / speed) * 2;
+            node.vy = (node.vy / speed) * 2;
+          }
+        }
+      });
+    });
+  }
+  
+  // 初始化背景
+  createTechNetwork();
+  
+  // 滚动时添加视差效果
+  window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    const container = document.querySelector('.dynamic-bg');
+    
+    if (container) {
+      container.style.transform = `translateY(${scrollY * 0.1}px)`;
+    }
   });
 });
 </script>

@@ -431,7 +431,136 @@ td {
   opacity: 0.4;
   pointer-events: none;
 }
+
+/* --- 开始：极光/烟雾效果 --- */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保在最底层 */
+  pointer-events: none;
+  overflow: hidden; /* 防止内部元素溢出 */
+  opacity: 0.6; /* 调整整体效果的透明度 */
+  filter: blur(100px); /* 强模糊制造柔和效果 */
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: '';
+  position: absolute;
+  width: 800px; /* 光斑大小 */
+  height: 800px;
+  border-radius: 50%;
+  mix-blend-mode: screen; /* 混合模式，让颜色叠加更柔和 */
+  animation: aurora-flow 25s infinite linear alternate; /* 动画 */
+}
+
+/* 第一个光斑 */
+.aurora-bg::before {
+  background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%); /* 蓝色系 */
+  top: -20%;
+  left: -20%;
+}
+
+/* 第二个光斑 (不同颜色和动画延迟) */
+.aurora-bg::after {
+  background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%); /* 淡蓝色或青色系 */
+  bottom: -20%;
+  right: -20%;
+  animation-delay: -12.5s; /* 让两个光斑不同步 */
+  animation-direction: alternate-reverse; /* 反向交替 */
+}
+
+/* 动画定义 */
+@keyframes aurora-flow {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(100px, 50px) rotate(180deg) scale(1.2);
+  }
+}
+/* --- 结束：极光/烟雾效果 --- */
+
+/* --- 开始：漂浮几何图形 --- */
+.geometric-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 20%; /* 轻微圆角 */
+  opacity: 0.15; /* 图形透明度 */
+  animation: float-rotate 30s infinite linear alternate;
+}
+
+/* 定义不同形状和位置 */
+.shape-1 {
+  width: 150px; height: 150px;
+  background-color: #8ec5fc; /* 浅蓝色 */
+  top: 10%; left: 15%;
+  animation-duration: 35s;
+}
+.shape-2 {
+  width: 80px; height: 80px;
+  background-color: #e0c3fc; /* 淡紫色 */
+  top: 60%; left: 70%;
+  animation-duration: 28s;
+  animation-delay: -5s;
+}
+.shape-3 { /* 三角形示例 (用边框实现) */
+  width: 0; height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid #a8edea; /* 薄荷绿 */
+  background-color: transparent !important; /* 覆盖可能的默认背景 */
+  border-radius: 0; /* 三角形不需要圆角 */
+  top: 30%; left: 40%;
+  animation-duration: 40s;
+  animation-delay: -15s;
+}
+.shape-4 {
+  width: 120px; height: 120px;
+  background-color: #f0e68c; /* 卡其色/淡黄 */
+  top: 75%; left: 10%;
+  border-radius: 50%; /* 圆形 */
+  animation-duration: 32s;
+  animation-delay: -10s;
+}
+/* 可以添加更多形状 */
+
+@keyframes float-rotate {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translateY(-40px) rotate(180deg) scale(1.1);
+  }
+}
+/* --- 结束：漂浮几何图形 --- */
 </style>
+
+<!-- 在 body 开始处添加效果容器和形状 -->
+<body>
+  <div class="geometric-bg">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <!-- 可以添加更多形状 -->
+  </div>
+  <!-- 页面其他内容 -->
+  // ... existing code ...
+</body>
 
 <!-- 动态背景元素 -->
 <div class="dynamic-bg">
@@ -1487,6 +1616,35 @@ document.addEventListener('DOMContentLoaded', function() {
       container.style.transform = `translateY(${scrollY * 0.1}px)`;
     }
   });
+});
+
+// 可选：添加视差滚动 JS (如果需要)
+document.addEventListener('DOMContentLoaded', function() {
+  // --- 开始：几何图形视差滚动 ---
+  window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    const shapes = document.querySelectorAll('.geometric-bg .shape');
+
+    shapes.forEach((shape, index) => {
+      // 根据 index 或形状类型给予不同的滚动速度因子
+      const speedFactor = 0.05 + (index % 4) * 0.03;
+      // 结合 CSS 动画的 transform
+      const baseTransform = getComputedStyle(shape).transform; // 获取当前动画的 transform
+      // 注意：简单叠加可能不完美，更精确需要解析 transform matrix
+      shape.style.transform = `translateY(${scrollY * speedFactor}px) ${baseTransform !== 'none' ? baseTransform : ''}`;
+      // 简化的处理方式，可能导致动画不流畅，更好的方式是只用 JS 控制位置
+      // 或者只用 CSS 动画，视差效果通过调整容器的 transform 实现
+    });
+
+    // 另一种视差方式：移动整个背景容器
+    // const container = document.querySelector('.geometric-bg');
+    // if (container) {
+    //   container.style.transform = `translateY(${scrollY * 0.1}px)`;
+    // }
+  });
+  // --- 结束：几何图形视差滚动 ---
+
+  // ... (如果使用了鼠标粒子流，确保它的 DOMContentLoaded 代码也在这里) ...
 });
 </script>
 

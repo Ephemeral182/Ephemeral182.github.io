@@ -93,7 +93,90 @@ body::before {
   z-index: 10000;
   transform: translate(-50%, -50%);
 }
+
+/* --- 基础背景覆盖 --- */
+/* 确保 html 背景透明，让特效可见 */
+html {
+  background-color: transparent !important;
+}
+/* 设置页面主要背景色 (显示在特效之上，内容之下) */
+body {
+  background-color: #f0f5fa; /* 你选择的背景色 */
+  position: relative; /* 通常需要 */
+  overflow-x: hidden; /* 防止水平滚动 */
+}
+/* 移除主要内容区域的背景，让特效和 body 背景透出来 */
+/* !!! 重要：请确保这里的选择器 (main, .page__content 等) 对 index.md 也有效 !!! */
+/* 你可能需要用开发者工具检查 index.md 的结构来确认 */
+main,
+.page-content,
+.page__content,
+.post,
+article,
+section.content {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* --- 开始：极光/烟雾效果 --- */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保在最底层 */
+  pointer-events: none;
+  overflow: hidden; /* 防止内部元素溢出 */
+  opacity: 0.7; /* 调整整体效果的透明度 */
+  filter: blur(80px); /* 强模糊制造柔和效果 */
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: '';
+  position: absolute;
+  width: 800px; /* 光斑大小 */
+  height: 800px;
+  border-radius: 50%;
+  mix-blend-mode: screen; /* 混合模式，让颜色叠加更柔和 */
+  animation: aurora-flow 25s infinite linear alternate; /* 动画 */
+}
+
+/* 第一个光斑 */
+.aurora-bg::before {
+  background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%); /* 蓝色系 */
+  top: -20%;
+  left: -20%;
+}
+
+/* 第二个光斑 (不同颜色和动画延迟) */
+.aurora-bg::after {
+  background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%); /* 淡蓝色或青色系 */
+  bottom: -20%;
+  right: -20%;
+  animation-delay: -12.5s; /* 让两个光斑不同步 */
+  animation-direction: alternate-reverse; /* 反向交替 */
+}
+
+/* 动画定义 */
+@keyframes aurora-flow {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(100px, 50px) rotate(180deg) scale(1.2);
+  }
+}
+/* --- 结束：极光/烟雾效果 --- */
+
+/* --- 你可能还需要复制 index.md 特有的其他样式规则 --- */
+/* ... */
 </style>
+
+<!-- 在页面内容开始前添加效果容器 -->
+<div class="aurora-bg"></div>
 
 # About Me
 

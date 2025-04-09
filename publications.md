@@ -550,12 +550,13 @@ td {
 
 /* --- 新增：使统计项水平排列 --- */
 .summary-stats {
-  display: flex; /* 启用 Flexbox 布局 */
-  justify-content: space-around; /* 子项之间均匀分布空间 */
-  align-items: flex-start; /* 如果子项高度不同，顶部对齐 */
-  flex-wrap: wrap; /* 如果屏幕宽度不够，允许换行 */
-  margin-top: 30px; /* 可以调整与上方内容的间距 */
-  padding: 0 10px; /* 容器左右留白 */
+  display: flex;
+  justify-content: space-around;
+  /* align-items: flex-start; */ /* <-- 注释掉或删除这行 */
+  align-items: stretch; /* <-- 修改为 stretch */
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 0 10px;
 }
 
 /* 可以为每个统计项设置一些基本样式，确保它们不会挤在一起 */

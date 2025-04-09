@@ -567,6 +567,33 @@ td {
   text-align: center; /* 让每个项目内部文本居中 */
   /* 保留你可能已经为 .stat-item 设置的其他样式 */
 }
+
+/* --- 1. 恢复统计项的白色背景和阴影 --- */
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+  margin: 0 10px 20px 10px;
+  text-align: center;
+  /* --- 确保背景是白色 --- */
+  background-color: white; /* 或者 #ffffff */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 恢复阴影 (如果需要) */
+  position: relative;
+  /* --- 结束恢复 --- */
+}
+
+/* --- 2. 将主要内容区域背景设为透明 --- */
+/* !!! 重要：请将下面的 'main' 或 '.page-content' 替换为你实际找到的选择器 !!! */
+main,
+.page-content, /* 或者其他你找到的选择器，比如 article, .content 等 */
+.post__content /* 也是一个常见的类名 */ {
+  background-color: transparent !important; /* 强制背景透明 */
+  box-shadow: none !important; /* 同时移除可能存在的阴影 */
+}
+
+
+/* ... (保留其他所有现有样式) ... */
 </style>
 
 <!-- 在 body 开始处添加效果容器和形状 -->

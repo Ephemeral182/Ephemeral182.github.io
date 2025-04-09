@@ -693,6 +693,35 @@ main,
   <tbody>
     <tr>
       <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
+        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/gpt4o.png" alt="dise"> 
+      </td>
+      <td width="75%" valign="center" class="text-wrapper"> 
+          <papertitle>
+            <strong>
+              An Empirical Study of GPT-4o Image Generation Capabilities
+            </strong>
+          </papertitle><br>
+          <div>
+          <span class="paper-tag tag-method">Empirical Evaluation for GPT-4o</span>
+          </div>
+          <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai*, Zhuoran Zhao*, Tian Ye*, Qingyu Shi, Donghao Zhou, Wenhao Chai,
+          Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou,
+          Wei Chow, Linfeng Li, Xiangtai Li<sup>✉️</sup>, Lei Zhu<sup>✉️</sup>, Lu Qi<sup>✉️</sup>.
+          <br>  
+          <em>Arxiv</em>, 2025
+          <br>
+          <a href="https://arxiv.org/abs/2504.05979" class="custom-link—paper">[Paper]</a>
+          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tbody>
+    <tr>
+      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
         <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="dise"> 
       </td>
       <td width="75%" valign="center" class="text-wrapper"> 

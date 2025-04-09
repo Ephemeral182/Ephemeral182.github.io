@@ -5,58 +5,89 @@ title: Publications
 ---
 
 <style>
-/* 整体背景色 */
+/* 覆盖全局 html 背景色，使其透明 */
+html {
+  background-color: transparent !important; /* 使用 !important 确保覆盖全局样式 */
+}
+
+/* 整体背景色 - 应用到 body */
 body {
-  background-color: #f0f5fa;  /* 非常淡的蓝色背景 */
-  position: relative;
+  background-color: #f0f5fa;  /* 你期望的页面背景色 */
+  position: relative; /* 保持相对定位可能对某些布局有用 */
   overflow-x: hidden;
 }
 
+/* 动态背景效果 - 确保 z-index 是 -1 */
+.dynamic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 确保在最底层 */
+  pointer-events: none;
+  /* overflow: hidden; */ /* 如果有重复规则，确保只保留一个，并且通常不需要 overflow: hidden */
+}
+
+/* 科技网格背景 (如果使用了) */
+.tech-grid {
+  /* ... 保留原有样式 ... */
+  opacity: 0.2; /* 可以调整透明度以适应背景色 */
+}
+
+/* 连接线容器 (如果使用了) */
+#nodes-container {
+ /* ... 保留原有样式 ... */
+}
+
+/* 节点样式 (如果使用了) */
+.node {
+  /* ... 保留原有样式 ... */
+  background-color: rgba(33, 150, 243, 0.5); /* 节点颜色，确保在背景色上可见 */
+}
+
+
 /* 摘要部分样式 */
 .summary-section {
+  /* ... 保留原有样式 ... */
+  /* 可能需要调整背景透明度或颜色，确保在 #f0f5fa 上效果好 */
   background: rgba(255, 255, 255, 0.9);
-  padding: 30px;
-  border-radius: 16px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  font-size: 1em; /* 保持原始大小 */
 }
 
-.summary-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin: 20px 0;
+/* 移除元素之间的空白 */
+.tag-container, .author-info {
+  margin: 0;
+  padding: 0;
 }
 
-.stat-item {
-  background: #fff;
-  padding: 15px 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.tag-container + .author-info {
+  margin-top: -10px; /* 负边距可以拉近两个元素 */
 }
 
-/* 年份分隔样式 */
-.year-section {
-  margin: 50px 0;
+/* 或者使用这种方法 */
+.tag-container {
+  margin-bottom: -10px;
 }
 
-.year-divider {
-  display: flex;
-  align-items: center;
-  margin: 40px 0;
+/* 调整文章标题字体大小 */
+.text-wrapper papertitle {
+  font-size: 1.05em; /* 保持标题稍大 */
 }
-.year-2025 { color: #4169E1; }
-.year-2024 { color: #2196F3; }  /* 蓝色 */
-.year-2023 { color: #00BCD4; }  /* 青色 */
-.year-2022 { color: #4CAF50; }  /* 绿色 */
 
-.year-divider::after {
-  content: '';
-  flex: 1;
-  height: 2px;
-  margin-left: 20px;
-  background: linear-gradient(90deg, currentColor, transparent);
+/* 调整作者名字和其他信息的字体大小 */
+.text-wrapper {
+  font-size: 0.9em; /* 减小作者和其他信息的字体 */
+}
+
+/* 鼠标流光粒子样式 */
+.mouse-particle {
+  pointer-events: none;
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
+  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
+  z-index: 10000;
+  transform: translate(-50%, -50%);
 }
 
 /* 论文类型标签样式优化 */
@@ -383,113 +414,6 @@ td {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: flex-start;
-}
-
-/* 移除元素之间的空白 */
-.tag-container, .author-info {
-  margin: 0;
-  padding: 0;
-}
-
-.tag-container + .author-info {
-  margin-top: -10px; /* 负边距可以拉近两个元素 */
-}
-
-/* 或者使用这种方法 */
-.tag-container {
-  margin-bottom: -10px;
-}
-
-/* 调整文章标题字体大小 */
-.text-wrapper papertitle {
-  font-size: 1.05em; /* 保持标题稍大 */
-}
-
-/* 调整作者名字和其他信息的字体大小 */
-.text-wrapper {
-  font-size: 0.9em; /* 减小作者和其他信息的字体 */
-}
-
-/* 鼠标流光粒子样式 */
-.mouse-particle {
-  pointer-events: none;
-  position: fixed;
-  border-radius: 50%;
-  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
-  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-}
-
-/* 动态背景效果 - 科技连线网络 */
-.dynamic-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-/* 科技网格背景 */
-.tech-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 40px 40px;
-  opacity: 0.2;
-  background-image: 
-    radial-gradient(circle, rgba(33, 150, 243, 0.1) 1px, transparent 1px);
-}
-
-/* 连接线容器 */
-#nodes-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* 节点样式 */
-.node {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background-color: rgba(33, 150, 243, 0.5);
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-/* 动态背景效果 */
-.dynamic-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.bg-circle {
-  position: absolute;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(33, 150, 243, 0.05), rgba(0, 188, 212, 0.05));
-  filter: blur(40px);
-  opacity: 0.6;
-  animation: float 15s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(5%, 5%); }
-  50% { transform: translate(0, 10%); }
-  75% { transform: translate(-5%, 5%); }
 }
 
 /* 渐变网格背景 */

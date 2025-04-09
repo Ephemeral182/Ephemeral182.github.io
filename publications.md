@@ -616,7 +616,7 @@ main,
 </div>
 
 <!-- 添加摘要部分 -->
-<div class="summary-section">
+<!-- <div class="summary-section"> -->
   <h1>Publications</h1>
   My research focuses on AIGC and image restoration:
 <br>
@@ -671,7 +671,7 @@ main,
       </div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 <!-- Selected Papers -->
   <h1>Selected Papers</h1>

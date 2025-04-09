@@ -51,12 +51,7 @@ body {
 .summary-section {
   /* ... 保留原有样式 ... */
   /* 可能需要调整背景透明度或颜色，确保在 #f0f5fa 上效果好 */
-  background-color: transparent; /* 确保背景透明 */
-  padding: 20px; /* 可以保留或调整内边距 */
-  margin-bottom: 20px; /* 可以保留或调整外边距 */
-  text-align: center; /* 让内容居中 */
-  border-radius: 8px; /* 可以保留圆角 */
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.05); */ /* 可以移除阴影，让它更融入背景 */
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* 移除元素之间的空白 */
@@ -447,8 +442,8 @@ td {
   z-index: -1; /* 确保在最底层 */
   pointer-events: none;
   overflow: hidden; /* 防止内部元素溢出 */
-  opacity: 0.7; /* 稍微增加一点透明度，让效果更明显 */
-  filter: blur(80px); /* 可以稍微减少模糊，让形态更清晰一点 */
+  opacity: 0.6; /* 调整整体效果的透明度 */
+  filter: blur(100px); /* 强模糊制造柔和效果 */
 }
 
 .aurora-bg::before,
@@ -553,35 +548,23 @@ td {
 }
 /* --- 结束：漂浮几何图形 --- */
 
-/* 新增：用于包裹统计数字的容器 */
-.stats-container {
-  display: flex; /* 启用 Flexbox */
-  justify-content: space-around; /* 水平方向均匀分布项目 */
-  align-items: flex-start; /* 顶部对齐 */
-  flex-wrap: wrap; /* 如果屏幕太窄则换行 */
-  margin-top: 30px; /* 与上方内容的间距 */
+/* --- 新增：使统计项水平排列 --- */
+.summary-stats {
+  display: flex; /* 启用 Flexbox 布局 */
+  justify-content: space-around; /* 子项之间均匀分布空间 */
+  align-items: flex-start; /* 如果子项高度不同，顶部对齐 */
+  flex-wrap: wrap; /* 如果屏幕宽度不够，允许换行 */
+  margin-top: 30px; /* 可以调整与上方内容的间距 */
   padding: 0 10px; /* 容器左右留白 */
 }
 
-/* 调整单个统计项的样式 */
-.stats-container .summary-section { /* 应用于容器内的统计项 */
-  flex: 1; /* 让每个项目尝试占据可用空间 */
-  min-width: 150px; /* 设置一个最小宽度 */
-  margin: 0 10px 20px 10px; /* 调整项目间距 */
-  padding: 15px; /* 调整内边距 */
-  /* 确保背景是透明的 (已在上面的 .summary-section 中设置) */
-}
-
-.stats-container .summary-section h2 { /* 统计数字样式 */
-  font-size: 3.5em; /* 调整数字大小 */
-  margin-bottom: 5px; /* 数字和文字的间距 */
-  color: #3498db; /* 给数字一个醒目的颜色 */
-}
-
-.stats-container .summary-section p { /* 统计文字样式 */
-  font-size: 0.9em;
-  color: #555; /* 文字颜色 */
-  line-height: 1.3;
+/* 可以为每个统计项设置一些基本样式，确保它们不会挤在一起 */
+.stat-item {
+  flex: 1; /* 尝试让每个项目占据可用空间的一部分 */
+  min-width: 150px; /* 设置一个最小宽度，防止过度压缩 */
+  margin: 0 10px 20px 10px; /* 设置项目之间的水平和底部间距 */
+  text-align: center; /* 让每个项目内部文本居中 */
+  /* 保留你可能已经为 .stat-item 设置的其他样式 */
 }
 </style>
 
@@ -595,7 +578,7 @@ td {
     <!-- 可以添加更多形状 -->
   </div>
   <!-- 页面其他内容 -->
-  // ... existing code ...
+  <!-- // ... existing code ... -->
 </body>
 
 <!-- 动态背景元素 -->
@@ -625,18 +608,40 @@ td {
   </div>
 
   
-<div class="stats-container">
-  <div class="summary-section">
-    <h2>10</h2>
-    <p>CVPR/ICCV/ECCV/NeurIPS</p>
-  </div>
-  <div class="summary-section">
-    <h2>9</h2>
-    <p>AAAI/IJCAI/ACM MM/MICCAI</p>
-  </div>
-  <div class="summary-section">
-    <h2>4</h2>
-    <p>Other Conferences/Journals</p>  {# 或者这里对应的文字 #}
+<div class="summary-stats">
+    <div class="stat-item">
+      <div class="stat-number">10</div>
+      <div class="stat-label">CVPR/ICCV/ECCV/NeurIPS</div>
+      <div class="stat-tooltip">
+        <strong>Main list:</strong><br>
+        • CVPR'25 (3 papers)<br>
+        • NeurIPS'24<br>
+        • ECCV'24 (2 papers)<br>
+        • CVPR'24 (Highlight)<br>
+        • ICCV'23 (2 papers)<br>
+        • ECCV'22 (Oral)
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">9</div>
+      <div class="stat-label">AAAI/IJCAI/ACM MM/MICCAI</div>
+      <div class="stat-tooltip">
+        <strong>Main list:</strong><br>
+        • AAAI'25 (4 papers)<br>
+        • ACM MM'23 (4 papers)<br>
+        • MICCAI'24
+      </div>
+    </div>
+     <div class="stat-item">
+      <div class="stat-number">4</div>
+      <div class="stat-label">Other Conferences</div>
+      <div class="stat-tooltip">
+        <strong>Main list:</strong><br>
+        • BMVC'23<br>
+        • ACCV'22<br>
+        • ICASSP'23 (2 papers)
+      </div>
+    </div>
   </div>
 </div>
 

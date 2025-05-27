@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head1.html %}
+
+  <body>
+    <!-- <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul>
+          <li><a href="{{ '/' | prepend: site.baseurl }}">About</a></li>
+          <li><a href="{{ '/portfolio' | prepend: site.baseurl }}/">Publication</a></li>
+        </ul>
+     </div>
+   </nav> -->
+
+    <main>
+      {{ content }}
+
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}.
+
+
+
+      <!-- Statcounter code for my basic project https://ephemeral182.github.io/ on
+      Google Sites (new) -->
+      <script type="text/javascript">
+        var sc_project=12912983; 
+        var sc_invisible=1; 
+        var sc_security="5f8a7129"; 
+        </script>
+        <script type="text/javascript"
+        src="https://www.statcounter.com/counter/counter.js" async></script>
+        <noscript><div class="statcounter"><a title="Web Analytics"
+        href="https://statcounter.com/" target="_blank"><img class="statcounter"
+        src="https://c.statcounter.com/12912983/0/5f8a7129/1/" alt="Web Analytics"
+        referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+        <!-- End of Statcounter Code -->
+            <!-- </noscript> -->
+      <!-- End of Statcounter Code -->      
+
+      </span>
+
+
+
+    </footer>
+  </body>
+</html>
+

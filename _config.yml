@@ -1,25 +1,22 @@
-title: Hanlin Cai
-# tagline: Here is personal website of Hanlin Cai. Powered by Jekyll, based on the Minimal Mistakes theme.
-# description: Two roads diverged in woods, I took the one less traveled by.
+title: Sixiang Chen
+# tagline: Two roads diverged in woods, I took the one less traveled by.
+description: Losing ground now, gaining miles tomorrow.
 #Comment out url when working locally to resolve base urls correctly
-url: https://caihanlin.com
+url: https://Ephemeral182.github.io
 
 # Owner/author information
 owner:
-  name: Hanlin Cai
-  avatar: hanlin.jpg
-  # bio: Two roads diverged in woods, I took the one less traveled by.
-  email: hanlin.cai@ieee.org
-  cv: https://caihanlin.com/file/CV-HanlinCAI.pdf
+  name: Sixiang Chen
+  avatar: myself_art2.jpg
+  description: Losing ground now, gaining miles tomorrow.
+#  bio:
+  email: ephemeral182@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: lancecai2002
-  github: GuangLun2000
-  linkedin: hanlincai
-  scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  bilibili: 594030035
-  researchgate: https://www.researchgate.net/profile/Hanlin-Cai
-  zhihu: https://www.zhihu.com/people/chlire
+  # twitter: lancecai2002
   # facebook: caihanlin2002
+  github: Ephemeral182
+  # linkedin: hanlin-cai-07b53b23b
+  scholar: https://scholar.google.com.hk/citations?user=EtljKSgAAAAJ&hl=zh-CN
   # instagram: lancecai2002
   # lastfm:
   # tumblr:
@@ -28,7 +25,7 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 # https://search.google.com/search-console/ownership
-google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
+google_verify: "X1LRTauZ1eJD4V3y9I200jDnb--mL3_HYfUnQc8UfVs"
 
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 # bing_verify: ""
@@ -36,18 +33,20 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: About Me
+  - title: Story of Me
     url: /
+  - title: Resume
+    url: /file/resume_of_myself3.pdf
   - title: Publications
     url: /publications/
-  - title: Awards
-    url: /awards/
-  - title: Hobbies
-    url: /hobbies/
-  # - title: Startups
-    # url: /startups/
-  - title: Blogs
-    url: /blogs/
+ # - title: Projects
+  #url: /UDR_S2Former_deraining/
+  # - title: Awards
+  #   url: /awards/
+  # - title: Hobbies
+  #   url: /hobbies/
+  # - title: Blogs
+  #   url: /blogs/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Beijing
@@ -58,8 +57,8 @@ highlighter: rouge
 # pygments: true
 
 
-# https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+# # https://github.com/mojombo/jekyll/wiki/Permalinks
+# permalink:  /:categories/:title #/page/:title.html
 
 
 kramdown:
@@ -84,4 +83,6 @@ disqus:
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
 
-# Latest update in 2023/12/10 by Hanlin Cai.
+
+# Latest update in 2023/05/01 by Hanlin Cai.
+# URL: https://caihanlin.com/

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Haoyu Chen</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/fontawesome-all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon.ico">
+
+  <!-- Google Analytics -->
+  
+
+</head>
+
+
+  <body>
+    <!-- <nav class="nav">
+      <div class="nav-container">
+        <a href="/">
+          <h2 class="nav-title">Haoyu Chen</h2>
+        </a>
+        <ul>
+          <li><a href="/">About</a></li>
+          <li><a href="/portfolio/">Publication</a></li>
+        </ul>
+     </div>
+   </nav> -->
+
+    <main>
+      <div class="post1">
+  <!-- <h2 class="post-title">Snow Removal in Video: A New Dataset and A Novel Method</h2>
+  <div class="post-line"></div> -->
+
+  <h2 class="post-title" style="margin-bottom:7px;margin-top:0;font-weight:700;">Snow Removal in Video: </h2>
+<h2 class="post-title" style="margin-bottom:20px;margin-top:0;">A New Dataset and A Novel Method</h2>
+
+<div class="post-authors" style="margin-bottom:5px;">
+<strong>Haoyu Chen</strong>, Jingjing Ren, Jinjin Gu, Hongtao Wu, Xuequan Lu, Haoming Cai, Lei Zhu
+</div>
+
+<div class="post-authors" style="margin-bottom:20px;">
+International Conference on Computer Vision <strong>(ICCV)</strong>, 2023
+</div>
+
+<div class="post-line"></div>
+
+<div class="post-img-group">
+    <img class="post-img" src="../assets/img/VideoDesnowing/1.gif" alt="Left Image" />
+    <img class="post-img" src="../assets/img/VideoDesnowing/2.gif" alt="Right Image" />
+  </div>
+
+<!-- <img src="../assets/img/VideoDesnowing/1.gif" class="post-img" role="img"> -->
+
+<h2 class="post-section">Abstract</h2>
+
+<p>Snowfall is a common weather phenomenon that can severely affect computer vision tasks by obscuring objects and scenes. However, existing deep learning-based snow removal methods are designed for single images only. In this paper, we target a more complex task – video snow removal, which aims to restore the clear video from the snowy video. To facilitate this task, we propose the first high-quality video dataset, which simulates realistic physical characteristics of snow and haze using a rendering engine and augmentation techniques. We also develop a deep learning framework for video snow removal. Specifically, we propose a snow-query temporal aggregation module and a snow-aware contrastive learning loss function. The module aggregates features between video frames and removes snow effectively, while the loss function helps identify and eliminate snow features. We conduct extensive experiments and demonstrate that our proposed dataset is more realistic than previous datasets, and the models trained on it achieve better performance in real-world snowing images. Our proposed method outperforms state-of-the-art video and image-based methods on both synthetic and real snowy videos.</p>
+
+<div class="post-img-group">
+    <img class="post-img" style="max-width:125%" src="../assets/img/VideoDesnowing/3.jpg" alt="Left Image" />
+  </div>
+
+<h2 class="post-section" style="font-weight:300;"><strong>R</strong>ealistic <strong>V</strong>ideo De<strong>S</strong>nowing <strong>D</strong>ataset</h2>
+
+<ul>
+  <li><strong>RVSD</strong> contains a total of 110 pairs of videos.</li>
+  <li>Each pair contains <strong>snowy</strong> and  <strong>hazy</strong> videos and corresponding snow-free and haze-free ground truth videos.</li>
+  <li>We use a rendering engine (Unreal Engine 5) and various augmentation techniques to generate snow and haze with diverse and realistic physical properties. This results in more realistic and varied synthesized videos, which improve the model’s performance on real-world data.</li>
+</ul>
+
+<div class="post-section" style="font-weight:700;">Download</div>
+<!-- <div style="font-weight:300;">Train (100 videos):  [Google Drive]  [Baidu Netdisk (password: 7t74)]</div>
+<div style="font-weight:300;">Test (20 videos):  [Google Drive]  [Baidu Netdisk (password: 7t74)] </div> -->
+
+<ul>
+  <li><strong>Train (80 videos):</strong><br />
+  [Google Drive]  [Baidu Netdisk (password: 7t74)]</li>
+  <li><strong>Test (30 videos):</strong><br />
+  [Google Drive]  [Baidu Netdisk (password: 7t74)]</li>
+</ul>
+
+<h2 class="post-section">Citation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{chen2023desnow,
+  title={Snow Removal in Video: A New Dataset and A Novel Method},
+  author={Chen, Haoyu and Ren, Jingjing and Gu, Jinjin and Wu, Hongtao and Lu, Xuequan and Cai, Haoming and Zhu, Lei},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2023}
+}
+</code></pre></div></div>
+
+
+</div>
+
+<div class="pagination">
+  <!-- 
+  
+    <a href="/AAN" class="right next">Next</a>
+   -->
+
+  <a href="#" class="top">Top</a>
+</div>
+
+
+
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="2023-08-18 01:58:51 +0800">2023</time> Haoyu Chen.
+
+
+
+      <!-- Default Statcounter code for Haoyu Chen http://chenhaoyu.com -->
+<!--       <script type="text/javascript">
+      var sc_project=12491342; 
+      var sc_invisible=0; 
+      var sc_security="c00ed0d4"; 
+      var sc_https=1; 
+      var scJsHost = "https://";
+      document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
+      "statcounter.com/counter/counter.js'></"+"script>");
+      </script> -->
+      <!-- <noscript> -->
+      &emsp;
+      <img  style="display:inline !important; margin: auto;"
+      src="https://c.statcounter.com/12491342/0/c00ed0d4/0/" alt="Web
+      Analytics" >
+      <!-- </noscript> -->
+      <!-- End of Statcounter Code -->      
+
+      </span>
+
+
+
+    </footer>
+  </body>
+</html>

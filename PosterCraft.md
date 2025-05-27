@@ -17,28 +17,28 @@ title: PosterCraft - AI海报生成
     <div class="hero-visual">
         <div class="mosaic-grid">
             <div class="mosaic-item mosaic-1">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo1.png" alt="AI Generated Avatar 1">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo1.png" alt="AI Generated Avatar 1">
             </div>
             <div class="mosaic-item mosaic-2">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo2.png" alt="AI Generated Avatar 2">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo2.png" alt="AI Generated Avatar 2">
             </div>
             <div class="mosaic-item mosaic-3">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 3">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 3">
             </div>
             <div class="mosaic-item mosaic-4">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 4">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 4">
             </div>
             <div class="mosaic-item mosaic-5">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 5">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 5">
             </div>
             <div class="mosaic-item mosaic-6">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 6">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 6">
             </div>
             <div class="mosaic-item mosaic-7">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 7">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 7">
             </div>
             <div class="mosaic-item mosaic-8">
-                <img src="https://ephemeral182.github.io/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
             </div>
         </div>
         <div class="testimonial-card">

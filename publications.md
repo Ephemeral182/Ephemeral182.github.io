@@ -1,643 +1,35 @@
 ---
-layout: page
-permalink: /publications/index.html #/publications.html
+layout: fancy_home
+permalink: /publications/
 title: Publications
 ---
 
-<style>
-/* 覆盖全局 html 背景色，使其透明 */
-html {
-  background-color: transparent !important; /* 使用 !important 确保覆盖全局样式 */
-}
-
-/* 整体背景色 - 应用到 body */
-body {
-  background-color: #f0f5fa;  /* 你期望的页面背景色 */
-  position: relative; /* 保持相对定位可能对某些布局有用 */
-  overflow-x: hidden;
-}
-
-/* 动态背景效果 - 确保 z-index 是 -1 */
-.dynamic-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 确保在最底层 */
-  pointer-events: none;
-  /* overflow: hidden; */ /* 如果有重复规则，确保只保留一个，并且通常不需要 overflow: hidden */
-}
-
-/* 科技网格背景 (如果使用了) */
-.tech-grid {
-  /* ... 保留原有样式 ... */
-  opacity: 0.2; /* 可以调整透明度以适应背景色 */
-}
-
-/* 连接线容器 (如果使用了) */
-#nodes-container {
- /* ... 保留原有样式 ... */
-}
-
-/* 节点样式 (如果使用了) */
-.node {
-  /* ... 保留原有样式 ... */
-  background-color: rgba(33, 150, 243, 0.5); /* 节点颜色，确保在背景色上可见 */
-}
-
-
-/* 摘要部分样式 */
-.summary-section {
-  /* ... 保留原有样式 ... */
-  /* 可能需要调整背景透明度或颜色，确保在 #f0f5fa 上效果好 */
-  background: rgba(255, 255, 255, 0.9);
-}
-
-/* 移除元素之间的空白 */
-.tag-container, .author-info {
-  margin: 0;
-  padding: 0;
-}
-
-.tag-container + .author-info {
-  margin-top: -10px; /* 负边距可以拉近两个元素 */
-}
-
-/* 或者使用这种方法 */
-.tag-container {
-  margin-bottom: -10px;
-}
-
-/* 调整文章标题字体大小 */
-.text-wrapper papertitle {
-  font-size: 1.05em; /* 保持标题稍大 */
-}
-
-/* 调整作者名字和其他信息的字体大小 */
-.text-wrapper {
-  font-size: 0.9em; /* 减小作者和其他信息的字体 */
-}
-
-/* 鼠标流光粒子样式 */
-.mouse-particle {
-  pointer-events: none;
-  position: fixed;
-  border-radius: 50%;
-  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
-  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-}
-
-/* 论文类型标签样式优化 */
-.paper-tag {
-  display: inline-block;
-  padding: 3px 10px; /* 调整标签内边距以匹配较小的字体 */
-  border-radius: 12px;
-  font-size: 0.8em; /* 减小标签字体 */
-  margin: 5px;
-}
-
-.tag-top { 
-  background: rgba(33,150,243,0.1);
-  color: #2196F3;
-}
-
-.tag-conference {
-  background: rgba(0,188,212,0.1);
-  color: #00BCD4;
-}
-
-.tag-workshop {
-  background: rgba(76,175,80,0.1);
-  color: #4CAF50;
-}
-
-/* 完全重写图片容器样式 */
-.image-wrapper {
-  position: relative;
-  overflow: visible; /* 允许阴影可见 */
-  border-radius: 0;
-  transition: all 0.3s ease;
-  width: 100%;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-  font-size: 0; /* 消除可能的空白 */
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  /* 调整阴影大小，使其更贴近图片边缘 */
-  box-shadow: 0 4px 4px 0 rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-  margin: 0;
-}
-
-.image-wrapper:hover img {
-  transform: translateY(-5px);
-  /* 调整悬停时的阴影，使其更贴近图片边缘 */
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.1);
-}
-
-/* 解决右侧空白问题 */
-td.image-wrapper {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* 移除可能的右侧内边距 */
-.image-wrapper img {
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* 修复表格单元格样式 */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-td {
-  padding: 10px;
-  vertical-align: top;
-}
-
-/* 确保没有额外的边距 */
-* {
-  box-sizing: border-box;
-}
-
-/* 论文条目样式优化 */
-.publication-item {
-  background: white;
-  border-radius: 16px;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  font-size: 0.95em; /* 略微减小字体 */
-}
-
-.publication-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-/* 链接样式美化 */
-.custom-link {
-  display: inline-block;
-  padding: 5px 10px; /* 调整按钮内边距 */
-  border-radius: 6px;
-  text-decoration: none;
-  margin: 0 5px;
-  transition: all 0.3s ease;
-  font-size: 0.85em; /* 减小链接按钮字体 */
-}
-
-.custom-link—paper {
-  color: #2196F3;
-  background: rgba(33,150,243,0.1);
-}
-
-.custom-link—code {
-  color: #4CAF50;
-  background: rgba(76,175,80,0.1);
-}
-
-.custom-link—project {
-  color: #9C27B0;
-  background: rgba(156,39,176,0.1);
-}
-
-.custom-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* 更新摘要统计部分的样式 */
-.stat-item {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: relative;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-}
-
-.stat-number {
-  font-size: 2.5em;
-  font-weight: 700;
-  background: linear-gradient(135deg, #2196F3, #00BCD4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 5px;
-}
-
-.stat-label {
-  font-size: 0.9em;
-  color: #666;
-}
-
-/* 统计项悬浮提示 */
-.stat-tooltip {
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-10px);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 15px;
-  border-radius: 8px;
-  font-size: 0.9em;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  width: max-content;
-  max-width: 300px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-
-.stat-item:hover .stat-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* 添加动画效果 */
-@keyframes countUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.stat-number {
-  animation: countUp 1s ease-out forwards;
-}
-
-/* 论文标签样式优化 */
-.paper-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 12px;
-  margin: 4px;
-  font-size: 0.85em;
-  font-weight: 500;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  cursor: default;
-}
-
-/* 不同类型的标签使用不同的颜色主题 */
-.tag-method {
-  background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.2));
-  color: #2196F3;
-  border: 1px solid rgba(33,150,243,0.3);
-}
-
-.tag-domain {
-  background: linear-gradient(135deg, rgba(156,39,176,0.1), rgba(156,39,176,0.2));
-  color: #9C27B0;
-  border: 1px solid rgba(156,39,176,0.3);
-}
-
-.tag-application {
-  background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.2));
-  color: #4CAF50;
-  border: 1px solid rgba(76,175,80,0.3);
-}
-
-/* 悬停效果 */
-.paper-tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* 添加图标支持 */
-.paper-tag::before {
-  content: '';
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 6px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  vertical-align: middle;
-  opacity: 0.7;
-}
-
-.tag-method::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%232196F3"><path d="M12 3L1 9l11 6l11-6z"/></svg>');
-}
-
-.tag-domain::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%239C27B0"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2z"/></svg>');
-}
-
-.tag-application::before {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234CAF50"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>');
-}
-
-/* 研究方向专用标签样式 */
-.research-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  margin: 5px;
-  font-size: 0.9em;
-  font-weight: 500;
-  border-radius: 25px;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* 核心领域标签 */
-.tag-core {
-  background: linear-gradient(135deg, #1a237e10, #1a237e20);
-  color: #1a237e;
-  border: 1.5px solid #1a237e40;
-}
-
-/* 技术方法标签 */
-.tag-tech {
-  background: linear-gradient(135deg, #00695c10, #00695c20);
-  color: #00695c;
-  border: 1.5px solid #00695c40;
-}
-
-/* 应用领域标签 */
-.tag-focus {
-  background: linear-gradient(135deg, #bf360c10, #bf360c20);
-  color: #bf360c;
-  border: 1.5px solid #bf360c40;
-}
-
-/* 发光效果 */
-.research-tag::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: inherit;
-  filter: blur(10px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: -1;
-}
-
-.research-tag:hover {
-  transform: translateY(-2px);
-}
-
-.research-tag:hover::before {
-  opacity: 0.7;
-}
-
-/* 标签组容器 */
-.research-tags-container {
-  margin: 25px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start;
-}
-
-/* 渐变网格背景 */
-.grid-pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 30px 30px;
-  z-index: -1;
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-/* --- 开始：极光/烟雾效果 --- */
-.aurora-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 确保在最底层 */
-  pointer-events: none;
-  overflow: hidden; /* 防止内部元素溢出 */
-  opacity: 0.6; /* 调整整体效果的透明度 */
-  filter: blur(100px); /* 强模糊制造柔和效果 */
-}
-
-.aurora-bg::before,
-.aurora-bg::after {
-  content: '';
-  position: absolute;
-  width: 800px; /* 光斑大小 */
-  height: 800px;
-  border-radius: 50%;
-  mix-blend-mode: screen; /* 混合模式，让颜色叠加更柔和 */
-  animation: aurora-flow 25s infinite linear alternate; /* 动画 */
-}
-
-/* 第一个光斑 */
-.aurora-bg::before {
-  background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%); /* 蓝色系 */
-  top: -20%;
-  left: -20%;
-}
-
-/* 第二个光斑 (不同颜色和动画延迟) */
-.aurora-bg::after {
-  background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%); /* 淡蓝色或青色系 */
-  bottom: -20%;
-  right: -20%;
-  animation-delay: -12.5s; /* 让两个光斑不同步 */
-  animation-direction: alternate-reverse; /* 反向交替 */
-}
-
-/* 动画定义 */
-@keyframes aurora-flow {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translate(100px, 50px) rotate(180deg) scale(1.2);
-  }
-}
-/* --- 结束：极光/烟雾效果 --- */
-
-/* --- 开始：漂浮几何图形 --- */
-.geometric-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.shape {
-  position: absolute;
-  border-radius: 20%; /* 轻微圆角 */
-  opacity: 0.15; /* 图形透明度 */
-  animation: float-rotate 30s infinite linear alternate;
-}
-
-/* 定义不同形状和位置 */
-.shape-1 {
-  width: 150px; height: 150px;
-  background-color: #8ec5fc; /* 浅蓝色 */
-  top: 10%; left: 15%;
-  animation-duration: 35s;
-}
-.shape-2 {
-  width: 80px; height: 80px;
-  background-color: #e0c3fc; /* 淡紫色 */
-  top: 60%; left: 70%;
-  animation-duration: 28s;
-  animation-delay: -5s;
-}
-.shape-3 { /* 三角形示例 (用边框实现) */
-  width: 0; height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid #a8edea; /* 薄荷绿 */
-  background-color: transparent !important; /* 覆盖可能的默认背景 */
-  border-radius: 0; /* 三角形不需要圆角 */
-  top: 30%; left: 40%;
-  animation-duration: 40s;
-  animation-delay: -15s;
-}
-.shape-4 {
-  width: 120px; height: 120px;
-  background-color: #f0e68c; /* 卡其色/淡黄 */
-  top: 75%; left: 10%;
-  border-radius: 50%; /* 圆形 */
-  animation-duration: 32s;
-  animation-delay: -10s;
-}
-/* 可以添加更多形状 */
-
-@keyframes float-rotate {
-  0% {
-    transform: translateY(0) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translateY(-40px) rotate(180deg) scale(1.1);
-  }
-}
-/* --- 结束：漂浮几何图形 --- */
-
-/* --- 新增：使统计项水平排列 --- */
-.summary-stats {
-  display: flex;
-  justify-content: space-around;
-  /* align-items: flex-start; */ /* <-- 注释掉或删除这行 */
-  align-items: stretch; /* <-- 修改为 stretch */
-  flex-wrap: wrap;
-  margin-top: 30px;
-  padding: 0 10px;
-}
-
-/* 可以为每个统计项设置一些基本样式，确保它们不会挤在一起 */
-.stat-item {
-  flex: 1; /* 尝试让每个项目占据可用空间的一部分 */
-  min-width: 150px; /* 设置一个最小宽度，防止过度压缩 */
-  margin: 0 10px 20px 10px; /* 设置项目之间的水平和底部间距 */
-  text-align: center; /* 让每个项目内部文本居中 */
-  /* 保留你可能已经为 .stat-item 设置的其他样式 */
-}
-
-/* --- 1. 恢复统计项的白色背景和阴影 --- */
-.stat-item {
-  flex: 1;
-  min-width: 150px;
-  margin: 0 10px 20px 10px;
-  text-align: center;
-  /* --- 确保背景是白色 --- */
-  background-color: white; /* 或者 #ffffff */
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 恢复阴影 (如果需要) */
-  position: relative;
-  /* --- 结束恢复 --- */
-}
-
-/* --- 2. 将主要内容区域背景设为透明 --- */
-/* !!! 重要：请将下面的 'main' 或 '.page-content' 替换为你实际找到的选择器 !!! */
-main,
-.page-content, /* 或者其他你找到的选择器，比如 article, .content 等 */
-.post__content /* 也是一个常见的类名 */ {
-  background-color: transparent !important; /* 强制背景透明 */
-  box-shadow: none !important; /* 同时移除可能存在的阴影 */
-}
-
-
-/* ... (保留其他所有现有样式) ... */
-</style>
-
-<!-- 在 body 开始处添加效果容器和形状 -->
-<body>
-  <div class="geometric-bg">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-    <div class="shape shape-4"></div>
-    <!-- 可以添加更多形状 -->
+<div class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Publications</h1>
+        <p class="hero-subtitle">Research in AIGC and Image Restoration</p>
+        <div class="hero-description">
+            My research focuses on <span class="highlight">AIGC and image restoration</span>:<br><br>
+            <strong>(1)</strong> Advancing AIGC (AI-Generated Content) technology through various generative paradigms (e.g., Diffusion Models, Auto-Regressive Models, VAR) for intelligent image generation;<br><br>
+            <strong>(2)</strong> Developing robust and generalizable solutions for real-world image restoration, particularly in adverse conditions;<br><br>
+            <strong>(3)</strong> Exploring multimodal large language models (MLLM) for intelligent visual application.
   </div>
-  <!-- 页面其他内容 -->
-  <!-- // ... existing code ... -->
-</body>
-
-<!-- 动态背景元素 -->
-<div class="dynamic-bg">
-  <div class="grid-pattern"></div>
-  <div id="nodes-container"></div>
-</div>
-
-<!-- 添加摘要部分 -->
-<!-- <div class="summary-section"> -->
-  <h1>Publications</h1>
-  My research focuses on AIGC and image restoration:
-<br>
-(1) Advancing AIGC (AI-Generated Content) technology through various generative paradigms (e.g., Diffusion Models, Auto-Regressive Models, VAR) for intelligent image generation;<br><br>
-(2) Developing robust and generalizable solutions for real-world image restoration, particularly in adverse conditions;<br><br>
-(3) Exploring multimodal large language models (MLLM) for intelligent visual application.
-
   
   <div class="research-tags-container">
-    <!-- <span class="research-tag tag-core">Computer Vision</span>
-    <span class="research-tag tag-core">Deep Learning</span> -->
     <span class="research-tag tag-tech">Diffusion Models</span>
     <span class="research-tag tag-tech">AIGC</span>
     <span class="research-tag tag-tech">MLLM</span>
     <span class="research-tag tag-focus">Image Generation</span>
     <span class="research-tag tag-focus">Real-world Image Restoration</span>
+        </div>
+    </div>
   </div>
 
-  
-<div class="summary-stats">
-    <div class="stat-item">
+<div class="info-cards fade-in">
+    <div class="info-card">
+        <div class="card-icon">🏆</div>
+        <h3 class="card-title">Top-tier Conferences</h3>
+        <div class="card-content">
       <div class="stat-number">10</div>
       <div class="stat-label">CVPR/ICCV/ECCV/NeurIPS</div>
       <div class="stat-tooltip">
@@ -650,7 +42,12 @@ main,
         • ECCV'22 (Oral)
       </div>
     </div>
-    <div class="stat-item">
+    </div>
+    
+    <div class="info-card">
+        <div class="card-icon">📚</div>
+        <h3 class="card-title">AI Conferences</h3>
+        <div class="card-content">
       <div class="stat-number">9</div>
       <div class="stat-label">AAAI/IJCAI/ACM MM/MICCAI</div>
       <div class="stat-tooltip">
@@ -660,7 +57,12 @@ main,
         • MICCAI'24
       </div>
     </div>
-     <div class="stat-item">
+    </div>
+    
+    <div class="info-card">
+        <div class="card-icon">🔬</div>
+        <h3 class="card-title">Other Venues</h3>
+        <div class="card-content">
       <div class="stat-number">4</div>
       <div class="stat-label">Other Conferences</div>
       <div class="stat-tooltip">
@@ -671,13 +73,13 @@ main,
       </div>
     </div>
   </div>
-<!-- </div> -->
+</div>
 
-<!-- Selected Papers -->
-  <h1>Selected Papers</h1>
+<div class="news-section fade-in">
+    <h2 class="news-title">📄 Selected Papers</h2>
   
 <!-- 符号说明 -->
-<div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #555;">
+    <div class="symbols-legend" style="margin: 15px 0; font-size: 1em; color: #a1a1aa;">
   <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
   <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
   <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
@@ -685,720 +87,359 @@ main,
 
 <!-- 2025年论文 -->
 <div class="year-section">
-  <div class="year-divider">
-    <h2 class="year-2025">2025</h2>
-  </div>
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/gpt4o.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              An Empirical Study of GPT-4o Image Generation Capabilities
-            </strong>
-          </papertitle><br>
-          <div>
+        <h3 class="year-title">2025</h3>
+        
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/gpt4o.png" alt="GPT-4o Study">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">An Empirical Study of GPT-4o Image Generation Capabilities</h4>
+                    <div class="pub-tags">
           <span class="paper-tag tag-method">Empirical Evaluation for GPT-4o</span>
+                        <span class="paper-tag tag-application">Comprehensive Analysis</span>
           </div>
-          <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai*, Zhuoran Zhao*, Tian Ye*, Qingyu Shi, Donghao Zhou, Wenhao Chai,
-          Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou,
-          Wei Chow, Linfeng Li, Xiangtai Li<sup>✉️</sup>, Lei Zhu<sup>✉️</sup>, Lu Qi<sup>✉️</sup>.
-          <br>  
-          <em>Arxiv</em>, 2025
-          <br>
-          <a href="https://arxiv.org/abs/2504.05979" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai*, Zhuoran Zhao*, Tian Ye*, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li<sup>✉️</sup>, Lei Zhu<sup>✉️</sup>, Lu Qi<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>arXiv</em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2504.05979" class="custom-link custom-link-paper">Paper</a>
+                        <a href="#" class="custom-link custom-link-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization
-            </strong>
-          </papertitle><br>
-          <div>
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="SnowMaster">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h4>
+                    <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-          <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
+                        <span class="paper-tag tag-application">Intelligent Evaluation</span>
           </div>
+                    <div class="pub-authors">
           Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025
-          <br>
-          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+                    </div>
+                    <div class="pub-venue"><em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="#" class="custom-link custom-link-paper">Paper</a>
+                        <a href="#" class="custom-link custom-link-code">Code</a>
+                        <a href="#" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr25_jarvisir.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration
-            </strong>
-          </papertitle><br>
-          <div>
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/cvpr25_jarvisir.png" alt="JarvisIR">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration</h4>
+                    <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-          <span class="paper-tag tag-application">Intelligent Agent, Ranking Feedback Optimization</span>
+                        <span class="paper-tag tag-application">Autonomous Driving</span>
           </div>
+                    <div class="pub-authors">
           Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong><u>Sixiang Chen</u></strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding<sup>✉️</sup>.
-          <br>  
-          <em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025
-          <br>
-          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="CVPR'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cvpr25_mirror_detec.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">MLLM for Mirror Detection</span>
-          <span class="paper-tag tag-application">Iterative Data Engine, Large-Scale Unlabeled Data</span>
           </div>
-          Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenxue Li, Guang Liu, and Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025
-          <br>
-          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
-
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="AAAI'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/aaai25_prompthaze.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              PromptHaze: Prompting Real-world Dehazing via Depth Anything Model
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Prompt Learning for Image Restoration</span>
-          <span class="paper-tag tag-application">Real-world Generalization, Depth Anything Model</span>
+                    <div class="pub-venue"><em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="#" class="custom-link custom-link-paper">Paper</a>
+                        <a href="#" class="custom-link custom-link-code">Code</a>
+                        <a href="#" class="custom-link custom-link-project">Project</a>
           </div>
-          Tian Ye, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025
-          <br>
-          <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+                </div>
+            </div>
+        </div>
 
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="AAAI'2025">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/aglldiff.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              AGLLDiff: Guiding Diffusion Models Towards Unsupervised Training-free Real-world Low-light Image Enhancement
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-          <span class="paper-tag tag-application">Unsupervised Training-free, Real-world Generalization</span>
+        <!-- 更多2025年论文... -->
           </div>
-          Yunlong Lin* ,Tian Ye*, <strong><u>Sixiang Chen*</u></strong> ,Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding<sup>✉️</sup>.
-          <br>  
-          <em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025
-          <br>
-          <a href="https://arxiv.org/abs/2407.14900" class="custom-link—paper">[Paper]</a>
-          <a href="https://aglldiff.github.io/" class="custom-link—code">[Code]</a>
-          <a href="https://aglldiff.github.io/" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-
 
 <!-- 2024年论文 -->
 <div class="year-section">
-  <div class="year-divider">
-    <h2 class="year-2024">2024</h2>
+        <h3 class="year-title">2024</h3>
+        
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/nips2024/overview.png" alt="RestoreAgent">
   </div>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="NeurIPS'2024">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/nips2024/overview.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              RestoreAgent: Autonomous Image Restoration Agent via Multimodal Large Language Models
-            </strong>
-          </papertitle><br>
-          <div>
+                <div class="pub-details">
+                    <h4 class="pub-title">RestoreAgent: Autonomous Image Restoration Agent via Multimodal Large Language Models</h4>
+                    <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
           <span class="paper-tag tag-application">Intelligent Agent</span>
           </div>
+                    <div class="pub-authors">
           Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong></em>, 2024
-          <br>
-          <a href="https://arxiv.org/abs/2407.18035" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-          <a href="https://haoyuchen.com/RestoreAgent" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+                    </div>
+                    <div class="pub-venue"><em>Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong></em>, 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2407.18035" class="custom-link custom-link-paper">Paper</a>
+                        <a href="#" class="custom-link custom-link-code">Code</a>
+                        <a href="https://haoyuchen.com/RestoreAgent" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
-
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="ECCV'2024">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/eccv_24/eccv_adverse.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-          <span class="paper-tag tag-application">Real-world Generalization, Prompt Learning</span>
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/eccv_24/eccv_adverse.png" alt="T3-DiffWeather">
           </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Generative Model</span>
+                        <span class="paper-tag tag-application">Real-world Generalization</span>
+                    </div>
+                    <div class="pub-authors">
           <strong><u>Sixiang Chen</u></strong>, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
-          <br>
-          <a href="https://arxiv.org/abs/2409.15739" class="custom-link—paper">[Paper]</a>
-          <a href="https://github.com/Ephemeral182/ECCV24_T3-DiffWeather" class="custom-link—code">[Code]</a>
-          <a href="https://ephemeral182.github.io/T3-DiffWeather/" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+                    </div>
+                    <div class="pub-venue"><em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2409.15739" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Ephemeral182/ECCV24_T3-DiffWeather" class="custom-link custom-link-code">Code</a>
+                        <a href="https://ephemeral182.github.io/T3-DiffWeather/" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="ECCV'2024">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/eccv_snow.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Semi-Supervised Video Desnowing Network via Temporal Decoupling Experts and Distribution-Driven Contrastive Regularization
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">MoE for Video Restoration</span>
-          <span class="paper-tag tag-application">Semi-Supervised Learning, New Benchmark</span>
+        <!-- 更多2024年论文... -->
           </div>
-          Hongtao Wu, Yijun Yang, Angelica Aviles-Rivero, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>European Conference on Computer Vision <strong>(ECCV)</strong></em>, 2024
-          <br>
-          <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01500.pdf" class="custom-link—paper">[Paper]</a>
-          <a href="https://github.com/TonyHongtaoWu/SemiVDN
-          " class="custom-link—code">[Code]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper"  data-description="MICCAI'2024">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/miccai24.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Cross-conditioned Diffusion Model for medical image-to-image translation
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Generative Model for  Medical Image Translation</span>
-          <span class="paper-tag tag-application">Conditional Generation</span>
+    <!-- 可以继续添加更多年份的论文 -->
           </div>
-          Zhaohu Xing, Sicheng Yang, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Medical Image Computing and Computer Assisted Intervention <strong>(MICCAI)</strong></em>, 2024
-          <br>
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-72104-5_20" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
 
+<style>
+/* 研究方向专用标签样式 */
+.research-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    margin: 5px;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper" data-description="CVPR'2024 (Highlight)">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/CVPR24.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Learning Diffusion Texture Priors for Image Restoration
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-          <span class="paper-tag tag-application">Diffusion Model for Textural Learning</span>
-          </div>
-          Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>Computer Vision and Pattern Recognition <strong>(CVPR Highlight)</strong></em>, 2024
-          <br>
-          <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Ye_Learning_Diffusion_Texture_Priors_for_Image_Restoration_CVPR_2024_paper.html" class="custom-link—paper">[Paper]</a>
-          <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-<!-- </div> -->
+.tag-tech {
+    background: linear-gradient(135deg, #00695c10, #00695c20);
+    color: #00695c;
+    border: 1.5px solid #00695c40;
+}
 
-<!-- 2023年论文 -->
-<div class="year-section">
-  <div class="year-divider">
-    <h2 class="year-2023">2023</h2>
-  </div>
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:90%" align="center" class="image-wrapper" data-description="ICCV'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/udrs2former.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-          <papertitle>
-            <strong>
-              Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks
-            </strong>
-          </papertitle><br>
-          <div>
-          <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
-          <span class="paper-tag tag-application">Uncertainty-Driven Consideration, Sparse Sampling</span>
-          </div>
-          <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jinbin Bai, Jun Shi, Erkang Chen, Lei Zhu<sup>✉️</sup>.
-          <br>  
-          <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
-          <br>
-          <a href="https://arxiv.org/abs/2308.14153" class="custom-link—paper">[Paper]</a>
-          <a href="https://github.com/Ephemeral182/UDR-S2Former_deraining" class="custom-link—code">[Code]</a>
-          <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/" class="custom-link—project">[Project]</a>
-      </td>
-    </tr>
-  </tbody>
-  </table>
+.tag-focus {
+    background: linear-gradient(135deg, #bf360c10, #bf360c20);
+    color: #bf360c;
+    border: 1.5px solid #bf360c40;
+}
 
+.research-tag:hover {
+    transform: translateY(-2px);
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ICCV'2023">
-          <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/AWRCP_framework.jpg" alt="dise"> 
-        </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-        Adverse Weather Removal with Codebook Priors
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-          <span class="paper-tag tag-application">Codebook Priors</span>
-        </div>
-        Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
-        <br>  
-        <em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023
-        <br>
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
-  </tbody>
-  </table>
+.research-tags-container {
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+}
 
-      
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/Uncertainty_MM.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Uncertainty-Driven Dynamic Degradation Perceiving and Background Modeling for Efficient Single Image Desnowing
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
-          <span class="paper-tag tag-application">Novel Perspective for Desnowing</span>
-        </div>
-        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Chenghao Xue*, Haoyu Chen, Yun Liu, Erkang Chen, Lei Zhu<sup>✉️</sup>.
-        <br>  
-        <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
-        <br>
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
-  </tbody>
-  </table>
+/* 年份标题样式 */
+.year-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 3rem 0 2rem 0;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+}
 
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-    <tr>
-      <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/cpl.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          CPLFormer: Cross-scale Prototype Learning Transformer for Image Snow Removal
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Prototype Learning for Image Restoration</span>
-          <span class="paper-tag tag-application">Cross-scale Prototype </span>
-        </div>
-        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Jinbin Bai, Haoyu Chen, Yunlong Lin, Jun Shi, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
-        <br>
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-       <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
-  </tbody>
-  </table>
+/* 论文条目样式 */
+.publication-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
 
+.publication-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/video.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Sequential Affinity Learning for Video Restoration
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Sequential Affinity for Video Restoration</span>
-          <span class="paper-tag tag-application">Sequential Affinity Learning</span>
-        </div>
-        Tian Ye*,<strong><u>Sixiang Chen*</u></strong>, Yun Liu<sup>✉️</sup>, Wenhao Chai, Jinbin Bai, Wenbin Zou, Yunchen Zhang, jiang mingchao, Erkang Chen, Chenghao Xue.
-        <br>  
-        <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
-        <br>
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.publication-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 102, 241, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
 
+.pub-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACM MM'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/Nightformer.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          NightHazeFormer: Single Nighttime Haze Removal Using Prior Query Transformer
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Prior Query Transformer for Image Restoration</span>
-          <span class="paper-tag tag-application">Physical Prior, New Benchmark</span>
-        </div>
-        Yun Liu, Zhongsheng Yan, <strong><u>Sixiang Chen</u><sup>✉️</sup></strong>, Tian Ye<sup>✉️</sup>, Wenqi Ren, Erkang Chen.
-        <br>  
-        <em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023
-        <br>
-        <a href="http://export.arxiv.org/abs/2305.09533#:~:text=propose%20an%20end-to-end%20transformer-based%20framework%20for%20nighttime%20haze,we%20introduce%20two%20powerful%20priors%20into%20the%20transformer" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.pub-image {
+    flex: 0 0 200px;
+}
 
+.pub-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="BMVC'2023">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/BMVC.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Five A+ Network: You Only Need 9K Parameters for Underwater Image Enhancement
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Efficient Image Restoration</span>
-        <span class="paper-tag tag-application">Only 9K Parameters</span>
-        </div>
-        Jingxia Jiang*, Tian Ye*, Jinbin Bai*, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Jun Shi, Yun Liu, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>British Machine Vision Conference (BMVC)</em>, 2023
-        <br>
-        <a href="https://arxiv.org/abs/2305.08824#:~:text=In%20this%20work%2C%20we%20propose%20the%20Five%20A,The%20FA%20Net%20employs%20a%20two-stage%20enhancement%20structure." class="custom-link—paper">[Paper]</a>
-        <a href="https://github.com/Owen718/FiveAPlus-Network" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.pub-details {
+    flex: 1;
+}
 
+.pub-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ICASSP'2023" >
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/dehrformer_00.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          DEHRFormer: Real-time Transformer for Depth Estimation and Haze Removal from Varicolored Haze Scenes
-        </strong>
-        </papertitle><br>
-        <div>
-          <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
-          <span class="paper-tag tag-application">Real-time, New Benchmark for Vari-color Haze</span>
-        </div>
-        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jun Shi, Yun Liu, JingXia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
-        <br>  
-        <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
-        <br>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10096828" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.pub-tags {
+    margin-bottom: 1rem;
+}
 
+.paper-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    margin: 2px 4px;
+    font-size: 0.8em;
+    font-weight: 500;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ICASSP'2023" >
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/MSP-Former_00.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          MSP-Former: Multi-Scale Projection Transformer for Single Image Desnowing
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
-        <span class="paper-tag tag-application">Multi-Scale Projection, First Vision Transformer for Desnowing</span>
-        </div>
-        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Taodong Liao, Jingxia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
-        <br>  
-        <em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023
-        <br>
-        <a href="https://ieeexplore.ieee.org/abstract/document/10095605" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
-    </tbody>
-  </table>
-<!-- </div> -->
+.tag-method {
+    background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.2));
+    color: #2196F3;
+    border: 1px solid rgba(33,150,243,0.3);
+}
 
-<!-- 2022年论文 -->
-<div class="year-section">
-  <div class="year-divider">
-    <h2 class="year-2022">2022</h2>
-  </div>
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="Arxiv'2022">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/snowformer.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          SnowFormer: Context Interaction Transformer with Scale-awareness for Single Image Desnowing
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
-        <span class="paper-tag tag-application">SOTA Desnowing, Significant Performance Improvement</span>
-        </div>
-        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>Arxiv (Under review)</em>, 2022
-        <br>
-        <a href="https://arxiv.org/abs/2208.09703#:~:text=SnowFormer%3A%20Context%20Interaction%20Transformer%20with%20Scale-awareness%20for%20Single,image%20desnowing%20is%20a%20challenging%20image%20restoration%20task." class="custom-link—paper">[Paper]</a>
-        <a href="https://github.com/Ephemeral182/SnowFormer" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.tag-application {
+    background: linear-gradient(135deg, rgba(76,175,80,0.1), rgba(76,175,80,0.2));
+    color: #4CAF50;
+    border: 1px solid rgba(76,175,80,0.3);
+}
 
+.pub-authors {
+    color: #a1a1aa;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ACCV'2022">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/ACCV.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Towards Real-time High-Definition Image Snow Removal: Efficient Pyramid Network with Asymmetrical Encoder-decoder Architecture
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Efficient Image Restoration</span>
-        <span class="paper-tag tag-application">Real-time, High-Definition</span>
-        </div>
-        Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>Asian Conference on Computer Vision <strong>(ACCV)</strong></em>, 2022
-        <br>
-        <a href="Ephemeral182.github.io" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.pub-venue {
+    color: #d1d5db;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
 
+.pub-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="Digital Signal Processing">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/dualformer.png" alt="dise"> 
-      </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Dual-former: Hybrid Self-attention Transformer for
-          Efficient Image Restoration
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
-        <span class="paper-tag tag-application">Latent-based Self-attention</span>
-        </div>
-        <strong><u>Sixiang Chen</u></strong>, Tian Ye, Yun Liu, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>Digital Signal Processing</em>, 2024
-        <br>
-        <a href="https://www.sciencedirect.com/science/article/pii/S1051200424001106" class="custom-link—paper">[Paper]</a>
-        <a href="Ephemeral182.github.io" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.custom-link {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
 
+.custom-link-paper {
+    color: #2196F3;
+    background: rgba(33,150,243,0.1);
+    border: 1px solid rgba(33,150,243,0.3);
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="ECCV'2022 (Oral)">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/ECCV.png" alt="dise"> 
-        </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Perceiving and Modeling Density for Image Dehazing
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Novel Attention for Image Restoration</span>
-        <span class="paper-tag tag-application">New Perspective for Image Dehazing</span>
-        </div>
-        Tian Ye*, Mingchao Jiang*, Yunchen Zhang*, Liang Chen, Yun Liu, <strong><u>Sixiang Chen</u></strong>, Erkang Chen<sup>✉️</sup>.
-        <br>  
-        <em>European Conference on Computer Vision <strong>(ECCV Oral)</strong></em>, 2022
-        <br>
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-19800-7_8" class="custom-link—paper">[Paper]</a>
-        <a href="https://github.com/Owen718/ECCV22-Perceiving-and-Modeling-Density-for-Image-Dehazing" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
+.custom-link-code {
+    color: #4CAF50;
+    background: rgba(76,175,80,0.1);
+    border: 1px solid rgba(76,175,80,0.3);
+}
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr>
-        <td style="margin:5px;padding:5px;width:35%;max-width:40%" align="center" class="image-wrapper" data-description="CVPRW'2022">
-        <img style="margin:1px;padding-right:20px;width:100%;max-width:100%" src="https://ephemeral182.github.io/images/CVPRW.png" alt="dise"> 
-        </td>
-      <td width="75%" valign="center" class="text-wrapper"> 
-        <papertitle>
-        <strong>
-          Underwater Light Field Retention: Neural Rendering for Underwater Imaging
-        </strong>
-        </papertitle><br>
-        <div>
-        <span class="paper-tag tag-method">Neural Rendering for Image Generation</span>
-        <span class="paper-tag tag-application">Light Field Retention, New Benchmark</span>
-        </div>
-        Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>, Yuche Li.
-        <br>  
-        <em>Conference on Computer Vision and Pattern Recognition Workshop <strong>(CVPRW)</strong></em>, 2022
-        <br>
-        <a href="https://ieeexplore.ieee.org/document/9857150" class="custom-link—paper">[Paper]</a>
-        <a href="https://github.com/Ephemeral182/UWNR" class="custom-link—code">[Code]</a>
-      </td>
-      </tr>
-  </tbody>
-</table>
-<!-- </div> -->
+.custom-link-project {
+    color: #9C27B0;
+    background: rgba(156,39,176,0.1);
+    border: 1px solid rgba(156,39,176,0.3);
+}
 
-<!-- # Publications -->
+.custom-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 
-<!-- 7&nbsp; ***CVPR*** / ***ICCV*** / ***ECCV*** /  ***NeurIPS*** &nbsp;&nbsp;&nbsp;5&nbsp; ***AAAI*** / ***IJCAI*** / ***ACM MM*** &nbsp;&nbsp;&nbsp; 1&nbsp; ***MICCAI*** &nbsp;&nbsp;&nbsp; 1&nbsp; ***CVPRW*** / ***ICCVW*** / ***ECCVW*** &nbsp;&nbsp;&nbsp;2&nbsp; ***ACCV*** / ***BMVC*** &nbsp;&nbsp;&nbsp;2&nbsp; ***ICME*** / ***ICASSP*** &nbsp;&nbsp;&nbsp; -->
+/* 统计数字样式 */
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
 
-<!-- =================================================================================== -->
+.stat-label {
+    font-size: 0.9em;
+    color: #a1a1aa;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .pub-content {
+        flex-direction: column;
+    }
+    
+    .pub-image {
+        flex: none;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .pub-links {
+        justify-content: center;
+    }
+}
+</style>
 
 
 

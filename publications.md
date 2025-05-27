@@ -215,6 +215,219 @@ title: Publications
             </div>
         </div>
 
+        <!-- 2023年论文 -->
+        <div class="year-section">
+            <h3 class="year-title">2023</h3>
+            
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/udrs2former.png" alt="UDR-S2Former">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
+                            <span class="paper-tag tag-application">Uncertainty-Driven Consideration, Sparse Sampling</span>
+                        </div>
+                        <div class="pub-authors">
+                            <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jinbin Bai, Jun Shi, Erkang Chen, Lei Zhu<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2308.14153" class="custom-link custom-link-paper">Paper</a>
+                            <a href="https://github.com/Ephemeral182/UDR-S2Former_deraining" class="custom-link custom-link-code">Code</a>
+                            <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/" class="custom-link custom-link-project">Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/AWRCP_framework.jpg" alt="Adverse Weather Removal with Codebook Priors">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">Adverse Weather Removal with Codebook Priors</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
+                            <span class="paper-tag tag-application">Codebook Priors</span>
+                        </div>
+                        <div class="pub-authors">
+                            Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/Uncertainty_MM.png" alt="Uncertainty-Driven Dynamic Degradation">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">Uncertainty-Driven Dynamic Degradation Perceiving and Background Modeling for Efficient Single Image Desnowing</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Uncertainty for Image Restoration</span>
+                            <span class="paper-tag tag-application">Novel Perspective for Desnowing</span>
+                        </div>
+                        <div class="pub-authors">
+                            <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Chenghao Xue*, Haoyu Chen, Yun Liu, Erkang Chen, Lei Zhu<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/cpl.png" alt="CPLFormer">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">CPLFormer: Cross-scale Prototype Learning Transformer for Image Snow Removal</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Prototype Learning for Image Restoration</span>
+                            <span class="paper-tag tag-application">Cross-scale Prototype</span>
+                        </div>
+                        <div class="pub-authors">
+                            <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Jinbin Bai, Haoyu Chen, Yunlong Lin, Jun Shi, Erkang Chen<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/video.png" alt="Sequential Affinity Learning">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">Sequential Affinity Learning for Video Restoration</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Sequential Affinity for Video Restoration</span>
+                            <span class="paper-tag tag-application">Sequential Affinity Learning</span>
+                        </div>
+                        <div class="pub-authors">
+                            Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu<sup>✉️</sup>, Wenhao Chai, Jinbin Bai, Wenbin Zou, Yunchen Zhang, jiang mingchao, Erkang Chen, Chenghao Xue.
+                        </div>
+                        <div class="pub-venue"><em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/Nightformer.png" alt="NightHazeFormer">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">NightHazeFormer: Single Nighttime Haze Removal Using Prior Query Transformer</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Prior Query Transformer for Image Restoration</span>
+                            <span class="paper-tag tag-application">Physical Prior, New Benchmark</span>
+                        </div>
+                        <div class="pub-authors">
+                            Yun Liu, Zhongsheng Yan, <strong><u>Sixiang Chen</u><sup>✉️</sup></strong>, Tian Ye<sup>✉️</sup>, Wenqi Ren, Erkang Chen.
+                        </div>
+                        <div class="pub-venue"><em>ACM Multimedia <strong>(ACM MM)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="http://export.arxiv.org/abs/2305.09533#:~:text=propose%20an%20end-to-end%20transformer-based%20framework%20for%20nighttime%20haze,we%20introduce%20two%20powerful%20priors%20into%20the%20transformer" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/BMVC.png" alt="Five A+ Network">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">Five A+ Network: You Only Need 9K Parameters for Underwater Image Enhancement</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Efficient Image Restoration</span>
+                            <span class="paper-tag tag-application">Only 9K Parameters</span>
+                        </div>
+                        <div class="pub-authors">
+                            Jingxia Jiang*, Tian Ye*, Jinbin Bai*, <strong><u>Sixiang Chen</u></strong>, Wenhao Chai, Jun Shi, Yun Liu, Erkang Chen<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>British Machine Vision Conference (BMVC)</em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="https://arxiv.org/abs/2305.08824#:~:text=In%20this%20work%2C%20we%20propose%20the%20Five%20A,The%20FA%20Net%20employs%20a%20two-stage%20enhancement%20structure." class="custom-link custom-link-paper">Paper</a>
+                            <a href="https://github.com/Owen718/FiveAPlus-Network" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/dehrformer_00.png" alt="DEHRFormer">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">DEHRFormer: Real-time Transformer for Depth Estimation and Haze Removal from Varicolored Haze Scenes</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
+                            <span class="paper-tag tag-application">Real-time, New Benchmark for Vari-color Haze</span>
+                        </div>
+                        <div class="pub-authors">
+                            <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Jun Shi, Yun Liu, JingXia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10096828" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication-item fade-in">
+                <div class="pub-content">
+                    <div class="pub-image">
+                        <img src="https://ephemeral182.github.io/images/MSP-Former_00.png" alt="MSP-Former">
+                    </div>
+                    <div class="pub-details">
+                        <h4 class="pub-title">MSP-Former: Multi-Scale Projection Transformer for Single Image Desnowing</h4>
+                        <div class="pub-tags">
+                            <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
+                            <span class="paper-tag tag-application">Multi-Scale Projection, First Vision Transformer for Desnowing</span>
+                        </div>
+                        <div class="pub-authors">
+                            <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Taodong Liao, Jingxia Jiang, Erkang Chen, Peng Chen<sup>✉️</sup>.
+                        </div>
+                        <div class="pub-venue"><em>International Conference on Acoustics, Speech, and Signal Processing <strong>(ICASSP)</strong></em>, 2023</div>
+                        <div class="pub-links">
+                            <a href="https://ieeexplore.ieee.org/abstract/document/10095605" class="custom-link custom-link-paper">Paper</a>
+                            <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- 2022年论文 -->
         <div class="year-section">
             <h3 class="year-title">2022</h3>

@@ -190,7 +190,7 @@ title: PosterCraft - AI Poster Generation
                                 <span>Detailed Description</span>
                             </div>
                             <div class="input-content">
-                                <p>"UTOPIA/DYSTOPIA Film Showcase poster with split design: left side bright utopian city with organic architecture and flying vehicles, right side dark dystopian cityscape with crumbling buildings and surveillance drones. Modern typography with stark contrast."</p>
+                                <p>"The event poster for 'UTOPIA/DYSTOPIA: A Future Visions Film Showcase' features a split design. The left side depicts a bright, utopian city with sleek, organic architecture, flying vehicles, and lush greenery, rendered in light, airy colors. The right side shows a dark, dystopian cityscape with crumbling skyscrapers, smog, and surveillance drones, in gritty, desaturated tones. The style is contrasting, thought-provoking, and cinematic. The showcase title, 'UTOPIA / DYSTOPIA,' is in a modern, clean, white sans-serif font, with 'UTOPIA' positioned on the left over its scene, and 'DYSTOPIA' on the right over its scene, separated by a sharp, diagonal dividing line."</p>
                             </div>
                         </div>
                     </div>

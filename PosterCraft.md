@@ -42,22 +42,22 @@ title: PosterCraft - AI Poster Generation
                 <img src="/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 2">
             </div>
             <div class="mosaic-item mosaic-3">
-                <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 3">
+                <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 3">
             </div>
             <div class="mosaic-item mosaic-4">
-                <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 4">
+                <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 4">
             </div>
             <div class="mosaic-item mosaic-5">
                 <img src="/images/postercraft/demo/demo7.png" alt="AI Generated Avatar 5">
             </div>
             <div class="mosaic-item mosaic-6">
-                <img src="/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 6">
+                <img src="/images/postercraft/demo/demo10.png" alt="AI Generated Avatar 6">
             </div>
             <div class="mosaic-item mosaic-7">
-                <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 7">
+                <img src="/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 7">
             </div>
             <div class="mosaic-item mosaic-8">
-                <img src="/images/postercraft/demo/demo10.png" alt="AI Generated Avatar 8">
+                <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
             </div>
         </div>
         <div class="testimonial-card">

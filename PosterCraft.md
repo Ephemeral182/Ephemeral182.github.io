@@ -231,87 +231,102 @@ title: PosterCraft - AI Poster Generation
 <!-- Platform Gallery Section -->
 <div class="platform-gallery-section" id="gallery">
     <div class="gallery-container">
-        <h2 class="gallery-title">Platform Gallery 🎨</h2>
-        <p class="gallery-subtitle">Discover the endless possibilities of AI-generated poster artistry</p>
+        <!-- 标题区域 -->
+        <div class="gallery-header">
+            <h2 class="gallery-title">Platform Gallery 🎨</h2>
+            <p class="gallery-subtitle">A comprehensive collection of high-quality AI-generated poster designs showcasing diverse artistic styles and creative possibilities</p>
+            <div class="absolute -top-10 -left-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+        </div>
         
-        <div class="poster-grid">
-            <!-- 第一组：2行 -->
-            <div class="poster-row-group">
-                <div class="poster-item poster-large">
-                    <img src="/images/postercraft/demo/demo3.png" alt="AI Generated Poster 1">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Sci-Fi</span>
+        <!-- 画廊内容 -->
+        <div class="gallery-content">
+            <!-- 第一个展示区域 -->
+            <div class="gallery-section">
+                <div class="absolute -top-20 -right-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="gallery-showcase">
+                    <!-- 全宽滚动展示 -->
+                    <div class="showcase-container">
+                        <div class="scrolling-wrapper">
+                            <div class="poster-scroll-row">
+                                <img src="/images/postercraft/demo/demo3.png" class="scroll-poster" alt="AI Generated Poster 1" />
+                                <img src="/images/postercraft/demo/demo4.png" class="scroll-poster" alt="AI Generated Poster 2" />
+                                <img src="/images/postercraft/demo/demo5.png" class="scroll-poster" alt="AI Generated Poster 3" />
+                                <img src="/images/postercraft/demo/demo6.png" class="scroll-poster" alt="AI Generated Poster 4" />
+                                <img src="/images/postercraft/demo/demo7.png" class="scroll-poster" alt="AI Generated Poster 5" />
+                                <!-- 重复一遍实现无缝滚动 -->
+                                <img src="/images/postercraft/demo/demo3.png" class="scroll-poster" alt="AI Generated Poster 1" />
+                                <img src="/images/postercraft/demo/demo4.png" class="scroll-poster" alt="AI Generated Poster 2" />
+                                <img src="/images/postercraft/demo/demo5.png" class="scroll-poster" alt="AI Generated Poster 3" />
+                                <img src="/images/postercraft/demo/demo6.png" class="scroll-poster" alt="AI Generated Poster 4" />
+                                <img src="/images/postercraft/demo/demo7.png" class="scroll-poster" alt="AI Generated Poster 5" />
+                            </div>
+                        </div>
+                        <div class="showcase-overlay"></div>
+                        <div class="showcase-info">
+                            <span class="showcase-number">01</span>
+                            <h4 class="showcase-title">Creative Collection</h4>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="poster-item poster-medium">
-                    <img src="/images/postercraft/demo/demo4.png" alt="AI Generated Poster 2">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Abstract</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-small">
-                    <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Poster 3">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Music</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-medium">
-                    <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Poster 4">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Animation</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-small">
-                    <img src="/images/postercraft/demo/demo7.png" alt="AI Generated Poster 5">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Gaming</span>
+                    
+                    <!-- 描述和样例 -->
+                    <div class="showcase-description">
+                        <div class="description-content">
+                            <p class="description-text">
+                                Professional AI-generated posters with diverse artistic styles, 
+                                from minimalist designs to complex visual narratives, 
+                                crafted with cutting-edge artificial intelligence.
+                            </p>
+                            <a href="#demo" class="download-button">
+                                <i class="ri-eye-line mr-2"></i>View More Designs
+                            </a>
+                        </div>
+                        <div class="description-image">
+                            <img src="/images/postercraft/demo/demo13.png" class="sample-image" alt="Featured Design Sample" />
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- 第二组：2行 -->
-            <div class="poster-row-group">
-                <div class="poster-item poster-medium">
-                    <img src="/images/postercraft/demo/demo8.png" alt="AI Generated Poster 6">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Coffee</span>
+            <!-- 第二个展示区域 -->
+            <div class="gallery-section">
+                <div class="absolute -top-20 -left-20 w-72 h-72 bg-white/5 rounded-full blur-3xl"></div>
+                <div class="gallery-showcase">
+                    <!-- 静态大图展示 -->
+                    <div class="showcase-container">
+                        <img src="/images/postercraft/demo/demo14.png" class="static-showcase" alt="Featured Poster Design" />
+                        <div class="showcase-overlay"></div>
+                        <div class="showcase-info">
+                            <span class="showcase-number">02</span>
+                            <h4 class="showcase-title">Featured Designs</h4>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="poster-item poster-small">
-                    <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Poster 7">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Perfume</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-large">
-                    <img src="/images/postercraft/demo/demo10.png" alt="AI Generated Poster 8">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Micro-Knight</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-medium">
-                    <img src="/images/postercraft/demo/demo11.png" alt="AI Generated Poster 9">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Demo</span>
-                    </div>
-                </div>
-                
-                <div class="poster-item poster-small">
-                    <img src="/images/postercraft/demo/demo12.png" alt="AI Generated Poster 10">
-                    <div class="poster-overlay">
-                        <span class="poster-category">Demo</span>
+                    
+                    <!-- 描述和样例 -->
+                    <div class="showcase-description">
+                        <div class="description-content">
+                            <p class="description-text">
+                                Detailed poster compositions with sophisticated typography, 
+                                color harmony, and visual storytelling elements that 
+                                demonstrate the full potential of AI creativity.
+                            </p>
+                            <a href="#features" class="download-button">
+                                <i class="ri-palette-line mr-2"></i>Explore Features
+                            </a>
+                        </div>
+                        <div class="description-image">
+                            <div class="mini-gallery">
+                                <img src="/images/postercraft/demo/demo8.png" class="mini-poster" alt="Mini Sample 1" />
+                                <img src="/images/postercraft/demo/demo9.png" class="mini-poster" alt="Mini Sample 2" />
+                                <img src="/images/postercraft/demo/demo10.png" class="mini-poster" alt="Mini Sample 3" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
+        <!-- 统计数据 -->
         <div class="gallery-stats">
             <div class="stat-item">
                 <span class="stat-number">10,000+</span>

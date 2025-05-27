@@ -905,7 +905,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
-            max-width: 300px;
+            max-width: 350px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
@@ -928,6 +928,7 @@
             font-style: italic;
             line-height: 1.6;
             margin: 0;
+            font-size: 0.95rem;
         }
         
         /* Magic Arrow */
@@ -985,72 +986,173 @@
         .output-side {
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         
-        .output-gallery {
+        .single-output {
             position: relative;
-            width: 300px;
-            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .output-item {
-            position: absolute;
-            border-radius: 12px;
+        .output-frame {
+            position: relative;
+            width: 280px;
+            height: 380px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-            border: 2px solid rgba(255, 255, 255, 0.15);
-            transition: all 0.3s ease;
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transform: perspective(1000px) rotateY(-5deg) rotateX(2deg);
+            transition: all 0.4s ease;
+            animation: posterFloat 4s ease-in-out infinite;
         }
         
-        .output-item img {
+        .output-frame:hover {
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.05);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.6),
+                0 0 0 1px rgba(255, 255, 255, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .output-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
         }
         
-        .output-1 {
-            width: 120px;
-            height: 160px;
+        .output-frame:hover img {
+            transform: scale(1.02);
+        }
+        
+        /* 发光效果 */
+        .output-glow {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 30px;
+            opacity: 0.3;
+            filter: blur(20px);
+            z-index: -1;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+        
+        /* 闪烁星星效果 */
+        .output-sparkles {
+            position: absolute;
             top: 0;
             left: 0;
-            z-index: 3;
-            transform: rotate(-10deg);
-            animation: outputFloat1 3s ease-in-out infinite;
-        }
-        
-        .output-2 {
-            width: 100px;
-            height: 140px;
-            top: 20px;
             right: 0;
-            z-index: 2;
-            transform: rotate(15deg);
-            animation: outputFloat2 3.5s ease-in-out infinite;
-        }
-        
-        .output-3 {
-            width: 110px;
-            height: 150px;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%) rotate(-5deg);
-            z-index: 1;
-            animation: outputFloat3 4s ease-in-out infinite;
+            pointer-events: none;
         }
         
-        @keyframes outputFloat1 {
-            0%, 100% { transform: rotate(-10deg) translateY(0px); }
-            50% { transform: rotate(-10deg) translateY(-8px); }
+        .sparkle {
+            position: absolute;
+            font-size: 1.2rem;
+            animation: sparkleFloat 2s ease-in-out infinite;
+            opacity: 0.8;
         }
         
-        @keyframes outputFloat2 {
-            0%, 100% { transform: rotate(15deg) translateY(0px); }
-            50% { transform: rotate(15deg) translateY(-6px); }
+        .sparkle-1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+            color: #fbbf24;
         }
         
-        @keyframes outputFloat3 {
-            0%, 100% { transform: translateX(-50%) rotate(-5deg) translateY(0px); }
-            50% { transform: translateX(-50%) rotate(-5deg) translateY(-10px); }
+        .sparkle-2 {
+            top: 20%;
+            right: 15%;
+            animation-delay: 0.5s;
+            color: #a78bfa;
+        }
+        
+        .sparkle-3 {
+            bottom: 25%;
+            left: 15%;
+            animation-delay: 1s;
+            color: #34d399;
+        }
+        
+        .sparkle-4 {
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 1.5s;
+            color: #f472b6;
+        }
+        
+        @keyframes sparkleFloat {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0px) scale(1); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-10px) scale(1.2); 
+            }
+        }
+        
+        @keyframes posterFloat {
+            0%, 100% { 
+                transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(0px); 
+            }
+            50% { 
+                transform: perspective(1000px) rotateY(-5deg) rotateX(2deg) translateY(-15px); 
+            }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .transformation-demo {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .arrow-line {
+                transform: rotate(90deg);
+                width: 60px;
+            }
+            
+            .output-frame {
+                width: 220px;
+                height: 300px;
+                transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
+            }
+            
+            .input-card {
+                max-width: 300px;
+                padding: 1.5rem;
+            }
+            
+            .input-content p {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .output-frame {
+                width: 180px;
+                height: 240px;
+            }
+            
+            .sparkle {
+                font-size: 1rem;
+            }
         }
         
         /* Aesthetic Description */
@@ -1074,29 +1176,6 @@
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .transformation-demo {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                text-align: center;
-            }
-            
-            .arrow-line {
-                transform: rotate(90deg);
-                width: 60px;
-            }
-            
-            .output-gallery {
-                width: 250px;
-                height: 180px;
-            }
-            
-            .output-1 { width: 100px; height: 130px; }
-            .output-2 { width: 80px; height: 110px; }
-            .output-3 { width: 90px; height: 120px; }
         }
     </style>
 </head>

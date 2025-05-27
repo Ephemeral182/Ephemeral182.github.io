@@ -140,7 +140,7 @@ title: PosterCraft - AI Poster Generation
                         <span>Your Text Input</span>
                     </div>
                     <div class="input-content">
-                        <p>"Create a futuristic movie poster with neon lights and cyberpunk aesthetics"</p>
+                        <p>"This poster for the 'Urban Canvas Street Art Expo' uses bold, graffiti-style lettering and dynamic, colorful splashes, capturing the raw energy and creativity of urban artists."</p>
                     </div>
                 </div>
             </div>
@@ -155,15 +155,16 @@ title: PosterCraft - AI Poster Generation
             </div>
             
             <div class="output-side">
-                <div class="output-gallery">
-                    <div class="output-item output-1">
-                        <img src="/images/postercraft/demo/demo3.png" alt="Generated Poster 1">
-                    </div>
-                    <div class="output-item output-2">
-                        <img src="/images/postercraft/demo/demo6.png" alt="Generated Poster 2">
-                    </div>
-                    <div class="output-item output-3">
-                        <img src="/images/postercraft/demo/demo4.png" alt="Generated Poster 3">
+                <div class="single-output">
+                    <div class="output-frame">
+                        <img src="/images/postercraft/demo/demo13.png" alt="Generated Urban Canvas Street Art Expo Poster">
+                        <div class="output-glow"></div>
+                        <div class="output-sparkles">
+                            <span class="sparkle sparkle-1">✨</span>
+                            <span class="sparkle sparkle-2">⭐</span>
+                            <span class="sparkle sparkle-3">💫</span>
+                            <span class="sparkle sparkle-4">✨</span>
+                        </div>
                     </div>
                 </div>
             </div>

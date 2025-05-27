@@ -4,13 +4,22 @@ permalink: /poster-craft/
 title: PosterCraft - AI Poster Generation
 ---
 
-<!-- 顶部浮动demo图片 -->
+<!-- 顶部浮动demo图片 - 更新版本 -->
 <div class="floating-demos">
+    <!-- 第一组demo图片 -->
     <div class="demo-left">
         <img src="/images/postercraft/demo/demo1.png" alt="AI Generated Poster Demo 1">
     </div>
     <div class="demo-right">
         <img src="/images/postercraft/demo/demo2.png" alt="AI Generated Poster Demo 2">
+    </div>
+    
+    <!-- 第二组demo图片 -->
+    <div class="demo-second-left">
+        <img src="/images/postercraft/demo/demo11.png" alt="AI Generated Poster Demo 3">
+    </div>
+    <div class="demo-second-right">
+        <img src="/images/postercraft/demo/demo12.png" alt="AI Generated Poster Demo 4">
     </div>
 </div>
 

@@ -1,9 +1,9 @@
 ---
 layout: fancy_home
 permalink: /publications/
+permalink: /publications/index.html #/publications.html
 title: Publications
 ---
-
 <div class="hero">
     <div class="hero-content">
         <h1 class="hero-title">Publications</h1>
@@ -12,7 +12,7 @@ title: Publications
             My research focuses on <span class="highlight">AIGC and image restoration</span>:<br><br>
             <strong>(1)</strong> Advancing AIGC (AI-Generated Content) technology through various generative paradigms (e.g., Diffusion Models, Auto-Regressive Models, VAR) for intelligent image generation;<br><br>
             <strong>(2)</strong> Developing robust and generalizable solutions for real-world image restoration, particularly in adverse conditions;<br><br>
-            <strong>(3)</strong> Exploring multimodal large language models (MLLM) for intelligent visual application.
+            <strong>(3)</strong> Exploring multimodal large language models (MLLM) for intelligent visual application. shape-4"></div>
         </div>
         
         <div class="research-tags-container">
@@ -23,8 +23,8 @@ title: Publications
             <span class="research-tag tag-focus">Real-world Image Restoration</span>
         </div>
     </div>
-</div>
-
+</div>n class="research-tag tag-focus">Real-world Image Restoration</span>
+  </div>
 <div class="info-cards fade-in">
     <div class="info-card">
         <div class="card-icon">🏆</div>
@@ -41,7 +41,7 @@ title: Publications
                 • ICCV'23 (2 papers)<br>
                 • ECCV'22 (Oral)
             </div>
-        </div>
+        </div>v>
     </div>
     
     <div class="info-card">
@@ -56,7 +56,7 @@ title: Publications
                 • ACM MM'23 (4 papers)<br>
                 • MICCAI'24
             </div>
-        </div>
+        </div>v>
     </div>
     
     <div class="info-card">
@@ -72,9 +72,9 @@ title: Publications
                 • ICASSP'23 (2 papers)
             </div>
         </div>
-    </div>
+    </div>v>
 </div>
-
+<!-- </div> -->
 <div class="news-section fade-in">
     <h2 class="news-title">📄 Selected Papers</h2>
     
@@ -83,8 +83,8 @@ title: Publications
         <span style="margin-right: 20px;"><strong>*</strong> - Equal Contribution</span>
         <span style="margin-right: 20px;"><strong><sup>&#9828;</sup></strong> - Project Lead</span>
         <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
-    </div>
-
+    </div>n><strong><sup>✉️</sup></strong> - Corresponding Author</span>
+</div>
     <!-- 2025年论文 -->
     <div class="year-section">
         <h3 class="year-title">2025</h3>
@@ -96,10 +96,10 @@ title: Publications
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">An Empirical Study of GPT-4o Image Generation Capabilities</h4>
-                    <div class="pub-tags">
+                    <div class="pub-tags">ertitle><br>
                         <span class="paper-tag tag-method">Empirical Evaluation</span>
                         <span class="paper-tag tag-application">GPT-4o Analysis</span>
-                    </div>
+                    </div>class="paper-tag tag-method">Empirical Evaluation for GPT-4o</span>
                     <div class="pub-authors">
                         <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai*, Zhuoran Zhao*, Tian Ye*, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li<sup>✉️</sup>, Lei Zhu<sup>✉️</sup>, Lu Qi<sup>✉️</sup>.
                     </div>
@@ -112,7 +112,7 @@ title: Publications
                 </div>
             </div>
         </div>
-
+  </table>
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
@@ -120,10 +120,10 @@ title: Publications
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h4>
-                    <div class="pub-tags">
+                    <div class="pub-tags">ertitle><br>
                         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
                         <span class="paper-tag tag-application">Intelligent Evaluation</span>
-                    </div>
+                    </div>class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
                     <div class="pub-authors">
                         Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
                     </div>
@@ -136,7 +136,7 @@ title: Publications
                 </div>
             </div>
         </div>
-
+  </table>
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
@@ -144,10 +144,10 @@ title: Publications
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration</h4>
-                    <div class="pub-tags">
+                    <div class="pub-tags">ertitle><br>
                         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
                         <span class="paper-tag tag-application">Autonomous Driving</span>
-                    </div>
+                    </div>class="paper-tag tag-application">Intelligent Agent, Ranking Feedback Optimization</span>
                     <div class="pub-authors">
                         Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong><u>Sixiang Chen</u></strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding<sup>✉️</sup>.
                     </div>
@@ -159,7 +159,7 @@ title: Publications
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  </table>
 
         <div class="publication-item fade-in">
             <div class="pub-content">
@@ -184,7 +184,7 @@ title: Publications
                 </div>
             </div>
         </div>
-    </div>
+    </div>class="paper-tag tag-application">Unsupervised Training-free, Real-world Generalization</span>
 
     <!-- 2024年论文 -->
     <div class="year-section">
@@ -197,10 +197,10 @@ title: Publications
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">RestoreAgent: Autonomous Image Restoration Agent via Multimodal Large Language Models</h4>
-                    <div class="pub-tags">
+                    <div class="pub-tags">ertitle><br>
                         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
                         <span class="paper-tag tag-application">Intelligent Agent</span>
-                    </div>
+                    </div>class="paper-tag tag-application">Intelligent Agent</span>
                     <div class="pub-authors">
                         Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu<sup>✉️</sup>.
                     </div>
@@ -237,7 +237,7 @@ title: Publications
                 </div>
             </div>
         </div>
-
+  </table>
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
@@ -338,8 +338,8 @@ title: Publications
                 </div>
             </div>
         </div>
-    </div>
-
+    </div>class="paper-tag tag-application">Semi-Supervised Learning, New Benchmark</span>
+  </table>
     <!-- 2022年论文 -->
     <div class="year-section">
         <h3 class="year-title">2022</h3>
@@ -347,22 +347,113 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/eccv22_oral.png" alt="ECCV22 Oral">
+                    <img src="https://ephemeral182.github.io/images/snowformer.png" alt="SnowFormer">
                 </div>
                 <div class="pub-details">
-                    <h4 class="pub-title">Unified Framework for Real-world Image Restoration via Transformer</h4>
+                    <h4 class="pub-title">SnowFormer: Context Interaction Transformer with Scale-awareness for Single Image Desnowing</h4>
                     <div class="pub-tags">
-                        <span class="paper-tag tag-method">Transformer Architecture</span>
-                        <span class="paper-tag tag-application">Unified Restoration</span>
+                        <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
+                        <span class="paper-tag tag-application">SOTA Desnowing, Significant Performance Improvement</span>
                     </div>
                     <div class="pub-authors">
-                        <strong><u>Sixiang Chen</u></strong>, Kai Zhang, Lei Zhu<sup>✉️</sup>.
+                        <strong><u>Sixiang Chen*</u></strong>, Tian Ye*, Yun Liu, Erkang Chen<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Arxiv (Under review)</em>, 2022</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2208.09703#:~:text=SnowFormer%3A%20Context%20Interaction%20Transformer%20with%20Scale-awareness%20for%20Single,image%20desnowing%20is%20a%20challenging%20image%20restoration%20task." class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Ephemeral182/SnowFormer" class="custom-link custom-link-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/ACCV.png" alt="ACCV 2022">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Towards Real-time High-Definition Image Snow Removal: Efficient Pyramid Network with Asymmetrical Encoder-decoder Architecture</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Efficient Image Restoration</span>
+                        <span class="paper-tag tag-application">Real-time, High-Definition</span>
+                    </div>
+                    <div class="pub-authors">
+                        Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Asian Conference on Computer Vision <strong>(ACCV)</strong></em>, 2022</div>
+                    <div class="pub-links">
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/dualformer.png" alt="Dual-former">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Dual-former: Hybrid Self-attention Transformer for Efficient Image Restoration</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Vision Transformer for Image Restoration</span>
+                        <span class="paper-tag tag-application">Latent-based Self-attention</span>
+                    </div>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen</u></strong>, Tian Ye, Yun Liu, Erkang Chen<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Digital Signal Processing</em>, 2024</div>
+                    <div class="pub-links">
+                        <a href="https://www.sciencedirect.com/science/article/pii/S1051200424001106" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/ECCV.png" alt="ECCV 2022 Oral">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Perceiving and Modeling Density for Image Dehazing</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Novel Attention for Image Restoration</span>
+                        <span class="paper-tag tag-application">New Perspective for Image Dehazing</span>
+                    </div>
+                    <div class="pub-authors">
+                        Tian Ye*, Mingchao Jiang*, Yunchen Zhang*, Liang Chen, Yun Liu, <strong><u>Sixiang Chen</u></strong>, Erkang Chen<sup>✉️</sup>.
                     </div>
                     <div class="pub-venue"><em>European Conference on Computer Vision <strong>(ECCV Oral)</strong></em>, 2022</div>
                     <div class="pub-links">
-                        <a href="#" class="custom-link custom-link-paper">Paper</a>
-                        <a href="#" class="custom-link custom-link-code">Code</a>
-                        <a href="#" class="custom-link custom-link-project">Project</a>
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-19800-7_8" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Owen718/ECCV22-Perceiving-and-Modeling-Density-for-Image-Dehazing" class="custom-link custom-link-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/CVPRW.png" alt="CVPRW 2022">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Underwater Light Field Retention: Neural Rendering for Underwater Imaging</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Neural Rendering for Image Generation</span>
+                        <span class="paper-tag tag-application">Light Field Retention, New Benchmark</span>
+                    </div>
+                    <div class="pub-authors">
+                        Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Yun Liu, Yi Ye, Erkang Chen<sup>✉️</sup>, Yuche Li.
+                    </div>
+                    <div class="pub-venue"><em>Conference on Computer Vision and Pattern Recognition Workshop <strong>(CVPRW)</strong></em>, 2022</div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/document/9857150" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Ephemeral182/UWNR" class="custom-link custom-link-code">Code</a>
                     </div>
                 </div>
             </div>
@@ -390,7 +481,7 @@ title: Publications
     color: #00695c;
     border: 1.5px solid #00695c40;
 }
-
+  </table>
 .tag-focus {
     background: linear-gradient(135deg, #bf360c10, #bf360c20);
     color: #bf360c;
@@ -400,7 +491,7 @@ title: Publications
 .research-tag:hover {
     transform: translateY(-2px);
 }
-
+<!-- </div> -->
 .research-tags-container {
     margin: 25px 0;
     display: flex;
@@ -408,7 +499,7 @@ title: Publications
     gap: 12px;
     justify-content: flex-start;
 }
-
+  </table>
 /* 年份标题样式 */
 .year-title {
     font-size: 2rem;
@@ -432,7 +523,7 @@ title: Publications
     position: relative;
     overflow: hidden;
 }
-
+  </table>
 .publication-item::before {
     content: '';
     position: absolute;
@@ -449,13 +540,13 @@ title: Publications
     border-color: rgba(99, 102, 241, 0.3);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
+  </table>
 .pub-content {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
 }
-
+  </table>
 .pub-image {
     flex: 0 0 200px;
 }
@@ -466,7 +557,7 @@ title: Publications
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
+      </tr>
 .pub-details {
     flex: 1;
 }
@@ -478,7 +569,7 @@ title: Publications
     color: #ffffff;
     line-height: 1.4;
 }
-
+      </tr>
 .pub-tags {
     margin-bottom: 1rem;
 }
@@ -493,7 +584,7 @@ title: Publications
     border-radius: 15px;
     transition: all 0.3s ease;
 }
-
+      </tr>
 .tag-method {
     background: linear-gradient(135deg, rgba(33,150,243,0.1), rgba(33,150,243,0.2));
     color: #2196F3;
@@ -505,7 +596,7 @@ title: Publications
     color: #4CAF50;
     border: 1px solid rgba(76,175,80,0.3);
 }
-
+      </tr>
 .pub-authors {
     color: #a1a1aa;
     margin-bottom: 0.5rem;
@@ -517,13 +608,13 @@ title: Publications
     margin-bottom: 1rem;
     font-weight: 500;
 }
-
+<!-- </div> -->
 .pub-links {
     display: flex;
     gap: 0.5rem;
     flex-wrap: wrap;
 }
-
+      </tr>
 .custom-link {
     display: inline-block;
     padding: 6px 12px;
@@ -539,7 +630,7 @@ title: Publications
     background: rgba(33,150,243,0.1);
     border: 1px solid rgba(33,150,243,0.3);
 }
-
+      </tr>
 .custom-link-code {
     color: #4CAF50;
     background: rgba(76,175,80,0.1);
@@ -551,7 +642,7 @@ title: Publications
     background: rgba(156,39,176,0.1);
     border: 1px solid rgba(156,39,176,0.3);
 }
-
+      </tr>
 .custom-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -566,12 +657,12 @@ title: Publications
     -webkit-text-fill-color: transparent;
     margin-bottom: 5px;
 }
-
+      </tr>
 .stat-label {
     font-size: 0.9em;
     color: #a1a1aa;
 }
-
+<!-- </div> -->
 /* 响应式设计 */
 @media (max-width: 768px) {
     .pub-content {
@@ -589,7 +680,7 @@ title: Publications
     }
 }
 </style>
-
+<!-- =================================================================================== -->
 <script>
 // 鼠标流光特效
 document.addEventListener('DOMContentLoaded', function() {
@@ -684,7 +775,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollY = window.scrollY;
         const circles = document.querySelectorAll('.bg-circle');
         
-        circles.forEach((circle, index) => {
+        circles.forEach((circle, index) => {<!-- --- -->
             const speed = 0.05 + (index % 3) * 0.02;
             circle.style.transform = `translateY(${scrollY * speed}px)`;
         });
@@ -692,7 +783,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 添加到页面底部的脚本
-document.addEventListener('DOMContentLoaded', function() {
+// 鼠标流光特效
     // 创建科技连线网络背景
     function createTechNetwork() {
         const container = document.createElement('div');
@@ -883,5 +974,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ... (如果使用了鼠标粒子流，确保它的 DOMContentLoaded 代码也在这里) ...
 });
 </script>
+
 
 

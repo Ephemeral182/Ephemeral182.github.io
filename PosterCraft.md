@@ -1,7 +1,7 @@
 ---
 layout: postercraft
 permalink: /poster-craft/
-title: PosterCraft - AI海报生成平台
+title: PosterCraft - AI海报生成
 ---
 
 <div class="hero">

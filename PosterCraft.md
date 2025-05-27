@@ -125,4 +125,53 @@ title: PosterCraft - AI Poster Generation
             <p style="color: #d1d5db;">Stable Diffusion, GPT-4, DALL-E</p>
         </div>
     </div>
+</div>
+
+<div class="what-is-section" id="what-is">
+    <div class="what-is-container">
+        <h2 class="what-is-title">What is PosterCraft?</h2>
+        <p class="what-is-subtitle">Transform your words into stunning visual masterpieces</p>
+        
+        <div class="transformation-demo">
+            <div class="input-side">
+                <div class="input-card">
+                    <div class="input-header">
+                        <span class="input-icon">✨</span>
+                        <span>Your Text Input</span>
+                    </div>
+                    <div class="input-content">
+                        <p>"Create a futuristic movie poster with neon lights and cyberpunk aesthetics"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="arrow-container">
+                <div class="magic-arrow">
+                    <span class="arrow-text">AI Magic</span>
+                    <div class="arrow-line">
+                        <div class="arrow-head"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="output-side">
+                <div class="output-gallery">
+                    <div class="output-item output-1">
+                        <img src="/images/postercraft/demo/demo3.png" alt="Generated Poster 1">
+                    </div>
+                    <div class="output-item output-2">
+                        <img src="/images/postercraft/demo/demo6.png" alt="Generated Poster 2">
+                    </div>
+                    <div class="output-item output-3">
+                        <img src="/images/postercraft/demo/demo4.png" alt="Generated Poster 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="aesthetic-description">
+            <h3 class="aesthetic-title">Aesthetic Poster Generation</h3>
+            <p class="aesthetic-text">From simple text descriptions to breathtaking visual narratives. Our AI understands aesthetics, composition, and artistic vision to create posters that captivate and inspire.</p>
+        </div>
+    </div>
 </div> 

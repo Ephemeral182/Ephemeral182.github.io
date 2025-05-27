@@ -39,9 +39,16 @@ links:
     url: /file/resume_of_myself3.pdf
   - title: Publications
     url: /publications/
- # - title: Projects
-  #url: /UDR_S2Former_deraining/
-  # - title: Awards
+  - title: Paper Web
+    url: #
+    dropdown:
+      - title: PosterCraft
+        url: /PosterCraft/
+      - title: T3 DiffWeather
+        url: /T3-DiffWeather/
+      - title: UDR-S2Former
+        url: /UDR_S2Former_deraining/
+ # - title: Awards
   #   url: /awards/
   # - title: Hobbies
   #   url: /hobbies/

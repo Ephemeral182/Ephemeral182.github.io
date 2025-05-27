@@ -518,6 +518,99 @@
             text-decoration-color: #64748b !important;
             text-decoration-thickness: 1.5px !important;
         }
+        
+        /* 下拉菜单样式 */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 0.5rem 0;
+            margin-top: 0.5rem;
+            min-width: 180px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            list-style: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-menu li {
+            margin: 0;
+        }
+        
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+        }
+        
+        .dropdown-menu a:hover {
+            color: #ffffff;
+            background: rgba(99, 102, 241, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .dropdown-menu a::after {
+            display: none; /* 移除下拉菜单项的下划线效果 */
+        }
+        
+        /* 下拉箭头指示器 */
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.7em;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+        /* 响应式设计 - 移动端下拉菜单 */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .dropdown-menu a {
+                padding: 0.5rem 0;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -539,7 +632,14 @@
                 <li><a href="/">Story of Me</a></li>
                 <li><a href="/file/resume_of_myself3.pdf">Resume</a></li>
                 <li><a href="/publications/">Publications</a></li>
-                <li><a href="/poster-craft/">PosterCraft</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Paper Web</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/PosterCraft/">PosterCraft</a></li>
+                        <li><a href="/T3-DiffWeather/">T3 DiffWeather</a></li>
+                        <li><a href="/UDR_S2Former_deraining/">UDR-S2Former</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>

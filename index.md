@@ -30,9 +30,9 @@ layout: fancy_home
         <div class="card-icon">🔬</div>
         <h3 class="card-title">Research Interests</h3>
         <div class="card-content">
-            <p>• Explore the applications of AIGC (Artificial Intelligence Generated Content) technology</p>
-            <p>• Perform image restoration under real-world conditions</p>
-            <p>• Multimodal large language models (MLLM) for intelligent visual application</p>
+            <p>• Explore the applications of <strong>AIGC</strong> (Artificial Intelligence Generated Content) technology</p>
+            <p>• Perform <strong>image restoration</strong> under real-world conditions</p>
+            <p>• <strong>Multimodal large language models (MLLM)</strong> for intelligent visual application</p>
         </div>
     </div>
     
@@ -40,6 +40,7 @@ layout: fancy_home
         <div class="card-icon">🏆</div>
         <h3 class="card-title">Recent Achievements</h3>
         <div class="card-content">
+            <p>• <strong>GPT-4o evaluation report</strong> published on arXiv</p>
             <p>• <strong>3 papers accepted</strong> by CVPR'2025</p>
             <p>• <strong>4 papers accepted</strong> by AAAI'2025</p>
             <p>• <strong>1 paper accepted</strong> by NeurIPS'2024</p>
@@ -52,7 +53,8 @@ layout: fancy_home
     <h2 class="news-title">📰 News and Updates</h2>
     <div class="scrollable-news">
         <ul>
-            <li><strong>Feb. 2025：</strong>�� Fortunately, three papers have been accepted by <strong>CVPR'2025</strong>.</li>
+            <li><strong>Apr. 2025：</strong>📄 Our comprehensive <strong>GPT-4o Image Generation Capabilities</strong> evaluation report is now available on arXiv!</li>
+            <li><strong>Feb. 2025：</strong>🎉 Fortunately, three papers have been accepted by <strong>CVPR'2025</strong>.</li>
             <li><strong>Feb. 2025：</strong>🌟 I start to serve as a reviewer in <strong>NeurIPS'2025</strong> and <strong>ICCV'2025</strong>.</li>
             <li><strong>Jan. 2025：</strong>🏆 I start to serve as a reviewer in <strong>TIP</strong>.</li>
             <li><strong>Dec. 2024：</strong>🎊 I start to serve as a reviewer in <strong>CVPR'2025</strong> and <strong>ICML'2025</strong>.</li>
@@ -93,12 +95,23 @@ layout: fancy_home
             <p>• IEEE Transactions on Image Processing (<strong>TIP</strong>)</p>
             <p>• International Conference on Machine Learning (<strong>ICML'2025</strong>)</p>
             <p>• Conference on Computer Vision and Pattern Recognition (<strong>CVPR'2025</strong>)</p>
-            <p>• And many more...</p>
+            <p>• International Conference on Learning Representations (<strong>ICLR'2025</strong>)</p>
+            <p>• IEEE Transactions on Intelligent Transportation Systems (<strong>TITS</strong>)</p>
+            <p>• Conference on Neural Information Processing Systems (<strong>NeurIPS'2024</strong>)</p>
+            <p>• European Conference on Computer Vision (<strong>ECCV'2024</strong>)</p>
+            <p>• IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>)</p>
+            <p>• IEEE Transactions on Multimedia (<strong>TMM</strong>)</p>
+            <p>• ACM Multimedia (<strong>ACM MM'2023 / 2024</strong>)</p>
+            <p>• International Conference on Computer Vision (<strong>ICCV'2023</strong>)</p>
+            <p>• International Conference on Robotics and Automation (<strong>ICRA'2023</strong>)</p>
+            <p>• Asian Conference on Computer Vision (<strong>ACCV'2022</strong>)</p>
             <br>
             <p><strong>Awards:</strong></p>
             <p>• <strong>PG Scholarship of HKUST(GZ), 2024</strong></p>
             <p>• <strong>Outstanding Graduate in Jimei University, 2023</strong></p>
             <p>• <strong>International Third Price, Team Leader:</strong> Mathematical Contest In Modeling, 2022</p>
+            <p>• <strong>National Second Prize, Team Leader:</strong> China Undergraduate Mathematical Contest in Modeling, 2021</p>
+            <p>• <strong>National Second Prize, Team Leader:</strong> Mathorcup Mathematical Contest in Modeling, 2021</p>
         </div>
     </div>
 </div>

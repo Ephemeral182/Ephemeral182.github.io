@@ -519,15 +519,7 @@
             text-decoration-thickness: 1.5px !important;
         }
         
-        /* 下拉菜单样式 */
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-toggle {
-            cursor: pointer;
-        }
-        
+        /* 修改下拉菜单样式 - 防止换行 */
         .dropdown-menu {
             position: absolute;
             top: 100%;
@@ -538,7 +530,7 @@
             border-radius: 12px;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
-            min-width: 180px;
+            min-width: 200px; /* 确保有足够宽度 */
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
@@ -567,6 +559,9 @@
             transition: all 0.3s ease;
             border-radius: 8px;
             margin: 0 0.5rem;
+            white-space: nowrap; /* 防止文字换行 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            text-overflow: ellipsis; /* 如果太长显示省略号 */
         }
         
         .dropdown-menu a:hover {
@@ -591,7 +586,7 @@
             transform: rotate(180deg);
         }
         
-        /* 响应式设计 - 移动端下拉菜单 */
+        /* 响应式设计 - 移动端保持垂直布局 */
         @media (max-width: 768px) {
             .dropdown-menu {
                 position: static;
@@ -603,11 +598,12 @@
                 box-shadow: none;
                 padding: 0;
                 margin: 0;
+                display: block; /* 移动端恢复垂直布局 */
+                min-width: auto;
             }
             
             .dropdown-menu a {
                 padding: 0.5rem 0;
-                margin: 0;
                 border-radius: 0;
             }
         }
@@ -636,7 +632,7 @@
                     <a href="#" class="dropdown-toggle">Paper Web</a>
                     <ul class="dropdown-menu">
                         <li><a href="/PosterCraft/">PosterCraft</a></li>
-                        <li><a href="/T3-DiffWeather/">T3 DiffWeather</a></li>
+                        <li><a href="/T3-DiffWeather/">T3-DiffWeather</a></li>
                         <li><a href="/UDR_S2Former_deraining/">UDR-S2Former</a></li>
                     </ul>
                 </li>

@@ -228,8 +228,7 @@
             width: 580px;
             height: 580px;
             margin: 0 auto;
-            transform-style: preserve-3d;
-            animation: rotate3d 25s infinite linear;
+            animation: gentleFloat 6s ease-in-out infinite;
         }
         
         .mosaic-item {
@@ -252,10 +251,11 @@
         }
         
         .mosaic-item:hover {
-            transform: scale(1.08);
+            transform: scale(1.08) !important;
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
             z-index: 15;
             border-color: rgba(99, 102, 241, 0.4);
+            animation-play-state: paused;
         }
         
         .mosaic-item:hover img {
@@ -267,6 +267,7 @@
             left: 0;
             transform: rotate(-5deg);
             z-index: 8;
+            animation: itemFloat1 4s ease-in-out infinite;
         }
         
         .mosaic-2 {
@@ -274,6 +275,7 @@
             right: 0;
             transform: rotate(8deg);
             z-index: 7;
+            animation: itemFloat2 4.5s ease-in-out infinite;
         }
         
         .mosaic-3 {
@@ -281,6 +283,7 @@
             left: 200px;
             transform: rotate(-3deg);
             z-index: 9;
+            animation: itemFloat3 3.8s ease-in-out infinite;
         }
         
         .mosaic-4 {
@@ -288,6 +291,7 @@
             left: 0;
             transform: rotate(6deg);
             z-index: 6;
+            animation: itemFloat4 4.2s ease-in-out infinite;
         }
         
         .mosaic-5 {
@@ -295,6 +299,7 @@
             right: 0;
             transform: rotate(-8deg);
             z-index: 5;
+            animation: itemFloat5 3.9s ease-in-out infinite;
         }
         
         .mosaic-6 {
@@ -302,6 +307,7 @@
             left: 200px;
             transform: rotate(4deg);
             z-index: 4;
+            animation: itemFloat6 4.3s ease-in-out infinite;
         }
         
         .mosaic-7 {
@@ -309,6 +315,7 @@
             left: 0;
             transform: rotate(-6deg);
             z-index: 3;
+            animation: itemFloat7 4.1s ease-in-out infinite;
         }
         
         .mosaic-8 {
@@ -316,6 +323,7 @@
             right: 0;
             transform: rotate(7deg);
             z-index: 2;
+            animation: itemFloat8 3.7s ease-in-out infinite;
         }
         
         /* 证言卡片 */
@@ -832,13 +840,55 @@
             z-index: 2;
         }
         
-        /* 3D旋转动画 */
-        @keyframes rotate3d {
-            0% { transform: rotateY(0deg) rotateX(5deg); }
-            25% { transform: rotateY(90deg) rotateX(5deg); }
-            50% { transform: rotateY(180deg) rotateX(5deg); }
-            75% { transform: rotateY(270deg) rotateX(5deg); }
-            100% { transform: rotateY(360deg) rotateX(5deg); }
+        /* 添加轻柔的整体浮动动画 */
+        @keyframes gentleFloat {
+            0%, 100% { 
+                transform: translateY(0px); 
+            }
+            50% { 
+                transform: translateY(-10px); 
+            }
+        }
+        
+        /* 为每个项目定义独立的浮动动画 */
+        @keyframes itemFloat1 {
+            0%, 100% { transform: rotate(-5deg) translateY(0px); }
+            50% { transform: rotate(-5deg) translateY(-8px); }
+        }
+        
+        @keyframes itemFloat2 {
+            0%, 100% { transform: rotate(8deg) translateY(0px); }
+            50% { transform: rotate(8deg) translateY(-6px); }
+        }
+        
+        @keyframes itemFloat3 {
+            0%, 100% { transform: rotate(-3deg) translateY(0px); }
+            50% { transform: rotate(-3deg) translateY(-10px); }
+        }
+        
+        @keyframes itemFloat4 {
+            0%, 100% { transform: rotate(6deg) translateY(0px); }
+            50% { transform: rotate(6deg) translateY(-7px); }
+        }
+        
+        @keyframes itemFloat5 {
+            0%, 100% { transform: rotate(-8deg) translateY(0px); }
+            50% { transform: rotate(-8deg) translateY(-9px); }
+        }
+        
+        @keyframes itemFloat6 {
+            0%, 100% { transform: rotate(4deg) translateY(0px); }
+            50% { transform: rotate(4deg) translateY(-5px); }
+        }
+        
+        @keyframes itemFloat7 {
+            0%, 100% { transform: rotate(-6deg) translateY(0px); }
+            50% { transform: rotate(-6deg) translateY(-8px); }
+        }
+        
+        @keyframes itemFloat8 {
+            0%, 100% { transform: rotate(7deg) translateY(0px); }
+            50% { transform: rotate(7deg) translateY(-6px); }
         }
     </style>
 </head>

@@ -225,21 +225,21 @@
         
         .mosaic-grid {
             position: relative;
-            width: 500px;
-            height: 500px;
+            width: 580px;
+            height: 580px;
             margin: 0 auto;
             transform-style: preserve-3d;
-            animation: rotate3d 20s infinite linear;
+            animation: rotate3d 25s infinite linear;
         }
         
         .mosaic-item {
             position: absolute;
-            width: 155px;
-            height: 155px;
-            border-radius: 18px;
+            width: 180px;
+            height: 180px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.15);
             transition: all 0.3s ease;
             cursor: pointer;
         }
@@ -252,9 +252,10 @@
         }
         
         .mosaic-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-            z-index: 10;
+            transform: scale(1.08);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            z-index: 15;
+            border-color: rgba(99, 102, 241, 0.4);
         }
         
         .mosaic-item:hover img {
@@ -276,29 +277,29 @@
         }
         
         .mosaic-3 {
-            top: 90px;
-            left: 172px;
+            top: 105px;
+            left: 200px;
             transform: rotate(-3deg);
             z-index: 9;
         }
         
         .mosaic-4 {
-            top: 180px;
+            top: 210px;
             left: 0;
             transform: rotate(6deg);
             z-index: 6;
         }
         
         .mosaic-5 {
-            top: 180px;
+            top: 210px;
             right: 0;
             transform: rotate(-8deg);
             z-index: 5;
         }
         
         .mosaic-6 {
-            bottom: 90px;
-            left: 172px;
+            bottom: 105px;
+            left: 200px;
             transform: rotate(4deg);
             z-index: 4;
         }
@@ -320,14 +321,14 @@
         /* 证言卡片 */
         .testimonial-card {
             position: absolute;
-            bottom: -130px;
-            right: -60px;
-            width: 340px;
+            bottom: -140px;
+            right: -80px;
+            width: 360px;
             background: rgba(15, 23, 42, 0.9);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            padding: 24px;
+            padding: 28px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             z-index: 10;
             animation: fadeInUp 1s ease-out 1s both;
@@ -480,39 +481,47 @@
         /* 响应式设计 */
         @media (max-width: 1200px) {
             .mosaic-grid {
-                width: 450px;
-                height: 450px;
+                width: 520px;
+                height: 520px;
             }
             
             .mosaic-item {
-                width: 140px;
-                height: 140px;
+                width: 160px;
+                height: 160px;
             }
             
             .mosaic-3, .mosaic-6 {
-                left: 155px;
+                left: 180px;
+            }
+            
+            .mosaic-4, .mosaic-5 {
+                top: 190px;
+            }
+            
+            .mosaic-6 {
+                bottom: 95px;
             }
             
             .testimonial-card {
-                width: 320px;
-                bottom: -120px;
-                right: -50px;
+                width: 340px;
+                bottom: -130px;
+                right: -70px;
             }
             
             .demo-left {
-                left: -60px;
+                left: 10px;
             }
             
             .demo-right {
-                right: -60px;
+                right: 10px;
             }
             
             .floating-demos.second-phase .demo-second-left {
-                left: 60px;
+                left: 100px;
             }
             
             .floating-demos.second-phase .demo-second-right {
-                right: 60px;
+                right: 100px;
             }
         }
         
@@ -522,25 +531,25 @@
             }
             
             .mosaic-grid {
-                width: 360px;
-                height: 360px;
+                width: 420px;
+                height: 420px;
             }
             
             .mosaic-item {
-                width: 110px;
-                height: 110px;
+                width: 130px;
+                height: 130px;
             }
             
             .mosaic-3, .mosaic-6 {
-                left: 125px;
+                left: 145px;
             }
             
             .mosaic-4, .mosaic-5 {
-                top: 145px;
+                top: 155px;
             }
             
             .mosaic-6 {
-                bottom: 80px;
+                bottom: 85px;
             }
             
             .testimonial-card {
@@ -549,55 +558,63 @@
                 right: auto;
                 margin-top: 2rem;
                 width: 100%;
-                max-width: 340px;
+                max-width: 360px;
             }
             
             .demo-left {
-                left: -50px;
+                left: 5px;
             }
             
             .demo-right {
-                right: -50px;
+                right: 5px;
             }
             
             .floating-demos.scrolled .demo-left {
-                left: -280px;
+                left: -220px;
             }
             
             .floating-demos.scrolled .demo-right {
-                right: -280px;
+                right: -220px;
             }
             
             .floating-demos.second-phase .demo-second-left {
-                left: 30px;
+                left: 60px;
             }
             
             .floating-demos.second-phase .demo-second-right {
-                right: 30px;
+                right: 60px;
+            }
+            
+            .floating-demos.third-phase .demo-second-left {
+                left: -200px;
+            }
+            
+            .floating-demos.third-phase .demo-second-right {
+                right: -200px;
             }
         }
         
         @media (max-width: 480px) {
             .mosaic-grid {
-                width: 300px;
-                height: 300px;
+                width: 340px;
+                height: 340px;
             }
             
             .mosaic-item {
-                width: 90px;
-                height: 90px;
+                width: 105px;
+                height: 105px;
             }
             
             .mosaic-3, .mosaic-6 {
-                left: 105px;
+                left: 117px;
             }
             
             .mosaic-4, .mosaic-5 {
-                top: 125px;
+                top: 135px;
             }
             
             .mosaic-6 {
-                bottom: 65px;
+                bottom: 70px;
             }
         }
         
@@ -641,13 +658,13 @@
         }
         
         .demo-left {
-            left: -80px;
+            left: 20px;
             transform: rotate(-15deg);
             animation: floatLeft 3s ease-in-out infinite alternate;
         }
         
         .demo-right {
-            right: -80px;
+            right: 20px;
             transform: rotate(15deg);
             animation: floatRight 3s ease-in-out infinite alternate;
         }
@@ -663,13 +680,13 @@
         
         /* 滚动时的散开效果 */
         .floating-demos.scrolled .demo-left {
-            left: -350px;
+            left: -280px;
             opacity: 0.3;
             transform: rotate(-25deg) scale(0.8);
         }
         
         .floating-demos.scrolled .demo-right {
-            right: -350px;
+            right: -280px;
             opacity: 0.3;
             transform: rotate(25deg) scale(0.8);
         }
@@ -686,12 +703,12 @@
         }
         
         .demo-second-left {
-            left: -120px;
+            left: -50px;
             transform: rotate(-20deg) scale(0.5);
         }
         
         .demo-second-right {
-            right: -120px;
+            right: -50px;
             transform: rotate(20deg) scale(0.5);
         }
         
@@ -706,14 +723,14 @@
         
         /* 第二组图片出现的状态 */
         .floating-demos.second-phase .demo-second-left {
-            left: 80px;
+            left: 120px;
             opacity: 0.8;
             transform: rotate(-20deg) scale(1);
             animation: floatSecondLeft 4s ease-in-out infinite alternate;
         }
         
         .floating-demos.second-phase .demo-second-right {
-            right: 80px;
+            right: 120px;
             opacity: 0.8;
             transform: rotate(20deg) scale(1);
             animation: floatSecondRight 4s ease-in-out infinite alternate;
@@ -721,13 +738,13 @@
         
         /* 第二组图片消失的状态 */
         .floating-demos.third-phase .demo-second-left {
-            left: -280px;
+            left: -250px;
             opacity: 0;
             transform: rotate(-30deg) scale(0.6);
         }
         
         .floating-demos.third-phase .demo-second-right {
-            right: -280px;
+            right: -250px;
             opacity: 0;
             transform: rotate(30deg) scale(0.6);
         }
@@ -769,43 +786,43 @@
             }
             
             .demo-left {
-                left: -100px;
+                left: 5px;
             }
             
             .demo-right {
-                right: -100px;
+                right: 5px;
             }
             
             .demo-second-left {
-                left: -150px;
+                left: -30px;
             }
             
             .demo-second-right {
-                right: -150px;
+                right: -30px;
             }
             
             .floating-demos.scrolled .demo-left {
-                left: -300px;
+                left: -220px;
             }
             
             .floating-demos.scrolled .demo-right {
-                right: -300px;
+                right: -220px;
             }
             
             .floating-demos.second-phase .demo-second-left {
-                left: 20px;
+                left: 60px;
             }
             
             .floating-demos.second-phase .demo-second-right {
-                right: 20px;
+                right: 60px;
             }
             
             .floating-demos.third-phase .demo-second-left {
-                left: -250px;
+                left: -200px;
             }
             
             .floating-demos.third-phase .demo-second-right {
-                right: -250px;
+                right: -200px;
             }
         }
         
@@ -813,6 +830,15 @@
         .hero {
             position: relative;
             z-index: 2;
+        }
+        
+        /* 3D旋转动画 */
+        @keyframes rotate3d {
+            0% { transform: rotateY(0deg) rotateX(5deg); }
+            25% { transform: rotateY(90deg) rotateX(5deg); }
+            50% { transform: rotateY(180deg) rotateX(5deg); }
+            75% { transform: rotateY(270deg) rotateX(5deg); }
+            100% { transform: rotateY(360deg) rotateX(5deg); }
         }
     </style>
 </head>

@@ -1196,13 +1196,24 @@
             margin: 0 auto;
         }
         
-        /* Platform Gallery - 两大行填满布局 */
+        /* Platform Gallery - 保持832:1216比例的两大行布局 */
         .platform-gallery-section {
             padding: 8rem 0;
             background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9));
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
+        }
+        
+        .platform-gallery-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
         
         .gallery-container {
@@ -1246,30 +1257,11 @@
             display: flex;
             gap: 1rem;
             width: 100%;
-            height: 400px; /* 固定大行高度 */
+            justify-content: center;
+            align-items: flex-end; /* 底部对齐 */
         }
         
-        /* 大行内的列布局 */
-        .poster-column {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            height: 100%;
-        }
-        
-        .poster-column.single {
-            flex: 1; /* 单张大图占一列 */
-        }
-        
-        .poster-column.double {
-            flex: 0.6; /* 两张小图占较小列 */
-        }
-        
-        .poster-column.triple {
-            flex: 0.8; /* 三张图占中等列 */
-        }
-        
-        /* 海报基础样式 */
+        /* 海报基础样式 - 强制保持832:1216比例 */
         .poster-item {
             position: relative;
             border-radius: 16px;
@@ -1278,9 +1270,7 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.1);
-            flex: 1; /* 在列内平分高度 */
-            aspect-ratio: 832 / 1216; /* 保持比例 */
-            width: 100%;
+            aspect-ratio: 832 / 1216; /* 强制保持比例 */
         }
         
         .poster-item img {
@@ -1301,9 +1291,17 @@
             transform: scale(1.05);
         }
         
-        /* 大海报样式 */
-        .poster-large {
-            flex: 1; /* 占满整列 */
+        /* 不同尺寸 - 只改变宽度，高度自动按比例计算 */
+        .poster-size-large {
+            width: 240px; /* 大尺寸 */
+        }
+        
+        .poster-size-medium {
+            width: 180px; /* 中等尺寸 */
+        }
+        
+        .poster-size-small {
+            width: 140px; /* 小尺寸 */
         }
         
         /* 海报覆盖层 */
@@ -1363,38 +1361,55 @@
         
         /* 响应式设计 */
         @media (max-width: 1024px) {
-            .poster-big-row {
-                height: 320px;
+            .poster-size-large {
+                width: 200px;
+            }
+            
+            .poster-size-medium {
+                width: 150px;
+            }
+            
+            .poster-size-small {
+                width: 120px;
             }
         }
         
         @media (max-width: 768px) {
             .poster-big-row {
-                flex-direction: column;
-                height: auto;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 1rem;
             }
             
-            .poster-column {
-                flex-direction: row;
-                height: 200px;
+            .poster-size-large {
+                width: 160px;
             }
             
-            .poster-column.single,
-            .poster-column.double,
-            .poster-column.triple {
-                flex: 1;
+            .poster-size-medium {
+                width: 130px;
+            }
+            
+            .poster-size-small {
+                width: 110px;
             }
         }
         
         @media (max-width: 480px) {
-            .poster-column {
-                flex-direction: column;
-                height: auto;
+            .poster-size-large {
+                width: 140px;
             }
             
-            .poster-item {
-                height: 200px;
+            .poster-size-medium {
+                width: 120px;
+            }
+            
+            .poster-size-small {
+                width: 100px;
+            }
+            
+            .gallery-stats {
+                flex-direction: column;
+                gap: 2rem;
             }
         }
     </style>

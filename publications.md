@@ -187,30 +187,6 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/aaai25_postercraft.png" alt="PosterCraft">
-                </div>
-                <div class="pub-details">
-                    <h4 class="pub-title">PosterCraft: Intelligent Academic Poster Generation via Multimodal Large Language Models</h4>
-                    <div class="pub-tags">
-                        <span class="paper-tag tag-method">MLLM for Design</span>
-                        <span class="paper-tag tag-application">Academic Poster Generation</span>
-                    </div>
-                    <div class="pub-authors">
-                        <strong><u>Sixiang Chen<sup>&#9828;</sup></u></strong>, Tian Ye, Yunlong Lin, Kai Zhang, Zhaohu Xing, Lei Zhu<sup>✉️</sup>.
-                    </div>
-                    <div class="pub-venue"><em>AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025</div>
-                    <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2412.14901" class="custom-link custom-link-paper">Paper</a>
-                        <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link custom-link-code">Code</a>
-                        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="publication-item fade-in">
-            <div class="pub-content">
-                <div class="pub-image">
                     <img src="https://ephemeral182.github.io/images/aaai25_prompthaze.png" alt="PromptHaze">
                 </div>
                 <div class="pub-details">
@@ -854,6 +830,27 @@ title: Publications
     color: #a1a1aa;
     margin-bottom: 0.5rem;
     line-height: 1.5;
+}
+
+/* 强化突出自己名字的样式 */
+.pub-authors strong u {
+    color: #ffffff !important;  /* 更亮的白色 */
+    font-weight: 800 !important;  /* 更粗的字体 */
+    text-decoration: underline !important;
+    text-decoration-color: #6366f1 !important;  /* 蓝色下划线 */
+    text-decoration-thickness: 2px !important;  /* 更粗的下划线 */
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+    padding: 2px 4px;
+    border-radius: 4px;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);  /* 添加发光效果 */
+}
+
+/* 鼠标悬停时的效果 */
+.pub-authors strong u:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+    text-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .pub-venue {

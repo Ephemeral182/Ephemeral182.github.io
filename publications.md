@@ -85,7 +85,7 @@ title: Publications
         <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
     </div>
 
-    <!-- 2025年论文 -->
+    <!-- 2025年论文 - 完整版本 -->
     <div class="year-section">
         <h3 class="year-title">2025</h3>
         
@@ -106,7 +106,7 @@ title: Publications
                     <div class="pub-venue"><em>arXiv</em>, 2025</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2504.05979" class="custom-link custom-link-paper">Paper</a>
-                        <a href="#" class="custom-link custom-link-code">Code</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
                     </div>
                 </div>
             </div>
@@ -121,16 +121,16 @@ title: Publications
                     <h4 class="pub-title">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h4>
                     <div class="pub-tags">
                         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-                        <span class="paper-tag tag-application">Intelligent Evaluation</span>
+                        <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
                     </div>
                     <div class="pub-authors">
                         Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.
                     </div>
                     <div class="pub-venue"><em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025</div>
                     <div class="pub-links">
-                        <a href="#" class="custom-link custom-link-paper">Paper</a>
-                        <a href="#" class="custom-link custom-link-code">Code</a>
-                        <a href="#" class="custom-link custom-link-project">Project</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-project">Project</a>
                     </div>
                 </div>
             </div>
@@ -145,22 +145,116 @@ title: Publications
                     <h4 class="pub-title">JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration</h4>
                     <div class="pub-tags">
                         <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-                        <span class="paper-tag tag-application">Autonomous Driving</span>
+                        <span class="paper-tag tag-application">Intelligent Agent, Ranking Feedback Optimization</span>
                     </div>
                     <div class="pub-authors">
                         Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong><u>Sixiang Chen</u></strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding<sup>✉️</sup>.
                     </div>
                     <div class="pub-venue"><em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025</div>
                     <div class="pub-links">
-                        <a href="#" class="custom-link custom-link-paper">Paper</a>
-                        <a href="#" class="custom-link custom-link-code">Code</a>
-                        <a href="#" class="custom-link custom-link-project">Project</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-project">Project</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 更多2025年论文... -->
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/cvpr25_mirror_detec.png" alt="Detect Any Mirrors">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">MLLM for Mirror Detection</span>
+                        <span class="paper-tag tag-application">Iterative Data Engine, Large-Scale Unlabeled Data</span>
+                    </div>
+                    <div class="pub-authors">
+                        Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenxue Li, Guang Liu, and Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Computer Vision and Pattern Recognition <strong>(CVPR)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/aaai25_postercraft.png" alt="PosterCraft">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">PosterCraft: Intelligent Academic Poster Generation via Multimodal Large Language Models</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">MLLM for Design</span>
+                        <span class="paper-tag tag-application">Academic Poster Generation</span>
+                    </div>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen<sup>&#9828;</sup></u></strong>, Tian Ye, Yunlong Lin, Kai Zhang, Zhaohu Xing, Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2412.14901" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link custom-link-code">Code</a>
+                        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/aaai25_prompthaze.png" alt="PromptHaze">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">PromptHaze: Prompting Real-world Dehazing via Depth Anything Model</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Prompt Learning for Image Restoration</span>
+                        <span class="paper-tag tag-application">Real-world Generalization, Depth Anything Model</span>
+                    </div>
+                    <div class="pub-authors">
+                        Tian Ye, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <img src="https://ephemeral182.github.io/images/aglldiff.png" alt="AGLLDiff">
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">AGLLDiff: Guiding Diffusion Models Towards Unsupervised Training-free Real-world Low-light Image Enhancement</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
+                        <span class="paper-tag tag-application">Unsupervised Training-free, Real-world Generalization</span>
+                    </div>
+                    <div class="pub-authors">
+                        Yunlong Lin*, Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>Conference on Artificial Intelligence <strong>(AAAI)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2407.14900" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://aglldiff.github.io/" class="custom-link custom-link-code">Code</a>
+                        <a href="https://aglldiff.github.io/" class="custom-link custom-link-project">Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- 2024年论文 - 完整版本 -->
@@ -321,8 +415,7 @@ title: Publications
                 <div class="pub-details">
                     <h4 class="pub-title">Adverse Weather Removal with Codebook Priors</h4>
                     <div class="pub-tags">
-                        <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-                        <span class="paper-tag tag-application">Codebook Priors</span>
+                        Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
                     </div>
                     <div class="pub-authors">
                         Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Jinbin Bai, Jun Shi, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu<sup>✉️</sup>.
@@ -840,3 +933,4 @@ title: Publications
     }
 }
 </style>
+

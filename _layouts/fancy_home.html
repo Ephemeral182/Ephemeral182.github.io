@@ -519,21 +519,21 @@
             text-decoration-thickness: 1.5px !important;
         }
         
-        /* 修改下拉菜单样式 - 防止换行 */
+        /* 修复下拉菜单定位 */
         .dropdown-menu {
             position: absolute;
             top: 100%;
-            left: 0;
+            left: 50%; /* 居中对齐 */
+            transform: translateX(-50%) translateY(-10px); /* 水平居中并向上偏移 */
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 0.5rem 0;
             margin-top: 0.5rem;
-            min-width: 200px; /* 确保有足够宽度 */
+            min-width: 200px;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(-10px);
             transition: all 0.3s ease;
             z-index: 1001;
             list-style: none;
@@ -543,7 +543,7 @@
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: translateX(-50%) translateY(0); /* 显示时保持水平居中 */
         }
         
         .dropdown-menu li {

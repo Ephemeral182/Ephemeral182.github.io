@@ -248,12 +248,12 @@
             transition: transform 0.3s ease;
         }
         
-        /* 不同尺寸的mosaic项目 - 混合1216:832和正方形 */
+        /* 不同尺寸的mosaic项目 - 混合竖版海报(832:1216 ≈ 0.68:1)和正方形 */
         
-        /* 海报比例 (1216:832 ≈ 1.46:1) */
+        /* 竖版海报比例 */
         .mosaic-1 {
-            width: 160px;
-            height: 110px;  /* 160/1.46 ≈ 110 */
+            width: 110px;
+            height: 162px;  /* 110/0.68 ≈ 162 */
             top: 20px;
             left: 30px;
             transform: rotate(-8deg);
@@ -262,8 +262,8 @@
         }
         
         .mosaic-2 {
-            width: 140px;
-            height: 140px;  /* 正方形 */
+            width: 130px;
+            height: 130px;  /* 正方形 */
             top: 10px;
             right: 80px;
             transform: rotate(12deg);
@@ -272,8 +272,8 @@
         }
         
         .mosaic-3 {
-            width: 180px;
-            height: 123px;  /* 海报比例 */
+            width: 100px;
+            height: 147px;  /* 竖版海报比例 */
             top: 120px;
             left: 200px;
             transform: rotate(-5deg);
@@ -282,8 +282,8 @@
         }
         
         .mosaic-4 {
-            width: 130px;
-            height: 130px;  /* 正方形 */
+            width: 120px;
+            height: 120px;  /* 正方形 */
             top: 200px;
             left: 20px;
             transform: rotate(10deg);
@@ -292,8 +292,8 @@
         }
         
         .mosaic-5 {
-            width: 150px;
-            height: 103px;  /* 海报比例 */
+            width: 95px;
+            height: 140px;  /* 竖版海报比例 */
             top: 180px;
             right: 40px;
             transform: rotate(-12deg);
@@ -302,8 +302,8 @@
         }
         
         .mosaic-6 {
-            width: 120px;
-            height: 120px;  /* 正方形 */
+            width: 110px;
+            height: 110px;  /* 正方形 */
             bottom: 140px;
             left: 180px;
             transform: rotate(7deg);
@@ -312,8 +312,8 @@
         }
         
         .mosaic-7 {
-            width: 170px;
-            height: 116px;  /* 海报比例 */
+            width: 105px;
+            height: 154px;  /* 竖版海报比例 */
             bottom: 30px;
             left: 10px;
             transform: rotate(-10deg);
@@ -322,8 +322,8 @@
         }
         
         .mosaic-8 {
-            width: 135px;
-            height: 135px;  /* 正方形 */
+            width: 125px;
+            height: 125px;  /* 正方形 */
             bottom: 20px;
             right: 60px;
             transform: rotate(15deg);
@@ -499,14 +499,14 @@
             }
             
             /* 按比例缩小所有项目 */
-            .mosaic-1 { width: 140px; height: 96px; }
-            .mosaic-2 { width: 120px; height: 120px; }
-            .mosaic-3 { width: 160px; height: 110px; }
-            .mosaic-4 { width: 110px; height: 110px; }
-            .mosaic-5 { width: 130px; height: 89px; }
-            .mosaic-6 { width: 100px; height: 100px; }
-            .mosaic-7 { width: 150px; height: 103px; }
-            .mosaic-8 { width: 115px; height: 115px; }
+            .mosaic-1 { width: 95px; height: 140px; }
+            .mosaic-2 { width: 115px; height: 115px; }
+            .mosaic-3 { width: 85px; height: 125px; }
+            .mosaic-4 { width: 105px; height: 105px; }
+            .mosaic-5 { width: 80px; height: 118px; }
+            .mosaic-6 { width: 95px; height: 95px; }
+            .mosaic-7 { width: 90px; height: 132px; }
+            .mosaic-8 { width: 110px; height: 110px; }
             
             .testimonial-card {
                 width: 340px;
@@ -526,14 +526,14 @@
             }
             
             /* 移动端进一步缩小 */
-            .mosaic-1 { width: 110px; height: 75px; top: 15px; left: 25px; }
-            .mosaic-2 { width: 95px; height: 95px; top: 8px; right: 60px; }
-            .mosaic-3 { width: 130px; height: 89px; top: 100px; left: 160px; }
-            .mosaic-4 { width: 85px; height: 85px; top: 160px; left: 15px; }
-            .mosaic-5 { width: 110px; height: 75px; top: 145px; right: 30px; }
-            .mosaic-6 { width: 80px; height: 80px; bottom: 110px; left: 140px; }
-            .mosaic-7 { width: 120px; height: 82px; bottom: 25px; left: 8px; }
-            .mosaic-8 { width: 90px; height: 90px; bottom: 15px; right: 45px; }
+            .mosaic-1 { width: 75px; height: 110px; top: 15px; left: 25px; }
+            .mosaic-2 { width: 90px; height: 90px; top: 8px; right: 60px; }
+            .mosaic-3 { width: 68px; height: 100px; top: 100px; left: 160px; }
+            .mosaic-4 { width: 80px; height: 80px; top: 160px; left: 15px; }
+            .mosaic-5 { width: 65px; height: 96px; top: 145px; right: 30px; }
+            .mosaic-6 { width: 75px; height: 75px; bottom: 110px; left: 140px; }
+            .mosaic-7 { width: 70px; height: 103px; bottom: 25px; left: 8px; }
+            .mosaic-8 { width: 85px; height: 85px; bottom: 15px; right: 45px; }
             
             .testimonial-card {
                 position: relative;
@@ -552,14 +552,14 @@
             }
             
             /* 小屏幕进一步优化 */
-            .mosaic-1 { width: 90px; height: 62px; }
-            .mosaic-2 { width: 75px; height: 75px; }
-            .mosaic-3 { width: 105px; height: 72px; }
-            .mosaic-4 { width: 70px; height: 70px; }
-            .mosaic-5 { width: 90px; height: 62px; }
-            .mosaic-6 { width: 65px; height: 65px; }
-            .mosaic-7 { width: 95px; height: 65px; }
-            .mosaic-8 { width: 70px; height: 70px; }
+            .mosaic-1 { width: 60px; height: 88px; }
+            .mosaic-2 { width: 70px; height: 70px; }
+            .mosaic-3 { width: 55px; height: 81px; }
+            .mosaic-4 { width: 65px; height: 65px; }
+            .mosaic-5 { width: 52px; height: 76px; }
+            .mosaic-6 { width: 60px; height: 60px; }
+            .mosaic-7 { width: 58px; height: 85px; }
+            .mosaic-8 { width: 68px; height: 68px; }
         }
         
         /* 滚动条样式 */
@@ -825,6 +825,19 @@
         @keyframes itemFloat8 {
             0%, 100% { transform: rotate(15deg) translateY(0px); }
             50% { transform: rotate(15deg) translateY(-6px); }
+        }
+        
+        /* 保持hover效果 */
+        .mosaic-item:hover {
+            transform: scale(1.1) !important;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+            z-index: 20;
+            border-color: rgba(99, 102, 241, 0.5);
+            animation-play-state: paused;
+        }
+        
+        .mosaic-item:hover img {
+            transform: scale(1.05);
         }
     </style>
 </head>

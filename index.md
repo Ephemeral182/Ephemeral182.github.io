@@ -1,343 +1,104 @@
 ---
-layout: page
----
-<style>
-body {
-  background-color: #f0f5fa;  /* 非常淡的蓝色背景 */
-  position: relative;
-  overflow-x: hidden; /* 防止水平滚动条出现 */
-}
-
-/* 页面流光特效 */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, 
-    transparent, 
-    rgba(100, 180, 255, 0.2), 
-    transparent
-  );
-  z-index: -1;
-  animation: page-flow-light 8s infinite linear;
-  pointer-events: none; /* 确保不会干扰页面交互 */
-}
-
-/* 页面流光动画 */
-@keyframes page-flow-light {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-.scrollable-news {
-  max-height: 400px; /* 设置容器的最大高度 */
-  overflow-y: auto; /* 添加垂直滚动条 */
-  border-radius: 12px; /* 圆角边框 */
-  padding: 15px; /* 从20px减少到15px */
-  background-color: #f8fbff; /* 保留非常浅的蓝色背景 */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* 轻微阴影 */
-  margin: 15px 0; /* 从20px减少到15px */
-  list-style: none; /* 去除列表标记 */
-}
-
-.scrollable-news li {
-  margin-bottom: 4px; /* 从10px减少到4px */
-  padding: 5px; /* 从10px减少到5px */
-  border-bottom: 1px solid #e6f0ff; /* 保留浅蓝色分隔线 */
-  line-height: 1.4; /* 添加行高控制 */
-}
-
-/* 鼠标悬停效果 */
-.scrollable-news li:hover {
-  background-color: #e6f2ff; /* 稍深一点的浅蓝色 */
-  transition: background-color 0.3s ease;
-}
-
-.scrollable-news li:last-child {
-  border-bottom: none; /* 最后一个条目不显示分隔线 */
-}
-
-/* 美化滚动条样式 (适用于WebKit浏览器，如Chrome和Safari) */
-.scrollable-news::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scrollable-news::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.scrollable-news::-webkit-scrollbar-thumb {
-  background: #c0c0c0;
-  border-radius: 10px;
-}
-
-.scrollable-news::-webkit-scrollbar-thumb:hover {
-  background: #a0a0a0;
-}
-
-/* 鼠标流光粒子样式 */
-.mouse-particle {
-  pointer-events: none;
-  position: fixed;
-  border-radius: 50%;
-  background: rgba(255, 215, 0, 0.25); /* 金色背景，增加不透明度到0.25 */
-  box-shadow: 0 0 10px rgba(207, 187, 74, 0.3); /* 金色阴影，增加不透明度到0.3 */
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-}
-
-/* --- 基础背景覆盖 --- */
-/* 确保 html 背景透明，让特效可见 */
-html {
-  background-color: transparent !important;
-}
-/* 设置页面主要背景色 (显示在特效之上，内容之下) */
-body {
-  background-color: #f0f5fa; /* 你选择的背景色 */
-  position: relative; /* 通常需要 */
-  overflow-x: hidden; /* 防止水平滚动 */
-}
-/* 移除主要内容区域的背景，让特效和 body 背景透出来 */
-/* !!! 重要：请确保这里的选择器 (main, .page__content 等) 对 index.md 也有效 !!! */
-/* 你可能需要用开发者工具检查 index.md 的结构来确认 */
-main,
-.page-content,
-.page__content,
-.post,
-article,
-section.content {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-}
-
-/* --- 开始：极光/烟雾效果 --- */
-.aurora-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 确保在最底层 */
-  pointer-events: none;
-  overflow: hidden; /* 防止内部元素溢出 */
-  opacity: 0.7; /* 调整整体效果的透明度 */
-  filter: blur(80px); /* 强模糊制造柔和效果 */
-}
-
-.aurora-bg::before,
-.aurora-bg::after {
-  content: '';
-  position: absolute;
-  width: 800px; /* 光斑大小 */
-  height: 800px;
-  border-radius: 50%;
-  mix-blend-mode: screen; /* 混合模式，让颜色叠加更柔和 */
-  animation: aurora-flow 25s infinite linear alternate; /* 动画 */
-}
-
-/* 第一个光斑 */
-.aurora-bg::before {
-  background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%); /* 蓝色系 */
-  top: -20%;
-  left: -20%;
-}
-
-/* 第二个光斑 (不同颜色和动画延迟) */
-.aurora-bg::after {
-  background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%); /* 淡蓝色或青色系 */
-  bottom: -20%;
-  right: -20%;
-  animation-delay: -12.5s; /* 让两个光斑不同步 */
-  animation-direction: alternate-reverse; /* 反向交替 */
-}
-
-/* 动画定义 */
-@keyframes aurora-flow {
-  0% {
-    transform: translate(0, 0) rotate(0deg) scale(1);
-  }
-  100% {
-    transform: translate(100px, 50px) rotate(180deg) scale(1.2);
-  }
-}
-/* --- 结束：极光/烟雾效果 --- */
-
-/* --- 你可能还需要复制 index.md 特有的其他样式规则 --- */
-/* ... */
-</style>
-
-<!-- 在页面内容开始前添加效果容器 -->
-<div class="aurora-bg"></div>
-
-# About Me
-
-<img src="https://ephemeral182.github.io/csx5.jpg" class="floatpic" style="width: 43%; max-width: 540px; height: auto; float: right; margin-left: 1em;">
-
-
-
-My name is **Sixiang Chen (陈思翔)**. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by ***[Dr. Erkang Chen](https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ)*** and ***[Dr. Yun Liu](https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN)*** (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@[ROAS](https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/), supervised by ***[Prof. Lei Zhu](https://sites.google.com/site/indexlzhu/home?authuser=0)*** and ***[Prof. Fugee Tsung](https://www.ieda.ust.hk/dfaculty/tsung/)***.
-
-
-
-<br>
-
-## Education
-
-- **Sept. 2024 - Present: Hong Kong University of Science and Technology (Guangzhou)** (PhD)
-- **Aug. 2023 - Aug. 2024: Hong Kong University of Science and Technology (Guangzhou)** (RA)
-- **Sept. 2019 - Jun. 2023: Jimei University** (B.Eng.)
-<br>
-
+layout: fancy_home
 ---
 
-## Research Interests
-
-- Explore the applications of AIGC (Artificial Intelligence Generated Content) technology
-- Perform image restoration under real-world conditions.
-- Multimodal large language models (MLLM) for intelligent visual application.
-
-<br>
-
----
-
-## News and Updates
-
-<div class="scrollable-news">
- <ul>
-  <li><strong>Feb. 2025：</strong>&#127873; Fortunately, three papers have been accepted by <strong>CVPR'2025</strong>.</li>
-  <li><strong>Feb. 2025：</strong>&#127752; I start to serve as a reviewer in <strong>NeurIPS'2025</strong> and <strong>ICCV'2025</strong>.</li>
-  <li><strong>Jan. 2025：</strong>&#127942; I start to serve as a reviewer in <strong>TIP</strong>.</li>
-  <li><strong>Dec. 2024：</strong>&#127881; I start to serve as a reviewer in <strong>CVPR'2025</strong> and <strong>ICML'2025</strong>.</li>
-  <li><strong>Dec. 2024：</strong>&#128640; Serendipitously, four papers have been accepted by <strong>AAAI'2025</strong>.</li>
-  <li><strong>Sept. 2024：</strong>&#127873; Luckily, one paper has been accepted by <strong>NeurIPS'2024</strong>.</li>
-  <li><strong>Jun. 2024：</strong>&#127752; I start to serve as a reviewer in <strong>TITS</strong>.</li>
-  <li><strong>Aug. 2024：</strong>&#127752; I start to serve as a reviewer in <strong>ICLR'2025</strong>.</li>
-  <li><strong>Jul. 2024：</strong>&#128640; Fortunately, two papers have been accepted by <strong>ECCV'2024</strong>.</li>
-  <li><strong>Jun. 2024：</strong>&#127873; Serendipitously, one paper has been accepted by <strong>MICCAI'2024</strong>.</li>
-  <li><strong>Jun. 2024：</strong>&#127752; I start to serve as a reviewer in <strong>TCSVT</strong>.</li>
-  <li><strong>May 2024：</strong>&#127752; I start to serve as a reviewer in <strong>NeurIPS'2024</strong>.</li>
-  <li><strong>Apr. 2024：</strong>&#127942; Luckily, one paper has been accepted by <strong>CVPR'2024</strong> as a <strong>Highlight</strong>.</li>
-  <li><strong>Nov. 2023：</strong>&#127881; Serendipitously, one paper has been accepted by <strong>AAAI'2024</strong>.</li>
-  <li><strong>Aug. 2023：</strong>&#128640; Serendipitously, one paper has been accepted by <strong>BMVC'2023</strong>.</li>
-  <li><strong>Jul. 2023：</strong>&#127881; Luckily, four papers have been accepted by <strong>ACM MM'2023</strong>.</li>
-  <li><strong>Jul. 2023：</strong>&#127942; To my good fortune, two papers have been accepted by <strong>ICCV'2023</strong>.</li>
-  <li><strong>Jul. 2023：</strong>&#128640; I start to serve as a reviewer in <strong>TMM</strong>.</li>
-  <li><strong>Jun. 2023：</strong>&#127881; I am awarded the honor of <strong>outstanding graduate</strong> from Jimei University.</li>
-  <li><strong>May 2023：</strong> One paper has been presented in <strong>Arxiv'2023 (Under review)</strong> .</li>
-  <li><strong>Feb. 2023：</strong>&#128640; Luckily, two papers are accepted to <strong>ICASSP'2023</strong>.</li>
-  <li><strong>Dec. 2022：</strong> One paper submits to <strong>Arxiv'2023 (Under review)</strong> .</li>
-  <li><strong>Sept. 2022：</strong>&#127881; Fortunately, one paper has been accepted by <strong>ACCV'2022</strong>.</li>
-  <li><strong>Sept. 2022：</strong> One paper has been submited to <strong>Arxiv'2023 (Under review)</strong> .</li>
-  <li><strong>Jul. 2022：</strong>&#127752; Fortunately, one paper has been accepted as an <strong>oral presentation</strong> by <strong>ECCV'2022</strong>.</li>
-  <li><strong>Jun. 2022：</strong>&#127873; Serendipitously, one paper has been accepted by <strong>CVPRW'2022</strong>.</li>
-  </ul>
+<div class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">About Me</h1>
+        <p class="hero-subtitle">PhD Student & AI Researcher</p>
+        <div class="hero-description">
+            My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://ephemeral182.github.io/csx5.jpg" alt="Sixiang Chen" class="profile-image">
+    </div>
 </div>
 
----
+<div class="info-cards fade-in">
+    <div class="info-card">
+        <div class="card-icon">🎓</div>
+        <h3 class="card-title">Education</h3>
+        <div class="card-content">
+            <p><strong>Sept. 2024 - Present:</strong> Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
+            <p><strong>Aug. 2023 - Aug. 2024:</strong> Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
+            <p><strong>Sept. 2019 - Jun. 2023:</strong> Jimei University (B.Eng.)</p>
+        </div>
+    </div>
+    
+    <div class="info-card">
+        <div class="card-icon">🔬</div>
+        <h3 class="card-title">Research Interests</h3>
+        <div class="card-content">
+            <p>• Explore the applications of AIGC (Artificial Intelligence Generated Content) technology</p>
+            <p>• Perform image restoration under real-world conditions</p>
+            <p>• Multimodal large language models (MLLM) for intelligent visual application</p>
+        </div>
+    </div>
+    
+    <div class="info-card">
+        <div class="card-icon">🏆</div>
+        <h3 class="card-title">Recent Achievements</h3>
+        <div class="card-content">
+            <p>• <strong>3 papers accepted</strong> by CVPR'2025</p>
+            <p>• <strong>4 papers accepted</strong> by AAAI'2025</p>
+            <p>• <strong>1 paper accepted</strong> by NeurIPS'2024</p>
+            <p>• <strong>2 papers accepted</strong> by ECCV'2024</p>
+        </div>
+    </div>
+</div>
 
-## Academic Service & Awards
+<div class="news-section fade-in">
+    <h2 class="news-title">📰 News and Updates</h2>
+    <div class="scrollable-news">
+        <ul>
+            <li><strong>Feb. 2025：</strong>�� Fortunately, three papers have been accepted by <strong>CVPR'2025</strong>.</li>
+            <li><strong>Feb. 2025：</strong>🌟 I start to serve as a reviewer in <strong>NeurIPS'2025</strong> and <strong>ICCV'2025</strong>.</li>
+            <li><strong>Jan. 2025：</strong>🏆 I start to serve as a reviewer in <strong>TIP</strong>.</li>
+            <li><strong>Dec. 2024：</strong>🎊 I start to serve as a reviewer in <strong>CVPR'2025</strong> and <strong>ICML'2025</strong>.</li>
+            <li><strong>Dec. 2024：</strong>🚀 Serendipitously, four papers have been accepted by <strong>AAAI'2025</strong>.</li>
+            <li><strong>Sept. 2024：</strong>🎉 Luckily, one paper has been accepted by <strong>NeurIPS'2024</strong>.</li>
+            <li><strong>Jun. 2024：</strong>🌟 I start to serve as a reviewer in <strong>TITS</strong>.</li>
+            <li><strong>Aug. 2024：</strong>🌟 I start to serve as a reviewer in <strong>ICLR'2025</strong>.</li>
+            <li><strong>Jul. 2024：</strong>🚀 Fortunately, two papers have been accepted by <strong>ECCV'2024</strong>.</li>
+            <li><strong>Jun. 2024：</strong>🎉 Serendipitously, one paper has been accepted by <strong>MICCAI'2024</strong>.</li>
+            <li><strong>Jun. 2024：</strong>🌟 I start to serve as a reviewer in <strong>TCSVT</strong>.</li>
+            <li><strong>May 2024：</strong>🌟 I start to serve as a reviewer in <strong>NeurIPS'2024</strong>.</li>
+            <li><strong>Apr. 2024：</strong>🏆 Luckily, one paper has been accepted by <strong>CVPR'2024</strong> as a <strong>Highlight</strong>.</li>
+            <li><strong>Nov. 2023：</strong>🎊 Serendipitously, one paper has been accepted by <strong>AAAI'2024</strong>.</li>
+            <li><strong>Aug. 2023：</strong>🚀 Serendipitously, one paper has been accepted by <strong>BMVC'2023</strong>.</li>
+            <li><strong>Jul. 2023：</strong>🎊 Luckily, four papers have been accepted by <strong>ACM MM'2023</strong>.</li>
+            <li><strong>Jul. 2023：</strong>🏆 To my good fortune, two papers have been accepted by <strong>ICCV'2023</strong>.</li>
+            <li><strong>Jul. 2023：</strong>🚀 I start to serve as a reviewer in <strong>TMM</strong>.</li>
+            <li><strong>Jun. 2023：</strong>🎊 I am awarded the honor of <strong>outstanding graduate</strong> from Jimei University.</li>
+            <li><strong>May 2023：</strong> One paper has been presented in <strong>Arxiv'2023 (Under review)</strong>.</li>
+            <li><strong>Feb. 2023：</strong>🚀 Luckily, two papers are accepted to <strong>ICASSP'2023</strong>.</li>
+            <li><strong>Dec. 2022：</strong> One paper submits to <strong>Arxiv'2023 (Under review)</strong>.</li>
+            <li><strong>Sept. 2022：</strong>🎊 Fortunately, one paper has been accepted by <strong>ACCV'2022</strong>.</li>
+            <li><strong>Sept. 2022：</strong> One paper has been submited to <strong>Arxiv'2023 (Under review)</strong>.</li>
+            <li><strong>Jul. 2022：</strong>🌟 Fortunately, one paper has been accepted as an <strong>oral presentation</strong> by <strong>ECCV'2022</strong>.</li>
+            <li><strong>Jun. 2022：</strong>🎉 Serendipitously, one paper has been accepted by <strong>CVPRW'2022</strong>.</li>
+        </ul>
+    </div>
+</div>
 
-**Program Committee / Reviewer:**
- -  International Conference on Computer Vision (**ICCV'2025**)
- - Conference on Neural Information Processing Systems (**NeurIPS'2025**)
- - IEEE Transactions on Image Processing (**TIP**)
- - International Conference on Machine Learning (**ICML'2025**)
- - Conference on Computer Vision and Pattern Recognition (**CVPR'2025**)
- - International Conference on Learning Representations (**ICLR'2025**)
- - IEEE Transactions on Intelligent Transportation Systems (**TITS**)
- - Conference on Neural Information Processing Systems (**NeurIPS'2024**)
- - European Conference on Computer Vision (**ECCV'2024**)
- - IEEE Transactions on Circuits and Systems for Video Technology (**TCSVT**)
- - IEEE Transactions on Multimedia (**TMM**)
- -  ACM Multimedia (**ACM MM'2023 / 2024**)
- -  International Conference on Computer Vision (**ICCV'2023**)
- -  International Conference on Robotics and Automation (**ICRA'2023**)
- - Asian Conference on Computer Vision (**ACCV'2022**)
-
-**Awards:**
- - **PG Scholarship of HKUST(GZ), 2024.**
- - **Outstanding Graduate in Jimei University, 2023.** 
- - **International Third Price, Team Leader:** Mathematical Contest In Modeling, 2022.
- - **National Second Prize, Team Leader:** China Undergraduate Mathematical Contest in Modeling, 2021.
- - **National Second Prize, Team Leader:** Mathorcup Mathematical Contest in Modeling, 2021.
-  
-<br>
-
-<script>
-// 鼠标流光特效
-document.addEventListener('DOMContentLoaded', function() {
-  // 创建粒子
-  function createParticle(x, y, size) {
-    const particle = document.createElement('div');
-    particle.className = 'mouse-particle';
-    
-    // 随机大小变化
-    const actualSize = size * (0.5 + Math.random() * 0.5);
-    particle.style.width = actualSize + 'px';
-    particle.style.height = actualSize + 'px';
-    
-    // 彩虹渐变效果 - 随机选择一个起始色相
-    const hue = Math.floor(Math.random() * 360);
-    particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
-    particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
-    
-    // 设置位置
-    particle.style.left = x + 'px';
-    particle.style.top = y + 'px';
-    
-    // 添加到页面
-    document.body.appendChild(particle);
-    
-    // 粒子消失动画
-    setTimeout(() => {
-      particle.style.opacity = '0';
-      particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
-      particle.style.transition = 'all 0.6s ease-out';
-      
-      // 移除粒子
-      setTimeout(() => {
-        document.body.removeChild(particle);
-      }, 600);
-    }, 10);
-  }
-  
-  // 跟踪鼠标移动
-  let lastX = 0;
-  let lastY = 0;
-  let throttle = false;
-  
-  document.addEventListener('mousemove', function(e) {
-    if (throttle) return;
-    throttle = true;
-    
-    // 限制粒子生成频率
-    setTimeout(() => {
-      throttle = false;
-    }, 10);
-    
-    const x = e.clientX;
-    const y = e.clientY;
-    
-    // 计算移动速度
-    const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
-    const size = Math.min(16, Math.max(5, speed * 0.4)); // 减小粒子尺寸
-    
-    // 创建粒子
-    createParticle(x, y, size);
-    
-    lastX = x;
-    lastY = y;
-  });
-});
-</script>
-
----
+<div class="info-cards fade-in">
+    <div class="info-card">
+        <div class="card-icon">📝</div>
+        <h3 class="card-title">Academic Service & Awards</h3>
+        <div class="card-content">
+            <p><strong>Program Committee / Reviewer:</strong></p>
+            <p>• International Conference on Computer Vision (<strong>ICCV'2025</strong>)</p>
+            <p>• Conference on Neural Information Processing Systems (<strong>NeurIPS'2025</strong>)</p>
+            <p>• IEEE Transactions on Image Processing (<strong>TIP</strong>)</p>
+            <p>• International Conference on Machine Learning (<strong>ICML'2025</strong>)</p>
+            <p>• Conference on Computer Vision and Pattern Recognition (<strong>CVPR'2025</strong>)</p>
+            <p>• And many more...</p>
+            <br>
+            <p><strong>Awards:</strong></p>
+            <p>• <strong>PG Scholarship of HKUST(GZ), 2024</strong></p>
+            <p>• <strong>Outstanding Graduate in Jimei University, 2023</strong></p>
+            <p>• <strong>International Third Price, Team Leader:</strong> Mathematical Contest In Modeling, 2022</p>
+        </div>
+    </div>
+</div>

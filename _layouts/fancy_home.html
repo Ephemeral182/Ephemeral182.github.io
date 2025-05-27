@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* 动态背景渐变 */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, #1a1a2e 0%, #16213e 25%, #0f0f23 50%, #000000 100%);
+            z-index: -2;
+        }
+        
+        /* 极光背景效果 */
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+            opacity: 0.6;
+            filter: blur(100px);
+        }
+        
+        .aurora-bg::before,
+        .aurora-bg::after {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            mix-blend-mode: screen;
+            animation: aurora-flow 25s infinite linear alternate;
+        }
+        
+        .aurora-bg::before {
+            background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%);
+            top: -20%;
+            left: -20%;
+        }
+        
+        .aurora-bg::after {
+            background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%);
+            bottom: -20%;
+            right: -20%;
+            animation-delay: -12.5s;
+            animation-direction: alternate-reverse;
+        }
+        
+        @keyframes aurora-flow {
+            0% {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+            }
+            100% {
+                transform: translate(100px, 50px) rotate(180deg) scale(1.2);
+            }
+        }
+        
+        /* 漂浮几何图形 */
+        .geometric-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 20%;
+            opacity: 0.15;
+            animation: float-rotate 30s infinite linear alternate;
+        }
+        
+        .shape-1 {
+            width: 150px; height: 150px;
+            background-color: #8ec5fc;
+            top: 10%; left: 15%;
+            animation-duration: 35s;
+        }
+        .shape-2 {
+            width: 80px; height: 80px;
+            background-color: #e0c3fc;
+            top: 60%; left: 70%;
+            animation-duration: 28s;
+            animation-delay: -5s;
+        }
+        .shape-3 {
+            width: 0; height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 100px solid #a8edea;
+            background-color: transparent !important;
+            border-radius: 0;
+            top: 30%; left: 40%;
+            animation-duration: 40s;
+            animation-delay: -15s;
+        }
+        .shape-4 {
+            width: 120px; height: 120px;
+            background-color: #f0e68c;
+            top: 75%; left: 10%;
+            border-radius: 50%;
+            animation-duration: 32s;
+            animation-delay: -10s;
+        }
+        
+        @keyframes float-rotate {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            100% {
+                transform: translateY(-40px) rotate(180deg) scale(1.1);
+            }
+        }
+        
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-menu a {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: #ffffff;
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* 主要内容 */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Hero区域 */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 0 0 400px;
+            position: relative;
+        }
+        
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .profile-image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #a1a1aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #a1a1aa;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        /* 信息卡片 */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+        
+        .card-content {
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+        
+        /* 新闻滚动区域 */
+        .news-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .news-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .scrollable-news {
+            max-height: 400px;
+            overflow-y: auto;
+            border-radius: 12px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.02);
+            list-style: none;
+        }
+        
+        .scrollable-news li {
+            margin-bottom: 8px;
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            line-height: 1.4;
+            transition: all 0.3s ease;
+        }
+        
+        .scrollable-news li:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: translateX(5px);
+        }
+        
+        .scrollable-news li:last-child {
+            border-bottom: none;
+        }
+        
+        /* 滚动条样式 */
+        .scrollable-news::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .scrollable-news::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        
+        .scrollable-news::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            border-radius: 10px;
+        }
+        
+        .scrollable-news::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, #5855eb, #7c3aed);
+        }
+        
+        /* 鼠标流光粒子样式 */
+        .mouse-particle {
+            pointer-events: none;
+            position: fixed;
+            border-radius: 50%;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* 动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .main-content {
+                padding: 1rem;
+            }
+            
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 2rem;
+            }
+            
+            .hero-image {
+                flex: none;
+                max-width: 300px;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        /* 特殊强调文本 */
+        .highlight {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+        
+        /* 链接样式 */
+        a {
+            color: #6366f1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #8b5cf6;
+            text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景效果 -->
+    <div class="bg-gradient"></div>
+    <div class="aurora-bg"></div>
+    <div class="geometric-bg">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Sixiang Chen</a>
+            <ul class="nav-menu">
+                <li><a href="/">Story of Me</a></li>
+                <li><a href="/file/resume_of_myself3.pdf">Resume</a></li>
+                <li><a href="/publications/">Publications</a></li>
+                <li><a href="/poster-craft/">PosterCraft</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 主要内容 -->
+    <main class="main-content">
+        {{ content }}
+    </main>
+    
+    <!-- JavaScript -->
+    <script>
+        // 鼠标流光特效
+        document.addEventListener('DOMContentLoaded', function() {
+            function createParticle(x, y, size) {
+                const particle = document.createElement('div');
+                particle.className = 'mouse-particle';
+                
+                const actualSize = size * (0.5 + Math.random() * 0.5);
+                particle.style.width = actualSize + 'px';
+                particle.style.height = actualSize + 'px';
+                
+                const hue = Math.floor(Math.random() * 360);
+                particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
+                particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
+                
+                particle.style.left = x + 'px';
+                particle.style.top = y + 'px';
+                
+                document.body.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.style.opacity = '0';
+                    particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                    particle.style.transition = 'all 0.6s ease-out';
+                    
+                    setTimeout(() => {
+                        if (particle.parentNode) {
+                            particle.parentNode.removeChild(particle);
+                        }
+                    }, 600);
+                }, 10);
+            }
+            
+            let lastX = 0;
+            let lastY = 0;
+            let throttle = false;
+            
+            document.addEventListener('mousemove', function(e) {
+                if (throttle) return;
+                throttle = true;
+                
+                setTimeout(() => {
+                    throttle = false;
+                }, 10);
+                
+                const x = e.clientX;
+                const y = e.clientY;
+                
+                const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
+                const size = Math.min(16, Math.max(5, speed * 0.4));
+                
+                createParticle(x, y, size);
+                
+                lastX = x;
+                lastY = y;
+            });
+        });
+        
+        // 滚动动画
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            handleScrollAnimation();
+            window.addEventListener('scroll', handleScrollAnimation);
+        });
+        
+        // 鼠标跟随效果
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.02;
+                const x = e.clientX * speed;
+                const y = e.clientY * speed;
+                
+                shape.style.transform += ` translate(${x}px, ${y}px)`;
+            });
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

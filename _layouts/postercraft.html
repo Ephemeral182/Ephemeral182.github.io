@@ -250,51 +250,51 @@
             transition: transform 0.3s ease;
         }
         
-        /* 重新设计布局 - 不同大小，更紧密拼贴，无重叠 */
+        /* 重新设计布局 - 完全无重叠，紧密但清晰的拼贴 */
         .mosaic-1 {
-            width: 140px;   /* 大尺寸 */
-            height: 200px;  
+            width: 160px;   /* 大尺寸 */
+            height: 230px;  
             top: 30px;
-            left: 50px;
+            left: 30px;
             transform: rotate(-8deg);
             z-index: 8;
             animation: itemFloat1 4s ease-in-out infinite;
         }
         
         .mosaic-2 {
-            width: 80px;    /* 小尺寸 */
-            height: 115px;  
-            top: 40px;
-            left: 220px;    /* 紧贴mosaic-1右侧 */
+            width: 120px;   /* 中等尺寸 */
+            height: 170px;  
+            top: 50px;
+            left: 220px;    /* 确保与mosaic-1不重叠 */
             transform: rotate(12deg);
             z-index: 7;
             animation: itemFloat2 4.5s ease-in-out infinite;
         }
         
         .mosaic-3 {
-            width: 110px;   /* 中等尺寸 */
-            height: 160px;  
-            top: 25px;
-            left: 320px;    /* 紧贴mosaic-2右侧 */
+            width: 140px;   /* 中大尺寸 */
+            height: 200px;  
+            top: 30px;
+            left: 370px;    /* 确保与mosaic-2不重叠 */
             transform: rotate(-5deg);
             z-index: 9;
             animation: itemFloat3 3.8s ease-in-out infinite;
         }
         
         .mosaic-4 {
-            width: 90px;    /* 小尺寸 */
-            height: 130px;  
-            top: 180px;     /* 在mosaic-1下方 */
-            left: 40px;
+            width: 110px;   /* 中等尺寸 */
+            height: 160px;  
+            top: 280px;     /* 确保与mosaic-1不重叠 */
+            left: 20px;
             transform: rotate(10deg);
             z-index: 6;
             animation: itemFloat4 4.2s ease-in-out infinite;
         }
         
         .mosaic-5 {
-            width: 125px;   /* 大尺寸 */
-            height: 180px;  
-            top: 170px;     /* 在mosaic-2/3下方 */
+            width: 150px;   /* 大尺寸 */
+            height: 215px;  
+            top: 250px;     /* 确保与mosaic-2不重叠 */
             left: 160px;
             transform: rotate(-12deg);
             z-index: 5;
@@ -302,44 +302,33 @@
         }
         
         .mosaic-6 {
-            width: 75px;    /* 超小尺寸 */
-            height: 110px;  
-            top: 200px;     /* 在mosaic-3下方 */
-            left: 320px;
+            width: 100px;   /* 小尺寸 */
+            height: 145px;  
+            top: 260px;     /* 确保与mosaic-3不重叠 */
+            left: 340px;
             transform: rotate(7deg);
             z-index: 4;
             animation: itemFloat6 4.3s ease-in-out infinite;
         }
         
         .mosaic-7 {
-            width: 135px;   /* 大尺寸 */
-            height: 195px;  
-            top: 360px;     /* 底部行 */
-            left: 60px;
+            width: 155px;   /* 大尺寸 */
+            height: 225px;  
+            top: 470px;     /* 底部行，确保与上方不重叠 */
+            left: 40px;
             transform: rotate(-10deg);
             z-index: 3;
             animation: itemFloat7 4.1s ease-in-out infinite;
         }
         
         .mosaic-8 {
-            width: 95px;    /* 中等尺寸 */
-            height: 140px;  
-            top: 380px;     /* 底部行 */
+            width: 125px;   /* 中大尺寸 */
+            height: 180px;  
+            top: 490px;     /* 底部行 */
             left: 220px;
             transform: rotate(15deg);
             z-index: 2;
             animation: itemFloat8 3.7s ease-in-out infinite;
-        }
-        
-        /* 新增第9个图片，增加更多变化 */
-        .mosaic-9 {
-            width: 85px;    /* 小尺寸 */
-            height: 125px;  
-            top: 370px;     /* 底部行 */
-            left: 340px;
-            transform: rotate(-7deg);
-            z-index: 1;
-            animation: itemFloat1 4.4s ease-in-out infinite;
         }
         
         /* 证言卡片 */
@@ -502,29 +491,22 @@
             transform: translateY(0);
         }
         
-        /* 响应式设计 */
+        /* 响应式设计 - 确保所有尺寸下都不重叠 */
         @media (max-width: 1200px) {
             .mosaic-grid {
-                width: 500px;
-                height: 500px;
+                width: 550px;
+                height: 600px;
             }
             
-            /* 按比例缩小，保持紧凑布局 */
-            .mosaic-1 { width: 120px; height: 172px; top: 25px; left: 40px; }
-            .mosaic-2 { width: 70px; height: 100px; top: 35px; left: 180px; }
-            .mosaic-3 { width: 95px; height: 138px; top: 20px; left: 270px; }
-            .mosaic-4 { width: 80px; height: 115px; top: 155px; left: 35px; }
-            .mosaic-5 { width: 110px; height: 158px; top: 145px; left: 135px; }
-            .mosaic-6 { width: 65px; height: 95px; top: 170px; left: 270px; }
-            .mosaic-7 { width: 115px; height: 166px; top: 310px; left: 50px; }
-            .mosaic-8 { width: 85px; height: 123px; top: 325px; left: 185px; }
-            .mosaic-9 { width: 75px; height: 108px; top: 315px; left: 290px; }
-            
-            .testimonial-card {
-                width: 400px;
-                bottom: -160px;
-                right: -100px;
-            }
+            /* 中等屏幕 - 重新计算位置避免重叠 */
+            .mosaic-1 { width: 140px; height: 200px; top: 25px; left: 25px; }
+            .mosaic-2 { width: 105px; height: 150px; top: 40px; left: 190px; }
+            .mosaic-3 { width: 125px; height: 180px; top: 25px; left: 320px; }
+            .mosaic-4 { width: 95px; height: 140px; top: 240px; left: 15px; }
+            .mosaic-5 { width: 130px; height: 185px; top: 210px; left: 135px; }
+            .mosaic-6 { width: 85px; height: 125px; top: 220px; left: 290px; }
+            .mosaic-7 { width: 135px; height: 195px; top: 400px; left: 35px; }
+            .mosaic-8 { width: 110px; height: 160px; top: 420px; left: 190px; }
         }
         
         @media (max-width: 768px) {
@@ -533,47 +515,36 @@
             }
             
             .mosaic-grid {
-                width: 400px;
-                height: 400px;
+                width: 450px;
+                height: 500px;
             }
             
-            /* 移动端优化 - 保持大小差异和紧密布局 */
-            .mosaic-1 { width: 95px; height: 136px; top: 20px; left: 30px; }
-            .mosaic-2 { width: 55px; height: 79px; top: 25px; left: 140px; }
-            .mosaic-3 { width: 75px; height: 108px; top: 15px; left: 210px; }
-            .mosaic-4 { width: 65px; height: 93px; top: 125px; left: 25px; }
-            .mosaic-5 { width: 85px; height: 122px; top: 115px; left: 105px; }
-            .mosaic-6 { width: 50px; height: 72px; top: 135px; left: 210px; }
-            .mosaic-7 { width: 90px; height: 129px; top: 245px; left: 40px; }
-            .mosaic-8 { width: 70px; height: 100px; top: 260px; left: 145px; }
-            .mosaic-9 { width: 60px; height: 86px; top: 250px; left: 230px; }
-            
-            .testimonial-card {
-                position: relative;
-                bottom: auto;
-                right: auto;
-                margin-top: 2rem;
-                width: 100%;
-                max-width: 440px;
-            }
+            /* 移动端 - 三行布局，确保不重叠 */
+            .mosaic-1 { width: 115px; height: 165px; top: 20px; left: 20px; }
+            .mosaic-2 { width: 85px; height: 122px; top: 30px; left: 155px; }
+            .mosaic-3 { width: 100px; height: 145px; top: 20px; left: 260px; }
+            .mosaic-4 { width: 80px; height: 115px; top: 200px; left: 15px; }
+            .mosaic-5 { width: 105px; height: 150px; top: 180px; left: 115px; }
+            .mosaic-6 { width: 70px; height: 100px; top: 190px; left: 240px; }
+            .mosaic-7 { width: 110px; height: 160px; top: 340px; left: 30px; }
+            .mosaic-8 { width: 90px; height: 130px; top: 360px; left: 160px; }
         }
         
         @media (max-width: 480px) {
             .mosaic-grid {
-                width: 320px;
-                height: 320px;
+                width: 350px;
+                height: 450px;
             }
             
-            /* 小屏幕优化 - 保持大小差异 */
-            .mosaic-1 { width: 75px; height: 108px; top: 15px; left: 25px; }
-            .mosaic-2 { width: 45px; height: 65px; top: 20px; left: 115px; }
-            .mosaic-3 { width: 60px; height: 86px; top: 10px; left: 170px; }
-            .mosaic-4 { width: 50px; height: 72px; top: 100px; left: 20px; }
-            .mosaic-5 { width: 70px; height: 100px; top: 90px; left: 85px; }
-            .mosaic-6 { width: 40px; height: 58px; top: 110px; left: 170px; }
-            .mosaic-7 { width: 75px; height: 108px; top: 195px; left: 30px; }
-            .mosaic-8 { width: 55px; height: 79px; top: 210px; left: 115px; }
-            .mosaic-9 { width: 50px; height: 72px; top: 200px; left: 185px; }
+            /* 小屏幕 - 更紧凑但不重叠 */
+            .mosaic-1 { width: 90px; height: 130px; top: 15px; left: 15px; }
+            .mosaic-2 { width: 70px; height: 100px; top: 20px; left: 120px; }
+            .mosaic-3 { width: 80px; height: 115px; top: 15px; left: 210px; }
+            .mosaic-4 { width: 65px; height: 95px; top: 160px; left: 10px; }
+            .mosaic-5 { width: 85px; height: 122px; top: 145px; left: 90px; }
+            .mosaic-6 { width: 60px; height: 86px; top: 150px; left: 190px; }
+            .mosaic-7 { width: 90px; height: 130px; top: 280px; left: 25px; }
+            .mosaic-8 { width: 75px; height: 108px; top: 300px; left: 130px; }
         }
         
         /* 滚动条样式 */

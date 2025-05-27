@@ -5,12 +5,50 @@ title: PosterCraft - AI海报生成
 ---
 
 <div class="hero">
-    <div class="hero-badge">🚀 AI驱动的创意平台</div>
-    <h1 class="hero-title">PosterCraft</h1>
-    <p class="hero-subtitle">下一代AI海报生成平台，让创意无限可能。使用最先进的人工智能技术，一键生成专业级海报设计。</p>
-    <div class="hero-cta">
-        <a href="#demo" class="btn btn-primary">开始创作</a>
-        <a href="#features" class="btn btn-secondary">了解更多</a>
+    <div class="hero-content">
+        <div class="hero-badge">🚀 AI驱动的创意平台</div>
+        <h1 class="hero-title">PosterCraft</h1>
+        <p class="hero-subtitle">下一代AI海报生成平台，让创意无限可能。使用最先进的人工智能技术，一键生成专业级海报设计。</p>
+        <div class="hero-cta">
+            <a href="#demo" class="btn btn-primary">开始创作</a>
+            <a href="#features" class="btn btn-secondary">了解更多</a>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="mosaic-grid">
+            <div class="mosaic-item mosaic-1">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 1">
+            </div>
+            <div class="mosaic-item mosaic-2">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 2">
+            </div>
+            <div class="mosaic-item mosaic-3">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 3">
+            </div>
+            <div class="mosaic-item mosaic-4">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 4">
+            </div>
+            <div class="mosaic-item mosaic-5">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 5">
+            </div>
+            <div class="mosaic-item mosaic-6">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 6">
+            </div>
+            <div class="mosaic-item mosaic-7">
+                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 7">
+            </div>
+            <div class="mosaic-item mosaic-8">
+                <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 8">
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="quote-icon">"</div>
+            <p class="testimonial-text">我喜欢把它描述为"类固醇上的Photoshop"。PosterCraft的先进功能使我们能够无缝地混合和增强图像。这些静态图像然后使用PosterCraft无缝集成回工作流程中，产生高度详细和富有表现力的视觉资产。</p>
+            <div class="testimonial-author">
+                <strong>Sixiang Chen</strong>
+                <span>AI Research Scientist, HKUST(GZ)</span>
+            </div>
+        </div>
     </div>
 </div>
 

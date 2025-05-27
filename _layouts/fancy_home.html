@@ -519,21 +519,28 @@
             text-decoration-thickness: 1.5px !important;
         }
         
-        /* 修复下拉菜单精确定位 */
+        /* 精确调整下拉菜单定位 */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-toggle {
+            cursor: pointer;
+        }
+        
         .dropdown-menu {
             position: absolute;
-            top: 100%;
-            right: 0; /* 右对齐到父元素 */
+            top: calc(100% + 10px); /* 在按钮下方10px处 */
+            left: 50%; /* 从父元素中心开始 */
+            transform: translateX(-50%) translateY(-10px); /* 水平居中，初始向上偏移 */
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 12px;
             padding: 0.5rem 0;
-            margin-top: 0.5rem;
-            min-width: 200px;
+            min-width: 180px;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(-10px);
             transition: all 0.3s ease;
             z-index: 1001;
             list-style: none;
@@ -543,7 +550,7 @@
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: translateX(-50%) translateY(0); /* 显示时保持水平居中 */
         }
         
         .dropdown-menu li {
@@ -565,7 +572,7 @@
         .dropdown-menu a:hover {
             color: #ffffff;
             background: rgba(99, 102, 241, 0.1);
-            transform: translateX(-5px); /* 向左移动效果 */
+            transform: translateX(5px);
         }
         
         .dropdown-menu a::after {

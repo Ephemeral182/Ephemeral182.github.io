@@ -132,38 +132,89 @@ title: PosterCraft - AI Poster Generation
         <h2 class="what-is-title">What is PosterCraft?</h2>
         <p class="what-is-subtitle">Transform your words into stunning visual masterpieces</p>
         
-        <div class="transformation-demo">
-            <div class="input-side">
-                <div class="input-card">
-                    <div class="input-header">
-                        <span class="input-icon">✨</span>
-                        <span>Your Text Input</span>
+        <div class="dual-demo-container">
+            <!-- Short Prompt Demo -->
+            <div class="demo-block">
+                <div class="demo-label">
+                    <span class="label-icon">⚡</span>
+                    <span class="label-text">Quick Prompt</span>
+                </div>
+                <div class="transformation-demo">
+                    <div class="input-side">
+                        <div class="input-card short-prompt">
+                            <div class="input-header">
+                                <span class="input-icon">✨</span>
+                                <span>Simple Description</span>
+                            </div>
+                            <div class="input-content">
+                                <p>"Urban Canvas Street Art Expo poster with bold graffiti-style lettering and dynamic colorful splashes"</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-content">
-                        <p>"This poster for the 'Urban Canvas Street Art Expo' uses bold, graffiti-style lettering and dynamic, colorful splashes, capturing the raw energy and creativity of urban artists."</p>
+                    
+                    <div class="arrow-container">
+                        <div class="magic-arrow">
+                            <span class="arrow-text">AI Magic</span>
+                            <div class="arrow-line">
+                                <div class="arrow-head"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="output-side">
+                        <div class="single-output">
+                            <div class="output-frame short-output">
+                                <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
+                                <div class="output-glow short-glow"></div>
+                                <div class="output-sparkles">
+                                    <span class="sparkle sparkle-1">✨</span>
+                                    <span class="sparkle sparkle-2">⭐</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="arrow-container">
-                <div class="magic-arrow">
-                    <span class="arrow-text">AI Magic</span>
-                    <div class="arrow-line">
-                        <div class="arrow-head"></div>
-                    </div>
+            <!-- Long Prompt Demo -->
+            <div class="demo-block">
+                <div class="demo-label">
+                    <span class="label-icon">🎯</span>
+                    <span class="label-text">Detailed Prompt</span>
                 </div>
-            </div>
-            
-            <div class="output-side">
-                <div class="single-output">
-                    <div class="output-frame">
-                        <img src="/images/postercraft/demo/demo13.png" alt="Generated Urban Canvas Street Art Expo Poster">
-                        <div class="output-glow"></div>
-                        <div class="output-sparkles">
-                            <span class="sparkle sparkle-1">✨</span>
-                            <span class="sparkle sparkle-2">⭐</span>
-                            <span class="sparkle sparkle-3">💫</span>
-                            <span class="sparkle sparkle-4">✨</span>
+                <div class="transformation-demo">
+                    <div class="input-side">
+                        <div class="input-card long-prompt">
+                            <div class="input-header">
+                                <span class="input-icon">🎨</span>
+                                <span>Detailed Description</span>
+                            </div>
+                            <div class="input-content">
+                                <p>"UTOPIA/DYSTOPIA Film Showcase poster with split design: left side bright utopian city with organic architecture and flying vehicles, right side dark dystopian cityscape with crumbling buildings and surveillance drones. Modern typography with stark contrast."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="arrow-container">
+                        <div class="magic-arrow">
+                            <span class="arrow-text">AI Magic</span>
+                            <div class="arrow-line">
+                                <div class="arrow-head"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="output-side">
+                        <div class="single-output">
+                            <div class="output-frame long-output">
+                                <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                                <div class="output-glow long-glow"></div>
+                                <div class="output-sparkles">
+                                    <span class="sparkle sparkle-3">💫</span>
+                                    <span class="sparkle sparkle-4">✨</span>
+                                    <span class="sparkle sparkle-5">🌟</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

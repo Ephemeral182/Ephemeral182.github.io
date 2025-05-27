@@ -28,7 +28,6 @@ title: Publications
 <div class="info-cards fade-in">
     <div class="info-card">
         <div class="card-icon">🏆</div>
-        <h3 class="card-title">Top-tier Conferences</h3>
         <div class="card-content">
             <div class="stat-number">10</div>
             <div class="stat-label">CVPR/ICCV/ECCV/NeurIPS</div>
@@ -46,7 +45,6 @@ title: Publications
     
     <div class="info-card">
         <div class="card-icon">📚</div>
-        <h3 class="card-title">AI Conferences</h3>
         <div class="card-content">
             <div class="stat-number">9</div>
             <div class="stat-label">AAAI/IJCAI/ACM MM/MICCAI</div>
@@ -61,7 +59,6 @@ title: Publications
     
     <div class="info-card">
         <div class="card-icon">🔬</div>
-        <h3 class="card-title">Other Venues</h3>
         <div class="card-content">
             <div class="stat-number">4</div>
             <div class="stat-label">Other Conferences</div>

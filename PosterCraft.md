@@ -235,78 +235,82 @@ title: PosterCraft - AI Poster Generation
         <p class="gallery-subtitle">Discover the endless possibilities of AI-generated poster artistry</p>
         
         <div class="poster-grid">
-            <!-- 第一组：2行 -->
-            <div class="poster-row-group">
-                <div class="poster-item poster-large">
+            <!-- 第一行组：大+中+小+中+小+小 = 1200px -->
+            <div class="poster-row-group row-group-1">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo3.png" alt="AI Generated Poster 1">
                     <div class="poster-overlay">
                         <span class="poster-category">Sci-Fi</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-medium">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo4.png" alt="AI Generated Poster 2">
                     <div class="poster-overlay">
                         <span class="poster-category">Abstract</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-small">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Poster 3">
                     <div class="poster-overlay">
                         <span class="poster-category">Music</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-medium">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Poster 4">
                     <div class="poster-overlay">
                         <span class="poster-category">Animation</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-small">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo7.png" alt="AI Generated Poster 5">
                     <div class="poster-overlay">
                         <span class="poster-category">Gaming</span>
                     </div>
                 </div>
-            </div>
-            
-            <!-- 第二组：2行 -->
-            <div class="poster-row-group">
-                <div class="poster-item poster-medium">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo8.png" alt="AI Generated Poster 6">
                     <div class="poster-overlay">
                         <span class="poster-category">Coffee</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-small">
+            </div>
+            
+            <!-- 第二行组：小+大+超大+中+小+小 = 1200px -->
+            <div class="poster-row-group row-group-2">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Poster 7">
                     <div class="poster-overlay">
                         <span class="poster-category">Perfume</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-large">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo10.png" alt="AI Generated Poster 8">
                     <div class="poster-overlay">
                         <span class="poster-category">Micro-Knight</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-medium">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo11.png" alt="AI Generated Poster 9">
                     <div class="poster-overlay">
-                        <span class="poster-category">Demo</span>
+                        <span class="poster-category">Featured</span>
                     </div>
                 </div>
-                
-                <div class="poster-item poster-small">
+                <div class="poster-item">
                     <img src="/images/postercraft/demo/demo12.png" alt="AI Generated Poster 10">
                     <div class="poster-overlay">
-                        <span class="poster-category">Demo</span>
+                        <span class="poster-category">Design</span>
+                    </div>
+                </div>
+                <div class="poster-item">
+                    <img src="/images/postercraft/demo/demo13.png" alt="AI Generated Poster 11">
+                    <div class="poster-overlay">
+                        <span class="poster-category">Urban</span>
+                    </div>
+                </div>
+                <div class="poster-item">
+                    <img src="/images/postercraft/demo/demo14.png" alt="AI Generated Poster 12">
+                    <div class="poster-overlay">
+                        <span class="poster-category">Cinema</span>
                     </div>
                 </div>
             </div>

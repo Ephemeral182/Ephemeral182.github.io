@@ -519,12 +519,11 @@
             text-decoration-thickness: 1.5px !important;
         }
         
-        /* 修复下拉菜单定位 */
+        /* 修复下拉菜单精确定位 */
         .dropdown-menu {
             position: absolute;
             top: 100%;
-            left: 50%; /* 居中对齐 */
-            transform: translateX(-50%) translateY(-10px); /* 水平居中并向上偏移 */
+            right: 0; /* 右对齐到父元素 */
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -534,6 +533,7 @@
             min-width: 200px;
             opacity: 0;
             visibility: hidden;
+            transform: translateY(-10px);
             transition: all 0.3s ease;
             z-index: 1001;
             list-style: none;
@@ -543,7 +543,7 @@
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) translateY(0); /* 显示时保持水平居中 */
+            transform: translateY(0);
         }
         
         .dropdown-menu li {
@@ -559,19 +559,17 @@
             transition: all 0.3s ease;
             border-radius: 8px;
             margin: 0 0.5rem;
-            white-space: nowrap; /* 防止文字换行 */
-            overflow: hidden; /* 隐藏溢出内容 */
-            text-overflow: ellipsis; /* 如果太长显示省略号 */
+            white-space: nowrap;
         }
         
         .dropdown-menu a:hover {
             color: #ffffff;
             background: rgba(99, 102, 241, 0.1);
-            transform: translateX(5px);
+            transform: translateX(-5px); /* 向左移动效果 */
         }
         
         .dropdown-menu a::after {
-            display: none; /* 移除下拉菜单项的下划线效果 */
+            display: none;
         }
         
         /* 下拉箭头指示器 */

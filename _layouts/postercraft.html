@@ -564,6 +564,103 @@
         ::-webkit-scrollbar-thumb:hover {
             background: linear-gradient(45deg, #5855eb, #7c3aed);
         }
+        
+        /* 浮动demo图片样式 */
+        .floating-demos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        .demo-left, .demo-right {
+            position: absolute;
+            top: 20%;
+            width: 300px;
+            height: 400px;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0.9;
+        }
+        
+        .demo-left {
+            left: -150px;
+            transform: rotate(-15deg);
+            animation: floatLeft 3s ease-in-out infinite alternate;
+        }
+        
+        .demo-right {
+            right: -150px;
+            transform: rotate(15deg);
+            animation: floatRight 3s ease-in-out infinite alternate;
+        }
+        
+        .demo-left img, .demo-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 滚动时的散开效果 */
+        .floating-demos.scrolled .demo-left {
+            left: -400px;
+            opacity: 0.3;
+            transform: rotate(-25deg) scale(0.8);
+        }
+        
+        .floating-demos.scrolled .demo-right {
+            right: -400px;
+            opacity: 0.3;
+            transform: rotate(25deg) scale(0.8);
+        }
+        
+        /* 浮动动画 */
+        @keyframes floatLeft {
+            0% { transform: rotate(-15deg) translateY(0px); }
+            100% { transform: rotate(-15deg) translateY(-20px); }
+        }
+        
+        @keyframes floatRight {
+            0% { transform: rotate(15deg) translateY(0px); }
+            100% { transform: rotate(15deg) translateY(-20px); }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .demo-left, .demo-right {
+                width: 200px;
+                height: 280px;
+                top: 15%;
+            }
+            
+            .demo-left {
+                left: -100px;
+            }
+            
+            .demo-right {
+                right: -100px;
+            }
+            
+            .floating-demos.scrolled .demo-left {
+                left: -300px;
+            }
+            
+            .floating-demos.scrolled .demo-right {
+                right: -300px;
+            }
+        }
+        
+        /* 确保主要内容在浮动元素之上 */
+        .hero {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -636,6 +733,20 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingDemos = document.querySelector('.floating-demos');
+            
+            window.addEventListener('scroll', function() {
+                const scrollY = window.scrollY;
+                
+                if (scrollY > 100) {
+                    floatingDemos.classList.add('scrolled');
+                } else {
+                    floatingDemos.classList.remove('scrolled');
                 }
             });
         });

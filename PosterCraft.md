@@ -1,49 +1,59 @@
 ---
 layout: postercraft
 permalink: /poster-craft/
-title: PosterCraft - AI海报生成
+title: PosterCraft - AI Poster Generation
 ---
+
+<!-- 顶部浮动demo图片 -->
+<div class="floating-demos">
+    <div class="demo-left">
+        <img src="/images/postercraft/demo/demo1.png" alt="AI Generated Poster Demo 1">
+    </div>
+    <div class="demo-right">
+        <img src="/images/postercraft/demo/demo2.png" alt="AI Generated Poster Demo 2">
+    </div>
+</div>
 
 <div class="hero">
     <div class="hero-content">
-        <div class="hero-badge">🚀 AI驱动的创意平台</div>
+        <div class="hero-badge">🚀 AI-Powered Creative Platform</div>
         <h1 class="hero-title">PosterCraft</h1>
-        <p class="hero-subtitle">下一代AI海报生成平台，让创意无限可能。使用最先进的人工智能技术，一键生成专业级海报设计。</p>
+        <p class="hero-subtitle">Next-generation AI poster generation platform that makes creativity limitless. Create professional-grade poster designs with cutting-edge artificial intelligence technology in just one click.</p>
         <div class="hero-cta">
-            <a href="#demo" class="btn btn-primary">开始创作</a>
-            <a href="#features" class="btn btn-secondary">了解更多</a>
+            <a href="#demo" class="btn btn-primary">Start Creating</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
         </div>
     </div>
     <div class="hero-visual">
         <div class="mosaic-grid">
             <div class="mosaic-item mosaic-1">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo1.png" alt="AI Generated Avatar 1">
+                <img src="/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 1">
             </div>
             <div class="mosaic-item mosaic-2">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo2.png" alt="AI Generated Avatar 2">
+                <img src="/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 2">
             </div>
             <div class="mosaic-item mosaic-3">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 3">
+                <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 3">
             </div>
             <div class="mosaic-item mosaic-4">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 4">
+                <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 4">
             </div>
             <div class="mosaic-item mosaic-5">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 5">
+                <img src="/images/postercraft/demo/demo7.png" alt="AI Generated Avatar 5">
             </div>
             <div class="mosaic-item mosaic-6">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 6">
+                <img src="/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 6">
             </div>
             <div class="mosaic-item mosaic-7">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 7">
+                <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 7">
             </div>
             <div class="mosaic-item mosaic-8">
-                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
+                <img src="/images/postercraft/demo/demo10.png" alt="AI Generated Avatar 8">
             </div>
         </div>
         <div class="testimonial-card">
             <div class="quote-icon">"</div>
-            <p class="testimonial-text">我喜欢把它描述为"类固醇上的Photoshop"。PosterCraft的先进功能使我们能够无缝地混合和增强图像。这些静态图像然后使用PosterCraft无缝集成回工作流程中，产生高度详细和富有表现力的视觉资产。</p>
+            <p class="testimonial-text">I like to describe it as "Photoshop on steroids". PosterCraft's advanced features enable us to seamlessly blend and enhance images. These static images are then seamlessly integrated back into workflows using PosterCraft, producing highly detailed and expressive visual assets.</p>
             <div class="testimonial-author">
                 <strong>Sixiang Chen</strong>
                 <span>AI Research Scientist, HKUST(GZ)</span>
@@ -55,54 +65,54 @@ title: PosterCraft - AI海报生成
 <div class="features" id="features">
     <div class="feature-card fade-in">
         <div class="feature-icon">🤖</div>
-        <h3 class="feature-title">AI智能生成</h3>
-        <p class="feature-description">基于最新的Stable Diffusion和GPT-4技术，理解你的创意需求，自动生成高质量的海报设计。</p>
+        <h3 class="feature-title">AI Smart Generation</h3>
+        <p class="feature-description">Based on the latest Stable Diffusion and GPT-4 technology, understands your creative needs and automatically generates high-quality poster designs.</p>
     </div>
     
     <div class="feature-card fade-in">
         <div class="feature-icon">🎨</div>
-        <h3 class="feature-title">多样化风格</h3>
-        <p class="feature-description">支持现代简约、复古怀旧、科技未来等多种设计风格，满足不同场景的设计需求。</p>
+        <h3 class="feature-title">Diverse Styles</h3>
+        <p class="feature-description">Supports multiple design styles including modern minimalist, retro vintage, and futuristic tech to meet different scenario design needs.</p>
     </div>
     
     <div class="feature-card fade-in">
         <div class="feature-icon">⚡</div>
-        <h3 class="feature-title">实时编辑</h3>
-        <p class="feature-description">所见即所得的编辑体验，实时预览设计效果，支持文字、颜色、布局的快速调整。</p>
+        <h3 class="feature-title">Real-time Editing</h3>
+        <p class="feature-description">WYSIWYG editing experience with real-time design preview, supporting quick adjustments to text, colors, and layouts.</p>
     </div>
     
     <div class="feature-card fade-in">
         <div class="feature-icon">📱</div>
-        <h3 class="feature-title">多端适配</h3>
-        <p class="feature-description">自动适配不同尺寸和平台，支持社交媒体、印刷品、网页等多种输出格式。</p>
+        <h3 class="feature-title">Multi-platform Adaptation</h3>
+        <p class="feature-description">Automatically adapts to different sizes and platforms, supporting various output formats for social media, print, and web.</p>
     </div>
     
     <div class="feature-card fade-in">
         <div class="feature-icon">☁️</div>
-        <h3 class="feature-title">云端同步</h3>
-        <p class="feature-description">作品自动保存到云端，随时随地访问你的设计项目，支持团队协作和版本管理。</p>
+        <h3 class="feature-title">Cloud Sync</h3>
+        <p class="feature-description">Works automatically saved to the cloud, access your design projects anytime, anywhere, with team collaboration and version management support.</p>
     </div>
     
     <div class="feature-card fade-in">
         <div class="feature-icon">🔧</div>
-        <h3 class="feature-title">高级定制</h3>
-        <p class="feature-description">提供丰富的自定义选项，从字体选择到色彩搭配，打造独一无二的品牌视觉效果。</p>
+        <h3 class="feature-title">Advanced Customization</h3>
+        <p class="feature-description">Provides rich customization options, from font selection to color matching, creating unique brand visual effects.</p>
     </div>
 </div>
 
 <div class="feature-card fade-in" style="margin: 4rem 0; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 2rem; background: linear-gradient(45deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">技术架构</h2>
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; background: linear-gradient(45deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Technical Architecture</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
         <div style="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(99, 102, 241, 0.2);">
-            <h4 style="color: #a5b4fc; margin-bottom: 0.5rem;">前端技术</h4>
+            <h4 style="color: #a5b4fc; margin-bottom: 0.5rem;">Frontend Technology</h4>
             <p style="color: #d1d5db;">React 18, TypeScript, Tailwind CSS</p>
         </div>
         <div style="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(139, 92, 246, 0.2);">
-            <h4 style="color: #c4b5fd; margin-bottom: 0.5rem;">后端服务</h4>
+            <h4 style="color: #c4b5fd; margin-bottom: 0.5rem;">Backend Services</h4>
             <p style="color: #d1d5db;">Node.js, Express, MongoDB</p>
         </div>
         <div style="background: rgba(236, 72, 153, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(236, 72, 153, 0.2);">
-            <h4 style="color: #f9a8d4; margin-bottom: 0.5rem;">AI模型</h4>
+            <h4 style="color: #f9a8d4; margin-bottom: 0.5rem;">AI Models</h4>
             <p style="color: #d1d5db;">Stable Diffusion, GPT-4, DALL-E</p>
         </div>
     </div>

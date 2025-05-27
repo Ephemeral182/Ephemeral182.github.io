@@ -17,28 +17,28 @@ title: PosterCraft - AI海报生成
     <div class="hero-visual">
         <div class="mosaic-grid">
             <div class="mosaic-item mosaic-1">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 1">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo1.png" alt="AI Generated Avatar 1">
             </div>
             <div class="mosaic-item mosaic-2">
-                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 2">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo2.png" alt="AI Generated Avatar 2">
             </div>
             <div class="mosaic-item mosaic-3">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 3">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 3">
             </div>
             <div class="mosaic-item mosaic-4">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 4">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo4.png" alt="AI Generated Avatar 4">
             </div>
             <div class="mosaic-item mosaic-5">
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 5">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 5">
             </div>
             <div class="mosaic-item mosaic-6">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 6">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 6">
             </div>
             <div class="mosaic-item mosaic-7">
-                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 7">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo8.png" alt="AI Generated Avatar 7">
             </div>
             <div class="mosaic-item mosaic-8">
-                <img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=300&h=300&fit=crop&crop=face" alt="AI Generated Avatar 8">
+                <img src="/Users/ephemeral182/Documents/my_self/person_web/Ephemeral182.github.io/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
             </div>
         </div>
         <div class="testimonial-card">

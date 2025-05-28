@@ -23,6 +23,92 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
+<!-- 新增：Paper Showcase Section - 在hero之前 -->
+<div class="paper-showcase-section">
+    <div class="paper-showcase-container">
+        <!-- Logo展示 -->
+        <div class="logo-showcase">
+            <div class="logo-container">
+                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo">
+                <div class="logo-glow"></div>
+            </div>
+            <div class="logo-text">
+                <h1 class="logo-title">PosterCraft</h1>
+                <p class="logo-subtitle">AI-Powered Poster Generation</p>
+            </div>
+        </div>
+        
+        <!-- Paper Links Bar -->
+        <div class="paper-links-bar">
+            <div class="paper-badge">
+                <span class="badge-icon">📄</span>
+                <span class="badge-text">Research Paper</span>
+            </div>
+            
+            <div class="links-container">
+                <a href="#" class="paper-link huggingface-link">
+                    <div class="link-icon">🤗</div>
+                    <span class="link-text">Hugging Face</span>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="#" class="paper-link github-link">
+                    <div class="link-icon">⚡</div>
+                    <span class="link-text">GitHub</span>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="#" class="paper-link arxiv-link">
+                    <div class="link-icon">📚</div>
+                    <span class="link-text">arXiv</span>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="#" class="paper-link video-link">
+                    <div class="link-icon">🎥</div>
+                    <span class="link-text">Video</span>
+                    <div class="link-arrow">→</div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Stats Bar -->
+        <div class="stats-showcase-bar">
+            <div class="stat-item-showcase">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-content">
+                    <div class="stat-number">2.5K+</div>
+                    <div class="stat-label">GitHub Stars</div>
+                </div>
+            </div>
+            
+            <div class="stat-item-showcase">
+                <div class="stat-icon">📥</div>
+                <div class="stat-content">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Downloads</div>
+                </div>
+            </div>
+            
+            <div class="stat-item-showcase">
+                <div class="stat-icon">🎨</div>
+                <div class="stat-content">
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Posters Created</div>
+                </div>
+            </div>
+            
+            <div class="stat-item-showcase">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-content">
+                    <div class="stat-number">Top 1%</div>
+                    <div class="stat-label">AI Research</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="hero">
     <div class="hero-content">
         <div class="hero-badge">🚀 AI-Powered Creative Platform</div>

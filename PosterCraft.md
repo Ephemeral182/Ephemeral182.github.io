@@ -27,7 +27,7 @@ title: PosterCraft - AI Poster Generation
     <div class="hero-content">
         <!-- 主标题区域：PosterCraft + Logo -->
         <div class="title-logo-section">
-            <h1 class="hero-title">PosterCraft</h1>
+            <h1 class="hero-title">PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
                 <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo-inline">
@@ -38,31 +38,35 @@ title: PosterCraft - AI Poster Generation
             </div>
         </div>
         
-        <!-- Paper信息 - 增大字体 -->
-        <div class="paper-info-small">
-            <h3 class="paper-title-small">
+        <!-- Paper信息 - 紧凑布局 -->
+        <div class="paper-info-compact">
+            <h3 class="paper-title-main">
                 Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
             </h3>
-            <div class="paper-badge-small">📄 Research Paper</div>
+            <div class="paper-badge-fancy">📄 Research Paper</div>
         </div>
         
-        <!-- 论文链接 -->
-        <div class="paper-links-hero">
-            <a href="#" class="paper-link-hero arxiv-link">
-                <div class="link-icon-hero">📚</div>
+        <!-- 论文链接 - 增强版 -->
+        <div class="paper-links-enhanced">
+            <a href="#" class="paper-link-fancy arxiv-link">
+                <div class="link-icon-fancy">📚</div>
                 <span>arXiv</span>
+                <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-hero github-link">
-                <div class="link-icon-hero">💻</div>
+            <a href="#" class="paper-link-fancy github-link">
+                <div class="link-icon-fancy">💻</div>
                 <span>GitHub</span>
+                <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-hero huggingface-link">
-                <div class="link-icon-hero">🤗</div>
+            <a href="#" class="paper-link-fancy huggingface-link">
+                <div class="link-icon-fancy">🤗</div>
                 <span>HuggingFace</span>
+                <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-hero video-link">
-                <div class="link-icon-hero">🎥</div>
+            <a href="#" class="paper-link-fancy video-link">
+                <div class="link-icon-fancy">🎥</div>
                 <span>Demo Video</span>
+                <div class="link-shine"></div>
             </a>
         </div>
     </div>

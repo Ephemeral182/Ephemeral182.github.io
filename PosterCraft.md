@@ -26,57 +26,56 @@ title: PosterCraft - AI Poster Generation
 <div class="hero">
     <div class="hero-content">
         <div class="hero-badge">🚀 AI-Powered Creative Platform</div>
-        <h1 class="hero-title">PosterCraft</h1>
+        
+        <!-- 主标题区域：PosterCraft + Logo -->
+        <div class="title-logo-section">
+            <h1 class="hero-title">PosterCraft</h1>
+            <div class="inline-logo">
+                <div class="logo-glow-effect-inline"></div>
+                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo-inline">
+                <div class="logo-sparkles-inline">
+                    <span class="logo-sparkle logo-sparkle-1">✨</span>
+                    <span class="logo-sparkle logo-sparkle-2">⭐</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Paper信息 - 小字体 -->
+        <div class="paper-info-small">
+            <h3 class="paper-title-small">
+                Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
+            </h3>
+            <div class="paper-badge-small">📄 Research Paper</div>
+        </div>
+        
         <p class="hero-subtitle">Next-generation AI poster generation platform that makes creativity limitless. Create professional-grade poster designs with cutting-edge artificial intelligence technology in just one click.</p>
+        
         <div class="hero-cta">
             <a href="#demo" class="btn btn-primary">Start Creating</a>
             <a href="#features" class="btn btn-secondary">Learn More</a>
         </div>
         
-        <!-- 新增：整合的论文信息区域 -->
-        <div class="hero-paper-info">
-            <div class="paper-badge-hero">📄 Research Paper</div>
-            <h3 class="paper-title-hero">
-                PosterCraft: Rethinking High-Quality<br>
-                Aesthetic Poster Generation in a Unified Framework
-            </h3>
-            
-            <!-- 紧凑的链接按钮组 -->
-            <div class="paper-links-hero">
-                <a href="#" class="paper-link-hero arxiv-link">
-                    <div class="link-icon-hero">📚</div>
-                    <span>arXiv</span>
-                </a>
-                <a href="#" class="paper-link-hero github-link">
-                    <div class="link-icon-hero">💻</div>
-                    <span>GitHub</span>
-                </a>
-                <a href="#" class="paper-link-hero huggingface-link">
-                    <div class="link-icon-hero">🤗</div>
-                    <span>HuggingFace</span>
-                </a>
-                <a href="#" class="paper-link-hero video-link">
-                    <div class="link-icon-hero">🎥</div>
-                    <span>Demo Video</span>
-                </a>
-            </div>
+        <!-- 论文链接 -->
+        <div class="paper-links-hero">
+            <a href="#" class="paper-link-hero arxiv-link">
+                <div class="link-icon-hero">📚</div>
+                <span>arXiv</span>
+            </a>
+            <a href="#" class="paper-link-hero github-link">
+                <div class="link-icon-hero">💻</div>
+                <span>GitHub</span>
+            </a>
+            <a href="#" class="paper-link-hero huggingface-link">
+                <div class="link-icon-hero">🤗</div>
+                <span>HuggingFace</span>
+            </a>
+            <a href="#" class="paper-link-hero video-link">
+                <div class="link-icon-hero">🎥</div>
+                <span>Demo Video</span>
+            </a>
         </div>
     </div>
     <div class="hero-visual">
-        <!-- 整合logo到右侧视觉区域 -->
-        <div class="hero-logo-section">
-            <div class="logo-frame-hero">
-                <div class="logo-glow-effect-hero"></div>
-                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo-hero">
-                <div class="logo-sparkles-hero">
-                    <span class="logo-sparkle logo-sparkle-1">✨</span>
-                    <span class="logo-sparkle logo-sparkle-2">⭐</span>
-                    <span class="logo-sparkle logo-sparkle-3">💫</span>
-                    <span class="logo-sparkle logo-sparkle-4">🌟</span>
-                </div>
-            </div>
-        </div>
-        
         <div class="mosaic-grid">
             <div class="mosaic-item mosaic-1">
                 <img src="/images/postercraft/demo/demo3.png" alt="AI Generated Avatar 1">

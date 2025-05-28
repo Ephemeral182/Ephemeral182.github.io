@@ -443,6 +443,40 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
             </div>
+            
+            <!-- 对比项目 5 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo9.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo10.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Art Exhibition Poster</h3>
+                        <p class="comparison-description">Refined text aesthetics for cultural and artistic presentations</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对比项目 6 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo11.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo12.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Sports Event Poster</h3>
+                        <p class="comparison-description">Dynamic text optimization for high-energy promotional materials</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <!-- 统计信息 -->

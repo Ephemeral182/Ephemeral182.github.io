@@ -3645,7 +3645,7 @@
         }
 
         .optimization-container {
-            max-width: 1600px;
+            max-width: 1800px; /* 增加最大宽度以容纳6组 */
             margin: 0 auto;
             padding: 0 1rem;
             position: relative;
@@ -3696,11 +3696,11 @@
             line-height: 1.7;
         }
 
-        /* 对比网格 */
+        /* 对比网格 - 调整为3列布局以容纳6组 */
         .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(3, 1fr); /* 3列布局 */
+            gap: 2rem;
             margin-bottom: 5rem;
         }
 
@@ -3730,11 +3730,11 @@
                 0 0 60px rgba(99, 102, 241, 0.3);
         }
 
-        /* 图片容器 */
+        /* 图片容器 - 调整为832:1216比例 */
         .image-container {
             position: relative;
             width: 100%;
-            height: 300px;
+            aspect-ratio: 832 / 1216; /* 设置为海报比例 */
             overflow: hidden;
             cursor: pointer;
         }
@@ -3831,13 +3831,13 @@
 
         /* 信息区域 */
         .comparison-info {
-            padding: 2rem;
+            padding: 1.5rem; /* 减少padding以适应更紧凑的布局 */
         }
 
         .comparison-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem; /* 稍微减小字体 */
             font-weight: 700;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             background: linear-gradient(45deg, #ffffff, #a5b4fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -3846,8 +3846,8 @@
 
         .comparison-description {
             color: #94a3b8;
-            line-height: 1.6;
-            font-size: 0.95rem;
+            line-height: 1.5;
+            font-size: 0.85rem; /* 稍微减小字体 */
         }
 
         /* 统计信息 */
@@ -3901,13 +3901,9 @@
         }
 
         /* 响应式设计 */
-        @media (max-width: 1024px) {
+        @media (max-width: 1400px) {
             .comparison-grid {
-                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                gap: 2rem;
-            }
-            
-            .optimization-stats {
+                grid-template-columns: repeat(2, 1fr); /* 中等屏幕显示2列 */
                 gap: 2rem;
             }
         }
@@ -3918,7 +3914,7 @@
             }
             
             .comparison-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr; /* 小屏幕显示1列 */
                 gap: 2rem;
             }
             
@@ -3935,11 +3931,7 @@
 
         @media (max-width: 480px) {
             .comparison-info {
-                padding: 1.5rem;
-            }
-            
-            .image-container {
-                height: 250px;
+                padding: 1rem;
             }
             
             .stat-card {

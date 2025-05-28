@@ -279,11 +279,6 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
                 <p class="stage-description">Optimizes text rendering quality and layout structure to ensure readable and aesthetically pleasing typography that forms the foundation of professional poster design.</p>
-                <div class="stage-tech">
-                    <span class="tech-tag">OCR Enhancement</span>
-                    <span class="tech-tag">Layout Analysis</span>
-                    <span class="tech-tag">Typography Optimization</span>
-                </div>
             </div>
             
             <div class="stage-card stage-2" data-stage="2">
@@ -295,11 +290,6 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
                 <p class="stage-description">Fine-tunes the overall visual quality through advanced diffusion models, enhancing color harmony, composition balance, and artistic coherence.</p>
-                <div class="stage-tech">
-                    <span class="tech-tag">Diffusion Models</span>
-                    <span class="tech-tag">Style Transfer</span>
-                    <span class="tech-tag">Color Harmonization</span>
-                </div>
             </div>
             
             <div class="stage-card stage-3" data-stage="3">
@@ -311,8 +301,6 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
                 <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
-                <div class="stage-tech">
-                </div>
             </div>
             
             <div class="stage-card stage-4" data-stage="4">
@@ -324,11 +312,6 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
                 <p class="stage-description">Multi-modal feedback mechanism that continuously refines the output through vision-language understanding, achieving superior aesthetic quality.</p>
-                <div class="stage-tech">
-                    <span class="tech-tag">Multi-modal Learning</span>
-                    <span class="tech-tag">Feedback Loop</span>
-                    <span class="tech-tag">Quality Refinement</span>
-                </div>
             </div>
         </div>
         

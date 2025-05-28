@@ -2268,20 +2268,20 @@
         /* Workflow Stages */
         .workflow-stages {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 调整minmax确保更优布局 */
-            gap: 2.5rem; /* 调整间隙 */
+            grid-template-columns: repeat(4, 1fr); /* 修改：强制4列布局 */
+            gap: 1.5rem; /* 修改：减小间隙 */
             margin-bottom: 5rem;
         }
         
         .stage-card {
-            background: rgba(255, 255, 255, 0.05); /* 保持这个轻微的背景以区分卡片，或者根据需要设为transparent */
-            border: 1px solid rgba(255, 255, 255, 0.1); /* 保持这个轻微的边框 */
+            background: rgba(255, 255, 255, 0.05); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
             border-radius: 24px;
-            padding: 2.5rem;
+            padding: 1.5rem; /* 修改：减小内边距 */
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
             overflow: hidden;
-            backdrop-filter: blur(15px); /* 这个可以保留，因为它应用于卡片内部，可能效果不错 */
+            backdrop-filter: blur(15px); 
             cursor: pointer;
         }
         

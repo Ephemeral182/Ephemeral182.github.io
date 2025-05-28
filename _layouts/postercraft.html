@@ -3980,61 +3980,61 @@
 
         /* Dataset Showcase Section */
         .ds-showcase-section {
-            padding: 6rem 0; /* Adjusted padding */
+            padding: 6rem 0;
             position: relative;
             overflow: hidden;
         }
 
         .ds-container {
-            max-width: 1000px; /* Adjusted for better focus */
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 1rem; 
+            padding: 0 1rem;
             position: relative;
             z-index: 2;
         }
 
         .ds-header {
             text-align: center;
-            margin-bottom: 4rem; 
+            margin-bottom: 4rem;
         }
 
         .ds-title {
-            font-size: clamp(3rem, 7vw, 5rem); 
+            font-size: clamp(3rem, 7vw, 5rem);
             font-weight: 900;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, 
                 #8b5cf6 0%, 
                 #ec4899 30%, 
                 #f59e0b 60%, 
-                #10b981 100%); 
+                #10b981 100%);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 5s ease-in-out infinite; 
+            animation: gradientShift 5s ease-in-out infinite;
             letter-spacing: -0.02em;
             line-height: 1.1;
         }
 
         .ds-emoji {
-            font-size: 2.5rem; 
+            font-size: 2.5rem;
             display: inline-block;
-            animation: emojiFloat 3s ease-in-out infinite; 
+            animation: emojiFloat 3s ease-in-out infinite;
         }
 
         .ds-subtitle {
-            font-size: 1.3rem; 
-            color: #cbd5e1; 
+            font-size: 1.3rem;
+            color: #cbd5e1;
             font-weight: 300;
             letter-spacing: 0.5px;
-            max-width: 700px; 
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
         .ds-carousel-wrapper {
             position: relative;
-            background: rgba(15, 23, 42, 0.7); 
+            background: rgba(15, 23, 42, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 2rem;
@@ -4045,11 +4045,11 @@
         .ds-carousel {
             position: relative;
             overflow: hidden;
-            border-radius: 16px; 
+            border-radius: 16px;
         }
 
         .ds-item {
-            display: none; 
+            display: none; /* 默认隐藏 */
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -4057,7 +4057,7 @@
         }
 
         .ds-item.active {
-            display: flex;
+            display: flex; /* 激活项显示 */
         }
 
         @keyframes dsFadeIn {
@@ -4068,7 +4068,7 @@
         .ds-image-area {
             position: relative;
             width: 100%;
-            max-width: 800px; 
+            max-width: 800px;
             margin-bottom: 1.5rem;
             border-radius: 16px;
             overflow: hidden;
@@ -4080,7 +4080,7 @@
             height: auto;
             display: block;
             object-fit: cover;
-            aspect-ratio: 16 / 9; 
+            aspect-ratio: 16 / 9;
         }
 
         .ds-image-caption {
@@ -4119,16 +4119,16 @@
         .ds-controls {
             position: absolute;
             top: 50%;
-            left: 10px; 
-            right: 10px; 
+            left: 10px;
+            right: 10px;
             transform: translateY(-50%);
             display: flex;
             justify-content: space-between;
-            pointer-events: none; 
+            pointer-events: none;
         }
 
         .ds-controls button {
-            pointer-events: all; 
+            pointer-events: all;
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #fff;
@@ -4167,39 +4167,16 @@
             box-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .ds-container {
-                max-width: 90%;
-            }
-            .ds-title {
-                font-size: clamp(2.5rem, 6vw, 3.5rem);
-            }
-            .ds-subtitle {
-                font-size: 1.1rem;
-            }
-            .ds-carousel-wrapper {
-                padding: 1.5rem;
-            }
-            .ds-description-area h3 {
-                font-size: 1.5rem;
-            }
-            .ds-description-area p {
-                font-size: 0.9rem;
-            }
-            .ds-image-caption {
-                font-size: 1rem;
-                padding: 0.8rem;
-            }
-            .ds-controls {
-                left: 5px;
-                right: 5px;
-            }
-             .ds-controls button {
-                width: 36px;
-                height: 36px;
-                font-size: 1.3rem;
-            }
+            .ds-container { max-width: 90%; }
+            .ds-title { font-size: clamp(2.5rem, 6vw, 3.5rem); }
+            .ds-subtitle { font-size: 1.1rem; }
+            .ds-carousel-wrapper { padding: 1.5rem; }
+            .ds-description-area h3 { font-size: 1.5rem; }
+            .ds-description-area p { font-size: 0.9rem; }
+            .ds-image-caption { font-size: 1rem; padding: 0.8rem; }
+            .ds-controls { left: 5px; right: 5px; }
+            .ds-controls button { width: 36px; height: 36px; font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -4224,6 +4201,11 @@
             </ul>
         </div>
     </nav>
+    
+    <!-- 主要内容 -->
+    <div class="main-content">
+        {{ content }}
+    </div>
     
     <!-- JavaScript -->
     <script>
@@ -4252,26 +4234,26 @@
             });
         });
         
-        // 初始化
+        // 初始化脚本
         document.addEventListener('DOMContentLoaded', function() {
-            handleScrollAnimation();
+            console.log("DOM fully loaded and parsed"); // 调试信息
+            handleScrollAnimation(); // 用于其他部分的淡入动画
             window.addEventListener('scroll', handleScrollAnimation);
-            
+
+            // Floating Demos script
             const floatingDemos = document.querySelector('.floating-demos');
-            
+            console.log("Floating Demos Element:", floatingDemos); // 调试信息
             if (floatingDemos) {
                 window.addEventListener('scroll', function() {
                     const scrollY = window.scrollY;
                     const windowHeight = window.innerHeight;
                     
-                    // 第一阶段：初始散开效果
                     if (scrollY > 100) {
                         floatingDemos.classList.add('scrolled');
                     } else {
                         floatingDemos.classList.remove('scrolled');
                     }
                     
-                    // 第二阶段：新的demo图片出现
                     if (scrollY > windowHeight * 0.3 && scrollY < windowHeight * 1.2) {
                         floatingDemos.classList.add('second-phase');
                         floatingDemos.classList.remove('third-phase');
@@ -4280,7 +4262,6 @@
                         floatingDemos.classList.remove('third-phase');
                     }
                     
-                    // 第三阶段：第二组图片消失
                     if (scrollY > windowHeight * 1.2) {
                         floatingDemos.classList.add('third-phase');
                         floatingDemos.classList.remove('second-phase');
@@ -4289,14 +4270,22 @@
             }
 
             // Dataset Showcase Carousel
+            console.log("Attempting to initialize Dataset Carousel..."); // 调试信息
             const dsCarousel = document.querySelector('.ds-carousel');
+            console.log("Dataset Carousel Element:", dsCarousel); // 调试信息
+
             if (dsCarousel) {
                 const items = dsCarousel.querySelectorAll('.ds-item');
-                const prevButton = document.querySelector('.ds-prev');
-                const nextButton = document.querySelector('.ds-next');
-                const dotsContainer = document.querySelector('.ds-dots');
+                const prevButton = document.querySelector('.ds-carousel-wrapper .ds-prev');
+                const nextButton = document.querySelector('.ds-carousel-wrapper .ds-next');
+                const dotsContainer = document.querySelector('.ds-carousel-wrapper .ds-dots');
                 let currentIndex = 0;
                 let autoPlayInterval;
+
+                console.log("Carousel items found:", items.length); // 调试信息
+                console.log("Prev button:", prevButton); // 调试信息
+                console.log("Next button:", nextButton); // 调试信息
+                console.log("Dots container:", dotsContainer); // 调试信息
 
                 function showItem(index) {
                     items.forEach((item, i) => {
@@ -4309,6 +4298,7 @@
                 }
 
                 function updateDots(index) {
+                    if (!dotsContainer) return;
                     const dots = dotsContainer.querySelectorAll('.ds-dot');
                     dots.forEach((dot, i) => {
                         dot.classList.remove('active');
@@ -4320,6 +4310,7 @@
 
                 function createDots() {
                     if (!dotsContainer) return;
+                    dotsContainer.innerHTML = ''; // Clear existing dots if any
                     items.forEach((_, i) => {
                         const dot = document.createElement('button');
                         dot.classList.add('ds-dot');
@@ -4333,25 +4324,27 @@
                     });
                 }
 
-                function nextItem() {
+                function nextItemManual() {
                     currentIndex = (currentIndex + 1) % items.length;
                     showItem(currentIndex);
                 }
 
-                function prevItem() {
+                function prevItemManual() {
                     currentIndex = (currentIndex - 1 + items.length) % items.length;
                     showItem(currentIndex);
                 }
-
-                function startAutoPlay(interval = 5000) { 
-                    stopAutoPlay(); 
-                    autoPlayInterval = setInterval(nextItem, interval);
+                
+                function startAutoPlay(interval = 5000) {
+                    stopAutoPlay();
+                    if (items.length > 1) { // Only autoplay if more than one item
+                        autoPlayInterval = setInterval(nextItemManual, interval);
+                    }
                 }
 
                 function stopAutoPlay() {
                     clearInterval(autoPlayInterval);
                 }
-                
+
                 function resetAutoPlay(interval = 5000) {
                     stopAutoPlay();
                     startAutoPlay(interval);
@@ -4359,25 +4352,33 @@
 
                 if (items.length > 0) {
                     createDots();
-                    showItem(currentIndex); 
+                    showItem(currentIndex);
                     startAutoPlay();
 
                     if (prevButton) {
                         prevButton.addEventListener('click', () => {
-                            prevItem();
+                            prevItemManual();
                             resetAutoPlay();
                         });
                     }
                     if (nextButton) {
                         nextButton.addEventListener('click', () => {
-                            nextItem();
+                            nextItemManual();
                             resetAutoPlay();
                         });
                     }
                     
-                    dsCarousel.addEventListener('mouseenter', stopAutoPlay);
-                    dsCarousel.addEventListener('mouseleave', () => startAutoPlay());
+                    // Pause autoplay on hover
+                    const carouselWrapper = document.querySelector('.ds-carousel-wrapper');
+                    if (carouselWrapper) {
+                        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+                        carouselWrapper.addEventListener('mouseleave', () => resetAutoPlay());
+                    }
+                } else {
+                    console.log("No items found for the dataset carousel."); // 调试信息
                 }
+            } else {
+                console.log("Dataset carousel element (.ds-carousel) not found."); // 调试信息
             }
         });
         

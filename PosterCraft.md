@@ -299,63 +299,76 @@ title: PosterCraft - AI Poster Generation
         <div class="dataset-content-area">
             <!-- Text-Render-2M Dataset -->
             <div class="dataset-panel active" id="text-render-panel">
-                <div class="dataset-layout leonardo-style">
-                    <div class="dataset-info-leonardo">
-                        <div class="dataset-category-leonardo">Text Rendering Optimization</div>
-                        <h3 class="dataset-title-leonardo">Text-Render-2M</h3>
-                        <p class="dataset-description-leonardo">
+                <div class="dataset-layout">
+                    <div class="dataset-info">
+                        <div class="dataset-category">Text Rendering Optimization</div>
+                        <h3 class="dataset-title">Text-Render-2M</h3>
+                        <p class="dataset-description">
                             Advancing text rendering quality through multi-instance optimization. 
                             Features dynamic template generation with contextual intelligence, 
                             supporting 1-3 text instances per poster with sophisticated font 
                             selection and style variations.
                         </p>
                         
-                        <div class="dataset-features-leonardo">
-                            <div class="feature-item-leonardo">
-                                <div class="feature-icon-leonardo">
-                                    <img src="/images/postercraft/icons/multi_instance.svg" alt="Multi-Instance Icon">
-                                </div>
-                                <div class="feature-content-leonardo">
+                        <div class="dataset-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔢</span>
+                                <div class="feature-content">
                                     <strong>Multi-Instance Rendering</strong>
                                     <span>1-3 text instances with dynamic positioning</span>
                                 </div>
                             </div>
-                            <div class="feature-item-leonardo">
-                                <div class="feature-icon-leonardo">
-                                    <img src="/images/postercraft/icons/template_generation.svg" alt="Template Generation Icon">
-                                </div>
-                                <div class="feature-content-leonardo">
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <div class="feature-content">
                                     <strong>Template Generation</strong>
                                     <span>Dynamic layouts with random string generation</span>
                                 </div>
                             </div>
-                            <div class="feature-item-leonardo">
-                                <div class="feature-icon-leonardo">
-                                     <img src="/images/postercraft/icons/font_selection.svg" alt="Font Selection Icon">
-                                </div>
-                                <div class="feature-content-leonardo">
+                            <div class="feature-item">
+                                <span class="feature-icon">✍️</span>
+                                <div class="feature-content">
                                     <strong>Font Selection & Style</strong>
                                     <span>Standard and artistic fonts with style variations</span>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="dataset-stats-leonardo">
-                            <div class="stat-item-leonardo">
-                                <span class="stat-number-leonardo">2M</span>
-                                <span class="stat-label-leonardo">Text Instances</span>
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2M</span>
+                                <span class="stat-label">Text Instances</span>
                             </div>
-                            <div class="stat-item-leonardo">
-                                <span class="stat-number-leonardo">100+</span>
-                                <span class="stat-label-leonardo">Font Styles</span>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Font Styles</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="dataset-visual-leonardo">
-                        <div class="visual-frame-leonardo text-render-frame-leonardo">
-                            <img src="/images/postercraft/datasets/text_render_showcase.png" alt="Text Rendering Showcase" class="showcase-image-leonardo">
-                             <div class="visual-glow-leonardo"></div>
+                    <div class="dataset-visual">
+                        <div class="visual-frame text-render-frame">
+                            <div class="sample-grid">
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_1.png" alt="Text Render Sample 1">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_2.png" alt="Text Render Sample 2">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_3.png" alt="Text Render Sample 3">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_4.png" alt="Text Render Sample 4">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_5.png" alt="Text Render Sample 5">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_6.png" alt="Text Render Sample 6">
+                                </div>
+                            </div>
+                            <div class="visual-glow"></div>
                         </div>
                     </div>
                 </div>

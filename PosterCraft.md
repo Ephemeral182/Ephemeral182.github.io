@@ -261,6 +261,20 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Shadow Walker</div>
                     </div>
                 </div>
+                                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Urban Art</div>
+                        <div class="gallery-poster-title">Street Expo</div>
+                    </div>
+                </div>
+                 <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Conceptual</div>
+                        <div class="gallery-poster-title">Future Visions</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 2 -->
@@ -293,6 +307,13 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Intricate Details</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo10.png" alt="Mysterious Hooded Figure">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Dark Fantasy</div>
+                        <div class="gallery-poster-title">Enigmatic Presence</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 3: Stack of images -->
@@ -323,27 +344,6 @@ title: PosterCraft - AI Poster Generation
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Mythical</div>
                         <div class="gallery-poster-title">Forest Guardian</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo10.png" alt="Mysterious Hooded Figure">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Dark Fantasy</div>
-                        <div class="gallery-poster-title">Enigmatic Presence</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Urban Art</div>
-                        <div class="gallery-poster-title">Street Expo</div>
-                    </div>
-                </div>
-                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Conceptual</div>
-                        <div class="gallery-poster-title">Future Visions</div>
                     </div>
                 </div>
             </div>

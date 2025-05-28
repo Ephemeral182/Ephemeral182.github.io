@@ -3752,29 +3752,30 @@
 
         .before-image {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1); /* 移除放大效果，保持原始大小 */
         }
 
         .after-image {
             opacity: 0;
-            transform: scale(1.05);
+            transform: scale(1); /* 移除放大效果，保持原始大小 */
         }
 
-        /* Hover效果 */
+        /* Hover效果 - 只改变透明度，不改变大小 */
         .comparison-card:hover .before-image {
             opacity: 0;
-            transform: scale(0.95);
+            transform: scale(1); /* 保持原始大小 */
         }
 
         .comparison-card:hover .after-image {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1); /* 保持原始大小 */
         }
 
-        /* 标签 */
+        /* 标签 - 移到右边 */
         .overlay-label {
             position: absolute;
             top: 1rem;
+            right: 1rem; /* 统一移到右边 */
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -3787,14 +3788,12 @@
         }
 
         .before-label {
-            left: 1rem;
             background: rgba(239, 68, 68, 0.8);
             color: white;
             opacity: 1;
         }
 
         .after-label {
-            right: 1rem;
             background: rgba(34, 197, 94, 0.8);
             color: white;
             opacity: 0;
@@ -3827,6 +3826,15 @@
 
         .comparison-card:hover .comparison-divider {
             opacity: 1;
+        }
+
+        /* 整体卡片hover效果 - 减少变形 */
+        .comparison-card:hover {
+            transform: translateY(-5px); /* 减少上移距离 */
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.5), /* 减少阴影强度 */
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 40px rgba(99, 102, 241, 0.2); /* 减少光晕强度 */
         }
 
         /* 文字高亮样式 */

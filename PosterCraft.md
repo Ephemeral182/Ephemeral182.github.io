@@ -261,20 +261,6 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Shadow Walker</div>
                     </div>
                 </div>
-                                <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Urban Art</div>
-                        <div class="gallery-poster-title">Street Expo</div>
-                    </div>
-                </div>
-                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Conceptual</div>
-                        <div class="gallery-poster-title">Future Visions</div>
-                    </div>
-                </div>
             </div>
             
             <!-- Column 2 -->

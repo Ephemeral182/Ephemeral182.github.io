@@ -380,8 +380,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo1.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo2.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo1_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo1_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -397,8 +397,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo3.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo4.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo2_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo2_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -414,8 +414,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo5.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo6.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo3_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo3_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -431,15 +431,15 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo7.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo8.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo4_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo4_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Grey's Anatomy Poster</h3>
-                        <p class="comparison-description">This striking monochromatic poster for <span class="text-highlight">"Grey's Anatomy"</span> presents five figures. Prominently centered is the title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, sans-serif capital letters with a subtly textured, slightly distressed effect, underlined by a thick, solid red bar running horizontally just below the title. Above the title, the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in a smaller, lighter weight, sans-serif font, also in white, positioned slightly below the red line. Information about the airing schedule is provided: <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span> in a smaller, condensed sans-serif font.</p>
+                        <p class="comparison-description">This striking monochromatic poster for <span class="text-highlight">"Grey's Anatomy"</span> presents five figures... Prominently centered is the title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, sans-serif capital letters... Above the title, the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in smaller font. Schedule information includes <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span>...</p>
                     </div>
                 </div>
             </div>

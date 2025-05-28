@@ -3829,6 +3829,28 @@
             opacity: 1;
         }
 
+        /* 文字高亮样式 */
+        .text-highlight {
+            color: #ef4444; /* 红色高亮 */
+            font-weight: 600;
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .text-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(45deg, #ef4444, #dc2626);
+            opacity: 0.6;
+        }
+
         /* 信息区域 */
         .comparison-info {
             padding: 1.2rem; /* 稍微减少padding以适应4列布局 */

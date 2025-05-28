@@ -2267,22 +2267,28 @@
         
         /* Workflow Stages */
         .workflow-stages {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 修改：强制4列布局 */
-            gap: 1.5rem; /* 修改：减小间隙 */
+            display: flex; /* 从 grid 修改为 flex */
+            /* grid-template-columns: repeat(4, 1fr); */ /* 此行不再需要，移除或注释掉 */
+            gap: 1.5rem; 
             margin-bottom: 5rem;
+            /* align-items: stretch; 是 flex 布局的默认值，会使卡片等高 */
         }
         
         .stage-card {
             background: rgba(255, 255, 255, 0.05); 
             border: 1px solid rgba(255, 255, 255, 0.1); 
             border-radius: 24px;
-            padding: 1.5rem; /* 修改：减小内边距 */
+            padding: 1.5rem; 
             transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
-            overflow: hidden;
+            overflow: hidden; 
             backdrop-filter: blur(15px); 
             cursor: pointer;
+            
+            flex: 1; /* 新增：使卡片在 flex 容器中平分宽度 */
+            
+            display: flex; 
+            flex-direction: column; 
         }
         
         .stage-card::before {

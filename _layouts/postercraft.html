@@ -2472,146 +2472,209 @@
             }
         }
 
-        /* Paper Showcase Section */
-        .paper-showcase-section {
-            padding: 6rem 0 4rem;
+        /* Logo Showcase Section */
+        .logo-showcase-section {
+            padding: 6rem 0;
             background: transparent;
             position: relative;
             overflow: hidden;
         }
 
-        .paper-showcase-container {
+        .logo-showcase-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Logo Showcase */
-        .logo-showcase {
-            display: flex;
+        .logo-main-display {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
             align-items: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
         }
 
-        .logo-container {
+        /* Logo主展示 */
+        .logo-frame {
             position: relative;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            aspect-ratio: 832 / 1216; /* 保持您logo的比例 */
+            max-width: 350px;
+            margin: 0 auto;
         }
 
         .main-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 24px;
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
             animation: logoFloat 4s ease-in-out infinite;
         }
 
-        .main-logo:hover {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.4);
-        }
-
-        .logo-glow {
+        .logo-glow-effect {
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
-            border-radius: 25px;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981);
+            border-radius: 32px;
             opacity: 0.3;
-            filter: blur(20px);
+            filter: blur(30px);
             z-index: -1;
-            animation: logoGlowPulse 3s ease-in-out infinite;
+            animation: logoGlow 6s ease-in-out infinite;
         }
 
-        .logo-text {
-            text-align: left;
+        .logo-sparkles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
         }
 
-        .logo-title {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #ffffff, #a5b4fc, #6366f1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .logo-sparkle {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: logoSparkle 3s ease-in-out infinite;
+            opacity: 0.8;
         }
 
-        .logo-subtitle {
-            font-size: 1.1rem;
-            color: #a1a1aa;
-            font-weight: 500;
+        .logo-sparkle-1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .logo-sparkle-2 {
+            top: 15%;
+            right: 15%;
+            animation-delay: 0.8s;
+        }
+
+        .logo-sparkle-3 {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 1.6s;
+        }
+
+        .logo-sparkle-4 {
+            bottom: 15%;
+            right: 10%;
+            animation-delay: 2.4s;
         }
 
         @keyframes logoFloat {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-15px) scale(1.02); }
         }
 
-        @keyframes logoGlowPulse {
+        @keyframes logoGlow {
             0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 0.6; transform: scale(1.05); }
         }
 
-        /* Paper Links Bar */
-        .paper-links-bar {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            background: rgba(255, 255, 255, 0.05);
+        @keyframes logoSparkle {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-10px) scale(1.3) rotate(180deg); 
+            }
+        }
+
+        /* Paper信息卡片 */
+        .paper-info-card {
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                rgba(139, 92, 246, 0.15) 25%, 
+                rgba(236, 72, 153, 0.1) 50%, 
+                rgba(245, 158, 11, 0.15) 75%, 
+                rgba(16, 185, 129, 0.1) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 32px;
+            padding: 3rem;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 1.5rem 2rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.4s both;
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top right, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
         }
 
         .paper-badge {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            display: inline-block;
             background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            padding: 0.75rem 1.25rem;
-            border-radius: 15px;
             color: white;
-            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
             font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
             box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
         }
 
-        .badge-icon {
-            font-size: 1.1rem;
+        .paper-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
         }
 
-        .links-container {
-            display: flex;
+        .paper-subtitle {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* 链接按钮组 */
+        .paper-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
+            margin-bottom: 2.5rem;
         }
 
         .paper-link {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.75rem 1.25rem;
+            padding: 1rem 1.5rem;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
+            border-radius: 16px;
             color: #ffffff;
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
+            font-weight: 600;
             transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
         }
@@ -2632,192 +2695,150 @@
         }
 
         .paper-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .arxiv-link:hover {
+            background: rgba(255, 87, 51, 0.2);
+            border-color: rgba(255, 87, 51, 0.5);
+        }
+
+        .github-link:hover {
+            background: rgba(36, 41, 46, 0.8);
             border-color: rgba(255, 255, 255, 0.3);
         }
 
         .huggingface-link:hover {
-            background: rgba(255, 193, 7, 0.1);
-            border-color: rgba(255, 193, 7, 0.3);
-        }
-
-        .github-link:hover {
-            background: rgba(139, 92, 246, 0.1);
-            border-color: rgba(139, 92, 246, 0.3);
-        }
-
-        .arxiv-link:hover {
-            background: rgba(239, 68, 68, 0.1);
-            border-color: rgba(239, 68, 68, 0.3);
+            background: rgba(255, 204, 0, 0.2);
+            border-color: rgba(255, 204, 0, 0.5);
         }
 
         .video-link:hover {
-            background: rgba(34, 197, 94, 0.1);
-            border-color: rgba(34, 197, 94, 0.3);
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
         }
 
         .link-icon {
             font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .paper-link:hover .link-icon {
-            transform: scale(1.2);
-        }
-
-        .link-arrow {
-            font-size: 0.8rem;
-            opacity: 0.7;
-            transition: all 0.3s ease;
-        }
-
-        .paper-link:hover .link-arrow {
-            opacity: 1;
-            transform: translateX(3px);
-        }
-
-        /* Stats Showcase Bar */
-        .stats-showcase-bar {
             display: flex;
-            gap: 2rem;
-            background: linear-gradient(135deg, 
-                rgba(99, 102, 241, 0.1) 0%, 
-                rgba(139, 92, 246, 0.1) 25%, 
-                rgba(236, 72, 153, 0.1) 50%, 
-                rgba(245, 158, 11, 0.1) 75%, 
-                rgba(16, 185, 129, 0.1) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-            animation: fadeInUp 0.8s ease-out 0.6s both;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
         }
 
-        .stat-item-showcase {
+        /* 展示统计条 */
+        .showcase-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .stat-bar {
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .stat-item-showcase:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .stat-icon {
-            font-size: 2rem;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: iconPulse 2s ease-in-out infinite;
-        }
-
-        .stat-content {
-            text-align: left;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #ffffff, #a5b4fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
         }
 
         .stat-label {
-            font-size: 0.85rem;
-            color: #a1a1aa;
-            font-weight: 500;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #a5b4fc;
+            min-width: 120px;
         }
 
-        @keyframes iconPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+        .stat-progress {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .stat-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            border-radius: 4px;
+            transition: width 2s ease;
+            animation: statFillAnimation 3s ease-in-out infinite;
+        }
+
+        .stat-value {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #ffffff;
+            min-width: 40px;
+            text-align: right;
+        }
+
+        @keyframes statFillAnimation {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
         }
 
         /* 响应式设计 */
         @media (max-width: 1024px) {
-            .logo-showcase {
-                flex-direction: column;
-                text-align: center;
-                gap: 1.5rem;
-            }
-            
-            .logo-text {
+            .logo-main-display {
+                grid-template-columns: 1fr;
+                gap: 3rem;
                 text-align: center;
             }
             
-            .paper-links-bar {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1.5rem;
+            .logo-frame {
+                max-width: 280px;
             }
             
-            .links-container {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .stats-showcase-bar {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.5rem;
+            .paper-info-card {
+                padding: 2.5rem;
             }
         }
 
         @media (max-width: 768px) {
-            .paper-showcase-section {
-                padding: 4rem 0 2rem;
+            .logo-showcase-section {
+                padding: 4rem 0;
             }
             
-            .main-logo {
-                width: 60px;
-                height: 60px;
+            .logo-frame {
+                max-width: 240px;
             }
             
-            .logo-title {
-                font-size: 2.5rem;
+            .paper-links {
+                grid-template-columns: 1fr;
             }
             
-            .links-container {
-                flex-direction: column;
-                width: 100%;
+            .paper-info-card {
+                padding: 2rem;
             }
             
-            .paper-link {
-                justify-content: center;
-            }
-            
-            .stats-showcase-bar {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .stat-item-showcase {
-                width: 100%;
-                max-width: 250px;
-                justify-content: center;
+            .paper-title {
+                font-size: 1.5rem;
             }
         }
-    </style>
-</head>
-<body>
-    <!-- 背景效果 -->
-    <div class="bg-gradient"></div>
-    <div class="bg-effects">
-        <div class="glow-orb"></div>
-        <div class="glow-orb"></div>
+
+        @media (max-width: 480px) {
+            .logo-frame {
+                max-width: 200px;
+            }
+            
+            .paper-info-card {
+                padding: 1.5rem;
+            }
+            
+            .stat-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .stat-label {
+                min-width: auto;
+            }
+        }
     </style>
 </head>
 <body>

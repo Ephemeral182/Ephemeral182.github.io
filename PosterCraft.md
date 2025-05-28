@@ -23,92 +23,6 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
-<!-- 新增：Paper Showcase Section - 在hero之前 -->
-<div class="paper-showcase-section">
-    <div class="paper-showcase-container">
-        <!-- Logo展示 -->
-        <div class="logo-showcase">
-            <div class="logo-container">
-                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo">
-                <div class="logo-glow"></div>
-            </div>
-            <div class="logo-text">
-                <h1 class="logo-title">PosterCraft</h1>
-                <p class="logo-subtitle">AI-Powered Poster Generation</p>
-            </div>
-        </div>
-        
-        <!-- Paper Links Bar -->
-        <div class="paper-links-bar">
-            <div class="paper-badge">
-                <span class="badge-icon">📄</span>
-                <span class="badge-text">Research Paper</span>
-            </div>
-            
-            <div class="links-container">
-                <a href="#" class="paper-link huggingface-link">
-                    <div class="link-icon">🤗</div>
-                    <span class="link-text">Hugging Face</span>
-                    <div class="link-arrow">→</div>
-                </a>
-                
-                <a href="#" class="paper-link github-link">
-                    <div class="link-icon">⚡</div>
-                    <span class="link-text">GitHub</span>
-                    <div class="link-arrow">→</div>
-                </a>
-                
-                <a href="#" class="paper-link arxiv-link">
-                    <div class="link-icon">📚</div>
-                    <span class="link-text">arXiv</span>
-                    <div class="link-arrow">→</div>
-                </a>
-                
-                <a href="#" class="paper-link video-link">
-                    <div class="link-icon">🎥</div>
-                    <span class="link-text">Video</span>
-                    <div class="link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-        
-        <!-- Stats Bar -->
-        <div class="stats-showcase-bar">
-            <div class="stat-item-showcase">
-                <div class="stat-icon">⭐</div>
-                <div class="stat-content">
-                    <div class="stat-number">2.5K+</div>
-                    <div class="stat-label">GitHub Stars</div>
-                </div>
-            </div>
-            
-            <div class="stat-item-showcase">
-                <div class="stat-icon">📥</div>
-                <div class="stat-content">
-                    <div class="stat-number">15K+</div>
-                    <div class="stat-label">Downloads</div>
-                </div>
-            </div>
-            
-            <div class="stat-item-showcase">
-                <div class="stat-icon">🎨</div>
-                <div class="stat-content">
-                    <div class="stat-number">50K+</div>
-                    <div class="stat-label">Posters Created</div>
-                </div>
-            </div>
-            
-            <div class="stat-item-showcase">
-                <div class="stat-icon">🏆</div>
-                <div class="stat-content">
-                    <div class="stat-number">Top 1%</div>
-                    <div class="stat-label">AI Research</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="hero">
     <div class="hero-content">
         <div class="hero-badge">🚀 AI-Powered Creative Platform</div>
@@ -152,6 +66,77 @@ title: PosterCraft - AI Poster Generation
             <div class="testimonial-author">
                 <strong>Sixiang Chen</strong>
                 <span>AI Research Scientist, HKUST(GZ)</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 新增：Logo展示区域 -->
+<div class="logo-showcase-section">
+    <div class="logo-showcase-container">
+        <div class="logo-main-display">
+            <!-- Logo主展示 -->
+            <div class="logo-frame">
+                <div class="logo-glow-effect"></div>
+                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo">
+                <div class="logo-sparkles">
+                    <span class="logo-sparkle logo-sparkle-1">✨</span>
+                    <span class="logo-sparkle logo-sparkle-2">⭐</span>
+                    <span class="logo-sparkle logo-sparkle-3">💫</span>
+                    <span class="logo-sparkle logo-sparkle-4">🌟</span>
+                </div>
+            </div>
+            
+            <!-- Paper信息卡片 -->
+            <div class="paper-info-card">
+                <div class="paper-badge">📄 Research Paper</div>
+                <h3 class="paper-title">PosterCraft: Aesthetic Poster Generation</h3>
+                <p class="paper-subtitle">Advanced AI-Powered Creative Platform for Professional Poster Design</p>
+                
+                <!-- 链接按钮组 -->
+                <div class="paper-links">
+                    <a href="#" class="paper-link arxiv-link">
+                        <div class="link-icon">📚</div>
+                        <span>arXiv</span>
+                    </a>
+                    <a href="#" class="paper-link github-link">
+                        <div class="link-icon">💻</div>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="paper-link huggingface-link">
+                        <div class="link-icon">🤗</div>
+                        <span>HuggingFace</span>
+                    </a>
+                    <a href="#" class="paper-link video-link">
+                        <div class="link-icon">🎥</div>
+                        <span>Demo Video</span>
+                    </a>
+                </div>
+                
+                <!-- 展示统计条 -->
+                <div class="showcase-stats">
+                    <div class="stat-bar">
+                        <div class="stat-label">Model Performance</div>
+                        <div class="stat-progress">
+                            <div class="stat-fill" data-percentage="95"></div>
+                        </div>
+                        <div class="stat-value">95%</div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label">User Satisfaction</div>
+                        <div class="stat-progress">
+                            <div class="stat-fill" data-percentage="98"></div>
+                        </div>
+                        <div class="stat-value">98%</div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label">Generation Speed</div>
+                        <div class="stat-progress">
+                            <div class="stat-fill" data-percentage="92"></div>
+                        </div>
+                        <div class="stat-value">92%</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

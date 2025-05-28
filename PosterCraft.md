@@ -237,7 +237,7 @@ title: PosterCraft - AI Poster Generation
             <p class="gallery-main-subtitle">Discover endless creative possibilities across diverse artistic styles and themes</p>
         </div>
         
-        <!-- 第一行：大中小的混合布局 -->
+        <!-- 第一行：左大图，右侧三小图堆叠 -->
         <div class="gallery-masonry-row gallery-row-one">
             <div class="gallery-left-group">
                 <div class="gallery-poster-item gallery-size-main">
@@ -256,7 +256,6 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Digital Guardian</div>
                     </div>
                 </div>
-                <!-- 新增图片以填补第一行右侧空白 -->
                 <div class="gallery-poster-item gallery-size-sub">
                     <img src="/images/postercraft/demo/demo6.png" alt="Abstract Cosmic Swirl">
                     <div class="gallery-poster-overlay">
@@ -264,19 +263,18 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Cosmic Swirl</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item gallery-size-sub">
+                    <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Fantasy</div>
+                        <div class="gallery-poster-title">Crystal Bloom</div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <!-- 第二行：不同的尺寸组合 - 增加到五个小图以提高密度 -->
+        <!-- 第二行：五个小图横向排列 -->
         <div class="gallery-masonry-row gallery-row-two">
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Abstract</div>
-                    <div class="gallery-poster-title">Crystal Bloom</div>
-                </div>
-            </div>
-            
             <div class="gallery-poster-item gallery-size-sub">
                 <img src="/images/postercraft/demo/demo4.png" alt="Motorcycle Design">
                 <div class="gallery-poster-overlay">
@@ -284,7 +282,6 @@ title: PosterCraft - AI Poster Generation
                     <div class="gallery-poster-title">Speed Machine</div>
                 </div>
             </div>
-            
             <div class="gallery-poster-item gallery-size-sub">
                 <img src="/images/postercraft/demo/demo5.png" alt="Monochrome Portrait">
                 <div class="gallery-poster-overlay">
@@ -292,7 +289,6 @@ title: PosterCraft - AI Poster Generation
                     <div class="gallery-poster-title">Shadow Walker</div>
                 </div>
             </div>
-            <!-- 新增的两个小图 -->
             <div class="gallery-poster-item gallery-size-sub">
                 <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Forest Spirit">
                 <div class="gallery-poster-overlay">
@@ -305,6 +301,38 @@ title: PosterCraft - AI Poster Generation
                 <div class="gallery-poster-overlay">
                     <div class="gallery-poster-category">Sci-Fi Art</div>
                     <div class="gallery-poster-title">Crystal Entity</div>
+                </div>
+            </div>
+            <div class="gallery-poster-item gallery-size-sub">
+                <img src="/images/postercraft/demo/demo9.png" alt="Detailed Character Close-up">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Character</div>
+                    <div class="gallery-poster-title">Intricate Detail</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 新增第三行：一大两小横向排列 -->
+        <div class="gallery-masonry-row gallery-row-three">
+            <div class="gallery-poster-item gallery-size-main">
+                <img src="/images/postercraft/demo/demo10.png" alt="Mysterious Hooded Figure">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Dark Fantasy</div>
+                    <div class="gallery-poster-title">Enigmatic Presence</div>
+                </div>
+            </div>
+            <div class="gallery-poster-item gallery-size-sub">
+                <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Urban Art</div>
+                    <div class="gallery-poster-title">Street Expo</div>
+                </div>
+            </div>
+            <div class="gallery-poster-item gallery-size-sub">
+                <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Conceptual</div>
+                    <div class="gallery-poster-title">Future Visions</div>
                 </div>
             </div>
         </div>

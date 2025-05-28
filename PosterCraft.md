@@ -229,3 +229,111 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
+<div class="platform-gallery-showcase" id="gallery">
+    <div class="gallery-showcase-container">
+        <div class="gallery-header">
+            <h2 class="gallery-main-title">Platform Gallery</h2>
+            <div class="gallery-emoji">🎭</div>
+            <p class="gallery-main-subtitle">Discover endless creative possibilities across diverse artistic styles and themes</p>
+        </div>
+        
+        <!-- 第一行：大中小的混合布局 -->
+        <div class="gallery-masonry-row gallery-row-one">
+            <div class="gallery-poster-item gallery-size-large">
+                <img src="/images/postercraft/demo/demo1.png" alt="Cyberpunk Character Portrait">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Cyberpunk</div>
+                    <div class="gallery-poster-title">Neon Dreams</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-medium">
+                <img src="/images/postercraft/demo/demo2.png" alt="Futuristic Warrior">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Sci-Fi</div>
+                    <div class="gallery-poster-title">Digital Guardian</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-large">
+                <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Abstract</div>
+                    <div class="gallery-poster-title">Crystal Bloom</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-small">
+                <img src="/images/postercraft/demo/demo4.png" alt="Motorcycle Design">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Vehicle</div>
+                    <div class="gallery-poster-title">Speed Machine</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-medium">
+                <img src="/images/postercraft/demo/demo5.png" alt="Monochrome Portrait">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Portrait</div>
+                    <div class="gallery-poster-title">Shadow Walker</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：不同的尺寸组合 -->
+        <div class="gallery-masonry-row gallery-row-two">
+            <div class="gallery-poster-item gallery-size-small">
+                <img src="/images/postercraft/demo/demo6.png" alt="Cosmic Scene">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Space</div>
+                    <div class="gallery-poster-title">Cosmic Dance</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-large">
+                <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Landscape">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Fantasy</div>
+                    <div class="gallery-poster-title">Mystic Realm</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-medium">
+                <img src="/images/postercraft/demo/demo8.png" alt="Urban Architecture">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Architecture</div>
+                    <div class="gallery-poster-title">Urban Geometry</div>
+                </div>
+            </div>
+            
+            <div class="gallery-poster-item gallery-size-large">
+                <img src="/images/postercraft/demo/demo9.png" alt="Nature Abstract">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Nature</div>
+                    <div class="gallery-poster-title">Organic Flow</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 统计信息 -->
+        <div class="gallery-stats-section">
+            <div class="gallery-stat-item">
+                <div class="gallery-stat-number">50K+</div>
+                <div class="gallery-stat-label">Generated Posters</div>
+            </div>
+            <div class="gallery-stat-item">
+                <div class="gallery-stat-number">25+</div>
+                <div class="gallery-stat-label">Art Styles</div>
+            </div>
+            <div class="gallery-stat-item">
+                <div class="gallery-stat-number">99.9%</div>
+                <div class="gallery-stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="gallery-stat-item">
+                <div class="gallery-stat-number">24/7</div>
+                <div class="gallery-stat-label">AI Availability</div>
+            </div>
+        </div>
+    </div>
+</div>
+

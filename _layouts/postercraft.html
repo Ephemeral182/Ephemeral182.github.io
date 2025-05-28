@@ -1769,46 +1769,61 @@
             66% { transform: translateY(4px) rotate(-3deg); }
         }
         
-        /* Gallery Masonry Layout - 修改为左大右小的矩形布局 */
+        /* Gallery Masonry Layout - 修改以支持新的砌体效果 */
         .gallery-masonry-row {
             display: flex;
-            justify-content: center;
-            align-items: flex-start; /* 改为顶部对齐 */
+            align-items: flex-start; 
             gap: 1.5rem;
             margin-bottom: 2rem;
-            max-width: 1000px; /* 限制最大宽度 */
+            max-width: 1000px; 
             margin-left: auto;
             margin-right: auto;
         }
         
-        /* 新增：左右分组容器 */
         .gallery-left-group {
-            display: flex;
-            justify-content: center;
+            flex-basis: 320px; /* 左侧主图区域的宽度 */
+            flex-shrink: 0; /* 防止被压缩 */
         }
         
         .gallery-right-group {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            justify-content: space-between;
+            flex-grow: 1; /* 占据剩余空间 */
+            display: block; /* 配合 column-count 使用 */
+            column-count: 2; /* 右侧区域分为2列 */
+            column-gap: 1.5rem;
         }
         
-        /* 重新定义尺寸 - 基于320px基准宽度计算 */
+        .gallery-poster-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 
+                0 10px 40px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            /* aspect-ratio: 832 / 1216; */ /* 移除固定的宽高比 */
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
+            margin-bottom: 1.5rem; /* 项目之间的垂直间距 */
+            break-inside: avoid-column; /* 防止项目在列中被切割 */
+            width: 100%; /* 项目宽度充满其容器 (列或左侧组) */
+        }
+        
+        .gallery-poster-item img {
+            display: block; /* 移除图片下方的额外空白 */
+            width: 100%;
+            height: auto; /* 关键：让图片高度自适应其内容宽高比 */
+            object-fit: cover; /* 图片将覆盖整个区域，保持宽高比，可能会裁剪 */
+            filter: brightness(0.9) contrast(1.1); /* 已有样式 */
+        }
+        
+        /* 原有的 gallery-size-main 和 gallery-size-sub 的固定宽度不再强制，由父容器和布局决定 */
         .gallery-size-main {
-            width: 320px; /* 主图宽度 */
+            /* width: 320px; /* 由 .gallery-left-group 的 flex-basis 控制 */
         }
         
         .gallery-size-sub {
-            width: 160px; /* 副图宽度，正好是主图的一半 */
-        }
-        
-        /* 移除原有的large/medium/small尺寸定义，使用新的main/sub */
-        .gallery-size-large,
-        .gallery-size-medium, 
-        .gallery-size-small {
-            /* 保留作为备用，但主要使用main/sub */
-            width: 200px;
+            /* width: 160px; /* 在 .gallery-right-group 中，宽度将是列宽的100% */
         }
         
         /* 响应式设计 */
@@ -1824,54 +1839,38 @@
         
         @media (max-width: 1024px) {
             .gallery-masonry-row {
-                gap: 1rem;
                 max-width: 800px;
-            }
-            
-            .gallery-size-main {
-                width: 240px;
-            }
-            
-            .gallery-size-sub {
-                width: 120px;
-            }
-            
-            .gallery-right-group {
                 gap: 1rem;
+            }
+            .gallery-left-group {
+                flex-basis: 280px; /* 调整左侧宽度 */
             }
         }
         
         @media (max-width: 768px) {
             .gallery-masonry-row {
-                flex-direction: column;
+                flex-direction: column; /* 在较小屏幕上堆叠左右区域 */
                 align-items: center;
-                gap: 2rem;
+                gap: 1rem; /* 堆叠时的间距 */
             }
-            
+            .gallery-left-group {
+                flex-basis: auto; 
+                width: 100%; 
+                max-width: 320px; /* 限制堆叠时的最大宽度 */
+                margin-bottom: 1.5rem; /* 与下方右侧区域的间距 */
+            }
             .gallery-right-group {
-                flex-direction: row;
-                gap: 1rem;
-                justify-content: center;
-            }
-            
-            .gallery-size-main {
-                width: 200px;
-            }
-            
-            .gallery-size-sub {
-                width: 140px;
+                width: 100%;
+                column-count: 2; /* 堆叠后右侧区域仍然可以保持2列，如果空间允许 */
             }
         }
         
         @media (max-width: 480px) {
-            .gallery-size-main,
-            .gallery-size-sub {
-                width: 180px;
+            .gallery-left-group {
+                 max-width: 280px; /* 进一步限制 */
             }
-            
             .gallery-right-group {
-                flex-direction: column;
-                gap: 1.5rem;
+                column-count: 1; /* 在非常小的屏幕上，右侧区域变为单列 */
             }
         }
         

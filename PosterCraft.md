@@ -237,102 +237,67 @@ title: PosterCraft - AI Poster Generation
             <p class="gallery-main-subtitle">Discover endless creative possibilities across diverse artistic styles and themes</p>
         </div>
         
-        <!-- 第一行：左大图，右侧三小图堆叠 -->
-        <div class="gallery-masonry-row gallery-row-one">
+        <div class="gallery-masonry-row">
             <div class="gallery-left-group">
-                <div class="gallery-poster-item gallery-size-main">
-                    <img src="/images/postercraft/demo/demo1.png" alt="Cyberpunk Character Portrait">
+                <!-- 主图 - 左侧 -->
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo1.png" alt="Transformers One Poster Style">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Cyberpunk</div>
-                        <div class="gallery-poster-title">Neon Dreams</div>
+                        <div class="gallery-poster-category">Movies</div>
+                        <div class="gallery-poster-title">Transformers One</div>
                     </div>
                 </div>
             </div>
             <div class="gallery-right-group">
-                <div class="gallery-poster-item gallery-size-sub">
-                    <img src="/images/postercraft/demo/demo2.png" alt="Futuristic Warrior">
+                <!-- 右侧图片组 - 将被砌体布局排列 -->
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo2.png" alt="Sonic Movie Poster Style">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi</div>
-                        <div class="gallery-poster-title">Digital Guardian</div>
+                        <div class="gallery-poster-category">Movies</div>
+                        <div class="gallery-poster-title">Sonic the Hedgehog</div>
                     </div>
                 </div>
-                <div class="gallery-poster-item gallery-size-sub">
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Art</div>
+                        <div class="gallery-poster-title">Crystal Lotus</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo4.png" alt="Motorcycle Design">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Vehicle</div>
+                        <div class="gallery-poster-title">Speed Machine</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo5.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
+                    </div>
+                </div>
+                 <div class="gallery-poster-item">
                     <img src="/images/postercraft/demo/demo6.png" alt="Abstract Cosmic Swirl">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Abstract</div>
                         <div class="gallery-poster-title">Cosmic Swirl</div>
                     </div>
                 </div>
-                <div class="gallery-poster-item gallery-size-sub">
-                    <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
+                 <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Forest Spirit">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Fantasy</div>
-                        <div class="gallery-poster-title">Crystal Bloom</div>
+                        <div class="gallery-poster-title">Forest Spirit</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- 第二行：五个小图横向排列 -->
-        <div class="gallery-masonry-row gallery-row-two">
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo4.png" alt="Motorcycle Design">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Vehicle</div>
-                    <div class="gallery-poster-title">Speed Machine</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo5.png" alt="Monochrome Portrait">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Portrait</div>
-                    <div class="gallery-poster-title">Shadow Walker</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Forest Spirit">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Fantasy</div>
-                    <div class="gallery-poster-title">Forest Spirit</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo8.png" alt="Sci-Fi Crystal Entity">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Sci-Fi Art</div>
-                    <div class="gallery-poster-title">Crystal Entity</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo9.png" alt="Detailed Character Close-up">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Character</div>
-                    <div class="gallery-poster-title">Intricate Detail</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 新增第三行：一大两小横向排列 -->
-        <div class="gallery-masonry-row gallery-row-three">
-            <div class="gallery-poster-item gallery-size-main">
-                <img src="/images/postercraft/demo/demo10.png" alt="Mysterious Hooded Figure">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Dark Fantasy</div>
-                    <div class="gallery-poster-title">Enigmatic Presence</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Urban Art</div>
-                    <div class="gallery-poster-title">Street Expo</div>
-                </div>
-            </div>
-            <div class="gallery-poster-item gallery-size-sub">
-                <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
-                <div class="gallery-poster-overlay">
-                    <div class="gallery-poster-category">Conceptual</div>
-                    <div class="gallery-poster-title">Future Visions</div>
+                 <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo8.png" alt="Sci-Fi Crystal Entity">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Sci-Fi Art</div>
+                        <div class="gallery-poster-title">Crystal Entity</div>
+                    </div>
                 </div>
             </div>
         </div>

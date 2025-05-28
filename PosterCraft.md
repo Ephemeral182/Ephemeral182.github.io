@@ -290,7 +290,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🎨</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">High-quality Poster Fine-tuning</h3>
+                        <h3 class="stage-title">high-quality poster fine-tuning</h3>
                         <div class="stage-subtitle">Stage 2 • Visual Enhancement</div>
                     </div>
                 </div>
@@ -312,9 +312,6 @@ title: PosterCraft - AI Poster Generation
                 </div>
                 <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
                 <div class="stage-tech">
-                    <span class="tech-tag">Reinforcement Learning</span>
-                    <span class="tech-tag">Aesthetic Scoring</span>
-                    <span class="tech-tag">Content Alignment</span>
                 </div>
             </div>
             

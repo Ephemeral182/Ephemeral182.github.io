@@ -248,6 +248,13 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
                 <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/placeholder1.png" alt="Placeholder Image 1">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Category</div>
+                        <div class="gallery-poster-title">Placeholder Title 1</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
                     <img src="/images/postercraft/demo/demo11.png" alt="Abstract Fluid Art">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Digital Art</div>
@@ -270,6 +277,20 @@ title: PosterCraft - AI Poster Generation
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Portraiture</div>
                         <div class="gallery-poster-title">Golden Elegance</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/placeholder2.png" alt="Placeholder Image 2">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Category</div>
+                        <div class="gallery-poster-title">Placeholder Title 2</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/placeholder3.png" alt="Placeholder Image 3">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Category</div>
+                        <div class="gallery-poster-title">Placeholder Title 3</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">

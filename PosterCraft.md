@@ -425,59 +425,23 @@ title: PosterCraft - AI Poster Generation
                     
                     <div class="dataset-visual">
                         <div class="visual-frame hq-poster-frame">
-                            <!-- 新的三组mask展示布局 -->
-                            <div class="mask-showcase-grid">
-                                <!-- 第一组 -->
-                                <div class="mask-group">
-                                    <div class="mask-row">
-                                        <div class="mask-item original">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_image.png" alt="Original Poster">
-                                            <div class="mask-label">Original</div>
-                                        </div>
-                                        <div class="mask-item large-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_large.png" alt="Large Mask">
-                                            <div class="mask-label">Large Mask</div>
-                                        </div>
-                                        <div class="mask-item minor-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_minor.png" alt="Minor Mask">
-                                            <div class="mask-label">Minor Mask</div>
-                                        </div>
-                                    </div>
+                            <div class="poster-showcase">
+                                <div class="poster-item featured">
+                                    <img src="/images/postercraft/datasets/hq_poster_main.png" alt="Featured HQ Poster">
+                                    <div class="quality-badge">HQ</div>
                                 </div>
-                                
-                                <!-- 第二组 -->
-                                <div class="mask-group">
-                                    <div class="mask-row">
-                                        <div class="mask-item original">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_image.png" alt="Original Poster">
-                                            <div class="mask-label">Original</div>
-                                        </div>
-                                        <div class="mask-item large-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_large.png" alt="Large Mask">
-                                            <div class="mask-label">Large Mask</div>
-                                        </div>
-                                        <div class="mask-item minor-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_minor.png" alt="Minor Mask">
-                                            <div class="mask-label">Minor Mask</div>
-                                        </div>
+                                <div class="poster-grid-small">
+                                    <div class="poster-mini">
+                                        <img src="images/postercraft/dataset/sft_data/demo1.png" alt="HQ Poster 1">
                                     </div>
-                                </div>
-                                
-                                <!-- 第三组 -->
-                                <div class="mask-group">
-                                    <div class="mask-row">
-                                        <div class="mask-item original">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_image.png" alt="Original Poster">
-                                            <div class="mask-label">Original</div>
-                                        </div>
-                                        <div class="mask-item large-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_large.png" alt="Large Mask">
-                                            <div class="mask-label">Large Mask</div>
-                                        </div>
-                                        <div class="mask-item minor-mask">
-                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_minor.png" alt="Minor Mask">
-                                            <div class="mask-label">Minor Mask</div>
-                                        </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_2.png" alt="HQ Poster 2">
+                                    </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_3.png" alt="HQ Poster 3">
+                                    </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_4.png" alt="HQ Poster 4">
                                     </div>
                                 </div>
                             </div>

@@ -4077,22 +4077,21 @@
         .dataset-tab:hover::before {
             left: 100%;
         }
-
+        
         .dataset-tab:hover {
             transform: translateY(-3px);
-<!DOCTYPE html>
             border-color: rgba(99, 102, 241, 0.3);
             color: #e2e8f0;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
-
+        
         .dataset-tab.active {
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
             border-color: rgba(99, 102, 241, 0.4);
             color: #ffffff;
             box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
         }
-
+        
         .tab-icon {
             font-size: 1.2rem;
         }
@@ -4151,20 +4150,14 @@
         }
 
         .dataset-title {
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
         }
         
         body {

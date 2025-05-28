@@ -3986,7 +3986,7 @@
         }
 
         .ds-container {
-            max-width: 1000px;
+            max-width: 1000px; /* Adjusted for better focus */
             margin: 0 auto;
             padding: 0 1rem;
             position: relative;
@@ -4002,16 +4002,13 @@
             font-size: clamp(3rem, 7vw, 5rem);
             font-weight: 900;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg,
-                #8b5cf6 0%, /* Purple */
-                #ec4899 30%, /* Pink */
-                #f59e0b 60%, /* Orange */
-                #10b981 100%); /* Teal */
+            background: linear-gradient(135deg, 
+                #8b5cf6 0%, #ec4899 30%, #f59e0b 60%, #10b981 100%);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: gradientShift 5s ease-in-out infinite;
+            animation: gradientShift 5s ease-in-out infinite; /* Reusing existing animation */
             letter-spacing: -0.02em;
             line-height: 1.1;
         }
@@ -4019,7 +4016,7 @@
         .ds-emoji {
             font-size: 2.5rem;
             display: inline-block;
-            animation: emojiFloat 3s ease-in-out infinite;
+            animation: emojiFloat 3s ease-in-out infinite; /* Reusing existing animation */
         }
 
         .ds-subtitle {
@@ -4034,7 +4031,7 @@
 
         .ds-carousel-wrapper {
             position: relative;
-            background: rgba(15, 23, 42, 0.7);
+            background: rgba(15, 23, 42, 0.7); /* Dark, slightly transparent background */
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
             padding: 2rem;
@@ -4045,11 +4042,11 @@
         .ds-carousel {
             position: relative;
             overflow: hidden;
-            border-radius: 16px;
+            border-radius: 16px; /* Rounded corners for the content area */
         }
 
         .ds-item {
-            display: none;
+            display: none; /* Hidden by default, JS will manage visibility */
             flex-direction: column;
             align-items: center;
             text-align: center;
@@ -4068,7 +4065,7 @@
         .ds-image-area {
             position: relative;
             width: 100%;
-            max-width: 800px;
+            max-width: 800px; /* Control max image width */
             margin-bottom: 1.5rem;
             border-radius: 16px;
             overflow: hidden;
@@ -4080,7 +4077,7 @@
             height: auto;
             display: block;
             object-fit: cover;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 9; /* Common aspect ratio for previews */
         }
 
         .ds-image-caption {
@@ -4124,11 +4121,11 @@
             transform: translateY(-50%);
             display: flex;
             justify-content: space-between;
-            pointer-events: none;
+            pointer-events: none; /* Allow clicks on content behind if needed */
         }
 
         .ds-controls button {
-            pointer-events: all;
+            pointer-events: all; /* Ensure buttons are clickable */
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #fff;
@@ -4167,6 +4164,7 @@
             box-shadow: 0 0 10px rgba(255,255,255,0.5);
         }
 
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .ds-container {
                 max-width: 90%;
@@ -4191,6 +4189,8 @@
                 padding: 0.8rem;
             }
             .ds-controls {
+                /* Hide side controls on smaller screens, rely on dots/swipe or auto */
+                /* display: none;  Or adjust positioning */
                 left: 5px;
                 right: 5px;
             }
@@ -4303,98 +4303,6 @@
                 });
             }
         });
-
-        // Dataset Showcase Carousel
-        const dsCarousel = document.querySelector('.ds-carousel');
-        if (dsCarousel) {
-            const dsItems = dsCarousel.querySelectorAll('.ds-item');
-            const dsDotsContainer = document.querySelector('.ds-dots');
-            const dsPrevButton = document.querySelector('.ds-prev');
-            const dsNextButton = document.querySelector('.ds-next');
-            let currentDsItem = 0;
-            let dsInterval;
-
-            function showDsItem(index) {
-                dsItems.forEach((item, i) => {
-                    item.classList.remove('active');
-                    if (i === index) {
-                        item.classList.add('active');
-                    }
-                });
-                if (dsDotsContainer) {
-                    const dots = dsDotsContainer.querySelectorAll('.ds-dot');
-                    dots.forEach((dot, i) => {
-                        dot.classList.remove('active');
-                        if (i === index) {
-                            dot.classList.add('active');
-                        }
-                    });
-                }
-                currentDsItem = index;
-            }
-
-            function nextDsItem() {
-                let nextIndex = currentDsItem + 1;
-                if (nextIndex >= dsItems.length) {
-                    nextIndex = 0;
-                }
-                showDsItem(nextIndex);
-            }
-
-            function prevDsItem() {
-                let prevIndex = currentDsItem - 1;
-                if (prevIndex < 0) {
-                    prevIndex = dsItems.length - 1;
-                }
-                showDsItem(prevIndex);
-            }
-
-            function startDsCarousel() {
-                stopDsCarousel(); // Clear existing interval
-                dsInterval = setInterval(nextDsItem, 5000); // Change slide every 5 seconds
-            }
-
-            function stopDsCarousel() {
-                clearInterval(dsInterval);
-            }
-
-            if (dsItems.length > 0) {
-                // Create dots
-                if (dsDotsContainer) {
-                    dsItems.forEach((_, i) => {
-                        const dot = document.createElement('span');
-                        dot.classList.add('ds-dot');
-                        dot.addEventListener('click', () => {
-                            showDsItem(i);
-                            startDsCarousel(); // Restart interval on manual navigation
-                        });
-                        dsDotsContainer.appendChild(dot);
-                    });
-                }
-
-                showDsItem(0); // Show the first item initially
-                startDsCarousel();
-
-                if (dsPrevButton) {
-                    dsPrevButton.addEventListener('click', () => {
-                        prevDsItem();
-                        startDsCarousel(); // Restart interval
-                    });
-                }
-                if (dsNextButton) {
-                    dsNextButton.addEventListener('click', () => {
-                        nextDsItem();
-                        startDsCarousel(); // Restart interval
-                    });
-                }
-
-                const carouselWrapper = document.querySelector('.ds-carousel-wrapper');
-                if (carouselWrapper) {
-                    carouselWrapper.addEventListener('mouseenter', stopDsCarousel);
-                    carouselWrapper.addEventListener('mouseleave', startDsCarousel);
-                }
-            }
-        }
     </script>
 </body>
 </html>

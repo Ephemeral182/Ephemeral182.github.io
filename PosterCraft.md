@@ -229,70 +229,133 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
-<!-- 新增：Technical Overview Section -->
+<!-- 新增：Technical Overview Section - 全栏设计 -->
 <div class="technical-overview-section" id="overview">
     <div class="overview-container">
         <div class="overview-header">
-            <h2 class="overview-title">Technical Architecture</h2>
-            <div class="overview-emoji">🔬</div>
-            <p class="overview-subtitle">Discover the cutting-edge AI technology powering PosterCraft's creative engine</p>
+            <h2 class="overview-title">Technical Framework</h2>
+            <div class="overview-emoji">⚡</div>
+            <p class="overview-subtitle">A unified end-to-end approach for aesthetic poster generation through four critical optimization stages</p>
         </div>
         
-        <div class="framework-showcase">
+        <!-- 主要框架图展示 -->
+        <div class="framework-main-showcase">
             <div class="framework-image-container">
                 <div class="framework-image-wrapper">
                     <img src="/images/postercraft/overview/framework_fig_final/framework_fig_final.png" alt="PosterCraft Technical Framework" class="framework-image">
                     <div class="framework-glow"></div>
-                    <div class="framework-particles">
-                        <span class="particle particle-1">⚡</span>
-                        <span class="particle particle-2">🧠</span>
-                        <span class="particle particle-3">🎨</span>
-                        <span class="particle particle-4">✨</span>
+                    
+                    <!-- 交互式热点 -->
+                    <div class="framework-hotspots">
+                        <div class="hotspot hotspot-1" data-stage="1">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-number">1</div>
+                        </div>
+                        <div class="hotspot hotspot-2" data-stage="2">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-number">2</div>
+                        </div>
+                        <div class="hotspot hotspot-3" data-stage="3">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-number">3</div>
+                        </div>
+                        <div class="hotspot hotspot-4" data-stage="4">
+                            <div class="hotspot-pulse"></div>
+                            <div class="hotspot-number">4</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="framework-details">
-                <div class="detail-card detail-card-1">
-                    <div class="detail-icon">🤖</div>
-                    <h4 class="detail-title">AI-Powered Generation</h4>
-                    <p class="detail-description">Advanced diffusion models and large language models work in harmony to understand creative intent and generate stunning visual content.</p>
-                </div>
-                
-                <div class="detail-card detail-card-2">
-                    <div class="detail-icon">🎯</div>
-                    <h4 class="detail-title">Intelligent Optimization</h4>
-                    <p class="detail-description">Multi-stage refinement process ensures optimal aesthetic quality through iterative enhancement and style adaptation.</p>
-                </div>
-                
-                <div class="detail-card detail-card-3">
-                    <div class="detail-icon">⚡</div>
-                    <h4 class="detail-title">Real-time Processing</h4>
-                    <p class="detail-description">Optimized inference pipeline delivers high-quality results in seconds, making creativity instantaneous and seamless.</p>
                 </div>
             </div>
         </div>
         
-        <div class="tech-stats">
-            <div class="tech-stat-item">
-                <div class="tech-stat-number">4</div>
-                <div class="tech-stat-label">AI Models</div>
-                <div class="tech-stat-desc">Integrated</div>
+        <!-- 四个阶段的详细展示 -->
+        <div class="workflow-stages">
+            <div class="stage-card stage-1 active" data-stage="1">
+                <div class="stage-header">
+                    <div class="stage-icon">📝</div>
+                    <div class="stage-info">
+                        <h3 class="stage-title">Text Rendering Optimization</h3>
+                        <div class="stage-subtitle">Stage 1 • Scalable Foundation</div>
+                    </div>
+                </div>
+                <p class="stage-description">Optimizes text rendering quality and layout structure to ensure readable and aesthetically pleasing typography that forms the foundation of professional poster design.</p>
+                <div class="stage-tech">
+                    <span class="tech-tag">OCR Enhancement</span>
+                    <span class="tech-tag">Layout Analysis</span>
+                    <span class="tech-tag">Typography Optimization</span>
+                </div>
             </div>
-            <div class="tech-stat-item">
-                <div class="tech-stat-number">< 10s</div>
-                <div class="tech-stat-label">Generation</div>
-                <div class="tech-stat-desc">Time</div>
+            
+            <div class="stage-card stage-2" data-stage="2">
+                <div class="stage-header">
+                    <div class="stage-icon">🎨</div>
+                    <div class="stage-info">
+                        <h3 class="stage-title">High-quality Poster Fine-tuning</h3>
+                        <div class="stage-subtitle">Stage 2 • Visual Enhancement</div>
+                    </div>
+                </div>
+                <p class="stage-description">Fine-tunes the overall visual quality through advanced diffusion models, enhancing color harmony, composition balance, and artistic coherence.</p>
+                <div class="stage-tech">
+                    <span class="tech-tag">Diffusion Models</span>
+                    <span class="tech-tag">Style Transfer</span>
+                    <span class="tech-tag">Color Harmonization</span>
+                </div>
             </div>
-            <div class="tech-stat-item">
-                <div class="tech-stat-number">4K</div>
-                <div class="tech-stat-label">Resolution</div>
-                <div class="tech-stat-desc">Support</div>
+            
+            <div class="stage-card stage-3" data-stage="3">
+                <div class="stage-header">
+                    <div class="stage-icon">🎯</div>
+                    <div class="stage-info">
+                        <h3 class="stage-title">Aesthetic-Text Reinforcement</h3>
+                        <div class="stage-subtitle">Stage 3 • Intelligent Alignment</div>
+                    </div>
+                </div>
+                <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
+                <div class="stage-tech">
+                    <span class="tech-tag">Reinforcement Learning</span>
+                    <span class="tech-tag">Aesthetic Scoring</span>
+                    <span class="tech-tag">Content Alignment</span>
+                </div>
             </div>
-            <div class="tech-stat-item">
-                <div class="tech-stat-number">99.9%</div>
-                <div class="tech-stat-label">Uptime</div>
-                <div class="tech-stat-desc">Reliability</div>
+            
+            <div class="stage-card stage-4" data-stage="4">
+                <div class="stage-header">
+                    <div class="stage-icon">🔄</div>
+                    <div class="stage-info">
+                        <h3 class="stage-title">Vision-Language Feedback</h3>
+                        <div class="stage-subtitle">Stage 4 • Iterative Refinement</div>
+                    </div>
+                </div>
+                <p class="stage-description">Multi-modal feedback mechanism that continuously refines the output through vision-language understanding, achieving superior aesthetic quality.</p>
+                <div class="stage-tech">
+                    <span class="tech-tag">Multi-modal Learning</span>
+                    <span class="tech-tag">Feedback Loop</span>
+                    <span class="tech-tag">Quality Refinement</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 核心优势展示 -->
+        <div class="framework-advantages">
+            <div class="advantage-item">
+                <div class="advantage-icon">🚀</div>
+                <h4 class="advantage-title">End-to-End Unified</h4>
+                <p class="advantage-desc">Complete workflow from text input to final poster generation</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">⚡</div>
+                <h4 class="advantage-title">Real-time Processing</h4>
+                <p class="advantage-desc">Optimized pipeline delivers results in seconds</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🎨</div>
+                <h4 class="advantage-title">Aesthetic Excellence</h4>
+                <p class="advantage-desc">Superior visual quality through multi-stage optimization</p>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🧠</div>
+                <h4 class="advantage-title">AI-Powered Intelligence</h4>
+                <p class="advantage-desc">Advanced models ensure professional-grade results</p>
             </div>
         </div>
     </div>

@@ -229,6 +229,75 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
+<!-- 新增：Technical Overview Section -->
+<div class="technical-overview-section" id="overview">
+    <div class="overview-container">
+        <div class="overview-header">
+            <h2 class="overview-title">Technical Architecture</h2>
+            <div class="overview-emoji">🔬</div>
+            <p class="overview-subtitle">Discover the cutting-edge AI technology powering PosterCraft's creative engine</p>
+        </div>
+        
+        <div class="framework-showcase">
+            <div class="framework-image-container">
+                <div class="framework-image-wrapper">
+                    <img src="/images/postercraft/overview/framework_fig_final/framework_fig_final.png" alt="PosterCraft Technical Framework" class="framework-image">
+                    <div class="framework-glow"></div>
+                    <div class="framework-particles">
+                        <span class="particle particle-1">⚡</span>
+                        <span class="particle particle-2">🧠</span>
+                        <span class="particle particle-3">🎨</span>
+                        <span class="particle particle-4">✨</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="framework-details">
+                <div class="detail-card detail-card-1">
+                    <div class="detail-icon">🤖</div>
+                    <h4 class="detail-title">AI-Powered Generation</h4>
+                    <p class="detail-description">Advanced diffusion models and large language models work in harmony to understand creative intent and generate stunning visual content.</p>
+                </div>
+                
+                <div class="detail-card detail-card-2">
+                    <div class="detail-icon">🎯</div>
+                    <h4 class="detail-title">Intelligent Optimization</h4>
+                    <p class="detail-description">Multi-stage refinement process ensures optimal aesthetic quality through iterative enhancement and style adaptation.</p>
+                </div>
+                
+                <div class="detail-card detail-card-3">
+                    <div class="detail-icon">⚡</div>
+                    <h4 class="detail-title">Real-time Processing</h4>
+                    <p class="detail-description">Optimized inference pipeline delivers high-quality results in seconds, making creativity instantaneous and seamless.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-stats">
+            <div class="tech-stat-item">
+                <div class="tech-stat-number">4</div>
+                <div class="tech-stat-label">AI Models</div>
+                <div class="tech-stat-desc">Integrated</div>
+            </div>
+            <div class="tech-stat-item">
+                <div class="tech-stat-number">< 10s</div>
+                <div class="tech-stat-label">Generation</div>
+                <div class="tech-stat-desc">Time</div>
+            </div>
+            <div class="tech-stat-item">
+                <div class="tech-stat-number">4K</div>
+                <div class="tech-stat-label">Resolution</div>
+                <div class="tech-stat-desc">Support</div>
+            </div>
+            <div class="tech-stat-item">
+                <div class="tech-stat-number">99.9%</div>
+                <div class="tech-stat-label">Uptime</div>
+                <div class="tech-stat-desc">Reliability</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="platform-gallery-showcase" id="gallery">
     <div class="gallery-showcase-container">
         <div class="gallery-header">

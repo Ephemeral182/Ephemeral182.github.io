@@ -170,9 +170,8 @@
         }
         
         .hero-content {
-            /* flex: 1; */ /* 移除 flex: 1 */
-            max-width: 450px; /* 根据之前的请求调整宽度，并保持 */
-            margin-left: 8rem;  /* 新增，将文字内容向右推，可以调整这个值 */
+            max-width: 500px; /* 稍微增加宽度以容纳论文信息 */
+            margin-left: 6rem;  /* 稍微调整左边距 */
         }
         
         .hero-badge {
@@ -219,15 +218,17 @@
             flex: 1;
             position: relative;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             min-height: 600px;
+            gap: 2rem;
         }
         
         .mosaic-grid {
             position: relative;
-            width: 650px;
-            height: 650px;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
             margin: 0 auto;
             animation: gentleFloat 6s ease-in-out infinite;
         }
@@ -2786,6 +2787,267 @@
             
             .stat-label {
                 min-width: auto;
+            }
+        }
+
+        /* Hero区域更新 - 整合论文信息 */
+        .hero {
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            gap: 4rem;
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .hero-content {
+            max-width: 500px; /* 稍微增加宽度以容纳论文信息 */
+            margin-left: 6rem;  /* 稍微调整左边距 */
+        }
+
+        /* 新增：Hero中的论文信息样式 */
+        .hero-paper-info {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .paper-badge-hero {
+            display: inline-block;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .paper-title-hero {
+            font-size: 1.3rem; /* 减小字体 */
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        /* 紧凑的链接按钮组 */
+        .paper-links-hero {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+        }
+
+        .paper-link-hero {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-link-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .paper-link-hero:hover::before {
+            left: 100%;
+        }
+
+        .paper-link-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .arxiv-link:hover {
+            background: rgba(255, 87, 51, 0.2);
+            border-color: rgba(255, 87, 51, 0.5);
+        }
+
+        .github-link:hover {
+            background: rgba(36, 41, 46, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .huggingface-link:hover {
+            background: rgba(255, 204, 0, 0.2);
+            border-color: rgba(255, 204, 0, 0.5);
+        }
+
+        .video-link:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .link-icon-hero {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        /* Hero右侧视觉区域更新 */
+        .hero-visual {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            gap: 2rem;
+        }
+
+        /* Hero中的Logo样式 */
+        .hero-logo-section {
+            position: relative;
+            z-index: 5;
+        }
+
+        .logo-frame-hero {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 832 / 1216;
+            width: 200px; /* 适中的尺寸 */
+            margin: 0 auto;
+        }
+
+        .main-logo-hero {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
+            animation: logoFloatHero 4s ease-in-out infinite;
+        }
+
+        .logo-glow-effect-hero {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981);
+            border-radius: 24px;
+            opacity: 0.3;
+            filter: blur(20px);
+            z-index: -1;
+            animation: logoGlowHero 6s ease-in-out infinite;
+        }
+
+        .logo-sparkles-hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        @keyframes logoFloatHero {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.02); }
+        }
+
+        @keyframes logoGlowHero {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.03); }
+        }
+
+        /* 调整mosaic-grid位置 */
+        .mosaic-grid {
+            position: relative;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
+            margin: 0 auto;
+            animation: gentleFloat 6s ease-in-out infinite;
+        }
+
+        /* 响应式设计更新 */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 600px;
+                margin-left: 0;
+            }
+            
+            .hero-visual {
+                flex-direction: column-reverse;
+            }
+            
+            .logo-frame-hero {
+                width: 160px;
+            }
+            
+            .mosaic-grid {
+                width: 450px;
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .paper-links-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-frame-hero {
+                width: 140px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-paper-info {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+            
+            .logo-frame-hero {
+                width: 120px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1rem;
             }
         }
     </style>

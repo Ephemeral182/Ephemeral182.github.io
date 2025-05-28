@@ -261,6 +261,34 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Shadow Walker</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo18.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo17.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo16.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo14.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 2 -->

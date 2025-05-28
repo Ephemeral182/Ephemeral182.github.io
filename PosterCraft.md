@@ -241,52 +241,52 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 1 -->
             <div class="gallery-column gallery-column-1">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo.png" alt="Transformers One Poster Style">
+                    <img src="/images/postercraft/gallery/gallery_demo.png" alt="Rogue Planet X Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Movies</div>
-                        <div class="gallery-poster-title">Transformers One</div>
+                        <div class="gallery-poster-category">Sci-Fi Thriller</div>
+                        <div class="gallery-poster-title">Rogue Planet X</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo1.png" alt="Abstract Fluid Art">
+                    <img src="/images/postercraft/gallery/gallery_demo1.png" alt="Indie Visions Film Reel Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Digital Art</div>
-                        <div class="gallery-poster-title">Fluid Dreams</div>
+                        <div class="gallery-poster-category">Film Festival</div>
+                        <div class="gallery-poster-title">Indie Visions</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo2.png" alt="Monochrome Portrait">
+                    <img src="/images/postercraft/gallery/gallery_demo2.png" alt="Wandering Minstrels Guitars Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portrait</div>
-                        <div class="gallery-poster-title">Shadow Walker</div>
+                        <div class="gallery-poster-category">Music Event</div>
+                        <div class="gallery-poster-title">Wandering Minstrels</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo18.png" alt="Monochrome Portrait">
+                    <img src="/images/postercraft/gallery/gallery_demo18.png" alt="RoboChef Kitchen Assistant Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portrait</div>
-                        <div class="gallery-poster-title">Shadow Walker</div>
+                        <div class="gallery-poster-category">Futuristic Tech</div>
+                        <div class="gallery-poster-title">RoboChef 3000</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo17.png" alt="Monochrome Portrait">
+                    <img src="/images/postercraft/gallery/gallery_demo17.png" alt="ChronoWrite Luxury Pens Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portrait</div>
-                        <div class="gallery-poster-title">Shadow Walker</div>
+                        <div class="gallery-poster-category">Luxury Branding</div>
+                        <div class="gallery-poster-title">ChronoWrite Pens</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo16.png" alt="Monochrome Portrait">
+                    <img src="/images/postercraft/gallery/gallery_demo16.png" alt="Lunar New Year Lantern Festival Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portrait</div>
-                        <div class="gallery-poster-title">Shadow Walker</div>
+                        <div class="gallery-poster-category">Cultural Celebration</div>
+                        <div class="gallery-poster-title">Lunar Lantern Fest</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo14.png" alt="Monochrome Portrait">
+                    <img src="/images/postercraft/gallery/gallery_demo14.png" alt="The Last of Us Series Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portrait</div>
-                        <div class="gallery-poster-title">Shadow Walker</div>
+                        <div class="gallery-poster-category">TV Series Drama</div>
+                        <div class="gallery-poster-title">The Last of Us</div>
                     </div>
                 </div>
             </div>
@@ -294,45 +294,45 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 2 -->
             <div class="gallery-column gallery-column-2">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo3.png" alt="Woman in Gold Dress">
+                    <img src="/images/postercraft/gallery/gallery_demo3.png" alt="Patagonia Expedition Adventure Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Portraiture</div>
-                        <div class="gallery-poster-title">Golden Elegance</div>
+                        <div class="gallery-poster-category">Adventure Travel</div>
+                        <div class="gallery-poster-title">Patagonia Expedition</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo4.png" alt="Sci-Fi Crystal Entity">
+                    <img src="/images/postercraft/gallery/gallery_demo4.png" alt="Wasteland Drifters Survival Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi Creature</div>
-                        <div class="gallery-poster-title">Crystal Entity</div>
+                        <div class="gallery-poster-category">Post-Apocalyptic</div>
+                        <div class="gallery-poster-title">Wasteland Drifters</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo5.png" alt="Futuristic Cityscape Art">
+                    <img src="/images/postercraft/gallery/gallery_demo5.png" alt="Avalanche Peak Mountaineering Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Environment</div>
-                        <div class="gallery-poster-title">Cyber Metropolis</div>
+                        <div class="gallery-poster-category">Extreme Sports</div>
+                        <div class="gallery-poster-title">Avalanche Peak</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo6.png" alt="Detailed Character Close-up">
+                    <img src="/images/postercraft/gallery/gallery_demo6.png" alt="Urban Legends Reawakened Horror Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Character Design</div>
-                        <div class="gallery-poster-title">Intricate Details</div>
+                        <div class="gallery-poster-category">Horror Anthology</div>
+                        <div class="gallery-poster-title">Urban Legends</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo7.png" alt="Mysterious Hooded Figure">
+                    <img src="/images/postercraft/gallery/gallery_demo7.png" alt="Synthwave Odyssey Music Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Dark Fantasy</div>
-                        <div class="gallery-poster-title">Enigmatic Presence</div>
+                        <div class="gallery-poster-category">Retrowave Music</div>
+                        <div class="gallery-poster-title">Synthwave Odyssey</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo15.png" alt="Mysterious Hooded Figure">
+                    <img src="/images/postercraft/gallery/gallery_demo15.png" alt="Desert Bloom Music Festival Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Dark Fantasy</div>
-                        <div class="gallery-poster-title">Enigmatic Presence</div>
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
                     </div>
                 </div>
             </div>
@@ -340,38 +340,38 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 3: Stack of images -->
             <div class="gallery-column gallery-column-3">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo8.png" alt="Sonic Movie Poster Style">
+                    <img src="/images/postercraft/gallery/gallery_demo8.png" alt="Echoes of the Shattered Sun Sci-Fi Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Gaming / Movie</div>
-                        <div class="gallery-poster-title">Sonic Speed</div>
+                        <div class="gallery-poster-category">Epic Sci-Fi</div>
+                        <div class="gallery-poster-title">Echoes of the Sun</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo9.png" alt="Crystal Lotus Art">
+                    <img src="/images/postercraft/gallery/gallery_demo9.png" alt="The Wyrmking's Citadel of Sorrows Fantasy Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Abstract Art</div>
-                        <div class="gallery-poster-title">Crystal Bloom</div>
+                        <div class="gallery-poster-category">Dark Fantasy RPG</div>
+                        <div class="gallery-poster-title">Citadel of Sorrows</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo10.png" alt="Motorcycle Design">
+                    <img src="/images/postercraft/gallery/gallery_demo10.png" alt="Monster Under My Bed Children's Movie Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Vehicle Design</div>
-                        <div class="gallery-poster-title">Night Rider</div>
+                        <div class="gallery-poster-category">Animated Feature</div>
+                        <div class="gallery-poster-title">Monster Under My Bed</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo11.png" alt="Fantasy Forest Spirit">
+                    <img src="/images/postercraft/gallery/gallery_demo11.png" alt="The Nebula Odyssey Space Opera Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Mythical</div>
-                        <div class="gallery-poster-title">Forest Guardian</div>
+                        <div class="gallery-poster-category">Space Opera</div>
+                        <div class="gallery-poster-title">Nebula Odyssey</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo13.png" alt="Fantasy Forest Spirit">
+                    <img src="/images/postercraft/gallery/gallery_demo13.png" alt="Dune Part Two Movie Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Mythical</div>
-                        <div class="gallery-poster-title">Forest Guardian</div>
+                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
+                        <div class="gallery-poster-title">Dune: Part Two</div>
                     </div>
                 </div>
             </div>

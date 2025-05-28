@@ -266,6 +266,353 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
+<!-- 新增：Dataset Showcase Section - Leonardo.ai风格 -->
+<div class="dataset-showcase-section" id="datasets">
+    <div class="dataset-showcase-container">
+        <div class="dataset-header">
+            <h2 class="dataset-main-title">Training Datasets</h2>
+            <div class="dataset-emoji">🗃️</div>
+            <p class="dataset-main-subtitle">Four comprehensive datasets powering state-of-the-art poster generation across multiple optimization stages</p>
+        </div>
+        
+        <!-- 数据集导航标签 -->
+        <div class="dataset-nav-tabs">
+            <div class="dataset-tab active" data-dataset="text-render">
+                <span class="tab-icon">📝</span>
+                <span class="tab-name">Text Rendering</span>
+            </div>
+            <div class="dataset-tab" data-dataset="hq-poster">
+                <span class="tab-icon">🎨</span>
+                <span class="tab-name">HQ Poster</span>
+            </div>
+            <div class="dataset-tab" data-dataset="preference">
+                <span class="tab-icon">⭐</span>
+                <span class="tab-name">Preference</span>
+            </div>
+            <div class="dataset-tab" data-dataset="reflection">
+                <span class="tab-icon">🔄</span>
+                <span class="tab-name">Reflection</span>
+            </div>
+        </div>
+        
+        <!-- 数据集内容展示 -->
+        <div class="dataset-content-area">
+            <!-- Text-Render-2M Dataset -->
+            <div class="dataset-panel active" id="text-render-panel">
+                <div class="dataset-layout">
+                    <div class="dataset-info">
+                        <div class="dataset-category">Text Rendering Optimization</div>
+                        <h3 class="dataset-title">Text-Render-2M</h3>
+                        <p class="dataset-description">
+                            Advancing text rendering quality through multi-instance optimization. 
+                            Features dynamic template generation with contextual intelligence, 
+                            supporting 1-3 text instances per poster with sophisticated font 
+                            selection and style variations.
+                        </p>
+                        
+                        <div class="dataset-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔢</span>
+                                <div class="feature-content">
+                                    <strong>Multi-Instance Rendering</strong>
+                                    <span>1-3 text instances with dynamic positioning</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <div class="feature-content">
+                                    <strong>Template Generation</strong>
+                                    <span>Dynamic layouts with random string generation</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">✍️</span>
+                                <div class="feature-content">
+                                    <strong>Font Selection & Style</strong>
+                                    <span>Standard and artistic fonts with style variations</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">2M</span>
+                                <span class="stat-label">Text Instances</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100+</span>
+                                <span class="stat-label">Font Styles</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-visual">
+                        <div class="visual-frame text-render-frame">
+                            <div class="sample-grid">
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_1.png" alt="Text Render Sample 1">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_2.png" alt="Text Render Sample 2">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_3.png" alt="Text Render Sample 3">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_4.png" alt="Text Render Sample 4">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_5.png" alt="Text Render Sample 5">
+                                </div>
+                                <div class="sample-item">
+                                    <img src="/images/postercraft/datasets/text_render_6.png" alt="Text Render Sample 6">
+                                </div>
+                            </div>
+                            <div class="visual-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- HQ-Poster-100K Dataset -->
+            <div class="dataset-panel" id="hq-poster-panel">
+                <div class="dataset-layout">
+                    <div class="dataset-info">
+                        <div class="dataset-category">High-Quality Poster Generation</div>
+                        <h3 class="dataset-title">HQ-Poster-100K</h3>
+                        <p class="dataset-description">
+                            Comprehensive collection of high-quality posters with advanced 
+                            filtering and scoring mechanisms. Features Gemini mask generation, 
+                            multi-level quality assessment, and sophisticated content analysis 
+                            for superior poster generation.
+                        </p>
+                        
+                        <div class="dataset-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🎭</span>
+                                <div class="feature-content">
+                                    <strong>Gemini Mask Generator</strong>
+                                    <span>Advanced mask generation with intelligent segmentation</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📊</span>
+                                <div class="feature-content">
+                                    <strong>Multi-Level Scoring</strong>
+                                    <span>MD5, HPS, and ML scorer quality assessment</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🔍</span>
+                                <div class="feature-content">
+                                    <strong>Hash Filtering</strong>
+                                    <span>Duplicate detection and content optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">100K</span>
+                                <span class="stat-label">HQ Posters</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">Quality Score</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-visual">
+                        <div class="visual-frame hq-poster-frame">
+                            <div class="poster-showcase">
+                                <div class="poster-item featured">
+                                    <img src="/images/postercraft/datasets/hq_poster_main.png" alt="Featured HQ Poster">
+                                    <div class="quality-badge">HQ</div>
+                                </div>
+                                <div class="poster-grid-small">
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_1.png" alt="HQ Poster 1">
+                                    </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_2.png" alt="HQ Poster 2">
+                                    </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_3.png" alt="HQ Poster 3">
+                                    </div>
+                                    <div class="poster-mini">
+                                        <img src="/images/postercraft/datasets/hq_poster_4.png" alt="HQ Poster 4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visual-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Poster-Preference-100K Dataset -->
+            <div class="dataset-panel" id="preference-panel">
+                <div class="dataset-layout">
+                    <div class="dataset-info">
+                        <div class="dataset-category">Preference Learning</div>
+                        <h3 class="dataset-title">Poster-Preference-100K</h3>
+                        <p class="dataset-description">
+                            Specialized preference dataset enabling aesthetic-text reinforcement 
+                            learning. Features comprehensive preference pairs with detailed 
+                            evaluation metrics, supporting advanced reward model training 
+                            for superior aesthetic alignment.
+                        </p>
+                        
+                        <div class="dataset-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚖️</span>
+                                <div class="feature-content">
+                                    <strong>Preference Pairs</strong>
+                                    <span>100K high-quality preference comparisons</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎯</span>
+                                <div class="feature-content">
+                                    <strong>Prompt Alignment</strong>
+                                    <span>Expert evaluation against text prompts</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📈</span>
+                                <div class="feature-content">
+                                    <strong>HPS Scoring</strong>
+                                    <span>Aesthetic quality assessment with score differentials</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">100K</span>
+                                <span class="stat-label">Preference Pairs</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">0.025</span>
+                                <span class="stat-label">Min Score Diff</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-visual">
+                        <div class="visual-frame preference-frame">
+                            <div class="preference-comparison">
+                                <div class="comparison-pair">
+                                    <div class="preference-item better">
+                                        <img src="/images/postercraft/datasets/preference_better.png" alt="Better Preference">
+                                        <div class="preference-score good">😊 Best</div>
+                                    </div>
+                                    <div class="vs-indicator">VS</div>
+                                    <div class="preference-item worse">
+                                        <img src="/images/postercraft/datasets/preference_worse.png" alt="Worse Preference">
+                                        <div class="preference-score bad">😞 Worst</div>
+                                    </div>
+                                </div>
+                                <div class="evaluation-metrics">
+                                    <div class="metric">
+                                        <span class="metric-label">Text & Aesthetics</span>
+                                        <span class="metric-value">HPS Score Diff > 0.025</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visual-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Poster-Reflect-120K Dataset -->
+            <div class="dataset-panel" id="reflection-panel">
+                <div class="dataset-layout">
+                    <div class="dataset-info">
+                        <div class="dataset-category">Vision-Language Feedback</div>
+                        <h3 class="dataset-title">Poster-Reflect-120K</h3>
+                        <p class="dataset-description">
+                            Advanced reflection dataset for vision-language feedback refinement. 
+                            Constructs 64K feedback pairs from 120K generated posters, enabling 
+                            sophisticated multi-modal understanding and iterative quality 
+                            improvement through detailed content analysis.
+                        </p>
+                        
+                        <div class="dataset-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🔄</span>
+                                <div class="feature-content">
+                                    <strong>Feedback Pairs</strong>
+                                    <span>64K reflection pairs from 120K posters</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🧠</span>
+                                <div class="feature-content">
+                                    <strong>Content Analysis</strong>
+                                    <span>Detailed poster content and aesthetic suggestions</span>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎨</span>
+                                <div class="feature-content">
+                                    <strong>Style Optimization</strong>
+                                    <span>Aesthetic style and color matching suggestions</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dataset-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">120K</span>
+                                <span class="stat-label">Generated Posters</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">64K</span>
+                                <span class="stat-label">Feedback Pairs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-visual">
+                        <div class="visual-frame reflection-frame">
+                            <div class="reflection-showcase">
+                                <div class="reflection-flow">
+                                    <div class="reflection-step">
+                                        <div class="step-poster">
+                                            <img src="/images/postercraft/datasets/reflect_original.png" alt="Original Poster">
+                                        </div>
+                                        <div class="step-label">Original</div>
+                                    </div>
+                                    <div class="reflection-arrow">→</div>
+                                    <div class="reflection-step">
+                                        <div class="step-analysis">
+                                            <div class="analysis-text">
+                                                "Apply uniform, gritty texture overlaying, including background and central figure..."
+                                            </div>
+                                        </div>
+                                        <div class="step-label">Analysis</div>
+                                    </div>
+                                    <div class="reflection-arrow">→</div>
+                                    <div class="reflection-step">
+                                        <div class="step-poster">
+                                            <img src="/images/postercraft/datasets/reflect_improved.png" alt="Improved Poster">
+                                        </div>
+                                        <div class="step-label">Refined</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visual-glow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- 新增：Technical Overview Section - 全栏设计 -->
 <div class="technical-overview-section" id="overview">
     <div class="overview-container">

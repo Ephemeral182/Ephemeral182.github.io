@@ -374,7 +374,7 @@ title: PosterCraft - AI Poster Generation
             <p class="optimization-subtitle">Experience the dramatic improvement in text rendering quality and aesthetic appeal</p>
         </div>
         
-        <!-- 对比展示网格 -->
+        <!-- 对比展示网格 - 修改为4列布局 -->
         <div class="comparison-grid">
             <!-- 对比项目 1 -->
             <div class="comparison-item">
@@ -440,40 +440,6 @@ title: PosterCraft - AI Poster Generation
                     <div class="comparison-info">
                         <h3 class="comparison-title">Music Event Poster</h3>
                         <p class="comparison-description">Enhanced artistic typography for creative industry applications</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 对比项目 5 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/demo/demo9.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo10.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
-                    </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Art Exhibition Poster</h3>
-                        <p class="comparison-description">Refined text aesthetics for cultural and artistic presentations</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 对比项目 6 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/demo/demo11.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo12.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
-                    </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Sports Event Poster</h3>
-                        <p class="comparison-description">Dynamic text optimization for high-energy promotional materials</p>
                     </div>
                 </div>
             </div>

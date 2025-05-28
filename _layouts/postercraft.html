@@ -3696,11 +3696,11 @@
             line-height: 1.7;
         }
 
-        /* 对比网格 - 调整为3列布局以容纳6组 */
+        /* 对比网格 - 修改为4列布局 */
         .comparison-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3列布局 */
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr); /* 改为4列布局 */
+            gap: 1.5rem; /* 稍微减小间距以适应4列 */
             margin-bottom: 5rem;
         }
 
@@ -3730,7 +3730,7 @@
                 0 0 60px rgba(99, 102, 241, 0.3);
         }
 
-        /* 图片容器 - 调整为832:1216比例 */
+        /* 图片容器 - 保持832:1216比例 */
         .image-container {
             position: relative;
             width: 100%;
@@ -3831,11 +3831,11 @@
 
         /* 信息区域 */
         .comparison-info {
-            padding: 1.5rem; /* 减少padding以适应更紧凑的布局 */
+            padding: 1.2rem; /* 稍微减少padding以适应4列布局 */
         }
 
         .comparison-title {
-            font-size: 1.1rem; /* 稍微减小字体 */
+            font-size: 1rem; /* 稍微减小字体以适应4列布局 */
             font-weight: 700;
             margin-bottom: 0.6rem;
             background: linear-gradient(45deg, #ffffff, #a5b4fc);
@@ -3847,7 +3847,7 @@
         .comparison-description {
             color: #94a3b8;
             line-height: 1.5;
-            font-size: 0.85rem; /* 稍微减小字体 */
+            font-size: 0.8rem; /* 稍微减小字体以适应4列布局 */
         }
 
         /* 统计信息 */

@@ -2912,6 +2912,353 @@
             border-radius: 6px;
         }
 
+        /* Hero右侧视觉区域更新 */
+        .hero-visual {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 600px;
+            gap: 2rem;
+        }
+
+        /* Hero中的Logo样式 */
+        .hero-logo-section {
+            position: relative;
+            z-index: 5;
+        }
+
+        .logo-frame-hero {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 832 / 1216;
+            width: 200px; /* 适中的尺寸 */
+            margin: 0 auto;
+        }
+
+        .main-logo-hero {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 16px;
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
+            animation: logoFloatHero 4s ease-in-out infinite;
+        }
+
+        .logo-glow-effect-hero {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981);
+            border-radius: 24px;
+            opacity: 0.3;
+            filter: blur(20px);
+            z-index: -1;
+            animation: logoGlowHero 6s ease-in-out infinite;
+        }
+
+        .logo-sparkles-hero {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        @keyframes logoFloatHero {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.02); }
+        }
+
+        @keyframes logoGlowHero {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.03); }
+        }
+
+        /* 调整mosaic-grid位置 */
+        .mosaic-grid {
+            position: relative;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
+            margin: 0 auto;
+            animation: gentleFloat 6s ease-in-out infinite;
+        }
+
+        /* 响应式设计更新 */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 600px;
+                margin-left: 0;
+            }
+            
+            .hero-visual {
+                flex-direction: column-reverse;
+            }
+            
+            .logo-frame-hero {
+                width: 160px;
+            }
+            
+            .mosaic-grid {
+                width: 450px;
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .paper-links-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-frame-hero {
+                width: 140px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-paper-info {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+            
+            .logo-frame-hero {
+                width: 120px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1rem;
+            }
+        }
+
+        /* 标题和Logo并排布局 */
+        .title-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 0; /* 移除底部边距 */
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        /* 内联Logo样式 */
+        .inline-logo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 832 / 1216;
+            width: 80px; /* 小尺寸logo */
+            flex-shrink: 0;
+        }
+
+        .main-logo-inline {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
+            animation: logoFloatInline 4s ease-in-out infinite;
+        }
+
+        .logo-glow-effect-inline {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 16px;
+            opacity: 0.3;
+            filter: blur(12px);
+            z-index: -1;
+            animation: logoGlowInline 6s ease-in-out infinite;
+        }
+
+        .logo-sparkles-inline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .logo-sparkles-inline .logo-sparkle {
+            position: absolute;
+            font-size: 0.8rem;
+            animation: logoSparkleInline 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        .logo-sparkles-inline .logo-sparkle-1 {
+            top: 5%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .logo-sparkles-inline .logo-sparkle-2 {
+            bottom: 5%;
+            right: 5%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes logoFloatInline {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-5px) scale(1.02); }
+        }
+
+        @keyframes logoGlowInline {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.02); }
+        }
+
+        @keyframes logoSparkleInline {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-3px) scale(1.2) rotate(180deg); 
+            }
+        }
+
+        /* Paper信息 - 小字体样式 */
+        .paper-info-small {
+            margin-bottom: 1.5rem;
+        }
+
+        .paper-title-small {
+            font-size: 1rem; /* 小字体 */
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        .paper-badge-small {
+            display: inline-block;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* 论文链接样式 */
+        .paper-links-hero {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .paper-link-hero {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-link-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .paper-link-hero:hover::before {
+            left: 100%;
+        }
+
+        .paper-link-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .arxiv-link:hover {
+            background: rgba(255, 87, 51, 0.2);
+            border-color: rgba(255, 87, 51, 0.5);
+        }
+
+        .github-link:hover {
+            background: rgba(36, 41, 46, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .huggingface-link:hover {
+            background: rgba(255, 204, 0, 0.2);
+            border-color: rgba(255, 204, 0, 0.5);
+        }
+
+        .video-link:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .link-icon-hero {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
         /* 响应式设计 */
         @media (max-width: 1024px) {
             .title-logo-section {
@@ -4436,12 +4783,7 @@
             transform: rotate(-20deg) scale(0.5);
         }
         
-        .demo-second-right {
-            right: -50px;
-            transform: rotate(20deg) scale(0.5);
-        }
-        
-        .demo-second-left img, .demo-second-right img {
+        .demo-second-right img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -6782,6 +7124,632 @@
         @keyframes logoGlowHero {
             0%, 100% { opacity: 0.3; transform: scale(1); }
             50% { opacity: 0.5; transform: scale(1.03); }
+        }
+
+        /* 调整mosaic-grid位置 */
+        .mosaic-grid {
+            position: relative;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
+            margin: 0 auto;
+            animation: gentleFloat 6s ease-in-out infinite;
+        }
+
+        /* 响应式设计更新 */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-content {
+                max-width: 600px;
+                margin-left: 0;
+            }
+            
+            .hero-visual {
+                flex-direction: column-reverse;
+            }
+            
+            .logo-frame-hero {
+                width: 160px;
+            }
+            
+            .mosaic-grid {
+                width: 450px;
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .paper-links-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo-frame-hero {
+                width: 140px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-paper-info {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+            }
+            
+            .logo-frame-hero {
+                width: 120px;
+            }
+            
+            .paper-title-hero {
+                font-size: 1rem;
+            }
+        }
+
+        /* 标题和Logo并排布局 */
+        .title-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 0; /* 移除底部边距 */
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        /* 内联Logo样式 */
+        .inline-logo {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 832 / 1216;
+            width: 80px; /* 小尺寸logo */
+            flex-shrink: 0;
+        }
+
+        .main-logo-inline {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 
+                0 8px 25px rgba(0, 0, 0, 0.3),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.5s ease;
+            animation: logoFloatInline 4s ease-in-out infinite;
+        }
+
+        .logo-glow-effect-inline {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: -8px;
+            bottom: -8px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 16px;
+            opacity: 0.3;
+            filter: blur(12px);
+            z-index: -1;
+            animation: logoGlowInline 6s ease-in-out infinite;
+        }
+
+        .logo-sparkles-inline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .logo-sparkles-inline .logo-sparkle {
+            position: absolute;
+            font-size: 0.8rem;
+            animation: logoSparkleInline 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        .logo-sparkles-inline .logo-sparkle-1 {
+            top: 5%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .logo-sparkles-inline .logo-sparkle-2 {
+            bottom: 5%;
+            right: 5%;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes logoFloatInline {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-5px) scale(1.02); }
+        }
+
+        @keyframes logoGlowInline {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.02); }
+        }
+
+        @keyframes logoSparkleInline {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0px) scale(1) rotate(0deg); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-3px) scale(1.2) rotate(180deg); 
+            }
+        }
+
+        /* Paper信息 - 小字体样式 */
+        .paper-info-small {
+            margin-bottom: 1.5rem;
+        }
+
+        .paper-title-small {
+            font-size: 1rem; /* 小字体 */
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        .paper-badge-small {
+            display: inline-block;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* 论文链接样式 */
+        .paper-links-hero {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        .paper-link-hero {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paper-link-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .paper-link-hero:hover::before {
+            left: 100%;
+        }
+
+        .paper-link-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .arxiv-link:hover {
+            background: rgba(255, 87, 51, 0.2);
+            border-color: rgba(255, 87, 51, 0.5);
+        }
+
+        .github-link:hover {
+            background: rgba(36, 41, 46, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .huggingface-link:hover {
+            background: rgba(255, 204, 0, 0.2);
+            border-color: rgba(255, 204, 0, 0.5);
+        }
+
+        .video-link:hover {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .link-icon-hero {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .title-logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+            
+            .inline-logo {
+                width: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .title-logo-section {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .paper-links-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .inline-logo {
+                width: 50px;
+            }
+            
+            .paper-title-small {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-logo-section {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .inline-logo {
+                width: 40px;
+            }
+            
+            .paper-title-small {
+                font-size: 0.8rem;
+            }
+            
+            .paper-links-hero {
+                gap: 0.6rem;
+            }
+            
+            .paper-link-hero {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Paper信息 - 增大字体样式 */
+        .paper-info-small {
+            margin-bottom: 1.5rem;
+        }
+
+        .paper-title-small {
+            font-size: 1.8rem; /* 从 1rem 增大到 1.8rem */
+            font-weight: 700; /* 从 600 增加到 700 */
+            margin-bottom: 0.8rem; /* 从 0.5rem 增加到 0.8rem */
+            color: #e2e8f0; /* 稍微提亮颜色 */
+            line-height: 1.3; /* 从 1.4 调整到 1.3 */
+        }
+
+        .paper-badge-small {
+            display: inline-block;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.4rem 1rem; /* 从 0.3rem 0.8rem 增大到 0.4rem 1rem */
+            border-radius: 50px;
+            font-size: 0.8rem; /* 从 0.7rem 增大到 0.8rem */
+            font-weight: 600;
+            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
+        }
+
+        /* 响应式设计更新 */
+        @media (max-width: 768px) {
+            .title-logo-section {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .paper-links-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .inline-logo {
+                width: 50px;
+            }
+            
+            .paper-title-small {
+                font-size: 1.4rem; /* 从 0.9rem 增大到 1.4rem */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title-logo-section {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .inline-logo {
+                width: 40px;
+            }
+            
+            .paper-title-small {
+                font-size: 1.2rem; /* 从 0.8rem 增大到 1.2rem */
+            }
+            
+            .paper-links-hero {
+                gap: 0.6rem;
+            }
+            
+            .paper-link-hero {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Paper信息 - 紧凑且fancy的样式 */
+        .paper-info-compact {
+            margin-top: 0.8rem; /* 从 1.5rem 减少到 0.8rem，更紧凑 */
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .paper-title-main {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+            position: relative;
+            /* 移除流光特效，改为悬浮效果 */
+            filter: drop-shadow(0 4px 12px rgba(226, 232, 240, 0.3));
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+
+        /* 添加悬浮动画 */
+        @keyframes titleFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                filter: drop-shadow(0 4px 12px rgba(226, 232, 240, 0.3));
+            }
+            50% { 
+                transform: translateY(-3px);
+                filter: drop-shadow(0 8px 20px rgba(226, 232, 240, 0.4));
+            }
+        }
+
+        /* 标题和Logo区域整体悬浮效果 */
+        .title-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            /* 添加悬浮效果 */
+            animation: sectionFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes sectionFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+            }
+            50% { 
+                transform: translateY(-5px);
+            }
+        }
+
+        .paper-badge-fancy {
+            display: inline-block;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
+            background-size: 200% 200%;
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 
+                0 4px 15px rgba(99, 102, 241, 0.4),
+                0 0 20px rgba(139, 92, 246, 0.3);
+            animation: badgeGlow 2s ease-in-out infinite alternate;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 保留badge的流光效果，因为它比较小 */
+        .paper-badge-fancy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: badgeShine 2s ease-in-out infinite;
+        }
+
+        @keyframes badgeGlow {
+            0% { 
+                box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4), 0 0 20px rgba(139, 92, 246, 0.3);
+                background-position: 0% 50%;
+            }
+            100% { 
+                box-shadow: 0 6px 25px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.5);
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes badgeShine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        /* 增强版论文链接样式 - 强调效果 */
+        .paper-links-enhanced {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 添加强调的光晕效果 */
+        .paper-links-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                transparent 70%);
+            animation: linksGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes linksGlow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .paper-link-fancy {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 16px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .paper-link-fancy:hover .link-shine {
+            left: 100%;
+        }
+
+        .paper-link-fancy:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .link-icon-fancy {
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .paper-link-fancy:hover .link-icon-fancy {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+        }
+
+        /* 特定链接的hover效果 - 增强版 */
+        .arxiv-link:hover {
+            background: linear-gradient(135deg, rgba(255, 87, 51, 0.25), rgba(255, 87, 51, 0.15));
+            border-color: rgba(255, 87, 51, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 87, 51, 0.4);
+        }
+
+        .github-link:hover {
+            background: linear-gradient(135deg, rgba(36, 41, 46, 0.9), rgba(36, 41, 46, 0.7));
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 40px rgba(36, 41, 46, 0.5);
+        }
+
+        .huggingface-link:hover {
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.25), rgba(255, 204, 0, 0.15));
+            border-color: rgba(255, 204, 0, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 204, 0, 0.4);
+        }
+
+        .video-link:hover {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.15));
+            border-color: rgba(255, 0, 0, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 0, 0, 0.4);
+        }
+
+        /* 响应式设计更新 */
+        @media (max-width: 768px) {
+            .title-logo-section {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .paper-links-enhanced {
+                grid-template-columns: 1fr;
+            }
+            
+            .inline-logo {
+                width: 50px;
+            }
+            
+            .paper-title-main {
+                font-size: 1.4rem;
+            }
         }
 
         @media (max-width: 480px) {

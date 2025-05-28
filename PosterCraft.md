@@ -132,41 +132,42 @@ title: PosterCraft - AI Poster Generation
         <h2 class="what-is-title">What is PosterCraft?</h2>
         <p class="what-is-subtitle">Transform your words into stunning visual masterpieces</p>
         
-        <div class="dual-demo-container">
-            <!-- Short Prompt Demo -->
-            <div class="demo-block">
-                <div class="demo-label">
-                    <span class="label-icon">⚡</span>
-                    <span class="label-text">Quick Prompt</span>
-                </div>
-                <div class="transformation-demo">
-                    <div class="input-side">
-                        <div class="input-card short-prompt">
-                            <div class="input-header">
-                                <span class="input-icon">✨</span>
-                                <span>Simple Description</span>
-                            </div>
-                            <div class="input-content">
-                                <p>"Urban Canvas Street Art Expo poster with bold graffiti-style lettering and dynamic colorful splashes"</p>
+        <!-- 新的横向布局 -->
+        <div class="horizontal-demo-container">
+            <!-- Quick Prompt Demo -->
+            <div class="demo-row">
+                <div class="demo-row-background">
+                    <div class="demo-label-horizontal">
+                        <span class="label-icon">⚡</span>
+                        <span class="label-text">Quick Prompt</span>
+                    </div>
+                    <div class="horizontal-transformation">
+                        <div class="input-section">
+                            <div class="input-card-horizontal">
+                                <div class="input-header">
+                                    <span class="input-icon">✨</span>
+                                    <span>Simple Description</span>
+                                </div>
+                                <div class="input-content">
+                                    <p>"Urban Canvas Street Art Expo poster with bold graffiti-style lettering and dynamic colorful splashes"</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="arrow-container">
-                        <div class="magic-arrow">
-                            <span class="arrow-text">PosterCraft</span>
-                            <div class="arrow-line">
-                                <div class="arrow-head"></div>
+                        
+                        <div class="arrow-section">
+                            <div class="magic-arrow-horizontal">
+                                <span class="arrow-text">PosterCraft</span>
+                                <div class="arrow-line-horizontal">
+                                    <div class="arrow-head-horizontal"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="output-side">
-                        <div class="single-output">
-                            <div class="output-frame short-output">
+                        
+                        <div class="output-section">
+                            <div class="output-frame-horizontal">
                                 <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
-                                <div class="output-glow short-glow"></div>
-                                <div class="output-sparkles">
+                                <div class="output-glow-horizontal"></div>
+                                <div class="output-sparkles-horizontal">
                                     <span class="sparkle sparkle-1">✨</span>
                                     <span class="sparkle sparkle-2">⭐</span>
                                 </div>
@@ -176,40 +177,40 @@ title: PosterCraft - AI Poster Generation
                 </div>
             </div>
             
-            <!-- Long Prompt Demo -->
-            <div class="demo-block">
-                <div class="demo-label">
-                    <span class="label-icon">🎯</span>
-                    <span class="label-text">Detailed Prompt</span>
-                </div>
-                <div class="transformation-demo">
-                    <div class="input-side">
-                        <div class="input-card long-prompt">
-                            <div class="input-header">
-                                <span class="input-icon">🎨</span>
-                                <span>Detailed Description</span>
-                            </div>
-                            <div class="input-content">
-                                <p>"The event poster for 'UTOPIA/DYSTOPIA: A Future Visions Film Showcase' features a split design. The left side depicts a bright, utopian city with sleek, organic architecture, flying vehicles, and lush greenery, rendered in light, airy colors. The right side shows a dark, dystopian cityscape with crumbling skyscrapers, smog, and surveillance drones, in gritty, desaturated tones. The style is contrasting, thought-provoking, and cinematic. The showcase title, 'UTOPIA / DYSTOPIA,' is in a modern, clean, white sans-serif font, with 'UTOPIA' positioned on the left over its scene, and 'DYSTOPIA' on the right over its scene, separated by a sharp, diagonal dividing line."</p>
+            <!-- Detailed Prompt Demo -->
+            <div class="demo-row">
+                <div class="demo-row-background">
+                    <div class="demo-label-horizontal">
+                        <span class="label-icon">🎯</span>
+                        <span class="label-text">Detailed Prompt</span>
+                    </div>
+                    <div class="horizontal-transformation">
+                        <div class="input-section">
+                            <div class="input-card-horizontal">
+                                <div class="input-header">
+                                    <span class="input-icon">🎨</span>
+                                    <span>Detailed Description</span>
+                                </div>
+                                <div class="input-content">
+                                    <p>"The event poster for 'UTOPIA/DYSTOPIA: A Future Visions Film Showcase' features a split design. The left side depicts a bright, utopian city with sleek, organic architecture, flying vehicles, and lush greenery, rendered in light, airy colors. The right side shows a dark, dystopian cityscape with crumbling skyscrapers, smog, and surveillance drones, in gritty, desaturated tones. The style is contrasting, thought-provoking, and cinematic. The showcase title, 'UTOPIA / DYSTOPIA,' is in a modern, clean, white sans-serif font, with 'UTOPIA' positioned on the left over its scene, and 'DYSTOPIA' on the right over its scene, separated by a sharp, diagonal dividing line."</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="arrow-container">
-                        <div class="magic-arrow">
-                            <span class="arrow-text">PosterCraft</span>
-                            <div class="arrow-line">
-                                <div class="arrow-head"></div>
+                        
+                        <div class="arrow-section">
+                            <div class="magic-arrow-horizontal">
+                                <span class="arrow-text">PosterCraft</span>
+                                <div class="arrow-line-horizontal">
+                                    <div class="arrow-head-horizontal"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="output-side">
-                        <div class="single-output">
-                            <div class="output-frame long-output">
+                        
+                        <div class="output-section">
+                            <div class="output-frame-horizontal">
                                 <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
-                                <div class="output-glow long-glow"></div>
-                                <div class="output-sparkles">
+                                <div class="output-glow-horizontal"></div>
+                                <div class="output-sparkles-horizontal">
                                     <span class="sparkle sparkle-3">💫</span>
                                     <span class="sparkle sparkle-4">✨</span>
                                     <span class="sparkle sparkle-5">🌟</span>

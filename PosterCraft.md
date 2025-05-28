@@ -439,7 +439,7 @@ title: PosterCraft - AI Poster Generation
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Grey's Anatomy Poster</h3>
-                        <p class="comparison-description">This ... poster for <span class="text-highlight">"Grey's Anatomy"</span> presents ... . ... the title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, sans-serif capital letters... . ..., the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in ... . ... information includes <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span>...</p>
+                        <p class="comparison-description">The title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, sans-serif capital letters... . ..., the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in ... . ... information includes <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span>...</p>
                     </div>
                 </div>
             </div>

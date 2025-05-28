@@ -380,8 +380,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo1.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo2.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo1_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo1_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -397,8 +397,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo3.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo4.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo2_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo2_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -414,8 +414,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo5.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo6.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo3_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo3_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>
@@ -431,8 +431,8 @@ title: PosterCraft - AI Poster Generation
             <div class="comparison-item">
                 <div class="comparison-card">
                     <div class="image-container">
-                        <img src="/images/postercraft/demo/demo7.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/demo/demo8.png" alt="After Optimization" class="after-image">
+                        <img src="/images/postercraft/text_opt/demo4_before.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/text_opt/demo4_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
                         <div class="comparison-divider"></div>

@@ -274,7 +274,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">📝</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Scalable Text Rendering Optimization</h3>
+                        <h3 class="stage-title">Text Rendering Optimization</h3>
                     </div>
                 </div>
                 <p class="stage-description">Optimizes text rendering quality and layout structure to ensure readable and aesthetically pleasing typography that forms the foundation of professional poster design.</p>
@@ -304,7 +304,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🎯</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Aesthetic-Text Reinforcement Learning</h3>
+                        <h3 class="stage-title">Aesthetic-Text RL</h3>
                     </div>
                 </div>
                 <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
@@ -319,7 +319,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🔄</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Vision-Language Feedback Refinement</h3>
+                        <h3 class="stage-title">Vision-Language Feedback</h3>
                     </div>
                 </div>
                 <p class="stage-description">Multi-modal feedback mechanism that continuously refines the output through vision-language understanding, achieving superior aesthetic quality.</p>

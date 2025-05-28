@@ -270,7 +270,7 @@ title: PosterCraft - AI Poster Generation
         
         <!-- 四个阶段的详细展示 -->
         <div class="workflow-stages">
-            <div class="stage-card stage-1 active" data-stage="1">
+            <div class="stage-card stage-1" data-stage="1">
                 <div class="stage-header">
                     <div class="stage-icon">📝</div>
                     <div class="stage-info">

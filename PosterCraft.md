@@ -241,10 +241,24 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 1 -->
             <div class="gallery-column gallery-column-1">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo1.png" alt="Tall Poster Art (Crystal Placeholder)">
+                    <img src="/images/postercraft/demo/demo1.png" alt="Transformers One Poster Style">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi Art</div>
-                        <div class="gallery-poster-title">Cosmic Shard</div>
+                        <div class="gallery-poster-category">Movies</div>
+                        <div class="gallery-poster-title">Transformers One</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo11.png" alt="Abstract Fluid Art">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Digital Art</div>
+                        <div class="gallery-poster-title">Fluid Dreams</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo5.png" alt="Monochrome Portrait">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Portrait</div>
+                        <div class="gallery-poster-title">Shadow Walker</div>
                     </div>
                 </div>
             </div>
@@ -252,10 +266,31 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 2 -->
             <div class="gallery-column gallery-column-2">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo6.png" alt="Medium Tall Art (Gold Woman Placeholder)">
+                    <img src="/images/postercraft/demo/demo6.png" alt="Woman in Gold Dress">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Fantasy Portrait</div>
-                        <div class="gallery-poster-title">Golden Aura</div>
+                        <div class="gallery-poster-category">Portraiture</div>
+                        <div class="gallery-poster-title">Golden Elegance</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo8.png" alt="Sci-Fi Crystal Entity">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Sci-Fi Creature</div>
+                        <div class="gallery-poster-title">Crystal Entity</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo12.png" alt="Futuristic Cityscape Art">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Environment</div>
+                        <div class="gallery-poster-title">Cyber Metropolis</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo9.png" alt="Detailed Character Close-up">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Character Design</div>
+                        <div class="gallery-poster-title">Intricate Details</div>
                     </div>
                 </div>
             </div>
@@ -263,24 +298,52 @@ title: PosterCraft - AI Poster Generation
             <!-- Column 3: Stack of images -->
             <div class="gallery-column gallery-column-3">
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo2.png" alt="Poster Art (Skull Placeholder)">
+                    <img src="/images/postercraft/demo/demo2.png" alt="Sonic Movie Poster Style">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Gaming</div>
-                        <div class="gallery-poster-title">Speed Sonic</div>
+                        <div class="gallery-poster-category">Gaming / Movie</div>
+                        <div class="gallery-poster-title">Sonic Speed</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo7.png" alt="Poster Art (Forest Spirit Placeholder)">
+                    <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Abstract Art</div>
+                        <div class="gallery-poster-title">Crystal Bloom</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo4.png" alt="Motorcycle Design">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Vehicle Design</div>
+                        <div class="gallery-poster-title">Night Rider</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Forest Spirit">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Mythical</div>
                         <div class="gallery-poster-title">Forest Guardian</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/demo/demo4.png" alt="Poster Art (Motorcycle Placeholder)">
+                    <img src="/images/postercraft/demo/demo10.png" alt="Mysterious Hooded Figure">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Cyberpunk Vehicle</div>
-                        <div class="gallery-poster-title">Night Rider</div>
+                        <div class="gallery-poster-category">Dark Fantasy</div>
+                        <div class="gallery-poster-title">Enigmatic Presence</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Urban Art</div>
+                        <div class="gallery-poster-title">Street Expo</div>
+                    </div>
+                </div>
+                 <div class="gallery-poster-item">
+                    <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Conceptual</div>
+                        <div class="gallery-poster-title">Future Visions</div>
                     </div>
                 </div>
             </div>

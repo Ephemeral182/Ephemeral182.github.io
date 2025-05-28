@@ -275,10 +275,14 @@ title: PosterCraft - AI Poster Generation
                     <div class="stage-icon">📝</div>
                     <div class="stage-info">
                         <h3 class="stage-title">Scalable Text Rendering Optimization</h3>
-                        <div class="stage-subtitle">Stage 1 • Scalable Foundation</div>
                     </div>
                 </div>
                 <p class="stage-description">Optimizes text rendering quality and layout structure to ensure readable and aesthetically pleasing typography that forms the foundation of professional poster design.</p>
+            </div>
+            
+            <div class="stage-arrow">
+                <div class="arrow-line-stage"></div>
+                <div class="arrow-head-stage"></div>
             </div>
             
             <div class="stage-card stage-2" data-stage="2">
@@ -286,10 +290,14 @@ title: PosterCraft - AI Poster Generation
                     <div class="stage-icon">🎨</div>
                     <div class="stage-info">
                         <h3 class="stage-title">High-quality Poster Fine-tuning</h3>
-                        <div class="stage-subtitle">Stage 2 • Visual Enhancement</div>
                     </div>
                 </div>
                 <p class="stage-description">Fine-tunes the overall visual quality through advanced diffusion models, enhancing color harmony, composition balance, and artistic coherence.</p>
+            </div>
+            
+            <div class="stage-arrow">
+                <div class="arrow-line-stage"></div>
+                <div class="arrow-head-stage"></div>
             </div>
             
             <div class="stage-card stage-3" data-stage="3">
@@ -297,10 +305,14 @@ title: PosterCraft - AI Poster Generation
                     <div class="stage-icon">🎯</div>
                     <div class="stage-info">
                         <h3 class="stage-title">Aesthetic-Text Reinforcement Learning</h3>
-                        <div class="stage-subtitle">Stage 3 • Intelligent Alignment</div>
                     </div>
                 </div>
                 <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
+            </div>
+            
+            <div class="stage-arrow">
+                <div class="arrow-line-stage"></div>
+                <div class="arrow-head-stage"></div>
             </div>
             
             <div class="stage-card stage-4" data-stage="4">
@@ -308,34 +320,9 @@ title: PosterCraft - AI Poster Generation
                     <div class="stage-icon">🔄</div>
                     <div class="stage-info">
                         <h3 class="stage-title">Vision-Language Feedback Refinement</h3>
-                        <div class="stage-subtitle">Stage 4 • Iterative Refinement</div>
                     </div>
                 </div>
                 <p class="stage-description">Multi-modal feedback mechanism that continuously refines the output through vision-language understanding, achieving superior aesthetic quality.</p>
-            </div>
-        </div>
-        
-        <!-- 核心优势展示 -->
-        <div class="framework-advantages">
-            <div class="advantage-item">
-                <div class="advantage-icon">🚀</div>
-                <h4 class="advantage-title">End-to-End Unified</h4>
-                <p class="advantage-desc">Complete workflow from text input to final poster generation</p>
-            </div>
-            <div class="advantage-item">
-                <div class="advantage-icon">⚡</div>
-                <h4 class="advantage-title">Real-time Processing</h4>
-                <p class="advantage-desc">Optimized pipeline delivers results in seconds</p>
-            </div>
-            <div class="advantage-item">
-                <div class="advantage-icon">🎨</div>
-                <h4 class="advantage-title">Aesthetic Excellence</h4>
-                <p class="advantage-desc">Superior visual quality through multi-stage optimization</p>
-            </div>
-            <div class="advantage-item">
-                <div class="advantage-icon">🧠</div>
-                <h4 class="advantage-title">AI-Powered Intelligence</h4>
-                <p class="advantage-desc">Advanced models ensure professional-grade results</p>
             </div>
         </div>
     </div>

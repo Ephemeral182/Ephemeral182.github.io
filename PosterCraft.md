@@ -274,7 +274,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">📝</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Text Rendering Optimization</h3>
+                        <h3 class="stage-title">Scalable Text Rendering Optimization</h3>
                         <div class="stage-subtitle">Stage 1 • Scalable Foundation</div>
                     </div>
                 </div>
@@ -285,7 +285,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🎨</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">high-quality poster fine-tuning</h3>
+                        <h3 class="stage-title">High-quality Poster Fine-tuning</h3>
                         <div class="stage-subtitle">Stage 2 • Visual Enhancement</div>
                     </div>
                 </div>
@@ -296,7 +296,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🎯</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Aesthetic-Text Reinforcement</h3>
+                        <h3 class="stage-title">Aesthetic-Text Reinforcement Learning</h3>
                         <div class="stage-subtitle">Stage 3 • Intelligent Alignment</div>
                     </div>
                 </div>
@@ -307,7 +307,7 @@ title: PosterCraft - AI Poster Generation
                 <div class="stage-header">
                     <div class="stage-icon">🔄</div>
                     <div class="stage-info">
-                        <h3 class="stage-title">Vision-Language Feedback</h3>
+                        <h3 class="stage-title">Vision-Language Feedback Refinement</h3>
                         <div class="stage-subtitle">Stage 4 • Iterative Refinement</div>
                     </div>
                 </div>

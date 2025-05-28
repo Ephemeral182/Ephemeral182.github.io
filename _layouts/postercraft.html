@@ -1769,22 +1769,110 @@
             66% { transform: translateY(4px) rotate(-3deg); }
         }
         
-        /* Gallery Masonry Layout */
+        /* Gallery Masonry Layout - 修改为左大右小的矩形布局 */
         .gallery-masonry-row {
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: flex-start; /* 改为顶部对齐 */
             gap: 1.5rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
+            max-width: 1000px; /* 限制最大宽度 */
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .gallery-row-one {
-            margin-bottom: 3rem;
+        /* 新增：左右分组容器 */
+        .gallery-left-group {
+            display: flex;
+            justify-content: center;
         }
         
-        .gallery-row-two {
-            margin-bottom: 4rem;
+        .gallery-right-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: space-between;
+        }
+        
+        /* 重新定义尺寸 - 基于320px基准宽度计算 */
+        .gallery-size-main {
+            width: 320px; /* 主图宽度 */
+        }
+        
+        .gallery-size-sub {
+            width: 160px; /* 副图宽度，正好是主图的一半 */
+        }
+        
+        /* 移除原有的large/medium/small尺寸定义，使用新的main/sub */
+        .gallery-size-large,
+        .gallery-size-medium, 
+        .gallery-size-small {
+            /* 保留作为备用，但主要使用main/sub */
+            width: 200px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 1200px) {
+            .gallery-size-main {
+                width: 280px;
+            }
+            
+            .gallery-size-sub {
+                width: 140px;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .gallery-masonry-row {
+                gap: 1rem;
+                max-width: 800px;
+            }
+            
+            .gallery-size-main {
+                width: 240px;
+            }
+            
+            .gallery-size-sub {
+                width: 120px;
+            }
+            
+            .gallery-right-group {
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-masonry-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .gallery-right-group {
+                flex-direction: row;
+                gap: 1rem;
+                justify-content: center;
+            }
+            
+            .gallery-size-main {
+                width: 200px;
+            }
+            
+            .gallery-size-sub {
+                width: 140px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-size-main,
+            .gallery-size-sub {
+                width: 180px;
+            }
+            
+            .gallery-right-group {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
         }
         
         /* Gallery Poster Items - 832:1216 比例 */
@@ -1824,19 +1912,6 @@
         .gallery-poster-item:hover img {
             transform: scale(1.08);
             filter: brightness(1.1) contrast(1.2);
-        }
-        
-        /* 不同尺寸 - 只改变宽度，高度自动按比例计算 */
-        .gallery-size-large {
-            width: 260px; /* 大尺寸 */
-        }
-        
-        .gallery-size-medium {
-            width: 200px; /* 中等尺寸 */
-        }
-        
-        .gallery-size-small {
-            width: 160px; /* 小尺寸 */
         }
         
         /* Gallery Poster Overlay */

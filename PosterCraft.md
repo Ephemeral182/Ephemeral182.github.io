@@ -25,8 +25,6 @@ title: PosterCraft - AI Poster Generation
 
 <div class="hero">
     <div class="hero-content">
-        <div class="hero-badge">🚀 AI-Powered Creative Platform</div>
-        
         <!-- 主标题区域：PosterCraft + Logo -->
         <div class="title-logo-section">
             <h1 class="hero-title">PosterCraft</h1>
@@ -40,19 +38,12 @@ title: PosterCraft - AI Poster Generation
             </div>
         </div>
         
-        <!-- Paper信息 - 小字体 -->
+        <!-- Paper信息 - 增大字体 -->
         <div class="paper-info-small">
             <h3 class="paper-title-small">
                 Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework
             </h3>
             <div class="paper-badge-small">📄 Research Paper</div>
-        </div>
-        
-        <p class="hero-subtitle">Next-generation AI poster generation platform that makes creativity limitless. Create professional-grade poster designs with cutting-edge artificial intelligence technology in just one click.</p>
-        
-        <div class="hero-cta">
-            <a href="#demo" class="btn btn-primary">Start Creating</a>
-            <a href="#features" class="btn btn-secondary">Learn More</a>
         </div>
         
         <!-- 论文链接 -->

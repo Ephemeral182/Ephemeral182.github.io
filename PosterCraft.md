@@ -328,6 +328,13 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Enigmatic Presence</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo15.png" alt="Mysterious Hooded Figure">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Dark Fantasy</div>
+                        <div class="gallery-poster-title">Enigmatic Presence</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 3: Stack of images -->
@@ -355,6 +362,13 @@ title: PosterCraft - AI Poster Generation
                 </div>
                 <div class="gallery-poster-item">
                     <img src="/images/postercraft/gallery/gallery_demo11.png" alt="Fantasy Forest Spirit">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Mythical</div>
+                        <div class="gallery-poster-title">Forest Guardian</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo13.png" alt="Fantasy Forest Spirit">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Mythical</div>
                         <div class="gallery-poster-title">Forest Guardian</div>

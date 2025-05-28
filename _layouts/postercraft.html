@@ -1670,7 +1670,7 @@
             }
         }
         
-        /* Platform Gallery Showcase - 全新独立样式 */
+        /* Platform Gallery Showcase - 紧凑填满布局 */
         .platform-gallery-showcase {
             padding: 8rem 0;
             background: linear-gradient(135deg, 
@@ -1769,22 +1769,38 @@
             66% { transform: translateY(4px) rotate(-3deg); }
         }
         
-        /* Gallery Masonry Layout */
-        .gallery-masonry-row {
+        /* 紧凑行布局 */
+        .gallery-compact-row {
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
             gap: 1.5rem;
             margin-bottom: 2rem;
-            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
         }
         
-        .gallery-row-one {
-            margin-bottom: 3rem;
-        }
-        
+        .gallery-row-one,
         .gallery-row-two {
+            margin-bottom: 2rem;
+        }
+        
+        .gallery-row-three {
             margin-bottom: 4rem;
+        }
+        
+        /* 左右分区布局 */
+        .gallery-left-section,
+        .gallery-right-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        /* 三张平铺布局 */
+        .gallery-triple-section {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            width: 100%;
         }
         
         /* Gallery Poster Items - 832:1216 比例 */
@@ -1826,17 +1842,17 @@
             filter: brightness(1.1) contrast(1.2);
         }
         
-        /* 不同尺寸 - 只改变宽度，高度自动按比例计算 */
-        .gallery-size-large {
-            width: 260px; /* 大尺寸 */
+        /* 精确计算的尺寸 - 确保填满空间 */
+        .gallery-size-hero {
+            width: 320px; /* 大海报 */
+        }
+        
+        .gallery-size-compact {
+            width: 200px; /* 紧凑海报，两张垂直排列时的高度正好匹配大海报 */
         }
         
         .gallery-size-medium {
-            width: 200px; /* 中等尺寸 */
-        }
-        
-        .gallery-size-small {
-            width: 160px; /* 小尺寸 */
+            width: 240px; /* 中等海报，三张平铺 */
         }
         
         /* Gallery Poster Overlay */
@@ -1938,53 +1954,61 @@
         
         /* 响应式设计 */
         @media (max-width: 1200px) {
-            .gallery-size-large {
-                width: 220px;
+            .gallery-size-hero {
+                width: 280px;
             }
             
-            .gallery-size-medium {
+            .gallery-size-compact {
                 width: 180px;
             }
             
-            .gallery-size-small {
-                width: 140px;
+            .gallery-size-medium {
+                width: 200px;
             }
         }
         
         @media (max-width: 1024px) {
-            .gallery-masonry-row {
+            .gallery-compact-row {
                 gap: 1rem;
             }
             
-            .gallery-size-large {
-                width: 200px;
+            .gallery-size-hero {
+                width: 240px;
             }
             
-            .gallery-size-medium {
+            .gallery-size-compact {
                 width: 160px;
             }
             
-            .gallery-size-small {
-                width: 130px;
+            .gallery-size-medium {
+                width: 180px;
             }
         }
         
         @media (max-width: 768px) {
-            .gallery-masonry-row {
+            .gallery-compact-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+            }
+            
+            .gallery-left-section,
+            .gallery-right-section {
+                flex-direction: row;
                 justify-content: center;
                 gap: 1rem;
             }
             
-            .gallery-size-large {
-                width: 180px;
+            .gallery-triple-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
             }
             
+            .gallery-size-hero,
+            .gallery-size-compact,
             .gallery-size-medium {
-                width: 150px;
-            }
-            
-            .gallery-size-small {
-                width: 120px;
+                width: 200px;
             }
             
             .gallery-stats-section {
@@ -1997,16 +2021,16 @@
                 padding: 4rem 0;
             }
             
-            .gallery-masonry-row {
+            .gallery-left-section,
+            .gallery-right-section {
                 flex-direction: column;
                 align-items: center;
-                gap: 1.5rem;
             }
             
-            .gallery-size-large,
-            .gallery-size-medium,
-            .gallery-size-small {
-                width: 200px;
+            .gallery-size-hero,
+            .gallery-size-compact,
+            .gallery-size-medium {
+                width: 180px;
             }
             
             .gallery-stats-section {

@@ -229,118 +229,82 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
-<div class="platform-gallery-showcase" id="gallery">
-    <div class="gallery-showcase-container">
-        <div class="gallery-header">
-            <h2 class="gallery-main-title">Platform Gallery</h2>
-            <div class="gallery-emoji">🎭</div>
-            <p class="gallery-main-subtitle">Discover endless creative possibilities across diverse artistic styles and themes</p>
+<div class="simple-gallery-section" id="gallery">
+    <div class="simple-gallery-container">
+        <div class="simple-gallery-header">
+            <h2 class="simple-gallery-title">Platform Gallery 🎭</h2>
+            <p class="simple-gallery-subtitle">Discover endless creative possibilities across diverse artistic styles and themes</p>
         </div>
         
-        <!-- 第一行：左大右二小的布局 -->
-        <div class="gallery-compact-row gallery-row-one">
-            <div class="gallery-left-section">
-                <div class="gallery-poster-item gallery-size-hero">
-                    <img src="/images/postercraft/demo/demo1.png" alt="Transformers One Movie Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Action</div>
-                        <div class="gallery-poster-title">Transformers One</div>
+        <!-- 简化的第一行布局 -->
+        <div class="simple-gallery-row">
+            <div class="simple-poster-large">
+                <img src="/images/postercraft/demo/demo1.png" alt="Movie Poster 1">
+                <div class="simple-poster-info">
+                    <span class="simple-category">Action</span>
+                    <span class="simple-title">Epic Adventure</span>
+                </div>
+            </div>
+            
+            <div class="simple-poster-group">
+                <div class="simple-poster-small">
+                    <img src="/images/postercraft/demo/demo2.png" alt="Movie Poster 2">
+                    <div class="simple-poster-info">
+                        <span class="simple-category">Animation</span>
+                        <span class="simple-title">Digital Hero</span>
+                    </div>
+                </div>
+                <div class="simple-poster-small">
+                    <img src="/images/postercraft/demo/demo3.png" alt="Movie Poster 3">
+                    <div class="simple-poster-info">
+                        <span class="simple-category">Horror</span>
+                        <span class="simple-title">Dark Space</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 简化的第二行布局 -->
+        <div class="simple-gallery-row">
+            <div class="simple-poster-group">
+                <div class="simple-poster-small">
+                    <img src="/images/postercraft/demo/demo4.png" alt="Movie Poster 4">
+                    <div class="simple-poster-info">
+                        <span class="simple-category">Sci-Fi</span>
+                        <span class="simple-title">Future War</span>
+                    </div>
+                </div>
+                <div class="simple-poster-small">
+                    <img src="/images/postercraft/demo/demo5.png" alt="Movie Poster 5">
+                    <div class="simple-poster-info">
+                        <span class="simple-category">Marvel</span>
+                        <span class="simple-title">What If</span>
                     </div>
                 </div>
             </div>
             
-            <div class="gallery-right-section">
-                <div class="gallery-poster-item gallery-size-compact">
-                    <img src="/images/postercraft/demo/demo2.png" alt="Sonic Movie Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Animation</div>
-                        <div class="gallery-poster-title">Sonic Adventure</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item gallery-size-compact">
-                    <img src="/images/postercraft/demo/demo3.png" alt="Alien Romulus Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Horror</div>
-                        <div class="gallery-poster-title">Alien: Romulus</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第二行：右大左二小的布局 -->
-        <div class="gallery-compact-row gallery-row-two">
-            <div class="gallery-left-section">
-                <div class="gallery-poster-item gallery-size-compact">
-                    <img src="/images/postercraft/demo/demo4.png" alt="Star Wars Andor">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi</div>
-                        <div class="gallery-poster-title">Andor</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item gallery-size-compact">
-                    <img src="/images/postercraft/demo/demo5.png" alt="Marvel What If">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Marvel</div>
-                        <div class="gallery-poster-title">What If...?</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="gallery-right-section">
-                <div class="gallery-poster-item gallery-size-hero">
-                    <img src="/images/postercraft/demo/demo6.png" alt="Fantasy Epic Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Fantasy</div>
-                        <div class="gallery-poster-title">Mystic Realm</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 第三行：三张中等尺寸平铺 -->
-        <div class="gallery-compact-row gallery-row-three">
-            <div class="gallery-triple-section">
-                <div class="gallery-poster-item gallery-size-medium">
-                    <img src="/images/postercraft/demo/demo7.png" alt="Cyberpunk Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Cyberpunk</div>
-                        <div class="gallery-poster-title">Neon Dreams</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item gallery-size-medium">
-                    <img src="/images/postercraft/demo/demo8.png" alt="Nature Documentary">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Nature</div>
-                        <div class="gallery-poster-title">Evergreen</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item gallery-size-medium">
-                    <img src="/images/postercraft/demo/demo9.png" alt="Abstract Art">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Abstract</div>
-                        <div class="gallery-poster-title">Digital Flow</div>
-                    </div>
+            <div class="simple-poster-large">
+                <img src="/images/postercraft/demo/demo6.png" alt="Movie Poster 6">
+                <div class="simple-poster-info">
+                    <span class="simple-category">Fantasy</span>
+                    <span class="simple-title">Magic Realm</span>
                 </div>
             </div>
         </div>
         
         <!-- 统计信息 -->
-        <div class="gallery-stats-section">
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">50K+</div>
-                <div class="gallery-stat-label">Generated Posters</div>
+        <div class="simple-stats">
+            <div class="simple-stat">
+                <div class="simple-stat-number">50K+</div>
+                <div class="simple-stat-label">Generated Posters</div>
             </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">25+</div>
-                <div class="gallery-stat-label">Art Styles</div>
+            <div class="simple-stat">
+                <div class="simple-stat-number">25+</div>
+                <div class="simple-stat-label">Art Styles</div>
             </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">99.9%</div>
-                <div class="gallery-stat-label">Satisfaction Rate</div>
-            </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">24/7</div>
-                <div class="gallery-stat-label">AI Availability</div>
+            <div class="simple-stat">
+                <div class="simple-stat-number">99.9%</div>
+                <div class="simple-stat-label">Satisfaction Rate</div>
             </div>
         </div>
     </div>

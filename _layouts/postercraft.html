@@ -3635,6 +3635,318 @@
                 font-size: 0.85rem;
             }
         }
+
+        /* Text Optimization Showcase Section */
+        .text-optimization-showcase {
+            padding: 8rem 0;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .optimization-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .optimization-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .optimization-title {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, 
+                #667eea 0%, 
+                #764ba2 20%, 
+                #f093fb 40%, 
+                #f5576c 60%, 
+                #4facfe 80%, 
+                #00f2fe 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: techGradientFlow 8s ease-in-out infinite;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .optimization-emoji {
+            font-size: 3rem;
+            margin: 1rem 0;
+            display: inline-block;
+            animation: techEmojiPulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+
+        .optimization-subtitle {
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* 对比网格 */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .comparison-item {
+            position: relative;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.8) 0%, 
+                rgba(30, 41, 59, 0.6) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .comparison-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 60px rgba(99, 102, 241, 0.3);
+        }
+
+        /* 图片容器 */
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .before-image,
+        .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .before-image {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .after-image {
+            opacity: 0;
+            transform: scale(1.05);
+        }
+
+        /* Hover效果 */
+        .comparison-card:hover .before-image {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+
+        .comparison-card:hover .after-image {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* 标签 */
+        .overlay-label {
+            position: absolute;
+            top: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .before-label {
+            left: 1rem;
+            background: rgba(239, 68, 68, 0.8);
+            color: white;
+            opacity: 1;
+        }
+
+        .after-label {
+            right: 1rem;
+            background: rgba(34, 197, 94, 0.8);
+            color: white;
+            opacity: 0;
+        }
+
+        .comparison-card:hover .before-label {
+            opacity: 0;
+        }
+
+        .comparison-card:hover .after-label {
+            opacity: 1;
+        }
+
+        /* 分割线效果 */
+        .comparison-divider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.8) 20%, 
+                rgba(255, 255, 255, 0.8) 80%, 
+                transparent 100%);
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .comparison-card:hover .comparison-divider {
+            opacity: 1;
+        }
+
+        /* 信息区域 */
+        .comparison-info {
+            padding: 2rem;
+        }
+
+        .comparison-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(45deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .comparison-description {
+            color: #94a3b8;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* 统计信息 */
+        .optimization-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            min-width: 200px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: #94a3b8;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .comparison-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+            }
+            
+            .optimization-stats {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .text-optimization-showcase {
+                padding: 4rem 0;
+            }
+            
+            .comparison-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .optimization-stats {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+            
+            .stat-card {
+                min-width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comparison-info {
+                padding: 1.5rem;
+            }
+            
+            .image-container {
+                height: 250px;
+            }
+            
+            .stat-card {
+                min-width: 200px;
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>

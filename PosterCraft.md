@@ -365,6 +365,107 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
+<!-- 新增：Text Optimization 效果展示部分 -->
+<div class="text-optimization-showcase" id="text-optimization">
+    <div class="optimization-container">
+        <div class="optimization-header">
+            <h2 class="optimization-title">Text Optimization Results</h2>
+            <div class="optimization-emoji">✨</div>
+            <p class="optimization-subtitle">Experience the dramatic improvement in text rendering quality and aesthetic appeal</p>
+        </div>
+        
+        <!-- 对比展示网格 -->
+        <div class="comparison-grid">
+            <!-- 对比项目 1 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo1.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo2.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Ocean Conservation Poster</h3>
+                        <p class="comparison-description">Enhanced text clarity and visual hierarchy for environmental awareness campaign</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对比项目 2 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo3.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo4.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Film Festival Poster</h3>
+                        <p class="comparison-description">Improved typography balance and readability for cinematic presentation</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对比项目 3 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo5.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo6.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Tech Conference Poster</h3>
+                        <p class="comparison-description">Optimized text rendering for professional corporate communication</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 对比项目 4 -->
+            <div class="comparison-item">
+                <div class="comparison-card">
+                    <div class="image-container">
+                        <img src="/images/postercraft/demo/demo7.png" alt="Before Optimization" class="before-image">
+                        <img src="/images/postercraft/demo/demo8.png" alt="After Optimization" class="after-image">
+                        <div class="overlay-label before-label">Before</div>
+                        <div class="overlay-label after-label">After</div>
+                        <div class="comparison-divider"></div>
+                    </div>
+                    <div class="comparison-info">
+                        <h3 class="comparison-title">Music Event Poster</h3>
+                        <p class="comparison-description">Enhanced artistic typography for creative industry applications</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 统计信息 -->
+        <div class="optimization-stats">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Text Clarity Improvement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number">87%</div>
+                <div class="stat-label">Readability Enhancement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✨</div>
+                <div class="stat-number">92%</div>
+                <div class="stat-label">Aesthetic Quality Boost</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="platform-gallery-showcase" id="gallery">
     <div class="gallery-showcase-container">
         <div class="gallery-header">

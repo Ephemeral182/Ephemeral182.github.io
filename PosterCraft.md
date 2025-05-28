@@ -256,10 +256,18 @@ title: PosterCraft - AI Poster Generation
                         <div class="gallery-poster-title">Digital Guardian</div>
                     </div>
                 </div>
+                <!-- 新增图片以填补第一行右侧空白 -->
+                <div class="gallery-poster-item gallery-size-sub">
+                    <img src="/images/postercraft/demo/demo6.png" alt="Abstract Cosmic Swirl">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Abstract</div>
+                        <div class="gallery-poster-title">Cosmic Swirl</div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <!-- 第二行：不同的尺寸组合 -->
+        <!-- 第二行：不同的尺寸组合 - 增加到五个小图以提高密度 -->
         <div class="gallery-masonry-row gallery-row-two">
             <div class="gallery-poster-item gallery-size-sub">
                 <img src="/images/postercraft/demo/demo3.png" alt="Crystal Lotus Art">
@@ -282,6 +290,21 @@ title: PosterCraft - AI Poster Generation
                 <div class="gallery-poster-overlay">
                     <div class="gallery-poster-category">Portrait</div>
                     <div class="gallery-poster-title">Shadow Walker</div>
+                </div>
+            </div>
+            <!-- 新增的两个小图 -->
+            <div class="gallery-poster-item gallery-size-sub">
+                <img src="/images/postercraft/demo/demo7.png" alt="Fantasy Forest Spirit">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Fantasy</div>
+                    <div class="gallery-poster-title">Forest Spirit</div>
+                </div>
+            </div>
+            <div class="gallery-poster-item gallery-size-sub">
+                <img src="/images/postercraft/demo/demo8.png" alt="Sci-Fi Crystal Entity">
+                <div class="gallery-poster-overlay">
+                    <div class="gallery-poster-category">Sci-Fi Art</div>
+                    <div class="gallery-poster-title">Crystal Entity</div>
                 </div>
             </div>
         </div>

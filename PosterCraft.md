@@ -90,7 +90,7 @@ title: PosterCraft - AI Poster Generation
             <!-- Paper信息卡片 -->
             <div class="paper-info-card">
                 <div class="paper-badge">📄 Research Paper</div>
-                <h3 class="paper-title">PosterCraft: Aesthetic Poster Generation</h3>
+                <h3 class="paper-title">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
                 <p class="paper-subtitle">Advanced AI-Powered Creative Platform for Professional Poster Design</p>
                 
                 <!-- 链接按钮组 -->
@@ -111,31 +111,6 @@ title: PosterCraft - AI Poster Generation
                         <div class="link-icon">🎥</div>
                         <span>Demo Video</span>
                     </a>
-                </div>
-                
-                <!-- 展示统计条 -->
-                <div class="showcase-stats">
-                    <div class="stat-bar">
-                        <div class="stat-label">Model Performance</div>
-                        <div class="stat-progress">
-                            <div class="stat-fill" data-percentage="95"></div>
-                        </div>
-                        <div class="stat-value">95%</div>
-                    </div>
-                    <div class="stat-bar">
-                        <div class="stat-label">User Satisfaction</div>
-                        <div class="stat-progress">
-                            <div class="stat-fill" data-percentage="98"></div>
-                        </div>
-                        <div class="stat-value">98%</div>
-                    </div>
-                    <div class="stat-bar">
-                        <div class="stat-label">Generation Speed</div>
-                        <div class="stat-progress">
-                            <div class="stat-fill" data-percentage="92"></div>
-                        </div>
-                        <div class="stat-value">92%</div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -2659,7 +2659,6 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            margin-bottom: 2.5rem;
         }
 
         .paper-link {
@@ -2729,56 +2728,6 @@
             height: 32px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
-        }
-
-        /* 展示统计条 */
-        .showcase-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .stat-bar {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #a5b4fc;
-            min-width: 120px;
-        }
-
-        .stat-progress {
-            flex: 1;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .stat-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
-            border-radius: 4px;
-            transition: width 2s ease;
-            animation: statFillAnimation 3s ease-in-out infinite;
-        }
-
-        .stat-value {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #ffffff;
-            min-width: 40px;
-            text-align: right;
-        }
-
-        @keyframes statFillAnimation {
-            0%, 100% { opacity: 0.8; }
-            50% { opacity: 1; box-shadow: 0 0 20px rgba(99, 102, 241, 0.5); }
         }
 
         /* 响应式设计 */

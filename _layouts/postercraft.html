@@ -3424,28 +3424,15 @@
             gap: 1.5rem;
             margin-bottom: 1rem;
             /* 添加悬浮效果 */
-            background: linear-gradient(135deg, 
-                rgba(255, 255, 255, 0.05) 0%, 
-                rgba(255, 255, 255, 0.02) 50%, 
-                rgba(255, 255, 255, 0.05) 100%);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 1.5rem 2rem;
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             animation: sectionFloat 4s ease-in-out infinite;
         }
 
         @keyframes sectionFloat {
             0%, 100% { 
                 transform: translateY(0px);
-                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             }
             50% { 
                 transform: translateY(-5px);
-                box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
             }
         }
 
@@ -3501,18 +3488,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-top: 2rem;
-            /* 添加强调效果 */
-            background: linear-gradient(135deg, 
-                rgba(99, 102, 241, 0.08) 0%, 
-                rgba(139, 92, 246, 0.05) 50%, 
-                rgba(236, 72, 153, 0.08) 100%);
-            backdrop-filter: blur(25px);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 20px;
-            padding: 1.5rem;
-            box-shadow: 
-                0 12px 40px rgba(99, 102, 241, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -3553,7 +3528,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-            z-index: 2; /* 确保在背景光晕之上 */
         }
 
         .link-shine {
@@ -3623,12 +3597,10 @@
             .title-logo-section {
                 align-items: center;
                 text-align: center;
-                padding: 1rem 1.5rem;
             }
             
             .paper-links-enhanced {
                 grid-template-columns: 1fr;
-                padding: 1rem;
             }
             
             .inline-logo {
@@ -3644,7 +3616,6 @@
             .title-logo-section {
                 flex-direction: column;
                 gap: 0.8rem;
-                padding: 1rem;
             }
             
             .inline-logo {
@@ -3657,7 +3628,6 @@
             
             .paper-links-enhanced {
                 gap: 0.8rem;
-                padding: 0.8rem;
             }
             
             .paper-link-fancy {

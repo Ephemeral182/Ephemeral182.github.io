@@ -384,7 +384,6 @@ title: PosterCraft - AI Poster Generation
                         <img src="/images/postercraft/text_opt/demo1_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Ocean Conservation Poster</h3>
@@ -401,7 +400,6 @@ title: PosterCraft - AI Poster Generation
                         <img src="/images/postercraft/text_opt/demo2_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Film Festival Poster</h3>
@@ -418,7 +416,6 @@ title: PosterCraft - AI Poster Generation
                         <img src="/images/postercraft/text_opt/demo3_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Library Archives Poster</h3>
@@ -435,7 +432,6 @@ title: PosterCraft - AI Poster Generation
                         <img src="/images/postercraft/text_opt/demo5_after.png" alt="After Optimization" class="after-image">
                         <div class="overlay-label before-label">Before</div>
                         <div class="overlay-label after-label">After</div>
-                        <div class="comparison-divider"></div>
                     </div>
                     <div class="comparison-info">
                         <h3 class="comparison-title">Grey's Anatomy Poster</h3>

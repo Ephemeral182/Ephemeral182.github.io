@@ -30,7 +30,7 @@ title: PosterCraft - AI Poster Generation
             <h1 class="hero-title">PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
-                <img src="/images/postercraft/logo/logo1_final.png" alt="PosterCraft Logo" class="main-logo-inline">
+                <img src="/images/postercraft/logo/logo_final.png" alt="PosterCraft Logo" class="main-logo-inline">
                 <div class="logo-sparkles-inline">
                     <span class="logo-sparkle logo-sparkle-1">✨</span>
                     <span class="logo-sparkle logo-sparkle-2">⭐</span>

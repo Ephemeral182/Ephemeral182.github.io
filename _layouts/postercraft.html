@@ -3400,25 +3400,53 @@
             background-clip: text;
             line-height: 1.3;
             position: relative;
-            text-shadow: 0 0 30px rgba(226, 232, 240, 0.3);
+            /* 移除流光特效，改为悬浮效果 */
+            filter: drop-shadow(0 4px 12px rgba(226, 232, 240, 0.3));
+            animation: titleFloat 3s ease-in-out infinite;
         }
 
-        /* 添加动态光效到标题 */
-        .paper-title-main::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            animation: titleShine 3s ease-in-out infinite;
+        /* 添加悬浮动画 */
+        @keyframes titleFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                filter: drop-shadow(0 4px 12px rgba(226, 232, 240, 0.3));
+            }
+            50% { 
+                transform: translateY(-3px);
+                filter: drop-shadow(0 8px 20px rgba(226, 232, 240, 0.4));
+            }
         }
 
-        @keyframes titleShine {
-            0% { left: -100%; }
-            50% { left: 100%; }
-            100% { left: 100%; }
+        /* 标题和Logo区域整体悬浮效果 */
+        .title-logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            /* 添加悬浮效果 */
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.05) 0%, 
+                rgba(255, 255, 255, 0.02) 50%, 
+                rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 1.5rem 2rem;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: sectionFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes sectionFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+            50% { 
+                transform: translateY(-5px);
+                box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            }
         }
 
         .paper-badge-fancy {
@@ -3438,6 +3466,7 @@
             overflow: hidden;
         }
 
+        /* 保留badge的流光效果，因为它比较小 */
         .paper-badge-fancy::before {
             content: '';
             position: absolute;
@@ -3466,12 +3495,45 @@
             100% { left: 100%; }
         }
 
-        /* 增强版论文链接样式 */
+        /* 增强版论文链接样式 - 强调效果 */
         .paper-links-enhanced {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-top: 2rem;
+            /* 添加强调效果 */
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.08) 0%, 
+                rgba(139, 92, 246, 0.05) 50%, 
+                rgba(236, 72, 153, 0.08) 100%);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 
+                0 12px 40px rgba(99, 102, 241, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 添加强调的光晕效果 */
+        .paper-links-enhanced::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, 
+                rgba(99, 102, 241, 0.1) 0%, 
+                transparent 70%);
+            animation: linksGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes linksGlow {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
         }
 
         .paper-link-fancy {
@@ -3479,8 +3541,8 @@
             align-items: center;
             gap: 0.75rem;
             padding: 1rem 1.5rem;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 16px;
             color: #ffffff;
             text-decoration: none;
@@ -3490,7 +3552,8 @@
             backdrop-filter: blur(20px);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            z-index: 2; /* 确保在背景光晕之上 */
         }
 
         .link-shine {
@@ -3509,7 +3572,7 @@
 
         .paper-link-fancy:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             border-color: rgba(255, 255, 255, 0.4);
         }
 
@@ -3520,39 +3583,39 @@
             justify-content: center;
             width: 32px;
             height: 32px;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
             border-radius: 10px;
             transition: all 0.3s ease;
         }
 
         .paper-link-fancy:hover .link-icon-fancy {
             transform: scale(1.1) rotate(5deg);
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.15));
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
         }
 
-        /* 特定链接的hover效果 */
+        /* 特定链接的hover效果 - 增强版 */
         .arxiv-link:hover {
-            background: linear-gradient(135deg, rgba(255, 87, 51, 0.2), rgba(255, 87, 51, 0.1));
-            border-color: rgba(255, 87, 51, 0.5);
-            box-shadow: 0 12px 40px rgba(255, 87, 51, 0.3);
+            background: linear-gradient(135deg, rgba(255, 87, 51, 0.25), rgba(255, 87, 51, 0.15));
+            border-color: rgba(255, 87, 51, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 87, 51, 0.4);
         }
 
         .github-link:hover {
-            background: linear-gradient(135deg, rgba(36, 41, 46, 0.8), rgba(36, 41, 46, 0.6));
-            border-color: rgba(255, 255, 255, 0.4);
-            box-shadow: 0 12px 40px rgba(36, 41, 46, 0.4);
+            background: linear-gradient(135deg, rgba(36, 41, 46, 0.9), rgba(36, 41, 46, 0.7));
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 12px 40px rgba(36, 41, 46, 0.5);
         }
 
         .huggingface-link:hover {
-            background: linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(255, 204, 0, 0.1));
-            border-color: rgba(255, 204, 0, 0.5);
-            box-shadow: 0 12px 40px rgba(255, 204, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 204, 0, 0.25), rgba(255, 204, 0, 0.15));
+            border-color: rgba(255, 204, 0, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 204, 0, 0.4);
         }
 
         .video-link:hover {
-            background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.1));
-            border-color: rgba(255, 0, 0, 0.5);
-            box-shadow: 0 12px 40px rgba(255, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.25), rgba(255, 0, 0, 0.15));
+            border-color: rgba(255, 0, 0, 0.6);
+            box-shadow: 0 12px 40px rgba(255, 0, 0, 0.4);
         }
 
         /* 响应式设计更新 */
@@ -3560,10 +3623,12 @@
             .title-logo-section {
                 align-items: center;
                 text-align: center;
+                padding: 1rem 1.5rem;
             }
             
             .paper-links-enhanced {
                 grid-template-columns: 1fr;
+                padding: 1rem;
             }
             
             .inline-logo {
@@ -3579,6 +3644,7 @@
             .title-logo-section {
                 flex-direction: column;
                 gap: 0.8rem;
+                padding: 1rem;
             }
             
             .inline-logo {
@@ -3591,6 +3657,7 @@
             
             .paper-links-enhanced {
                 gap: 0.8rem;
+                padding: 0.8rem;
             }
             
             .paper-link-fancy {

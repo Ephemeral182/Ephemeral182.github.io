@@ -425,23 +425,61 @@ title: PosterCraft - AI Poster Generation
                     
                     <div class="dataset-visual">
                         <div class="visual-frame hq-poster-frame">
-                            <div class="poster-showcase">
-                                <div class="poster-item featured">
-                                    <img src="/images/postercraft/datasets/hq_poster_main.png" alt="Featured HQ Poster">
-                                    <div class="quality-badge">HQ</div>
+                            <div class="hq-poster-showcase">
+                                <!-- 第一组：Demo 1 -->
+                                <div class="poster-group">
+                                    <div class="group-label">Demo 1</div>
+                                    <div class="poster-triplet">
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo1_text.png" alt="Demo 1 Text">
+                                            <div class="item-label">Text</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_minor.png" alt="Demo 1 Mask Minor">
+                                            <div class="item-label">Mask Minor</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo1_mask_large.png" alt="Demo 1 Mask Large">
+                                            <div class="item-label">Mask Large</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="poster-grid-small">
-                                    <div class="poster-mini">
-                                        <img src="images/postercraft/dataset/sft_data/demo1.png" alt="HQ Poster 1">
+                                
+                                <!-- 第二组：Demo 2 -->
+                                <div class="poster-group">
+                                    <div class="group-label">Demo 2</div>
+                                    <div class="poster-triplet">
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo2_text.png" alt="Demo 2 Text">
+                                            <div class="item-label">Text</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo2_mask_minor.png" alt="Demo 2 Mask Minor">
+                                            <div class="item-label">Mask Minor</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo2_mask_large.png" alt="Demo 2 Mask Large">
+                                            <div class="item-label">Mask Large</div>
+                                        </div>
                                     </div>
-                                    <div class="poster-mini">
-                                        <img src="/images/postercraft/datasets/hq_poster_2.png" alt="HQ Poster 2">
-                                    </div>
-                                    <div class="poster-mini">
-                                        <img src="/images/postercraft/datasets/hq_poster_3.png" alt="HQ Poster 3">
-                                    </div>
-                                    <div class="poster-mini">
-                                        <img src="/images/postercraft/datasets/hq_poster_4.png" alt="HQ Poster 4">
+                                </div>
+                                
+                                <!-- 第三组：Demo 3 -->
+                                <div class="poster-group">
+                                    <div class="group-label">Demo 3</div>
+                                    <div class="poster-triplet">
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo3_text.png" alt="Demo 3 Text">
+                                            <div class="item-label">Text</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo3_mask_minor.png" alt="Demo 3 Mask Minor">
+                                            <div class="item-label">Mask Minor</div>
+                                        </div>
+                                        <div class="poster-item-small">
+                                            <img src="/images/postercraft/dataset/sft_data/demo3_mask_large.png" alt="Demo 3 Mask Large">
+                                            <div class="item-label">Mask Large</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

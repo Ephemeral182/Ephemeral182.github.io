@@ -5761,6 +5761,265 @@
                 padding: 1rem;
             }
         }
+
+        /* Dataset Showcase - 调整宽度 */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        .ds-container {
+            max-width: 1100px; /* 从1400px减少到1100px */
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Smooth Sliding Carousel Navigation */
+        .ds-tab-navigation {
+            position: relative;
+            overflow: hidden;
+            height: 120px;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ds-tab-carousel {
+            display: flex;
+            align-items: center;
+            gap: 6rem; /* 从8rem减少到6rem，让间距更紧凑 */
+            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            width: max-content;
+            will-change: transform;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 1.5rem; /* 从2rem减少到1.5rem，减少按钮内边距 */
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem); /* 稍微减小字体 */
+            font-weight: 700;
+            color: #666666;
+            cursor: pointer;
+            transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+            white-space: nowrap;
+            opacity: 0.25;
+            transform: scale(0.7);
+            filter: blur(1.5px);
+        }
+
+        /* Center item styling */
+        .ds-tab-button.center {
+            opacity: 1;
+            transform: scale(1.1); /* 从1.15减少到1.1 */
+            filter: blur(0px);
+            z-index: 10;
+        }
+
+        .ds-tab-button.center .ds-tab-text {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
+        }
+
+        /* Adjacent items (one step away) */
+        .ds-tab-button.adjacent-1 {
+            opacity: 0.6;
+            transform: scale(0.85);
+            filter: blur(0.5px);
+            color: #888888;
+        }
+
+        /* Far items (two steps away) */
+        .ds-tab-button.adjacent-2 {
+            opacity: 0.3;
+            transform: scale(0.7);
+            filter: blur(1px);
+            color: #555555;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+            transition: all 1s ease;
+        }
+
+        /* 简化的渐变遮罩 */
+        .ds-tab-navigation::before,
+        .ds-tab-navigation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px; /* 从120px减少到100px */
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .ds-tab-navigation::before {
+            left: 0;
+            background: linear-gradient(90deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 100%);
+        }
+
+        .ds-tab-navigation::after {
+            right: 0;
+            background: linear-gradient(270deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 100%);
+        }
+
+        /* Main Display Area - 调整宽度 */
+        .ds-main-display-area {
+            background: rgba(17, 17, 17, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            max-width: 900px; /* 新增：限制最大宽度 */
+            margin: 0 auto; /* 新增：居中显示 */
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 450px; /* 从500px减少到450px */
+            overflow: hidden;
+        }
+
+        .ds-dataset-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+            pointer-events: none;
+        }
+
+        .ds-dataset-content.active {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: auto;
+            position: relative;
+        }
+
+        .ds-dataset-content.prev {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        .ds-dataset-content.next {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .ds-image-grid {
+            margin-bottom: 1.5rem; /* 从2rem减少到1.5rem */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(10, 10, 10, 0.3);
+            min-height: 350px; /* 从400px减少到350px */
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 60vh; /* 从70vh减少到60vh */
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 700px; /* 从800px减少到700px */
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 1.8rem; /* 从2rem减少到1.8rem */
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1rem; /* 从1.1rem减少到1rem */
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-container {
+                max-width: 900px; /* 对应调整 */
+            }
+            
+            .ds-tab-carousel {
+                gap: 4rem; /* 从5rem减少到4rem */
+            }
+            
+            .ds-main-display-area {
+                max-width: 750px; /* 对应调整 */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-container {
+                max-width: 100%;
+            }
+            
+            .ds-main-display-area {
+                max-width: 100%;
+                padding: 1.5rem;
+                background: rgba(17, 17, 17, 0.8);
+            }
+            
+            .ds-tab-carousel {
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-tab-carousel {
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -6234,6 +6493,36 @@
             
             console.log("Infinite Dataset Carousel initialized!");
         });
+
+        function updateCarouselPosition(offset) {
+            const centerOffset = -4 * 6; // 改为6rem间距，从8改为6
+            const totalOffset = centerOffset + offset;
+            carousel.style.transform = `translateX(calc(50% + ${totalOffset}rem))`;
+        }
+
+        function slideToIndex(targetIndex, clickedPosition) {
+            if (isAnimating || targetIndex === currentIndex) return;
+            
+            isAnimating = true;
+            
+            // 计算滑动距离
+            const slideDistance = -clickedPosition * 6; // 改为6rem间距，从8改为6
+            
+            // 执行滑动动画
+            updateCarouselPosition(slideDistance);
+            
+            // 更新当前索引
+            currentIndex = targetIndex;
+            
+            // 更新内容显示
+            updateContent(currentIndex);
+            
+            // 动画完成后重新生成按钮
+            setTimeout(() => {
+                createInfiniteButtons();
+                isAnimating = false;
+            }, 1200);
+        }
     </script>
 </body>
 </html>

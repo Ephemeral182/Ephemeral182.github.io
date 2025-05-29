@@ -275,11 +275,11 @@ title: PosterCraft - AI Poster Generation
 
         <!-- Tab Navigation - Leonardo.ai Style -->
         <div class="ds-tab-navigation">
-            <button class="ds-tab-button active" data-dataset="0">
+            <button class="ds-tab-button" data-dataset="0">
                 <span class="ds-tab-text">Text-Render-2M</span>
             </button>
-            <button class="ds-tab-button" data-dataset="1">
-                <span class="ds-tab-text highlight">HQ-Poster-100K</span>
+            <button class="ds-tab-button active" data-dataset="1">
+                <span class="ds-tab-text">HQ-Poster-100K</span>
             </button>
             <button class="ds-tab-button" data-dataset="2">
                 <span class="ds-tab-text">Poster-Preference-100K</span>
@@ -293,7 +293,7 @@ title: PosterCraft - AI Poster Generation
         <div class="ds-main-display-area">
             <div class="ds-content-wrapper">
                 <!-- Dataset Content -->
-                <div class="ds-dataset-content active" data-index="0">
+                <div class="ds-dataset-content" data-index="0">
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset" class="ds-showcase-image">
                     </div>
@@ -303,7 +303,7 @@ title: PosterCraft - AI Poster Generation
                     </div>
                 </div>
 
-                <div class="ds-dataset-content" data-index="1">
+                <div class="ds-dataset-content active" data-index="1">
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset" class="ds-showcase-image">
                     </div>

@@ -4170,6 +4170,282 @@
                 font-size: 1.4rem;
             }
         }
+
+        /* Dataset Showcase - Leonardo.ai Style with Fade Effect */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .ds-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Tab Navigation - Leonardo.ai Style with Fade Effect */
+        .ds-tab-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: nowrap;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
+            font-size: clamp(1.5rem, 4vw, 2.2rem);
+            font-weight: 700;
+            color: #555555; /* 默认灰色 */
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 0;
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+            opacity: 0.6; /* 默认半透明 */
+            filter: blur(0.5px); /* 轻微模糊效果 */
+            transform: scale(0.95); /* 轻微缩小 */
+        }
+
+        /* 两边淡化效果 */
+        .ds-tab-button:first-child,
+        .ds-tab-button:last-child {
+            opacity: 0.4;
+            filter: blur(1px);
+            transform: scale(0.9);
+        }
+
+        .ds-tab-button:nth-child(2),
+        .ds-tab-button:nth-child(3) {
+            opacity: 0.5;
+            filter: blur(0.7px);
+            transform: scale(0.92);
+        }
+
+        .ds-tab-button:hover {
+            opacity: 0.8;
+            filter: blur(0.2px);
+            transform: scale(0.98);
+        }
+
+        /* 选中状态 - 使用紫色到橙色渐变 */
+        .ds-tab-button.active {
+            opacity: 1;
+            filter: blur(0px);
+            transform: scale(1);
+            position: relative;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+
+        /* 只有选中的按钮显示渐变色 */
+        .ds-tab-button.active .ds-tab-text {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 20px rgba(192, 88, 243, 0.5));
+        }
+
+        /* 移除原来的highlight类，现在通过active状态控制 */
+        .ds-tab-text.highlight {
+            background: none;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background-clip: unset;
+            font-weight: 700;
+        }
+
+        /* 添加边缘渐变遮罩效果 */
+        .ds-tab-navigation::before,
+        .ds-tab-navigation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ds-tab-navigation::before {
+            left: 0;
+            background: linear-gradient(90deg, #0a0a0a, transparent);
+        }
+
+        .ds-tab-navigation::after {
+            right: 0;
+            background: linear-gradient(270deg, #0a0a0a, transparent);
+        }
+
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: #111111;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsFadeIn 0.5s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0a0a0a;
+            min-height: 400px;
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-navigation {
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1.2rem 1rem;
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+                padding: 0;
+            }
+            
+            .ds-tab-navigation::before,
+            .ds-tab-navigation::after {
+                display: none;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 1.5rem;
+                font-size: 1.3rem;
+                width: 100%;
+                max-width: 300px;
+                opacity: 0.7;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+            
+            .ds-tab-button:first-child,
+            .ds-tab-button:last-child,
+            .ds-tab-button:nth-child(2),
+            .ds-tab-button:nth-child(3) {
+                opacity: 0.7;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.6rem;
+            }
+            
+            .ds-description p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-tab-button {
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 <body>

@@ -4183,6 +4183,142 @@
             .ds-controls { left: 5px; right: 5px; }
             .ds-controls button { width: 36px; height: 36px; font-size: 1.3rem; }
         }
+
+        /* New Dataset Showcase Styles (Leonardo.ai inspired) */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem; /* Adjusted padding */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ds-container {
+            max-width: 1100px; /* Adjusted for content */
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header { /* Re-style if needed, or use existing */
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .ds-title { /* Re-style if needed */
+            font-size: clamp(2.8rem, 6vw, 4.5rem);
+             background: linear-gradient(135deg, #e0e0e0, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .ds-subtitle{
+            font-size: 1.2rem;
+            color: #a1a1aa; /* Light gray for subtitle */
+        }
+
+
+        .ds-main-content-area {
+            background: rgba(20, 20, 30, 0.5); /* Darker, slightly transparent backdrop */
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .ds-main-image-container {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: 12px; /* Slightly rounded corners for the image */
+            overflow: hidden; /* Ensures image respects border radius */
+            background: #08080b; /* Dark background for image if it has transparency */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px; /* Minimum height so it doesn't collapse */
+        }
+
+        #ds-main-image-display {
+            max-width: 100%;
+            max-height: 75vh; /* Allow tall images to use more vertical space */
+            height: auto;
+            object-fit: contain; /* Show entire image, scaled down */
+            display: block; /* Remove extra space below image */
+            border-radius: 8px;
+        }
+
+        .ds-main-text-container {
+            text-align: center;
+        }
+
+        #ds-main-title-display {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            color: #ffffff; /* Default title color */
+        }
+        
+        /* Style for the "Interior Design" like highlighted title */
+        #ds-main-title-display.highlight {
+            background: linear-gradient(90deg, #C058F3, #FF8A54); /* Leonardo.ai Pink/Orange gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800; /* Make it bolder */
+        }
+
+
+        #ds-main-description-display {
+            font-size: 1rem;
+            color: #b0b8c5; /* Lighter gray for description */
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .ds-thumbnail-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 1rem; /* Gap between thumbnails */
+            flex-wrap: wrap; /* Allow thumbnails to wrap on smaller screens */
+        }
+
+        .ds-thumbnail-item {
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            width: 150px; /* Thumbnail width */
+            height: 90px;  /* Thumbnail height */
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ds-thumbnail-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the thumbnail area */
+            transition: transform 0.3s ease;
+        }
+
+        .ds-thumbnail-item:hover {
+            border-color: rgba(192, 88, 243, 0.7); /* Purple/Pink hover border */
+            transform: scale(1.05);
+        }
+        .ds-thumbnail-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .ds-thumbnail-item.active {
+            border-color: #C058F3; /* Active thumbnail border - strong pink/purple */
+            box-shadow: 0 0 15px rgba(192, 88, 243, 0.5);
+        }
+        .ds-thumbnail-item.active img{
+             transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -4398,6 +4534,107 @@
                         block: 'start'
                     });
                 }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... (call to handleScrollAnimation, floatingDemos init) ...
+            console.log("DOM fully loaded and parsed for new Dataset Showcase.");
+
+            const datasetShowcaseSection = document.getElementById('dataset-showcase');
+            if (datasetShowcaseSection) {
+                console.log("Dataset Showcase Section found.");
+                const mainImageEl = document.getElementById('ds-main-image-display');
+                const mainTitleEl = document.getElementById('ds-main-title-display');
+                const mainDescriptionEl = document.getElementById('ds-main-description-display');
+                const thumbnailNavContainer = datasetShowcaseSection.querySelector('.ds-thumbnail-navigation');
+                const datasetEntries = document.querySelectorAll('#dataset-definitions .dataset-entry');
+
+                let datasets = [];
+                datasetEntries.forEach(entry => {
+                    datasets.push({
+                        imgSrc: entry.dataset.imgSrc,
+                        title: entry.dataset.title,
+                        description: entry.dataset.description
+                    });
+                });
+
+                console.log("Datasets loaded:", datasets.length, datasets);
+
+                function updateMainDisplay(index) {
+                    if (!datasets[index]) {
+                        console.error("Dataset not found for index:", index);
+                        return;
+                    }
+                    const currentData = datasets[index];
+                    
+                    if (mainImageEl) mainImageEl.src = currentData.imgSrc;
+                    if (mainImageEl) mainImageEl.alt = currentData.title + " main image";
+                    
+                    if (mainTitleEl) {
+                        mainTitleEl.textContent = currentData.title;
+                        // Apply special styling for the second title (HQ-Poster-100K) or any other logic
+                        // The Leonardo.ai "Interior Design" is the second item in their list
+                        if (index === 1) { // 0-indexed, so 1 is the second item
+                            mainTitleEl.classList.add('highlight');
+                        } else {
+                            mainTitleEl.classList.remove('highlight');
+                        }
+                    }
+                    if (mainDescriptionEl) mainDescriptionEl.textContent = currentData.description;
+
+                    // Update active state for thumbnails
+                    const currentThumbnails = thumbnailNavContainer.querySelectorAll('.ds-thumbnail-item');
+                    currentThumbnails.forEach((thumb, i) => {
+                        thumb.classList.toggle('active', i === index);
+                    });
+                }
+
+                function populateThumbnails() {
+                    if (!thumbnailNavContainer) {
+                        console.error("Thumbnail navigation container not found.");
+                        return;
+                    }
+                    thumbnailNavContainer.innerHTML = ''; // Clear existing thumbnails
+                    datasets.forEach((data, index) => {
+                        const thumbItem = document.createElement('div');
+                        thumbItem.classList.add('ds-thumbnail-item');
+                        thumbItem.dataset.index = index;
+
+                        const thumbImg = document.createElement('img');
+                        thumbImg.src = data.imgSrc; // Using main image for thumbnail as per previous setup
+                        thumbImg.alt = data.title + " thumbnail";
+                        
+                        thumbItem.appendChild(thumbImg);
+                        thumbItem.addEventListener('click', function() {
+                            updateMainDisplay(index);
+                        });
+                        thumbnailNavContainer.appendChild(thumbItem);
+                    });
+                }
+
+                if (datasets.length > 0) {
+                    populateThumbnails();
+                    updateMainDisplay(0); // Display the first dataset initially
+                } else {
+                    console.log("No dataset entries found to populate showcase.");
+                }
+            } else {
+                console.log("Dataset Showcase Section NOT found.");
+            }
+             // Smooth scroll (if not already present or if you want it self-contained here)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
         });
     </script>

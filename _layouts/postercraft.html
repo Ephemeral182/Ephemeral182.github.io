@@ -3248,7 +3248,7 @@
             border-color: rgba(255, 0, 0, 0.5);
         }
 
-        .link-icon {
+        .link-icon-hero {
             font-size: 1rem;
             display: flex;
             align-items: center;
@@ -3980,14 +3980,13 @@
 
         /* Dataset Showcase Section */
         .ds-showcase-section {
-            padding: 6rem 0 4rem;
+            padding: 6rem 0;
             position: relative;
             overflow: hidden;
-            background: #0a0a0a; /* Dark background like Leonardo.ai */
         }
 
         .ds-container {
-            max-width: 1400px;
+            max-width: 1000px; /* Adjusted for better focus */
             margin: 0 auto;
             padding: 0 1rem;
             position: relative;
@@ -3996,1528 +3995,209 @@
 
         .ds-header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* Tab Navigation - Leonardo.ai Style */
-        .ds-tab-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 0;
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-        }
-
-        .ds-tab-button:hover {
-            color: #888;
-        }
-
-        .ds-tab-button.active {
-            color: #ffffff;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Special highlight for second tab (like "Interior Design") */
-        .ds-tab-text.highlight {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: #111111;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .ds-dataset-content {
-            display: none;
-            animation: dsFadeIn 0.5s ease-in-out;
-        }
-
-        .ds-dataset-content.active {
-            display: block;
-        }
-
-        @keyframes dsFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .ds-image-grid {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #0a0a0a;
-            min-height: 400px;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .ds-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ds-description h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
+            font-size: clamp(3rem, 7vw, 5rem);
+            font-weight: 900;
             margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .ds-description p {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .ds-tab-button {
-                padding: 1.2rem 1.5rem;
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ds-tab-navigation {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-            
-            .ds-tab-button {
-                padding: 1rem 1.5rem;
-                font-size: 1.3rem;
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .ds-main-display-area {
-                padding: 1.5rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.6rem;
-            }
-            
-            .ds-description p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ds-tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 1.1rem;
-            }
-            
-            .ds-main-display-area {
-                padding: 1rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* Dataset Showcase - Leonardo.ai Style with Fade Effect */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #0a0a0a;
-        }
-
-        .ds-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .ds-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* Tab Navigation - Leonardo.ai Style with Fade Effect */
-        .ds-tab-navigation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            flex-wrap: nowrap;
-            position: relative;
-            padding: 0 2rem;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: clamp(1.5rem, 4vw, 2.2rem);
-            font-weight: 700;
-            color: #555555; /* 默认灰色 */
-            cursor: pointer;
-            transition: all 0.4s ease;
-            border-radius: 0;
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-            opacity: 0.6; /* 默认半透明 */
-            filter: blur(0.5px); /* 轻微模糊效果 */
-            transform: scale(0.95); /* 轻微缩小 */
-        }
-
-        /* 两边淡化效果 */
-        .ds-tab-button:first-child,
-        .ds-tab-button:last-child {
-            opacity: 0.4;
-            filter: blur(1px);
-            transform: scale(0.9);
-        }
-
-        .ds-tab-button:nth-child(2),
-        .ds-tab-button:nth-child(3) {
-            opacity: 0.5;
-            filter: blur(0.7px);
-            transform: scale(0.92);
-        }
-
-        .ds-tab-button:hover {
-            opacity: 0.8;
-            filter: blur(0.2px);
-            transform: scale(0.98);
-        }
-
-        /* 选中状态 - 使用紫色到橙色渐变 */
-        .ds-tab-button.active {
-            opacity: 1;
-            filter: blur(0px);
-            transform: scale(1);
-            position: relative;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-            transition: all 0.4s ease;
-        }
-
-        /* 只有选中的按钮显示渐变色 */
-        .ds-tab-button.active .ds-tab-text {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            background: linear-gradient(135deg, 
+                #8b5cf6 0%, #ec4899 30%, #f59e0b 60%, #10b981 100%);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-weight: 800;
-            filter: drop-shadow(0 0 20px rgba(192, 88, 243, 0.5));
+            animation: gradientShift 5s ease-in-out infinite; /* Reusing existing animation */
+            letter-spacing: -0.02em;
+            line-height: 1.1;
         }
 
-        /* 移除原来的highlight类，现在通过active状态控制 */
-        .ds-tab-text.highlight {
-            background: none;
-            -webkit-background-clip: unset;
-            -webkit-text-fill-color: unset;
-            background-clip: unset;
-            font-weight: 700;
+        .ds-emoji {
+            font-size: 2.5rem;
+            display: inline-block;
+            animation: emojiFloat 3s ease-in-out infinite; /* Reusing existing animation */
         }
 
-        /* 添加边缘渐变遮罩效果 */
-        .ds-tab-navigation::before,
-        .ds-tab-navigation::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .ds-tab-navigation::before {
-            left: 0;
-            background: linear-gradient(90deg, #0a0a0a, transparent);
-        }
-
-        .ds-tab-navigation::after {
-            right: 0;
-            background: linear-gradient(270deg, #0a0a0a, transparent);
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: #111111;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .ds-dataset-content {
-            display: none;
-            animation: dsFadeIn 0.5s ease-in-out;
-        }
-
-        .ds-dataset-content.active {
-            display: block;
-        }
-
-        @keyframes dsFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .ds-image-grid {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #0a0a0a;
-            min-height: 400px;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .ds-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ds-description h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .ds-description p {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .ds-tab-navigation {
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-            
-            .ds-tab-button {
-                padding: 1.2rem 1rem;
-                font-size: clamp(1.2rem, 3vw, 1.8rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ds-tab-navigation {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.8rem;
-                padding: 0;
-            }
-            
-            .ds-tab-navigation::before,
-            .ds-tab-navigation::after {
-                display: none;
-            }
-            
-            .ds-tab-button {
-                padding: 1rem 1.5rem;
-                font-size: 1.3rem;
-                width: 100%;
-                max-width: 300px;
-                opacity: 0.7;
-                filter: blur(0px);
-                transform: scale(1);
-            }
-            
-            .ds-tab-button:first-child,
-            .ds-tab-button:last-child,
-            .ds-tab-button:nth-child(2),
-            .ds-tab-button:nth-child(3) {
-                opacity: 0.7;
-                filter: blur(0px);
-                transform: scale(1);
-            }
-            
-            .ds-main-display-area {
-                padding: 1.5rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.6rem;
-            }
-            
-            .ds-description p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ds-tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 1.1rem;
-            }
-            
-            .ds-main-display-area {
-                padding: 1rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* Dataset Showcase - 3-Tab Leonardo.ai Style */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #0a0a0a;
-        }
-
-        .ds-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .ds-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* 3-Tab Navigation - Center Focus Design */
-        .ds-tab-navigation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4rem;
-            margin-bottom: 3rem;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 700;
-            color: #444444;
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-            white-space: nowrap;
-        }
-
-        /* 默认状态 - 两边的按钮 */
-        .ds-tab-button:first-child,
-        .ds-tab-button:last-child {
-            opacity: 0.3;
-            transform: scale(0.85);
-            filter: blur(0.8px);
-            color: #333333;
-        }
-
-        /* 中间按钮默认状态 */
-        .ds-tab-button:nth-child(2) {
-            opacity: 0.6;
-            transform: scale(0.95);
-            filter: blur(0.3px);
-            color: #666666;
-        }
-
-        /* Hover效果 */
-        .ds-tab-button:hover {
-            opacity: 0.8;
-            transform: scale(0.98);
-            filter: blur(0.1px);
-        }
-
-        /* Active状态 - 中心焦点 */
-        .ds-tab-button.active {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-            z-index: 10;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-            transition: all 0.5s ease;
-        }
-
-        /* 只有active状态显示渐变 */
-        .ds-tab-button.active .ds-tab-text {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
-        }
-
-        /* 动态布局调整 - 当不同按钮被激活时 */
-        .ds-tab-navigation.active-0 .ds-tab-button:first-child {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-        }
-
-        .ds-tab-navigation.active-0 .ds-tab-button:nth-child(2) {
-            opacity: 0.4;
-            transform: scale(0.9);
-            filter: blur(0.5px);
-        }
-
-        .ds-tab-navigation.active-0 .ds-tab-button:last-child {
-            opacity: 0.2;
-            transform: scale(0.8);
-            filter: blur(1px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:first-child {
-            opacity: 0.2;
-            transform: scale(0.8);
-            filter: blur(1px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:nth-child(2) {
-            opacity: 0.4;
-            transform: scale(0.9);
-            filter: blur(0.5px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:last-child {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-        }
-
-        /* 边缘渐变效果 */
-        .ds-tab-navigation::before,
-        .ds-tab-navigation::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 150px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .ds-tab-navigation::before {
-            left: 0;
-            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
-        }
-
-        .ds-tab-navigation::after {
-            right: 0;
-            background: linear-gradient(270deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: #111111;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .ds-dataset-content {
-            display: none;
-            animation: dsFadeIn 0.6s ease-in-out;
-        }
-
-        .ds-dataset-content.active {
-            display: block;
-        }
-
-        @keyframes dsFadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px) scale(0.98); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0) scale(1); 
-            }
-        }
-
-        .ds-image-grid {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #0a0a0a;
-            min-height: 400px;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .ds-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ds-description h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .ds-description p {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .ds-tab-navigation {
-                gap: 2rem;
-            }
-            
-            .ds-tab-button {
-                padding: 1.2rem 1rem;
-                font-size: clamp(1.4rem, 3vw, 2rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ds-tab-navigation {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1rem 0;
-            }
-            
-            .ds-tab-navigation::before,
-            .ds-tab-navigation::after {
-                display: none;
-            }
-            
-            .ds-tab-button {
-                padding: 1rem 1.5rem;
-                font-size: 1.4rem;
-                width: 100%;
-                max-width: 350px;
-            }
-            
-            .ds-tab-button:first-child,
-            .ds-tab-button:last-child,
-            .ds-tab-button:nth-child(2) {
-                opacity: 0.8;
-                filter: blur(0px);
-                transform: scale(1);
-            }
-            
-            .ds-main-display-area {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ds-tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 1.2rem;
-            }
-            
-            .ds-main-display-area {
-                padding: 1rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* Dataset Showcase - 3-Tab Leonardo.ai Style */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #0a0a0a;
-        }
-
-        .ds-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .ds-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* 3-Tab Navigation - Center Focus Design */
-        .ds-tab-navigation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 4rem;
-            margin-bottom: 3rem;
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 700;
-            color: #444444;
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-            white-space: nowrap;
-        }
-
-        /* 默认状态 - 两边的按钮 */
-        .ds-tab-button:first-child,
-        .ds-tab-button:last-child {
-            opacity: 0.3;
-            transform: scale(0.85);
-            filter: blur(0.8px);
-            color: #333333;
-        }
-
-        /* 中间按钮默认状态 */
-        .ds-tab-button:nth-child(2) {
-            opacity: 0.6;
-            transform: scale(0.95);
-            filter: blur(0.3px);
-            color: #666666;
-        }
-
-        /* Hover效果 */
-        .ds-tab-button:hover {
-            opacity: 0.8;
-            transform: scale(0.98);
-            filter: blur(0.1px);
-        }
-
-        /* Active状态 - 中心焦点 */
-        .ds-tab-button.active {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-            z-index: 10;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-            transition: all 0.5s ease;
-        }
-
-        /* 只有active状态显示渐变 */
-        .ds-tab-button.active .ds-tab-text {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
-        }
-
-        /* 动态布局调整 - 当不同按钮被激活时 */
-        .ds-tab-navigation.active-0 .ds-tab-button:first-child {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-        }
-
-        .ds-tab-navigation.active-0 .ds-tab-button:nth-child(2) {
-            opacity: 0.4;
-            transform: scale(0.9);
-            filter: blur(0.5px);
-        }
-
-        .ds-tab-navigation.active-0 .ds-tab-button:last-child {
-            opacity: 0.2;
-            transform: scale(0.8);
-            filter: blur(1px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:first-child {
-            opacity: 0.2;
-            transform: scale(0.8);
-            filter: blur(1px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:nth-child(2) {
-            opacity: 0.4;
-            transform: scale(0.9);
-            filter: blur(0.5px);
-        }
-
-        .ds-tab-navigation.active-2 .ds-tab-button:last-child {
-            opacity: 1;
-            transform: scale(1.1);
-            filter: blur(0px);
-        }
-
-        /* 边缘渐变效果 */
-        .ds-tab-navigation::before,
-        .ds-tab-navigation::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 150px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .ds-tab-navigation::before {
-            left: 0;
-            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
-        }
-
-        .ds-tab-navigation::after {
-            right: 0;
-            background: linear-gradient(270deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: #111111;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .ds-dataset-content {
-            display: none;
-            animation: dsFadeIn 0.6s ease-in-out;
-        }
-
-        .ds-dataset-content.active {
-            display: block;
-        }
-
-        @keyframes dsFadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px) scale(0.98); 
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0) scale(1); 
-            }
-        }
-
-        .ds-image-grid {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #0a0a0a;
-            min-height: 400px;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .ds-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ds-description h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .ds-description p {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .ds-tab-navigation {
-                gap: 2rem;
-            }
-            
-            .ds-tab-button {
-                padding: 1.2rem 1rem;
-                font-size: clamp(1.4rem, 3vw, 2rem);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ds-tab-navigation {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1rem 0;
-            }
-            
-            .ds-tab-navigation::before,
-            .ds-tab-navigation::after {
-                display: none;
-            }
-            
-            .ds-tab-button {
-                padding: 1rem 1.5rem;
-                font-size: 1.4rem;
-                width: 100%;
-                max-width: 350px;
-            }
-            
-            .ds-tab-button:first-child,
-            .ds-tab-button:last-child,
-            .ds-tab-button:nth-child(2) {
-                opacity: 0.8;
-                filter: blur(0px);
-                transform: scale(1);
-            }
-            
-            .ds-main-display-area {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ds-tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 1.2rem;
-            }
-            
-            .ds-main-display-area {
-                padding: 1rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* Dataset Showcase Tabs - 3-tab version with dynamic layout */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: #0a0a0a;
-        }
-
-        .ds-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .ds-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* Tab Navigation - 3 tabs with center focus */
-        .ds-tab-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #666;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 0;
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-        }
-
-        .ds-tab-button:hover {
-            color: #888;
-        }
-
-        .ds-tab-button.active {
-            color: #ffffff;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Special highlight for second tab (like "Interior Design") */
-        .ds-tab-text.highlight {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: #111111;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 500px;
-        }
-
-        .ds-dataset-content {
-            display: none;
-            animation: dsFadeIn 0.5s ease-in-out;
-        }
-
-        .ds-dataset-content.active {
-            display: block;
-        }
-
-        @keyframes dsFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .ds-image-grid {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #0a0a0a;
-            min-height: 400px;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 70vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        .ds-description {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .ds-description h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-        }
-
-        .ds-description p {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            line-height: 1.7;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .ds-tab-button {
-                padding: 1.2rem 1.5rem;
-                font-size: 1.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .ds-tab-navigation {
-                flex-direction: column;
-                align-items: center;
-                gap: 0.5rem;
-            }
-            
-            .ds-tab-button {
-                padding: 1rem 1.5rem;
-                font-size: 1.3rem;
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .ds-main-display-area {
-                padding: 1.5rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.6rem;
-            }
-            
-            .ds-description p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .ds-tab-button {
-                padding: 0.8rem 1rem;
-                font-size: 1.1rem;
-            }
-            
-            .ds-main-display-area {
-                padding: 1rem;
-            }
-            
-            .ds-description h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        /* Dataset Showcase - Infinite Carousel Style */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem;
-            position: relative;
-            overflow: hidden;
-            background: transparent; /* 取消黑色背景 */
-        }
-
-        .ds-container {
-            max-width: 1350px; /* 改为1350px，接近其他部分的1400px但稍微小一点 */
-            margin: 0 auto;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .ds-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .ds-title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 0;
-            line-height: 1.2;
-        }
-
-        /* Infinite Carousel Navigation */
-        .ds-tab-navigation {
-            position: relative;
-            overflow: hidden;
-            height: 120px;
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .ds-tab-carousel {
-            display: flex;
-            align-items: center;
-            gap: 6rem;
-            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            width: max-content;
-        }
-
-        .ds-tab-button {
-            background: transparent;
-            border: none;
-            padding: 1.5rem 2rem;
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
-            font-weight: 700;
-            color: #666666;
-            cursor: pointer;
-            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            text-transform: none;
-            font-family: inherit;
-            white-space: nowrap;
-            opacity: 0.3;
-            transform: scale(0.8);
-            filter: blur(1px);
-        }
-
-        /* Center item styling */
-        .ds-tab-button.center {
-            opacity: 1;
-            transform: scale(1.2);
-            filter: blur(0px);
-            z-index: 10;
-        }
-
-        .ds-tab-button.center .ds-tab-text {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800;
-            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
-        }
-
-        /* Adjacent items */
-        .ds-tab-button.adjacent {
-            opacity: 0.6;
-            transform: scale(0.9);
-            filter: blur(0.3px);
-            color: #888888;
-        }
-
-        /* Far items */
-        .ds-tab-button.far {
-            opacity: 0.2;
-            transform: scale(0.7);
-            filter: blur(0.8px);
-            color: #444444;
-        }
-
-        .ds-tab-text {
-            position: relative;
-            z-index: 2;
-            transition: all 0.6s ease;
-        }
-
-        /* Gradient masks for left/right fade */
-        .ds-tab-navigation::before,
-        .ds-tab-navigation::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 200px;
-            pointer-events: none;
-            z-index: 5;
-        }
-
-        .ds-tab-navigation::before {
-            left: 0;
-            background: linear-gradient(90deg, 
-                rgba(10, 10, 10, 0.9) 0%, 
-                rgba(10, 10, 10, 0.7) 30%, 
-                rgba(10, 10, 10, 0.3) 60%, 
-                transparent 100%);
-        }
-
-        .ds-tab-navigation::after {
-            right: 0;
-            background: linear-gradient(270deg, 
-                rgba(10, 10, 10, 0.9) 0%, 
-                rgba(10, 10, 10, 0.7) 30%, 
-                rgba(10, 10, 10, 0.3) 60%, 
-                transparent 100%);
-        }
-
-        /* Main Display Area */
-        .ds-main-display-area {
-            background: transparent; /* 改为完全透明 */
-            backdrop-filter: none; /* 取消模糊效果 */
-            border-radius: 16px;
-            padding: 2rem;
-            border: none; /* 取消边框 */
-            max-width: 1200px; /* 改为1200px */
-            margin: 0 auto; /* 新增：居中显示 */
-        }
-
-        .ds-content-wrapper {
-            position: relative;
-            min-height: 450px; /* 从500px减少到450px */
-            overflow: hidden;
-        }
-
-        .ds-dataset-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-            pointer-events: none;
-        }
-
-        .ds-dataset-content.active {
-            opacity: 1;
-            transform: translateX(0);
-            pointer-events: auto;
-            position: relative;
-        }
-
-        .ds-dataset-content.prev {
-            opacity: 0;
-            transform: translateX(-50px);
-        }
-
-        .ds-dataset-content.next {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-
-        /* 图片区域 - 完全去除黑色背景 */
-        .ds-image-grid {
-            margin-bottom: 1.5rem; /* 从2rem减少到1.5rem */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 12px;
-            overflow: hidden;
-            background: transparent; /* 完全透明背景 */
-            min-height: 350px;
-            /* 确保图片容器居中 */
-            width: 100%;
-        }
-
-        .ds-showcase-image {
-            max-width: 100%;
-            max-height: 60vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            /* 移除任何背景色 */
-            background: transparent;
-            /* 确保图片居中显示 */
-            display: block;
-            margin: 0 auto;
-        }
-
-        .ds-description {
-            text-align: center;
+        .ds-subtitle {
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            letter-spacing: 0.5px;
             max-width: 700px;
             margin: 0 auto;
-            /* 确保描述文字居中对齐 */
-            padding: 0 1rem;
+            line-height: 1.6;
         }
 
-        .ds-description h3 {
-            font-size: 1.8rem; /* 从2rem减少到1.8rem */
+        .ds-carousel-wrapper {
+            position: relative;
+            background: rgba(15, 23, 42, 0.7); /* Dark, slightly transparent background */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .ds-carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px; /* Rounded corners for the content area */
+        }
+
+        .ds-item {
+            display: none; /* Hidden by default, JS will manage visibility */
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: dsFadeIn 0.8s ease-in-out;
+        }
+
+        .ds-item.active {
+            display: flex;
+        }
+
+        @keyframes dsFadeIn {
+            from { opacity: 0.3; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ds-image-area {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Control max image width */
+            margin-bottom: 1.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .ds-image-area img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 16 / 9; /* Common aspect ratio for previews */
+        }
+
+        .ds-image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .ds-description-area {
+            max-width: 700px;
+        }
+
+        .ds-description-area h3 {
+            font-size: 1.8rem;
             font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1rem;
-            line-height: 1.3;
-            /* 确保标题居中 */
-            text-align: center;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #a5b4fc, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .ds-description p {
+        .ds-description-area p {
             color: #a1a1aa;
-            font-size: 1rem; /* 从1.1rem减少到1rem */
+            font-size: 1rem;
             line-height: 1.7;
-            /* 确保段落文字居中 */
+        }
+
+        .ds-controls {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            right: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            pointer-events: none; /* Allow clicks on content behind if needed */
+        }
+
+        .ds-controls button {
+            pointer-events: all; /* Ensure buttons are clickable */
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .ds-controls button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .ds-dots {
             text-align: center;
+            margin-top: 1.5rem;
         }
 
-        /* Responsive Design - 保持对齐 */
-        @media (max-width: 1024px) {
-            .ds-container {
-                max-width: 900px;
-                padding: 0 2rem; /* 增加侧边距确保对齐 */
-            }
-            
-            .ds-tab-carousel {
-                gap: 4rem; /* 从5rem减少到4rem */
-            }
-            
-            .ds-main-display-area {
-                max-width: 750px;
-                margin: 0 auto; /* 确保居中 */
-            }
-            
-            .ds-tab-navigation::before,
-            .ds-tab-navigation::after {
-                width: 120px; /* 调整遮罩宽度 */
-            }
+        .ds-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
 
+        .ds-dot.active {
+            background: #fff;
+            box-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        /* Responsive adjustments */
         @media (max-width: 768px) {
             .ds-container {
-                max-width: 100%;
-                padding: 0 1rem;
+                max-width: 90%;
             }
-            
-            .ds-main-display-area {
-                max-width: 100%;
+            .ds-title {
+                font-size: clamp(2.5rem, 6vw, 3.5rem);
+            }
+            .ds-subtitle {
+                font-size: 1.1rem;
+            }
+            .ds-carousel-wrapper {
                 padding: 1.5rem;
-                background: rgba(17, 17, 17, 0.4); /* 移动端稍微增加背景透明度 */
-                margin: 0 1rem; /* 确保两边有间距 */
             }
-            
-            .ds-tab-carousel {
-                gap: 3rem;
+            .ds-description-area h3 {
+                font-size: 1.5rem;
             }
-            
-            .ds-tab-navigation::before,
-            .ds-tab-navigation::after {
-                width: 80px;
+            .ds-description-area p {
+                font-size: 0.9rem;
             }
-        }
-
-        @media (max-width: 480px) {
-            .ds-main-display-area {
-                padding: 1rem;
-                margin: 0 0.5rem;
+            .ds-image-caption {
+                font-size: 1rem;
+                padding: 0.8rem;
             }
-            
-            .ds-tab-carousel {
-                gap: 2rem;
+            .ds-controls {
+                /* Hide side controls on smaller screens, rely on dots/swipe or auto */
+                /* display: none;  Or adjust positioning */
+                left: 5px;
+                right: 5px;
+            }
+             .ds-controls button {
+                width: 36px;
+                height: 36px;
+                font-size: 1.3rem;
             }
         }
     </style>
@@ -5543,11 +4223,6 @@
             </ul>
         </div>
     </nav>
-    
-    <!-- 主要内容 -->
-    <div class="main-content">
-        {{ content }}
-    </div>
     
     <!-- JavaScript -->
     <script>
@@ -5576,152 +4251,10 @@
             });
         });
         
-        // 初始化脚本
+        // 初始化
         document.addEventListener('DOMContentLoaded', function() {
-            console.log("DOM fully loaded and parsed"); // 调试信息
-            handleScrollAnimation(); // 用于其他部分的淡入动画
+            handleScrollAnimation();
             window.addEventListener('scroll', handleScrollAnimation);
-
-            // Floating Demos script
-            const floatingDemos = document.querySelector('.floating-demos');
-            console.log("Floating Demos Element:", floatingDemos); // 调试信息
-            if (floatingDemos) {
-                window.addEventListener('scroll', function() {
-                    const scrollY = window.scrollY;
-                    const windowHeight = window.innerHeight;
-                    
-                    if (scrollY > 100) {
-                        floatingDemos.classList.add('scrolled');
-                    } else {
-                        floatingDemos.classList.remove('scrolled');
-                    }
-                    
-                    if (scrollY > windowHeight * 0.3 && scrollY < windowHeight * 1.2) {
-                        floatingDemos.classList.add('second-phase');
-                        floatingDemos.classList.remove('third-phase');
-                    } else if (scrollY <= windowHeight * 0.3) {
-                        floatingDemos.classList.remove('second-phase');
-                        floatingDemos.classList.remove('third-phase');
-                    }
-                    
-                    if (scrollY > windowHeight * 1.2) {
-                        floatingDemos.classList.add('third-phase');
-                        floatingDemos.classList.remove('second-phase');
-                    }
-                });
-            }
-
-            // Dataset Showcase Carousel
-            console.log("Attempting to initialize Dataset Carousel..."); // 调试信息
-            const dsCarousel = document.querySelector('.ds-carousel');
-            console.log("Dataset Carousel Element:", dsCarousel); // 调试信息
-
-            if (dsCarousel) {
-                const items = dsCarousel.querySelectorAll('.ds-item');
-                const prevButton = document.querySelector('.ds-carousel-wrapper .ds-prev');
-                const nextButton = document.querySelector('.ds-carousel-wrapper .ds-next');
-                const dotsContainer = document.querySelector('.ds-carousel-wrapper .ds-dots');
-                let currentIndex = 0;
-                let autoPlayInterval;
-
-                console.log("Carousel items found:", items.length); // 调试信息
-                console.log("Prev button:", prevButton); // 调试信息
-                console.log("Next button:", nextButton); // 调试信息
-                console.log("Dots container:", dotsContainer); // 调试信息
-
-                function showItem(index) {
-                    items.forEach((item, i) => {
-                        item.classList.remove('active');
-                        if (i === index) {
-                            item.classList.add('active');
-                        }
-                    });
-                    if (dotsContainer) updateDots(index);
-                }
-
-                function updateDots(index) {
-                    if (!dotsContainer) return;
-                    const dots = dotsContainer.querySelectorAll('.ds-dot');
-                    dots.forEach((dot, i) => {
-                        dot.classList.remove('active');
-                        if (i === index) {
-                            dot.classList.add('active');
-                        }
-                    });
-                }
-
-                function createDots() {
-                    if (!dotsContainer) return;
-                    dotsContainer.innerHTML = ''; // Clear existing dots if any
-                    items.forEach((_, i) => {
-                        const dot = document.createElement('button');
-                        dot.classList.add('ds-dot');
-                        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                        dot.addEventListener('click', () => {
-                            currentIndex = i;
-                            showItem(currentIndex);
-                            resetAutoPlay();
-                        });
-                        dotsContainer.appendChild(dot);
-                    });
-                }
-
-                function nextItemManual() {
-                    currentIndex = (currentIndex + 1) % items.length;
-                    showItem(currentIndex);
-                }
-
-                function prevItemManual() {
-                    currentIndex = (currentIndex - 1 + items.length) % items.length;
-                    showItem(currentIndex);
-                }
-                
-                function startAutoPlay(interval = 5000) {
-                    stopAutoPlay();
-                    if (items.length > 1) { // Only autoplay if more than one item
-                        autoPlayInterval = setInterval(nextItemManual, interval);
-                    }
-                }
-
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
-
-                function resetAutoPlay(interval = 5000) {
-                    stopAutoPlay();
-                    startAutoPlay(interval);
-                }
-
-                if (items.length > 0) {
-                    createDots();
-                    showItem(currentIndex);
-                    startAutoPlay();
-
-                    if (prevButton) {
-                        prevButton.addEventListener('click', () => {
-                            prevItemManual();
-                            resetAutoPlay();
-                        });
-                    }
-                    if (nextButton) {
-                        nextButton.addEventListener('click', () => {
-                            nextItemManual();
-                            resetAutoPlay();
-                        });
-                    }
-                    
-                    // Pause autoplay on hover
-                    const carouselWrapper = document.querySelector('.ds-carousel-wrapper');
-                    if (carouselWrapper) {
-                        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
-                        carouselWrapper.addEventListener('mouseleave', () => resetAutoPlay());
-                    }
-                } else {
-                    console.log("No items found for the dataset carousel."); // 调试信息
-                }
-            } else {
-                console.log("Dataset carousel element (.ds-carousel) not found."); // 调试信息
-            }
         });
         
         // 平滑滚动
@@ -5737,292 +4270,39 @@
                 }
             });
         });
-
+        
         document.addEventListener('DOMContentLoaded', function() {
-            // ... (call to handleScrollAnimation, floatingDemos init) ...
-            console.log("DOM fully loaded and parsed for new Dataset Showcase.");
-
-            const datasetShowcaseSection = document.getElementById('dataset-showcase');
-            if (datasetShowcaseSection) {
-                console.log("Dataset Showcase Section found.");
-                const mainImageEl = document.getElementById('ds-main-image-display');
-                const mainTitleEl = document.getElementById('ds-main-title-display');
-                const mainDescriptionEl = document.getElementById('ds-main-description-display');
-                const thumbnailNavContainer = datasetShowcaseSection.querySelector('.ds-thumbnail-navigation');
-                const datasetEntries = document.querySelectorAll('#dataset-definitions .dataset-entry');
-
-                let datasets = [];
-                datasetEntries.forEach(entry => {
-                    datasets.push({
-                        imgSrc: entry.dataset.imgSrc,
-                        title: entry.dataset.title,
-                        description: entry.dataset.description
-                    });
-                });
-
-                console.log("Datasets loaded:", datasets.length, datasets);
-
-                function updateMainDisplay(index) {
-                    if (!datasets[index]) {
-                        console.error("Dataset not found for index:", index);
-                        return;
-                    }
-                    const currentData = datasets[index];
-                    
-                    if (mainImageEl) mainImageEl.src = currentData.imgSrc;
-                    if (mainImageEl) mainImageEl.alt = currentData.title + " main image";
-                    
-                    if (mainTitleEl) {
-                        mainTitleEl.textContent = currentData.title;
-                        // Apply special styling for the second title (HQ-Poster-100K) or any other logic
-                        // The Leonardo.ai "Interior Design" is the second item in their list
-                        if (index === 1) { // 0-indexed, so 1 is the second item
-                            mainTitleEl.classList.add('highlight');
-                        } else {
-                            mainTitleEl.classList.remove('highlight');
-                        }
-                    }
-                    if (mainDescriptionEl) mainDescriptionEl.textContent = currentData.description;
-
-                    // Update active state for thumbnails
-                    const currentThumbnails = thumbnailNavContainer.querySelectorAll('.ds-thumbnail-item');
-                    currentThumbnails.forEach((thumb, i) => {
-                        thumb.classList.toggle('active', i === index);
-                    });
-                }
-
-                function populateThumbnails() {
-                    if (!thumbnailNavContainer) {
-                        console.error("Thumbnail navigation container not found.");
-                        return;
-                    }
-                    thumbnailNavContainer.innerHTML = ''; // Clear existing thumbnails
-                    datasets.forEach((data, index) => {
-                        const thumbItem = document.createElement('div');
-                        thumbItem.classList.add('ds-thumbnail-item');
-                        thumbItem.dataset.index = index;
-
-                        const thumbImg = document.createElement('img');
-                        thumbImg.src = data.imgSrc; // Using main image for thumbnail as per previous setup
-                        thumbImg.alt = data.title + " thumbnail";
-                        
-                        thumbItem.appendChild(thumbImg);
-                        thumbItem.addEventListener('click', function() {
-                            updateMainDisplay(index);
-                        });
-                        thumbnailNavContainer.appendChild(thumbItem);
-                    });
-                }
-
-                if (datasets.length > 0) {
-                    populateThumbnails();
-                    updateMainDisplay(0); // Display the first dataset initially
-                } else {
-                    console.log("No dataset entries found to populate showcase.");
-                }
-            } else {
-                console.log("Dataset Showcase Section NOT found.");
-            }
-             // Smooth scroll (if not already present or if you want it self-contained here)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Dataset Showcase Tabs - 3-tab version with dynamic layout
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("Initializing 3-tab Dataset Showcase...");
+            const floatingDemos = document.querySelector('.floating-demos');
             
-            const tabButtons = document.querySelectorAll('.ds-tab-button');
-            const contentSections = document.querySelectorAll('.ds-dataset-content');
-            const tabNavigation = document.querySelector('.ds-tab-navigation');
-            
-            if (tabButtons.length > 0 && contentSections.length > 0 && tabNavigation) {
-                
-                function showDataset(index) {
-                    // Remove active class from all buttons and content
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    contentSections.forEach(content => content.classList.remove('active'));
+            if (floatingDemos) {
+                window.addEventListener('scroll', function() {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
                     
-                    // Update navigation layout class
-                    tabNavigation.className = 'ds-tab-navigation active-' + index;
-                    
-                    // Add active class to selected button and content
-                    if (tabButtons[index]) {
-                        tabButtons[index].classList.add('active');
-                    }
-                    if (contentSections[index]) {
-                        contentSections[index].classList.add('active');
-                    }
-                    
-                    console.log("Showing dataset:", index);
-                }
-                
-                // Add click event listeners
-                tabButtons.forEach((button, index) => {
-                    button.addEventListener('click', () => {
-                        showDataset(index);
-                    });
-                });
-                
-                // Initialize with middle tab active (index 1)
-                showDataset(1);
-                
-                // Auto-rotation every 5 seconds (optional)
-                let currentIndex = 1;
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % 3;
-                    showDataset(currentIndex);
-                }, 5000);
-                
-                console.log("3-tab Dataset Showcase initialized!");
-            }
-        });
-
-        // Dataset Showcase Infinite Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("Initializing Infinite Dataset Carousel...");
-            
-            const carousel = document.getElementById('ds-carousel');
-            const contentSections = document.querySelectorAll('.ds-dataset-content');
-            
-            if (!carousel || contentSections.length === 0) {
-                console.log("Carousel elements not found");
-                return;
-            }
-            
-            const datasets = [
-                'Text-Render-2M',
-                'HQ-Poster-100K', 
-                'Poster-Preference-100K'
-            ];
-            
-            let currentIndex = 1; // 从中间开始
-            let isAnimating = false;
-            
-            // 创建无限循环的按钮组
-            function createCarouselButtons() {
-                carousel.innerHTML = '';
-                
-                // 创建5个按钮实现视觉上的无限循环
-                for (let i = -2; i <= 2; i++) {
-                    const button = document.createElement('button');
-                    button.className = 'ds-tab-button';
-                    
-                    const span = document.createElement('span');
-                    span.className = 'ds-tab-text';
-                    
-                    const dataIndex = (currentIndex + i + datasets.length) % datasets.length;
-                    span.textContent = datasets[dataIndex];
-                    button.appendChild(span);
-                    
-                    // 设置位置样式
-                    if (i === 0) {
-                        button.classList.add('center');
-                    } else if (Math.abs(i) === 1) {
-                        button.classList.add('adjacent');
+                    // 第一阶段：初始散开效果
+                    if (scrollY > 100) {
+                        floatingDemos.classList.add('scrolled');
                     } else {
-                        button.classList.add('far');
+                        floatingDemos.classList.remove('scrolled');
                     }
                     
-                    // 添加点击事件
-                    button.addEventListener('click', () => {
-                        if (isAnimating) return;
-                        scrollToIndex(dataIndex);
-                    });
-                    
-                    carousel.appendChild(button);
-                }
-            }
-            
-            function scrollToIndex(targetIndex) {
-                if (isAnimating || targetIndex === currentIndex) return;
-                
-                isAnimating = true;
-                
-                // 计算滚动方向
-                let direction = targetIndex - currentIndex;
-                if (Math.abs(direction) > 1) {
-                    // 处理边界情况（0->2 或 2->0）
-                    direction = direction > 0 ? direction - datasets.length : direction + datasets.length;
-                }
-                
-                currentIndex = targetIndex;
-                
-                // 更新内容显示
-                showContent(currentIndex);
-                
-                // 重新创建按钮以实现滚动效果
-                setTimeout(() => {
-                    createCarouselButtons();
-                    isAnimating = false;
-                }, 100);
-            }
-            
-            function showContent(index) {
-                contentSections.forEach(content => content.classList.remove('active'));
-                if (contentSections[index]) {
-                    contentSections[index].classList.add('active');
-                }
-            }
-            
-            // 自动轮播
-            function startAutoPlay() {
-                setInterval(() => {
-                    if (!isAnimating) {
-                        const nextIndex = (currentIndex + 1) % datasets.length;
-                        scrollToIndex(nextIndex);
+                    // 第二阶段：新的demo图片出现
+                    if (scrollY > windowHeight * 0.3 && scrollY < windowHeight * 1.2) {
+                        floatingDemos.classList.add('second-phase');
+                        floatingDemos.classList.remove('third-phase');
+                    } else if (scrollY <= windowHeight * 0.3) {
+                        floatingDemos.classList.remove('second-phase');
+                        floatingDemos.classList.remove('third-phase');
                     }
-                }, 4000);
+                    
+                    // 第三阶段：第二组图片消失
+                    if (scrollY > windowHeight * 1.2) {
+                        floatingDemos.classList.add('third-phase');
+                        floatingDemos.classList.remove('second-phase');
+                    }
+                });
             }
-            
-            // 初始化
-            createCarouselButtons();
-            showContent(currentIndex);
-            startAutoPlay();
-            
-            console.log("Infinite Dataset Carousel initialized!");
         });
-
-        function updateCarouselPosition(offset) {
-            const centerOffset = -4 * 6; // 改为6rem间距，从8改为6
-            const totalOffset = centerOffset + offset;
-            carousel.style.transform = `translateX(calc(50% + ${totalOffset}rem))`;
-        }
-
-        function slideToIndex(targetIndex, clickedPosition) {
-            if (isAnimating || targetIndex === currentIndex) return;
-            
-            isAnimating = true;
-            
-            // 计算滑动距离
-            const slideDistance = -clickedPosition * 6; // 改为6rem间距，从8改为6
-            
-            // 执行滑动动画
-            updateCarouselPosition(slideDistance);
-            
-            // 更新当前索引
-            currentIndex = targetIndex;
-            
-            // 更新内容显示
-            updateContent(currentIndex);
-            
-            // 动画完成后重新生成按钮
-            setTimeout(() => {
-                createInfiniteButtons();
-                isAnimating = false;
-            }, 1200);
-        }
     </script>
 </body>
 </html>

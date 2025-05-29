@@ -5893,107 +5893,133 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Initializing Infinite Dataset Carousel...");
             
-            const carousel = document.getElementById('ds-carousel');
-            const contentSections = document.querySelectorAll('.ds-dataset-content');
+            const carousel = document.getElementById('ds-carousel'); // This is the .ds-tab-carousel element
+            const contentSections = document.querySelectorAll('.ds-main-display-area .ds-dataset-content');
             
             if (!carousel || contentSections.length === 0) {
-                console.log("Carousel elements not found");
+                console.log("Carousel elements not found or no content sections.");
                 return;
             }
             
-            const datasets = [
-                'Text-Render-2M',
-                'HQ-Poster-100K', 
-                'Poster-Preference-100K'
-            ];
-            
-            let currentIndex = 1; // 从中间开始
+            // Assuming dataset information is derived from the content sections in PosterCraft.md
+            // or defined here if needed for tab text.
+            // The provided images (Preference-100K.png etc.) are for the tabs in your diagram,
+            // but the HTML uses text for tabs.
+            const datasetsInfo = Array.from(contentSections).map((section, index) => {
+                const h3 = section.querySelector('.ds-description h3');
+                // Use IDs from the screenshot if they map to dataset names for tabs
+                // For now, using h3 text or a predefined list
+                let name = h3 ? h3.textContent : `Dataset ${index + 1}`;
+                if (index === 0) name = 'Text-Render-2M';
+                if (index === 1) name = 'HQ-Poster-100K';
+                if (index === 2) name = 'Poster-Preference-100K';
+                return {
+                    name: name,
+                    // actual image and description are already in the HTML content sections
+                };
+            });
+
+            if (datasetsInfo.length === 0) {
+                console.log("No dataset information could be derived.");
+                return;
+            }
+
+            let currentActiveDatasetIndex = 1; // Start with the middle dataset as active (index 1 for 3 datasets)
+            if (datasetsInfo.length < 3) currentActiveDatasetIndex = 0; // Adjust if less than 3 datasets
+
             let isAnimating = false;
-            
-            // 创建无限循环的按钮组
-            function createCarouselButtons() {
-                carousel.innerHTML = '';
+            const numVisualSlots = 5; // We create 5 visual buttons for the carousel effect
+            const centerVisualSlot = Math.floor(numVisualSlots / 2); // e.g., 2 for 5 slots (0,1,2,3,4)
+
+            function populateCarouselTabs() {
+                carousel.innerHTML = ''; // Clear old buttons
                 
-                // 创建5个按钮实现视觉上的无限循环
-                for (let i = -2; i <= 2; i++) {
+                for (let i = 0; i < numVisualSlots; i++) {
                     const button = document.createElement('button');
                     button.className = 'ds-tab-button';
-                    
                     const span = document.createElement('span');
                     span.className = 'ds-tab-text';
+
+                    // Calculate which dataset this visual slot should display
+                    const offsetFromCenterSlot = i - centerVisualSlot;
+                    let datasetToShowIndex = (currentActiveDatasetIndex + offsetFromCenterSlot) % datasetsInfo.length;
+                    if (datasetToShowIndex < 0) {
+                        datasetToShowIndex += datasetsInfo.length;
+                    }
                     
-                    const dataIndex = (currentIndex + i + datasets.length) % datasets.length;
-                    span.textContent = datasets[dataIndex];
+                    span.textContent = datasetsInfo[datasetToShowIndex].name;
+                    button.dataset.targetDatasetIndex = datasetToShowIndex; // Store the actual dataset index it represents
                     button.appendChild(span);
-                    
-                    // 设置位置样式
-                    if (i === 0) {
+
+                    // Apply visual styles based on slot position relative to the center
+                    if (i === centerVisualSlot) {
                         button.classList.add('center');
-                    } else if (Math.abs(i) === 1) {
+                    } else if (Math.abs(i - centerVisualSlot) === 1) {
                         button.classList.add('adjacent');
                     } else {
                         button.classList.add('far');
                     }
-                    
-                    // 添加点击事件
+
                     button.addEventListener('click', () => {
                         if (isAnimating) return;
-                        scrollToIndex(dataIndex);
+                        const targetDatasetIndex = parseInt(button.dataset.targetDatasetIndex);
+                        
+                        if (targetDatasetIndex !== currentActiveDatasetIndex) {
+                            isAnimating = true;
+                            currentActiveDatasetIndex = targetDatasetIndex;
+                            // Repopulating buttons will trigger CSS transitions for their appearance
+                            populateCarouselTabs(); 
+                            updateMainContentDisplay(currentActiveDatasetIndex);
+                            // Timeout should roughly match the CSS transition duration for button styles
+                            setTimeout(() => { isAnimating = false; }, 600); 
+                        }
                     });
-                    
                     carousel.appendChild(button);
                 }
             }
-            
-            function scrollToIndex(targetIndex) {
-                if (isAnimating || targetIndex === currentIndex) return;
-                
-                isAnimating = true;
-                
-                // 计算滚动方向
-                let direction = targetIndex - currentIndex;
-                if (Math.abs(direction) > 1) {
-                    // 处理边界情况（0->2 或 2->0）
-                    direction = direction > 0 ? direction - datasets.length : direction + datasets.length;
-                }
-                
-                currentIndex = targetIndex;
-                
-                // 更新内容显示
-                showContent(currentIndex);
-                
-                // 重新创建按钮以实现滚动效果
-                setTimeout(() => {
-                    createCarouselButtons();
-                    isAnimating = false;
-                }, 100);
-            }
-            
-            function showContent(index) {
-                contentSections.forEach(content => content.classList.remove('active'));
-                if (contentSections[index]) {
-                    contentSections[index].classList.add('active');
-                }
-            }
-            
-            // 自动轮播
-            function startAutoPlay() {
-                setInterval(() => {
-                    if (!isAnimating) {
-                        const nextIndex = (currentIndex + 1) % datasets.length;
-                        scrollToIndex(nextIndex);
+
+            function updateMainContentDisplay(activeIndex) {
+                contentSections.forEach((content, i) => {
+                    // The content sections are indexed 0, 1, 2 matching datasetsInfo
+                    if (i === activeIndex) {
+                        content.classList.remove('prev', 'next'); // Clear transition classes
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                        // Optional: Add 'prev' or 'next' for specific slide-out animations if desired
+                        // This part depends on how you want non-active content to behave during transition
+                        // For simplicity, we ensure only one is 'active'. The CSS handles fade-in of active.
                     }
-                }, 4000);
+                });
             }
-            
-            // 初始化
-            createCarouselButtons();
-            showContent(currentIndex);
-            startAutoPlay();
-            
-            console.log("Infinite Dataset Carousel initialized!");
+
+            function autoAdvanceCarousel() {
+                if (isAnimating || document.hidden) return; // Don't advance if tab is not visible
+                isAnimating = true;
+                currentActiveDatasetIndex = (currentActiveDatasetIndex + 1) % datasetsInfo.length;
+                populateCarouselTabs();
+                updateMainContentDisplay(currentActiveDatasetIndex);
+                setTimeout(() => { isAnimating = false; }, 600); 
+            }
+
+            // Initial Load
+            if (datasetsInfo.length > 0) {
+                populateCarouselTabs();
+                updateMainContentDisplay(currentActiveDatasetIndex);
+                if (datasetsInfo.length > 1) { // Only autoplay if there's more than one dataset
+                   setInterval(autoAdvanceCarousel, 4000);
+                }
+                console.log("Infinite Dataset Carousel initialized!");
+            } else {
+                console.log("No datasets to display in carousel.");
+            }
         });
 
+        // The following functions updateCarouselPosition and slideToIndex seem to be from an
+        // alternative or older implementation. The logic above is self-contained for the
+        // infinite carousel based on repopulating buttons and CSS transitions.
+        // I will comment them out to avoid conflicts if they are not used by other parts.
+        /*
         function updateCarouselPosition(offset) {
             const centerOffset = -4 * 6; // 改为6rem间距，从8改为6
             const totalOffset = centerOffset + offset;
@@ -6015,14 +6041,15 @@
             currentIndex = targetIndex;
             
             // 更新内容显示
-            updateContent(currentIndex);
+            updateContent(currentIndex); // This function 'updateContent' is not defined in the snippet
             
             // 动画完成后重新生成按钮
             setTimeout(() => {
-                createInfiniteButtons();
+                // createInfiniteButtons(); // This function 'createInfiniteButtons' is not defined
                 isAnimating = false;
             }, 1200);
         }
+        */
     </script>
 </body>
 </html>

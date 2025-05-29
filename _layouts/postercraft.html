@@ -3980,13 +3980,14 @@
 
         /* Dataset Showcase Section */
         .ds-showcase-section {
-            padding: 6rem 0;
+            padding: 6rem 0 4rem;
             position: relative;
             overflow: hidden;
+            background: #0a0a0a; /* Dark background like Leonardo.ai */
         }
 
         .ds-container {
-            max-width: 1000px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 1rem;
             position: relative;
@@ -3995,329 +3996,179 @@
 
         .ds-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .ds-title {
-            font-size: clamp(3rem, 7vw, 5rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, 
-                #8b5cf6 0%, 
-                #ec4899 30%, 
-                #f59e0b 60%, 
-                #10b981 100%);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 5s ease-in-out infinite;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
         }
 
-        .ds-emoji {
-            font-size: 2.5rem;
-            display: inline-block;
-            animation: emojiFloat 3s ease-in-out infinite;
+        /* Tab Navigation - Leonardo.ai Style */
+        .ds-tab-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
-        .ds-subtitle {
-            font-size: 1.3rem;
-            color: #cbd5e1;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .ds-carousel-wrapper {
-            position: relative;
-            background: rgba(15, 23, 42, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 2rem;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .ds-carousel {
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-        }
-
-        .ds-item {
-            display: none; /* 默认隐藏 */
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            animation: dsFadeIn 0.8s ease-in-out;
-        }
-
-        .ds-item.active {
-            display: flex; /* 激活项显示 */
-        }
-
-        @keyframes dsFadeIn {
-            from { opacity: 0.3; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .ds-image-area {
-            position: relative;
-            width: 100%;
-            max-width: 800px; 
-            margin-bottom: 1.5rem;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            /* REMOVE aspect-ratio or set to auto if needed, but image will dictate height */
-            /* aspect-ratio: 16 / 9;  <-- REMOVE THIS LINE */
-            display: flex; /* Added to help with centering if needed */
-            justify-content: center; /* Added to center the image if its width is less than max-width */
-            align-items: center; /* Added to center the image vertically */
-        }
-
-        .ds-image-area img {
-            width: 100%; /* Let width be 100% of its container */
-            height: auto;  /* Allow height to adjust based on image's aspect ratio */
-            display: block;
-            object-fit: contain; /* Ensures the entire image is visible within the container, scaled down if necessary */
-            max-height: 70vh; /* Optional: Add a max-height to prevent extremely tall images from taking too much space */
-        }
-
-        .ds-image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 1rem;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            color: #fff;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .ds-description-area {
-            max-width: 700px;
-        }
-
-        .ds-description-area h3 {
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
             font-size: 1.8rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
-            background: linear-gradient(135deg, #a5b4fc, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .ds-description-area p {
-            color: #a1a1aa;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .ds-controls {
-            position: absolute;
-            top: 50%;
-            left: 10px;
-            right: 10px;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            pointer-events: none;
-        }
-
-        .ds-controls button {
-            pointer-events: all;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 1.5rem;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            color: #666;
             cursor: pointer;
             transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .ds-controls button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
-
-        .ds-dots {
-            text-align: center;
-            margin-top: 1.5rem;
-        }
-
-        .ds-dot {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .ds-dot.active {
-            background: #fff;
-            box-shadow: 0 0 10px rgba(255,255,255,0.5);
-        }
-
-        @media (max-width: 768px) {
-            .ds-container { max-width: 90%; }
-            .ds-title { font-size: clamp(2.5rem, 6vw, 3.5rem); }
-            .ds-subtitle { font-size: 1.1rem; }
-            .ds-carousel-wrapper { padding: 1.5rem; }
-            .ds-description-area h3 { font-size: 1.5rem; }
-            .ds-description-area p { font-size: 0.9rem; }
-            .ds-image-caption { font-size: 1rem; padding: 0.8rem; }
-            .ds-controls { left: 5px; right: 5px; }
-            .ds-controls button { width: 36px; height: 36px; font-size: 1.3rem; }
-        }
-
-        /* New Dataset Showcase Styles (Leonardo.ai inspired) */
-        .ds-showcase-section {
-            padding: 6rem 0 4rem; /* Adjusted padding */
+            border-radius: 0;
             position: relative;
-            overflow: hidden;
+            text-transform: none;
+            font-family: inherit;
         }
 
-        .ds-container {
-            max-width: 1100px; /* Adjusted for content */
-            margin: 0 auto;
-            padding: 0 1rem;
+        .ds-tab-button:hover {
+            color: #888;
+        }
+
+        .ds-tab-button.active {
+            color: #ffffff;
+        }
+
+        .ds-tab-text {
             position: relative;
             z-index: 2;
         }
 
-        .ds-header { /* Re-style if needed, or use existing */
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .ds-title { /* Re-style if needed */
-            font-size: clamp(2.8rem, 6vw, 4.5rem);
-             background: linear-gradient(135deg, #e0e0e0, #ffffff);
+        /* Special highlight for second tab (like "Interior Design") */
+        .ds-tab-text.highlight {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
-        .ds-subtitle{
-            font-size: 1.2rem;
-            color: #a1a1aa; /* Light gray for subtitle */
+            font-weight: 800;
         }
 
-
-        .ds-main-content-area {
-            background: rgba(20, 20, 30, 0.5); /* Darker, slightly transparent backdrop */
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: #111111;
             border-radius: 16px;
             padding: 2rem;
-            margin-bottom: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .ds-main-image-container {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border-radius: 12px; /* Slightly rounded corners for the image */
-            overflow: hidden; /* Ensures image respects border radius */
-            background: #08080b; /* Dark background for image if it has transparency */
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsFadeIn 0.5s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 300px; /* Minimum height so it doesn't collapse */
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0a0a0a;
+            min-height: 400px;
         }
 
-        #ds-main-image-display {
+        .ds-showcase-image {
             max-width: 100%;
-            max-height: 75vh; /* Allow tall images to use more vertical space */
+            max-height: 70vh;
+            width: auto;
             height: auto;
-            object-fit: contain; /* Show entire image, scaled down */
-            display: block; /* Remove extra space below image */
+            object-fit: contain;
             border-radius: 8px;
         }
 
-        .ds-main-text-container {
+        .ds-description {
             text-align: center;
-        }
-
-        #ds-main-title-display {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
-            color: #ffffff; /* Default title color */
-        }
-        
-        /* Style for the "Interior Design" like highlighted title */
-        #ds-main-title-display.highlight {
-            background: linear-gradient(90deg, #C058F3, #FF8A54); /* Leonardo.ai Pink/Orange gradient */
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 800; /* Make it bolder */
-        }
-
-
-        #ds-main-description-display {
-            font-size: 1rem;
-            color: #b0b8c5; /* Lighter gray for description */
-            line-height: 1.7;
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .ds-thumbnail-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 1rem; /* Gap between thumbnails */
-            flex-wrap: wrap; /* Allow thumbnails to wrap on smaller screens */
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
         }
 
-        .ds-thumbnail-item {
-            cursor: pointer;
-            border: 2px solid transparent;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            width: 150px; /* Thumbnail width */
-            height: 90px;  /* Thumbnail height */
-            background: rgba(255, 255, 255, 0.05);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
-        .ds-thumbnail-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Cover the thumbnail area */
-            transition: transform 0.3s ease;
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-button {
+                padding: 1.2rem 1.5rem;
+                font-size: 1.5rem;
+            }
         }
 
-        .ds-thumbnail-item:hover {
-            border-color: rgba(192, 88, 243, 0.7); /* Purple/Pink hover border */
-            transform: scale(1.05);
-        }
-        .ds-thumbnail-item:hover img {
-            transform: scale(1.1);
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 1.5rem;
+                font-size: 1.3rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.6rem;
+            }
+            
+            .ds-description p {
+                font-size: 1rem;
+            }
         }
 
-        .ds-thumbnail-item.active {
-            border-color: #C058F3; /* Active thumbnail border - strong pink/purple */
-            box-shadow: 0 0 15px rgba(192, 88, 243, 0.5);
-        }
-        .ds-thumbnail-item.active img{
-             transform: scale(1.05);
+        @media (max-width: 480px) {
+            .ds-tab-button {
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
@@ -4636,6 +4487,50 @@
                     }
                 });
             });
+        });
+
+        // Dataset Showcase Tabs - Leonardo.ai Style
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Initializing Dataset Showcase Tabs...");
+            
+            const tabButtons = document.querySelectorAll('.ds-tab-button');
+            const contentSections = document.querySelectorAll('.ds-dataset-content');
+            
+            console.log("Tab buttons found:", tabButtons.length);
+            console.log("Content sections found:", contentSections.length);
+            
+            if (tabButtons.length > 0 && contentSections.length > 0) {
+                
+                function showDataset(index) {
+                    // Remove active class from all buttons and content
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    contentSections.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to selected button and content
+                    if (tabButtons[index]) {
+                        tabButtons[index].classList.add('active');
+                    }
+                    if (contentSections[index]) {
+                        contentSections[index].classList.add('active');
+                    }
+                    
+                    console.log("Showing dataset:", index);
+                }
+                
+                // Add click event listeners to tab buttons
+                tabButtons.forEach((button, index) => {
+                    button.addEventListener('click', () => {
+                        showDataset(index);
+                    });
+                });
+                
+                // Initialize with first tab active
+                showDataset(0);
+                
+                console.log("Dataset Showcase Tabs initialized successfully!");
+            } else {
+                console.log("Dataset Showcase elements not found");
+            }
         });
     </script>
 </body>

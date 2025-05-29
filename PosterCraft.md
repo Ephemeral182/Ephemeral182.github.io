@@ -266,53 +266,73 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
-<!-- Dataset Showcase Section - New Leonardo.ai Style -->
+<!-- Dataset Showcase Section - Leonardo.ai Style Tabs -->
 <div class="ds-showcase-section" id="dataset-showcase">
     <div class="ds-container">
         <div class="ds-header">
-            <h2 class="ds-title">Our Datasets</h2> <!-- Changed title slightly -->
-            <div class="ds-emoji">📊</div>
-            <p class="ds-subtitle">Powering PosterCraft with diverse and high-quality data.</p>
+            <h2 class="ds-title">Use PosterCraft today for</h2>
         </div>
 
-        <!-- Hidden Data Source (for easier JS manipulation) -->
-        <div id="dataset-definitions" style="display: none;">
-            <div class="dataset-entry"
-                 data-img-src="/images/postercraft/refelction_data/demo1.png"
-                 data-title="Text-Render-2M"
-                 data-description="A vast collection of 2 million text rendering examples. Features multi-instance text (1-3 instances), dynamic template-based and random string content generation, with diverse font selections including standard and artistic styles. Crucial for training robust text rendering capabilities.">
-            </div>
-            <div class="dataset-entry"
-                 data-img-src="/images/postercraft/refelction_data/demo1.png" <!-- Using the long image for all as requested -->
-                 data-title="HQ-Poster-100K"
-                 data-description="A high-quality dataset of 100,000 posters, meticulously curated and processed. It incorporates various elements like image filtering (MD5, Hash), MLLM scorers, and Gemini-powered mask generation and captioning, forming a rich base for aesthetic model training.">
-            </div>
-            <div class="dataset-entry"
-                 data-img-src="/images/postercraft/refelction_data/demo1.png" <!-- Using the long image for all as requested -->
-                 data-title="Poster-Preference-100K"
-                 data-description="Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.">
-            </div>
-            <div class="dataset-entry"
-                 data-img-src="/images/postercraft/refelction_data/demo1.png"
-                 data-title="Poster-Reflect-120K"
-                 data-description="A dataset of 120,000 poster reflections. Initial posters are generated via FLUX, with Gemini selecting the best among six. Subsequently, Gemini generates five detailed reflections, comparing posters and providing suggestions for content and aesthetic style optimization.">
-            </div>
+        <!-- Tab Navigation - Leonardo.ai Style -->
+        <div class="ds-tab-navigation">
+            <button class="ds-tab-button active" data-dataset="0">
+                <span class="ds-tab-text">Text-Render-2M</span>
+            </button>
+            <button class="ds-tab-button" data-dataset="1">
+                <span class="ds-tab-text highlight">HQ-Poster-100K</span>
+            </button>
+            <button class="ds-tab-button" data-dataset="2">
+                <span class="ds-tab-text">Poster-Preference-100K</span>
+            </button>
+            <button class="ds-tab-button" data-dataset="3">
+                <span class="ds-tab-text">And much more</span>
+            </button>
         </div>
 
         <!-- Main Display Area -->
-        <div class="ds-main-content-area">
-            <div class="ds-main-image-container">
-                <img src="" alt="Main dataset image" id="ds-main-image-display">
-            </div>
-            <div class="ds-main-text-container">
-                <h3 id="ds-main-title-display" class="ds-main-title-style"></h3>
-                <p id="ds-main-description-display"></p>
-            </div>
-        </div>
+        <div class="ds-main-display-area">
+            <div class="ds-content-wrapper">
+                <!-- Dataset Content -->
+                <div class="ds-dataset-content active" data-index="0">
+                    <div class="ds-image-grid">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset" class="ds-showcase-image">
+                    </div>
+                    <div class="ds-description">
+                        <h3>Text-Render-2M</h3>
+                        <p>A vast collection of 2 million text rendering examples. Features multi-instance text (1-3 instances), dynamic template-based and random string content generation, with diverse font selections including standard and artistic styles. Crucial for training robust text rendering capabilities.</p>
+                    </div>
+                </div>
 
-        <!-- Thumbnail Navigation -->
-        <div class="ds-thumbnail-navigation">
-            <!-- Thumbnails will be populated by JavaScript -->
+                <div class="ds-dataset-content" data-index="1">
+                    <div class="ds-image-grid">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset" class="ds-showcase-image">
+                    </div>
+                    <div class="ds-description">
+                        <h3>HQ-Poster-100K</h3>
+                        <p>A high-quality dataset of 100,000 posters, meticulously curated and processed. It incorporates various elements like image filtering (MD5, Hash), MLLM scorers, and Gemini-powered mask generation and captioning, forming a rich base for aesthetic model training.</p>
+                    </div>
+                </div>
+
+                <div class="ds-dataset-content" data-index="2">
+                    <div class="ds-image-grid">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset" class="ds-showcase-image">
+                    </div>
+                    <div class="ds-description">
+                        <h3>Poster-Preference-100K</h3>
+                        <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
+                    </div>
+                </div>
+
+                <div class="ds-dataset-content" data-index="3">
+                    <div class="ds-image-grid">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Reflect-120K Dataset" class="ds-showcase-image">
+                    </div>
+                    <div class="ds-description">
+                        <h3>Poster-Reflect-120K</h3>
+                        <p>A dataset of 120,000 poster reflections. Initial posters are generated via FLUX, with Gemini selecting the best among six. Subsequently, Gemini generates five detailed reflections, comparing posters and providing suggestions for content and aesthetic style optimization.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

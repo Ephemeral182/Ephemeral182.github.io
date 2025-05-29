@@ -4446,6 +4446,789 @@
                 font-size: 1.4rem;
             }
         }
+
+        /* Dataset Showcase - 3-Tab Leonardo.ai Style */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .ds-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* 3-Tab Navigation - Center Focus Design */
+        .ds-tab-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #444444;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+
+        /* 默认状态 - 两边的按钮 */
+        .ds-tab-button:first-child,
+        .ds-tab-button:last-child {
+            opacity: 0.3;
+            transform: scale(0.85);
+            filter: blur(0.8px);
+            color: #333333;
+        }
+
+        /* 中间按钮默认状态 */
+        .ds-tab-button:nth-child(2) {
+            opacity: 0.6;
+            transform: scale(0.95);
+            filter: blur(0.3px);
+            color: #666666;
+        }
+
+        /* Hover效果 */
+        .ds-tab-button:hover {
+            opacity: 0.8;
+            transform: scale(0.98);
+            filter: blur(0.1px);
+        }
+
+        /* Active状态 - 中心焦点 */
+        .ds-tab-button.active {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+            z-index: 10;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s ease;
+        }
+
+        /* 只有active状态显示渐变 */
+        .ds-tab-button.active .ds-tab-text {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
+        }
+
+        /* 动态布局调整 - 当不同按钮被激活时 */
+        .ds-tab-navigation.active-0 .ds-tab-button:first-child {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+        }
+
+        .ds-tab-navigation.active-0 .ds-tab-button:nth-child(2) {
+            opacity: 0.4;
+            transform: scale(0.9);
+            filter: blur(0.5px);
+        }
+
+        .ds-tab-navigation.active-0 .ds-tab-button:last-child {
+            opacity: 0.2;
+            transform: scale(0.8);
+            filter: blur(1px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:first-child {
+            opacity: 0.2;
+            transform: scale(0.8);
+            filter: blur(1px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:nth-child(2) {
+            opacity: 0.4;
+            transform: scale(0.9);
+            filter: blur(0.5px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:last-child {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+        }
+
+        /* 边缘渐变效果 */
+        .ds-tab-navigation::before,
+        .ds-tab-navigation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ds-tab-navigation::before {
+            left: 0;
+            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
+        }
+
+        .ds-tab-navigation::after {
+            right: 0;
+            background: linear-gradient(270deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
+        }
+
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: #111111;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsFadeIn 0.6s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsFadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.98); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0a0a0a;
+            min-height: 400px;
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-navigation {
+                gap: 2rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1.2rem 1rem;
+                font-size: clamp(1.4rem, 3vw, 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+            
+            .ds-tab-navigation::before,
+            .ds-tab-navigation::after {
+                display: none;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 1.5rem;
+                font-size: 1.4rem;
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .ds-tab-button:first-child,
+            .ds-tab-button:last-child,
+            .ds-tab-button:nth-child(2) {
+                opacity: 0.8;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-tab-button {
+                padding: 0.8rem 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Dataset Showcase - 3-Tab Leonardo.ai Style */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .ds-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* 3-Tab Navigation - Center Focus Design */
+        .ds-tab-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #444444;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+
+        /* 默认状态 - 两边的按钮 */
+        .ds-tab-button:first-child,
+        .ds-tab-button:last-child {
+            opacity: 0.3;
+            transform: scale(0.85);
+            filter: blur(0.8px);
+            color: #333333;
+        }
+
+        /* 中间按钮默认状态 */
+        .ds-tab-button:nth-child(2) {
+            opacity: 0.6;
+            transform: scale(0.95);
+            filter: blur(0.3px);
+            color: #666666;
+        }
+
+        /* Hover效果 */
+        .ds-tab-button:hover {
+            opacity: 0.8;
+            transform: scale(0.98);
+            filter: blur(0.1px);
+        }
+
+        /* Active状态 - 中心焦点 */
+        .ds-tab-button.active {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+            z-index: 10;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.5s ease;
+        }
+
+        /* 只有active状态显示渐变 */
+        .ds-tab-button.active .ds-tab-text {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
+        }
+
+        /* 动态布局调整 - 当不同按钮被激活时 */
+        .ds-tab-navigation.active-0 .ds-tab-button:first-child {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+        }
+
+        .ds-tab-navigation.active-0 .ds-tab-button:nth-child(2) {
+            opacity: 0.4;
+            transform: scale(0.9);
+            filter: blur(0.5px);
+        }
+
+        .ds-tab-navigation.active-0 .ds-tab-button:last-child {
+            opacity: 0.2;
+            transform: scale(0.8);
+            filter: blur(1px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:first-child {
+            opacity: 0.2;
+            transform: scale(0.8);
+            filter: blur(1px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:nth-child(2) {
+            opacity: 0.4;
+            transform: scale(0.9);
+            filter: blur(0.5px);
+        }
+
+        .ds-tab-navigation.active-2 .ds-tab-button:last-child {
+            opacity: 1;
+            transform: scale(1.1);
+            filter: blur(0px);
+        }
+
+        /* 边缘渐变效果 */
+        .ds-tab-navigation::before,
+        .ds-tab-navigation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ds-tab-navigation::before {
+            left: 0;
+            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
+        }
+
+        .ds-tab-navigation::after {
+            right: 0;
+            background: linear-gradient(270deg, #0a0a0a 0%, rgba(10, 10, 10, 0.8) 40%, transparent 100%);
+        }
+
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: #111111;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsFadeIn 0.6s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsFadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px) scale(0.98); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0a0a0a;
+            min-height: 400px;
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-navigation {
+                gap: 2rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1.2rem 1rem;
+                font-size: clamp(1.4rem, 3vw, 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1rem 0;
+            }
+            
+            .ds-tab-navigation::before,
+            .ds-tab-navigation::after {
+                display: none;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 1.5rem;
+                font-size: 1.4rem;
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .ds-tab-button:first-child,
+            .ds-tab-button:last-child,
+            .ds-tab-button:nth-child(2) {
+                opacity: 0.8;
+                filter: blur(0px);
+                transform: scale(1);
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-tab-button {
+                padding: 0.8rem 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Dataset Showcase Tabs - 3-tab version with dynamic layout */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: #0a0a0a;
+        }
+
+        .ds-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Tab Navigation - 3 tabs with center focus */
+        .ds-tab-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 0;
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+        }
+
+        .ds-tab-button:hover {
+            color: #888;
+        }
+
+        .ds-tab-button.active {
+            color: #ffffff;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Special highlight for second tab (like "Interior Design") */
+        .ds-tab-text.highlight {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: #111111;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsFadeIn 0.5s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #0a0a0a;
+            min-height: 400px;
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-button {
+                padding: 1.2rem 1.5rem;
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 1.5rem;
+                font-size: 1.3rem;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.6rem;
+            }
+            
+            .ds-description p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-tab-button {
+                padding: 0.8rem 1rem;
+                font-size: 1.1rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+            
+            .ds-description h3 {
+                font-size: 1.4rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4765,22 +5548,23 @@
             });
         });
 
-        // Dataset Showcase Tabs - Leonardo.ai Style
+        // Dataset Showcase Tabs - 3-tab version with dynamic layout
         document.addEventListener('DOMContentLoaded', function() {
-            console.log("Initializing Dataset Showcase Tabs...");
+            console.log("Initializing 3-tab Dataset Showcase...");
             
             const tabButtons = document.querySelectorAll('.ds-tab-button');
             const contentSections = document.querySelectorAll('.ds-dataset-content');
+            const tabNavigation = document.querySelector('.ds-tab-navigation');
             
-            console.log("Tab buttons found:", tabButtons.length);
-            console.log("Content sections found:", contentSections.length);
-            
-            if (tabButtons.length > 0 && contentSections.length > 0) {
+            if (tabButtons.length > 0 && contentSections.length > 0 && tabNavigation) {
                 
                 function showDataset(index) {
                     // Remove active class from all buttons and content
                     tabButtons.forEach(btn => btn.classList.remove('active'));
                     contentSections.forEach(content => content.classList.remove('active'));
+                    
+                    // Update navigation layout class
+                    tabNavigation.className = 'ds-tab-navigation active-' + index;
                     
                     // Add active class to selected button and content
                     if (tabButtons[index]) {
@@ -4793,19 +5577,24 @@
                     console.log("Showing dataset:", index);
                 }
                 
-                // Add click event listeners to tab buttons
+                // Add click event listeners
                 tabButtons.forEach((button, index) => {
                     button.addEventListener('click', () => {
                         showDataset(index);
                     });
                 });
                 
-                // Initialize with first tab active
-                showDataset(0);
+                // Initialize with middle tab active (index 1)
+                showDataset(1);
                 
-                console.log("Dataset Showcase Tabs initialized successfully!");
-            } else {
-                console.log("Dataset Showcase elements not found");
+                // Auto-rotation every 5 seconds (optional)
+                let currentIndex = 1;
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % 3;
+                    showDataset(currentIndex);
+                }, 5000);
+                
+                console.log("3-tab Dataset Showcase initialized!");
             }
         });
     </script>

@@ -266,14 +266,14 @@ title: PosterCraft - AI Poster Generation
     </div>
 </div>
 
-<!-- Dataset Showcase Section - Leonardo.ai Style Tabs -->
+<!-- Dataset Showcase Section - Leonardo.ai Style Tabs (3-tab version) -->
 <div class="ds-showcase-section" id="dataset-showcase">
     <div class="ds-container">
         <div class="ds-header">
             <h2 class="ds-title">Use PosterCraft today for</h2>
         </div>
 
-        <!-- Tab Navigation - Leonardo.ai Style -->
+        <!-- Tab Navigation - 3 tabs with center focus -->
         <div class="ds-tab-navigation">
             <button class="ds-tab-button" data-dataset="0">
                 <span class="ds-tab-text">Text-Render-2M</span>
@@ -283,9 +283,6 @@ title: PosterCraft - AI Poster Generation
             </button>
             <button class="ds-tab-button" data-dataset="2">
                 <span class="ds-tab-text">Poster-Preference-100K</span>
-            </button>
-            <button class="ds-tab-button" data-dataset="3">
-                <span class="ds-tab-text">And much more</span>
             </button>
         </div>
 
@@ -320,16 +317,6 @@ title: PosterCraft - AI Poster Generation
                     <div class="ds-description">
                         <h3>Poster-Preference-100K</h3>
                         <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
-                    </div>
-                </div>
-
-                <div class="ds-dataset-content" data-index="3">
-                    <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Reflect-120K Dataset" class="ds-showcase-image">
-                    </div>
-                    <div class="ds-description">
-                        <h3>Poster-Reflect-120K</h3>
-                        <p>A dataset of 120,000 poster reflections. Initial posters are generated via FLUX, with Gemini selecting the best among six. Subsequently, Gemini generates five detailed reflections, comparing posters and providing suggestions for content and aesthetic style optimization.</p>
                     </div>
                 </div>
             </div>

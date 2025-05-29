@@ -272,53 +272,53 @@ title: PosterCraft - AI Poster Generation
         <div class="ds-header">
             <h2 class="ds-title">Dataset Showcase</h2>
             <div class="ds-emoji">📊</div>
-            <p class="ds-subtitle">Explore the diverse datasets fueling our PosterCraft framework, enabling high-quality aesthetic poster generation.</p>
+            <p class="ds-subtitle">Explore the core datasets that power PosterCraft, driving innovation in aesthetic poster generation.</p>
         </div>
 
         <div class="ds-carousel-wrapper">
             <div class="ds-carousel">
-                <!-- Item 1 -->
+                <!-- Item 1: Text-Render-2M -->
                 <div class="ds-item active">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/dataset1_preview.png" alt="Dataset 1 Preview">
-                        <div class="ds-image-caption">PosterLayout-S Dataset</div>
+                        <img src="/images/postercraft/datasets/text_render_2m_preview.png" alt="Text-Render-2M Dataset Preview">
+                        <div class="ds-image-caption">Text-Render-2M</div>
                     </div>
                     <div class="ds-description-area">
-                        <h3>PosterLayout-S</h3>
-                        <p>A large-scale synthetic dataset focusing on diverse poster layouts and typographic arrangements. Contains 100K+ generated posters with detailed layout metadata, crucial for training layout-aware models.</p>
+                        <h3>Text-Render-2M</h3>
+                        <p>A vast collection of 2 million text rendering examples. Features multi-instance text (1-3 instances), dynamic template-based and random string content generation, with diverse font selections including standard and artistic styles. Crucial for training robust text rendering capabilities.</p>
                     </div>
                 </div>
-                <!-- Item 2 -->
+                <!-- Item 2: HQ-Poster-100K -->
                 <div class="ds-item">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/dataset2_preview.png" alt="Dataset 2 Preview">
-                         <div class="ds-image-caption">AestheticText-HQ Dataset</div>
+                        <img src="/images/postercraft/datasets/hq_poster_100k_preview.png" alt="HQ-Poster-100K Dataset Preview">
+                         <div class="ds-image-caption">HQ-Poster-100K</div>
                     </div>
                     <div class="ds-description-area">
-                        <h3>AestheticText-HQ</h3>
-                        <p>A curated high-quality dataset of 50K+ posters with aesthetically pleasing text rendering. Each sample is annotated with text content, font styles, and visual appeal scores, used for fine-tuning text rendering modules.</p>
+                        <h3>HQ-Poster-100K</h3>
+                        <p>A high-quality dataset of 100,000 posters, meticulously curated and processed. It incorporates various elements like image filtering (MD5, Hash), MLLM scorers, and Gemini-powered mask generation and captioning, forming a rich base for aesthetic model training.</p>
                     </div>
                 </div>
-                <!-- Item 3 -->
+                <!-- Item 3: Poster-Preference-100K -->
                 <div class="ds-item">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/dataset3_preview.png" alt="Dataset 3 Preview">
-                         <div class="ds-image-caption">PosterBench-Pro Dataset</div>
+                        <img src="/images/postercraft/datasets/poster_preference_100k_preview.png" alt="Poster-Preference-100K Dataset Preview">
+                         <div class="ds-image-caption">Poster-Preference-100K</div>
                     </div>
                     <div class="ds-description-area">
-                        <h3>PosterBench-Pro</h3>
-                        <p>A comprehensive benchmark dataset comprising 10K professionally designed posters across various genres and styles. Used for evaluating the overall aesthetic quality and coherence of generated posters.</p>
+                        <h3>Poster-Preference-100K</h3>
+                        <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
                     </div>
                 </div>
-                 <!-- Item 4 (Example) -->
+                 <!-- Item 4: Poster-Reflect-120K -->
                 <div class="ds-item">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/dataset4_preview.png" alt="Dataset 4 Preview">
-                         <div class="ds-image-caption">FontStyleDB-Extended</div>
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Reflect-120K Dataset Preview">
+                         <div class="ds-image-caption">Poster-Reflect-120K</div>
                     </div>
                     <div class="ds-description-area">
-                        <h3>FontStyleDB-Extended</h3>
-                        <p>An extensive database of over 5,000 font families, categorized by style, mood, and usage context. This dataset empowers our model to select appropriate and visually harmonious typography for diverse poster themes.</p>
+                        <h3>Poster-Reflect-120K</h3>
+                        <p>A dataset of 120,000 poster reflections. Initial posters are generated via FLUX, with Gemini selecting the best among six. Subsequently, Gemini generates five detailed reflections, comparing posters and providing suggestions for content and aesthetic style optimization.</p>
                     </div>
                 </div>
             </div>

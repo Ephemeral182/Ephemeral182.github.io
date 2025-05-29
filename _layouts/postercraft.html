@@ -5229,6 +5229,269 @@
                 font-size: 1.4rem;
             }
         }
+
+        /* Dataset Showcase - Infinite Carousel Style */
+        .ds-showcase-section {
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            background: transparent; /* 取消黑色背景 */
+        }
+
+        .ds-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ds-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ds-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        /* Infinite Carousel Navigation */
+        .ds-tab-navigation {
+            position: relative;
+            overflow: hidden;
+            height: 120px;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ds-tab-carousel {
+            display: flex;
+            align-items: center;
+            gap: 6rem;
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            width: max-content;
+        }
+
+        .ds-tab-button {
+            background: transparent;
+            border: none;
+            padding: 1.5rem 2rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #666666;
+            cursor: pointer;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            text-transform: none;
+            font-family: inherit;
+            white-space: nowrap;
+            opacity: 0.3;
+            transform: scale(0.8);
+            filter: blur(1px);
+        }
+
+        /* Center item styling */
+        .ds-tab-button.center {
+            opacity: 1;
+            transform: scale(1.2);
+            filter: blur(0px);
+            z-index: 10;
+        }
+
+        .ds-tab-button.center .ds-tab-text {
+            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            filter: drop-shadow(0 0 30px rgba(192, 88, 243, 0.6));
+        }
+
+        /* Adjacent items */
+        .ds-tab-button.adjacent {
+            opacity: 0.6;
+            transform: scale(0.9);
+            filter: blur(0.3px);
+            color: #888888;
+        }
+
+        /* Far items */
+        .ds-tab-button.far {
+            opacity: 0.2;
+            transform: scale(0.7);
+            filter: blur(0.8px);
+            color: #444444;
+        }
+
+        .ds-tab-text {
+            position: relative;
+            z-index: 2;
+            transition: all 0.6s ease;
+        }
+
+        /* Gradient masks for left/right fade */
+        .ds-tab-navigation::before,
+        .ds-tab-navigation::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 200px;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .ds-tab-navigation::before {
+            left: 0;
+            background: linear-gradient(90deg, 
+                rgba(10, 10, 10, 0.9) 0%, 
+                rgba(10, 10, 10, 0.7) 30%, 
+                rgba(10, 10, 10, 0.3) 60%, 
+                transparent 100%);
+        }
+
+        .ds-tab-navigation::after {
+            right: 0;
+            background: linear-gradient(270deg, 
+                rgba(10, 10, 10, 0.9) 0%, 
+                rgba(10, 10, 10, 0.7) 30%, 
+                rgba(10, 10, 10, 0.3) 60%, 
+                transparent 100%);
+        }
+
+        /* Main Display Area */
+        .ds-main-display-area {
+            background: rgba(17, 17, 17, 0.8); /* 半透明背景 */
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .ds-content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .ds-dataset-content {
+            display: none;
+            animation: dsSlideIn 0.8s ease-in-out;
+        }
+
+        .ds-dataset-content.active {
+            display: block;
+        }
+
+        @keyframes dsSlideIn {
+            from { 
+                opacity: 0; 
+                transform: translateX(30px) scale(0.95); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateX(0) scale(1); 
+            }
+        }
+
+        .ds-image-grid {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(10, 10, 10, 0.5);
+            min-height: 400px;
+        }
+
+        .ds-showcase-image {
+            max-width: 100%;
+            max-height: 70vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .ds-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ds-description h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .ds-description p {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ds-tab-carousel {
+                gap: 4rem;
+            }
+            
+            .ds-tab-button {
+                padding: 1.2rem 1rem;
+                font-size: clamp(1.4rem, 3vw, 2rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ds-tab-navigation {
+                height: 100px;
+            }
+            
+            .ds-tab-carousel {
+                gap: 3rem;
+            }
+            
+            .ds-tab-navigation::before,
+            .ds-tab-navigation::after {
+                width: 100px;
+            }
+            
+            .ds-tab-button {
+                padding: 1rem 0.8rem;
+                font-size: 1.4rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1.5rem;
+                background: rgba(17, 17, 17, 0.9);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ds-tab-carousel {
+                gap: 2rem;
+            }
+            
+            .ds-tab-button {
+                padding: 0.8rem 0.5rem;
+                font-size: 1.2rem;
+            }
+            
+            .ds-main-display-area {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -5596,6 +5859,111 @@
                 
                 console.log("3-tab Dataset Showcase initialized!");
             }
+        });
+
+        // Dataset Showcase Infinite Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Initializing Infinite Dataset Carousel...");
+            
+            const carousel = document.getElementById('ds-carousel');
+            const contentSections = document.querySelectorAll('.ds-dataset-content');
+            
+            if (!carousel || contentSections.length === 0) {
+                console.log("Carousel elements not found");
+                return;
+            }
+            
+            const datasets = [
+                'Text-Render-2M',
+                'HQ-Poster-100K', 
+                'Poster-Preference-100K'
+            ];
+            
+            let currentIndex = 1; // 从中间开始
+            let isAnimating = false;
+            
+            // 创建无限循环的按钮组
+            function createCarouselButtons() {
+                carousel.innerHTML = '';
+                
+                // 创建5个按钮实现视觉上的无限循环
+                for (let i = -2; i <= 2; i++) {
+                    const button = document.createElement('button');
+                    button.className = 'ds-tab-button';
+                    
+                    const span = document.createElement('span');
+                    span.className = 'ds-tab-text';
+                    
+                    const dataIndex = (currentIndex + i + datasets.length) % datasets.length;
+                    span.textContent = datasets[dataIndex];
+                    button.appendChild(span);
+                    
+                    // 设置位置样式
+                    if (i === 0) {
+                        button.classList.add('center');
+                    } else if (Math.abs(i) === 1) {
+                        button.classList.add('adjacent');
+                    } else {
+                        button.classList.add('far');
+                    }
+                    
+                    // 添加点击事件
+                    button.addEventListener('click', () => {
+                        if (isAnimating) return;
+                        scrollToIndex(dataIndex);
+                    });
+                    
+                    carousel.appendChild(button);
+                }
+            }
+            
+            function scrollToIndex(targetIndex) {
+                if (isAnimating || targetIndex === currentIndex) return;
+                
+                isAnimating = true;
+                
+                // 计算滚动方向
+                let direction = targetIndex - currentIndex;
+                if (Math.abs(direction) > 1) {
+                    // 处理边界情况（0->2 或 2->0）
+                    direction = direction > 0 ? direction - datasets.length : direction + datasets.length;
+                }
+                
+                currentIndex = targetIndex;
+                
+                // 更新内容显示
+                showContent(currentIndex);
+                
+                // 重新创建按钮以实现滚动效果
+                setTimeout(() => {
+                    createCarouselButtons();
+                    isAnimating = false;
+                }, 100);
+            }
+            
+            function showContent(index) {
+                contentSections.forEach(content => content.classList.remove('active'));
+                if (contentSections[index]) {
+                    contentSections[index].classList.add('active');
+                }
+            }
+            
+            // 自动轮播
+            function startAutoPlay() {
+                setInterval(() => {
+                    if (!isAnimating) {
+                        const nextIndex = (currentIndex + 1) % datasets.length;
+                        scrollToIndex(nextIndex);
+                    }
+                }, 4000);
+            }
+            
+            // 初始化
+            createCarouselButtons();
+            showContent(currentIndex);
+            startAutoPlay();
+            
+            console.log("Infinite Dataset Carousel initialized!");
         });
     </script>
 </body>

@@ -4068,19 +4068,24 @@
         .ds-image-area {
             position: relative;
             width: 100%;
-            max-width: 800px;
+            max-width: 800px; 
             margin-bottom: 1.5rem;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            /* REMOVE aspect-ratio or set to auto if needed, but image will dictate height */
+            /* aspect-ratio: 16 / 9;  <-- REMOVE THIS LINE */
+            display: flex; /* Added to help with centering if needed */
+            justify-content: center; /* Added to center the image if its width is less than max-width */
+            align-items: center; /* Added to center the image vertically */
         }
 
         .ds-image-area img {
-            width: 100%;
-            height: auto;
+            width: 100%; /* Let width be 100% of its container */
+            height: auto;  /* Allow height to adjust based on image's aspect ratio */
             display: block;
-            object-fit: cover;
-            aspect-ratio: 16 / 9;
+            object-fit: contain; /* Ensures the entire image is visible within the container, scaled down if necessary */
+            max-height: 70vh; /* Optional: Add a max-height to prevent extremely tall images from taking too much space */
         }
 
         .ds-image-caption {

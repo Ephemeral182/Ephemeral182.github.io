@@ -280,7 +280,7 @@ title: PosterCraft - AI Poster Generation
                 <!-- Item 1: Text-Render-2M -->
                 <div class="ds-item active">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/text_render_2m_preview.png" alt="Text-Render-2M Dataset Preview">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset Preview">
                         <div class="ds-image-caption">Text-Render-2M</div>
                     </div>
                     <div class="ds-description-area">
@@ -291,7 +291,7 @@ title: PosterCraft - AI Poster Generation
                 <!-- Item 2: HQ-Poster-100K -->
                 <div class="ds-item">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/hq_poster_100k_preview.png" alt="HQ-Poster-100K Dataset Preview">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset Preview">
                          <div class="ds-image-caption">HQ-Poster-100K</div>
                     </div>
                     <div class="ds-description-area">
@@ -302,7 +302,7 @@ title: PosterCraft - AI Poster Generation
                 <!-- Item 3: Poster-Preference-100K -->
                 <div class="ds-item">
                     <div class="ds-image-area">
-                        <img src="/images/postercraft/datasets/poster_preference_100k_preview.png" alt="Poster-Preference-100K Dataset Preview">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Preview">
                          <div class="ds-image-caption">Poster-Preference-100K</div>
                     </div>
                     <div class="ds-description-area">

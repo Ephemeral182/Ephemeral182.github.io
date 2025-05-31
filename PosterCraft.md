@@ -286,44 +286,44 @@ title: PosterCraft - AI Poster Generation
                 <!-- Dataset Content for Text-Render-2M -->
                 <div class="ds-dataset-content" data-index="0">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/datasets/text_render_2m.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Text-Render-2M</h3>
-                        <p>A vast collection of 2 million text rendering examples. Features multi-instance text (1-3 instances), dynamic template-based and random string content generation, with diverse font selections including standard and artistic styles. Crucial for training robust text rendering capabilities.</p>
+                        <p>A comprehensive text rendering dataset containing 2 million high-quality examples. Features multi-instance text rendering (1-3 instances), diverse font selections from standard to artistic styles, and dynamic content generation through both template-based and random string approaches. Essential for developing robust text rendering capabilities in poster generation.</p>
                     </div>
                 </div>
 
                 <!-- Dataset Content for HQ-Poster-100K -->
                 <div class="ds-dataset-content" data-index="1">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/datasets/hq_poster_100k.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>HQ-Poster-100K</h3>
-                        <p>A high-quality dataset of 100,000 posters, meticulously curated and processed. It incorporates various elements like image filtering (MD5, Hash), MLLM scorers, and Gemini-powered mask generation and captioning, forming a rich base for aesthetic model training.</p>
+                        <p>A meticulously curated collection of 100,000 high-quality posters with comprehensive processing pipeline. Incorporates advanced filtering techniques (MD5, Hash), multi-modal scoring systems, and Gemini-powered mask generation with detailed captioning. Forms the foundation for training aesthetically-aware poster generation models.</p>
                     </div>
                 </div>
 
                 <!-- Dataset Content for Poster-Preference-100K -->
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/datasets/poster_preference_100k.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Poster-Preference-100K</h3>
-                        <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
+                        <p>A specialized preference learning dataset comprising 100,000 carefully selected poster pairs. Generated through FLUX-based poster creation from user prompts, followed by Gemini-powered prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differentials, crucial for learning aesthetic preferences and human-aligned poster generation.</p>
                     </div>
                 </div>
 
                 <!-- Dataset Content for Poster-Reflect-120K -->
                 <div class="ds-dataset-content" data-index="3">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/datasets/poster_reflect_120k.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Poster-Reflect-120K</h3>
-                        <p>A reflection dataset containing 120,000 high-quality poster samples with detailed aesthetic and compositional analysis. Designed to enhance model understanding of visual design principles and improve generation quality through comprehensive feedback mechanisms.</p>
+                        <p>An advanced reflection dataset containing 120,000 poster samples with comprehensive aesthetic and compositional analysis. Features detailed visual design principle annotations and multi-dimensional quality assessments. Designed to enhance model understanding of artistic composition, enabling sophisticated feedback mechanisms and iterative quality improvement.</p>
                     </div>
                 </div>
             </div>

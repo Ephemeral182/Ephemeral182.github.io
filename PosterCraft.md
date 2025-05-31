@@ -283,19 +283,8 @@ title: PosterCraft - AI Poster Generation
         <!-- Main Display Area -->
         <div class="ds-main-display-area">
             <div class="ds-content-wrapper">
-                <!-- Dataset Content for Poster-Preference-100K -->
-                <div class="ds-dataset-content" data-index="0">
-                    <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
-                    </div>
-                    <div class="ds-description">
-                        <h3>Poster-Preference-100K</h3>
-                        <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
-                    </div>
-                </div>
-
                 <!-- Dataset Content for Text-Render-2M -->
-                <div class="ds-dataset-content" data-index="1">
+                <div class="ds-dataset-content" data-index="0">
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
                     </div>
@@ -306,13 +295,24 @@ title: PosterCraft - AI Poster Generation
                 </div>
 
                 <!-- Dataset Content for HQ-Poster-100K -->
-                <div class="ds-dataset-content" data-index="2">
+                <div class="ds-dataset-content" data-index="1">
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>HQ-Poster-100K</h3>
                         <p>A high-quality dataset of 100,000 posters, meticulously curated and processed. It incorporates various elements like image filtering (MD5, Hash), MLLM scorers, and Gemini-powered mask generation and captioning, forming a rich base for aesthetic model training.</p>
+                    </div>
+                </div>
+
+                <!-- Dataset Content for Poster-Preference-100K -->
+                <div class="ds-dataset-content" data-index="2">
+                    <div class="ds-image-grid">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
+                    </div>
+                    <div class="ds-description">
+                        <h3>Poster-Preference-100K</h3>
+                        <p>Comprises 100,000 preference pairs for posters. Generated using FLUX to create sets of 5 posters from user prompts, followed by Gemini-based prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differences, vital for learning aesthetic preferences.</p>
                     </div>
                 </div>
 

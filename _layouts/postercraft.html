@@ -6529,7 +6529,7 @@
             if (datasetsInfo.length < 3) currentActiveDatasetIndex = 0; // Adjust if less than 3 datasets
 
             let isAnimating = false;
-            const numVisualSlots = 5; // We create 5 visual buttons for the carousel effect
+            const numVisualSlots = 4; // 我们将这里从5修改为4
             const centerVisualSlot = Math.floor(numVisualSlots / 2); // e.g., 2 for 5 slots (0,1,2,3,4)
 
             function populateCarouselTabs() {
@@ -6608,7 +6608,7 @@
                 populateCarouselTabs();
                 updateMainContentDisplay(currentActiveDatasetIndex);
                 if (datasetsInfo.length > 1) { // Only autoplay if there's more than one dataset
-                   setInterval(autoAdvanceCarousel, 4000);
+                   // setInterval(autoAdvanceCarousel, 4000); // 我们将取消这一行的自动切换功能
                 }
                 console.log("Infinite Dataset Carousel initialized!");
             } else {

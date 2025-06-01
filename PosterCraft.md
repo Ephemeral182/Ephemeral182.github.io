@@ -2,6 +2,10 @@
 layout: postercraft
 permalink: /poster-craft/
 title: PosterCraft - AI Poster Generation
+extra_css:
+  - /assets/css/postercraft.css
+extra_js:
+  - /assets/js/postercraft.js
 ---
 
 <!-- 顶部浮动demo图片 - 更新版本 -->

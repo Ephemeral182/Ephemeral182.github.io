@@ -6502,35 +6502,24 @@
                 return;
             }
             
-            // Assuming dataset information is derived from the content sections in PosterCraft.md
-            // or defined here if needed for tab text.
-            // The provided images (Preference-100K.png etc.) are for the tabs in your diagram,
-            // but the HTML uses text for tabs.
+            // 修改这里：确保包含第4个数据集
             const datasetsInfo = Array.from(contentSections).map((section, index) => {
                 const h3 = section.querySelector('.ds-description h3');
-                // Use IDs from the screenshot if they map to dataset names for tabs
-                // For now, using h3 text or a predefined list
                 let name = h3 ? h3.textContent : `Dataset ${index + 1}`;
+                
+                // 确保4个数据集名称正确
                 if (index === 0) name = 'Text-Render-2M';
                 if (index === 1) name = 'HQ-Poster-100K';
                 if (index === 2) name = 'Poster-Preference-100K';
-                return {
-                    name: name,
-                    // actual image and description are already in the HTML content sections
-                };
+                if (index === 3) name = 'Poster-Reflect-120K';  // 添加第4个
+                
+                return { name: name };
             });
 
-            if (datasetsInfo.length === 0) {
-                console.log("No dataset information could be derived.");
-                return;
-            }
-
-            let currentActiveDatasetIndex = 1; // Start with the middle dataset as active (index 1 for 3 datasets)
-            if (datasetsInfo.length < 3) currentActiveDatasetIndex = 0; // Adjust if less than 3 datasets
-
+            let currentActiveDatasetIndex = 1; // 从第2个开始（HQ-Poster-100K）
             let isAnimating = false;
-            const numVisualSlots = 4; // 我们将这里从5修改为4
-            const centerVisualSlot = Math.floor(numVisualSlots / 2); // e.g., 2 for 5 slots (0,1,2,3,4)
+            const numVisualSlots = 4; // 确保是4个按钮
+            const centerVisualSlot = Math.floor(numVisualSlots / 2);
 
             function populateCarouselTabs() {
                 carousel.innerHTML = ''; // Clear old buttons

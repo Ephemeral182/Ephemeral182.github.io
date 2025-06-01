@@ -755,64 +755,6 @@
             transform: scale(1.03); /* 稍微减小图片缩放 */
         }
         
-        /* What is PosterCraft Section */
-        .what-is-section {
-            padding: 8rem 0;
-            background: transparent; /* 修改 */
-            /* backdrop-filter: blur(20px); */ /* 移除 */
-            border-top: none; /* 修改 */
-            border-bottom: none; /* 修改 */
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .what-is-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: none; /* 修改 */
-            pointer-events: none;
-        }
-        
-        .what-is-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem; /* 从 2rem 改为 1rem */
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .what-is-title {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 4s ease-in-out infinite;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-        }
-        
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-        
-        .what-is-subtitle {
-            font-size: 1.5rem;
-            color: #a1a1aa;
-            margin-bottom: 4rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-        }
-        
         /* Transformation Demo */
         .transformation-demo {
             display: grid;

@@ -290,7 +290,7 @@ extra_js:
                 <!-- Dataset Content for Text-Render-2M -->
                 <div class="ds-dataset-content" data-index="0">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/datasets/text_render_2m.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Text-Render-2M</h3>
@@ -301,7 +301,7 @@ extra_js:
                 <!-- Dataset Content for HQ-Poster-100K -->
                 <div class="ds-dataset-content" data-index="1">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/datasets/hq_poster_100k.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>HQ-Poster-100K</h3>
@@ -312,7 +312,7 @@ extra_js:
                 <!-- Dataset Content for Poster-Preference-100K -->
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/datasets/poster_preference_100k.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Poster-Preference-100K</h3>
@@ -323,7 +323,7 @@ extra_js:
                 <!-- Dataset Content for Poster-Reflect-120K -->
                 <div class="ds-dataset-content" data-index="3">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/datasets/poster_reflect_120k.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo4.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Poster-Reflect-120K</h3>

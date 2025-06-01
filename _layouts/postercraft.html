@@ -1404,8 +1404,9 @@
             font-weight: 300;
             letter-spacing: 0.5px;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 4rem;
             line-height: 1.7;
+            text-align: center;
         }
         
         @keyframes techGradientFlow {
@@ -3349,7 +3350,7 @@
             font-weight: 700;
             color: #aaaaaa;
             cursor: pointer;
-            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.2s ease; /* 简化transition时间 */
             position: relative;
             text-transform: none;
             font-family: inherit;
@@ -3381,7 +3382,7 @@
                 transparent, 
                 rgba(255, 255, 255, 0.25), /* 增强流光效果 */
                 transparent);
-            transition: left 0.8s ease;
+            transition: left 0.3s ease; /* 减少动画时间 */
             z-index: 1;
         }
 
@@ -3492,16 +3493,16 @@
             left: 0;
             width: 100%;
             opacity: 0;
-            transform: translateY(30px) scale(0.98); /* 从下方轻微滑入并放大 */
-            transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 平滑动画 */
+            transform: translateY(20px);
+            transition: opacity 0.2s ease, transform 0.2s ease; /* 大幅简化动画时间 */
             pointer-events: none;
         }
 
         .ds-dataset-content.active {
             opacity: 1;
-            transform: translateY(0) scale(1);
+            transform: translateY(0);
             pointer-events: auto;
-            position: relative; /* 激活时恢复正常文档流 */
+            position: relative;
         }
         
         /* 图片和描述样式保持不变，仅确保它们在透明背景下看起来良好 */
@@ -3921,7 +3922,7 @@
                 });
             }
 
-            // Dataset Showcase - 只保留这一个版本，移除其他重复的
+            // Dataset Showcase - 优化版本，解决卡顿问题
             console.log("Initializing Dataset Showcase...");
             
             const carousel = document.getElementById('ds-carousel');
@@ -3937,35 +3938,42 @@
                 ];
 
                 let currentActiveDatasetIndex = 1; // 从第2个开始（HQ-Poster-100K）
-                let isAnimating = false;
+                let lastClickTime = 0; // 防抖机制
 
-                // 生成固定的四个按钮
-                function createFixedTabs() {
-                    carousel.innerHTML = ''; // Clear old buttons
-                    
-                    datasetsInfo.forEach((dataset, index) => {
-                        const button = document.createElement('button');
-                        button.className = 'ds-tab-button';
-                        const span = document.createElement('span');
-                        span.className = 'ds-tab-text';
-                        span.textContent = dataset.name;
-                        button.appendChild(span);
-                        
-                        // 设置点击事件 - 简化逻辑，移除动画锁定
-                        button.addEventListener('click', () => {
-                            console.log(`Clicked dataset ${index}: ${dataset.name}`);
-                            if (index !== currentActiveDatasetIndex) {
-                                currentActiveDatasetIndex = index;
-                                updateActiveButton();
-                                updateMainContentDisplay(currentActiveDatasetIndex);
-                            }
-                        });
-                        
-                        carousel.appendChild(button);
+                // 防抖函数
+                function debounce(func, wait) {
+                    let timeout;
+                    return function executedFunction(...args) {
+                        const later = () => {
+                            clearTimeout(timeout);
+                            func(...args);
+                        };
+                        clearTimeout(timeout);
+                        timeout = setTimeout(later, wait);
+                    };
+                }
+
+                // 立即切换内容，无动画
+                function switchContent(targetIndex) {
+                    // 立即更新内容
+                    contentSections.forEach((content, i) => {
+                        if (i === targetIndex) {
+                            content.style.opacity = '1';
+                            content.style.transform = 'translateY(0)';
+                            content.style.position = 'relative';
+                            content.style.pointerEvents = 'auto';
+                            content.classList.add('active');
+                        } else {
+                            content.style.opacity = '0';
+                            content.style.transform = 'translateY(20px)';
+                            content.style.position = 'absolute';
+                            content.style.pointerEvents = 'none';
+                            content.classList.remove('active');
+                        }
                     });
                 }
 
-                // 更新按钮的active状态
+                // 更新按钮状态
                 function updateActiveButton() {
                     const buttons = carousel.querySelectorAll('.ds-tab-button');
                     buttons.forEach((button, index) => {
@@ -3977,14 +3985,39 @@
                     });
                 }
 
-                // 更新内容显示
-                function updateMainContentDisplay(activeIndex) {
-                    contentSections.forEach((content, i) => {
-                        if (i === activeIndex) {
-                            content.classList.add('active');
-                        } else {
-                            content.classList.remove('active');
-                        }
+                // 处理点击事件（带防抖）
+                const handleClick = debounce((targetIndex) => {
+                    if (targetIndex !== currentActiveDatasetIndex) {
+                        console.log(`Switching to dataset ${targetIndex}: ${datasetsInfo[targetIndex].name}`);
+                        currentActiveDatasetIndex = targetIndex;
+                        updateActiveButton();
+                        switchContent(targetIndex);
+                    }
+                }, 100); // 100ms防抖
+
+                // 生成固定的四个按钮
+                function createFixedTabs() {
+                    carousel.innerHTML = ''; // Clear old buttons
+                    
+                    datasetsInfo.forEach((dataset, index) => {
+                        const button = document.createElement('button');
+                        button.className = 'ds-tab-button';
+                        button.setAttribute('data-index', index);
+                        
+                        const span = document.createElement('span');
+                        span.className = 'ds-tab-text';
+                        span.textContent = dataset.name;
+                        button.appendChild(span);
+                        
+                        // 使用事件委托和防抖机制
+                        button.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            const targetIndex = parseInt(button.getAttribute('data-index'));
+                            handleClick(targetIndex);
+                        });
+                        
+                        carousel.appendChild(button);
                     });
                 }
 
@@ -3992,29 +4025,27 @@
                 if (datasetsInfo.length > 0) {
                     createFixedTabs();
                     updateActiveButton();
-                    updateMainContentDisplay(currentActiveDatasetIndex);
+                    switchContent(currentActiveDatasetIndex);
                     console.log("Dataset Showcase initialized successfully!");
                 }
             } else {
                 console.log("Dataset carousel elements not found.");
             }
-        });
 
-        // 平滑滚动 - 只保留一个版本
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            // 平滑滚动 - 只保留一个版本
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
         });
-
-        // 移除所有其他重复的DOMContentLoaded事件监听器和dataset showcase代码
     </script>
 </body>
 </html>

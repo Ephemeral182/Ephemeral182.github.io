@@ -3260,8 +3260,6 @@
             }
         }
 
-
-
         /* Dataset Showcase - Fancy 4-Tab 一行布局 */
         .ds-showcase-section {
             padding: 6rem 0 4rem;
@@ -3995,7 +3993,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log("Initializing Infinite Dataset Carousel...");
             
-            const carousel = document.getElementById('ds-carousel'); // This is the .ds-tab-carousel element
+            const carousel = document.getElementById('ds-carousel');
             const contentSections = document.querySelectorAll('.ds-main-display-area .ds-dataset-content');
             
             if (!carousel || contentSections.length === 0) {
@@ -4003,104 +4001,74 @@
                 return;
             }
             
-            // 修改这里：确保包含第4个数据集
-            const datasetsInfo = Array.from(contentSections).map((section, index) => {
-                const h3 = section.querySelector('.ds-description h3');
-                let name = h3 ? h3.textContent : `Dataset ${index + 1}`;
-                
-                // 确保4个数据集名称正确
-                if (index === 0) name = 'Text-Render-2M';
-                if (index === 1) name = 'HQ-Poster-100K';
-                if (index === 2) name = 'Poster-Preference-100K';
-                if (index === 3) name = 'Poster-Reflect-120K';  // 添加第4个
-                
-                return { name: name };
-            });
+            // 固定的数据集信息
+            const datasetsInfo = [
+                { name: 'Text-Render-2M' },
+                { name: 'HQ-Poster-100K' },
+                { name: 'Poster-Preference-100K' },
+                { name: 'Poster-Reflect-120K' }
+            ];
 
             let currentActiveDatasetIndex = 1; // 从第2个开始（HQ-Poster-100K）
             let isAnimating = false;
-            const numVisualSlots = 4; // 确保是4个按钮
-            const centerVisualSlot = Math.floor(numVisualSlots / 2);
 
-            function populateCarouselTabs() {
+            // 生成固定的四个按钮
+            function createFixedTabs() {
                 carousel.innerHTML = ''; // Clear old buttons
                 
-                for (let i = 0; i < numVisualSlots; i++) {
+                datasetsInfo.forEach((dataset, index) => {
                     const button = document.createElement('button');
                     button.className = 'ds-tab-button';
                     const span = document.createElement('span');
                     span.className = 'ds-tab-text';
-
-                    // Calculate which dataset this visual slot should display
-                    const offsetFromCenterSlot = i - centerVisualSlot;
-                    let datasetToShowIndex = (currentActiveDatasetIndex + offsetFromCenterSlot) % datasetsInfo.length;
-                    if (datasetToShowIndex < 0) {
-                        datasetToShowIndex += datasetsInfo.length;
-                    }
-                    
-                    span.textContent = datasetsInfo[datasetToShowIndex].name;
-                    button.dataset.targetDatasetIndex = datasetToShowIndex; // Store the actual dataset index it represents
+                    span.textContent = dataset.name;
                     button.appendChild(span);
-
-                    // Apply visual styles based on slot position relative to the center
-                    if (i === centerVisualSlot) {
-                        button.classList.add('center');
-                    } else if (Math.abs(i - centerVisualSlot) === 1) {
-                        button.classList.add('adjacent');
-                    } else {
-                        button.classList.add('far');
-                    }
-
+                    
+                    // 设置点击事件
                     button.addEventListener('click', () => {
                         if (isAnimating) return;
-                        const targetDatasetIndex = parseInt(button.dataset.targetDatasetIndex);
-                        
-                        if (targetDatasetIndex !== currentActiveDatasetIndex) {
+                        if (index !== currentActiveDatasetIndex) {
                             isAnimating = true;
-                            currentActiveDatasetIndex = targetDatasetIndex;
-                            // Repopulating buttons will trigger CSS transitions for their appearance
-                            populateCarouselTabs(); 
+                            currentActiveDatasetIndex = index;
+                            updateActiveButton();
                             updateMainContentDisplay(currentActiveDatasetIndex);
-                            // Timeout should roughly match the CSS transition duration for button styles
-                            setTimeout(() => { isAnimating = false; }, 600); 
+                            setTimeout(() => { isAnimating = false; }, 600);
                         }
                     });
+                    
                     carousel.appendChild(button);
-                }
+                });
             }
 
-            function updateMainContentDisplay(activeIndex) {
-                contentSections.forEach((content, i) => {
-                    // The content sections are indexed 0, 1, 2 matching datasetsInfo
-                    if (i === activeIndex) {
-                        content.classList.remove('prev', 'next'); // Clear transition classes
-                        content.classList.add('active');
+            // 更新按钮的active状态
+            function updateActiveButton() {
+                const buttons = carousel.querySelectorAll('.ds-tab-button');
+                buttons.forEach((button, index) => {
+                    if (index === currentActiveDatasetIndex) {
+                        button.classList.add('active');
                     } else {
-                        content.classList.remove('active');
-                        // Optional: Add 'prev' or 'next' for specific slide-out animations if desired
-                        // This part depends on how you want non-active content to behave during transition
-                        // For simplicity, we ensure only one is 'active'. The CSS handles fade-in of active.
+                        button.classList.remove('active');
                     }
                 });
             }
 
-            function autoAdvanceCarousel() {
-                if (isAnimating || document.hidden) return; // Don't advance if tab is not visible
-                isAnimating = true;
-                currentActiveDatasetIndex = (currentActiveDatasetIndex + 1) % datasetsInfo.length;
-                populateCarouselTabs();
-                updateMainContentDisplay(currentActiveDatasetIndex);
-                setTimeout(() => { isAnimating = false; }, 600); 
+            function updateMainContentDisplay(activeIndex) {
+                contentSections.forEach((content, i) => {
+                    if (i === activeIndex) {
+                        content.classList.remove('prev', 'next');
+                        content.classList.add('active');
+                    } else {
+                        content.classList.remove('active');
+                    }
+                });
             }
 
-            // Initial Load
+            // 初始化
             if (datasetsInfo.length > 0) {
-                populateCarouselTabs();
+                createFixedTabs();
+                updateActiveButton();
                 updateMainContentDisplay(currentActiveDatasetIndex);
-                if (datasetsInfo.length > 1) { // Only autoplay if there's more than one dataset
-                   // setInterval(autoAdvanceCarousel, 4000); // 我们将取消这一行的自动切换功能
-                }
-                console.log("Infinite Dataset Carousel initialized!");
+                console.log("Fixed Dataset Carousel initialized!");
             } else {
                 console.log("No datasets to display in carousel.");
             }

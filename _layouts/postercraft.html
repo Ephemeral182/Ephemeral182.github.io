@@ -3645,6 +3645,268 @@
             });
         });
         
+        // 初始化脚本
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM fully loaded and parsed"); // 调试信息
+            handleScrollAnimation(); // 用于其他部分的淡入动画
+            window.addEventListener('scroll', handleScrollAnimation);
+
+            // Floating Demos script
+            const floatingDemos = document.querySelector('.floating-demos');
+            console.log("Floating Demos Element:", floatingDemos); // 调试信息
+            if (floatingDemos) {
+                window.addEventListener('scroll', function() {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (scrollY > 100) {
+                        floatingDemos.classList.add('scrolled');
+                    } else {
+                        floatingDemos.classList.remove('scrolled');
+                    }
+                    
+                    if (scrollY > windowHeight * 0.3 && scrollY < windowHeight * 1.2) {
+                        floatingDemos.classList.add('second-phase');
+                        floatingDemos.classList.remove('third-phase');
+                    } else if (scrollY <= windowHeight * 0.3) {
+                        floatingDemos.classList.remove('second-phase');
+                        floatingDemos.classList.remove('third-phase');
+                    }
+                    
+                    if (scrollY > windowHeight * 1.2) {
+                        floatingDemos.classList.add('third-phase');
+                        floatingDemos.classList.remove('second-phase');
+                    }
+                });
+            }
+
+            // Dataset Showcase Carousel
+            console.log("Attempting to initialize Dataset Carousel..."); // 调试信息
+            const dsCarousel = document.querySelector('.ds-carousel');
+            console.log("Dataset Carousel Element:", dsCarousel); // 调试信息
+
+            if (dsCarousel) {
+                const items = dsCarousel.querySelectorAll('.ds-item');
+                const prevButton = document.querySelector('.ds-carousel-wrapper .ds-prev');
+                const nextButton = document.querySelector('.ds-carousel-wrapper .ds-next');
+                const dotsContainer = document.querySelector('.ds-carousel-wrapper .ds-dots');
+                let currentIndex = 0;
+                let autoPlayInterval;
+
+                console.log("Carousel items found:", items.length); // 调试信息
+                console.log("Prev button:", prevButton); // 调试信息
+                console.log("Next button:", nextButton); // 调试信息
+                console.log("Dots container:", dotsContainer); // 调试信息
+
+                function showItem(index) {
+                    items.forEach((item, i) => {
+                        item.classList.remove('active');
+                        if (i === index) {
+                            item.classList.add('active');
+                        }
+                    });
+                    if (dotsContainer) updateDots(index);
+                }
+
+                function updateDots(index) {
+                    if (!dotsContainer) return;
+                    const dots = dotsContainer.querySelectorAll('.ds-dot');
+                    dots.forEach((dot, i) => {
+                        dot.classList.remove('active');
+                        if (i === index) {
+                            dot.classList.add('active');
+                        }
+                    });
+                }
+
+                function createDots() {
+                    if (!dotsContainer) return;
+                    dotsContainer.innerHTML = ''; // Clear existing dots if any
+                    items.forEach((_, i) => {
+                        const dot = document.createElement('button');
+                        dot.classList.add('ds-dot');
+                        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                        dot.addEventListener('click', () => {
+                            currentIndex = i;
+                            showItem(currentIndex);
+                            resetAutoPlay();
+                        });
+                        dotsContainer.appendChild(dot);
+                    });
+                }
+
+                function nextItemManual() {
+                    currentIndex = (currentIndex + 1) % items.length;
+                    showItem(currentIndex);
+                }
+
+                function prevItemManual() {
+                    currentIndex = (currentIndex - 1 + items.length) % items.length;
+                    showItem(currentIndex);
+                }
+                
+                function startAutoPlay(interval = 5000) {
+                    stopAutoPlay();
+                    if (items.length > 1) { // Only autoplay if more than one item
+                        autoPlayInterval = setInterval(nextItemManual, interval);
+                    }
+                }
+
+                function stopAutoPlay() {
+                    clearInterval(autoPlayInterval);
+                }
+
+                function resetAutoPlay(interval = 5000) {
+                    stopAutoPlay();
+                    startAutoPlay(interval);
+                }
+
+                if (items.length > 0) {
+                    createDots();
+                    showItem(currentIndex);
+                    startAutoPlay();
+
+                    if (prevButton) {
+                        prevButton.addEventListener('click', () => {
+                            prevItemManual();
+                            resetAutoPlay();
+                        });
+                    }
+                    if (nextButton) {
+                        nextButton.addEventListener('click', () => {
+                            nextItemManual();
+                            resetAutoPlay();
+                        });
+                    }
+                    
+                    // Pause autoplay on hover
+                    const carouselWrapper = document.querySelector('.ds-carousel-wrapper');
+                    if (carouselWrapper) {
+                        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+                        carouselWrapper.addEventListener('mouseleave', () => resetAutoPlay());
+                    }
+                } else {
+                    console.log("No items found for the dataset carousel."); // 调试信息
+                }
+            } else {
+                console.log("Dataset carousel element (.ds-carousel) not found."); // 调试信息
+            }
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... (call to handleScrollAnimation, floatingDemos init) ...
+            console.log("DOM fully loaded and parsed for new Dataset Showcase.");
+
+            const datasetShowcaseSection = document.getElementById('dataset-showcase');
+            if (datasetShowcaseSection) {
+                console.log("Dataset Showcase Section found.");
+                const mainImageEl = document.getElementById('ds-main-image-display');
+                const mainTitleEl = document.getElementById('ds-main-title-display');
+                const mainDescriptionEl = document.getElementById('ds-main-description-display');
+                const thumbnailNavContainer = datasetShowcaseSection.querySelector('.ds-thumbnail-navigation');
+                const datasetEntries = document.querySelectorAll('#dataset-definitions .dataset-entry');
+
+                let datasets = [];
+                datasetEntries.forEach(entry => {
+                    datasets.push({
+                        imgSrc: entry.dataset.imgSrc,
+                        title: entry.dataset.title,
+                        description: entry.dataset.description
+                    });
+                });
+
+                console.log("Datasets loaded:", datasets.length, datasets);
+
+                function updateMainDisplay(index) {
+                    if (!datasets[index]) {
+                        console.error("Dataset not found for index:", index);
+                        return;
+                    }
+                    const currentData = datasets[index];
+                    
+                    if (mainImageEl) mainImageEl.src = currentData.imgSrc;
+                    if (mainImageEl) mainImageEl.alt = currentData.title + " main image";
+                    
+                    if (mainTitleEl) {
+                        mainTitleEl.textContent = currentData.title;
+                        // Apply special styling for the second title (HQ-Poster-100K) or any other logic
+                        // The Leonardo.ai "Interior Design" is the second item in their list
+                        if (index === 1) { // 0-indexed, so 1 is the second item
+                            mainTitleEl.classList.add('highlight');
+                        } else {
+                            mainTitleEl.classList.remove('highlight');
+                        }
+                    }
+                    if (mainDescriptionEl) mainDescriptionEl.textContent = currentData.description;
+
+                    // Update active state for thumbnails
+                    const currentThumbnails = thumbnailNavContainer.querySelectorAll('.ds-thumbnail-item');
+                    currentThumbnails.forEach((thumb, i) => {
+                        thumb.classList.toggle('active', i === index);
+                    });
+                }
+
+                function populateThumbnails() {
+                    if (!thumbnailNavContainer) {
+                        console.error("Thumbnail navigation container not found.");
+                        return;
+                    }
+                    thumbnailNavContainer.innerHTML = ''; // Clear existing thumbnails
+                    datasets.forEach((data, index) => {
+                        const thumbItem = document.createElement('div');
+                        thumbItem.classList.add('ds-thumbnail-item');
+                        thumbItem.dataset.index = index;
+
+                        const thumbImg = document.createElement('img');
+                        thumbImg.src = data.imgSrc; // Using main image for thumbnail as per previous setup
+                        thumbImg.alt = data.title + " thumbnail";
+                        
+                        thumbItem.appendChild(thumbImg);
+                        thumbItem.addEventListener('click', function() {
+                            updateMainDisplay(index);
+                        });
+                        thumbnailNavContainer.appendChild(thumbItem);
+                    });
+                }
+
+                if (datasets.length > 0) {
+                    populateThumbnails();
+                    updateMainDisplay(0); // Display the first dataset initially
+                } else {
+                    console.log("No dataset entries found to populate showcase.");
+                }
+            } else {
+                console.log("Dataset Showcase Section NOT found.");
+            }
+             // Smooth scroll (if not already present or if you want it self-contained here)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
 
         // Dataset Showcase Tabs - 3-tab version with dynamic layout
         document.addEventListener('DOMContentLoaded', function() {

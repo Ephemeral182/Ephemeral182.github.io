@@ -3620,6 +3620,78 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* What is PosterCraft Section - 更新为与Technical Framework相同的炫酷特效 */
+        .what-is-section {
+            padding: 8rem 0;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .what-is-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 更新标题样式 - 使用与Technical Framework相同的特效 */
+        .what-is-title {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, 
+                #667eea 0%, 
+                #764ba2 20%, 
+                #f093fb 40%, 
+                #f5576c 60%, 
+                #4facfe 80%, 
+                #00f2fe 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: techGradientFlow 8s ease-in-out infinite;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        /* 添加emoji样式 */
+        .what-is-emoji {
+            font-size: 3rem;
+            margin: 1rem 0;
+            display: inline-block;
+            animation: techEmojiPulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+
+        /* 更新副标题样式 */
+        .what-is-subtitle {
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* 如果动画不存在，添加动画定义 */
+        @keyframes techGradientFlow {
+            0%, 100% { background-position: 0% 50%; }
+            25% { background-position: 100% 25%; }
+            50% { background-position: 200% 50%; }
+            75% { background-position: 300% 75%; }
+        }
+
+        @keyframes techEmojiPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.1) rotate(5deg); }
+        }
     </style>
 </head>
 <body>

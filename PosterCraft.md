@@ -171,6 +171,7 @@ extra_js:
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">
         <h2 class="what-is-title">What is PosterCraft?</h2>
+        <div class="what-is-emoji">🎨</div>
         <p class="what-is-subtitle">Transform your words into stunning visual masterpieces</p>
         
         <!-- 新的横向布局 -->

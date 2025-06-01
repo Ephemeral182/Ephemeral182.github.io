@@ -3692,6 +3692,79 @@
             0%, 100% { transform: scale(1) rotate(0deg); }
             50% { transform: scale(1.1) rotate(5deg); }
         }
+
+        /* 添加到现有CSS的末尾，大约在4000行左右 */
+
+        /* 跳转目标高亮动画 */
+        @keyframes sectionHighlight {
+            0% { 
+                background: transparent; 
+                transform: scale(1);
+            }
+            25% { 
+                background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+                transform: scale(1.01);
+            }
+            50% { 
+                background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+                transform: scale(1.01);
+            }
+            75% { 
+                background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+                transform: scale(1.01);
+            }
+            100% { 
+                background: transparent; 
+                transform: scale(1);
+            }
+        }
+
+        /* 提示文字淡入动画 */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        /* 增强第一个stage卡片的交互效果 */
+        .stage-card.stage-1 {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .stage-card.stage-1::after {
+            content: '👆 点击查看效果';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: linear-gradient(45deg, #ec4899, #f59e0b);
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: scale(0.8) rotate(-10deg);
+            transition: all 0.3s ease;
+            pointer-events: none;
+            z-index: 10;
+            animation: badgeFloat 2s ease-in-out infinite;
+        }
+
+        .stage-card.stage-1:hover::after {
+            opacity: 1;
+            transform: scale(1) rotate(-5deg);
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: scale(0.8) rotate(-10deg) translateY(0px); }
+            50% { transform: scale(0.8) rotate(-10deg) translateY(-3px); }
+        }
     </style>
 </head>
 <body>
@@ -3753,6 +3826,77 @@
             console.log("DOM fully loaded and parsed"); // 调试信息
             handleScrollAnimation(); // 用于其他部分的淡入动画
             window.addEventListener('scroll', handleScrollAnimation);
+
+            // 新增：Text Rendering Optimization 卡片跳转功能
+            const textRenderingCard = document.querySelector('.stage-card.stage-1');
+            if (textRenderingCard) {
+                // 添加点击样式提示
+                textRenderingCard.style.cursor = 'pointer';
+                
+                // 添加hover提示效果
+                textRenderingCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                    this.style.boxShadow = '0 25px 60px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                    
+                    // 添加提示文字
+                    const hintText = document.createElement('div');
+                    hintText.className = 'jump-hint';
+                    hintText.textContent = '点击查看优化效果 ↓';
+                    hintText.style.cssText = `
+                        position: absolute;
+                        bottom: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: linear-gradient(45deg, #6366f1, #8b5cf6);
+                        color: white;
+                        padding: 0.5rem 1rem;
+                        border-radius: 20px;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        animation: fadeInUp 0.3s ease;
+                        z-index: 20;
+                        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+                    `;
+                    this.appendChild(hintText);
+                });
+                
+                textRenderingCard.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                    
+                    // 移除提示文字
+                    const hintText = this.querySelector('.jump-hint');
+                    if (hintText) {
+                        hintText.remove();
+                    }
+                });
+                
+                // 添加点击跳转功能
+                textRenderingCard.addEventListener('click', function() {
+                    const targetSection = document.getElementById('text-optimization');
+                    if (targetSection) {
+                        // 添加点击动画效果
+                        this.style.transform = 'scale(0.98)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                        
+                        // 平滑滚动到目标部分
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // 到达目标后添加高亮效果
+                        setTimeout(() => {
+                            targetSection.style.animation = 'sectionHighlight 2s ease';
+                        }, 800);
+                    }
+                });
+                
+                console.log("Text Rendering Optimization jump functionality added!");
+            }
 
             // Floating Demos script
             const floatingDemos = document.querySelector('.floating-demos');

@@ -3302,12 +3302,11 @@
         .ds-tab-carousel {
             display: flex;
             align-items: center;
-            gap: 1rem; /* 调整按钮间距 */
+            gap: 0.8rem; /* 减少间距给按钮更多空间 */
             position: relative;
             width: 100%;
-            max-width: 1200px; /* 限制最大宽度 */
-            justify-content: space-between; /* 均匀分布按钮 */
-            /* 华丽的背景容器 */
+            max-width: 1300px; /* 增加最大宽度 */
+            justify-content: space-between;
             background: linear-gradient(135deg, 
                 rgba(99, 102, 241, 0.15) 0%, 
                 rgba(139, 92, 246, 0.1) 25%, 
@@ -3315,15 +3314,13 @@
                 rgba(245, 158, 11, 0.1) 75%, 
                 rgba(16, 185, 129, 0.15) 100%);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px; /* 更圆的边角 */
-            padding: 1.5rem 2rem; /* 容器内边距 */
+            border-radius: 25px;
+            padding: 1.5rem 1.5rem; /* 稍微减少padding */
             backdrop-filter: blur(20px);
-            /* 华丽的阴影效果 */
             box-shadow: 
                 0 20px 60px rgba(0, 0, 0, 0.4),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2),
                 0 0 80px rgba(99, 102, 241, 0.3);
-            /* 呼吸动画 */
             animation: containerBreath 4s ease-in-out infinite;
         }
 
@@ -3347,26 +3344,30 @@
         .ds-tab-button {
             background: transparent;
             border: none;
-            padding: 1.2rem 1rem; /* 调整padding */
-            font-size: clamp(1.1rem, 2.2vw, 1.4rem); /* 调整字体大小以适应4个按钮 */
+            padding: 1.2rem 0.8rem; /* 调整padding，减少左右padding给文字更多空间 */
+            font-size: clamp(1rem, 2vw, 1.3rem); /* 稍微减小字体，确保文字能完整显示 */
             font-weight: 700;
-            color: #aaaaaa; /* 默认颜色调亮一些 */
+            color: #aaaaaa;
             cursor: pointer;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
             position: relative;
             text-transform: none;
             font-family: inherit;
             white-space: nowrap;
-            opacity: 0.7; /* 默认透明度 */
-            transform: scale(0.95); /* 默认稍微缩小 */
-            filter: blur(0.2px); /* 默认轻微模糊 */
-            flex: 1; /* 让按钮平分宽度 */
+            opacity: 0.7;
+            transform: scale(0.95);
+            filter: blur(0.2px);
+            flex: 1;
             text-align: center;
             border-radius: 15px;
-            overflow: hidden;
+            overflow: visible; /* 改为visible，防止文字被截断 */
             background: linear-gradient(135deg, 
                 rgba(255, 255, 255, 0.05) 0%, 
                 rgba(255, 255, 255, 0.02) 100%);
+            min-width: 0; /* 确保flex项目可以收缩 */
+            display: flex; /* 使用flex布局 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
         }
 
         .ds-tab-button::before {
@@ -3555,14 +3556,14 @@
         /* 响应式设计 */
         @media (max-width: 1024px) {
             .ds-tab-carousel {
-                gap: 0.8rem;
-                padding: 1.2rem 1rem; /* 调整内边距 */
-                max-width: 95%; /* 适应屏幕 */
+                gap: 0.6rem;
+                padding: 1.2rem 1rem;
+                max-width: 100%; /* 移除宽度限制 */
             }
             
             .ds-tab-button {
-                padding: 1rem 0.8rem;
-                font-size: clamp(1rem, 2vw, 1.2rem); /* 进一步减小字体 */
+                padding: 1rem 0.6rem; /* 进一步减少padding */
+                font-size: clamp(0.9rem, 1.8vw, 1.1rem); /* 调整字体大小 */
             }
         }
 
@@ -3572,20 +3573,21 @@
             }
             
             .ds-tab-carousel {
-                flex-direction: column; /* 移动端改为垂直排列 */
+                flex-direction: column;
                 gap: 1rem;
                 padding: 1.5rem 1rem;
-                max-width: 90%; /* 适应屏幕 */
-                 box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* 简化阴影 */
+                max-width: 95%;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             }
             
             .ds-tab-button {
-                padding: 1rem 1.5rem; /* 恢复一些padding */
-                font-size: 1.2rem; /* 字体改回稍大 */
-                width: 100%; /* 占满容器宽度 */
-                opacity: 0.8 !important; /* 简化样式 */
+                padding: 1rem 1.5rem;
+                font-size: 1.1rem; /* 移动端使用固定字体大小 */
+                width: 100%;
+                opacity: 0.8 !important;
                 transform: scale(1) !important;
                 filter: blur(0px) !important;
+                overflow: visible !important; /* 确保移动端也不截断 */
             }
             
             .ds-tab-button.active {
@@ -3602,12 +3604,13 @@
         @media (max-width: 480px) {
             .ds-tab-carousel {
                 padding: 1rem;
-                max-width: 95%;
+                max-width: 98%;
             }
             
             .ds-tab-button {
                 padding: 0.8rem 1rem;
-                font-size: 1.1rem; /* 字体再小一点 */
+                font-size: 1rem; /* 小屏幕固定字体大小 */
+                overflow: visible !important; /* 确保小屏幕也不截断 */
             }
             
             .ds-main-display-area {

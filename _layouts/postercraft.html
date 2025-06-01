@@ -3956,28 +3956,29 @@
 
                 // 立即切换内容，无动画
                 function switchContent(targetIndex) {
-                    // 立即更新内容
+                    // 直接设置样式，不使用CSS类切换
                     contentSections.forEach((content, i) => {
                         if (i === targetIndex) {
+                            // 立即显示，无动画
+                            content.style.display = 'block';
                             content.style.opacity = '1';
-                            content.style.transform = 'translateY(0)';
                             content.style.position = 'relative';
                             content.style.pointerEvents = 'auto';
-                            content.classList.add('active');
                         } else {
+                            // 立即隐藏，无动画
+                            content.style.display = 'none';
                             content.style.opacity = '0';
-                            content.style.transform = 'translateY(20px)';
                             content.style.position = 'absolute';
                             content.style.pointerEvents = 'none';
-                            content.classList.remove('active');
                         }
                     });
                 }
 
-                // 更新按钮状态
+                // 简化按钮更新
                 function updateActiveButton() {
                     const buttons = carousel.querySelectorAll('.ds-tab-button');
                     buttons.forEach((button, index) => {
+                        // 直接操作classList，避免复杂的样式计算
                         if (index === currentActiveDatasetIndex) {
                             button.classList.add('active');
                         } else {
@@ -3986,15 +3987,14 @@
                     });
                 }
 
-                // 处理点击事件（带防抖）
+                // 使用更短的防抖时间
                 const handleClick = debounce((targetIndex) => {
                     if (targetIndex !== currentActiveDatasetIndex) {
-                        console.log(`Switching to dataset ${targetIndex}: ${datasetsInfo[targetIndex].name}`);
                         currentActiveDatasetIndex = targetIndex;
                         updateActiveButton();
                         switchContent(targetIndex);
-                }
-                }, 100); // 100ms防抖
+                    }
+                }, 50); // 从100ms减少到50ms
 
                 // 生成固定的四个按钮
                 function createFixedTabs() {

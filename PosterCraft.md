@@ -312,7 +312,7 @@ extra_js:
                 <!-- Dataset Content for Poster-Preference-100K -->
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo3.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Poster-Preference-100K</h3>

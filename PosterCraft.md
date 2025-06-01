@@ -291,7 +291,7 @@ extra_js:
                 <!-- Dataset Content for Text-Render-2M -->
                 <div class="ds-dataset-content" data-index="0">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo_text.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>Text-Render-2M</h3>

@@ -301,7 +301,7 @@ extra_js:
                 <!-- Dataset Content for HQ-Poster-100K -->
                 <div class="ds-dataset-content" data-index="1">
                     <div class="ds-image-grid">
-                        <img src="/images/postercraft/refelction_data/demo1.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
+                        <img src="/images/postercraft/refelction_data/demo2.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
                     </div>
                     <div class="ds-description">
                         <h3>HQ-Poster-100K</h3>

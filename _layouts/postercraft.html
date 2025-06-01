@@ -3827,22 +3827,19 @@
         
         // 初始化脚本
         document.addEventListener('DOMContentLoaded', function() {
-            console.log("DOM fully loaded and parsed"); // 调试信息
-            handleScrollAnimation(); // 用于其他部分的淡入动画
+            console.log("DOM fully loaded and parsed");
+            handleScrollAnimation();
             window.addEventListener('scroll', handleScrollAnimation);
 
-            // 新增：Text Rendering Optimization 卡片跳转功能
+            // Text Rendering Optimization 卡片跳转功能
             const textRenderingCard = document.querySelector('.stage-card.stage-1');
             if (textRenderingCard) {
-                // 添加点击样式提示
                 textRenderingCard.style.cursor = 'pointer';
                 
-                // 添加hover提示效果
                 textRenderingCard.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-8px) scale(1.02)';
                     this.style.boxShadow = '0 25px 60px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
                     
-                    // 添加提示文字
                     const hintText = document.createElement('div');
                     hintText.className = 'jump-hint';
                     hintText.textContent = '点击查看优化效果 ↓';
@@ -3868,31 +3865,25 @@
                 textRenderingCard.addEventListener('mouseleave', function() {
                     this.style.transform = '';
                     this.style.boxShadow = '';
-                    
-                    // 移除提示文字
                     const hintText = this.querySelector('.jump-hint');
                     if (hintText) {
                         hintText.remove();
                     }
                 });
                 
-                // 添加点击跳转功能
                 textRenderingCard.addEventListener('click', function() {
                     const targetSection = document.getElementById('text-optimization');
                     if (targetSection) {
-                        // 添加点击动画效果
                         this.style.transform = 'scale(0.98)';
                         setTimeout(() => {
                             this.style.transform = '';
                         }, 150);
                         
-                        // 平滑滚动到目标部分
                         targetSection.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
                         });
                         
-                        // 到达目标后添加高亮效果
                         setTimeout(() => {
                             targetSection.style.animation = 'sectionHighlight 2s ease';
                         }, 800);
@@ -3904,7 +3895,6 @@
 
             // Floating Demos script
             const floatingDemos = document.querySelector('.floating-demos');
-            console.log("Floating Demos Element:", floatingDemos); // 调试信息
             if (floatingDemos) {
                 window.addEventListener('scroll', function() {
                     const scrollY = window.scrollY;
@@ -3931,120 +3921,86 @@
                 });
             }
 
-            // Dataset Showcase Carousel
-            console.log("Attempting to initialize Dataset Carousel..."); // 调试信息
-            const dsCarousel = document.querySelector('.ds-carousel');
-            console.log("Dataset Carousel Element:", dsCarousel); // 调试信息
+            // Dataset Showcase - 只保留这一个版本，移除其他重复的
+            console.log("Initializing Dataset Showcase...");
+            
+            const carousel = document.getElementById('ds-carousel');
+            const contentSections = document.querySelectorAll('.ds-main-display-area .ds-dataset-content');
+            
+            if (carousel && contentSections.length > 0) {
+                // 固定的数据集信息
+                const datasetsInfo = [
+                    { name: 'Text-Render-2M' },
+                    { name: 'HQ-Poster-100K' },
+                    { name: 'Poster-Preference-100K' },
+                    { name: 'Poster-Reflect-120K' }
+                ];
 
-            if (dsCarousel) {
-                const items = dsCarousel.querySelectorAll('.ds-item');
-                const prevButton = document.querySelector('.ds-carousel-wrapper .ds-prev');
-                const nextButton = document.querySelector('.ds-carousel-wrapper .ds-next');
-                const dotsContainer = document.querySelector('.ds-carousel-wrapper .ds-dots');
-                let currentIndex = 0;
-                let autoPlayInterval;
+                let currentActiveDatasetIndex = 1; // 从第2个开始（HQ-Poster-100K）
+                let isAnimating = false;
 
-                console.log("Carousel items found:", items.length); // 调试信息
-                console.log("Prev button:", prevButton); // 调试信息
-                console.log("Next button:", nextButton); // 调试信息
-                console.log("Dots container:", dotsContainer); // 调试信息
-
-                function showItem(index) {
-                    items.forEach((item, i) => {
-                        item.classList.remove('active');
-                        if (i === index) {
-                            item.classList.add('active');
-                        }
-                    });
-                    if (dotsContainer) updateDots(index);
-                }
-
-                function updateDots(index) {
-                    if (!dotsContainer) return;
-                    const dots = dotsContainer.querySelectorAll('.ds-dot');
-                    dots.forEach((dot, i) => {
-                        dot.classList.remove('active');
-                        if (i === index) {
-                            dot.classList.add('active');
-                        }
-                    });
-                }
-
-                function createDots() {
-                    if (!dotsContainer) return;
-                    dotsContainer.innerHTML = ''; // Clear existing dots if any
-                    items.forEach((_, i) => {
-                        const dot = document.createElement('button');
-                        dot.classList.add('ds-dot');
-                        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                        dot.addEventListener('click', () => {
-                            currentIndex = i;
-                            showItem(currentIndex);
-                            resetAutoPlay();
-                        });
-                        dotsContainer.appendChild(dot);
-                    });
-                }
-
-                function nextItemManual() {
-                    currentIndex = (currentIndex + 1) % items.length;
-                    showItem(currentIndex);
-                }
-
-                function prevItemManual() {
-                    currentIndex = (currentIndex - 1 + items.length) % items.length;
-                    showItem(currentIndex);
-                }
-                
-                function startAutoPlay(interval = 5000) {
-                    stopAutoPlay();
-                    if (items.length > 1) { // Only autoplay if more than one item
-                        autoPlayInterval = setInterval(nextItemManual, interval);
-                    }
-                }
-
-                function stopAutoPlay() {
-                    clearInterval(autoPlayInterval);
-                }
-
-                function resetAutoPlay(interval = 5000) {
-                    stopAutoPlay();
-                    startAutoPlay(interval);
-                }
-
-                if (items.length > 0) {
-                    createDots();
-                    showItem(currentIndex);
-                    startAutoPlay();
-
-                    if (prevButton) {
-                        prevButton.addEventListener('click', () => {
-                            prevItemManual();
-                            resetAutoPlay();
-                        });
-                    }
-                    if (nextButton) {
-                        nextButton.addEventListener('click', () => {
-                            nextItemManual();
-                            resetAutoPlay();
-                        });
-                    }
+                // 生成固定的四个按钮
+                function createFixedTabs() {
+                    carousel.innerHTML = ''; // Clear old buttons
                     
-                    // Pause autoplay on hover
-                    const carouselWrapper = document.querySelector('.ds-carousel-wrapper');
-                    if (carouselWrapper) {
-                        carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
-                        carouselWrapper.addEventListener('mouseleave', () => resetAutoPlay());
-                    }
-                } else {
-                    console.log("No items found for the dataset carousel."); // 调试信息
+                    datasetsInfo.forEach((dataset, index) => {
+                        const button = document.createElement('button');
+                        button.className = 'ds-tab-button';
+                        const span = document.createElement('span');
+                        span.className = 'ds-tab-text';
+                        span.textContent = dataset.name;
+                        button.appendChild(span);
+                        
+                        // 设置点击事件 - 简化逻辑，移除动画锁定
+                        button.addEventListener('click', () => {
+                            console.log(`Clicked dataset ${index}: ${dataset.name}`);
+                            if (index !== currentActiveDatasetIndex) {
+                                currentActiveDatasetIndex = index;
+                                updateActiveButton();
+                                updateMainContentDisplay(currentActiveDatasetIndex);
+                            }
+                        });
+                        
+                        carousel.appendChild(button);
+                    });
+                }
+
+                // 更新按钮的active状态
+                function updateActiveButton() {
+                    const buttons = carousel.querySelectorAll('.ds-tab-button');
+                    buttons.forEach((button, index) => {
+                        if (index === currentActiveDatasetIndex) {
+                            button.classList.add('active');
+                        } else {
+                            button.classList.remove('active');
+                        }
+                    });
+                }
+
+                // 更新内容显示
+                function updateMainContentDisplay(activeIndex) {
+                    contentSections.forEach((content, i) => {
+                        if (i === activeIndex) {
+                            content.classList.add('active');
+                        } else {
+                            content.classList.remove('active');
+                        }
+                    });
+                }
+
+                // 初始化
+                if (datasetsInfo.length > 0) {
+                    createFixedTabs();
+                    updateActiveButton();
+                    updateMainContentDisplay(currentActiveDatasetIndex);
+                    console.log("Dataset Showcase initialized successfully!");
                 }
             } else {
-                console.log("Dataset carousel element (.ds-carousel) not found."); // 调试信息
+                console.log("Dataset carousel elements not found.");
             }
         });
-        
-        // 平滑滚动
+
+        // 平滑滚动 - 只保留一个版本
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -4058,277 +4014,7 @@
             });
         });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // ... (call to handleScrollAnimation, floatingDemos init) ...
-            console.log("DOM fully loaded and parsed for new Dataset Showcase.");
-
-            const datasetShowcaseSection = document.getElementById('dataset-showcase');
-            if (datasetShowcaseSection) {
-                console.log("Dataset Showcase Section found.");
-                const mainImageEl = document.getElementById('ds-main-image-display');
-                const mainTitleEl = document.getElementById('ds-main-title-display');
-                const mainDescriptionEl = document.getElementById('ds-main-description-display');
-                const thumbnailNavContainer = datasetShowcaseSection.querySelector('.ds-thumbnail-navigation');
-                const datasetEntries = document.querySelectorAll('#dataset-definitions .dataset-entry');
-
-                let datasets = [];
-                datasetEntries.forEach(entry => {
-                    datasets.push({
-                        imgSrc: entry.dataset.imgSrc,
-                        title: entry.dataset.title,
-                        description: entry.dataset.description
-                    });
-                });
-
-                console.log("Datasets loaded:", datasets.length, datasets);
-
-                function updateMainDisplay(index) {
-                    if (!datasets[index]) {
-                        console.error("Dataset not found for index:", index);
-                        return;
-                    }
-                    const currentData = datasets[index];
-                    
-                    if (mainImageEl) mainImageEl.src = currentData.imgSrc;
-                    if (mainImageEl) mainImageEl.alt = currentData.title + " main image";
-                    
-                    if (mainTitleEl) {
-                        mainTitleEl.textContent = currentData.title;
-                        // Apply special styling for the second title (HQ-Poster-100K) or any other logic
-                        // The Leonardo.ai "Interior Design" is the second item in their list
-                        if (index === 1) { // 0-indexed, so 1 is the second item
-                            mainTitleEl.classList.add('highlight');
-                        } else {
-                            mainTitleEl.classList.remove('highlight');
-                        }
-                    }
-                    if (mainDescriptionEl) mainDescriptionEl.textContent = currentData.description;
-
-                    // Update active state for thumbnails
-                    const currentThumbnails = thumbnailNavContainer.querySelectorAll('.ds-thumbnail-item');
-                    currentThumbnails.forEach((thumb, i) => {
-                        thumb.classList.toggle('active', i === index);
-                    });
-                }
-
-                function populateThumbnails() {
-                    if (!thumbnailNavContainer) {
-                        console.error("Thumbnail navigation container not found.");
-                        return;
-                    }
-                    thumbnailNavContainer.innerHTML = ''; // Clear existing thumbnails
-                    datasets.forEach((data, index) => {
-                        const thumbItem = document.createElement('div');
-                        thumbItem.classList.add('ds-thumbnail-item');
-                        thumbItem.dataset.index = index;
-
-                        const thumbImg = document.createElement('img');
-                        thumbImg.src = data.imgSrc; // Using main image for thumbnail as per previous setup
-                        thumbImg.alt = data.title + " thumbnail";
-                        
-                        thumbItem.appendChild(thumbImg);
-                        thumbItem.addEventListener('click', function() {
-                            updateMainDisplay(index);
-                        });
-                        thumbnailNavContainer.appendChild(thumbItem);
-                    });
-                }
-
-                if (datasets.length > 0) {
-                    populateThumbnails();
-                    updateMainDisplay(0); // Display the first dataset initially
-                } else {
-                    console.log("No dataset entries found to populate showcase.");
-                }
-            } else {
-                console.log("Dataset Showcase Section NOT found.");
-            }
-             // Smooth scroll (if not already present or if you want it self-contained here)
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Dataset Showcase Tabs - 3-tab version with dynamic layout
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("Initializing 3-tab Dataset Showcase...");
-            
-            const tabButtons = document.querySelectorAll('.ds-tab-button');
-            const contentSections = document.querySelectorAll('.ds-dataset-content');
-            const tabNavigation = document.querySelector('.ds-tab-navigation');
-            
-            if (tabButtons.length > 0 && contentSections.length > 0 && tabNavigation) {
-                
-                function showDataset(index) {
-                    // Remove active class from all buttons and content
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    contentSections.forEach(content => content.classList.remove('active'));
-                    
-                    // Update navigation layout class
-                    tabNavigation.className = 'ds-tab-navigation active-' + index;
-                    
-                    // Add active class to selected button and content
-                    if (tabButtons[index]) {
-                        tabButtons[index].classList.add('active');
-                    }
-                    if (contentSections[index]) {
-                        contentSections[index].classList.add('active');
-                    }
-                    
-                    console.log("Showing dataset:", index);
-                }
-                
-                // Add click event listeners
-                tabButtons.forEach((button, index) => {
-                    button.addEventListener('click', () => {
-                        showDataset(index);
-                    });
-                });
-                
-                // Initialize with middle tab active (index 1)
-                showDataset(1);
-                
-                // Auto-rotation every 5 seconds (optional)
-                let currentIndex = 1;
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % 3;
-                    showDataset(currentIndex);
-                }, 5000);
-                
-                console.log("3-tab Dataset Showcase initialized!");
-            }
-        });
-
-        // Dataset Showcase Infinite Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log("Initializing Infinite Dataset Carousel...");
-            
-            const carousel = document.getElementById('ds-carousel');
-            const contentSections = document.querySelectorAll('.ds-main-display-area .ds-dataset-content');
-            
-            if (!carousel || contentSections.length === 0) {
-                console.log("Carousel elements not found or no content sections.");
-                return;
-            }
-            
-            // 固定的数据集信息
-            const datasetsInfo = [
-                { name: 'Text-Render-2M' },
-                { name: 'HQ-Poster-100K' },
-                { name: 'Poster-Preference-100K' },
-                { name: 'Poster-Reflect-120K' }
-            ];
-
-            let currentActiveDatasetIndex = 1; // 从第2个开始（HQ-Poster-100K）
-            let isAnimating = false;
-
-            // 生成固定的四个按钮
-            function createFixedTabs() {
-                carousel.innerHTML = ''; // Clear old buttons
-                
-                datasetsInfo.forEach((dataset, index) => {
-                    const button = document.createElement('button');
-                    button.className = 'ds-tab-button';
-                    const span = document.createElement('span');
-                    span.className = 'ds-tab-text';
-                    span.textContent = dataset.name;
-                    button.appendChild(span);
-                    
-                    // 设置点击事件
-                    button.addEventListener('click', () => {
-                        if (isAnimating) return;
-                        if (index !== currentActiveDatasetIndex) {
-                            isAnimating = true;
-                            currentActiveDatasetIndex = index;
-                            updateActiveButton();
-                            updateMainContentDisplay(currentActiveDatasetIndex);
-                            setTimeout(() => { isAnimating = false; }, 600);
-                        }
-                    });
-                    
-                    carousel.appendChild(button);
-                });
-            }
-
-            // 更新按钮的active状态
-            function updateActiveButton() {
-                const buttons = carousel.querySelectorAll('.ds-tab-button');
-                buttons.forEach((button, index) => {
-                    if (index === currentActiveDatasetIndex) {
-                        button.classList.add('active');
-                    } else {
-                        button.classList.remove('active');
-                    }
-                });
-            }
-
-            function updateMainContentDisplay(activeIndex) {
-                contentSections.forEach((content, i) => {
-                    if (i === activeIndex) {
-                        content.classList.remove('prev', 'next');
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
-                });
-            }
-
-            // 初始化
-            if (datasetsInfo.length > 0) {
-                createFixedTabs();
-                updateActiveButton();
-                updateMainContentDisplay(currentActiveDatasetIndex);
-                console.log("Fixed Dataset Carousel initialized!");
-            } else {
-                console.log("No datasets to display in carousel.");
-            }
-        });
-
-        // The following functions updateCarouselPosition and slideToIndex seem to be from an
-        // alternative or older implementation. The logic above is self-contained for the
-        // infinite carousel based on repopulating buttons and CSS transitions.
-        // I will comment them out to avoid conflicts if they are not used by other parts.
-        /*
-        function updateCarouselPosition(offset) {
-            const centerOffset = -4 * 6; // 改为6rem间距，从8改为6
-            const totalOffset = centerOffset + offset;
-            carousel.style.transform = `translateX(calc(50% + ${totalOffset}rem))`;
-        }
-
-        function slideToIndex(targetIndex, clickedPosition) {
-            if (isAnimating || targetIndex === currentIndex) return;
-            
-            isAnimating = true;
-            
-            // 计算滑动距离
-            const slideDistance = -clickedPosition * 6; // 改为6rem间距，从8改为6
-            
-            // 执行滑动动画
-            updateCarouselPosition(slideDistance);
-            
-            // 更新当前索引
-            currentIndex = targetIndex;
-            
-            // 更新内容显示
-            updateContent(currentIndex); // This function 'updateContent' is not defined in the snippet
-            
-            // 动画完成后重新生成按钮
-            setTimeout(() => {
-                // createInfiniteButtons(); // This function 'createInfiniteButtons' is not defined
-                isAnimating = false;
-            }, 1200);
-        }
-        */
+        // 移除所有其他重复的DOMContentLoaded事件监听器和dataset showcase代码
     </script>
 </body>
 </html>

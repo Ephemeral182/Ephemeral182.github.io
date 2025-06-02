@@ -4243,6 +4243,222 @@
                 min-width: 200px;
             }
         }
+
+        /* 切换器样式 */
+        .optimization-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 4rem;
+        }
+
+        .switcher-container {
+            display: flex;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.9) 0%, 
+                rgba(30, 41, 59, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 0.5rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .switcher-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            border-radius: 16px;
+            color: #a1a1aa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .switcher-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .switcher-btn:hover::before {
+            left: 100%;
+        }
+
+        .switcher-btn:hover {
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .switcher-btn.active {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .switcher-icon {
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .switcher-btn.active .switcher-icon {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6));
+        }
+
+        .switcher-text {
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        /* 修改现有的section样式 */
+        .optimization-section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .optimization-section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 简化的长文字网格样式 */
+        .longtext-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .longtext-item {
+            position: relative;
+        }
+
+        .longtext-card {
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.8) 0%, 
+                rgba(30, 41, 59, 0.6) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+        }
+
+        .longtext-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 60px rgba(99, 102, 241, 0.3);
+        }
+
+        .longtext-image-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 832 / 1216;
+            overflow: hidden;
+        }
+
+        .longtext-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .longtext-card:hover .longtext-image {
+            transform: scale(1.05);
+        }
+
+        .longtext-glow {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b);
+            border-radius: 24px;
+            opacity: 0.3;
+            filter: blur(25px);
+            z-index: -1;
+            animation: demoGlow 6s ease-in-out infinite;
+        }
+
+        .longtext-info {
+            padding: 1.5rem;
+        }
+
+        .longtext-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .longtext-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .longtext-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .switcher-container {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .switcher-btn {
+                padding: 0.8rem 1.5rem;
+                text-align: center;
+                justify-content: center;
+            }
+            
+            .longtext-grid {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .switcher-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .longtext-info {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -4543,6 +4759,31 @@
             });
             
             console.log("Long Text Showcase navigation initialized!");
+        }
+
+        // Text Optimization Switcher - 添加到现有的DOMContentLoaded事件中
+        const optimizationSwitcher = document.querySelectorAll('.switcher-btn');
+        const optimizationSections = document.querySelectorAll('.optimization-section');
+        
+        if (optimizationSwitcher.length > 0) {
+            optimizationSwitcher.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const target = this.getAttribute('data-target');
+                    
+                    // 移除所有活动状态
+                    optimizationSwitcher.forEach(b => b.classList.remove('active'));
+                    optimizationSections.forEach(s => s.classList.remove('active'));
+                    
+                    // 添加当前活动状态
+                    this.classList.add('active');
+                    const targetSection = document.getElementById(`section-${target}`);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+            
+            console.log("Text Optimization Switcher initialized!");
         }
     </script>
 </body>

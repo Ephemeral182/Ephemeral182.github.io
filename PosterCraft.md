@@ -437,7 +437,7 @@ extra_js:
     </div>
 </div>
 
-<!-- 新增：Text Optimization 效果展示部分 - 重新设计版本 -->
+<!-- 新增：Text Optimization 效果展示部分 - 整合版本 -->
 <div class="text-optimization-showcase" id="text-optimization">
     <div class="optimization-container">
         <div class="optimization-header">
@@ -446,8 +446,22 @@ extra_js:
             <p class="optimization-subtitle">Experience the dramatic improvement in text rendering quality and aesthetic appeal</p>
         </div>
         
+        <!-- 新增：切换器 -->
+        <div class="optimization-switcher">
+            <div class="switcher-container">
+                <button class="switcher-btn active" data-target="comparison">
+                    <span class="switcher-icon">🔄</span>
+                    <span class="switcher-text">Before & After Comparison</span>
+                </button>
+                <button class="switcher-btn" data-target="longtext">
+                    <span class="switcher-icon">📝</span>
+                    <span class="switcher-text">Long Text Generation</span>
+                </button>
+            </div>
+        </div>
+        
         <!-- Section 1: 优化前后对比 -->
-        <div class="optimization-section comparison-section">
+        <div class="optimization-section comparison-section active" id="section-comparison">
             <div class="section-header">
                 <h3 class="section-title">Before & After Comparison</h3>
                 <p class="section-subtitle">Witness the transformation from blurry text to crystal-clear typography</p>
@@ -521,156 +535,63 @@ extra_js:
             </div>
         </div>
         
-        <!-- Section 2: 长文字渲染效果展示 - Leonardo's Toolkit风格 -->
-        <div class="optimization-section longtext-section">
+        <!-- Section 2: 长文字渲染效果展示 - 简化版本 -->
+        <div class="optimization-section longtext-section" id="section-longtext">
             <div class="section-header">
                 <h3 class="section-title">Long Text Generation Showcase</h3>
-                <p class="section-subtitle">Advanced text rendering innovations for complex, multi-paragraph poster content</p>
+                <p class="section-subtitle">Advanced text rendering capabilities for complex, multi-paragraph poster content</p>
             </div>
             
-            <!-- Leonardo's Toolkit风格的展示区域 -->
-            <div class="longtext-toolkit-container">
-                <!-- 左侧导航 - 垂直Tab切换 -->
-                <div class="longtext-navigation">
-                    <div class="nav-header">
-                        <h4 class="nav-title">Text Complexity</h4>
-                        <div class="nav-subtitle">Select a demo to see advanced text rendering capabilities</div>
-                    </div>
-                    
-                    <div class="nav-tabs" id="longtext-tabs">
-                        <button class="nav-tab active" data-target="longtext-1">
-                            <div class="tab-icon">📝</div>
-                            <div class="tab-content">
-                                <div class="tab-label">Minimal Text</div>
-                                <div class="tab-desc">Simple, impactful headlines</div>
-                            </div>
-                        </button>
-                        
-                        <button class="nav-tab" data-target="longtext-2">
-                            <div class="tab-icon">📄</div>
-                            <div class="tab-content">
-                                <div class="tab-label">Medium Content</div>
-                                <div class="tab-desc">Balanced text & visuals</div>
-                            </div>
-                        </button>
-                        
-                        <button class="nav-tab" data-target="longtext-3">
-                            <div class="tab-icon">📚</div>
-                            <div class="tab-content">
-                                <div class="tab-label">Rich Content</div>
-                                <div class="tab-desc">Detailed information layout</div>
-                            </div>
-                        </button>
-                        
-                        <button class="nav-tab" data-target="longtext-4">
-                            <div class="tab-icon">📖</div>
-                            <div class="tab-content">
-                                <div class="tab-label">Maximum Text</div>
-                                <div class="tab-desc">Complex multi-paragraph design</div>
-                            </div>
-                        </button>
+            <!-- 简化的4张图网格展示 -->
+            <div class="longtext-grid">
+                <div class="longtext-item">
+                    <div class="longtext-card">
+                        <div class="longtext-image-frame">
+                            <img src="/images/postercraft/long_text/demo1.png" alt="Long Text Demo 1" class="longtext-image">
+                            <div class="longtext-glow"></div>
+                        </div>
+                        <div class="longtext-info">
+                            <h4 class="longtext-title">Complex Layout Design</h4>
+                            <p class="longtext-description">Sophisticated multi-paragraph text rendering with advanced typography and layout management.</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- 右侧展示区域 -->
-                <div class="longtext-display">
-                    <!-- Demo 1 -->
-                    <div class="longtext-content active" id="longtext-1">
-                        <div class="demo-showcase">
-                            <div class="demo-image-frame">
-                                <img src="/images/postercraft/long_text/demo1.png" alt="Long Text Demo 1" class="longtext-image">
-                                <div class="demo-glow"></div>
-                                <div class="demo-sparkles">
-                                    <span class="sparkle sparkle-1">✨</span>
-                                    <span class="sparkle sparkle-2">💫</span>
-                                    <span class="sparkle sparkle-3">⭐</span>
-                                </div>
-                            </div>
-                            
-                            <div class="demo-details">
-                                <h4 class="demo-title">Minimal Text Design</h4>
-                                <p class="demo-description">Clean, minimalist approach with carefully placed typography that maximizes visual impact through strategic use of whitespace and bold, readable fonts.</p>
-                                <div class="demo-features">
-                                    <span class="feature-tag">Simple Headlines</span>
-                                    <span class="feature-tag">High Contrast</span>
-                                    <span class="feature-tag">Clean Layout</span>
-                                </div>
-                            </div>
+                <div class="longtext-item">
+                    <div class="longtext-card">
+                        <div class="longtext-image-frame">
+                            <img src="/images/postercraft/long_text/demo2.png" alt="Long Text Demo 2" class="longtext-image">
+                            <div class="longtext-glow"></div>
+                        </div>
+                        <div class="longtext-info">
+                            <h4 class="longtext-title">Rich Content Integration</h4>
+                            <p class="longtext-description">Seamlessly blending extensive text content with visual elements for balanced compositions.</p>
                         </div>
                     </div>
-                    
-                    <!-- Demo 2 -->
-                    <div class="longtext-content" id="longtext-2">
-                        <div class="demo-showcase">
-                            <div class="demo-image-frame">
-                                <img src="/images/postercraft/long_text/demo2.png" alt="Long Text Demo 2" class="longtext-image">
-                                <div class="demo-glow"></div>
-                                <div class="demo-sparkles">
-                                    <span class="sparkle sparkle-1">✨</span>
-                                    <span class="sparkle sparkle-2">💫</span>
-                                    <span class="sparkle sparkle-3">⭐</span>
-                                </div>
-                            </div>
-                            
-                            <div class="demo-details">
-                                <h4 class="demo-title">Medium Content Layout</h4>
-                                <p class="demo-description">Balanced composition that harmoniously integrates moderate amounts of text with visual elements, creating engaging and informative poster designs.</p>
-                                <div class="demo-features">
-                                    <span class="feature-tag">Balanced Layout</span>
-                                    <span class="feature-tag">Multiple Text Blocks</span>
-                                    <span class="feature-tag">Visual Hierarchy</span>
-                                </div>
-                            </div>
+                </div>
+                
+                <div class="longtext-item">
+                    <div class="longtext-card">
+                        <div class="longtext-image-frame">
+                            <img src="/images/postercraft/long_text/demo3.png" alt="Long Text Demo 3" class="longtext-image">
+                            <div class="longtext-glow"></div>
+                        </div>
+                        <div class="longtext-info">
+                            <h4 class="longtext-title">Advanced Typography</h4>
+                            <p class="longtext-description">Professional-grade text rendering with diverse font styles and hierarchical information structure.</p>
                         </div>
                     </div>
-                    
-                    <!-- Demo 3 -->
-                    <div class="longtext-content" id="longtext-3">
-                        <div class="demo-showcase">
-                            <div class="demo-image-frame">
-                                <img src="/images/postercraft/long_text/demo3.png" alt="Long Text Demo 3" class="longtext-image">
-                                <div class="demo-glow"></div>
-                                <div class="demo-sparkles">
-                                    <span class="sparkle sparkle-1">✨</span>
-                                    <span class="sparkle sparkle-2">💫</span>
-                                    <span class="sparkle sparkle-3">⭐</span>
-                                </div>
-                            </div>
-                            
-                            <div class="demo-details">
-                                <h4 class="demo-title">Rich Content Design</h4>
-                                <p class="demo-description">Sophisticated layouts capable of handling detailed information while maintaining aesthetic appeal and readability through advanced typography techniques.</p>
-                                <div class="demo-features">
-                                    <span class="feature-tag">Detailed Information</span>
-                                    <span class="feature-tag">Advanced Typography</span>
-                                    <span class="feature-tag">Organized Structure</span>
-                                </div>
-                            </div>
+                </div>
+                
+                <div class="longtext-item">
+                    <div class="longtext-card">
+                        <div class="longtext-image-frame">
+                            <img src="/images/postercraft/long_text/demo4.png" alt="Long Text Demo 4" class="longtext-image">
+                            <div class="longtext-glow"></div>
                         </div>
-                    </div>
-                    
-                    <!-- Demo 4 -->
-                    <div class="longtext-content" id="longtext-4">
-                        <div class="demo-showcase">
-                            <div class="demo-image-frame">
-                                <img src="/images/postercraft/long_text/demo4.png" alt="Long Text Demo 4" class="longtext-image">
-                                <div class="demo-glow"></div>
-                                <div class="demo-sparkles">
-                                    <span class="sparkle sparkle-1">✨</span>
-                                    <span class="sparkle sparkle-2">💫</span>
-                                    <span class="sparkle sparkle-3">⭐</span>
-                                </div>
-                            </div>
-                            
-                            <div class="demo-details">
-                                <h4 class="demo-title">Maximum Text Complexity</h4>
-                                <p class="demo-description">Ultimate text rendering capability handling complex multi-paragraph content, diverse font styles, and intricate layouts while preserving visual harmony and readability.</p>
-                                <div class="demo-features">
-                                    <span class="feature-tag">Multi-paragraph</span>
-                                    <span class="feature-tag">Complex Layout</span>
-                                    <span class="feature-tag">Advanced Rendering</span>
-                                </div>
-                            </div>
+                        <div class="longtext-info">
+                            <h4 class="longtext-title">Maximum Text Complexity</h4>
+                            <p class="longtext-description">Ultimate text rendering capability handling extensive content while preserving visual harmony.</p>
                         </div>
                     </div>
                 </div>

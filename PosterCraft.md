@@ -830,39 +830,39 @@ extra_js:
                         <tbody>
                             <tr>
                                 <td>OpenCOLE <span class="model-type model-open">Open</span></td>
-                                <td class="score-cell score-average">0.082</td>
-                                <td class="score-cell score-average">0.076</td>
-                                <td class="score-cell score-poor">0.061</td>
+                                <td class="score-cell">0.082</td>
+                                <td class="score-cell">0.076</td>
+                                <td class="score-cell">0.061</td>
                             </tr>
                             <tr>
                                 <td>Playground-v2.5 <span class="model-type model-open">Open</span></td>
-                                <td class="score-cell score-average">0.157</td>
-                                <td class="score-cell score-average">0.146</td>
-                                <td class="score-cell score-average">0.132</td>
+                                <td class="score-cell">0.157</td>
+                                <td class="score-cell">0.146</td>
+                                <td class="score-cell">0.132</td>
                             </tr>
                             <tr>
                                 <td>SD3.5 <span class="model-type model-open">Open</span></td>
-                                <td class="score-cell score-good">0.565</td>
-                                <td class="score-cell score-good">0.542</td>
-                                <td class="score-cell score-good">0.497</td>
+                                <td class="score-cell">0.565</td>
+                                <td class="score-cell">0.542</td>
+                                <td class="score-cell">0.497</td>
                             </tr>
                             <tr>
                                 <td>Flux1.dev <span class="model-type model-open">Open</span></td>
-                                <td class="score-cell score-good">0.723</td>
-                                <td class="score-cell score-good">0.707</td>
-                                <td class="score-cell score-good">0.667</td>
+                                <td class="score-cell">0.723</td>
+                                <td class="score-cell">0.707</td>
+                                <td class="score-cell">0.667</td>
                             </tr>
                             <tr>
                                 <td>Ideogram-v2 <span class="model-type model-closed">Close</span></td>
-                                <td class="score-cell score-good">0.711</td>
-                                <td class="score-cell score-good">0.685</td>
-                                <td class="score-cell score-good">0.680</td>
+                                <td class="score-cell">0.711</td>
+                                <td class="score-cell">0.685</td>
+                                <td class="score-cell">0.680</td>
                             </tr>
                             <tr>
                                 <td>BAGEL <span class="model-type model-open">Open</span></td>
-                                <td class="score-cell score-good">0.543</td>
-                                <td class="score-cell score-good">0.536</td>
-                                <td class="score-cell score-good">0.463</td>
+                                <td class="score-cell">0.543</td>
+                                <td class="score-cell">0.536</td>
+                                <td class="score-cell">0.463</td>
                             </tr>
                             <tr>
                                 <td>Gemini2.0-Flash-Gen <span class="model-type model-closed">Close</span></td>

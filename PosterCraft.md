@@ -967,10 +967,10 @@ extra_js:
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 58.8%;">
+                                    <div class="winrate-bar-postercraft" style="width: 60.8%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 41.2%;">
+                                    <div class="winrate-bar-opponent" style="width: 39.2%;">
                                         <span class="winrate-bar-label">Flux1.dev</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
@@ -989,10 +989,10 @@ extra_js:
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 60.0%;">
+                                    <div class="winrate-bar-postercraft" style="width: 59.5%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 40.0%;">
+                                    <div class="winrate-bar-opponent" style="width: 40.5%;">
                                         <span class="winrate-bar-label">Ideogram</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
@@ -1033,10 +1033,10 @@ extra_js:
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 45.2%;">
+                                    <div class="winrate-bar-postercraft" style="width: 46.2%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 54.8%;">
+                                    <div class="winrate-bar-opponent" style="width: 53.8%;">
                                         <span class="winrate-bar-label">Gemini2.0</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>

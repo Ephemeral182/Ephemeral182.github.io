@@ -1031,6 +1031,20 @@ extra_js:
                         <div class="gallery-poster-title">Desert Bloom</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo25.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo26.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 2 -->

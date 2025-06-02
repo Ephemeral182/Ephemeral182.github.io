@@ -5026,6 +5026,255 @@
                 padding: 0.08rem 0.25rem;
             }
         }
+
+        /* Win Rate Comparison Bar Chart Styles */
+        .winrate-comparison-container {
+            position: relative;
+            overflow-x: auto;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.05) 0%, 
+                rgba(255, 255, 255, 0.02) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .winrate-comparison-grid {
+            display: grid;
+            gap: 1.5rem;
+            min-width: 800px; /* 确保在小屏幕上可滚动 */
+        }
+
+        .winrate-comparison-item {
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.8) 0%, 
+                rgba(30, 41, 59, 0.6) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .winrate-comparison-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .winrate-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .winrate-model-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .winrate-category {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        /* Bar Chart Container */
+        .winrate-bar-container {
+            position: relative;
+            height: 60px;
+            background: rgba(15, 23, 42, 0.9);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 0.5rem;
+        }
+
+        .winrate-bar-track {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        /* PosterCraft (Left) Bar */
+        .winrate-bar-postercraft {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                #10b981 0%, 
+                #059669 50%, 
+                #047857 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        /* Opponent (Right) Bar */
+        .winrate-bar-opponent {
+            height: 100%;
+            background: linear-gradient(90deg, 
+                #64748b 0%, 
+                #475569 50%, 
+                #334155 100%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        /* Bar Labels */
+        .winrate-bar-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Center VS Divider */
+        .winrate-vs-divider {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, 
+                rgba(99, 102, 241, 0.9) 0%, 
+                rgba(139, 92, 246, 0.9) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Percentage Labels */
+        .winrate-percentages {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+
+        .winrate-percentage {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .winrate-percentage.postercraft {
+            color: #10b981;
+        }
+
+        .winrate-percentage.opponent {
+            color: #94a3b8;
+        }
+
+        /* Metrics Grid */
+        .winrate-metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .winrate-metric {
+            text-align: center;
+        }
+
+        .winrate-metric-label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.25rem;
+        }
+
+        .winrate-metric-value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        /* Animation for bars */
+        @keyframes barGrow {
+            from {
+                width: 0%;
+            }
+            to {
+                width: var(--target-width);
+            }
+        }
+
+        .winrate-bar-postercraft.animate {
+            animation: barGrow 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .winrate-bar-opponent.animate {
+            animation: barGrow 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .winrate-comparison-grid {
+                min-width: 600px;
+            }
+            
+            .winrate-metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .winrate-comparison-container {
+                padding: 1.5rem;
+            }
+            
+            .winrate-comparison-item {
+                padding: 1rem;
+            }
+            
+            .winrate-bar-container {
+                height: 50px;
+            }
+            
+            .winrate-vs-divider {
+                width: 32px;
+                height: 32px;
+                font-size: 0.7rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .winrate-comparison-container {
+                padding: 1rem;
+            }
+            
+            .winrate-metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>

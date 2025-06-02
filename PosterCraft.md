@@ -149,10 +149,6 @@ extra_js:
                             <div class="output-frame-horizontal">
                                 <img src="/images/postercraft/demo/demo13.png" alt="Urban Canvas Street Art Expo Poster">
                                 <div class="output-glow-horizontal"></div>
-                                <div class="output-sparkles-horizontal">
-                                    <span class="sparkle sparkle-1">✨</span>
-                                    <span class="sparkle sparkle-2">⭐</span>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +170,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"The event poster for the \"MIDNIGHT MASQUERADE: A Vampire Ball\" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, \"MIDNIGHT MASQUERADE,\" is in a sophisticated, dripping, blood-red, gothic script font with ornate serifs, positioned horizontally in an arch across the top. \"A Vampire Ball\" is in a smaller, antique, silver serif font below the main title. The date \"All Hallows' Eve\" and \"Château Le Fantôme\" are at the bottom in a small, elegant, black calligraphy font. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
+                                    <p>"The event poster for the "MIDNIGHT MASQUERADE: A Vampire Ball" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, "MIDNIGHT MASQUERADE" is in a sophisticated, dripping, blood-red, gothic script font with ornate serifs, positioned horizontally in an arch across the top. "A Vampire Ball" is in a smaller, antique, silver serif font below the main title. The date "All Hallows' Eve" and "Chateau Le Fantome" are at the bottom in a small, elegant, black calligraphy font. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
                                 </div>
                             </div>
                         </div>
@@ -192,11 +188,6 @@ extra_js:
                             <div class="output-frame-horizontal">
                                 <img src="/images/postercraft/demo/demo17.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
                                 <div class="output-glow-horizontal"></div>
-                                <div class="output-sparkles-horizontal">
-                                    <span class="sparkle sparkle-3">💫</span>
-                                    <span class="sparkle sparkle-4">✨</span>
-                                    <span class="sparkle sparkle-5">🌟</span>
-                                </div>
                             </div>
                         </div>
                     </div>

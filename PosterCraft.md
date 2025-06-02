@@ -890,317 +890,163 @@ extra_js:
                 
                 <div class="winrate-comparison-container">
                     <div class="winrate-comparison-grid">
-                        <!-- OpenCOLE -->
+                        <!-- OpenCOLE - 均值: (83.4+82.0+85.5+84.0)/4 = 83.7% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs OpenCOLE 
                                     <span class="model-type model-open">Open</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 83.4%;">
+                                    <div class="winrate-bar-postercraft" style="width: 83.7%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 16.6%;">
+                                    <div class="winrate-bar-opponent" style="width: 16.3%;">
                                         <span class="winrate-bar-label">OpenCOLE</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">83.4%</span>
-                                <span class="winrate-percentage opponent">16.6%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">83.4%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">82.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">85.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">84.0%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Playground-v2.5 -->
+                        <!-- Playground-v2.5 - 均值: (71.5+69.0+67.2+71.0)/4 = 69.7% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs Playground-v2.5 
                                     <span class="model-type model-open">Open</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 71.5%;">
+                                    <div class="winrate-bar-postercraft" style="width: 69.7%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 28.5%;">
+                                    <div class="winrate-bar-opponent" style="width: 30.3%;">
                                         <span class="winrate-bar-label">Playground</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">71.5%</span>
-                                <span class="winrate-percentage opponent">28.5%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">71.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">69.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">67.2%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">71.0%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- SD3.5 -->
+                        <!-- SD3.5 - 均值: (63.5+62.5+67.0+63.5)/4 = 64.1% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs SD3.5 
                                     <span class="model-type model-open">Open</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 63.5%;">
+                                    <div class="winrate-bar-postercraft" style="width: 64.1%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 36.5%;">
+                                    <div class="winrate-bar-opponent" style="width: 35.9%;">
                                         <span class="winrate-bar-label">SD3.5</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">63.5%</span>
-                                <span class="winrate-percentage opponent">36.5%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">63.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">62.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">67.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">63.5%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Flux1.dev -->
+                        <!-- Flux1.dev - 均值: (57.5+59.5+58.0+60.0)/4 = 58.8% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs Flux1.dev 
                                     <span class="model-type model-open">Open</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 57.5%;">
+                                    <div class="winrate-bar-postercraft" style="width: 58.8%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 42.5%;">
+                                    <div class="winrate-bar-opponent" style="width: 41.2%;">
                                         <span class="winrate-bar-label">Flux1.dev</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">57.5%</span>
-                                <span class="winrate-percentage opponent">42.5%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">57.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">59.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">58.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">60.0%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Ideogram-v2 -->
+                        <!-- Ideogram-v2 - 均值: (56.5+63.5+60.5+59.5)/4 = 60.0% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs Ideogram-v2 
                                     <span class="model-type model-closed">Close</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 56.5%;">
+                                    <div class="winrate-bar-postercraft" style="width: 60.0%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 43.5%;">
+                                    <div class="winrate-bar-opponent" style="width: 40.0%;">
                                         <span class="winrate-bar-label">Ideogram</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">56.5%</span>
-                                <span class="winrate-percentage opponent">43.5%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">56.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">63.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">60.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">59.5%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- BAGEL -->
+                        <!-- BAGEL - 均值: (62.0+64.0+68.0+74.0)/4 = 67.0% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs BAGEL 
                                     <span class="model-type model-open">Open</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 62.0%;">
+                                    <div class="winrate-bar-postercraft" style="width: 67.0%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 38.0%;">
+                                    <div class="winrate-bar-opponent" style="width: 33.0%;">
                                         <span class="winrate-bar-label">BAGEL</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
                                 </div>
                             </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">62.0%</span>
-                                <span class="winrate-percentage opponent">38.0%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">62.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">64.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">68.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">74.0%</div>
-                                </div>
-                            </div>
                         </div>
 
-                        <!-- Gemini2.0-Flash-Gen -->
+                        <!-- Gemini2.0-Flash-Gen - 均值: (43.7+45.0+46.5+45.5)/4 = 45.2% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
                                     PosterCraft vs Gemini2.0-Flash-Gen 
                                     <span class="model-type model-closed">Close</span>
                                 </div>
-                                <div class="winrate-category">Aesthetic Value</div>
+                                <div class="winrate-category">Overall Performance</div>
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 43.7%;">
+                                    <div class="winrate-bar-postercraft" style="width: 45.2%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 56.3%;">
+                                    <div class="winrate-bar-opponent" style="width: 54.8%;">
                                         <span class="winrate-bar-label">Gemini2.0</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
-                                </div>
-                            </div>
-                            <div class="winrate-percentages">
-                                <span class="winrate-percentage postercraft">43.7%</span>
-                                <span class="winrate-percentage opponent">56.3%</span>
-                            </div>
-                            <div class="winrate-metrics-grid">
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Aesthetic</div>
-                                    <div class="winrate-metric-value">43.7%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Prompt</div>
-                                    <div class="winrate-metric-value">45.0%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Text</div>
-                                    <div class="winrate-metric-value">46.5%</div>
-                                </div>
-                                <div class="winrate-metric">
-                                    <div class="winrate-metric-label">Overall</div>
-                                    <div class="winrate-metric-value">45.5%</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <div style="margin-top: 2rem; text-align: center; color: #94a3b8; font-size: 0.9rem;">
-                        <p><strong>Note:</strong> Win rate percentages represent PosterCraft's preference rate against each baseline model in head-to-head human evaluation. Green bars show PosterCraft wins, gray bars show opponent wins. <em>Open</em> and <em>Close</em> denote open-source and closed-source models.</p>
+                        <p><strong>Note:</strong> Win rate visualization represents PosterCraft's overall performance against each baseline model in comprehensive human evaluation. Green bars show PosterCraft preference, gray bars show opponent preference. <em>Open</em> and <em>Close</em> denote open-source and closed-source models.</p>
                     </div>
                 </div>
             </div>

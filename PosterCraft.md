@@ -101,14 +101,6 @@ extra_js:
                 <img src="/images/postercraft/demo/demo9.png" alt="AI Generated Avatar 8">
             </div>
         </div>
-        <div class="testimonial-card">
-            <div class="quote-icon">"</div>
-            <p class="testimonial-text">I like to describe it as "Photoshop on steroids". PosterCraft's advanced features enable us to seamlessly blend and enhance images. These static images are then seamlessly integrated back into workflows using PosterCraft, producing highly detailed and expressive visual assets.</p>
-            <div class="testimonial-author">
-                <strong>Sixiang Chen</strong>
-                <span>AI Research Scientist, HKUST(GZ)</span>
-            </div>
-        </div>
     </div>
 </div>
 

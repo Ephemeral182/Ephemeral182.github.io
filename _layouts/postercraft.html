@@ -166,12 +166,12 @@
             min-height: 100vh;
             gap: 0rem;
             position: relative;
-            padding: 0rem 0;
+            padding: 4rem 0;
           }
         
         .hero-content{
             /* 原来是 margin-left: 6rem; 建议根据视觉效果再微调 */
-            margin-left: 8rem;       
+            margin-left: 6rem;       
             position: relative;      /* 使 z-index 生效 */
             z-index: 2;              /* .floating-demos 的 z-index=1，设 2 即可盖住 */
         }
@@ -2279,6 +2279,7 @@
         .title-logo-section {
             display: flex;
             align-items: center;
+            gap: 0.5rem; /* 将 gap 调整为 0.5rem 或您期望的值 */
             margin-bottom: 1rem;
             /* 添加悬浮效果 */
             animation: sectionFloat 4s ease-in-out infinite;
@@ -2287,6 +2288,10 @@
         .hero-title {
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 900;
+            background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            margin-right: 0.5rem; /* 确保标题和logo之间有明确的间隔 */
         }
 
         /* 内联Logo样式 */

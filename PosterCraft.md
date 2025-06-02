@@ -26,6 +26,7 @@ title: PosterCraft - AI Poster Generation
 <div class="hero">
     <div class="hero-content">
         <!-- 主标题区域：PosterCraft + Logo -->
+        <div class="title-logo-section">
             <h1>PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
@@ -35,6 +36,7 @@ title: PosterCraft - AI Poster Generation
                     <span class="logo-sparkle logo-sparkle-2">⭐</span>
                 </div>
             </div>
+        </div>
         
         <!-- Paper信息 - 紧凑布局 -->
         <div class="paper-info-compact">

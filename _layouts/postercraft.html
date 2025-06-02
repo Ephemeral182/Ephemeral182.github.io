@@ -171,7 +171,7 @@
         
         .hero-content{
             /* 原来是 margin-left: 6rem; 建议根据视觉效果再微调 */
-            margin-left: 8rem;       
+            margin-left: 6rem;       
             position: relative;      /* 使 z-index 生效 */
             z-index: 2;              /* .floating-demos 的 z-index=1，设 2 即可盖住 */
         }
@@ -2277,7 +2277,9 @@
 
         /* 标题和Logo并排布局 - 修复对齐问题 */
         .title-logo-section {
-            gap: 0.25rem; /* 将 gap 调整为 0.5rem 或您期望的值 */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* 将 gap 调整为 0.5rem 或您期望的值 */
             margin-bottom: 1rem;
             /* 添加悬浮效果 */
             animation: sectionFloat 4s ease-in-out infinite;
@@ -2291,6 +2293,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             animation: fadeInUp 0.8s ease-out 0.2s both;
+            margin-right: 0.5rem; /* 确保标题和logo之间有明确的间隔 */
         }
 
         /* 内联Logo样式 */

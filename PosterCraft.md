@@ -174,7 +174,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"This poster showcases a dynamic mosaic depicting a powerful lion and a gladiator engaged in combat. The style evokes the grandeur and history of ancient Rome, with a slightly textured, aged appearance reminiscent of historical artifacts, creating a sense of authenticity and epic scale. The text \"PAX ROMANA\" is prominently displayed in large, golden, uppercase letters, spanning the upper portion of the poster and conveying a theme of peace or power associated with the Roman era. Beneath this, the word \"GLADIATOR\" appears in smaller, less distinct uppercase letters, offering the specific subject matter, followed by \"MAY 2000 A.D. UNIVERSAL\" in even smaller text at the bottom, providing release information and studio attribution. The gold letters of \"PAX ROMANA\" possess a metallic sheen and appear to be placed directly on top of the mosaic, while \"GLADIATOR\" and the release details seem subtly integrated into the background texture, almost appearing as if etched or worn into the stone. The text is horizontally oriented and centered within the frame, drawing the eye through the title to the subject and then the practical details. The layout is hierarchical, with the sweeping \"PAX ROMANA\" dominating the visual field, leveraging its size and prominence to immediately establish the historical context and tone before leading the viewer down to the core subject and logistical information, all while the powerful imagery of the mosaic anchors the narrative."</p>
+                                    <p>"This event poster announces "THE NEBULA ODYSSEY: A Deep Space Film Marathon" featuring a breathtaking collage of iconic spaceships from various sci-fi films soaring through vibrant, multi-colored nebulae and past distant, ringed planets and alien worlds. The style is epic, nostalgic, and visually stunning. The event title, "THE NEBULA ODYSSEY" is in a grand, cinematic, glowing, white, futuristic sans-serif font, with wide letter spacing and a subtle lens flare effect on some letters, positioned horizontally and centered in the middle, as if floating in deep space. "A Deep Space Film Marathon - 24 Hours of Sci-Fi Classics" is in a smaller, sharp, silver sans-serif font below the main title. Film titles and "Cosmic Ray Cinema" are at the bottom in a small, clean, digital-style font. The typography has a luminous, high-tech texture. The layout is awe-inspiring, promising an unforgettable journey through the greatest spectacles of science fiction cinema."</p>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@ extra_js:
                         
                         <div class="output-section">
                             <div class="output-frame-horizontal">
-                                <img src="/images/postercraft/demo/demo15.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                                <img src="/images/postercraft/demo/demo16.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
                                 <div class="output-glow-horizontal"></div>
                                 <div class="output-sparkles-horizontal">
                                     <span class="sparkle sparkle-3">💫</span>

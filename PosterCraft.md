@@ -105,6 +105,7 @@ extra_js:
 </div>
 
 
+
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">
         <h2 class="what-is-title">What is PosterCraft?</h2>

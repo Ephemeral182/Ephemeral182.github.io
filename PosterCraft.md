@@ -616,6 +616,178 @@ extra_js:
     </div>
 </div>
 
+<!-- DPO Optimization Results - Carousel Style -->
+<div class="dpo-optimization-showcase" id="dpo-optimization">
+    <div class="dpo-container">
+        <div class="dpo-header">
+            <h2 class="dpo-title">DPO Optimization Results</h2>
+            <div class="dpo-emoji">🚀</div>
+            <p class="dpo-subtitle">Direct Preference Optimization elevates poster quality through human feedback alignment</p>
+        </div>
+        
+        <!-- DPO Carousel Container -->
+        <div class="dpo-carousel-container">
+            <div class="dpo-carousel-wrapper">
+                <button class="dpo-nav-btn dpo-prev" aria-label="Previous comparison">
+                    <span class="nav-icon">‹</span>
+                </button>
+                
+                <div class="dpo-carousel-track" id="dpo-track">
+                    <!-- DPO Pair 1 -->
+                    <div class="dpo-slide active" data-index="0">
+                        <div class="dpo-comparison-container">
+                            <div class="dpo-before-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo1.png" alt="Before DPO Optimization 1" class="dpo-image">
+                                    <div class="dpo-label dpo-before-label">
+                                        <span class="label-icon">📋</span>
+                                        <span class="label-text">Before DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-before-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="dpo-vs-divider">
+                                <div class="vs-line"></div>
+                                <div class="vs-circle">
+                                    <span class="vs-text">VS</span>
+                                    <div class="vs-pulse"></div>
+                                </div>
+                                <div class="vs-line"></div>
+                            </div>
+                            
+                            <div class="dpo-after-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo1_after.png" alt="After DPO Optimization 1" class="dpo-image">
+                                    <div class="dpo-label dpo-after-label">
+                                        <span class="label-icon">✨</span>
+                                        <span class="label-text">After DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-after-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dpo-slide-info">
+                            <h3 class="dpo-slide-title">Enhanced Visual Composition</h3>
+                            <p class="dpo-slide-description">DPO optimization significantly improves visual hierarchy and aesthetic appeal through preference-driven learning.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- DPO Pair 2 -->
+                    <div class="dpo-slide" data-index="1">
+                        <div class="dpo-comparison-container">
+                            <div class="dpo-before-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo2.png" alt="Before DPO Optimization 2" class="dpo-image">
+                                    <div class="dpo-label dpo-before-label">
+                                        <span class="label-icon">📋</span>
+                                        <span class="label-text">Before DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-before-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="dpo-vs-divider">
+                                <div class="vs-line"></div>
+                                <div class="vs-circle">
+                                    <span class="vs-text">VS</span>
+                                    <div class="vs-pulse"></div>
+                                </div>
+                                <div class="vs-line"></div>
+                            </div>
+                            
+                            <div class="dpo-after-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo2_after.png" alt="After DPO Optimization 2" class="dpo-image">
+                                    <div class="dpo-label dpo-after-label">
+                                        <span class="label-icon">✨</span>
+                                        <span class="label-text">After DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-after-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dpo-slide-info">
+                            <h3 class="dpo-slide-title">Refined Color Harmony</h3>
+                            <p class="dpo-slide-description">Human preference data guides the model to achieve superior color balance and professional-grade visual impact.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- DPO Pair 3 -->
+                    <div class="dpo-slide" data-index="2">
+                        <div class="dpo-comparison-container">
+                            <div class="dpo-before-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo3.png" alt="Before DPO Optimization 3" class="dpo-image">
+                                    <div class="dpo-label dpo-before-label">
+                                        <span class="label-icon">📋</span>
+                                        <span class="label-text">Before DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-before-glow"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="dpo-vs-divider">
+                                <div class="vs-line"></div>
+                                <div class="vs-circle">
+                                    <span class="vs-text">VS</span>
+                                    <div class="vs-pulse"></div>
+                                </div>
+                                <div class="vs-line"></div>
+                            </div>
+                            
+                            <div class="dpo-after-section">
+                                <div class="dpo-image-frame">
+                                    <img src="/images/postercraft/dpo_com/demo3_after.png" alt="After DPO Optimization 3" class="dpo-image">
+                                    <div class="dpo-label dpo-after-label">
+                                        <span class="label-icon">✨</span>
+                                        <span class="label-text">After DPO</span>
+                                    </div>
+                                    <div class="dpo-glow dpo-after-glow"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dpo-slide-info">
+                            <h3 class="dpo-slide-title">Optimized Layout Structure</h3>
+                            <p class="dpo-slide-description">DPO fine-tuning ensures optimal element positioning and spacing for maximum visual effectiveness.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="dpo-nav-btn dpo-next" aria-label="Next comparison">
+                    <span class="nav-icon">›</span>
+                </button>
+            </div>
+            
+            <!-- Carousel Indicators -->
+            <div class="dpo-indicators">
+                <button class="dpo-indicator active" data-slide="0" aria-label="Show comparison 1"></button>
+                <button class="dpo-indicator" data-slide="1" aria-label="Show comparison 2"></button>
+                <button class="dpo-indicator" data-slide="2" aria-label="Show comparison 3"></button>
+            </div>
+        </div>
+        
+        <!-- DPO Statistics -->
+        <div class="dpo-stats">
+            <div class="dpo-stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-number">94%</div>
+                <div class="stat-label">Preference Alignment</div>
+            </div>
+            <div class="dpo-stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-number">89%</div>
+                <div class="stat-label">Quality Improvement</div>
+            </div>
+            <div class="dpo-stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-number">3x</div>
+                <div class="stat-label">Faster Convergence</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="platform-gallery-showcase" id="gallery">
     <div class="gallery-showcase-container">
         <div class="gallery-header">

@@ -1018,31 +1018,24 @@ extra_js:
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo23.png" alt="Desert Bloom Music Festival Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo23.png" alt="Echoes in the Empty Diner movie poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
+                        <div class="gallery-poster-category">Indie Film</div>
+                        <div class="gallery-poster-title">Echoes in the Empty Diner</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo24.png" alt="Desert Bloom Music Festival Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo24.png" alt="The Dark Knight Rises movie poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
+                        <div class="gallery-poster-category">Superhero Movie</div>
+                        <div class="gallery-poster-title">The Dark Knight Rises</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo25.png" alt="Desert Bloom Music Festival Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo25.png" alt="Utopia / Dystopia Film Showcase poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
-                    </div>
-                </div>
-                <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo26.png" alt="Desert Bloom Music Festival Poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
+                        <div class="gallery-poster-category">Film Showcase</div>
+                        <div class="gallery-poster-title">Utopia / Dystopia</div>
                     </div>
                 </div>
             </div>
@@ -1092,17 +1085,24 @@ extra_js:
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo21.png" alt="Desert Bloom Music Festival Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo21.png" alt="Pax Romana: Gladiator poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
+                        <div class="gallery-poster-category">Historical Epic</div>
+                        <div class="gallery-poster-title">Gladiator</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo22.png" alt="Desert Bloom Music Festival Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo22.png" alt="Neon Pulse cyberpunk city poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Music & Arts Fest</div>
-                        <div class="gallery-poster-title">Desert Bloom</div>
+                        <div class="gallery-poster-category">Cyberpunk Art</div>
+                        <div class="gallery-poster-title">Neon Pulse</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo26.png" alt="Origin: Heirloom Tomato Seeds advertisement poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Product Advertisement</div>
+                        <div class="gallery-poster-title">Origin Tomato Seeds</div>
                     </div>
                 </div>
             </div>
@@ -1145,17 +1145,17 @@ extra_js:
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo19.png" alt="Dune Part Two Movie Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo19.png" alt="Lord of the Rings: The Rings of Power series poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
-                        <div class="gallery-poster-title">Dune: Part Two</div>
+                        <div class="gallery-poster-category">Fantasy Series</div>
+                        <div class="gallery-poster-title">The Rings of Power</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo20.png" alt="Dune Part Two Movie Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo20.png" alt="Iron Man 2 movie poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
-                        <div class="gallery-poster-title">Dune: Part Two</div>
+                        <div class="gallery-poster-category">Superhero Movie</div>
+                        <div class="gallery-poster-title">Iron Man 2</div>
                     </div>
                 </div>
             </div>

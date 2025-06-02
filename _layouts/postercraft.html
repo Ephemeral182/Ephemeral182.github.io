@@ -306,65 +306,6 @@
         }
         
         
-        /* 特性卡片 */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 6rem 0 4rem;
-        }
-        
-        .feature-card {
-            background: transparent; /* 修改 */
-            border: none; /* 修改 */
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: none; /* 修改 */
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            /* background: rgba(255, 255, 255, 0.08); */ /* 移除背景变化 */
-            /* border-color: rgba(99, 102, 241, 0.3); */   /* 移除边框颜色变化 */
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* 保留阴影效果 */
-        }
-        
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .feature-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #ffffff;
-        }
-        
-        .feature-description {
-            color: #a1a1aa;
-            line-height: 1.6;
-        }
         
         /* 动画 */
         @keyframes fadeInUp {
@@ -3756,29 +3697,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-        }
-
-        .feature-tag {
-            background: linear-gradient(45deg, 
-                rgba(99, 102, 241, 0.2), 
-                rgba(139, 92, 246, 0.2));
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #a5b4fc;
-            padding: 0.4rem 0.8rem;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .feature-tag:hover {
-            background: linear-gradient(45deg, 
-                rgba(99, 102, 241, 0.3), 
-                rgba(139, 92, 246, 0.3));
-            border-color: rgba(99, 102, 241, 0.5);
-            color: #ffffff;
-            transform: translateY(-2px);
         }
 
 

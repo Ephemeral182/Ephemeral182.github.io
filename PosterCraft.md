@@ -104,61 +104,6 @@ extra_js:
     </div>
 </div>
 
-<div class="features" id="features">
-    <div class="feature-card fade-in">
-        <div class="feature-icon">🤖</div>
-        <h3 class="feature-title">AI Smart Generation</h3>
-        <p class="feature-description">Based on the latest Stable Diffusion and GPT-4 technology, understands your creative needs and automatically generates high-quality poster designs.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">🎨</div>
-        <h3 class="feature-title">Diverse Styles</h3>
-        <p class="feature-description">Supports multiple design styles including modern minimalist, retro vintage, and futuristic tech to meet different scenario design needs.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">⚡</div>
-        <h3 class="feature-title">Real-time Editing</h3>
-        <p class="feature-description">WYSIWYG editing experience with real-time design preview, supporting quick adjustments to text, colors, and layouts.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">📱</div>
-        <h3 class="feature-title">Multi-platform Adaptation</h3>
-        <p class="feature-description">Automatically adapts to different sizes and platforms, supporting various output formats for social media, print, and web.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">☁️</div>
-        <h3 class="feature-title">Cloud Sync</h3>
-        <p class="feature-description">Works automatically saved to the cloud, access your design projects anytime, anywhere, with team collaboration and version management support.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">🔧</div>
-        <h3 class="feature-title">Advanced Customization</h3>
-        <p class="feature-description">Provides rich customization options, from font selection to color matching, creating unique brand visual effects.</p>
-    </div>
-</div>
-
-<div class="feature-card fade-in" style="margin: 4rem 0; text-align: center;">
-    <h2 style="font-size: 2rem; margin-bottom: 2rem; background: linear-gradient(45deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Technical Architecture</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
-        <div style="background: rgba(99, 102, 241, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(99, 102, 241, 0.2);">
-            <h4 style="color: #a5b4fc; margin-bottom: 0.5rem;">Frontend Technology</h4>
-            <p style="color: #d1d5db;">React 18, TypeScript, Tailwind CSS</p>
-        </div>
-        <div style="background: rgba(139, 92, 246, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(139, 92, 246, 0.2);">
-            <h4 style="color: #c4b5fd; margin-bottom: 0.5rem;">Backend Services</h4>
-            <p style="color: #d1d5db;">Node.js, Express, MongoDB</p>
-        </div>
-        <div style="background: rgba(236, 72, 153, 0.1); padding: 1.5rem; border-radius: 16px; border: 1px solid rgba(236, 72, 153, 0.2);">
-            <h4 style="color: #f9a8d4; margin-bottom: 0.5rem;">AI Models</h4>
-            <p style="color: #d1d5db;">Stable Diffusion, GPT-4, DALL-E</p>
-        </div>
-    </div>
-</div>
 
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">

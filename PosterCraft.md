@@ -174,7 +174,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"The event poster for 'UTOPIA/DYSTOPIA: A Future Visions Film Showcase' features a split design. The left side depicts a bright, utopian city with sleek, organic architecture, flying vehicles, and lush greenery, rendered in light, airy colors. The right side shows a dark, dystopian cityscape with crumbling skyscrapers, smog, and surveillance drones, in gritty, desaturated tones. The style is contrasting, thought-provoking, and cinematic. The showcase title, 'UTOPIA / DYSTOPIA,' is in a modern, clean, white sans-serif font, with 'UTOPIA' positioned on the left over its scene, and 'DYSTOPIA' on the right over its scene, separated by a sharp, diagonal dividing line."</p>
+                                    <p>"This poster showcases a dynamic mosaic depicting a powerful lion and a gladiator engaged in combat. The style evokes the grandeur and history of ancient Rome, with a slightly textured, aged appearance reminiscent of historical artifacts, creating a sense of authenticity and epic scale. The text \"PAX ROMANA\" is prominently displayed in large, golden, uppercase letters, spanning the upper portion of the poster and conveying a theme of peace or power associated with the Roman era. Beneath this, the word \"GLADIATOR\" appears in smaller, less distinct uppercase letters, offering the specific subject matter, followed by \"MAY 2000 A.D. UNIVERSAL\" in even smaller text at the bottom, providing release information and studio attribution. The gold letters of \"PAX ROMANA\" possess a metallic sheen and appear to be placed directly on top of the mosaic, while \"GLADIATOR\" and the release details seem subtly integrated into the background texture, almost appearing as if etched or worn into the stone. The text is horizontally oriented and centered within the frame, drawing the eye through the title to the subject and then the practical details. The layout is hierarchical, with the sweeping \"PAX ROMANA\" dominating the visual field, leveraging its size and prominence to immediately establish the historical context and tone before leading the viewer down to the core subject and logistical information, all while the powerful imagery of the mosaic anchors the narrative."</p>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@ extra_js:
                         
                         <div class="output-section">
                             <div class="output-frame-horizontal">
-                                <img src="/images/postercraft/demo/demo14.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                                <img src="/images/postercraft/demo/demo15.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
                                 <div class="output-glow-horizontal"></div>
                                 <div class="output-sparkles-horizontal">
                                     <span class="sparkle sparkle-3">💫</span>

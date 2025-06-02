@@ -589,30 +589,6 @@ extra_js:
                 </div>
             </div>
         </div>
-        
-        <!-- 统计信息 -->
-        <div class="optimization-stats">
-            <div class="stat-card">
-                <div class="stat-icon">📈</div>
-                <div class="stat-number">95%</div>
-                <div class="stat-label">Text Clarity Improvement</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">🎯</div>
-                <div class="stat-number">87%</div>
-                <div class="stat-label">Readability Enhancement</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">✨</div>
-                <div class="stat-number">92%</div>
-                <div class="stat-label">Aesthetic Quality Boost</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon">📝</div>
-                <div class="stat-number">99%</div>
-                <div class="stat-label">Demo Accuracy</div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -776,25 +752,6 @@ extra_js:
                 <button class="dpo-indicator active" data-slide="0" aria-label="Show comparison 1"></button>
                 <button class="dpo-indicator" data-slide="1" aria-label="Show comparison 2"></button>
                 <button class="dpo-indicator" data-slide="2" aria-label="Show comparison 3"></button>
-            </div>
-        </div>
-        
-        <!-- DPO Statistics -->
-        <div class="dpo-stats">
-            <div class="dpo-stat-card">
-                <div class="stat-icon">🎯</div>
-                <div class="stat-number">94%</div>
-                <div class="stat-label">Preference Alignment</div>
-            </div>
-            <div class="dpo-stat-card">
-                <div class="stat-icon">🏆</div>
-                <div class="stat-number">89%</div>
-                <div class="stat-label">Quality Improvement</div>
-            </div>
-            <div class="dpo-stat-card">
-                <div class="stat-icon">⚡</div>
-                <div class="stat-number">3x</div>
-                <div class="stat-label">Faster Convergence</div>
             </div>
         </div>
     </div>
@@ -989,10 +946,10 @@ extra_js:
                             </div>
                             <div class="winrate-bar-container">
                                 <div class="winrate-bar-track">
-                                    <div class="winrate-bar-postercraft" style="width: 59.5%;">
+                                    <div class="winrate-bar-postercraft" style="width: 60.0%;">
                                         <span class="winrate-bar-label">PosterCraft</span>
                                     </div>
-                                    <div class="winrate-bar-opponent" style="width: 40.5%;">
+                                    <div class="winrate-bar-opponent" style="width: 40.0%;">
                                         <span class="winrate-bar-label">Ideogram</span>
                                     </div>
                                     <div class="winrate-vs-divider">VS</div>
@@ -1049,30 +1006,6 @@ extra_js:
                         <p><strong>Note:</strong> Win rate visualization represents PosterCraft's overall performance against each baseline model in comprehensive human evaluation. Green bars show PosterCraft preference, gray bars show opponent preference. <em>Open</em> and <em>Close</em> denote open-source and closed-source models.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Summary Statistics -->
-        <div class="experimental-summary">
-            <div class="summary-stat">
-                <div class="summary-icon">🏆</div>
-                <div class="summary-number">78.7%</div>
-                <div class="summary-label">Average Win Rate</div>
-            </div>
-            <div class="summary-stat">
-                <div class="summary-icon">📈</div>
-                <div class="summary-number">+15%</div>
-                <div class="summary-label">Performance Gain</div>
-            </div>
-            <div class="summary-stat">
-                <div class="summary-icon">👥</div>
-                <div class="summary-number">500+</div>
-                <div class="summary-label">Human Evaluators</div>
-            </div>
-            <div class="summary-stat">
-                <div class="summary-icon">🎯</div>
-                <div class="summary-number">92%</div>
-                <div class="summary-label">Consistency Rate</div>
             </div>
         </div>
     </div>
@@ -1223,26 +1156,6 @@ extra_js:
                         <div class="gallery-poster-title">Dune: Part Two</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- 统计信息 -->
-        <div class="gallery-stats-section">
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">50K+</div>
-                <div class="gallery-stat-label">Generated Posters</div>
-            </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">25+</div>
-                <div class="gallery-stat-label">Art Styles</div>
-            </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">99.9%</div>
-                <div class="gallery-stat-label">Satisfaction Rate</div>
-            </div>
-            <div class="gallery-stat-item">
-                <div class="gallery-stat-number">24/7</div>
-                <div class="gallery-stat-label">AI Availability</div>
             </div>
         </div>
     </div>

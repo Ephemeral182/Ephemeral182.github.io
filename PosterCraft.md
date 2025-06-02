@@ -2,6 +2,10 @@
 layout: postercraft
 permalink: /poster-craft/
 title: PosterCraft - AI Poster Generation
+extra_css:
+  - /assets/css/postercraft.css
+extra_js:
+  - /assets/js/postercraft.js
 ---
 
 <!-- 顶部浮动demo图片 - 更新版本 -->
@@ -27,7 +31,7 @@ title: PosterCraft - AI Poster Generation
     <div class="hero-content">
         <!-- 主标题区域：PosterCraft + Logo -->
         <div class="title-logo-section">
-            <h1>PosterCraft:</h1>
+            <h1 class="hero-title">PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
                 <img src="/images/postercraft/logo/logo_final.png" alt="PosterCraft Logo" class="main-logo-inline">

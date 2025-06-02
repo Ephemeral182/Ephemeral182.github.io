@@ -695,24 +695,26 @@
             width: 100%;
         }
         
+        /* 超级炫酷的demo行背景 */
         .demo-row-background {
             background: linear-gradient(135deg, 
-                rgba(99, 102, 241, 0.1) 0%, 
-                rgba(139, 92, 246, 0.15) 25%, 
-                rgba(236, 72, 153, 0.1) 50%, 
-                rgba(245, 158, 11, 0.15) 75%, 
-                rgba(16, 185, 129, 0.1) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 24px;
-            padding: 2.5rem;
-            backdrop-filter: blur(20px);
-            box-shadow: 
-                0 20px 40px rgba(0, 0, 0, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+                rgba(99, 102, 241, 0.15) 0%, 
+                rgba(139, 92, 246, 0.2) 25%, 
+                rgba(236, 72, 153, 0.15) 50%, 
+                rgba(245, 158, 11, 0.2) 75%, 
+                rgba(16, 185, 129, 0.15) 100%);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-radius: 32px;
+            padding: 3rem;
+            backdrop-filter: blur(30px);
             position: relative;
             overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: demoRowFloat 6s ease-in-out infinite;
         }
-        
+
+        /* 添加边框光效 */
         .demo-row-background::before {
             content: '';
             position: absolute;
@@ -720,8 +722,49 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
-            pointer-events: none;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(99, 102, 241, 0.3) 50%, 
+                transparent 70%);
+            border-radius: 32px;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            animation: borderScan 3s ease-in-out infinite;
+        }
+
+        @keyframes borderScan {
+            0%, 100% { 
+                opacity: 0;
+                transform: translateX(-100%) rotate(45deg);
+            }
+            50% { 
+                opacity: 0.6;
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
+
+        @keyframes demoRowFloat {
+            0%, 100% { 
+                transform: translateY(0px) rotateX(0deg);
+                box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            }
+            50% { 
+                transform: translateY(-10px) rotateX(1deg);
+                box-shadow: 0 40px 100px rgba(99,102,241,0.3);
+            }
+        }
+
+        /* 悬浮时的炫酷效果 */
+        .demo-row-background:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 
+                0 50px 120px rgba(0,0,0,0.4),
+                0 0 100px rgba(99,102,241,0.4),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+        }
+
+        .demo-row-background:hover::before {
+            opacity: 1;
         }
         
         .demo-label-horizontal {
@@ -774,31 +817,106 @@
             align-items: center;
         }
         
+        /* 魔法箭头 - 超级炫酷版本 */
         .magic-arrow-horizontal {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .arrow-line-horizontal {
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
-            border-radius: 2px;
+            gap: 1rem;
             position: relative;
-            animation: arrowPulse 2s ease-in-out infinite;
         }
-        
+
+        .arrow-text {
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: textGlow 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+        }
+
+        @keyframes textGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+            }
+            50% { 
+                filter: drop-shadow(0 0 20px rgba(236, 72, 153, 0.8));
+            }
+        }
+
+        .arrow-line-horizontal {
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                #6366f1 20%, 
+                #8b5cf6 50%, 
+                #ec4899 80%, 
+                transparent 100%);
+            border-radius: 3px;
+            position: relative;
+            animation: arrowFlow 2s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        }
+
+        /* 流动光效 */
+        .arrow-line-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.8), 
+                transparent);
+            border-radius: 3px;
+            animation: lightFlow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes lightFlow {
+            0% { left: -30px; }
+            100% { left: 120px; }
+        }
+
+        @keyframes arrowFlow {
+            0%, 100% { 
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 40px rgba(236, 72, 153, 0.8);
+                transform: scale(1.05);
+            }
+        }
+
         .arrow-head-horizontal {
             position: absolute;
-            right: -10px;
-            top: -6px;
+            right: -15px;
+            top: -9px;
             width: 0;
             height: 0;
-            border-left: 12px solid #ec4899;
-            border-top: 8px solid transparent;
-            border-bottom: 8px solid transparent;
+            border-left: 18px solid #ec4899;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.8));
+            animation: arrowHeadPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowHeadPulse {
+            0%, 100% { 
+                transform: scale(1);
+                filter: drop-shadow(0 0 10px rgba(236, 72, 153, 0.8));
+            }
+            50% { 
+                transform: scale(1.2);
+                filter: drop-shadow(0 0 20px rgba(236, 72, 153, 1));
+            }
         }
         
         .output-section {
@@ -807,27 +925,98 @@
             align-items: center;
         }
         
+        /* 超炫酷的输出展示 */
         .output-frame-horizontal {
             position: relative;
-            width: 200px;
-            height: 292px; /* 保持832:1216比例 */
-            border-radius: 16px;
+            width: 220px;
+            height: 322px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.4),
-                0 0 0 1px rgba(255, 255, 255, 0.15),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
-            transform: perspective(800px) rotateY(-3deg) rotateX(1deg);
-            transition: all 0.3s ease;
-            animation: posterFloatHorizontal 3s ease-in-out infinite;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: perspective(1000px) rotateY(-8deg) rotateX(5deg);
+            animation: posterFloatEnhanced 4s ease-in-out infinite;
         }
-        
+
         .output-frame-horizontal:hover {
-            transform: perspective(800px) rotateY(0deg) rotateX(0deg) scale(1.05);
+            transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.1);
             box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.5),
-                0 0 0 1px rgba(255, 255, 255, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+                0 40px 100px rgba(0,0,0,0.6),
+                0 0 60px rgba(99,102,241,0.8),
+                inset 0 2px 0 rgba(255,255,255,0.3);
+        }
+
+        /* 多层光晕效果 */
+        .output-glow-horizontal {
+            position: absolute;
+            top: -25px;
+            left: -25px;
+            right: -25px;
+            bottom: -25px;
+            background: conic-gradient(
+                from 0deg,
+                #6366f1,
+                #8b5cf6,
+                #ec4899,
+                #f59e0b,
+                #10b981,
+                #6366f1
+            );
+            border-radius: 32px;
+            opacity: 0.6;
+            filter: blur(20px);
+            z-index: -1;
+            animation: glowRotate 6s linear infinite;
+        }
+
+        @keyframes glowRotate {
+            0% { transform: rotate(0deg) scale(1); }
+            100% { transform: rotate(360deg) scale(1.05); }
+        }
+
+        @keyframes posterFloatEnhanced {
+            0%, 100% { 
+                transform: perspective(1000px) rotateY(-8deg) rotateX(5deg) translateY(0px);
+            }
+            25% { 
+                transform: perspective(1000px) rotateY(-6deg) rotateX(3deg) translateY(-8px);
+            }
+            50% { 
+                transform: perspective(1000px) rotateY(-4deg) rotateX(2deg) translateY(-12px);
+            }
+            75% { 
+                transform: perspective(1000px) rotateY(-6deg) rotateX(3deg) translateY(-8px);
+            }
+        }
+
+        /* 添加星光粒子效果 */
+        .output-sparkles-horizontal .sparkle {
+            position: absolute;
+            font-size: 1.2rem;
+            animation: sparkleEnhanced 3s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes sparkleEnhanced {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0px) scale(1) rotate(0deg);
+                filter: blur(0px);
+            }
+            25% { 
+                opacity: 0.8; 
+                transform: translateY(-15px) scale(1.5) rotate(90deg);
+                filter: blur(1px);
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-20px) scale(2) rotate(180deg);
+                filter: blur(0px);
+            }
+            75% { 
+                opacity: 0.8; 
+                transform: translateY(-15px) scale(1.5) rotate(270deg);
+                filter: blur(1px);
+            }
         }
         
         .output-frame-horizontal img {
@@ -3180,7 +3369,7 @@
             }
         }
 
-        /* What is PosterCraft Section - 更新为与Technical Framework相同的炫酷特效 */
+        /* What is PosterCraft Section - 超级炫酷版本 */
         .what-is-section {
             padding: 8rem 0;
             background: transparent;
@@ -3188,72 +3377,49 @@
             overflow: hidden;
         }
 
-        .what-is-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
+        /* 添加动态背景粒子 */
+        .what-is-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            animation: backgroundPulse 8s ease-in-out infinite;
         }
 
-        /* 更新标题样式 - 使用与Technical Framework相同的特效 */
-        .what-is-title {
-            font-size: clamp(3.5rem, 8vw, 6rem);
-            font-weight: 900;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, 
-                #667eea 0%, 
-                #764ba2 20%, 
-                #f093fb 40%, 
-                #f5576c 60%, 
-                #4facfe 80%, 
-                #00f2fe 100%);
-            background-size: 400% 400%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: techGradientFlow 8s ease-in-out infinite;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            text-align: center;
+        @keyframes backgroundPulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
         }
 
-        /* 更新emoji样式 - 确保居中 */
-        .what-is-emoji {
-            font-size: 3rem;
-            margin: 1rem 0;
-            display: block; /* 改为block */
-            text-align: center; /* 添加居中对齐 */
-            animation: techEmojiPulse 3s ease-in-out infinite;
-            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        /* 添加浮动粒子 */
+        .what-is-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(99, 102, 241, 0.4), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(139, 92, 246, 0.3), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(236, 72, 153, 0.3), transparent);
+            background-repeat: repeat;
+            background-size: 150px 150px;
+            animation: particleFloat 20s linear infinite;
+            pointer-events: none;
         }
 
-        /* 更新副标题样式 */
-        .what-is-subtitle {
-            font-size: 1.4rem;
-            color: #cbd5e1;
-            font-weight: 300;
-            letter-spacing: 0.5px;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-            line-height: 1.7;
-            text-align: center;
+        @keyframes particleFloat {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-150px) rotate(360deg); }
         }
-
-        /* 如果动画不存在，添加动画定义 */
-        @keyframes techGradientFlow {
-            0%, 100% { background-position: 0% 50%; }
-            25% { background-position: 100% 25%; }
-            50% { background-position: 200% 50%; }
-            75% { background-position: 300% 75%; }
-        }
-
-        @keyframes techEmojiPulse {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(5deg); }
-        }
-
-        /* 添加到现有CSS的末尾，大约在4000行左右 */
 
         /* 跳转目标高亮动画 */
         @keyframes sectionHighlight {
@@ -5140,6 +5306,49 @@
                 padding: 0.6rem 0.8rem;
             }
         }
+
+        /* 滚动触发动画 */
+        .what-is-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .what-is-section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .demo-row {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .demo-row.slide-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .demo-row:nth-child(even) {
+            transform: translateX(100px);
+        }
+
+        /* 标题增强动画 */
+        .what-is-title {
+            animation: titlePulse 4s ease-in-out infinite;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { 
+                text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 0 0 60px rgba(139, 92, 246, 0.8);
+                transform: scale(1.02);
+            }
+        }
     </style>
 </head>
 <body>
@@ -5585,6 +5794,36 @@
             if (document.querySelector('.dpo-optimization-showcase')) {
                 dpoCarousel.init();
                 console.log("DPO Carousel initialized!");
+            }
+        });
+
+        // 添加到现有的JavaScript中
+        document.addEventListener('DOMContentLoaded', function() {
+            // What is PosterCraft 滚动动画
+            const observerOptions = {
+                threshold: 0.2,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const whatIsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        
+                        // 依次触发demo行的动画
+                        const demoRows = entry.target.querySelectorAll('.demo-row');
+                        demoRows.forEach((row, index) => {
+                            setTimeout(() => {
+                                row.classList.add('slide-in');
+                            }, index * 300);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            const whatIsSection = document.querySelector('.what-is-section');
+            if (whatIsSection) {
+                whatIsObserver.observe(whatIsSection);
             }
         });
     </script>

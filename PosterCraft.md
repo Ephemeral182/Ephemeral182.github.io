@@ -30,7 +30,8 @@ extra_js:
 <div class="hero">
     <div class="hero-content">
         <!-- 主标题区域：PosterCraft + Logo -->
-            <h1 class="hero-title">PosterCraft:</h1>
+        <div class="title-logo-section">
+            <h1>PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
                 <img src="/images/postercraft/logo/logo_final.png" alt="PosterCraft Logo" class="main-logo-inline">
@@ -39,6 +40,7 @@ extra_js:
                     <span class="logo-sparkle logo-sparkle-2">⭐</span>
                 </div>
             </div>
+        </div>
         
         <!-- Paper信息 - 紧凑布局 -->
         <div class="paper-info-compact">

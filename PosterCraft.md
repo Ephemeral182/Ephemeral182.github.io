@@ -455,7 +455,7 @@ extra_js:
                 </button>
                 <button class="switcher-btn" data-target="longtext">
                     <span class="switcher-icon">📝</span>
-                    <span class="switcher-text">Long Text Generation</span>
+                    <span class="switcher-text">Demo Showcase</span>
                 </button>
             </div>
         </div>
@@ -538,8 +538,8 @@ extra_js:
         <!-- Section 2: 长文字渲染效果展示 - 简化版本 -->
         <div class="optimization-section longtext-section" id="section-longtext">
             <div class="section-header">
-                <h3 class="section-title">Long Text Generation Showcase</h3>
-                <p class="section-subtitle">Advanced text rendering capabilities for complex, multi-paragraph poster content</p>
+                <h3 class="section-title">Demo Showcase</h3>
+                <p class="section-subtitle">Advanced poster generation capabilities showcasing diverse design variations</p>
             </div>
             
             <!-- 简化的4张图网格展示 -->
@@ -547,12 +547,12 @@ extra_js:
                 <div class="longtext-item">
                     <div class="longtext-card">
                         <div class="longtext-image-frame">
-                            <img src="/images/postercraft/long_text/demo1.png" alt="Long Text Demo 1" class="longtext-image">
+                            <img src="/images/postercraft/long_text/demo1.png" alt="Poster Demo 1" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
                         <div class="longtext-info">
                             <h4 class="longtext-title">Complex Layout Design</h4>
-                            <p class="longtext-description">Sophisticated multi-paragraph text rendering with advanced typography and layout management.</p>
+                            <p class="longtext-description">Sophisticated poster design with advanced visual composition and layout management.</p>
                         </div>
                     </div>
                 </div>
@@ -560,7 +560,7 @@ extra_js:
                 <div class="longtext-item">
                     <div class="longtext-card">
                         <div class="longtext-image-frame">
-                            <img src="/images/postercraft/long_text/demo2.png" alt="Long Text Demo 2" class="longtext-image">
+                            <img src="/images/postercraft/long_text/demo2.png" alt="Poster Demo 2" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
                         <div class="longtext-info">
@@ -573,12 +573,12 @@ extra_js:
                 <div class="longtext-item">
                     <div class="longtext-card">
                         <div class="longtext-image-frame">
-                            <img src="/images/postercraft/long_text/demo3.png" alt="Long Text Demo 3" class="longtext-image">
+                            <img src="/images/postercraft/long_text/demo3.png" alt="Poster Demo 3" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
                         <div class="longtext-info">
                             <h4 class="longtext-title">Advanced Typography</h4>
-                            <p class="longtext-description">Professional-grade text rendering with diverse font styles and hierarchical information structure.</p>
+                            <p class="longtext-description">Professional-grade poster design with diverse visual styles and hierarchical information structure.</p>
                         </div>
                     </div>
                 </div>
@@ -586,12 +586,12 @@ extra_js:
                 <div class="longtext-item">
                     <div class="longtext-card">
                         <div class="longtext-image-frame">
-                            <img src="/images/postercraft/long_text/demo4.png" alt="Long Text Demo 4" class="longtext-image">
+                            <img src="/images/postercraft/long_text/demo4.png" alt="Poster Demo 4" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
                         <div class="longtext-info">
-                            <h4 class="longtext-title">Maximum Text Complexity</h4>
-                            <p class="longtext-description">Ultimate text rendering capability handling extensive content while preserving visual harmony.</p>
+                            <h4 class="longtext-title">Maximum Design Complexity</h4>
+                            <p class="longtext-description">Ultimate poster generation capability handling complex designs while preserving visual harmony.</p>
                         </div>
                     </div>
                 </div>
@@ -618,7 +618,7 @@ extra_js:
             <div class="stat-card">
                 <div class="stat-icon">📝</div>
                 <div class="stat-number">99%</div>
-                <div class="stat-label">Long Text Accuracy</div>
+                <div class="stat-label">Demo Accuracy</div>
             </div>
         </div>
     </div>

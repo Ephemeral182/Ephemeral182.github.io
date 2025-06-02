@@ -437,7 +437,7 @@ extra_js:
     </div>
 </div>
 
-<!-- 新增：Text Optimization 效果展示部分 -->
+<!-- 新增：Text Optimization 效果展示部分 - 重新设计版本 -->
 <div class="text-optimization-showcase" id="text-optimization">
     <div class="optimization-container">
         <div class="optimization-header">
@@ -446,68 +446,232 @@ extra_js:
             <p class="optimization-subtitle">Experience the dramatic improvement in text rendering quality and aesthetic appeal</p>
         </div>
         
-        <!-- 对比展示网格 - 修改为4列布局 -->
-        <div class="comparison-grid">
-            <!-- 对比项目 1 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/text_opt/demo1_before.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/text_opt/demo1_after.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
+        <!-- Section 1: 优化前后对比 -->
+        <div class="optimization-section comparison-section">
+            <div class="section-header">
+                <h3 class="section-title">Before & After Comparison</h3>
+                <p class="section-subtitle">Witness the transformation from blurry text to crystal-clear typography</p>
+            </div>
+            
+            <!-- 对比展示网格 -->
+            <div class="comparison-grid">
+                <!-- 对比项目 1 -->
+                <div class="comparison-item">
+                    <div class="comparison-card">
+                        <div class="image-container">
+                            <img src="/images/postercraft/text_opt/demo1_before.png" alt="Before Optimization" class="before-image">
+                            <img src="/images/postercraft/text_opt/demo1_after.png" alt="After Optimization" class="after-image">
+                            <div class="overlay-label before-label">Before</div>
+                            <div class="overlay-label after-label">After</div>
+                        </div>
+                        <div class="comparison-info">
+                            <h3 class="comparison-title">Ocean Conservation Poster</h3>
+                            <p class="comparison-description">An ocean conservation themed poster, beautiful coral reefs interspersed with plastic waste, creating a stark contrast. The warning is <span class="text-highlight">'Protect Our Blue Planet, Act Now'</span>.</p>
+                        </div>
                     </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Ocean Conservation Poster</h3>
-                        <p class="comparison-description">An ocean conservation themed poster, beautiful coral reefs interspersed with plastic waste, creating a stark contrast. The warning is <span class="text-highlight">'Protect Our Blue Planet, Act Now'</span>.</p>
+                </div>
+                
+                <!-- 对比项目 2 -->
+                <div class="comparison-item">
+                    <div class="comparison-card">
+                        <div class="image-container">
+                            <img src="/images/postercraft/text_opt/demo2_before.png" alt="Before Optimization" class="before-image">
+                            <img src="/images/postercraft/text_opt/demo2_after.png" alt="After Optimization" class="after-image">
+                            <div class="overlay-label before-label">Before</div>
+                            <div class="overlay-label after-label">After</div>
+                        </div>
+                        <div class="comparison-info">
+                            <h3 class="comparison-title">Film Festival Poster</h3>
+                            <p class="comparison-description">An independent film festival poster, featuring bold abstract film reel patterns with dynamic spotlight effects. The festival name <span class="text-highlight">'Vanguard Visions'</span> has a striking, unique design.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 对比项目 3 -->
+                <div class="comparison-item">
+                    <div class="comparison-card">
+                        <div class="image-container">
+                            <img src="/images/postercraft/text_opt/demo3_before.png" alt="Before Optimization" class="before-image">
+                            <img src="/images/postercraft/text_opt/demo3_after.png" alt="After Optimization" class="after-image">
+                            <div class="overlay-label before-label">Before</div>
+                            <div class="overlay-label after-label">After</div>
+                        </div>
+                        <div class="comparison-info">
+                            <h3 class="comparison-title">Library Archives Poster</h3>
+                            <p class="comparison-description">A design containing two text elements: Gold text <span class="text-highlight">'Seek Knowledge'</span> oriented horizontally in the top center, and brown text <span class="text-highlight">'Library Archives'</span> oriented horizontally in the bottom center area.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 对比项目 4 -->
+                <div class="comparison-item">
+                    <div class="comparison-card">
+                        <div class="image-container">
+                            <img src="/images/postercraft/text_opt/demo5_before.png" alt="Before Optimization" class="before-image">
+                            <img src="/images/postercraft/text_opt/demo5_after.png" alt="After Optimization" class="after-image">
+                            <div class="overlay-label before-label">Before</div>
+                            <div class="overlay-label after-label">After</div>
+                        </div>
+                        <div class="comparison-info">
+                            <h3 class="comparison-title">Grey's Anatomy Poster</h3>
+                            <p class="comparison-description">The title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in elegant typography with information including <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- 对比项目 2 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/text_opt/demo2_before.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/text_opt/demo2_after.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
-                    </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Film Festival Poster</h3>
-                        <p class="comparison-description">An independent film festival poster, featuring bold abstract film reel patterns with dynamic spotlight effects. The festival name <span class="text-highlight">'Vanguard Visions'</span> has a striking, unique design.</p>
-                    </div>
-                </div>
+        </div>
+        
+        <!-- Section 2: 长文字渲染效果展示 - Leonardo's Toolkit风格 -->
+        <div class="optimization-section longtext-section">
+            <div class="section-header">
+                <h3 class="section-title">Long Text Generation Showcase</h3>
+                <p class="section-subtitle">Advanced text rendering innovations for complex, multi-paragraph poster content</p>
             </div>
             
-            <!-- 对比项目 3 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/text_opt/demo3_before.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/text_opt/demo3_after.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
+            <!-- Leonardo's Toolkit风格的展示区域 -->
+            <div class="longtext-toolkit-container">
+                <!-- 左侧导航 - 垂直Tab切换 -->
+                <div class="longtext-navigation">
+                    <div class="nav-header">
+                        <h4 class="nav-title">Text Complexity</h4>
+                        <div class="nav-subtitle">Select a demo to see advanced text rendering capabilities</div>
                     </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Library Archives Poster</h3>
-                        <p class="comparison-description">A design containing two text elements: Gold text <span class="text-highlight">'Seek Knowledge'</span> oriented horizontally in the top center, and brown text <span class="text-highlight">'Library Archives'</span> oriented horizontally in the bottom center area.</p>
+                    
+                    <div class="nav-tabs" id="longtext-tabs">
+                        <button class="nav-tab active" data-target="longtext-1">
+                            <div class="tab-icon">📝</div>
+                            <div class="tab-content">
+                                <div class="tab-label">Minimal Text</div>
+                                <div class="tab-desc">Simple, impactful headlines</div>
+                            </div>
+                        </button>
+                        
+                        <button class="nav-tab" data-target="longtext-2">
+                            <div class="tab-icon">📄</div>
+                            <div class="tab-content">
+                                <div class="tab-label">Medium Content</div>
+                                <div class="tab-desc">Balanced text & visuals</div>
+                            </div>
+                        </button>
+                        
+                        <button class="nav-tab" data-target="longtext-3">
+                            <div class="tab-icon">📚</div>
+                            <div class="tab-content">
+                                <div class="tab-label">Rich Content</div>
+                                <div class="tab-desc">Detailed information layout</div>
+                            </div>
+                        </button>
+                        
+                        <button class="nav-tab" data-target="longtext-4">
+                            <div class="tab-icon">📖</div>
+                            <div class="tab-content">
+                                <div class="tab-label">Maximum Text</div>
+                                <div class="tab-desc">Complex multi-paragraph design</div>
+                            </div>
+                        </button>
                     </div>
                 </div>
-            </div>
-            
-            <!-- 对比项目 4 -->
-            <div class="comparison-item">
-                <div class="comparison-card">
-                    <div class="image-container">
-                        <img src="/images/postercraft/text_opt/demo5_before.png" alt="Before Optimization" class="before-image">
-                        <img src="/images/postercraft/text_opt/demo5_after.png" alt="After Optimization" class="after-image">
-                        <div class="overlay-label before-label">Before</div>
-                        <div class="overlay-label after-label">After</div>
+                
+                <!-- 右侧展示区域 -->
+                <div class="longtext-display">
+                    <!-- Demo 1 -->
+                    <div class="longtext-content active" id="longtext-1">
+                        <div class="demo-showcase">
+                            <div class="demo-image-frame">
+                                <img src="/images/postercraft/long_text/demo1.png" alt="Long Text Demo 1" class="longtext-image">
+                                <div class="demo-glow"></div>
+                                <div class="demo-sparkles">
+                                    <span class="sparkle sparkle-1">✨</span>
+                                    <span class="sparkle sparkle-2">💫</span>
+                                    <span class="sparkle sparkle-3">⭐</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-details">
+                                <h4 class="demo-title">Minimal Text Design</h4>
+                                <p class="demo-description">Clean, minimalist approach with carefully placed typography that maximizes visual impact through strategic use of whitespace and bold, readable fonts.</p>
+                                <div class="demo-features">
+                                    <span class="feature-tag">Simple Headlines</span>
+                                    <span class="feature-tag">High Contrast</span>
+                                    <span class="feature-tag">Clean Layout</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="comparison-info">
-                        <h3 class="comparison-title">Grey's Anatomy Poster</h3>
-                        <p class="comparison-description">The title <span class="text-highlight">"GREY'S ANATOMY,"</span> set in large, stark white, ... . ..., the slogan <span class="text-highlight">"Life changes in a heartbeat."</span> is written in ... . ... information includes <span class="text-highlight">"THURSDAYS 9|8c"</span> and <span class="text-highlight">"PREMIERES SEPT 23"</span>...</p>
+                    
+                    <!-- Demo 2 -->
+                    <div class="longtext-content" id="longtext-2">
+                        <div class="demo-showcase">
+                            <div class="demo-image-frame">
+                                <img src="/images/postercraft/long_text/demo2.png" alt="Long Text Demo 2" class="longtext-image">
+                                <div class="demo-glow"></div>
+                                <div class="demo-sparkles">
+                                    <span class="sparkle sparkle-1">✨</span>
+                                    <span class="sparkle sparkle-2">💫</span>
+                                    <span class="sparkle sparkle-3">⭐</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-details">
+                                <h4 class="demo-title">Medium Content Layout</h4>
+                                <p class="demo-description">Balanced composition that harmoniously integrates moderate amounts of text with visual elements, creating engaging and informative poster designs.</p>
+                                <div class="demo-features">
+                                    <span class="feature-tag">Balanced Layout</span>
+                                    <span class="feature-tag">Multiple Text Blocks</span>
+                                    <span class="feature-tag">Visual Hierarchy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Demo 3 -->
+                    <div class="longtext-content" id="longtext-3">
+                        <div class="demo-showcase">
+                            <div class="demo-image-frame">
+                                <img src="/images/postercraft/long_text/demo3.png" alt="Long Text Demo 3" class="longtext-image">
+                                <div class="demo-glow"></div>
+                                <div class="demo-sparkles">
+                                    <span class="sparkle sparkle-1">✨</span>
+                                    <span class="sparkle sparkle-2">💫</span>
+                                    <span class="sparkle sparkle-3">⭐</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-details">
+                                <h4 class="demo-title">Rich Content Design</h4>
+                                <p class="demo-description">Sophisticated layouts capable of handling detailed information while maintaining aesthetic appeal and readability through advanced typography techniques.</p>
+                                <div class="demo-features">
+                                    <span class="feature-tag">Detailed Information</span>
+                                    <span class="feature-tag">Advanced Typography</span>
+                                    <span class="feature-tag">Organized Structure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Demo 4 -->
+                    <div class="longtext-content" id="longtext-4">
+                        <div class="demo-showcase">
+                            <div class="demo-image-frame">
+                                <img src="/images/postercraft/long_text/demo4.png" alt="Long Text Demo 4" class="longtext-image">
+                                <div class="demo-glow"></div>
+                                <div class="demo-sparkles">
+                                    <span class="sparkle sparkle-1">✨</span>
+                                    <span class="sparkle sparkle-2">💫</span>
+                                    <span class="sparkle sparkle-3">⭐</span>
+                                </div>
+                            </div>
+                            
+                            <div class="demo-details">
+                                <h4 class="demo-title">Maximum Text Complexity</h4>
+                                <p class="demo-description">Ultimate text rendering capability handling complex multi-paragraph content, diverse font styles, and intricate layouts while preserving visual harmony and readability.</p>
+                                <div class="demo-features">
+                                    <span class="feature-tag">Multi-paragraph</span>
+                                    <span class="feature-tag">Complex Layout</span>
+                                    <span class="feature-tag">Advanced Rendering</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -529,6 +693,11 @@ extra_js:
                 <div class="stat-icon">✨</div>
                 <div class="stat-number">92%</div>
                 <div class="stat-label">Aesthetic Quality Boost</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📝</div>
+                <div class="stat-number">99%</div>
+                <div class="stat-label">Long Text Accuracy</div>
             </div>
         </div>
     </div>

@@ -1017,6 +1017,20 @@ extra_js:
                         <div class="gallery-poster-title">The Last of Us</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo23.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo24.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 2 -->
@@ -1063,6 +1077,20 @@ extra_js:
                         <div class="gallery-poster-title">Desert Bloom</div>
                     </div>
                 </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo21.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo22.png" alt="Desert Bloom Music Festival Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Music & Arts Fest</div>
+                        <div class="gallery-poster-title">Desert Bloom</div>
+                    </div>
+                </div>
             </div>
             
             <!-- Column 3: Stack of images -->
@@ -1097,6 +1125,20 @@ extra_js:
                 </div>
                 <div class="gallery-poster-item">
                     <img src="/images/postercraft/gallery/gallery_demo13.png" alt="Dune Part Two Movie Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
+                        <div class="gallery-poster-title">Dune: Part Two</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo19.png" alt="Dune Part Two Movie Poster">
+                    <div class="gallery-poster-overlay">
+                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
+                        <div class="gallery-poster-title">Dune: Part Two</div>
+                    </div>
+                </div>
+                <div class="gallery-poster-item">
+                    <img src="/images/postercraft/gallery/gallery_demo20.png" alt="Dune Part Two Movie Poster">
                     <div class="gallery-poster-overlay">
                         <div class="gallery-poster-category">Sci-Fi Epic Film</div>
                         <div class="gallery-poster-title">Dune: Part Two</div>

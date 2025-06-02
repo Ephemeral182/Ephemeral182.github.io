@@ -2399,152 +2399,6 @@
             display: inline-block;
             background: linear-gradient(45deg, #6366f1, #8b5cf6);
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            box-shadow: 0 2px 10px rgba(99, 102, 241, 0.3);
-        }
-
-        /* 论文链接样式 */
-        .paper-links-hero {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.8rem;
-            margin-top: 2rem;
-        }
-
-        .paper-link-hero {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.7rem 1rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 12px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .paper-link-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .paper-link-hero:hover::before {
-            left: 100%;
-        }
-
-        .paper-link-hero:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .arxiv-link:hover {
-            background: rgba(255, 87, 51, 0.2);
-            border-color: rgba(255, 87, 51, 0.5);
-        }
-
-        .github-link:hover {
-            background: rgba(36, 41, 46, 0.8);
-            border-color: rgba(255, 255, 255, 0.3);
-        }
-
-        .huggingface-link:hover {
-            background: rgba(255, 204, 0, 0.2);
-            border-color: rgba(255, 204, 0, 0.5);
-        }
-
-        .video-link:hover {
-            background: rgba(255, 0, 0, 0.2);
-            border-color: rgba(255, 0, 0, 0.5);
-        }
-
-        .link-icon {
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 6px;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 1024px) {
-            
-            .inline-logo {
-                width: 60px;
-                margin-left: 0; /* 确保logo也左对齐 */
-            }
-        }
-
-        @media (max-width: 768px) {
-            
-            .paper-links-hero {
-                grid-template-columns: 1fr;
-            }
-            
-            .inline-logo {
-                width: 50px;
-            }
-            
-            .paper-title-small {
-                font-size: 1.4rem; /* 从 0.9rem 增大到 1.4rem */
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .inline-logo {
-                width: 40px;
-            }
-            
-            .paper-title-small {
-                font-size: 1.2rem; /* 从 0.8rem 增大到 1.2rem */
-            }
-            
-            .paper-links-hero {
-                gap: 0.6rem;
-            }
-            
-            .paper-link-hero {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.8rem;
-            }
-        }
-
-        /* Paper信息 - 增大字体样式 */
-        .paper-info-small {
-            margin-bottom: 1.5rem;
-        }
-
-        .paper-title-small {
-            font-size: 1.8rem; /* 从 1rem 增大到 1.8rem */
-            font-weight: 700; /* 从 600 增加到 700 */
-            margin-bottom: 0.8rem; /* 从 0.5rem 增加到 0.8rem */
-            color: #e2e8f0; /* 稍微提亮颜色 */
-            line-height: 1.3; /* 从 1.4 调整到 1.3 */
-        }
-
-        .paper-badge-small {
-            display: inline-block;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            color: white;
             padding: 0.4rem 1rem; /* 从 0.3rem 0.8rem 增大到 0.4rem 1rem */
             border-radius: 50px;
             font-size: 0.8rem; /* 从 0.7rem 增大到 0.8rem */
@@ -2554,7 +2408,6 @@
 
         /* 响应式设计更新 */
         @media (max-width: 768px) {
-
             
             .paper-links-hero {
                 grid-template-columns: 1fr;
@@ -4581,31 +4434,41 @@
         }
 
         /* Labels */
-        .dpo-label {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
+        .dpo-section-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .dpo-external-label {
             padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             font-weight: 600;
-            backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            z-index: 5;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
 
-        .dpo-before-label {
-            background: rgba(239, 68, 68, 0.8);
-            color: white;
-            border: 1px solid rgba(239, 68, 68, 0.3);
+        .dpo-external-label:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .dpo-after-label {
-            background: rgba(16, 185, 129, 0.8);
+        .dpo-before-external {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(220, 38, 38, 0.8));
             color: white;
-            border: 1px solid rgba(16, 185, 129, 0.3);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+        }
+
+        .dpo-after-external {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(5, 150, 105, 0.8));
+            color: white;
+            border: 1px solid rgba(16, 185, 129, 0.5);
         }
 
         /* VS Divider */

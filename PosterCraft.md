@@ -637,13 +637,15 @@ extra_js:
                     <div class="dpo-slide active" data-index="0">
                         <div class="dpo-comparison-container">
                             <div class="dpo-before-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo1.png" alt="Before DPO Optimization 1" class="dpo-image">
-                                    <div class="dpo-label dpo-before-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
                                         <span class="label-text">Before DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-before-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo1.png" alt="Before DPO Optimization 1" class="dpo-image">
+                                        <div class="dpo-glow dpo-before-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -657,13 +659,15 @@ extra_js:
                             </div>
                             
                             <div class="dpo-after-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo1_after.png" alt="After DPO Optimization 1" class="dpo-image">
-                                    <div class="dpo-label dpo-after-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
                                         <span class="label-text">After DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-after-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo1_after.png" alt="After DPO Optimization 1" class="dpo-image">
+                                        <div class="dpo-glow dpo-after-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -677,13 +681,15 @@ extra_js:
                     <div class="dpo-slide" data-index="1">
                         <div class="dpo-comparison-container">
                             <div class="dpo-before-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo2.png" alt="Before DPO Optimization 2" class="dpo-image">
-                                    <div class="dpo-label dpo-before-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
                                         <span class="label-text">Before DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-before-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo2.png" alt="Before DPO Optimization 2" class="dpo-image">
+                                        <div class="dpo-glow dpo-before-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -697,13 +703,15 @@ extra_js:
                             </div>
                             
                             <div class="dpo-after-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo2_after.png" alt="After DPO Optimization 2" class="dpo-image">
-                                    <div class="dpo-label dpo-after-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
                                         <span class="label-text">After DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-after-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo2_after.png" alt="After DPO Optimization 2" class="dpo-image">
+                                        <div class="dpo-glow dpo-after-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -717,13 +725,15 @@ extra_js:
                     <div class="dpo-slide" data-index="2">
                         <div class="dpo-comparison-container">
                             <div class="dpo-before-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo3.png" alt="Before DPO Optimization 3" class="dpo-image">
-                                    <div class="dpo-label dpo-before-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
                                         <span class="label-text">Before DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-before-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo3.png" alt="Before DPO Optimization 3" class="dpo-image">
+                                        <div class="dpo-glow dpo-before-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -737,13 +747,15 @@ extra_js:
                             </div>
                             
                             <div class="dpo-after-section">
-                                <div class="dpo-image-frame">
-                                    <img src="/images/postercraft/dpo_com/demo3_after.png" alt="After DPO Optimization 3" class="dpo-image">
-                                    <div class="dpo-label dpo-after-label">
+                                <div class="dpo-section-wrapper">
+                                    <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
                                         <span class="label-text">After DPO</span>
                                     </div>
-                                    <div class="dpo-glow dpo-after-glow"></div>
+                                    <div class="dpo-image-frame">
+                                        <img src="/images/postercraft/dpo_com/demo3_after.png" alt="After DPO Optimization 3" class="dpo-image">
+                                        <div class="dpo-glow dpo-after-glow"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -31,7 +31,7 @@ extra_js:
     <div class="hero-content">
         <!-- 主标题区域：PosterCraft + Logo -->
         <div class="title-logo-section">
-            <h1>PosterCraft:</h1>
+            <h1 class="hero-title">PosterCraft:</h1>
             <div class="inline-logo">
                 <div class="logo-glow-effect-inline"></div>
                 <img src="/images/postercraft/logo/logo_final.png" alt="PosterCraft Logo" class="main-logo-inline">

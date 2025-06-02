@@ -5510,6 +5510,210 @@
                 width: 60px; /* 保持现有的小屏幕样式 */
             }
         }
+
+        /* Iterative Refinement with Reflection Section Styles */
+        .reflection-showcase-section {
+            padding: 6rem 0;
+            background: transparent; /* Match other new sections */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reflection-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .reflection-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .reflection-title { /* Reusing styles from .dpo-title or .experimental-title */
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, 
+                #667eea 0%, 
+                #764ba2 20%, 
+                #f093fb 40%, 
+                #f5576c 60%, 
+                #4facfe 80%, 
+                #00f2fe 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: techGradientFlow 8s ease-in-out infinite; /* Assuming techGradientFlow is defined */
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .reflection-emoji { /* Reusing styles from .dpo-emoji or .experimental-emoji */
+            font-size: 3rem;
+            margin: 1rem 0;
+            display: inline-block;
+            animation: techEmojiPulse 3s ease-in-out infinite; /* Assuming techEmojiPulse is defined */
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+
+        .reflection-subtitle { /* Reusing styles from .dpo-subtitle or .experimental-subtitle */
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .reflection-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem; /* Space between the two demo items */
+        }
+
+        .reflection-demo-item {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr; /* Before Img - Suggestions Card - After Img */
+            gap: 2rem;
+            align-items: center;
+            background: linear-gradient(145deg, rgba(25, 35, 55, 0.7), rgba(10, 15, 30, 0.8));
+            padding: 2.5rem;
+            border-radius: 28px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .reflection-demo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.45), 0 0 30px rgba(100, 120, 250, 0.2);
+        }
+
+        .reflection-image-wrapper {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+            background-color: #111827; /* Fallback for image loading */
+        }
+
+        .reflection-image-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Show full image */
+            border-radius: 18px;
+            transition: transform 0.3s ease;
+        }
+        .reflection-image-wrapper:hover img {
+            transform: scale(1.03);
+        }
+
+        .reflection-image-label {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.75);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 1;
+        }
+
+        .reflection-suggestions-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
+        }
+
+        .reflection-suggestions-card h3 { /* For "Underworld", "Harry Potter" titles */
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #FFF;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: linear-gradient(45deg, #89f7fe, #66a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(137, 247, 254, 0.3);
+        }
+
+        .reflection-suggestions-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #e0e7ff; /* Brighter than #a5b4fc for subtitles */
+            margin-top: 1.2rem;
+            margin-bottom: 0.6rem;
+        }
+        .reflection-suggestions-card h4:first-of-type {
+            margin-top: 0;
+        }
+
+        .reflection-suggestions-card p {
+            font-size: 0.9rem;
+            color: #d1d5db; /* Light gray for suggestion text */
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+        .reflection-suggestions-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Highlight styles for suggestions */
+        .highlight-sug-c1 { color: #FFEB3B; /* Brighter Yellow */ font-weight: 500; }
+        .highlight-sug-c2 { color: #A5D6A7; /* Softer Green */ font-weight: 500; }
+        .highlight-sug-c3 { color: #CE93D8; /* Softer Purple */ font-weight: 500; }
+        .highlight-sug-c4 { color: #F48FB1; /* Softer Pink */ font-weight: 500; }
+        .highlight-sug-c5 { color: #FFAB91; /* Softer Red/Orange */ font-weight: 500; }
+
+        /* Responsive adjustments for Reflection Showcase */
+        @media (max-width: 1200px) {
+            .reflection-demo-item {
+                grid-template-columns: 1fr 1fr 1fr; /* Equal columns for wider suggestion text */
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 992px) {
+            .reflection-demo-item {
+                grid-template-columns: 1fr; /* Stack on tablet and mobile */
+                padding: 2rem;
+            }
+            .reflection-image-wrapper {
+                max-width: 450px;
+                margin: 0 auto 1.5rem auto;
+            }
+            .reflection-suggestions-card {
+                 height: auto;
+                 padding: 1.5rem;
+            }
+            .reflection-suggestions-card h3 { font-size: 1.4rem; }
+            .reflection-suggestions-card h4 { font-size: 1rem; }
+            .reflection-suggestions-card p { font-size: 0.85rem; }
+        }
+
+        @media (max-width: 768px) {
+             .reflection-header { margin-bottom: 3rem;}
+            .reflection-gallery { gap: 3rem; }
+            .reflection-demo-item { padding: 1.5rem; }
+            .reflection-image-wrapper { max-width: 380px; }
+
+        }
     </style>
 </head>
 <body>

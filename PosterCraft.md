@@ -694,6 +694,56 @@ extra_js:
     </div>
 </div>
 
+<!-- Iterative Refinement with Reflection Section -->
+<div class="reflection-showcase-section" id="reflection-refinement">
+    <div class="reflection-container">
+        <div class="reflection-header">
+            <h2 class="reflection-title">Iterative Refinement with Reflection</h2>
+            <div class="reflection-emoji">🔄</div>
+            <p class="reflection-subtitle">See how PosterCraft utilizes reflection and feedback to progressively enhance poster quality based on content and aesthetic suggestions.</p>
+        </div>
+        <div class="reflection-gallery">
+            <!-- Demo 1: Underworld -->
+            <div class="reflection-demo-item">
+                <div class="reflection-image-wrapper">
+                    <img src="/images/postercraft/reflection_comp/demo1_before.png" alt="Underworld Poster Before Reflection">
+                    <div class="reflection-image-label">BEFORE</div>
+                </div>
+                <div class="reflection-suggestions-card">
+                    <h3>Underworld</h3>
+                    <h4>Poster Content Suggestions:</h4>
+                    <p>Recolor the main character's hair to a <span class="highlight-sug-c1">blonde tone</span> … Adjust the main character's stance and body angle to face slightly <span class="highlight-sug-c2">towards the right side of the frame</span> … Alter the way the main character holds the firearm, ensuring a <span class="highlight-sug-c3">firmer grip</span> and <span class="highlight-sug-c3">directing the barrel towards the left side of the frame</span> …</p>
+                    <h4>Aesthetic Style Optimization Suggestions:</h4>
+                    <p>Ensure <span class="highlight-sug-c4">consistent lighting and shadow placement on the character and environment</span> based on the <span class="highlight-sug-c4">presumed single light source (the moon)</span> and …</p>
+                </div>
+                <div class="reflection-image-wrapper">
+                    <img src="/images/postercraft/reflection_comp/demo1_after.png" alt="Underworld Poster After Reflection">
+                    <div class="reflection-image-label">AFTER</div>
+                </div>
+            </div>
+
+            <!-- Demo 2: Harry Potter -->
+            <div class="reflection-demo-item">
+                <div class="reflection-image-wrapper">
+                    <img src="/images/postercraft/reflection_comp/demo2_before.png" alt="Harry Potter Poster Before Reflection">
+                    <div class="reflection-image-label">BEFORE</div>
+                </div>
+                <div class="reflection-suggestions-card">
+                    <h3>Harry Potter</h3>
+                    <h4>Poster Content Suggestions:</h4>
+                    <p><span class="highlight-sug-c5">Lower the position of the figure's hand holding the wand</span> and <span class="highlight-sug-c5">reposition the wand to point more upwards</span>, <span class="highlight-sug-c2">further away from the face</span> …</p>
+                    <h4>Aesthetic Style Optimization Suggestions:</h4>
+                    <p><span class="highlight-sug-c4">Enhance the dramatic lighting on the central figure</span>, <span class="highlight-sug-c2">increasing contrast on the face</span> to <span class="highlight-sug-c2">emphasize shadows and highlights</span> … <span class="highlight-sug-c3">Introduce more textured cloud details in the sky</span>, creating a <span class="highlight-sug-c3">moodier atmosphere</span>. Increase the overall contrast and sharpness of the image to...</p>
+                </div>
+                <div class="reflection-image-wrapper">
+                    <img src="/images/postercraft/reflection_comp/demo2_after.png" alt="Harry Potter Poster After Reflection">
+                    <div class="reflection-image-label">AFTER</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Experimental Results Section -->
 <div class="experimental-results-section" id="experimental-results">
     <div class="experimental-container">

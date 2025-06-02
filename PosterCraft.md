@@ -533,7 +533,7 @@ extra_js:
 <div class="dpo-optimization-showcase" id="dpo-optimization">
     <div class="dpo-container">
         <div class="dpo-header">
-            <h2 class="dpo-title">DPO Optimization Results</h2>
+            <h2 class="dpo-title">Reinforcement Learning Results</h2>
             <div class="dpo-emoji">🚀</div>
             <p class="dpo-subtitle">Direct Preference Optimization elevates poster quality through human feedback alignment</p>
         </div>
@@ -553,10 +553,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
-                                        <span class="label-text">Before DPO</span>
+                                        <span class="label-text">Before RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo1.png" alt="Before DPO Optimization 1" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo1.png" alt="Before RL Optimization 1" class="dpo-image">
                                         <div class="dpo-glow dpo-before-glow"></div>
                                     </div>
                                 </div>
@@ -575,10 +575,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
-                                        <span class="label-text">After DPO</span>
+                                        <span class="label-text">After RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo1_after.png" alt="After DPO Optimization 1" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo1_after.png" alt="After RL Optimization 1" class="dpo-image">
                                         <div class="dpo-glow dpo-after-glow"></div>
                                     </div>
                                 </div>
@@ -597,10 +597,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
-                                        <span class="label-text">Before DPO</span>
+                                        <span class="label-text">Before RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo2.png" alt="Before DPO Optimization 2" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo2.png" alt="Before RL Optimization 2" class="dpo-image">
                                         <div class="dpo-glow dpo-before-glow"></div>
                                     </div>
                                 </div>
@@ -619,10 +619,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
-                                        <span class="label-text">After DPO</span>
+                                        <span class="label-text">After RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo2_after.png" alt="After DPO Optimization 2" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo2_after.png" alt="After RL Optimization 2" class="dpo-image">
                                         <div class="dpo-glow dpo-after-glow"></div>
                                     </div>
                                 </div>
@@ -641,10 +641,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-before-external">
                                         <span class="label-icon">📋</span>
-                                        <span class="label-text">Before DPO</span>
+                                        <span class="label-text">Before RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo3.png" alt="Before DPO Optimization 3" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo3.png" alt="Before RL Optimization 3" class="dpo-image">
                                         <div class="dpo-glow dpo-before-glow"></div>
                                     </div>
                                 </div>
@@ -663,10 +663,10 @@ extra_js:
                                 <div class="dpo-section-wrapper">
                                     <div class="dpo-external-label dpo-after-external">
                                         <span class="label-icon">✨</span>
-                                        <span class="label-text">After DPO</span>
+                                        <span class="label-text">After RL</span>
                                     </div>
                                     <div class="dpo-image-frame">
-                                        <img src="/images/postercraft/dpo_com/demo3_after.png" alt="After DPO Optimization 3" class="dpo-image">
+                                        <img src="/images/postercraft/dpo_com/demo3_after.png" alt="After RL Optimization 3" class="dpo-image">
                                         <div class="dpo-glow dpo-after-glow"></div>
                                     </div>
                                 </div>
@@ -674,7 +674,7 @@ extra_js:
                         </div>
                         <div class="dpo-slide-info">
                             <h3 class="dpo-slide-title">Optimized Layout Structure</h3>
-                            <p class="dpo-slide-description">DPO fine-tuning ensures optimal element positioning and spacing for maximum visual effectiveness.</p>
+                            <p class="dpo-slide-description">RL fine-tuning ensures optimal element positioning and spacing for maximum visual effectiveness.</p>
                         </div>
                     </div>
                 </div>
@@ -1089,13 +1089,6 @@ extra_js:
                         <div class="gallery-poster-title">Neon Pulse</div>
                     </div>
                 </div>
-                <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo24.png" alt="Origin: Heirloom Tomato Seeds advertisement poster">
-                    <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Product Advertisement</div>
-                        <div class="gallery-poster-title">Origin Tomato Seeds</div>
-                    </div>
-                </div>
             </div>
             
             <!-- Column 3: Stack of images -->
@@ -1129,10 +1122,10 @@ extra_js:
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo13.png" alt="Dune Part Two Movie Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo24.png" alt="Origin: Heirloom Tomato Seeds advertisement poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">Sci-Fi Epic Film</div>
-                        <div class="gallery-poster-title">Dune: Part Two</div>
+                        <div class="gallery-poster-category">Product Advertisement</div>
+                        <div class="gallery-poster-title">Origin Tomato Seeds</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">

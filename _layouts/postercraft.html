@@ -2279,7 +2279,6 @@
         .title-logo-section {
             display: flex;
             align-items: center;
-            gap: 0.5rem; /* 将 gap 调整为 0.5rem 或您期望的值 */
             margin-bottom: 1rem;
             /* 添加悬浮效果 */
             animation: sectionFloat 4s ease-in-out infinite;
@@ -2289,9 +2288,9 @@
             font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 900;
             background: linear-gradient(135deg, #ffffff, #a5b4fc);
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-            margin-right: 0.5rem; /* 确保标题和logo之间有明确的间隔 */
+            background-clip: text;
         }
 
         /* 内联Logo样式 */

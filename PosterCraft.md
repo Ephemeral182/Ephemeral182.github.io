@@ -399,7 +399,7 @@ extra_js:
         <div class="optimization-header">
             <h2 class="optimization-title">Text Optimization Results</h2>
             <div class="optimization-emoji">✨</div>
-            <p class="optimization-subtitle">Experience the dramatic improvement in text rendering quality and aesthetic appeal</p>
+            <p class="optimization-subtitle">Experience the dramatic improvement in rendering accuracy and text alignment</p>
         </div>
         
         <!-- 新增：切换器 -->
@@ -420,7 +420,7 @@ extra_js:
         <div class="optimization-section comparison-section active" id="section-comparison">
             <div class="section-header">
                 <h3 class="section-title">Before & After Comparison</h3>
-                <p class="section-subtitle">Witness the transformation from blurry text to crystal-clear typography</p>
+                <p class="section-subtitle">Witness the transformation from incorrect/missing text rendering to accurate text generation</p>
             </div>
             
             <!-- 对比展示网格 -->

@@ -342,7 +342,7 @@ extra_js:
                         <h3 class="stage-title">Text Rendering Optimization</h3>
                     </div>
                 </div>
-                <p class="stage-description">Optimizes text rendering quality and layout structure to ensure readable and aesthetically pleasing typography that forms the foundation of professional poster design.</p>
+                <p class="stage-description">Tackles the challenge of accurate text rendering by optimizing for crisp, high-quality typography on diverse backgrounds, ensuring both fidelity and robustness as a foundational step.</p>
             </div>
             
             <!-- 第一个箭头 -->
@@ -357,7 +357,7 @@ extra_js:
                         <h3 class="stage-title">High-quality Poster Fine-tuning</h3>
                     </div>
                 </div>
-                <p class="stage-description">Fine-tunes the overall visual quality through advanced diffusion models, enhancing color harmony, composition balance, and artistic coherence.</p>
+                <p class="stage-description">Shifts focus to overall poster style and text-background harmony using Region-aware Calibration. This fine-tuning stage preserves text accuracy while strengthening the artistic integrity of the aesthetic poster.</p>
             </div>
             
             <!-- 第二个箭头 -->
@@ -372,7 +372,7 @@ extra_js:
                         <h3 class="stage-title">Aesthetic-Text RL</h3>
                     </div>
                 </div>
-                <p class="stage-description">Reinforcement learning approach that aligns visual aesthetics with textual content, ensuring semantic consistency and artistic appeal.</p>
+                <p class="stage-description">Employs Aesthetic-Text Preference Optimization (DPO) to capture higher-order aesthetic trade-offs. This reinforcement learning stage ensures the model not only denoises accurately but also prioritizes outputs that satisfy holistic aesthetic criteria.</p>
             </div>
             
             <!-- 第三个箭头 -->
@@ -387,7 +387,7 @@ extra_js:
                         <h3 class="stage-title">Vision-Language Feedback</h3>
                     </div>
                 </div>
-                <p class="stage-description">Multi-modal feedback mechanism that continuously refines the output through vision-language understanding, achieving superior aesthetic quality.</p>
+                <p class="stage-description">Introduces a Joint Vision-Language Conditioning mechanism. This iterative feedback combines visual information with targeted text suggestions for multi-modal corrections, progressively refining aesthetic content and background harmony.</p>
             </div>
         </div>
     </div>

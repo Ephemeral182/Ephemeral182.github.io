@@ -261,7 +261,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="1">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">HQ-Poster-100K</h3>
-                        <p>A meticulously curated collection of 100,000 high-quality posters with comprehensive processing pipeline. Incorporates advanced filtering techniques (MD5, Hash), multi-modal scoring systems, and Gemini-powered mask generation with detailed captioning. Forms the foundation for training aesthetically-aware poster generation models.</p>
+                        <p>A meticulously curated collection of 100,000 high-quality posters with a comprehensive processing pipeline. Incorporates advanced filtering techniques (MD5, Hash), multi-modal scoring systems, Gemini-powered mask generation, and detailed captions. Forms the foundation for training aesthetic poster generation models.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo2.png" alt="HQ-Poster-100K Dataset Showcase" class="ds-showcase-image">
@@ -283,7 +283,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="3">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">Poster-Reflect-120K</h3>
-                        <p>An advanced reflection dataset containing 120,000 poster samples with comprehensive aesthetic and compositional analysis. Features detailed visual design principle annotations and multi-dimensional quality assessments. Designed to enhance model understanding of artistic composition, enabling sophisticated feedback mechanisms and iterative quality improvement.</p>
+                        <p>The dataset comprises 120,000 poster pairs, each paired with a corresponding text reflection that analyzes poster content and aesthetic style. By aligning rich visual information with their text reflections, the dataset enables iterative vision–language feedback refinement. It allows the model to learn from both modalities to obtain more aesthetically compelling posters.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo4.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">

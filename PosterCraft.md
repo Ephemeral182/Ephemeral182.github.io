@@ -250,7 +250,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="0">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">Text-Render-2M</h3>
-                        <p>A comprehensive text rendering dataset containing 2 million high-quality examples. Features multi-instance text rendering (1-3 instances), diverse font selections from standard to artistic styles, and dynamic content generation through both template-based and random string approaches. Essential for developing robust text rendering capabilities in poster generation.</p>
+                        <p>A comprehensive text rendering dataset containing 2 million high-quality examples. Features multi-instance text rendering, diverse text selections (varying in size, count, placement, and rotation), and dynamic content generation through both template-based and random string approaches. Essential for developing robust text rendering capabilities in poster generation.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo_text.png" alt="Text-Render-2M Dataset Showcase" class="ds-showcase-image">
@@ -272,7 +272,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">Poster-Preference-100K</h3>
-                        <p>A specialized preference learning dataset comprising 100,000 carefully selected poster pairs. Generated through FLUX-based poster creation from user prompts, followed by Gemini-powered prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differentials, crucial for learning aesthetic preferences and human-aligned poster generation.</p>
+                        <p>A specialized preference learning dataset comprising 100,000 carefully selected poster pairs. These pairs, generated from user prompts, undergo comprehensive evaluation by rigorous Gemini and the aesthetic evaluator to distinguish between high-quality and low-quality examples. This process is crucial for learning aesthetic preferences and generating human-aligned posters.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo3.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">

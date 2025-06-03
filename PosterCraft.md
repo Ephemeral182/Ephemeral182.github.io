@@ -840,12 +840,12 @@ extra_js:
             <div class="result-section">
                 <div class="result-section-header">
                     <h3 class="result-section-title">User Study Results</h3>
-                    <p class="result-section-description">Human evaluation showcasing PosterCraft's win rate against baseline models across four critical dimensions</p>
+                    <p class="result-section-description">Human expert evaluation showcasing PosterCraft's win rate against baseline models across four critical dimensions</p>
                 </div>
                 
                 <div class="winrate-comparison-container">
                     <div class="winrate-comparison-grid">
-                        <!-- OpenCOLE - 均值: (83.4+82.0+85.5+84.0)/4 = 83.7% -->
+
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -867,7 +867,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- Playground-v2.5 - 均值: (71.5+69.0+67.2+71.0)/4 = 69.7% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -889,7 +888,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- SD3.5 - 均值: (63.5+62.5+67.0+63.5)/4 = 64.1% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -911,7 +909,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- Flux1.dev - 均值: (57.5+59.5+58.0+60.0)/4 = 58.8% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -933,7 +930,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- Ideogram-v2 - 均值: (56.5+63.5+60.5+59.5)/4 = 60.0% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -955,7 +951,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- BAGEL - 均值: (62.0+64.0+68.0+74.0)/4 = 67.0% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">
@@ -977,7 +972,6 @@ extra_js:
                             </div>
                         </div>
 
-                        <!-- Gemini2.0-Flash-Gen - 均值: (43.7+45.0+46.5+45.5)/4 = 45.2% -->
                         <div class="winrate-comparison-item">
                             <div class="winrate-item-header">
                                 <div class="winrate-model-name">

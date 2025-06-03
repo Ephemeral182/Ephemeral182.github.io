@@ -5821,7 +5821,7 @@
             window.addEventListener('scroll', handleScrollAnimation);
 
             // Helper function to add jump-and-highlight functionality
-            function setupJumpAndHighlight(cardSelector, targetSectionId, hintMessage = '点击查看优化效果 ↓') {
+            function setupJumpAndHighlight(cardSelector, targetSectionId, hintMessage = '') {
                 const card = document.querySelector(cardSelector);
                 if (card) {
                     card.style.cursor = 'pointer';
@@ -5901,13 +5901,13 @@
             }
 
             // Setup jump for Text Rendering Optimization (Stage 1)
-            setupJumpAndHighlight('.stage-card.stage-1', 'text-optimization', '点击查看文本优化效果 ↓');
+            setupJumpAndHighlight('.stage-card.stage-1', 'text-optimization');
             
             // Setup jump for Aesthetic-Text RL (Stage 3)
-            setupJumpAndHighlight('.stage-card.stage-3', 'dpo-optimization', '点击查看RL效果 ↓');
+            setupJumpAndHighlight('.stage-card.stage-3', 'dpo-optimization');
 
             // Setup jump for Vision-Language Feedback (Stage 4)
-            setupJumpAndHighlight('.stage-card.stage-4', 'reflection-refinement', '点击查看反馈优化效果 ↓');
+            setupJumpAndHighlight('.stage-card.stage-4', 'reflection-refinement');
 
             // Floating Demos script
             const floatingDemos = document.querySelector('.floating-demos');

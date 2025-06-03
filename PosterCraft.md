@@ -693,7 +693,7 @@ extra_js:
 <div class="reflection-showcase-section" id="reflection-refinement">
     <div class="reflection-container">
         <div class="reflection-header">
-            <h2 class="reflection-title">Iterative Refinement with Reflection</h2>
+            <h2 class="reflection-title">Refinement with Reflection</h2>
             <div class="reflection-emoji">🔄</div>
             <p class="reflection-subtitle">See how PosterCraft utilizes reflection and feedback to progressively enhance poster quality based on content and aesthetic suggestions.</p>
         </div>

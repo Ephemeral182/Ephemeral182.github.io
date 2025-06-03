@@ -342,7 +342,7 @@ extra_js:
                         <h3 class="stage-title">Text Rendering Optimization</h3>
                     </div>
                 </div>
-                <p class="stage-description">Tackles the challenge of accurate text rendering by optimizing for crisp, high-quality typography on diverse backgrounds, ensuring both fidelity and robustness as a foundational step.</p>
+                <p class="stage-description">Addresses the challenge of accurate text generation by precisely rendering diverse text on high-quality backgrounds. This method also ensures faithful representation of these backgrounds, establishing fidelity and robustness as the foundation for poster generation.</p>
             </div>
             
             <!-- 第一个箭头 -->

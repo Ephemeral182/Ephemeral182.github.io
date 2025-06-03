@@ -372,7 +372,7 @@ extra_js:
                         <h3 class="stage-title">Aesthetic-Text RL</h3>
                     </div>
                 </div>
-                <p class="stage-description">Employs Aesthetic-Text Preference Optimization (DPO) to capture higher-order aesthetic trade-offs. This reinforcement learning stage ensures the model not only denoises accurately but also prioritizes outputs that satisfy holistic aesthetic criteria.</p>
+                <p class="stage-description">Employs Aesthetic-Text Preference Optimization to capture higher-order aesthetic trade-offs. This reinforcement learning stage prioritizes outputs that satisfy holistic aesthetic criteria and mitigates defects in font rendering.</p>
             </div>
             
             <!-- 第三个箭头 -->

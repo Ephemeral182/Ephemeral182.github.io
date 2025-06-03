@@ -194,11 +194,6 @@ extra_js:
                 </div>
             </div>
         </div>
-        
-        <div class="aesthetic-description">
-            <h3 class="aesthetic-title">Aesthetic Poster Generation</h3>
-            <p class="aesthetic-text">From simple text descriptions to breathtaking visual narratives. Our AI understands aesthetics, composition, and artistic vision to create posters that captivate and inspire.</p>
-        </div>
     </div>
 </div>
 

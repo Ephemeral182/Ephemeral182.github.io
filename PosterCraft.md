@@ -112,7 +112,7 @@ extra_js:
         <div style="text-align: center;">
             <div class="what-is-emoji">🎨</div>
         </div>
-        <p class="what-is-subtitle">Transform your words into stunning visual masterpieces</p>
+        <p class="what-is-subtitle">From your words to captivating aesthetic posters, PosterCraft excels in precise text rendering, seamless integration of abstract art, striking layouts, and stylistic harmony.</p>
         
         <!-- 新的横向布局 -->
         <div class="horizontal-demo-container">
@@ -131,7 +131,7 @@ extra_js:
                                     <span>Simple Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"Urban Canvas Street Art Expo poster with bold graffiti-style lettering and dynamic colorful splashes"</p>
+                                    <p>"<span class="text-highlight-prompt">Urban Canvas Street Art Expo</span> poster with <span class="text-highlight-prompt">bold graffiti-style lettering</span> and <span class="text-highlight-prompt">dynamic colorful splashes</span>"</p>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"The event poster for the "MIDNIGHT MASQUERADE: A Vampire Ball" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, "MIDNIGHT MASQUERADE" is in a sophisticated, dripping, blood-red, gothic script font with ornate serifs, positioned horizontally in an arch across the top. "A Vampire Ball" is in a smaller, antique, silver serif font below the main title. The date "All Hallows' Eve" and "Chateau Le Fantome" are at the bottom in a small, elegant, black calligraphy font. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
+                                    <p>"The event poster for the \"<span class="text-highlight-prompt">MIDNIGHT MASQUERADE: A Vampire Ball</span>\" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, \"<span class="text-highlight-prompt">MIDNIGHT MASQUERADE</span>,\" is in a sophisticated, <span class="text-highlight-prompt">dripping, blood-red, gothic script font</span> with ornate serifs, positioned horizontally in an arch across the top. \"<span class="text-highlight-prompt">A Vampire Ball</span>\" is in a smaller, <span class="text-highlight-prompt">antique, silver serif font</span> below the main title. The date \"<span class="text-highlight-prompt">All Hallows' Eve</span>\" and \"<span class="text-highlight-prompt">Château Le Fantôme</span>\" are at the bottom in a <span class="text-highlight-prompt">small, elegant, black calligraphy font</span>. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@ extra_js:
                         
                         <div class="output-section">
                             <div class="output-frame-horizontal">
-                                <img src="/images/postercraft/demo/demo17.png" alt="UTOPIA/DYSTOPIA Film Showcase Poster">
+                                <img src="/images/postercraft/demo/demo17.png" alt="MIDNIGHT MASQUERADE Poster">
                                 <div class="output-glow-horizontal"></div>
                             </div>
                         </div>

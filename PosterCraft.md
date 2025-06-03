@@ -711,7 +711,7 @@ extra_js:
         <div class="reflection-header">
             <h2 class="reflection-title">Refinement with Reflection</h2>
             <div class="reflection-emoji">🔄</div>
-            <p class="reflection-subtitle">See how PosterCraft utilizes reflection and feedback to progressively enhance poster quality based on content and aesthetic suggestions.</p>
+            <p class="reflection-subtitle">See how PosterCraft utilizes vision-language reflection to enhance poster quality based on content and aesthetic suggestions.</p>
         </div>
         <div class="reflection-gallery">
             <!-- Demo 1: Underworld -->
@@ -769,7 +769,7 @@ extra_js:
             <div class="result-section">
                 <div class="result-section-header">
                     <h3 class="result-section-title">Model Performance Comparison</h3>
-                    <p class="result-section-description">Quantitative evaluation across four critical dimensions, demonstrating PosterCraft's superior performance across state-of-the-art poster generation models</p>
+                    <p class="result-section-description">Quantitative evaluation across four critical dimensions, demonstrating PosterCraft's impressive performance across state-of-the-art poster generation models</p>
                 </div>
                 
                 <div class="performance-table-container">

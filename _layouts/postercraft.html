@@ -5628,19 +5628,20 @@
         }
 
         .reflection-image-label {
-            /* Removed: position: absolute; bottom: 12px; left: 12px; */
-            /* New styles: */
-            display: inline-block; /* Allows centering with text-align on parent if needed */
-            background: rgba(30, 41, 59, 0.85); /* Darker, less transparent background */
+            position: absolute; /* 改为绝对定位 */
+            top: 1.5rem;        /* 从顶部偏移，您可以调整这个值 */
+            left: 50%;          /* 水平居中定位 */
+            transform: translateX(-50%); /* 精确水平居中 */
+            background: rgba(30, 41, 59, 0.85); 
             color: white;
-            padding: 0.5rem 1rem; /* Slightly more padding */
-            border-radius: 12px; /* More rounded */
-            font-size: 0.9rem; /* Slightly larger font */
+            padding: 0.5rem 1rem; 
+            border-radius: 12px; 
+            font-size: 0.9rem; 
             font-weight: 700;
             text-transform: uppercase;
-            /* z-index: 1; No longer needed as it's not positioned absolutely over the image */
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 10; /* 确保标签在图片之上 */
         }
 
         .reflection-suggestions-card {

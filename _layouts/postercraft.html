@@ -5802,6 +5802,22 @@
         }
 
         /* ... 其他现有样式 ... */
+
+        /* This is what I added in the previous turn. */
+        .authors-section .author a {
+            color: #a5b4fc; /* 更新为与上标一致的浅蓝色/紫色 */
+            text-decoration: none; /* 去掉下划线，如果需要的话 */
+        }
+        /* 确保已访问链接的颜色也保持一致 */
+        .authors-section .author a:visited {
+            color: #a5b4fc; 
+        }
+
+        .authors-section .author a:hover {
+            text-decoration: underline; /* 鼠标悬停时显示下划线，如果需要的话 */
+            color: #d1d5db; /* 鼠标悬停时的颜色，根据主题调整 */
+        }
+        /* End of what I added previously. */
     </style>
 </head>
 <body>

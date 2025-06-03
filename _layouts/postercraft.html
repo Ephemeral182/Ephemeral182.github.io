@@ -2902,7 +2902,7 @@
             padding: 1.2rem 0.8rem; /* 调整padding，减少左右padding给文字更多空间 */
             font-size: clamp(1rem, 2vw, 1.3rem); /* 稍微减小字体，确保文字能完整显示 */
             font-weight: 700;
-            color: #aaaaaa;
+            color: #d1d5db; /* Changed: Light cool gray for inactive tabs */
             cursor: pointer;
             transition: all 0.2s ease; /* 简化transition时间 */
             position: relative;
@@ -2971,21 +2971,21 @@
         }
 
         .ds-tab-button.active .ds-tab-text {
-            background: linear-gradient(90deg, #C058F3, #FF8A54);
+            background: linear-gradient(90deg, #F472B6, #C084FC); /* Changed: Pink to Purple gradient */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             font-weight: 800;
-            filter: drop-shadow(0 0 25px rgba(192, 88, 243, 0.9)); /* 增强文字光晕 */
+            filter: drop-shadow(0 0 20px rgba(220, 50, 150, 0.7)); /* Changed: Adjusted shadow to match new gradient */
             animation: textShimmer 3s ease-in-out infinite;
         }
 
-        @keyframes textShimmer {
+        @keyframes textShimmer { /* Keep or adjust as needed */
             0%, 100% { 
-                filter: drop-shadow(0 0 25px rgba(192,88,243,0.9));
+                filter: drop-shadow(0 0 20px rgba(220, 50, 150, 0.7)); /* Adjusted shadow color */
             }
             50% { 
-                filter: drop-shadow(0 0 35px rgba(255,138,84,1));
+                filter: drop-shadow(0 0 30px rgba(192, 88, 243,0.9)); /* Brighter second color for shimmer */
             }
         }
         
@@ -2999,7 +2999,7 @@
             box-shadow: 
                 0 8px 30px rgba(255, 255, 255, 0.25), /* 增强悬停阴影 */
                 inset 0 1px 0 rgba(255, 255, 255, 0.25);
-            color: #dddddd; /* 悬停时文字更亮 */
+            color: #f9fafb; /* Changed: Brighter hover text color */
         }
         
         /* 移除原有的 ds-tab-carousel::after 粒子效果，因为它可能与新的背景和阴影冲突 */
@@ -3082,6 +3082,7 @@
         }
 
         .ds-description h3 {
+            /* This style will be overridden by the .dataset-title-highlight-box h3, but keeping it for other h3s if any */
             font-size: 1.8rem;
             font-weight: 700;
             color: #ffffff;
@@ -5741,6 +5742,25 @@
         .ds-title-emoji {
             font-size: 0.8em; /* 或者其他你觉得合适的大小 */
             vertical-align: middle; /* 尝试不同的对齐方式 */
+        }
+
+        /* New styles for dataset title highlighting */
+        .dataset-title-highlight-box {
+            display: inline-block;
+            border: 2px solid #AFFF33; /* Bright lime green */
+            padding: 0.5rem 1.2rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem; /* Space below the box */
+            background-color: rgba(175, 255, 51, 0.05); /* Very subtle background tint */
+        }
+
+        .dataset-title-highlight-box h3 {
+            color: #ffffff; /* Title text white */
+            font-size: 1.6rem; 
+            font-weight: 700;
+            margin-bottom: 0 !important; /* Remove default h3 margin */
+            line-height: 1.2;
+            text-align: center; /* Ensure text inside is centered if box is wider */
         }
     </style>
 </head>

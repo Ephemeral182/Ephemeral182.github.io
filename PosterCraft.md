@@ -219,7 +219,9 @@ extra_js:
                 <!-- Dataset Content for Text-Render-2M -->
                 <div class="ds-dataset-content" data-index="0">
                     <div class="ds-description">
-                        <h3>Text-Render-2M</h3>
+                        <div class="dataset-title-highlight-box">
+                            <h3>Text-Render-2M</h3>
+                        </div>
                         <p>A comprehensive text rendering dataset containing 2 million high-quality examples. Features multi-instance text rendering (1-3 instances), diverse font selections from standard to artistic styles, and dynamic content generation through both template-based and random string approaches. Essential for developing robust text rendering capabilities in poster generation.</p>
                     </div>
                     <div class="ds-image-grid">
@@ -230,7 +232,9 @@ extra_js:
                 <!-- Dataset Content for HQ-Poster-100K -->
                 <div class="ds-dataset-content" data-index="1">
                     <div class="ds-description">
-                        <h3>HQ-Poster-100K</h3>
+                        <div class="dataset-title-highlight-box">
+                            <h3>HQ-Poster-100K</h3>
+                        </div>
                         <p>A meticulously curated collection of 100,000 high-quality posters with comprehensive processing pipeline. Incorporates advanced filtering techniques (MD5, Hash), multi-modal scoring systems, and Gemini-powered mask generation with detailed captioning. Forms the foundation for training aesthetically-aware poster generation models.</p>
                     </div>
                     <div class="ds-image-grid">
@@ -241,7 +245,9 @@ extra_js:
                 <!-- Dataset Content for Poster-Preference-100K -->
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-description">
-                        <h3>Poster-Preference-100K</h3>
+                        <div class="dataset-title-highlight-box">
+                            <h3>Poster-Preference-100K</h3>
+                        </div>
                         <p>A specialized preference learning dataset comprising 100,000 carefully selected poster pairs. Generated through FLUX-based poster creation from user prompts, followed by Gemini-powered prompt alignment evaluation. Qualified pairs are selected based on HPS-Score differentials, crucial for learning aesthetic preferences and human-aligned poster generation.</p>
                     </div>
                     <div class="ds-image-grid">
@@ -252,7 +258,9 @@ extra_js:
                 <!-- Dataset Content for Poster-Reflect-120K -->
                 <div class="ds-dataset-content" data-index="3">
                     <div class="ds-description">
-                        <h3>Poster-Reflect-120K</h3>
+                        <div class="dataset-title-highlight-box">
+                            <h3>Poster-Reflect-120K</h3>
+                        </div>
                         <p>An advanced reflection dataset containing 120,000 poster samples with comprehensive aesthetic and compositional analysis. Features detailed visual design principle annotations and multi-dimensional quality assessments. Designed to enhance model understanding of artistic composition, enabling sophisticated feedback mechanisms and iterative quality improvement.</p>
                     </div>
                     <div class="ds-image-grid">

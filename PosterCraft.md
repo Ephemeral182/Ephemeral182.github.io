@@ -197,11 +197,13 @@ extra_js:
     </div>
 </div>
 
-<!-- Dataset Showcase Section - 4 Datasets -->
-<div class="ds-showcase-section" id="dataset-showcase">
-    <div class="ds-container">
-        <div class="ds-header">
-            <h2 class="ds-title">Explore Our Specific Datasets Powering PosterCraft <span class="ds-title-emoji">📚</span></h2>
+<!-- Dataset Showcase Section - Styled like Technical Overview -->
+<div class="technical-overview-section" id="dataset-showcase">
+    <div class="overview-container">
+        <div class="overview-header">
+            <h2 class="overview-title">Specific Datasets for PosterCraft</h2>
+            <div class="overview-emoji">📚</div>
+            <p class="overview-subtitle">Dive into the diverse and high-quality datasets that train PosterCraft to achieve state-of-the-art aesthetic poster generation.</p>
         </div>
 
         <!-- 4-Dataset Navigation -->

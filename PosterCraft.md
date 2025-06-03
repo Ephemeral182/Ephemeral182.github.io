@@ -506,10 +506,6 @@ extra_js:
                             <img src="/images/postercraft/long_text/demo1.png" alt="Poster Demo 1" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
-                        <div class="longtext-info">
-                            <h4 class="longtext-title">Complex Layout Design</h4>
-                            <p class="longtext-description">Sophisticated poster design with advanced visual composition and layout management.</p>
-                        </div>
                     </div>
                 </div>
                 
@@ -518,10 +514,6 @@ extra_js:
                         <div class="longtext-image-frame">
                             <img src="/images/postercraft/long_text/demo2.png" alt="Poster Demo 2" class="longtext-image">
                             <div class="longtext-glow"></div>
-                        </div>
-                        <div class="longtext-info">
-                            <h4 class="longtext-title">Rich Content Integration</h4>
-                            <p class="longtext-description">Seamlessly blending extensive text content with visual elements for balanced compositions.</p>
                         </div>
                     </div>
                 </div>
@@ -532,10 +524,6 @@ extra_js:
                             <img src="/images/postercraft/long_text/demo3.png" alt="Poster Demo 3" class="longtext-image">
                             <div class="longtext-glow"></div>
                         </div>
-                        <div class="longtext-info">
-                            <h4 class="longtext-title">Advanced Typography</h4>
-                            <p class="longtext-description">Professional-grade poster design with diverse visual styles and hierarchical information structure.</p>
-                        </div>
                     </div>
                 </div>
                 
@@ -544,10 +532,6 @@ extra_js:
                         <div class="longtext-image-frame">
                             <img src="/images/postercraft/long_text/demo4.png" alt="Poster Demo 4" class="longtext-image">
                             <div class="longtext-glow"></div>
-                        </div>
-                        <div class="longtext-info">
-                            <h4 class="longtext-title">Maximum Design Complexity</h4>
-                            <p class="longtext-description">Ultimate poster generation capability handling complex designs while preserving visual harmony.</p>
                         </div>
                     </div>
                 </div>

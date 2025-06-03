@@ -2764,18 +2764,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            position: relative; /* 为 ::after 伪元素重新添加 */
-        }
-
-        .text-highlight::after {
-            content: '';
-            position: absolute;
-            bottom: -2px; /* 控制下划线与文字的距离 */
-            left: 0;
-            width: 100%;
-            height: 1px; /* 控制下划线的粗细 */
-            background: linear-gradient(45deg, #ef4444, #dc2626); /* 下划线颜色与文字一致 */
-            opacity: 0.6; /* 下划线透明度 */
         }
 
         /* 信息区域 */

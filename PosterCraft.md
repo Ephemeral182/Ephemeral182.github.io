@@ -170,7 +170,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"The event poster for the "<span class="hl-subject">MIDNIGHT MASQUERADE: A Vampire Ball</span>" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, "<span class="hl-subject">MIDNIGHT MASQUERADE</span>," is in a sophisticated, <span class="hl-style">dripping, blood-red, gothic script font</span> with ornate serifs, positioned horizontally in an arch across the top. "<span class="hl-subject">A Vampire Ball</span>" is in a smaller, <span class="hl-style">antique, silver serif font</span> below the main title. The date "<span class="hl-detail">All Hallows' Eve</span>" and "<span class="hl-detail">Château Le Fantôme</span>" are at the bottom in a <span class="hl-style">small, elegant, black calligraphy font</span>. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
+                                    <p>"This poster for the post-apocalyptic film "<span class="hl-subject">Echoes of the Shattered Sun</span>" showcases a lone survivor in ragged clothes, standing on a desolate, cracked earth under a sky dominated by a fragmented, dying sun that casts long, eerie shadows. Ruined cityscapes are barely visible on the horizon. The style is bleak, atmospheric, and visually striking, emphasizing despair and a fight for survival. The film's title, "<span class="hl-subject">ECHOES OF THE SHATTERED SUN</span>" is presented in a <span class="hl-style">fragmented, futuristic, sans-serif font, the letters appearing as if broken and pieced together from salvaged metal, with a faint, dying orange glow</span>. This text is positioned <span class="hl-detail">horizontally across the top of the poster, large and ominous</span>. Below the survivor, the release information "<span class="hl-subject">THE FUTURE IS BROKEN. SURVIVAL IS ALL THAT REMAINS. COMING SOON</span>" is in a <span class="hl-style">smaller, gritty, white stencil font</span>, <span class="hl-detail">horizontally centered</span>. The fractured, thematic title amplifying the film's dystopian and survivalist themes."</p>
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@ extra_js:
                         
                         <div class="output-section">
                             <div class="output-frame-horizontal">
-                                <img src="/images/postercraft/demo/demo17.png" alt="MIDNIGHT MASQUERADE Poster">
+                                <img src="/images/postercraft/demo/demo18.png" alt="MIDNIGHT MASQUERADE Poster">
                                 <div class="output-glow-horizontal"></div>
                             </div>
                         </div>

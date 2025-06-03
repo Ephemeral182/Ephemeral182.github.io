@@ -495,7 +495,7 @@ extra_js:
         <div class="optimization-section longtext-section" id="section-longtext">
             <div class="section-header">
                 <h3 class="section-title">Demo Showcase</h3>
-                <p class="section-subtitle">Advanced poster generation capabilities showcasing diverse design variations</p>
+                <p class="section-subtitle">Advanced poster generation capabilities showcasing diverse long text rendering</p>
             </div>
             
             <!-- 简化的4张图网格展示 -->
@@ -546,7 +546,7 @@ extra_js:
         <div class="dpo-header">
             <h2 class="dpo-title">Reinforcement Learning Results</h2>
             <div class="dpo-emoji">🚀</div>
-            <p class="dpo-subtitle">Direct Preference Optimization elevates poster quality through human feedback alignment</p>
+            <p class="dpo-subtitle">Aesthetic–Text Preference Optimization to improve poster quality through high-order aesthetics and text accuracy</p>
         </div>
         
         <!-- DPO Carousel Container -->
@@ -597,7 +597,7 @@ extra_js:
                         </div>
                         <div class="dpo-slide-info">
                             <h3 class="dpo-slide-title">Enhanced Visual Composition</h3>
-                            <p class="dpo-slide-description">DPO optimization significantly improves visual hierarchy and aesthetic appeal through preference-driven learning.</p>
+                            <p class="dpo-slide-description">Reinforcement learning significantly improves visual hierarchy and aesthetic appeal through preference-driven learning.</p>
                         </div>
                     </div>
                     
@@ -640,8 +640,8 @@ extra_js:
                             </div>
                         </div>
                         <div class="dpo-slide-info">
-                            <h3 class="dpo-slide-title">Refined Color Harmony</h3>
-                            <p class="dpo-slide-description">Human preference data guides the model to achieve superior color balance and professional-grade visual impact.</p>
+                            <h3 class="dpo-slide-title">Improved Text Accuracy</h3>
+                            <p class="dpo-slide-description">Our design enhances the precision of text rendering, minimizing errors and redundancy for clearer visual communication.</p>
                         </div>
                     </div>
                     
@@ -685,7 +685,7 @@ extra_js:
                         </div>
                         <div class="dpo-slide-info">
                             <h3 class="dpo-slide-title">Optimized Layout Structure</h3>
-                            <p class="dpo-slide-description">RL fine-tuning ensures optimal element positioning and spacing for maximum visual effectiveness.</p>
+                            <p class="dpo-slide-description">Reinforcement learning ensures optimal element positioning and spacing for maximum visual effectiveness.</p>
                         </div>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ extra_js:
                 <span class="author"><a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN">Jialin Gao</a><sup>2,*</sup></span>,
                 <span class="author"><a href="https://owen718.github.io/">Tian Ye</a><sup>1</sup></span>,
                 <span class="author"><a href="https://haoyuchen.com/">Haoyu Chen</a><sup>1</sup></span>,
-                <span class="author">Hengyu Shi<sup>2</sup></span>,
+                <span class="author"><a href="https://openreview.net/profile?id=%7EHengyu_Shi1">Hengyu Shi</a><sup>2</sup></span>,
                 <span class="author"><a href="https://shaoshitong.github.io/">Shitong Shao</a><sup>1</sup></span>,
                 <span class="author"><a href="https://scholar.google.com.hk/citations?user=5F3tICwAAAAJ&hl=zh-CN">Yunlong Lin</a><sup>3</sup></span>,
                 <span class="author"><a href="https://openreview.net/profile?id=~Song_Fei1">Song Fei</a><sup>1</sup></span>,

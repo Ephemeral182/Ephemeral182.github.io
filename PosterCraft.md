@@ -131,7 +131,7 @@ extra_js:
                                     <span>Simple Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"<span class="hl-subject">Urban Canvas Street Art Expo</span> poster with <span class="hl-style">bold graffiti-style lettering</span> and <span class="hl-detail">dynamic colorful splashes</span>"</p>
+                                    <p>"<span class="hl-detail">Urban Canvas Street Art Expo</span> poster with bold graffiti-style lettering and dynamic colorful splashes"</p>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"This poster for the post-apocalyptic film "<span class="hl-subject">Echoes of the Shattered Sun</span>" showcases a lone survivor in ragged clothes, standing on a desolate, cracked earth under a sky dominated by a fragmented, dying sun that casts long, eerie shadows. Ruined cityscapes are barely visible on the horizon. The style is bleak, atmospheric, and visually striking, emphasizing despair and a fight for survival. The film's title, "<span class="hl-subject">ECHOES OF THE SHATTERED SUN</span>" is presented in a <span class="hl-style">fragmented, futuristic, sans-serif font, the letters appearing as if broken and pieced together from salvaged metal, with a faint, dying orange glow</span>. This text is positioned <span class="hl-detail">horizontally across the top of the poster, large and ominous</span>. Below the survivor, the release information "<span class="hl-subject">THE FUTURE IS BROKEN. SURVIVAL IS ALL THAT REMAINS. COMING SOON</span>" is in a <span class="hl-style">smaller, gritty, white stencil font</span>, <span class="hl-detail">horizontally centered</span>. The fractured, thematic title amplifying the film's dystopian and survivalist themes."</p>
+                                    <p>"This poster for the post-apocalyptic film "<span class="hl-detail">Echoes of the Shattered Sun</span>" showcases a lone survivor in ragged clothes, standing on a desolate, cracked earth under a sky dominated by a fragmented, dying sun that casts long, eerie shadows. Ruined cityscapes are barely visible on the horizon. The style is bleak, atmospheric, and visually striking, emphasizing despair and a fight for survival. The film's title, "<span class="hl-detail">ECHOES OF THE SHATTERED SUN</span>" is presented in a fragmented, futuristic, sans-serif font, the letters appearing as if broken and pieced together from salvaged metal, with a faint, dying orange glow. This text is positioned horizontally across the top of the poster, large and ominous. Below the survivor, the release information "<span class="hl-detail">THE FUTURE IS BROKEN. SURVIVAL IS ALL THAT REMAINS. COMING SOON</span>" is in a smaller, gritty, white stencil font, horizontally centered. The fractured, thematic title amplifying the film's dystopian and survivalist themes."</p>
                                 </div>
                             </div>
                         </div>

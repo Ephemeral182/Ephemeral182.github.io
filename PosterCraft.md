@@ -50,6 +50,36 @@ extra_js:
             <div class="paper-badge-fancy">📄 Research Paper</div>
         </div>
         
+        <!-- 作者信息 -->
+        <div class="authors-section">
+            <p class="authors">
+                <span class="author">Sixiang Chen<sup>1,*</sup></span>,
+                <span class="author">Jianyu Lai<sup>1,*</sup></span>,
+                <span class="author">Jialin Gao<sup>2,*</sup></span>,
+                <span class="author">Tian Ye<sup>1</sup></span>,
+                <span class="author">Haoyu Chen<sup>1</sup></span>,
+                <span class="author">Hengyu Shi<sup>2</sup></span>,
+                <span class="author">Shitong Shao<sup>1</sup></span>,
+                <span class="author">Yunlong Lin<sup>3</sup></span>,
+                <span class="author">Song Fei<sup>1</sup></span>,
+                <span class="author">Zhaohu Xing<sup>1</sup></span>,
+                <span class="author">Yeying Jin<sup>4</sup></span>,
+                <span class="author">Junfeng Luo<sup>2</sup></span>,
+                <span class="author">Xiaoming Wei<sup>2</sup></span>,
+                <span class="author">Lei Zhu<sup>1,5,†</sup></span>
+            </p>
+            <p class="affiliations">
+                <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou),
+                <sup>2</sup>Meituan,
+                <sup>3</sup>Xiamen University,
+                <sup>4</sup>National University of Singapore,
+                <sup>5</sup>The Hong Kong University of Science and Technology
+            </p>
+            <p class="contributions">
+                <sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author
+            </p>
+        </div>
+        
         <!-- 论文链接 - 增强版 -->
         <div class="paper-links-enhanced">
             <a href="#" class="paper-link-fancy arxiv-link">

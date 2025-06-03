@@ -407,7 +407,7 @@ extra_js:
             <div class="switcher-container">
                 <button class="switcher-btn active" data-target="comparison">
                     <span class="switcher-icon">🔄</span>
-                    <span class="switcher-text">Before & After Comparison</span>
+                    <span class="switcher-text">Pre- and Post- Comparison</span>
                 </button>
                 <button class="switcher-btn" data-target="longtext">
                     <span class="switcher-icon">📝</span>
@@ -419,7 +419,7 @@ extra_js:
         <!-- Section 1: 优化前后对比 -->
         <div class="optimization-section comparison-section active" id="section-comparison">
             <div class="section-header">
-                <h3 class="section-title">Before & After Comparison</h3>
+                <h3 class="section-title">Pre- and Post- Comparison</h3>
                 <p class="section-subtitle">Witness the transformation from incorrect/missing text rendering to accurate text generation</p>
             </div>
             

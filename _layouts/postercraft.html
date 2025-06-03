@@ -5820,67 +5820,94 @@
             handleScrollAnimation();
             window.addEventListener('scroll', handleScrollAnimation);
 
-            // Text Rendering Optimization 卡片跳转功能
-            const textRenderingCard = document.querySelector('.stage-card.stage-1');
-            if (textRenderingCard) {
-                textRenderingCard.style.cursor = 'pointer';
-                
-                textRenderingCard.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-8px) scale(1.02)';
-                    this.style.boxShadow = '0 25px 60px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+            // Helper function to add jump-and-highlight functionality
+            function setupJumpAndHighlight(cardSelector, targetSectionId, hintMessage = '点击查看优化效果 ↓') {
+                const card = document.querySelector(cardSelector);
+                if (card) {
+                    card.style.cursor = 'pointer';
+
+                    card.addEventListener('mouseenter', function() {
+                        this.style.transform = 'translateY(-8px) scale(1.02)';
+                        this.style.boxShadow = '0 25px 60px rgba(99, 102, 241, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)';
+                        
+                        // Only add hint if it doesn't exist to prevent duplicates on rapid mouseenter/leave
+                        if (!this.querySelector('.jump-hint')) {
+                            const hintText = document.createElement('div');
+                            hintText.className = 'jump-hint';
+                            hintText.textContent = hintMessage;
+                            hintText.style.cssText = `
+                                position: absolute;
+                                bottom: -40px; /* Adjust if necessary */
+                                left: 50%;
+                                transform: translateX(-50%);
+                                background: linear-gradient(45deg, #6366f1, #8b5cf6);
+                                color: white;
+                                padding: 0.5rem 1rem;
+                                border-radius: 20px;
+                                font-size: 0.8rem;
+                                font-weight: 600;
+                                white-space: nowrap;
+                                animation: fadeInUp 0.3s ease;
+                                z-index: 20;
+                                box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+                            `;
+                            this.appendChild(hintText);
+                        }
+                    });
                     
-                    const hintText = document.createElement('div');
-                    hintText.className = 'jump-hint';
-                    hintText.textContent = '点击查看优化效果 ↓';
-                    hintText.style.cssText = `
-                        position: absolute;
-                        bottom: -40px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        background: linear-gradient(45deg, #6366f1, #8b5cf6);
-                        color: white;
-                        padding: 0.5rem 1rem;
-                        border-radius: 20px;
-                        font-size: 0.8rem;
-                        font-weight: 600;
-                        white-space: nowrap;
-                        animation: fadeInUp 0.3s ease;
-                        z-index: 20;
-                        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-                    `;
-                    this.appendChild(hintText);
-                });
-                
-                textRenderingCard.addEventListener('mouseleave', function() {
-                    this.style.transform = '';
-                    this.style.boxShadow = '';
-                    const hintText = this.querySelector('.jump-hint');
-                    if (hintText) {
-                        hintText.remove();
-                    }
-                });
-                
-                textRenderingCard.addEventListener('click', function() {
-                    const targetSection = document.getElementById('text-optimization');
-                    if (targetSection) {
-                        this.style.transform = 'scale(0.98)';
-                        setTimeout(() => {
-                            this.style.transform = '';
-                        }, 150);
-                        
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        setTimeout(() => {
-                            targetSection.style.animation = 'sectionHighlight 2s ease';
-                        }, 800);
-                    }
-                });
-                
-                console.log("Text Rendering Optimization jump functionality added!");
+                    card.addEventListener('mouseleave', function() {
+                        this.style.transform = '';
+                        this.style.boxShadow = '';
+                        const hintText = this.querySelector('.jump-hint');
+                        if (hintText) {
+                            hintText.remove();
+                        }
+                    });
+                    
+                    card.addEventListener('click', function() {
+                        const targetSection = document.getElementById(targetSectionId);
+                        if (targetSection) {
+                            // Click feedback animation for the card
+                            this.style.transition = 'transform 0.15s ease';
+                            this.style.transform = 'scale(0.98)';
+                            setTimeout(() => {
+                                this.style.transform = '';
+                            }, 150);
+                            
+                            targetSection.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            
+                            // Apply highlight animation to the target section
+                            // Clear any previous animation to allow re-triggering
+                            targetSection.style.animation = 'none'; 
+                            // Trigger reflow to restart animation
+                            void targetSection.offsetWidth; 
+
+                            setTimeout(() => {
+                                targetSection.style.animation = 'sectionHighlight 2s ease';
+                                // Remove animation after it's done to allow re-triggering
+                                targetSection.addEventListener('animationend', () => {
+                                    targetSection.style.animation = '';
+                                }, { once: true });
+                            }, 600); // Delay slightly longer to ensure scroll is mostly complete
+                        }
+                    });
+                    console.log(`Jump functionality added for ${cardSelector} to #${targetSectionId}`);
+                } else {
+                    console.warn(`Card with selector ${cardSelector} not found.`);
+                }
             }
+
+            // Setup jump for Text Rendering Optimization (Stage 1)
+            setupJumpAndHighlight('.stage-card.stage-1', 'text-optimization', '点击查看文本优化效果 ↓');
+            
+            // Setup jump for Aesthetic-Text RL (Stage 3)
+            setupJumpAndHighlight('.stage-card.stage-3', 'dpo-optimization', '点击查看RL效果 ↓');
+
+            // Setup jump for Vision-Language Feedback (Stage 4)
+            setupJumpAndHighlight('.stage-card.stage-4', 'reflection-refinement', '点击查看反馈优化效果 ↓');
 
             // Floating Demos script
             const floatingDemos = document.querySelector('.floating-demos');

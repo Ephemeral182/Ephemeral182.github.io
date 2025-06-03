@@ -2408,6 +2408,7 @@
             margin-top: 2rem;
             position: relative;
             overflow: hidden;
+            padding: 0.5rem; /* 新增：为放大的子元素提供空间 */
         }
 
         /* 添加强调的光晕效果 */
@@ -2433,7 +2434,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 1.2rem 1.8rem; /* 原为: 1rem 1.5rem; */
+            padding: 1rem 1.5rem;
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
             border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 16px;
@@ -2463,7 +2464,7 @@
         }
 
         .paper-link-fancy:hover {
-            transform: translateY(-2px) scale(1.01); /* 原为: translateY(-3px) scale(1.02) */
+            transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
             border-color: rgba(255, 255, 255, 0.4);
         }
@@ -2489,7 +2490,7 @@
         .arxiv-link:hover {
             background: linear-gradient(135deg, rgba(255, 87, 51, 0.25), rgba(255, 87, 51, 0.15));
             border-color: rgba(255, 87, 51, 0.6);
-            box-shadow: 0 6px 20px rgba(255, 87, 51, 0.35); /* 原为: 0 12px 40px rgba(255, 87, 51, 0.4) */
+            box-shadow: 0 12px 40px rgba(255, 87, 51, 0.4);
         }
 
         .github-link:hover {

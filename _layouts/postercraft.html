@@ -5600,6 +5600,7 @@
             overflow: hidden;
             box-shadow: 0 12px 35px rgba(0,0,0,0.25);
             background-color: #111827; /* Fallback for image loading */
+            /* Removed width: 100% and height: auto from here, will be controlled by column */
         }
 
         .reflection-image-wrapper img {
@@ -5607,25 +5608,34 @@
             width: 100%;
             height: auto; /* Maintain aspect ratio */
             object-fit: contain; /* Show full image */
-            border-radius: 18px;
+            border-radius: 18px; /* Keep this if you want rounded corners on the image itself */
             transition: transform 0.3s ease;
         }
         .reflection-image-wrapper:hover img {
             transform: scale(1.03);
         }
 
+        .reflection-image-column { /* New style for the column containing label and image */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center label and image horizontally */
+            gap: 0.8rem; /* Space between label and image */
+        }
+
         .reflection-image-label {
-            position: absolute;
-            bottom: 12px;
-            left: 12px;
-            background: rgba(0,0,0,0.75);
+            /* Removed: position: absolute; bottom: 12px; left: 12px; */
+            /* New styles: */
+            display: inline-block; /* Allows centering with text-align on parent if needed */
+            background: rgba(30, 41, 59, 0.85); /* Darker, less transparent background */
             color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 10px;
-            font-size: 0.85rem;
+            padding: 0.5rem 1rem; /* Slightly more padding */
+            border-radius: 12px; /* More rounded */
+            font-size: 0.9rem; /* Slightly larger font */
             font-weight: 700;
             text-transform: uppercase;
-            z-index: 1;
+            /* z-index: 1; No longer needed as it's not positioned absolutely over the image */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
         .reflection-suggestions-card {

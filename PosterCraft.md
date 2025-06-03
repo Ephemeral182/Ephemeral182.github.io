@@ -112,7 +112,7 @@ extra_js:
         <div style="text-align: center;">
             <div class="what-is-emoji">🎨</div>
         </div>
-        <p class="what-is-subtitle">From your words to captivating aesthetic posters, PosterCraft excels in precise text rendering, seamless integration of abstract art, striking layouts, and stylistic harmony.</p>
+        <p class="what-is-subtitle">From your words to high-quality aesthetic posters, PosterCraft excels in precise text rendering, seamless integration of abstract art, striking layouts, and stylistic harmony.</p>
         
         <!-- 新的横向布局 -->
         <div class="horizontal-demo-container">

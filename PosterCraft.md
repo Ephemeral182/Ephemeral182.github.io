@@ -131,7 +131,7 @@ extra_js:
                                     <span>Simple Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"<span class="text-highlight-prompt">Urban Canvas Street Art Expo</span> poster with <span class="text-highlight-prompt">bold graffiti-style lettering</span> and <span class="text-highlight-prompt">dynamic colorful splashes</span>"</p>
+                                    <p>"<span class="hl-subject">Urban Canvas Street Art Expo</span> poster with <span class="hl-style">bold graffiti-style lettering</span> and <span class="hl-detail">dynamic colorful splashes</span>"</p>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@ extra_js:
                                     <span>Detailed Description</span>
                                 </div>
                                 <div class="input-content">
-                                    <p>"The event poster for the \"<span class="text-highlight-prompt">MIDNIGHT MASQUERADE: A Vampire Ball</span>\" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, \"<span class="text-highlight-prompt">MIDNIGHT MASQUERADE</span>,\" is in a sophisticated, <span class="text-highlight-prompt">dripping, blood-red, gothic script font</span> with ornate serifs, positioned horizontally in an arch across the top. \"<span class="text-highlight-prompt">A Vampire Ball</span>\" is in a smaller, <span class="text-highlight-prompt">antique, silver serif font</span> below the main title. The date \"<span class="text-highlight-prompt">All Hallows' Eve</span>\" and \"<span class="text-highlight-prompt">Château Le Fantôme</span>\" are at the bottom in a <span class="text-highlight-prompt">small, elegant, black calligraphy font</span>. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
+                                    <p>"The event poster for the "<span class="hl-subject">MIDNIGHT MASQUERADE: A Vampire Ball</span>" features an opulent, gothic design. A pair of elegant, lace-gloved hands holds a silver Venetian mask adorned with black feathers and crimson jewels, against a backdrop of a dark, moonlit castle interior with velvet drapes. The style is seductive, mysterious, and lavishly dark. The event title, "<span class="hl-subject">MIDNIGHT MASQUERADE</span>," is in a sophisticated, <span class="hl-style">dripping, blood-red, gothic script font</span> with ornate serifs, positioned horizontally in an arch across the top. "<span class="hl-subject">A Vampire Ball</span>" is in a smaller, <span class="hl-style">antique, silver serif font</span> below the main title. The date "<span class="hl-detail">All Hallows' Eve</span>" and "<span class="hl-detail">Château Le Fantôme</span>" are at the bottom in a <span class="hl-style">small, elegant, black calligraphy font</span>. The typography has a slightly aged, velvety texture. The layout is atmospheric and alluring, promising a night of dark romance and gothic intrigue."</p>
                                 </div>
                             </div>
                         </div>

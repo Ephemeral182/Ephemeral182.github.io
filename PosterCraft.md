@@ -53,20 +53,20 @@ extra_js:
         <!-- 作者信息 -->
         <div class="authors-section">
             <p class="authors">
-                <span class="author">Sixiang Chen<sup>1,*</sup></span>,
-                <span class="author">Jianyu Lai<sup>1,*</sup></span>,
-                <span class="author">Jialin Gao<sup>2,*</sup></span>,
-                <span class="author">Tian Ye<sup>1</sup></span>,
-                <span class="author">Haoyu Chen<sup>1</sup></span>,
+                <span class="author"><a href="https://ephemeral182.github.io/">Sixiang Chen</a><sup>1,*</sup></span>,
+                <span class="author"><a href="https://openreview.net/profile?id=~Jianyu_Lai1">Jianyu Lai</a><sup>1,*</sup></span>,
+                <span class="author"><a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN">Jialin Gao</a><sup>2,*</sup></span>,
+                <span class="author"><a href="https://owen718.github.io/">Tian Ye</a><sup>1</sup></span>,
+                <span class="author"><a href="https://haoyuchen.com/">Haoyu Chen</a><sup>1</sup></span>,
                 <span class="author">Hengyu Shi<sup>2</sup></span>,
-                <span class="author">Shitong Shao<sup>1</sup></span>,
-                <span class="author">Yunlong Lin<sup>3</sup></span>,
-                <span class="author">Song Fei<sup>1</sup></span>,
-                <span class="author">Zhaohu Xing<sup>1</sup></span>,
-                <span class="author">Yeying Jin<sup>4</sup></span>,
+                <span class="author"><a href="https://shaoshitong.github.io/">Shitong Shao</a><sup>1</sup></span>,
+                <span class="author"><a href="https://scholar.google.com.hk/citations?user=5F3tICwAAAAJ&hl=zh-CN">Yunlong Lin</a><sup>3</sup></span>,
+                <span class="author"><a href="https://openreview.net/profile?id=~Song_Fei1">Song Fei</a><sup>1</sup></span>,
+                <span class="author"><a href="https://ge-xing.github.io/">Zhaohu Xing</a><sup>1</sup></span>,
+                <span class="author"><a href="https://jinyeying.github.io/">Yeying Jin</a><sup>4</sup></span>,
                 <span class="author">Junfeng Luo<sup>2</sup></span>,
-                <span class="author">Xiaoming Wei<sup>2</sup></span>,
-                <span class="author">Lei Zhu<sup>1,5,†</sup></span>
+                <span class="author"><a href="https://scholar.google.com/citations?user=JXV5yrZxj5MC&hl=zh-CN">Xiaoming Wei</a><sup>2</sup></span>,
+                <span class="author"><a href="https://sites.google.com/site/indexlzhu/home">Lei Zhu</a><sup>1,5,†</sup></span>
             </p>
             <p class="affiliations">
                 <sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou),

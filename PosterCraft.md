@@ -233,7 +233,7 @@ extra_js:
         <div class="overview-header">
             <h2 class="overview-title">Specific Datasets for PosterCraft</h2>
             <div class="overview-emoji">📚</div>
-            <p class="overview-subtitle">Dive into the diverse and specific datasets that train workflow to achieve high-quality aesthetic poster generation.</p>
+            <p class="overview-subtitle">Dive into the diverse and specific datasets that support training workflow to achieve high-quality aesthetic poster generation.</p>
         </div>
 
         <!-- 4-Dataset Navigation -->
@@ -300,7 +300,7 @@ extra_js:
         <div class="overview-header">
             <h2 class="overview-title">Technical Framework</h2>
             <div class="overview-emoji">⚡</div>
-            <p class="overview-subtitle">A unified end-to-end approach for aesthetic poster generation through four critical optimization stages</p>
+            <p class="overview-subtitle">A unified optimization workflow for aesthetic poster generation through four critical stages</p>
         </div>
         
         <!-- 主要框架图展示 -->

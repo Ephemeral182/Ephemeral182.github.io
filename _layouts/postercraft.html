@@ -164,11 +164,10 @@
             display: flex;
             align-items: center;
             min-height: 100vh;
-            gap: 2rem; /* 从 4rem 改为 2rem */
+            gap: 4rem;
             position: relative;
-            padding: 2rem; /* 从 4rem 0 改为 2rem */
-            flex-direction: row;
-        }
+            padding: 4rem 0;
+          }
         
         .hero-content{
             /* 原来是 margin-left: 6rem; 建议根据视觉效果再微调 */
@@ -191,25 +190,23 @@
         }
         
         .mosaic-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 0.5rem;
-            width: min(550px, 90vw);
-            height: min(550px, 90vw);
+            position: relative;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
             margin: 0 auto;
             animation: gentleFloat 6s ease-in-out infinite;
         }
         
         .mosaic-item {
+            position: absolute;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
             border: 2px solid rgba(255, 255, 255, 0.15);
             transition: all 0.3s ease;
             cursor: pointer;
-            position: relative; /* 从 absolute 改为 relative */
-            /* 移除 max-width 和 max-height */
+            max-width: calc(100% - 40px);
+            max-height: calc(100% - 40px);
         }
         
         .mosaic-item img {
@@ -220,57 +217,81 @@
         }
         
         /* 重新设计布局 - 完全无重叠，紧密但清晰的拼贴 */
-        .mosaic-1 { 
-            grid-area: 1 / 1 / 3 / 3;
+        .mosaic-1 {
+            width: 160px;   /* 大尺寸 */
+            height: 230px;  
+            top: 30px;
+            left: 30px;
             transform: rotate(-8deg);
             z-index: 8;
             animation: itemFloat1 4s ease-in-out infinite;
         }
         
-        .mosaic-2 { 
-            grid-area: 1 / 3 / 2 / 4;
+        .mosaic-2 {
+            width: 120px;   /* 中等尺寸 */
+            height: 170px;  
+            top: 50px;
+            left: 220px;    /* 确保与mosaic-1不重叠 */
             transform: rotate(12deg);
             z-index: 7;
             animation: itemFloat2 4.5s ease-in-out infinite;
         }
         
-        .mosaic-3 { 
-            grid-area: 1 / 4 / 3 / 5;
+        .mosaic-3 {
+            width: 140px;   /* 中大尺寸 */
+            height: 200px;  
+            top: 30px;
+            left: 370px;    /* 确保与mosaic-2不重叠 */
             transform: rotate(-5deg);
             z-index: 9;
             animation: itemFloat3 3.8s ease-in-out infinite;
         }
         
-        .mosaic-4 { 
-            grid-area: 3 / 1 / 4 / 2;
+        .mosaic-4 {
+            width: 110px;   /* 中等尺寸 */
+            height: 160px;  
+            top: 280px;     /* 确保与mosaic-1不重叠 */
+            left: 20px;
             transform: rotate(10deg);
             z-index: 6;
             animation: itemFloat4 4.2s ease-in-out infinite;
         }
         
-        .mosaic-5 { 
-            grid-area: 2 / 2 / 4 / 4;
+        .mosaic-5 {
+            width: 150px;   /* 大尺寸 */
+            height: 215px;  
+            top: 250px;     /* 确保与mosaic-2不重叠 */
+            left: 160px;
             transform: rotate(-12deg);
             z-index: 5;
             animation: itemFloat5 3.9s ease-in-out infinite;
         }
         
-        .mosaic-6 { 
-            grid-area: 3 / 4 / 4 / 5;
+        .mosaic-6 {
+            width: 100px;   /* 小尺寸 */
+            height: 145px;  
+            top: 260px;     /* 确保与mosaic-3不重叠 */
+            left: 340px;
             transform: rotate(7deg);
             z-index: 4;
             animation: itemFloat6 4.3s ease-in-out infinite;
         }
         
-        .mosaic-7 { 
-            grid-area: 4 / 1 / 5 / 3;
+        .mosaic-7 {
+            width: 155px;   /* 大尺寸 */
+            height: 225px;  
+            top: 470px;     /* 底部行，确保与上方不重叠 */
+            left: 40px;
             transform: rotate(-10deg);
             z-index: 3;
             animation: itemFloat7 4.1s ease-in-out infinite;
         }
         
-        .mosaic-8 { 
-            grid-area: 4 / 3 / 5 / 5;
+        .mosaic-8 {
+            width: 125px;   /* 中大尺寸 */
+            height: 180px;  
+            top: 490px;     /* 底部行 */
+            left: 220px;
             transform: rotate(15deg);
             z-index: 2;
             animation: itemFloat8 3.7s ease-in-out infinite;
@@ -328,61 +349,41 @@
         }
         
         @media (max-width: 768px) {
-            .hero {
-                padding: 1rem;
-                min-height: auto;
+            .hero-visual {
+                margin-top: 3rem;
             }
             
-            .hero-content {
-                margin-left: 0;
-            }
-            
-            /* 小屏幕时简化mosaic为2x4网格 */
             .mosaic-grid {
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(4, 1fr);
-                width: min(350px, 90vw);
-                height: min(500px, 120vw);
-                gap: 0.5rem;
+                width: 450px;
+                height: 500px;
             }
             
-            /* 重新排列grid位置 */
-            .mosaic-1 { grid-area: 1 / 1 / 2 / 2; transform: rotate(-4deg); }
-            .mosaic-2 { grid-area: 1 / 2 / 2 / 3; transform: rotate(4deg); }
-            .mosaic-3 { grid-area: 2 / 1 / 3 / 2; transform: rotate(6deg); }
-            .mosaic-4 { grid-area: 2 / 2 / 3 / 3; transform: rotate(-6deg); }
-            .mosaic-5 { grid-area: 3 / 1 / 4 / 2; transform: rotate(-3deg); }
-            .mosaic-6 { grid-area: 3 / 2 / 4 / 3; transform: rotate(3deg); }
-            .mosaic-7 { grid-area: 4 / 1 / 5 / 2; transform: rotate(5deg); }
-            .mosaic-8 { grid-area: 4 / 2 / 5 / 3; transform: rotate(-5deg); }
+            /* 移动端 - 三行布局，确保不重叠 */
+            .mosaic-1 { width: 115px; height: 165px; top: 20px; left: 20px; }
+            .mosaic-2 { width: 85px; height: 122px; top: 30px; left: 155px; }
+            .mosaic-3 { width: 100px; height: 145px; top: 20px; left: 260px; }
+            .mosaic-4 { width: 80px; height: 115px; top: 200px; left: 15px; }
+            .mosaic-5 { width: 105px; height: 150px; top: 180px; left: 115px; }
+            .mosaic-6 { width: 70px; height: 100px; top: 190px; left: 240px; }
+            .mosaic-7 { width: 110px; height: 160px; top: 340px; left: 30px; }
+            .mosaic-8 { width: 90px; height: 130px; top: 360px; left: 160px; }
         }
         
         @media (max-width: 480px) {
-            .hero {
-                gap: 2rem;
-            }
-            
             .mosaic-grid {
-                grid-template-columns: 1fr;
-                grid-template-rows: repeat(8, 1fr);
-                width: min(280px, 85vw);
-                height: min(600px, 150vw);
+                width: 350px;
+                height: 450px;
             }
             
-            /* 单列布局 */
-            .mosaic-1 { grid-area: 1 / 1 / 2 / 2; }
-            .mosaic-2 { grid-area: 2 / 1 / 3 / 2; }
-            .mosaic-3 { grid-area: 3 / 1 / 4 / 2; }
-            .mosaic-4 { grid-area: 4 / 1 / 5 / 2; }
-            .mosaic-5 { grid-area: 5 / 1 / 6 / 2; }
-            .mosaic-6 { grid-area: 6 / 1 / 7 / 2; }
-            .mosaic-7 { grid-area: 7 / 1 / 8 / 2; }
-            .mosaic-8 { grid-area: 8 / 1 / 9 / 2; }
-            
-            /* 减少旋转角度 */
-            .mosaic-item {
-                transform: rotate(0deg) !important;
-            }
+            /* 小屏幕 - 更紧凑但不重叠 */
+            .mosaic-1 { width: 90px; height: 130px; top: 15px; left: 15px; }
+            .mosaic-2 { width: 70px; height: 100px; top: 20px; left: 120px; }
+            .mosaic-3 { width: 80px; height: 115px; top: 15px; left: 210px; }
+            .mosaic-4 { width: 65px; height: 95px; top: 160px; left: 10px; }
+            .mosaic-5 { width: 85px; height: 122px; top: 145px; left: 90px; }
+            .mosaic-6 { width: 60px; height: 86px; top: 150px; left: 190px; }
+            .mosaic-7 { width: 90px; height: 130px; top: 280px; left: 25px; }
+            .mosaic-8 { width: 75px; height: 108px; top: 300px; left: 130px; }
         }
         
         /* 滚动条样式 */
@@ -413,15 +414,6 @@
             pointer-events: none;
             z-index: 1;
             overflow: hidden;
-            /* 添加下面这行 */
-            display: none;
-        }
-        
-        /* 在媒体查询前添加这个样式 */
-        @media (min-width: 1200px) {
-            .floating-demos {
-                display: block;
-            }
         }
         
         .demo-left, .demo-right {
@@ -2094,12 +2086,9 @@
 
         /* 调整mosaic-grid位置 */
         .mosaic-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 0.5rem;
-            width: min(550px, 90vw);
-            height: min(550px, 90vw);
+            position: relative;
+            width: 550px; /* 稍微减小 */
+            height: 550px;
             margin: 0 auto;
             animation: gentleFloat 6s ease-in-out infinite;
         }
@@ -2161,34 +2150,13 @@
         }
 
         .hero-title {
-            font-size: clamp(2rem, 8vw, 5rem); /* 从 clamp(3rem, 6vw, 5rem) 改为更灵活的范围 */
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 900;
             background: linear-gradient(135deg, #ffffff, #a5b4fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-right: 0; /* 小屏幕时清除右边距 */
-        }
-
-        /* 找到 .title-logo-section，添加响应式 */
-        .title-logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            flex-wrap: wrap; /* 允许换行 */
-            animation: sectionFloat 4s ease-in-out infinite;
-        }
-
-        @media (max-width: 768px) {
-            .title-logo-section {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .hero-title {
-                margin-right: 0;
-            }
+            margin-right: 3rem; /* 确保标题和logo之间有明确的间隔 */
         }
 
         /* 内联Logo样式 */

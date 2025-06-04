@@ -112,10 +112,10 @@ extra_js:
             <div class="mosaic-item mosaic-2">
                 <img src="/images/postercraft/demo/demo7.png" alt="AI Generated Avatar 2">
             </div>
-            <div class="mosaic-item mosaic-3">
-                <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 3">
+            <div class="mosaic-item mosaic-9">
+                <img src="/images/postercraft/demo/demo6.png" alt="AI Generated Avatar 9">
             </div>
-            <div class="mosaic-item mosaic-4">
+            <div class="mosaic-item mosaic-9">
                 <img src="/images/postercraft/demo/demo5.png" alt="AI Generated Avatar 4">
             </div>
             <div class="mosaic-item mosaic-5">

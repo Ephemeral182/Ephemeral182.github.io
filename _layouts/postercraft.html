@@ -171,7 +171,8 @@
         
         .hero-content{
             /* 原来是 margin-left: 6rem; 建议根据视觉效果再微调 */
-            transform: translateX(2rem);       
+            margin-left: 8rem; /* 您可以随意调整这个值 */
+            max-width: 60%; /* 限制左侧内容的最大宽度，避免与右侧重叠 */
             position: relative;      /* 使 z-index 生效 */
             z-index: 2;              /* .floating-demos 的 z-index=1，设 2 即可盖住 */
         }
@@ -186,7 +187,8 @@
             align-items: center;
             justify-content: center;
             min-height: 600px;
-            gap: 2rem;
+            right: 2rem;
+            gap: 1rem;
         }
         
         .mosaic-grid {

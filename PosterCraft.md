@@ -1057,10 +1057,10 @@ extra_js:
                     </div>
                 </div>
                 <div class="gallery-poster-item">
-                    <img src="/images/postercraft/gallery/gallery_demo14.png" alt="The Last of Us Series Poster">
+                    <img src="/images/postercraft/gallery/gallery_demo27.png" alt="Fantasy Map Making Workshop Poster">
                     <div class="gallery-poster-overlay">
-                        <div class="gallery-poster-category">TV Series Drama</div>
-                        <div class="gallery-poster-title">The Last of Us</div>
+                        <div class="gallery-poster-category">Fantasy Art</div>
+                        <div class="gallery-poster-title">Map Making Workshop</div>
                     </div>
                 </div>
                 <div class="gallery-poster-item">

@@ -1,7 +1,7 @@
 ---
 layout: postercraft
-permalink: /poster-craft/
-title: PosterCraft - AI Poster Generation
+permalink: /PosterCraft/
+title: PosterCraft - Aesthetic Poster Generation
 extra_css:
   - /assets/css/postercraft.css
 extra_js:

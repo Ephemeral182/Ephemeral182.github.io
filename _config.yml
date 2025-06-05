@@ -43,7 +43,7 @@ links:
     url: #
     dropdown:
       - title: PosterCraft
-        url: /poster-craft/
+        url: /PosterCraft/
       - title: T3 DiffWeather
         url: /T3-DiffWeather/
       - title: UDR-S2Former

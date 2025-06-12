@@ -82,7 +82,7 @@ extra_js:
         
         <!-- 论文链接 - 增强版 -->
         <div class="paper-links-enhanced">
-            <a href="#" class="paper-link-fancy arxiv-link">
+            <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" class="paper-link-fancy arxiv-link" target="_blank">
                 <div class="link-icon-fancy">📚</div>
                 <span>arXiv</span>
                 <div class="link-shine"></div>
@@ -97,7 +97,7 @@ extra_js:
                 <span>HuggingFace</span>
                 <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-fancy video-link">
+            <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="paper-link-fancy video-link" target="_blank">
                 <div class="link-icon-fancy">🎥</div>
                 <span>Demo Video</span>
                 <div class="link-shine"></div>

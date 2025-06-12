@@ -4123,7 +4123,7 @@
             transform: translateX(30px);
             transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-
+        
         .dpo-slide.active {
             display: block;
             opacity: 1;
@@ -4514,7 +4514,7 @@
             overflow: hidden;
             animation: resultSectionFloat 6s ease-in-out infinite;
         }
-
+        
         .result-section::before {
             content: '';
             position: absolute;
@@ -4526,7 +4526,7 @@
                         radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
             pointer-events: none;
         }
-
+        
         @keyframes resultSectionFloat {
             0%, 100% { 
                 transform: translateY(0px);
@@ -4617,7 +4617,7 @@
             align-items: center;
             margin-bottom: 1rem;
         }
-
+        
         .winrate-model-name {
             font-size: 1.1rem;
             font-weight: 700;
@@ -4626,7 +4626,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-
+        
         .winrate-category {
             font-size: 0.9rem;
             color: #94a3b8;
@@ -4651,7 +4651,7 @@
             display: flex;
             align-items: center;
         }
-
+        
         /* PosterCraft (Left) Bar */
         .winrate-bar-postercraft {
             height: 100%;
@@ -4844,7 +4844,7 @@
             position: relative;
             z-index: 2;
         }
-
+        
         .performance-table th {
             background: linear-gradient(135deg, 
                 rgba(99, 102, 241, 0.2) 0%, 
@@ -5396,7 +5396,7 @@
                 radial-gradient(ellipse at bottom right, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
             pointer-events: none;
         }
-
+        
         @keyframes particleFloat {
             0%, 100% { 
                 background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 0% 50%; 
@@ -5532,7 +5532,7 @@
             padding: 6rem 0;
             background: transparent; /* Match other new sections */
             position: relative;
-            overflow: hidden;
+            overflow: hidden; 
         }
 
         .reflection-container {
@@ -5633,7 +5633,7 @@
 
         .reflection-image-column { /* New style for the column containing label and image */
             display: flex;
-            flex-direction: column;
+                flex-direction: column;
             align-items: center; /* Center label and image horizontally */
             gap: 0.8rem; /* Space between label and image */
         }
@@ -5673,7 +5673,7 @@
             font-weight: 800;
             color: #FFF;
             margin-bottom: 1.5rem;
-            text-align: center;
+                text-align: center;
             background: linear-gradient(45deg, #89f7fe, #66a6ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -5727,7 +5727,7 @@
             }
             .reflection-suggestions-card {
                  height: auto;
-                 padding: 1.5rem;
+                padding: 1.5rem;
             }
             .reflection-suggestions-card h3 { font-size: 1.4rem; }
             .reflection-suggestions-card h4 { font-size: 1rem; }
@@ -5906,16 +5906,16 @@
                             hintText.className = 'jump-hint';
                             hintText.textContent = hintMessage;
                             hintText.style.cssText = `
-                                position: absolute;
+            position: absolute;
                                 bottom: -40px; /* Adjust if necessary */
                                 left: 50%;
                                 transform: translateX(-50%);
-                                background: linear-gradient(45deg, #6366f1, #8b5cf6);
-                                color: white;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: white;
                                 padding: 0.5rem 1rem;
                                 border-radius: 20px;
                                 font-size: 0.8rem;
-                                font-weight: 600;
+            font-weight: 600;
                                 white-space: nowrap;
                                 animation: fadeInUp 0.3s ease;
                                 z-index: 20;

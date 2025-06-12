@@ -53,7 +53,7 @@ extra_js:
         <!-- 作者信息 -->
         <div class="authors-section">
             <p class="authors">
-                <span class="author"><a href="https://ephemeral182.github.io/">Sixiang Chen</a><sup>1,*</sup></span>,
+                <span class="author"><a href="https://ephemeral182.github.io/">Sixiang Chen</a><sup>1,2,*</sup></span>,
                 <span class="author"><a href="https://openreview.net/profile?id=~Jianyu_Lai1">Jianyu Lai</a><sup>1,*</sup></span>,
                 <span class="author"><a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN">Jialin Gao</a><sup>2,*</sup></span>,
                 <span class="author"><a href="https://owen718.github.io/">Tian Ye</a><sup>1</sup></span>,

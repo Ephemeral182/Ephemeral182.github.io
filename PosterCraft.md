@@ -272,7 +272,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="2">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">Poster-Preference-100K</h3>
-                        <p>A specialized preference learning dataset comprising 100,000 carefully selected poster pairs. These pairs, generated from user prompts, undergo comprehensive evaluation by rigorous Gemini and the aesthetic evaluator to distinguish between high-quality and low-quality examples. This process is crucial for learning aesthetic preferences and generating human-aligned posters.</p>
+                        <p>A specialized preference learning dataset with 100,000 poster images. These images, generated from user prompts, undergo a rigorous evaluation using advanced aesthetic evaluators and Gemini to form preference pairs by distinguishing between high- and low-quality examples. This process is crucial for learning nuanced aesthetic preferences and generating human-aligned posters.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo3.png" alt="Poster-Preference-100K Dataset Showcase" class="ds-showcase-image">
@@ -283,7 +283,7 @@ extra_js:
                 <div class="ds-dataset-content" data-index="3">
                     <div class="ds-description">
                         <h3 class="dataset-item-title">Poster-Reflect-120K</h3>
-                        <p>The dataset comprises 120,000 poster pairs, each paired with a corresponding text reflection that analyzes poster content and aesthetic style. By aligning rich visual information with their text reflections, the dataset enables iterative vision–language feedback refinement. It allows the model to learn from both modalities to obtain more aesthetically compelling posters.</p>
+                        <p>This dataset is built from 120,000 posters, which are used to form into reflection pairs. Each pair is accompanied by a corresponding text reflection that analyzes poster content and aesthetic style. By aligning rich visual information with their text reflections, the dataset enables iterative vision–language feedback refinement. It allows the model to learn from both modalities to obtain more aesthetically compelling posters.</p>
                     </div>
                     <div class="ds-image-grid">
                         <img src="/images/postercraft/refelction_data/demo4.png" alt="Poster-Reflect-120K Dataset Showcase" class="ds-showcase-image">

@@ -87,12 +87,12 @@ extra_js:
                 <span>arXiv</span>
                 <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-fancy github-link">
+            <a href="https://github.com/Ephemeral182/PosterCraft" class="paper-link-fancy github-link" target="_blank">
                 <div class="link-icon-fancy">💻</div>
                 <span>GitHub</span>
                 <div class="link-shine"></div>
             </a>
-            <a href="#" class="paper-link-fancy huggingface-link">
+            <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL" class="paper-link-fancy huggingface-link" target="_blank">
                 <div class="link-icon-fancy">🤗</div>
                 <span>HuggingFace</span>
                 <div class="link-shine"></div>

@@ -82,7 +82,7 @@ extra_js:
         
         <!-- 论文链接 - 增强版 -->
         <div class="paper-links-enhanced">
-            <a href="https://arxiv.org/abs/YOUR_ARXIV_ID" class="paper-link-fancy arxiv-link" target="_blank">
+            <a href="https://arxiv.org/abs/2506.10741" class="paper-link-fancy arxiv-link" target="_blank">
                 <div class="link-icon-fancy">📚</div>
                 <span>arXiv</span>
                 <div class="link-shine"></div>

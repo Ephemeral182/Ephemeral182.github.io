@@ -148,17 +148,12 @@ extra_js:
                 <!-- 新片场嵌入播放器 (更新版) -->
                 <iframe 
                     src="https://player.xinpianchang.com/?aid=13383655&mid=n8D2wLOlVe97JvPB&autoplay=0&muted=0"
-                    allowfullscreen
-                    scrolling="no"
-                    frameborder="0"
-                    style="
-                      position:absolute;
-                      top:0;
-                      left:0;
-                      width:100%;
-                      height:100%;
-                      border:none;
-                    "
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    allowfullscreen="true"
+                    class="bilibili-video">
                 </iframe>
                 
                 <div class="video-glow-effect"></div>

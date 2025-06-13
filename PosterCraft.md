@@ -135,32 +135,6 @@ extra_js:
 </div>
 
 <!-- Video Showcase Section -->
-<div class="video-showcase-section" id="video-showcase">
-    <div class="video-showcase-container">
-        <div class="video-header">
-            <h2 class="video-title">Demo Video</h2>
-            <div class="video-emoji">🎬</div>
-            <p class="video-subtitle">Watch PosterCraft in action - from simple prompts to stunning aesthetic posters</p>
-        </div>
-        
-        <div class="video-main-container">
-            <div class="video-frame-wrapper">
-                <!-- B站嵌入播放器 -->
-                <iframe 
-                    src="//player.bilibili.com/player.html?bvid=BV1WJ4m1e7Xt&page=1&high_quality=1&danmaku=0" 
-                    scrolling="no" 
-                    border="0" 
-                    frameborder="no" 
-                    framespacing="0" 
-                    allowfullscreen="true"
-                    class="bilibili-video">
-                </iframe>
-                
-                <div class="video-glow-effect"></div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">

@@ -97,7 +97,7 @@ extra_js:
                 <span>HuggingFace</span>
                 <div class="link-shine"></div>
             </a>
-            <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" class="paper-link-fancy video-link" target="_blank">
+            <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="paper-link-fancy video-link" target="_blank">
                 <div class="link-icon-fancy">🎥</div>
                 <span>Demo Video</span>
                 <div class="link-shine"></div>

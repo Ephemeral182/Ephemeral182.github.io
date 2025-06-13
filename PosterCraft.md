@@ -134,7 +134,54 @@ extra_js:
     </div>
 </div>
 
-
+<!-- Video Showcase Section -->
+<div class="video-showcase-section" id="video-showcase">
+    <div class="video-showcase-container">
+        <div class="video-header">
+            <h2 class="video-title">Demo Video</h2>
+            <div class="video-emoji">🎬</div>
+            <p class="video-subtitle">Watch PosterCraft in action - from simple prompts to stunning aesthetic posters</p>
+        </div>
+        
+        <div class="video-main-container">
+            <div class="video-frame-wrapper">
+                <!-- B站嵌入播放器 -->
+                <iframe 
+                    src="//player.bilibili.com/player.html?bvid=BV1WJ4m1e7Xt&page=1&high_quality=1&danmaku=0" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    allowfullscreen="true"
+                    class="bilibili-video">
+                </iframe>
+                
+                <div class="video-glow-effect"></div>
+            </div>
+            
+            <!-- Video Info -->
+            <div class="video-info">
+                <div class="video-stats">
+                    <div class="stat-item">
+                        <span class="stat-icon">⏱️</span>
+                        <span class="stat-value">1:00</span>
+                        <span class="stat-label">Duration</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🎯</span>
+                        <span class="stat-value">1080p</span>
+                        <span class="stat-label">Quality</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🌟</span>
+                        <span class="stat-value">Live</span>
+                        <span class="stat-label">Demo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">

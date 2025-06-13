@@ -5830,6 +5830,396 @@
             color: #d1d5db; /* 鼠标悬停时的颜色，根据主题调整 */
         }
         /* End of what I added previously. */
+
+        /* Video Showcase Section */
+        .video-showcase-section {
+            padding: 8rem 0;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-showcase-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Video Header */
+        .video-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .video-title {
+            font-size: clamp(3.5rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, 
+                #667eea 0%, 
+                #764ba2 20%, 
+                #f093fb 40%, 
+                #f5576c 60%, 
+                #4facfe 80%, 
+                #00f2fe 100%);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: techGradientFlow 8s ease-in-out infinite;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+        }
+
+        .video-emoji {
+            font-size: 3rem;
+            margin: 1rem 0;
+            display: inline-block;
+            animation: techEmojiPulse 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.5));
+        }
+
+        .video-subtitle {
+            font-size: 1.4rem;
+            color: #cbd5e1;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Video Main Container */
+        .video-main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .video-frame-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            aspect-ratio: 16 / 9;
+            border-radius: 32px;
+            overflow: hidden;
+            background: linear-gradient(135deg, 
+                rgba(15, 23, 42, 0.9) 0%, 
+                rgba(30, 41, 59, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 25px 80px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                0 0 100px rgba(99, 102, 241, 0.3);
+            animation: videoFrameFloat 6s ease-in-out infinite;
+        }
+
+        .main-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 32px;
+            transition: all 0.4s ease;
+        }
+
+        .main-video:hover {
+            transform: scale(1.02);
+        }
+
+        /* Video Glow Effect */
+        .video-glow-effect {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            right: -30px;
+            bottom: -30px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #f59e0b, #10b981);
+            border-radius: 40px;
+            opacity: 0.4;
+            filter: blur(40px);
+            z-index: -1;
+            animation: videoGlow 6s ease-in-out infinite;
+        }
+
+        /* Loading Overlay */
+        .video-loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            border-radius: 32px;
+            backdrop-filter: blur(10px);
+            transition: opacity 0.5s ease;
+        }
+
+        .video-loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(99, 102, 241, 0.3);
+            border-top: 4px solid #6366f1;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        .loading-text {
+            color: #cbd5e1;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Custom Play Button */
+        .custom-play-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .custom-play-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .play-button {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(139, 92, 246, 0.9));
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+        }
+
+        .play-icon {
+            font-size: 2rem;
+            color: white;
+            margin-left: 4px; /* 视觉居中调整 */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-ripple {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid rgba(99, 102, 241, 0.3);
+            border-radius: 50%;
+            animation: playRipple 2s ease-in-out infinite;
+        }
+
+        /* Video Info */
+        .video-info {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .video-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.05) 0%, 
+                rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(15px);
+        }
+
+        .stat-item {
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.6));
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: block;
+            margin-bottom: 0.25rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Video Fallback */
+        .video-fallback {
+            color: #cbd5e1;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .video-fallback a {
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .video-fallback a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes videoFrameFloat {
+            0%, 100% { 
+                transform: translateY(0px);
+                box-shadow: 
+                    0 25px 80px rgba(0,0,0,0.4), 
+                    inset 0 1px 0 rgba(255,255,255,0.2), 
+                    0 0 100px rgba(99,102,241,0.3);
+            }
+            50% { 
+                transform: translateY(-15px);
+                box-shadow: 
+                    0 35px 100px rgba(0,0,0,0.5), 
+                    inset 0 1px 0 rgba(255,255,255,0.3), 
+                    0 0 120px rgba(139,92,246,0.4);
+            }
+        }
+
+        @keyframes videoGlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        @keyframes playRipple {
+            0% { 
+                transform: scale(1); 
+                opacity: 0.6; 
+            }
+            100% { 
+                transform: scale(1.5); 
+                opacity: 0; 
+            }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .video-frame-wrapper {
+                max-width: 800px;
+            }
+            
+            .video-stats {
+                gap: 1.5rem;
+                padding: 1.5rem;
+            }
+            
+            .stat-icon {
+                font-size: 1.5rem;
+            }
+            
+            .stat-value {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .video-showcase-section {
+                padding: 4rem 0;
+            }
+            
+            .video-showcase-container {
+                padding: 0 1rem;
+            }
+            
+            .video-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .play-button {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .play-icon {
+                font-size: 1.5rem;
+            }
+            
+            .video-header {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-frame-wrapper {
+                border-radius: 20px;
+            }
+            
+            .main-video {
+                border-radius: 20px;
+            }
+            
+            .video-loading-overlay {
+                border-radius: 20px;
+            }
+            
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .play-icon {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -6302,6 +6692,70 @@
                 console.log("DPO Carousel initialized!");
             }
         });
+
+        // 在 _layouts/postercraft.html 的现有JavaScript中添加（大约在第6200行左右）
+
+        // Video Showcase functionality
+        const videoSection = document.querySelector('.video-showcase-section');
+        if (videoSection) {
+            const video = document.getElementById('postercraft-video');
+            const loadingOverlay = document.getElementById('video-loading');
+            const customPlayBtn = document.getElementById('custom-play-btn');
+            
+            if (video && loadingOverlay && customPlayBtn) {
+                // 视频加载状态管理
+                video.addEventListener('loadstart', function() {
+                    loadingOverlay.classList.remove('hidden');
+                });
+                
+                video.addEventListener('canplay', function() {
+                    loadingOverlay.classList.add('hidden');
+                });
+                
+                video.addEventListener('error', function() {
+                    loadingOverlay.innerHTML = `
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">⚠️</div>
+                            <p style="color: #ef4444; font-size: 1.1rem; margin-bottom: 1rem;">Video failed to load</p>
+                            <a href="/images/postercraft/video/postercraft.mp4" target="_blank" 
+                               style="color: #6366f1; text-decoration: none; font-weight: 600;">
+                                Try downloading instead
+                            </a>
+                        </div>
+                    `;
+                });
+                
+                // 自定义播放按钮控制
+                customPlayBtn.addEventListener('click', function() {
+                    video.play();
+                    customPlayBtn.classList.add('hidden');
+                });
+                
+                // 视频播放/暂停控制
+                video.addEventListener('play', function() {
+                    customPlayBtn.classList.add('hidden');
+                });
+                
+                video.addEventListener('pause', function() {
+                    customPlayBtn.classList.remove('hidden');
+                });
+                
+                video.addEventListener('ended', function() {
+                    customPlayBtn.classList.remove('hidden');
+                });
+                
+                // 点击视频区域播放/暂停
+                video.addEventListener('click', function() {
+                    if (video.paused) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+                
+                console.log("Video Showcase initialized!");
+            }
+        }
     </script>
 </body>
 </html>

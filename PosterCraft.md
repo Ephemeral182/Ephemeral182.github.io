@@ -135,6 +135,32 @@ extra_js:
 </div>
 
 <!-- Video Showcase Section -->
+<div class="video-showcase-section" id="video-showcase">
+    <div class="video-showcase-container">
+        <div class="video-header">
+            <h2 class="video-title">Demo Video</h2>
+            <div class="video-emoji">🎬</div>
+            <p class="video-subtitle">Watch PosterCraft in action - from simple prompts to stunning aesthetic posters</p>
+        </div>
+        
+        <div class="video-main-container">
+            <div class="video-frame-wrapper">
+                <!-- 新片场嵌入播放器 -->
+                <iframe 
+                    src="//www.xinpianchang.com/widget/player?id=a13383655&referfrom=site" 
+                    scrolling="no" 
+                    border="0" 
+                    frameborder="no" 
+                    framespacing="0" 
+                    allowfullscreen="true"
+                    class="bilibili-video">
+                </iframe>
+                
+                <div class="video-glow-effect"></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="what-is-section" id="what-is">
     <div class="what-is-container">

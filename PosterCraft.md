@@ -139,15 +139,13 @@ extra_js:
     <div class="video-showcase-container">
         <div class="video-header">
             <h2 class="video-title">Demo Video</h2>
-            <div class="video-emoji">🎬</div>
-            <p class="video-subtitle">Watch PosterCraft in action - from simple prompts to stunning aesthetic posters</p>
         </div>
         
         <div class="video-main-container">
             <div class="video-frame-wrapper">
                 <!-- 新片场嵌入播放器 (更新版) -->
                 <iframe 
-                    src="https://player.xinpianchang.com/?aid=13383655&mid=n8D2wLOlVe97JvPB&autoplay=0&muted=0"
+                    src="https://player.xinpianchang.com/?aid=13399789&mid=ro1V7E2pjOPwdXAM&autoplay=0&muted=0"
                     scrolling="no" 
                     border="0" 
                     frameborder="no" 

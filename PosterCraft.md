@@ -158,27 +158,6 @@ extra_js:
                 
                 <div class="video-glow-effect"></div>
             </div>
-            
-            <!-- Video Info -->
-            <div class="video-info">
-                <div class="video-stats">
-                    <div class="stat-item">
-                        <span class="stat-icon">⏱️</span>
-                        <span class="stat-value">1:00</span>
-                        <span class="stat-label">Duration</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-icon">🎯</span>
-                        <span class="stat-value">1080p</span>
-                        <span class="stat-label">Quality</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-icon">🌟</span>
-                        <span class="stat-value">Live</span>
-                        <span class="stat-label">Demo</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

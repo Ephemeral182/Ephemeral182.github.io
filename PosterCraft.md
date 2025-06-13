@@ -140,7 +140,6 @@ extra_js:
         <div class="video-header">
             <h2 class="video-title">Demo Video</h2>
             <div class="video-emoji">🎬</div>
-            <p class="video-subtitle">Watch PosterCraft in action - from simple prompts to stunning aesthetic posters</p>
         </div>
         
         <div class="video-main-container">

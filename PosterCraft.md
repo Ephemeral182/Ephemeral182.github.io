@@ -145,7 +145,7 @@ extra_js:
             <div class="video-frame-wrapper">
                 <!-- 新片场嵌入播放器 (更新版) -->
                 <iframe 
-                    src="https://player.xinpianchang.com/?aid=13399789&mid=ro1V7E2pjOPwdXAM&autoplay=0&muted=0"
+                    src="https://player.xinpianchang.com/?aid=13399853&amp;mid=0vMbw1zoN1D4eJ1p&autoplay=0&muted=0"
                     scrolling="no" 
                     border="0" 
                     frameborder="no" 

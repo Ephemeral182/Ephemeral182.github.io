@@ -97,6 +97,16 @@ extra_js:
                 <span>HuggingFace</span>
                 <div class="link-shine"></div>
             </a>
+            <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft" class="paper-link-fancy demo-link" target="_blank">
+                <div class="link-icon-fancy">🚀</div>
+                <span>HF Demo</span>
+                <div class="link-shine"></div>
+            </a>
+            <a href="https://huggingface.co/PosterCraft" class="paper-link-fancy dataset-link" target="_blank">
+                <div class="link-icon-fancy">📊</div>
+                <span>Datasets</span>
+                <div class="link-shine"></div>
+            </a>
             <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="paper-link-fancy video-link" target="_blank">
                 <div class="link-icon-fancy">🎥</div>
                 <span>Demo Video</span>

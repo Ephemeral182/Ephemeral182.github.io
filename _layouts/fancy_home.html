@@ -861,12 +861,12 @@
             justify-content: flex-start;
         }
         
-        /* Typed.js 打字机效果样式 */
+        /* Typed.js 打字机效果样式 - 更新字体大小 */
         .typed-motto {
             font-style: italic;
-            font-size: 1.35rem;
+            font-size: 1.6rem;  /* 从1.35rem增加到1.6rem */
             margin: 20px 0;
-            min-height: 36px;
+            min-height: 40px;    /* 相应增加最小高度 */
             background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1031,8 +1031,8 @@
                         "LOSING GROUND NOW, GAINING MILES TOMORROW",
                         "Flowing water does not vie to be first; its contest is to flow on unceasingly."
                     ],
-                    typeSpeed: 60,
-                    backSpeed: 40,
+                    typeSpeed: 45,        /* 从60调整到45，速度更快 */
+                    backSpeed: 35,        /* 从40调整到35，删除速度也稍快 */
                     loop: true,
                     startDelay: 2000,
                     backDelay: 3000,
@@ -1048,8 +1048,8 @@
                         strings: [
                             "Losing Ground Now, Gaining Miles Tomorrow",
                         ],
-                        typeSpeed: 60,
-                        backSpeed: 40,
+                        typeSpeed: 45,    /* 从60调整到45 */
+                        backSpeed: 35,    /* 从40调整到35 */
                         loop: true,
                         startDelay: 2000,
                         backDelay: 3000,

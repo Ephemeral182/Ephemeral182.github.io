@@ -852,40 +852,43 @@
             }
         }
         
-        /* 逐字动画样式 */
+        /* 逐字动画样式 - 更新版本 */
         .typing-text-container {
-            margin: 0.5rem 0 1rem 0;
-            height: 40px;
+            margin: 0.5rem 0 1.5rem 0;
+            height: 50px;
             display: flex;
             align-items: center;
         }
         
         .typing-text {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
+            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
             color: #94a3b8;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.1em;
             opacity: 0;
             animation: fadeInText 0.8s ease-out 1.5s forwards;
             margin: 0;
-            min-height: 1.2em;
+            min-height: 1.5em;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .typing-text .char {
+        .typing-text .word {
             opacity: 0;
             display: inline-block;
-            animation: typeChar 0.1s ease-out forwards;
+            margin-right: 0.4em;
+            animation: typeWord 0.6s ease-out forwards;
+            transform: translateY(20px);
         }
         
-        @keyframes typeChar {
+        @keyframes typeWord {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(20px) scale(0.9);
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0) scale(1);
             }
         }
         
@@ -898,19 +901,27 @@
             }
         }
         
-        /* 光标效果 */
+        /* 光标效果 - 更新版本 */
         .typing-cursor {
             display: inline-block;
-            width: 2px;
-            height: 1.2em;
+            width: 3px;
+            height: 1.5em;
             background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            margin-left: 2px;
-            animation: blink 1s infinite;
+            margin-left: 4px;
+            border-radius: 2px;
+            animation: blink 1.2s infinite;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
         }
         
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+            0%, 50% { 
+                opacity: 1; 
+                transform: scaleY(1);
+            }
+            51%, 100% { 
+                opacity: 0; 
+                transform: scaleY(0.8);
+            }
         }
     </style>
 </head>
@@ -1042,9 +1053,9 @@
             }
         }
 
-        // 逐字动画类
+        // 逐单词动画类 - 更新版本
         class TypingAnimation {
-            constructor(element, text, delay = 100) {
+            constructor(element, text, delay = 400) {
                 this.element = element;
                 this.text = text;
                 this.delay = delay;
@@ -1064,16 +1075,24 @@
             }
 
             typeText() {
-                const chars = this.text.split('');
+                // 按单词分割，保留逗号
+                const words = this.text.split(' ');
                 let index = 0;
 
                 const typeInterval = setInterval(() => {
-                    if (index < chars.length) {
-                        const char = document.createElement('span');
-                        char.className = 'char';
-                        char.textContent = chars[index];
-                        char.style.animationDelay = '0s';
-                        this.element.appendChild(char);
+                    if (index < words.length) {
+                        const word = document.createElement('span');
+                        word.className = 'word';
+                        word.textContent = words[index];
+                        word.style.animationDelay = '0s';
+                        this.element.appendChild(word);
+                        
+                        // 如果不是最后一个单词，添加空格
+                        if (index < words.length - 1) {
+                            const space = document.createTextNode(' ');
+                            this.element.appendChild(space);
+                        }
+                        
                         index++;
                     } else {
                         clearInterval(typeInterval);
@@ -1083,7 +1102,7 @@
             }
 
             addCursor() {
-                // 打字完成后，添加闪烁光标效果，持续3秒后消失
+                // 打字完成后，添加闪烁光标效果，持续4秒后消失
                 const cursor = document.createElement('span');
                 cursor.className = 'typing-cursor';
                 this.element.appendChild(cursor);
@@ -1092,7 +1111,7 @@
                     if (cursor.parentNode) {
                         cursor.parentNode.removeChild(cursor);
                     }
-                }, 3000);
+                }, 4000);
             }
         }
 
@@ -1101,11 +1120,11 @@
             // 启动粒子系统
             new ParticleSystem();
             
-            // 初始化逐字动画
+            // 初始化逐单词动画
             const typingElement = document.querySelector('.typing-text');
             if (typingElement) {
                 const text = typingElement.getAttribute('data-text');
-                new TypingAnimation(typingElement, text, 80);
+                new TypingAnimation(typingElement, text, 350); // 350ms间隔显示每个单词
             }
             
             // 为元素添加悬停效果

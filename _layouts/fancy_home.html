@@ -612,6 +612,253 @@
                 border-radius: 0;
             }
         }
+        
+        /* 社交媒体链接样式 */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: #a1a1aa;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .social-link:hover::before {
+            left: 100%;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+        }
+        
+        .social-link i {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .social-link:hover i {
+            transform: scale(1.2) rotate(5deg);
+        }
+        
+        /* 打字机效果 */
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid #6366f1;
+            white-space: nowrap;
+            animation: typewriter 3s steps(8) 1s both, blink 1s step-end infinite;
+        }
+        
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        
+        /* 统计数字区域 */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #a1a1aa;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        /* 技能标签云 */
+        .skills-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .skills-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            color: #d1d5db;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .skill-tag[data-weight="5"] {
+            font-size: 1.2rem;
+            padding: 0.75rem 1.5rem;
+            animation-delay: 0s;
+        }
+        
+        .skill-tag[data-weight="4"] {
+            font-size: 1.1rem;
+            animation-delay: -1s;
+        }
+        
+        .skill-tag[data-weight="3"] {
+            font-size: 1rem;
+            animation-delay: -2s;
+        }
+        
+        .skill-tag[data-weight="2"] {
+            font-size: 0.9rem;
+            animation-delay: -3s;
+        }
+        
+        .skill-tag[data-weight="1"] {
+            font-size: 0.8rem;
+            animation-delay: -4s;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* 3D卡片翻转效果 */
+        .card-3d {
+            perspective: 1000px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .card-3d:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            padding: 2rem;
+        }
+        
+        .card-back {
+            background: rgba(99, 102, 241, 0.1);
+            transform: rotateY(180deg);
+        }
+        
+        /* 头像发光效果 */
+        .hero-image {
+            position: relative;
+        }
+        
+        .image-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4);
+            border-radius: 25px;
+            z-index: -1;
+            opacity: 0;
+            filter: blur(20px);
+            transition: opacity 0.3s ease;
+        }
+        
+        .profile-image:hover + .image-glow {
+            opacity: 0.7;
+        }
+        
+        /* 新的淡入动画 */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        /* FontAwesome图标支持 */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
     </style>
 </head>
 <body>
@@ -752,6 +999,54 @@
                     });
                 }
             });
+        });
+        
+        // 数字滚动动画
+        function animateNumbers() {
+            const numbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.dataset.target);
+                        let current = 0;
+                        const increment = target / 100;
+                        
+                        const timer = setInterval(() => {
+                            current += increment;
+                            entry.target.textContent = Math.floor(current);
+                            
+                            if (current >= target) {
+                                entry.target.textContent = target;
+                                clearInterval(timer);
+                            }
+                        }, 20);
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            numbers.forEach(number => observer.observe(number));
+        }
+        
+        // 技能标签随机浮动
+        function animateSkills() {
+            const skills = document.querySelectorAll('.skill-tag');
+            
+            skills.forEach((skill, index) => {
+                const randomDelay = Math.random() * 2;
+                const randomDuration = 3 + Math.random() * 2;
+                
+                skill.style.animationDelay = randomDelay + 's';
+                skill.style.animationDuration = randomDuration + 's';
+            });
+        }
+        
+        // 初始化新功能
+        document.addEventListener('DOMContentLoaded', function() {
+            animateNumbers();
+            animateSkills();
         });
     </script>
 </body>

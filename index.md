@@ -3,32 +3,20 @@ layout: fancy_home
 ---
 
 <div class="hero">
-    <div class="hero-content slide-in-left">
+    <div class="hero-content">
         <h1 class="hero-title">About Me</h1>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
             My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.
         </div>
-        <!-- 社交媒体链接 -->
-        <div class="social-links">
-            <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
-                <i class="fas fa-graduation-cap"></i>
-            </a>
-            <a href="https://twitter.com/YOUR_TWITTER" class="social-link twitter" title="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
     </div>
-    <div class="hero-image slide-in-right">
+    <div class="hero-image">
         <img src="https://ephemeral182.github.io/csx5.jpg" alt="Sixiang Chen" class="profile-image">
     </div>
 </div>
 
-<div class="info-cards">
-    <div class="info-card fade-in" style="animation-delay: 0.1s;">
+<div class="info-cards fade-in">
+    <div class="info-card">
         <div class="card-icon">🎓</div>
         <h3 class="card-title">Education</h3>
         <div class="card-content">
@@ -38,7 +26,7 @@ layout: fancy_home
         </div>
     </div>
     
-    <div class="info-card fade-in" style="animation-delay: 0.3s;">
+    <div class="info-card">
         <div class="card-icon">🔬</div>
         <h3 class="card-title">Research Interests</h3>
         <div class="card-content">
@@ -48,7 +36,7 @@ layout: fancy_home
         </div>
     </div>
     
-    <div class="info-card fade-in" style="animation-delay: 0.5s;">
+    <div class="info-card">
         <div class="card-icon">🏆</div>
         <h3 class="card-title">Recent Achievements</h3>
         <div class="card-content">
@@ -96,8 +84,8 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="info-cards">
-    <div class="info-card fade-in" style="animation-delay: 0.2s;">
+<div class="info-cards fade-in">
+    <div class="info-card">
         <div class="card-icon">📝</div>
         <h3 class="card-title">Academic Service & Awards</h3>
         <div class="card-content">

@@ -253,6 +253,7 @@
         .hero-content {
             flex: 1;
             position: relative;
+            padding-top: 60px;
         }
         
         .hero-image {
@@ -692,6 +693,15 @@
             .social-links {
                 justify-content: center;
             }
+            
+            .typing-text {
+                font-size: 0.9rem;
+                top: 100px;
+            }
+            
+            .hero-content {
+                padding-top: 80px;
+            }
         }
         
         /* 特殊强调文本 */
@@ -849,6 +859,72 @@
             .dropdown-menu a {
                 padding: 0.5rem 0;
                 border-radius: 0;
+            }
+        }
+        
+        /* 新增：逐字动画文字样式 */
+        .typing-text {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #96fbc4;
+            letter-spacing: 0.5px;
+            z-index: 10;
+            opacity: 0;
+            animation: fadeInTyping 1s ease-out 2s both;
+        }
+        
+        .typing-text::before {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #96fbc4, transparent);
+            animation: underlineGrow 2s ease-out 4s both;
+        }
+        
+        .typing-char {
+            opacity: 0;
+            display: inline-block;
+            animation: typewriter 0.1s ease-out both;
+        }
+        
+        @keyframes fadeInTyping {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes typewriter {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @keyframes underlineGrow {
+            from {
+                width: 0;
+            }
+            to {
+                width: 200px;
             }
         }
     </style>
@@ -1023,6 +1099,9 @@
                 handleScrollAnimation();
                 handleNavbarScroll();
             });
+            
+            // 初始化逐字动画
+            initTypingAnimation();
         });
 
         // 平滑滚动
@@ -1038,6 +1117,14 @@
                 }
             });
         });
+
+        // 新增：逐字动画函数
+        function initTypingAnimation() {
+            const chars = document.querySelectorAll('.typing-char');
+            chars.forEach((char, index) => {
+                char.style.animationDelay = `${3 + index * 0.08}s`;
+            });
+        }
     </script>
 </body>
 </html>

@@ -20,6 +20,9 @@ layout: fancy_home
             <a href="https://twitter.com/YOUR_TWITTER" class="social-link twitter" title="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
+            <a href="#" class="social-link wechat" title="WeChat" onclick="alert('WeChat ID: csx18259166302')">
+                <i class="fab fa-weixin"></i>
+            </a>
         </div>
     </div>
     <div class="hero-image slide-in-right">

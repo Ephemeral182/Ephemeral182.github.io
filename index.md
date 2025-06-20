@@ -5,6 +5,9 @@ layout: fancy_home
 <div class="hero">
     <div class="hero-content slide-in-left">
         <h1 class="hero-title">About Me</h1>
+        <div class="typing-text-container">
+            <p class="typing-text" data-text="Losing ground now, gaining miles tomorrow"></p>
+        </div>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
             My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.

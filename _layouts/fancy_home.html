@@ -253,7 +253,6 @@
         .hero-content {
             flex: 1;
             position: relative;
-            padding-top: 60px;
         }
         
         .hero-image {
@@ -693,15 +692,6 @@
             .social-links {
                 justify-content: center;
             }
-            
-            .typing-text {
-                font-size: 0.9rem;
-                top: 100px;
-            }
-            
-            .hero-content {
-                padding-top: 80px;
-            }
         }
         
         /* 特殊强调文本 */
@@ -862,45 +852,36 @@
             }
         }
         
-        /* 新增：逐字动画文字样式 */
+        /* 逐字动画样式 */
+        .typing-text-container {
+            margin: 0.5rem 0 1rem 0;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        
         .typing-text {
-            position: absolute;
-            top: 120px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 1rem;
-            font-weight: 300;
-            color: #96fbc4;
-            letter-spacing: 0.5px;
-            z-index: 10;
+            font-weight: 400;
+            color: #94a3b8;
+            letter-spacing: 0.02em;
             opacity: 0;
-            animation: fadeInTyping 1s ease-out 2s both;
+            animation: fadeInText 0.8s ease-out 1.5s forwards;
+            margin: 0;
+            min-height: 1.2em;
         }
         
-        .typing-text::before {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #96fbc4, transparent);
-            animation: underlineGrow 2s ease-out 4s both;
-        }
-        
-        .typing-char {
+        .typing-text .char {
             opacity: 0;
             display: inline-block;
-            animation: typewriter 0.1s ease-out both;
+            animation: typeChar 0.1s ease-out forwards;
         }
         
-        @keyframes fadeInTyping {
+        @keyframes typeChar {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(10px);
             }
             to {
                 opacity: 1;
@@ -908,24 +889,28 @@
             }
         }
         
-        @keyframes typewriter {
+        @keyframes fadeInText {
             from {
                 opacity: 0;
-                transform: translateY(10px) scale(0.8);
             }
             to {
                 opacity: 1;
-                transform: translateY(0) scale(1);
             }
         }
         
-        @keyframes underlineGrow {
-            from {
-                width: 0;
-            }
-            to {
-                width: 200px;
-            }
+        /* 光标效果 */
+        .typing-cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            margin-left: 2px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
@@ -1057,10 +1042,71 @@
             }
         }
 
+        // 逐字动画类
+        class TypingAnimation {
+            constructor(element, text, delay = 100) {
+                this.element = element;
+                this.text = text;
+                this.delay = delay;
+                this.init();
+            }
+
+            init() {
+                this.element.innerHTML = '';
+                this.startTyping();
+            }
+
+            startTyping() {
+                // 延迟开始动画
+                setTimeout(() => {
+                    this.typeText();
+                }, 2000); // 2秒后开始打字效果
+            }
+
+            typeText() {
+                const chars = this.text.split('');
+                let index = 0;
+
+                const typeInterval = setInterval(() => {
+                    if (index < chars.length) {
+                        const char = document.createElement('span');
+                        char.className = 'char';
+                        char.textContent = chars[index];
+                        char.style.animationDelay = '0s';
+                        this.element.appendChild(char);
+                        index++;
+                    } else {
+                        clearInterval(typeInterval);
+                        this.addCursor();
+                    }
+                }, this.delay);
+            }
+
+            addCursor() {
+                // 打字完成后，添加闪烁光标效果，持续3秒后消失
+                const cursor = document.createElement('span');
+                cursor.className = 'typing-cursor';
+                this.element.appendChild(cursor);
+
+                setTimeout(() => {
+                    if (cursor.parentNode) {
+                        cursor.parentNode.removeChild(cursor);
+                    }
+                }, 3000);
+            }
+        }
+
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
             // 启动粒子系统
             new ParticleSystem();
+            
+            // 初始化逐字动画
+            const typingElement = document.querySelector('.typing-text');
+            if (typingElement) {
+                const text = typingElement.getAttribute('data-text');
+                new TypingAnimation(typingElement, text, 80);
+            }
             
             // 为元素添加悬停效果
             document.querySelectorAll('.info-card, .social-link, .profile-image').forEach(element => {
@@ -1099,9 +1145,6 @@
                 handleScrollAnimation();
                 handleNavbarScroll();
             });
-            
-            // 初始化逐字动画
-            initTypingAnimation();
         });
 
         // 平滑滚动
@@ -1117,14 +1160,6 @@
                 }
             });
         });
-
-        // 新增：逐字动画函数
-        function initTypingAnimation() {
-            const chars = document.querySelectorAll('.typing-char');
-            chars.forEach((char, index) => {
-                char.style.animationDelay = `${3 + index * 0.08}s`;
-            });
-        }
     </script>
 </body>
 </html>

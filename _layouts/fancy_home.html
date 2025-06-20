@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -279,11 +279,78 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #ffffff, #a1a1aa);
+            background: linear-gradient(45deg, #ffffff, #a1a1aa, #6366f1, #8b5cf6);
+            background-size: 300% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: fadeInUp 0.8s ease-out;
+            animation: gradient-flow 3s ease-in-out infinite, fadeInUp 0.8s ease-out;
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            letter-spacing: -0.02em;
+            position: relative;
+        }
+        
+        @keyframes gradient-flow {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        /* 打字机效果 */
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #6366f1;
+            animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        .typewriter.erase {
+            animation: erasing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes erasing {
+            from { width: 100%; }
+            to { width: 0; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #6366f1; }
+        }
+        
+        /* Fancy字体样式 */
+        .fancy-text {
+            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 700;
+            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+            position: relative;
+        }
+        
+        .fancy-text::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shine 2s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .hero-subtitle {
@@ -541,13 +608,55 @@
             background: linear-gradient(45deg, #5855eb, #7c3aed);
         }
         
-        /* 鼠标流光粒子样式 */
+        /* 增强的鼠标粒子特效 */
+        .particle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
         .mouse-particle {
             pointer-events: none;
             position: fixed;
             border-radius: 50%;
             z-index: 10000;
             transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+        }
+        
+        .particle-trail {
+            position: fixed;
+            pointer-events: none;
+            width: 4px;
+            height: 4px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 9998;
+            animation: particle-fade 1s ease-out forwards;
+        }
+        
+        @keyframes particle-fade {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.2);
+            }
+        }
+        
+        /* 鼠标悬停时的元素特效 */
+        .hover-effect {
+            transition: all 0.3s ease;
+        }
+        
+        .hover-effect:hover {
+            filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.4));
         }
         
         /* 增强的动画 */
@@ -846,102 +955,199 @@
     
     <!-- JavaScript -->
     <script>
-        // 增强的鼠标流光特效
-        document.addEventListener('DOMContentLoaded', function() {
-            function createParticle(x, y, size) {
+        // 打字机效果
+        class TypeWriter {
+            constructor(element, texts, speed = 100) {
+                this.element = element;
+                this.texts = texts;
+                this.speed = speed;
+                this.textIndex = 0;
+                this.charIndex = 0;
+                this.isDeleting = false;
+                this.start();
+            }
+
+            start() {
+                this.type();
+            }
+
+            type() {
+                const currentText = this.texts[this.textIndex];
+                
+                if (this.isDeleting) {
+                    this.element.textContent = currentText.substring(0, this.charIndex - 1);
+                    this.charIndex--;
+                } else {
+                    this.element.textContent = currentText.substring(0, this.charIndex + 1);
+                    this.charIndex++;
+                }
+
+                let typeSpeed = this.speed;
+                if (this.isDeleting) {
+                    typeSpeed /= 2;
+                }
+
+                if (!this.isDeleting && this.charIndex === currentText.length) {
+                    typeSpeed = 2000; // 停留时间
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.charIndex === 0) {
+                    this.isDeleting = false;
+                    this.textIndex = (this.textIndex + 1) % this.texts.length;
+                    typeSpeed = 500;
+                }
+
+                setTimeout(() => this.type(), typeSpeed);
+            }
+        }
+
+        // 增强的粒子效果
+        class ParticleSystem {
+            constructor() {
+                this.particles = [];
+                this.maxParticles = 100;
+                this.init();
+            }
+
+            init() {
+                document.addEventListener('mousemove', (e) => {
+                    this.createParticle(e.clientX, e.clientY);
+                    this.createTrail(e.clientX, e.clientY);
+                });
+                this.animate();
+            }
+
+            createParticle(x, y) {
+                if (this.particles.length >= this.maxParticles) {
+                    this.particles.shift();
+                }
+
                 const particle = document.createElement('div');
                 particle.className = 'mouse-particle';
                 
-                const actualSize = size * (0.5 + Math.random() * 0.5);
-                particle.style.width = actualSize + 'px';
-                particle.style.height = actualSize + 'px';
+                const size = Math.random() * 8 + 4;
+                const hue = Math.random() * 60 + 200; // 蓝紫色范围
+                const brightness = Math.random() * 50 + 50;
                 
-                const hue = Math.floor(Math.random() * 360);
-                particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
-                particle.style.boxShadow = `0 0 15px hsla(${hue}, 80%, 50%, 0.4)`;
-                
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
+                particle.style.background = `hsla(${hue}, 80%, ${brightness}%, 0.8)`;
+                particle.style.boxShadow = `0 0 20px hsla(${hue}, 80%, ${brightness}%, 0.6)`;
                 
                 document.body.appendChild(particle);
                 
+                const velocity = {
+                    x: (Math.random() - 0.5) * 4,
+                    y: (Math.random() - 0.5) * 4
+                };
+                
+                this.particles.push({
+                    element: particle,
+                    x: x,
+                    y: y,
+                    velocity: velocity,
+                    life: 1.0,
+                    decay: Math.random() * 0.02 + 0.01
+                });
+            }
+
+            createTrail(x, y) {
+                const trail = document.createElement('div');
+                trail.className = 'particle-trail';
+                trail.style.left = x + 'px';
+                trail.style.top = y + 'px';
+                
+                document.body.appendChild(trail);
+                
                 setTimeout(() => {
-                    particle.style.opacity = '0';
-                    particle.style.transform = 'translate(-50%, -50%) scale(0.3)';
-                    particle.style.transition = 'all 0.8s ease-out';
+                    if (trail.parentNode) {
+                        trail.parentNode.removeChild(trail);
+                    }
+                }, 1000);
+            }
+
+            animate() {
+                this.particles.forEach((particle, index) => {
+                    particle.x += particle.velocity.x;
+                    particle.y += particle.velocity.y;
+                    particle.life -= particle.decay;
                     
-                    setTimeout(() => {
-                        if (particle.parentNode) {
-                            particle.parentNode.removeChild(particle);
+                    particle.element.style.left = particle.x + 'px';
+                    particle.element.style.top = particle.y + 'px';
+                    particle.element.style.opacity = particle.life;
+                    
+                    if (particle.life <= 0) {
+                        if (particle.element.parentNode) {
+                            particle.element.parentNode.removeChild(particle.element);
                         }
-                    }, 800);
-                }, 10);
-            }
-            
-            let lastX = 0;
-            let lastY = 0;
-            let throttle = false;
-            
-            document.addEventListener('mousemove', function(e) {
-                if (throttle) return;
-                throttle = true;
+                        this.particles.splice(index, 1);
+                    }
+                });
                 
-                setTimeout(() => {
-                    throttle = false;
-                }, 15);
-                
-                const x = e.clientX;
-                const y = e.clientY;
-                
-                const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
-                const size = Math.min(20, Math.max(6, speed * 0.5));
-                
-                createParticle(x, y, size);
-                
-                lastX = x;
-                lastY = y;
-            });
-        });
-        
-        // 增强的滚动动画
-        function handleScrollAnimation() {
-            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .info-card, .news-section');
-            elements.forEach((element, index) => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 100;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    setTimeout(() => {
-                        element.classList.add('visible');
-                    }, index * 100); // 错开动画时间
-                }
-            });
-        }
-        
-        // 导航栏滚动效果
-        function handleNavbarScroll() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+                requestAnimationFrame(() => this.animate());
             }
         }
-        
-        // 增强的鼠标跟随效果
-        function handleMouseParallax(e) {
-            const shapes = document.querySelectorAll('.shape');
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.015;
-                const x = (e.clientX - window.innerWidth / 2) * speed;
-                const y = (e.clientY - window.innerHeight / 2) * speed;
-                
-                shape.style.transform += ` translate3d(${x}px, ${y}px, 0)`;
-            });
-        }
-        
+
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
+            // 启动粒子系统
+            new ParticleSystem();
+            
+            // 启动打字机效果
+            const titleElement = document.querySelector('.hero-title');
+            if (titleElement) {
+                titleElement.classList.add('fancy-text');
+                titleElement.setAttribute('data-text', 'losing ground now, gaining miles tomorrow');
+                
+                const typewriterTexts = [
+                    'losing ground now, gaining miles tomorrow'
+                ];
+                new TypeWriter(titleElement, typewriterTexts, 150);
+            }
+            
+            // 为元素添加悬停效果
+            document.querySelectorAll('.info-card, .social-link, .profile-image').forEach(element => {
+                element.classList.add('hover-effect');
+            });
+            
+            // 滚动动画
+            function handleScrollAnimation() {
+                const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .info-card, .news-section');
+                elements.forEach((element, index) => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 100;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        setTimeout(() => {
+                            element.classList.add('visible');
+                        }, index * 150);
+                    }
+                });
+            }
+            
+            // 导航栏滚动效果
+            function handleNavbarScroll() {
+                const navbar = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+            
+            // 鼠标视差效果
+            function handleMouseParallax(e) {
+                const shapes = document.querySelectorAll('.shape');
+                shapes.forEach((shape, index) => {
+                    const speed = (index + 1) * 0.02;
+                    const x = (e.clientX - window.innerWidth / 2) * speed;
+                    const y = (e.clientY - window.innerHeight / 2) * speed;
+                    
+                    shape.style.transform += ` translate3d(${x}px, ${y}px, 0)`;
+                });
+            }
+            
             handleScrollAnimation();
             handleNavbarScroll();
             
@@ -952,7 +1158,7 @@
             
             document.addEventListener('mousemove', handleMouseParallax);
         });
-        
+
         // 平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -965,14 +1171,6 @@
                     });
                 }
             });
-        });
-        
-        // 添加键盘快捷键
-        document.addEventListener('keydown', function(e) {
-            if (e.ctrlKey && e.key === 'k') {
-                e.preventDefault();
-                // 可以添加搜索功能
-            }
         });
     </script>
 </body>

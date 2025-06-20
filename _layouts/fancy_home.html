@@ -279,78 +279,9 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #ffffff, #a1a1aa, #6366f1, #8b5cf6);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradient-flow 3s ease-in-out infinite, fadeInUp 0.8s ease-out;
+            color: #ffffff;
             font-family: 'Inter', 'Helvetica Neue', sans-serif;
             letter-spacing: -0.02em;
-            position: relative;
-        }
-        
-        @keyframes gradient-flow {
-            0%, 100% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-        }
-        
-        /* 打字机效果 */
-        .typewriter {
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 3px solid #6366f1;
-            animation: typing 3s steps(20, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        .typewriter.erase {
-            animation: erasing 2s steps(20, end), blink-caret 0.75s step-end infinite;
-        }
-        
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes erasing {
-            from { width: 100%; }
-            to { width: 0; }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #6366f1; }
-        }
-        
-        /* Fancy字体样式 */
-        .fancy-text {
-            font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-weight: 700;
-            text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
-            position: relative;
-        }
-        
-        .fancy-text::before {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shine 2s infinite;
-        }
-        
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
         }
         
         .hero-subtitle {
@@ -961,51 +892,6 @@
     
     <!-- JavaScript -->
     <script>
-        // 打字机效果
-        class TypeWriter {
-            constructor(element, texts, speed = 100) {
-                this.element = element;
-                this.texts = texts;
-                this.speed = speed;
-                this.textIndex = 0;
-                this.charIndex = 0;
-                this.isDeleting = false;
-                this.start();
-            }
-
-            start() {
-                this.type();
-            }
-
-            type() {
-                const currentText = this.texts[this.textIndex];
-                
-                if (this.isDeleting) {
-                    this.element.textContent = currentText.substring(0, this.charIndex - 1);
-                    this.charIndex--;
-                } else {
-                    this.element.textContent = currentText.substring(0, this.charIndex + 1);
-                    this.charIndex++;
-                }
-
-                let typeSpeed = this.speed;
-                if (this.isDeleting) {
-                    typeSpeed /= 2;
-                }
-
-                if (!this.isDeleting && this.charIndex === currentText.length) {
-                    typeSpeed = 2000; // 停留时间
-                    this.isDeleting = true;
-                } else if (this.isDeleting && this.charIndex === 0) {
-                    this.isDeleting = false;
-                    this.textIndex = (this.textIndex + 1) % this.texts.length;
-                    typeSpeed = 500;
-                }
-
-                setTimeout(() => this.type(), typeSpeed);
-            }
-        }
-
         // 增强的粒子效果
         class ParticleSystem {
             constructor() {
@@ -1100,18 +986,6 @@
             // 启动粒子系统
             new ParticleSystem();
             
-            // 启动打字机效果
-            const titleElement = document.querySelector('.hero-title');
-            if (titleElement) {
-                titleElement.classList.add('fancy-text');
-                titleElement.setAttribute('data-text', 'losing ground now, gaining miles tomorrow');
-                
-                const typewriterTexts = [
-                    'losing ground now, gaining miles tomorrow'
-                ];
-                new TypeWriter(titleElement, typewriterTexts, 150);
-            }
-            
             // 为元素添加悬停效果
             document.querySelectorAll('.info-card, .social-link, .profile-image').forEach(element => {
                 element.classList.add('hover-effect');
@@ -1142,18 +1016,6 @@
                 }
             }
             
-            // 鼠标视差效果
-            function handleMouseParallax(e) {
-                const shapes = document.querySelectorAll('.shape');
-                shapes.forEach((shape, index) => {
-                    const speed = (index + 1) * 0.02;
-                    const x = (e.clientX - window.innerWidth / 2) * speed;
-                    const y = (e.clientY - window.innerHeight / 2) * speed;
-                    
-                    shape.style.transform += ` translate3d(${x}px, ${y}px, 0)`;
-                });
-            }
-            
             handleScrollAnimation();
             handleNavbarScroll();
             
@@ -1161,8 +1023,6 @@
                 handleScrollAnimation();
                 handleNavbarScroll();
             });
-            
-            document.addEventListener('mousemove', handleMouseParallax);
         });
 
         // 平滑滚动

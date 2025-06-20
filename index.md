@@ -15,15 +15,19 @@ layout: fancy_home
         <div class="social-links">
             <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
                 <i class="fab fa-github"></i>
+                <span class="social-text">GitHub</span>
             </a>
             <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
                 <i class="fas fa-graduation-cap"></i>
+                <span class="social-text">Google Scholar</span>
             </a>
             <a href="https://twitter.com/YOUR_TWITTER" class="social-link twitter" title="Twitter">
                 <i class="fab fa-twitter"></i>
+                <span class="social-text">Twitter</span>
             </a>
             <a href="#" class="social-link wechat" title="WeChat" onclick="alert('WeChat ID: csx18259166302')">
                 <i class="fab fa-weixin"></i>
+                <span class="social-text">WeChat</span>
             </a>
         </div>
     </div>

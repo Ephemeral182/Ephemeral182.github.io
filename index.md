@@ -3,59 +3,42 @@ layout: fancy_home
 ---
 
 <div class="hero">
-    <div class="hero-content">
-        <h1 class="hero-title typewriter">About Me</h1>
+    <div class="hero-content slide-in-left">
+        <h1 class="hero-title">About Me</h1>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
             My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.
         </div>
-        
-        <!-- 新增：社交媒体链接 -->
-        <div class="social-links fade-in-up">
-            <a href="https://github.com/Ephemeral182" class="social-link" target="_blank">
+        <!-- 社交媒体链接 -->
+        <div class="social-links">
+            <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
                 <i class="fab fa-github"></i>
-                <span>GitHub</span>
             </a>
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link" target="_blank">
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
                 <i class="fas fa-graduation-cap"></i>
-                <span>Google Scholar</span>
             </a>
-            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" class="social-link" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a href="mailto:your.email@hkust-gz.edu.cn" class="social-link">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
-            <a href="https://twitter.com/YOUR_TWITTER" class="social-link" target="_blank">
+            <a href="https://twitter.com/YOUR_TWITTER" class="social-link twitter" title="Twitter">
                 <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
             </a>
         </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-image slide-in-right">
         <img src="https://ephemeral182.github.io/csx5.jpg" alt="Sixiang Chen" class="profile-image">
     </div>
 </div>
 
-<div class="info-cards fade-in">
-    <!-- 为现有卡片添加3D翻转效果 -->
-    <div class="info-card card-3d">
-        <div class="card-inner">
-            <div class="card-front">
-                <div class="card-icon">🎓</div>
-                <h3 class="card-title">Education</h3>
-                <div class="card-content">
-                    <p><strong>Sept. 2024 - Present:</strong> Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
-                    <p><strong>Aug. 2023 - Aug. 2024:</strong> Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
-                    <p><strong>Sept. 2019 - Jun. 2023:</strong> Jimei University (B.Eng.)</p>
-                </div>
-            </div>
+<div class="info-cards">
+    <div class="info-card fade-in" style="animation-delay: 0.1s;">
+        <div class="card-icon">🎓</div>
+        <h3 class="card-title">Education</h3>
+        <div class="card-content">
+            <p><strong>Sept. 2024 - Present:</strong> Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
+            <p><strong>Aug. 2023 - Aug. 2024:</strong> Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
+            <p><strong>Sept. 2019 - Jun. 2023:</strong> Jimei University (B.Eng.)</p>
         </div>
     </div>
     
-    <div class="info-card">
+    <div class="info-card fade-in" style="animation-delay: 0.3s;">
         <div class="card-icon">🔬</div>
         <h3 class="card-title">Research Interests</h3>
         <div class="card-content">
@@ -65,7 +48,7 @@ layout: fancy_home
         </div>
     </div>
     
-    <div class="info-card">
+    <div class="info-card fade-in" style="animation-delay: 0.5s;">
         <div class="card-icon">🏆</div>
         <h3 class="card-title">Recent Achievements</h3>
         <div class="card-content">
@@ -113,8 +96,8 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="info-cards fade-in">
-    <div class="info-card">
+<div class="info-cards">
+    <div class="info-card fade-in" style="animation-delay: 0.2s;">
         <div class="card-icon">📝</div>
         <h3 class="card-title">Academic Service & Awards</h3>
         <div class="card-content">

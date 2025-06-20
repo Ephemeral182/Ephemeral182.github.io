@@ -7,6 +7,8 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         * {
@@ -82,7 +84,7 @@
             }
         }
         
-        /* 漂浮几何图形 */
+        /* 增强的漂浮几何图形 */
         .geometric-bg {
             position: fixed;
             top: 0;
@@ -103,13 +105,13 @@
         
         .shape-1 {
             width: 150px; height: 150px;
-            background-color: #8ec5fc;
+            background: linear-gradient(45deg, #8ec5fc, #e0c3fc);
             top: 10%; left: 15%;
             animation-duration: 35s;
         }
         .shape-2 {
             width: 80px; height: 80px;
-            background-color: #e0c3fc;
+            background: linear-gradient(45deg, #e0c3fc, #9bb5ff);
             top: 60%; left: 70%;
             animation-duration: 28s;
             animation-delay: -5s;
@@ -127,11 +129,19 @@
         }
         .shape-4 {
             width: 120px; height: 120px;
-            background-color: #f0e68c;
+            background: linear-gradient(45deg, #f0e68c, #96fbc4);
             top: 75%; left: 10%;
             border-radius: 50%;
             animation-duration: 32s;
             animation-delay: -10s;
+        }
+        .shape-5 {
+            width: 100px; height: 100px;
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            top: 45%; left: 85%;
+            border-radius: 30%;
+            animation-duration: 38s;
+            animation-delay: -20s;
         }
         
         @keyframes float-rotate {
@@ -139,7 +149,7 @@
                 transform: translateY(0) rotate(0deg) scale(1);
             }
             100% {
-                transform: translateY(-40px) rotate(180deg) scale(1.1);
+                transform: translateY(-60px) rotate(360deg) scale(1.15);
             }
         }
         
@@ -153,6 +163,12 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 1000;
             padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
         
         .nav-container {
@@ -172,6 +188,11 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
         }
         
         .nav-menu {
@@ -186,25 +207,29 @@
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
         }
         
         .nav-menu a:hover {
             color: #ffffff;
+            background: rgba(99, 102, 241, 0.1);
         }
         
         .nav-menu a::after {
             content: '';
             position: absolute;
             bottom: -5px;
-            left: 0;
+            left: 50%;
             width: 0;
             height: 2px;
             background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            transition: width 0.3s ease;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
         
         .nav-menu a:hover::after {
-            width: 100%;
+            width: 80%;
         }
         
         /* 主要内容 */
@@ -227,6 +252,7 @@
         
         .hero-content {
             flex: 1;
+            position: relative;
         }
         
         .hero-image {
@@ -239,12 +265,14 @@
             height: auto;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
+            filter: brightness(1);
         }
         
         .profile-image:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            transform: translateY(-15px) rotateY(5deg);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
+            filter: brightness(1.1);
         }
         
         .hero-title {
@@ -273,6 +301,69 @@
             animation: fadeInUp 0.8s ease-out 0.4s both;
         }
         
+        /* 社交媒体链接 */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .social-link:hover::before {
+            left: 100%;
+        }
+        
+        .social-link:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-link.github:hover {
+            background: linear-gradient(135deg, rgba(36, 41, 46, 0.8), rgba(88, 96, 105, 0.3));
+            box-shadow: 0 10px 25px rgba(36, 41, 46, 0.3);
+        }
+        
+        .social-link.scholar:hover {
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.3), rgba(52, 168, 83, 0.3));
+            box-shadow: 0 10px 25px rgba(66, 133, 244, 0.3);
+        }
+        
+        .social-link.twitter:hover {
+            background: linear-gradient(135deg, rgba(29, 161, 242, 0.3), rgba(64, 191, 255, 0.3));
+            box-shadow: 0 10px 25px rgba(29, 161, 242, 0.3);
+        }
+        
         /* 信息卡片 */
         .info-cards {
             display: grid;
@@ -286,9 +377,16 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             position: relative;
             overflow: hidden;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        
+        .info-card.visible {
+            transform: translateY(0);
+            opacity: 1;
         }
         
         .info-card::before {
@@ -301,11 +399,26 @@
             background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
         }
         
+        .info-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .info-card:hover::after {
+            left: 100%;
+        }
+        
         .info-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.02);
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
         
         .card-icon {
@@ -318,6 +431,11 @@
             justify-content: center;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover .card-icon {
+            transform: rotateY(180deg) scale(1.1);
         }
         
         .card-title {
@@ -339,6 +457,31 @@
             border-radius: 20px;
             padding: 2rem;
             margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+        
+        .news-section.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .news-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.05), transparent);
+            transition: left 1s ease;
+        }
+        
+        .news-section:hover::before {
+            left: 100%;
         }
         
         .news-title {
@@ -365,12 +508,14 @@
             padding: 12px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             line-height: 1.4;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            border-radius: 8px;
         }
         
         .scrollable-news li:hover {
             background-color: rgba(255, 255, 255, 0.05);
-            transform: translateX(5px);
+            transform: translateX(10px) scale(1.02);
+            border-color: rgba(99, 102, 241, 0.3);
         }
         
         .scrollable-news li:last-child {
@@ -405,7 +550,7 @@
             transform: translate(-50%, -50%);
         }
         
-        /* 动画 */
+        /* 增强的动画 */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -417,15 +562,59 @@
             }
         }
         
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: all 0.8s ease;
         }
         
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
         
         /* 响应式设计 */
@@ -453,6 +642,10 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
+            
+            .social-links {
+                justify-content: center;
+            }
         }
         
         /* 特殊强调文本 */
@@ -479,13 +672,13 @@
         /* 更柔和的突出自己名字的样式 - 稍微调暗版本 */
         .pub-authors strong u,
         strong u {
-            color: #cbd5e1 !important;  /* 从 #e2e8f0 改为 #cbd5e1，稍微暗一点 */
+            color: #cbd5e1 !important;
             font-weight: 700 !important;
             text-decoration: underline !important;
             text-decoration-color: #64748b !important;
             text-decoration-thickness: 1.5px !important;
             text-underline-offset: 2px !important;
-            background: linear-gradient(135deg, rgba(100, 116, 139, 0.12), rgba(148, 163, 184, 0.12)) !important;  /* 从 0.15 改为 0.12，稍微淡一点 */
+            background: linear-gradient(135deg, rgba(100, 116, 139, 0.12), rgba(148, 163, 184, 0.12)) !important;
             padding: 2px 4px !important;
             border-radius: 4px !important;
             text-shadow: none !important;
@@ -497,7 +690,7 @@
         /* 鼠标悬停时的柔和效果 */
         .pub-authors strong u:hover,
         strong u:hover {
-            color: #e2e8f0 !important;  /* 悬停时稍微亮一点 */
+            color: #e2e8f0 !important;
             background: linear-gradient(135deg, rgba(100, 116, 139, 0.2), rgba(148, 163, 184, 0.2)) !important;
             text-decoration-color: #475569 !important;
             transform: none !important;
@@ -508,9 +701,9 @@
         .publication-item .pub-authors strong u,
         .hero-content strong u,
         .card-content strong u {
-            color: #cbd5e1 !important;  /* 从 #e2e8f0 改为 #cbd5e1 */
+            color: #cbd5e1 !important;
             font-weight: 700 !important;
-            background: linear-gradient(135deg, rgba(100, 116, 139, 0.12), rgba(148, 163, 184, 0.12)) !important;  /* 从 0.15 改为 0.12 */
+            background: linear-gradient(135deg, rgba(100, 116, 139, 0.12), rgba(148, 163, 184, 0.12)) !important;
             padding: 2px 4px !important;
             border-radius: 4px !important;
             text-shadow: none !important;
@@ -530,9 +723,9 @@
         
         .dropdown-menu {
             position: absolute;
-            top: calc(100% + 10px); /* 在按钮下方10px处 */
-            left: 50%; /* 从父元素中心开始 */
-            transform: translateX(-50%) translateY(-10px); /* 水平居中，初始向上偏移 */
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -550,7 +743,7 @@
         .dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
-            transform: translateX(-50%) translateY(0); /* 显示时保持水平居中 */
+            transform: translateX(-50%) translateY(0);
         }
         
         .dropdown-menu li {
@@ -603,7 +796,7 @@
                 box-shadow: none;
                 padding: 0;
                 margin: 0;
-                display: block; /* 移动端恢复垂直布局 */
+                display: block;
                 min-width: auto;
             }
             
@@ -612,253 +805,6 @@
                 border-radius: 0;
             }
         }
-        
-        /* 社交媒体链接样式 */
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            color: #a1a1aa;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .social-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .social-link:hover::before {
-            left: 100%;
-        }
-        
-        .social-link:hover {
-            transform: translateY(-3px);
-            background: rgba(99, 102, 241, 0.1);
-            border-color: rgba(99, 102, 241, 0.3);
-            color: #ffffff;
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-        }
-        
-        .social-link i {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .social-link:hover i {
-            transform: scale(1.2) rotate(5deg);
-        }
-        
-        /* 打字机效果 */
-        .typewriter {
-            overflow: hidden;
-            border-right: 3px solid #6366f1;
-            white-space: nowrap;
-            animation: typewriter 3s steps(8) 1s both, blink 1s step-end infinite;
-        }
-        
-        @keyframes typewriter {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-        
-        /* 统计数字区域 */
-        .stats-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-            padding: 3rem 2rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .stat-item {
-            text-align: center;
-            position: relative;
-        }
-        
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            color: #a1a1aa;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-        
-        /* 技能标签云 */
-        .skills-section {
-            margin: 4rem 0;
-            text-align: center;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .skills-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-        
-        .skill-tag {
-            padding: 0.5rem 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            color: #d1d5db;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            position: relative;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .skill-tag[data-weight="5"] {
-            font-size: 1.2rem;
-            padding: 0.75rem 1.5rem;
-            animation-delay: 0s;
-        }
-        
-        .skill-tag[data-weight="4"] {
-            font-size: 1.1rem;
-            animation-delay: -1s;
-        }
-        
-        .skill-tag[data-weight="3"] {
-            font-size: 1rem;
-            animation-delay: -2s;
-        }
-        
-        .skill-tag[data-weight="2"] {
-            font-size: 0.9rem;
-            animation-delay: -3s;
-        }
-        
-        .skill-tag[data-weight="1"] {
-            font-size: 0.8rem;
-            animation-delay: -4s;
-        }
-        
-        .skill-tag:hover {
-            transform: translateY(-5px) scale(1.05);
-            background: rgba(99, 102, 241, 0.1);
-            border-color: rgba(99, 102, 241, 0.3);
-            color: #ffffff;
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        /* 3D卡片翻转效果 */
-        .card-3d {
-            perspective: 1000px;
-        }
-        
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-        }
-        
-        .card-3d:hover .card-inner {
-            transform: rotateY(180deg);
-        }
-        
-        .card-front, .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            border-radius: 20px;
-            padding: 2rem;
-        }
-        
-        .card-back {
-            background: rgba(99, 102, 241, 0.1);
-            transform: rotateY(180deg);
-        }
-        
-        /* 头像发光效果 */
-        .hero-image {
-            position: relative;
-        }
-        
-        .image-glow {
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6, #06b6d4);
-            border-radius: 25px;
-            z-index: -1;
-            opacity: 0;
-            filter: blur(20px);
-            transition: opacity 0.3s ease;
-        }
-        
-        .profile-image:hover + .image-glow {
-            opacity: 0.7;
-        }
-        
-        /* 新的淡入动画 */
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-        
-        /* FontAwesome图标支持 */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
     </style>
 </head>
 <body>
@@ -870,10 +816,11 @@
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
         <div class="shape shape-4"></div>
+        <div class="shape shape-5"></div>
     </div>
     
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="/" class="logo">Sixiang Chen</a>
             <ul class="nav-menu">
@@ -899,7 +846,7 @@
     
     <!-- JavaScript -->
     <script>
-        // 鼠标流光特效
+        // 增强的鼠标流光特效
         document.addEventListener('DOMContentLoaded', function() {
             function createParticle(x, y, size) {
                 const particle = document.createElement('div');
@@ -911,7 +858,7 @@
                 
                 const hue = Math.floor(Math.random() * 360);
                 particle.style.background = `hsla(${hue}, 80%, 60%, 0.25)`;
-                particle.style.boxShadow = `0 0 10px hsla(${hue}, 80%, 50%, 0.3)`;
+                particle.style.boxShadow = `0 0 15px hsla(${hue}, 80%, 50%, 0.4)`;
                 
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
@@ -920,14 +867,14 @@
                 
                 setTimeout(() => {
                     particle.style.opacity = '0';
-                    particle.style.transform = 'translate(-50%, -50%) scale(0.5)';
-                    particle.style.transition = 'all 0.6s ease-out';
+                    particle.style.transform = 'translate(-50%, -50%) scale(0.3)';
+                    particle.style.transition = 'all 0.8s ease-out';
                     
                     setTimeout(() => {
                         if (particle.parentNode) {
                             particle.parentNode.removeChild(particle);
                         }
-                    }, 600);
+                    }, 800);
                 }, 10);
             }
             
@@ -941,13 +888,13 @@
                 
                 setTimeout(() => {
                     throttle = false;
-                }, 10);
+                }, 15);
                 
                 const x = e.clientX;
                 const y = e.clientY;
                 
                 const speed = Math.sqrt(Math.pow(x - lastX, 2) + Math.pow(y - lastY, 2));
-                const size = Math.min(16, Math.max(5, speed * 0.4));
+                const size = Math.min(20, Math.max(6, speed * 0.5));
                 
                 createParticle(x, y, size);
                 
@@ -956,35 +903,54 @@
             });
         });
         
-        // 滚动动画
+        // 增强的滚动动画
         function handleScrollAnimation() {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach(element => {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .info-card, .news-section');
+            elements.forEach((element, index) => {
                 const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
+                const elementVisible = 100;
                 
                 if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('visible');
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 100); // 错开动画时间
                 }
+            });
+        }
+        
+        // 导航栏滚动效果
+        function handleNavbarScroll() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }
+        
+        // 增强的鼠标跟随效果
+        function handleMouseParallax(e) {
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.015;
+                const x = (e.clientX - window.innerWidth / 2) * speed;
+                const y = (e.clientY - window.innerHeight / 2) * speed;
+                
+                shape.style.transform += ` translate3d(${x}px, ${y}px, 0)`;
             });
         }
         
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
             handleScrollAnimation();
-            window.addEventListener('scroll', handleScrollAnimation);
-        });
-        
-        // 鼠标跟随效果
-        document.addEventListener('mousemove', (e) => {
-            const shapes = document.querySelectorAll('.shape');
-            shapes.forEach((shape, index) => {
-                const speed = (index + 1) * 0.02;
-                const x = e.clientX * speed;
-                const y = e.clientY * speed;
-                
-                shape.style.transform += ` translate(${x}px, ${y}px)`;
+            handleNavbarScroll();
+            
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+                handleNavbarScroll();
             });
+            
+            document.addEventListener('mousemove', handleMouseParallax);
         });
         
         // 平滑滚动
@@ -1001,52 +967,12 @@
             });
         });
         
-        // 数字滚动动画
-        function animateNumbers() {
-            const numbers = document.querySelectorAll('.stat-number');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const target = parseInt(entry.target.dataset.target);
-                        let current = 0;
-                        const increment = target / 100;
-                        
-                        const timer = setInterval(() => {
-                            current += increment;
-                            entry.target.textContent = Math.floor(current);
-                            
-                            if (current >= target) {
-                                entry.target.textContent = target;
-                                clearInterval(timer);
-                            }
-                        }, 20);
-                        
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            
-            numbers.forEach(number => observer.observe(number));
-        }
-        
-        // 技能标签随机浮动
-        function animateSkills() {
-            const skills = document.querySelectorAll('.skill-tag');
-            
-            skills.forEach((skill, index) => {
-                const randomDelay = Math.random() * 2;
-                const randomDuration = 3 + Math.random() * 2;
-                
-                skill.style.animationDelay = randomDelay + 's';
-                skill.style.animationDuration = randomDuration + 's';
-            });
-        }
-        
-        // 初始化新功能
-        document.addEventListener('DOMContentLoaded', function() {
-            animateNumbers();
-            animateSkills();
+        // 添加键盘快捷键
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'k') {
+                e.preventDefault();
+                // 可以添加搜索功能
+            }
         });
     </script>
 </body>

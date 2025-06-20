@@ -852,76 +852,42 @@
             }
         }
         
-        /* 逐字动画样式 - 更新版本 */
+        /* 移除原有的逐字动画样式，替换为Typed.js样式 */
         .typing-text-container {
             margin: 0.5rem 0 1.5rem 0;
             height: 50px;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
         }
         
-        .typing-text {
-            font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        /* Typed.js 打字机效果样式 */
+        .typed-motto {
+            font-style: italic;
             font-size: 1.35rem;
-            font-weight: 600;
-            color: #94a3b8;
-            letter-spacing: 0.1em;
-            opacity: 0;
-            animation: fadeInText 0.8s ease-out 1.5s forwards;
-            margin: 0;
-            min-height: 1.5em;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+            min-height: 36px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Poppins', 'Georgia', serif;
+            font-weight: 500;
+            text-align: left;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            letter-spacing: 0.02em;
+            line-height: 1.4;
         }
         
-        .typing-text .word {
-            opacity: 0;
-            display: inline-block;
-            margin-right: 0.4em;
-            animation: typeWord 0.6s ease-out forwards;
-            transform: translateY(20px);
-        }
-        
-        @keyframes typeWord {
-            from {
-                opacity: 0;
-                transform: translateY(20px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-        
-        @keyframes fadeInText {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        
-        /* 光标效果 - 更新版本 */
-        .typing-cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.5em;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            margin-left: 4px;
-            border-radius: 2px;
-            animation: blink 1.2s infinite;
-            box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+        .typed-cursor {
+            color: #6366f1 !important;
+            font-weight: bold;
+            animation: blink 1s infinite;
         }
         
         @keyframes blink {
-            0%, 50% { 
-                opacity: 1; 
-                transform: scaleY(1);
-            }
-            51%, 100% { 
-                opacity: 0; 
-                transform: scaleY(0.8);
-            }
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
     </style>
 </head>
@@ -1053,78 +1019,45 @@
             }
         }
 
-        // 逐单词动画类 - 更新版本
-        class TypingAnimation {
-            constructor(element, text, delay = 400) {
-                this.element = element;
-                this.text = text;
-                this.delay = delay;
-                this.init();
-            }
-
-            init() {
-                this.element.innerHTML = '';
-                this.startTyping();
-            }
-
-            startTyping() {
-                // 延迟开始动画
-                setTimeout(() => {
-                    this.typeText();
-                }, 2000); // 2秒后开始打字效果
-            }
-
-            typeText() {
-                // 按单词分割，保留逗号
-                const words = this.text.split(' ');
-                let index = 0;
-
-                const typeInterval = setInterval(() => {
-                    if (index < words.length) {
-                        const word = document.createElement('span');
-                        word.className = 'word';
-                        word.textContent = words[index];
-                        word.style.animationDelay = '0s';
-                        this.element.appendChild(word);
-                        
-                        // 如果不是最后一个单词，添加空格
-                        if (index < words.length - 1) {
-                            const space = document.createTextNode(' ');
-                            this.element.appendChild(space);
-                        }
-                        
-                        index++;
-                    } else {
-                        clearInterval(typeInterval);
-                        this.addCursor();
-                    }
-                }, this.delay);
-            }
-
-            addCursor() {
-                // 打字完成后，添加闪烁光标效果，持续4秒后消失
-                const cursor = document.createElement('span');
-                cursor.className = 'typing-cursor';
-                this.element.appendChild(cursor);
-
-                setTimeout(() => {
-                    if (cursor.parentNode) {
-                        cursor.parentNode.removeChild(cursor);
-                    }
-                }, 4000);
-            }
-        }
-
-        // 初始化
+        // Typed.js 打字机效果初始化
         document.addEventListener('DOMContentLoaded', function() {
             // 启动粒子系统
             new ParticleSystem();
             
-            // 初始化逐单词动画
-            const typingElement = document.querySelector('.typing-text');
-            if (typingElement) {
-                const text = typingElement.getAttribute('data-text');
-                new TypingAnimation(typingElement, text, 350); // 350ms间隔显示每个单词
+            // 初始化Typed.js打字机效果
+            if (typeof Typed !== 'undefined') {
+                new Typed('#motto', {
+                    strings: [
+                        "LOSING GROUND NOW, GAINING MILES TOMORROW",
+                        "Flowing water does not vie to be first; its contest is to flow on unceasingly."
+                    ],
+                    typeSpeed: 60,
+                    backSpeed: 40,
+                    loop: true,
+                    startDelay: 2000,
+                    backDelay: 3000,
+                    showCursor: true,
+                    cursorChar: '|'
+                });
+            } else {
+                // 动态加载Typed.js库
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/typed.js@2.0.12';
+                script.onload = function() {
+                    new Typed('#motto', {
+                        strings: [
+                            "Losing Ground Now, Gaining Miles Tomorrow",
+                        ],
+                        typeSpeed: 60,
+                        backSpeed: 40,
+                        loop: true,
+                        startDelay: 2000,
+                        backDelay: 3000,
+                        showCursor: true,
+                        cursorChar: '|'
+                    });
+                };
+                document.head.appendChild(script);
             }
             
             // 为元素添加悬停效果

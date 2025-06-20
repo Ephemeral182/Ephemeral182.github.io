@@ -6,7 +6,7 @@ layout: fancy_home
     <div class="hero-content slide-in-left">
         <h1 class="hero-title">About Me</h1>
         <div class="typing-text-container">
-            <p class="typing-text" data-text="Losing Ground Now, Gaining Miles Tomorrow"></p>
+            <p id="motto" class="typed-motto"></p>
         </div>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">

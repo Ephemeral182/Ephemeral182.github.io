@@ -776,7 +776,7 @@ title: Publications
 }
 
 .pub-image {
-    flex: 0 0 300px;
+    flex: 0 0 400px;
 }
 
 .pub-image img {

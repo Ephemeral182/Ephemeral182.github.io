@@ -89,7 +89,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/gpt4o.png" alt="GPT-4o Study">
+                    <a href="https://ephemeral182.github.io/images/gpt4o.png" target="_blank" title="点击查看大图">
+                        <img src="https://ephemeral182.github.io/images/gpt4o.png" alt="GPT-4o Study">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">An Empirical Study of GPT-4o Image Generation Capabilities</h4>
@@ -774,7 +776,7 @@ title: Publications
 }
 
 .pub-image {
-    flex: 0 0 200px;
+    flex: 0 0 300px;
 }
 
 .pub-image img {
@@ -782,6 +784,16 @@ title: Publications
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pub-image a {
+    display: block;
+}
+
+.pub-image a:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .pub-details {

@@ -89,6 +89,36 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                    <a href="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
+                    </a>
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
+                    <div class="pub-tags">
+          <span class="paper-tag tag-method">AIGC</span>
+                        <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
+          </div>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen*</u></strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>arXiv</em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2506.10741" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link custom-link-code">GitHub</a>
+                        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project Page</a>
+                        <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft" class="custom-link custom-link-hf">HF Demo</a>
+                        <a href="https://huggingface.co/papers/2506.10741" class="custom-link custom-link-hf">HF Paper</a>
+                        <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="custom-link custom-link-video">Video</a>
+                        <a href="https://mp.weixin.qq.com/s/gq6DwohKP0z333OSDRe7Xw" class="custom-link custom-link-interpretation">解读</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
                     <a href="https://ephemeral182.github.io/images/gpt4o.png" target="_blank" title="Click to view full image">
                         <img src="https://ephemeral182.github.io/images/gpt4o.png" alt="GPT-4o Study">
                     </a>
@@ -948,6 +978,24 @@ title: Publications
     color: #9C27B0;
     background: rgba(156,39,176,0.1);
     border: 1px solid rgba(156,39,176,0.3);
+}
+
+.custom-link-interpretation {
+    color: #07C160; /* WeChat Green */
+    background: rgba(7, 193, 96, 0.1);
+    border: 1px solid rgba(7, 193, 96, 0.3);
+}
+
+.custom-link-hf {
+    color: #FFD21E; /* Hugging Face Yellow */
+    background: rgba(255, 210, 30, 0.1);
+    border: 1px solid rgba(255, 210, 30, 0.3);
+}
+
+.custom-link-video {
+    color: #FF0000; /* YouTube Red */
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.3);
 }
 
 .custom-link:hover {

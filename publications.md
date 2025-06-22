@@ -262,7 +262,7 @@ title: Publications
                     <div class="pub-authors">
           Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, <strong><u>Sixiang Chen</u></strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu<sup>✉️</sup>.
                     </div>
-                    <div class="pub-venue"><em>Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong></em>, 2024</div>
+                    <div class="pub-venue"><em>Neural Information Processing Systems <strong>(NeurIPS)</strong></em>, 2024</div>
                     <div class="pub-links">
                         <a href="https://arxiv.org/abs/2407.18035" class="custom-link custom-link-paper">Paper</a>
                         <a href="Ephemeral182.github.io" class="custom-link custom-link-code">Code</a>
@@ -275,7 +275,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/eccv_24/eccv_adverse.png" alt="T3-DiffWeather">
+                    <a href="https://ephemeral182.github.io/images/eccv_24/eccv_adverse.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/eccv_24/eccv_adverse.png" alt="T3-DiffWeather">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</h4>
@@ -299,7 +301,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/eccv_snow.png" alt="Semi-Supervised Video Desnowing">
+                    <a href="https://ephemeral182.github.io/images/eccv_snow.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/eccv_snow.png" alt="Semi-Supervised Video Desnowing">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Semi-Supervised Video Desnowing Network via Temporal Decoupling Experts and Distribution-Driven Contrastive Regularization</h4>
@@ -322,7 +326,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/miccai24.png" alt="Cross-conditioned Diffusion Model">
+                    <a href="https://ephemeral182.github.io/images/miccai24.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/miccai24.png" alt="Cross-conditioned Diffusion Model">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Cross-conditioned Diffusion Model for medical image-to-image translation</h4>
@@ -345,7 +351,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/CVPR24.png" alt="Learning Diffusion Texture Priors">
+                    <a href="https://ephemeral182.github.io/images/CVPR24.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/CVPR24.png" alt="Learning Diffusion Texture Priors">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Learning Diffusion Texture Priors for Image Restoration</h4>
@@ -373,7 +381,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/udrs2former.png" alt="UDR-S2Former">
+                    <a href="https://ephemeral182.github.io/images/udrs2former.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/udrs2former.png" alt="UDR-S2Former">
+                    </a>
   </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks</h4>
@@ -397,7 +407,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/AWRCP_framework.jpg" alt="Adverse Weather Removal with Codebook Priors">
+                    <a href="https://ephemeral182.github.io/images/AWRCP_framework.jpg" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/AWRCP_framework.jpg" alt="Adverse Weather Removal with Codebook Priors">
+                    </a>
         </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Adverse Weather Removal with Codebook Priors</h4>
@@ -419,7 +431,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/Uncertainty_MM.png" alt="Uncertainty-Driven Dynamic Degradation">
+                    <a href="https://ephemeral182.github.io/images/Uncertainty_MM.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/Uncertainty_MM.png" alt="Uncertainty-Driven Dynamic Degradation">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Uncertainty-Driven Dynamic Degradation Perceiving and Background Modeling for Efficient Single Image Desnowing</h4>
@@ -442,7 +456,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/cpl.png" alt="CPLFormer">
+                    <a href="https://ephemeral182.github.io/images/cpl.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/cpl.png" alt="CPLFormer">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">CPLFormer: Cross-scale Prototype Learning Transformer for Image Snow Removal</h4>
@@ -465,7 +481,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/video.png" alt="Sequential Affinity Learning">
+                    <a href="https://ephemeral182.github.io/images/video.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/video.png" alt="Sequential Affinity Learning">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Sequential Affinity Learning for Video Restoration</h4>
@@ -488,13 +506,15 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/Nightformer.png" alt="NightHazeFormer">
+                    <a href="https://ephemeral182.github.io/images/Nightformer.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/Nightformer.png" alt="NightHazeFormer">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">NightHazeFormer: Single Nighttime Haze Removal Using Prior Query Transformer</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">Prior Query Transformer for Image Restoration</span>
-          <span class="paper-tag tag-application">Physical Prior, New Benchmark</span>
+          <span class="paper-tag tag-application">New Benchmark</span>
         </div>
                     <div class="pub-authors">
         Yun Liu, Zhongsheng Yan, <strong><u>Sixiang Chen</u><sup>✉️</sup></strong>, Tian Ye<sup>✉️</sup>, Wenqi Ren, Erkang Chen.
@@ -511,7 +531,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/BMVC.png" alt="Five A+ Network">
+                    <a href="https://ephemeral182.github.io/images/BMVC.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/BMVC.png" alt="Five A+ Network">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Five A+ Network: You Only Need 9K Parameters for Underwater Image Enhancement</h4>
@@ -534,7 +556,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/dehrformer_00.png" alt="DEHRFormer">
+                    <a href="https://ephemeral182.github.io/images/dehrformer_00.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/dehrformer_00.png" alt="DEHRFormer">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">DEHRFormer: Real-time Transformer for Depth Estimation and Haze Removal from Varicolored Haze Scenes</h4>
@@ -557,7 +581,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/MSP-Former_00.png" alt="MSP-Former">
+                    <a href="https://ephemeral182.github.io/images/MSP-Former_00.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/MSP-Former_00.png" alt="MSP-Former">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">MSP-Former: Multi-Scale Projection Transformer for Single Image Desnowing</h4>
@@ -585,7 +611,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/snowformer.png" alt="SnowFormer">
+                    <a href="https://ephemeral182.github.io/images/snowformer.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/snowformer.png" alt="SnowFormer">
+                    </a>
   </div>
                 <div class="pub-details">
                     <h4 class="pub-title">SnowFormer: Context Interaction Transformer with Scale-awareness for Single Image Desnowing</h4>
@@ -608,7 +636,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/ACCV.png" alt="ACCV 2022">
+                    <a href="https://ephemeral182.github.io/images/ACCV.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/ACCV.png" alt="ACCV 2022">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Towards Real-time High-Definition Image Snow Removal: Efficient Pyramid Network with Asymmetrical Encoder-decoder Architecture</h4>
@@ -631,7 +661,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/dualformer.png" alt="Dual-former">
+                    <a href="https://ephemeral182.github.io/images/dualformer.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/dualformer.png" alt="Dual-former">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Dual-former: Hybrid Self-attention Transformer for Efficient Image Restoration</h4>
@@ -654,7 +686,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/ECCV.png" alt="ECCV 2022 Oral">
+                    <a href="https://ephemeral182.github.io/images/ECCV.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/ECCV.png" alt="ECCV 2022 Oral">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Perceiving and Modeling Density for Image Dehazing</h4>
@@ -677,7 +711,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <img src="https://ephemeral182.github.io/images/CVPRW.png" alt="CVPRW 2022">
+                    <a href="https://ephemeral182.github.io/images/CVPRW.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/CVPRW.png" alt="CVPRW 2022">
+                    </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Underwater Light Field Retention: Neural Rendering for Underwater Imaging</h4>

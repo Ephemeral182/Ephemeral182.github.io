@@ -104,13 +104,13 @@ title: Publications
                     </div>
                     <div class="pub-venue"><em>arXiv</em>, 2025</div>
                     <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2506.10741" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://arxiv.org/abs/2506.10741" class="custom-link custom-link-paper">Arxiv Paper</a>
                         <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link custom-link-code">GitHub</a>
-                        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project Page</a>
+                        <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project Website</a>
                         <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft" class="custom-link custom-link-hf">HF Demo</a>
                         <a href="https://huggingface.co/papers/2506.10741" class="custom-link custom-link-hf">HF Paper</a>
-                        <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="custom-link custom-link-video">Video</a>
-                        <a href="https://mp.weixin.qq.com/s/gq6DwohKP0z333OSDRe7Xw" class="custom-link custom-link-interpretation">解读</a>
+                        <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="custom-link custom-link-video">Video Presentation</a>
+                        <a href="https://mp.weixin.qq.com/s/gq6DwohKP0z333OSDRe7Xw" class="custom-link custom-link-interpretation">Paper Interpretation</a>
                     </div>
                 </div>
             </div>

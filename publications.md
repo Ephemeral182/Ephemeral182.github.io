@@ -96,7 +96,7 @@ title: Publications
                 <div class="pub-details">
                     <h4 class="pub-title">🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
                     <div class="pub-tags">
-          <span class="paper-tag tag-method">AIGC</span>
+          <span class="paper-tag tag-method">Unified Framework</span>
                         <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
           </div>
                     <div class="pub-authors">
@@ -104,7 +104,7 @@ title: Publications
                     </div>
                     <div class="pub-venue"><em>arXiv</em>, 2025</div>
                     <div class="pub-links">
-                        <a href="https://arxiv.org/abs/2506.10741" class="custom-link custom-link-paper">Arxiv Paper</a>
+                        <a href="https://arxiv.org/abs/2506.10741" class="custom-link custom-link-paper">Paper</a>
                         <a href="https://github.com/Ephemeral182/PosterCraft" class="custom-link custom-link-code">GitHub</a>
                         <a href="https://ephemeral182.github.io/PosterCraft/" class="custom-link custom-link-project">Project Website</a>
                         <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft" class="custom-link custom-link-hf">HF Demo</a>

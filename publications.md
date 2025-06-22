@@ -140,7 +140,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/cvpr25_jarvisir.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/cvpr25_jarvisir.png" alt="JarvisIR">
+                </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration</h4>
@@ -164,7 +166,9 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/cvpr25_mirror_detec.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/cvpr25_mirror_detec.png" alt="Detect Any Mirrors">
+                </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine</h4>
@@ -188,13 +192,15 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/aaai25_prompthaze.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/aaai25_prompthaze.png" alt="PromptHaze">
+                </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">PromptHaze: Prompting Real-world Dehazing via Depth Anything Model</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">Prompt Learning for Image Restoration</span>
-          <span class="paper-tag tag-application">Real-world Generalization, Depth Anything Model</span>
+          <span class="paper-tag tag-application">Real-world Generalization</span>
           </div>
                     <div class="pub-authors">
           Tian Ye, <strong><u>Sixiang Chen</u></strong>, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu<sup>✉️</sup>.
@@ -212,13 +218,15 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/aglldiff.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/aglldiff.png" alt="AGLLDiff">
+                </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">AGLLDiff: Guiding Diffusion Models Towards Unsupervised Training-free Real-world Low-light Image Enhancement</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-          <span class="paper-tag tag-application">Unsupervised Training-free, Real-world Generalization</span>
+          <span class="paper-tag tag-application">Unsupervised Training-free</span>
           </div>
                     <div class="pub-authors">
                         Yunlong Lin*, Tian Ye*, <strong><u>Sixiang Chen*</u></strong>, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding<sup>✉️</sup>.
@@ -241,8 +249,10 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/nips2024/overview.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/nips2024/overview.png" alt="RestoreAgent">
-  </div>
+                </a>
+                </div>
                 <div class="pub-details">
                     <h4 class="pub-title">RestoreAgent: Autonomous Image Restoration Agent via Multimodal Large Language Models</h4>
                     <div class="pub-tags">
@@ -778,7 +788,7 @@ title: Publications
 }
 
 .pub-image {
-    flex: 0 0 400px;
+    flex: 0 0 450px;
 }
 
 .pub-image img {

@@ -94,7 +94,7 @@ title: Publications
                     </a>
                 </div>
                 <div class="pub-details">
-                    <h4 class="pub-title">PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
+                    <h4 class="pub-title">🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">AIGC</span>
                         <span class="paper-tag tag-application">Aesthetic Poster Generation</span>

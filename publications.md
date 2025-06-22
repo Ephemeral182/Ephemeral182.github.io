@@ -1046,10 +1046,15 @@ title: Publications
 
 .video-container {
     position: relative;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    /* 设定一个最大宽度，避免在宽屏幕上变得过大 */
+    max-width: 360px;
+    /* 让视频播放器水平居中 */
+    margin: 1rem auto 0 auto;
+    /* 关键：将容器的宽高比从16:9改为9:16，以匹配您的竖屏视频 */
+    /* (16 / 9) * 100% = 177.77% */
+    padding-top: 177.77%; 
     height: 0;
     overflow: hidden;
-    margin-top: 1rem;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     background-color: #000;
@@ -1062,7 +1067,6 @@ title: Publications
     width: 100%;
     height: 100%;
     border: 0;
-    transform: scale(1.8);
 }
 
 .custom-link:hover {

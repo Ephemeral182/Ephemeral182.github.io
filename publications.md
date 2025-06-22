@@ -932,7 +932,7 @@ title: Publications
     
     .pub-image {
         flex: none;
-        max-width: 300px;
+        max-width: 350px;
         margin: 0 auto;
     }
     

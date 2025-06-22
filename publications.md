@@ -89,7 +89,7 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <a href="https://ephemeral182.github.io/images/gpt4o.png" target="_blank" title="点击查看大图">
+                    <a href="https://ephemeral182.github.io/images/gpt4o.png" target="_blank" title="Click to view full image">
                         <img src="https://ephemeral182.github.io/images/gpt4o.png" alt="GPT-4o Study">
                     </a>
                 </div>
@@ -114,13 +114,15 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
+                <a href="https://ephemeral182.github.io/images/cvpr_snowmaster.png" target="_blank" title="Click to view full image">
                     <img src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="SnowMaster">
+                </a>
                 </div>
                 <div class="pub-details">
                     <h4 class="pub-title">SnowMaster: Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-          <span class="paper-tag tag-application">Intelligent Evaluation, Multi-Model Feedback Optimization</span>
+          <span class="paper-tag tag-application">Multi-Model Feedback Optimization</span>
           </div>
                     <div class="pub-authors">
           Jianyu Lai*, <strong><u>Sixiang Chen*<sup>&#9828;</sup></u></strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Weiming Wang, and Lei Zhu<sup>✉️</sup>.

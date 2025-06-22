@@ -112,6 +112,19 @@ title: Publications
                         <a href="https://www.youtube.com/watch?v=92wMU4D7qx0" class="custom-link custom-link-video">Video Presentation</a>
                         <a href="https://mp.weixin.qq.com/s/gq6DwohKP0z333OSDRe7Xw" class="custom-link custom-link-interpretation">Paper Interpretation</a>
                     </div>
+                    <details class="video-demo">
+                        <summary class="video-button"><i class="fas fa-play-circle"></i> Watch Demo Video</summary>
+                        <div class="video-container">
+                          <iframe 
+                              src="https://player.xinpianchang.com/?aid=13399853&mid=0vMbw1zoN1D4eJ1p&autoplay=0&muted=0"
+                              scrolling="no" 
+                              border="0" 
+                              frameborder="no" 
+                              framespacing="0" 
+                              allowfullscreen="true">
+                          </iframe>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
@@ -996,6 +1009,59 @@ title: Publications
     color: #FF0000; /* YouTube Red */
     background: rgba(255, 0, 0, 0.1);
     border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+/* Collapsible Video Demo Styles */
+.video-demo {
+    margin-top: 1rem;
+}
+
+.video-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    list-style: none; /* Hide default marker */
+    outline: none;
+    user-select: none;
+}
+
+.video-button i {
+    margin-right: 8px;
+}
+
+.video-button::-webkit-details-marker {
+    display: none; /* Hide default marker in Chrome */
+}
+
+.video-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+}
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    background-color: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .custom-link:hover {

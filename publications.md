@@ -1062,6 +1062,7 @@ title: Publications
     width: 100%;
     height: 100%;
     border: 0;
+    transform: scale(1.8);
 }
 
 .custom-link:hover {

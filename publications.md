@@ -148,7 +148,7 @@ title: Publications
                     <h4 class="pub-title">JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Image Restoration</span>
-          <span class="paper-tag tag-application">Intelligent Agent, Ranking Feedback Optimization</span>
+          <span class="paper-tag tag-application">Intelligent Agent, RL</span>
           </div>
                     <div class="pub-authors">
           Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong><u>Sixiang Chen</u></strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding<sup>✉️</sup>.
@@ -174,7 +174,7 @@ title: Publications
                     <h4 class="pub-title">Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">MLLM for Mirror Detection</span>
-          <span class="paper-tag tag-application">Iterative Data Engine, Large-Scale Unlabeled Data</span>
+          <span class="paper-tag tag-application">Iterative Data Engine</span>
           </div>
                     <div class="pub-authors">
           Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, <strong><u>Sixiang Chen</u></strong>, Wenxue Li, Guang Liu, and Lei Zhu<sup>✉️</sup>.

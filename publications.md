@@ -90,8 +90,8 @@ title: Publications
         <div class="publication-item fade-in">
             <div class="pub-content">
                 <div class="pub-image">
-                    <a href="https://ephemeral182.github.io/images/genhaze/teaser.png" target="_blank" title="Click to view full image">
-                        <img src="https://ephemeral182.github.io/images/genhaze/teaser.png" alt="GenHaze">
+                    <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
                     </a>
                 </div>
                 <div class="pub-details">

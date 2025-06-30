@@ -87,30 +87,6 @@ title: Publications
 <div class="year-section">
         <h3 class="year-title">2025</h3>
         
-        <div class="publication-item fade-in">
-            <div class="pub-content">
-                <div class="pub-image">
-                    <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
-                        <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
-                    </a>
-                </div>
-                <div class="pub-details">
-                    <h4 class="pub-title">GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing</h4>
-                    <div class="pub-tags">
-          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
-                        <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
-          </div>
-                    <div class="pub-authors">
-                        <strong><u>Sixiang Chen*</u></strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
-                    </div>
-                    <div class="pub-venue"><em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2025</div>
-                    <div class="pub-links">
-                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
-                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="publication-item fade-in">
             <div class="pub-content">
@@ -151,6 +127,31 @@ title: Publications
                           </iframe>
                         </div>
                     </details>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <a href="https://ephemeral182.github.io/images/genhaze/teaser2.png" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
+                    </a>
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">GenHaze: Pioneering Controllable One-Step Realistic Haze Generation for Real-World Dehazing</h4>
+                    <div class="pub-tags">
+          <span class="paper-tag tag-method">Generative Model for Image Restoration</span>
+                        <span class="paper-tag tag-application">Real-world Generalization, Plug and Play</span>
+          </div>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen*</u></strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>International Conference on Computer Vision <strong>(ICCV)</strong></em>, 2025</div>
+                    <div class="pub-links">
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-paper">Paper</a>
+                        <a href="Ephemeral182.github.io" class="custom-link custom-link-code">GitHub</a>
+                    </div>
                 </div>
             </div>
         </div>

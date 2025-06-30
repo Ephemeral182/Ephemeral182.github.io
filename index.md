@@ -78,7 +78,7 @@ layout: fancy_home
     <div class="scrollable-news">
         <ul>
             <li><strong>Jun. 2025：</strong>🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterCraft/"><strong>PosterCraft</strong></a>! A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework".<br>✨ <span class="highlight">From your prompts to high-quality aesthetic posters!</span></li>
-            <li><strong>Jun. 2025：</strong>🎉 Luckily, one paper has been accepted by <strong>ICCV'2025</strong>.</li>
+            <li><strong>Jun. 2025：</strong>🎉 Luckily, GenHaze has been accepted by <strong>ICCV'2025</strong>.</li>
             <li><strong>Apr. 2025：</strong>📄 Our comprehensive <strong>GPT-4o Image Generation Capabilities</strong> evaluation report is now available on arXiv!</li>
             <li><strong>Feb. 2025：</strong>🎉 Fortunately, three papers have been accepted by <strong>CVPR'2025</strong>.</li>
             <li><strong>Feb. 2025：</strong>🌟 I start to serve as a reviewer in <strong>NeurIPS'2025</strong> and <strong>ICCV'2025</strong>.</li>

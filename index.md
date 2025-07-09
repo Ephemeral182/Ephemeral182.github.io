@@ -41,8 +41,8 @@ layout: fancy_home
         <div class="card-icon">🎓</div>
         <h3 class="card-title">Education</h3>
         <div class="card-content">
-            <p><strong>Sept. 2024 - Present:</strong> Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
-            <p><strong>Aug. 2023 - Aug. 2024:</strong> Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
+            <p><strong>Sept. 2024 - Present:</strong> The Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
+            <p><strong>Aug. 2023 - Aug. 2024:</strong> The Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
             <p><strong>Sept. 2019 - Jun. 2023:</strong> Jimei University (B.Eng.)</p>
         </div>
     </div>

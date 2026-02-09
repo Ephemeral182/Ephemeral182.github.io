@@ -102,10 +102,11 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Changed to start to push content up */
+            padding-top: 8rem; /* Add top padding */
             align-items: center;
             text-align: center;
-            padding: 6rem 2rem 10rem;
+            padding-bottom: 0; /* Remove bottom padding to let gallery sit at bottom */
             position: relative;
             background: 
                 radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
@@ -114,55 +115,51 @@
             perspective: 1000px;
         }
         
-        /* 3D Gallery Effect */
+        /* 3D Gallery Effect - GRID LAYOUT */
         .hero-gallery-container {
             position: absolute;
-            bottom: -5%;
+            bottom: -10%; /* Start slightly lower */
             left: 50%;
-            transform: translateX(-50%) rotateX(20deg) scale(0.9);
-            width: auto;
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            transform: translateX(-50%) rotateX(30deg) scale(0.9);
+            width: 100%;
+            max-width: 1600px; /* Wider container */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
             gap: 20px;
-            opacity: 0.6;
+            opacity: 0.4; /* Start more transparent */
             transition: transform 0.1s ease-out, opacity 0.1s ease-out;
             transform-style: preserve-3d;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
             z-index: 1;
             padding: 0 2rem;
         }
 
         .hero-gallery-item {
-            height: 300px;
-            width: auto; /* Allow width to adjust based on image aspect ratio */
-            min-width: 200px; /* Minimum width to prevent collapse */
+            aspect-ratio: 16/9; /* Maintain aspect ratio */
+            width: 100%;
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             background: #eee;
-            flex-shrink: 0;
-            position: relative; /* For absolute positioning of children */
+            position: relative; 
         }
 
         .hero-gallery-item img {
             height: 100%;
-            width: auto;
+            width: 100%;
             object-fit: cover;
             display: block;
-            position: absolute; /* Stack images */
+            position: absolute; 
             top: 0;
             left: 0;
-            transition: opacity 0.1s ease-out;
+            transition: opacity 0.3s ease; /* Smoother transition */
         }
         
         /* Input image is visible by default */
         .hero-gallery-item .img-input {
             opacity: 1;
             z-index: 1;
-            position: relative; /* Keep one relative to maintain width */
         }
         
         /* Output image is hidden by default */
@@ -205,10 +202,7 @@
         }
 
         .title-highlight {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--text-main);
             position: relative;
             display: inline-block;
         }
@@ -684,6 +678,9 @@
             .table-container {
                 padding: 1rem;
             }
+            .hero-gallery-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile */
+            }
         }
     </style>
     <!-- Custom CSS from page frontmatter -->
@@ -731,23 +728,26 @@
         if (heroGallery) {
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
-                const heroHeight = document.querySelector('.hero-section').offsetHeight;
+                const windowHeight = window.innerHeight;
                 
-                // Calculate progress (0 to 1)
-                // Start a bit earlier to make the effect visible sooner
-                const progress = Math.min(Math.max(scrollY / (heroHeight * 0.7), 0), 1);
+                // Use a larger range for the effect to last longer
+                const progress = Math.min(Math.max(scrollY / (windowHeight * 0.8), 0), 1);
                 
-                // 1. Transform: Rotate & Scale
-                const rotateX = 20 - (progress * 20);
+                // 1. Transform: RotateX 30 -> 0, Scale 0.9 -> 1.0, TranslateX -50% (fixed)
+                const rotateX = 30 - (progress * 30);
                 const scale = 0.9 + (progress * 0.1);
-                const opacity = 0.6 + (progress * 0.4);
+                // Opacity increases as we scroll
+                const opacity = 0.4 + (progress * 0.6);
                 
-                heroGallery.style.transform = `translateX(-50%) rotateX(${rotateX}deg) scale(${scale})`;
+                // Move it slightly up as it flattens to simulate "coming forward"
+                const translateY = 0 - (progress * 50); // move up 50px
+
+                heroGallery.style.transform = `translateX(-50%) translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`;
                 heroGallery.style.opacity = opacity;
 
                 // 2. Content Reveal: Input -> Output
-                // Fade in output image when near "flat" state (progress > 0.5)
-                const revealProgress = Math.min(Math.max((progress - 0.5) * 2, 0), 1);
+                // Fade in output image when near "flat" state (progress > 0.4)
+                const revealProgress = Math.min(Math.max((progress - 0.4) * 2.5, 0), 1);
                 
                 document.querySelectorAll('.img-output').forEach(img => {
                     img.style.opacity = revealProgress;

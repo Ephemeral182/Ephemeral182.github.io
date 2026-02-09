@@ -56,8 +56,8 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
     <!-- 3D Parallax Gallery (behind hero content, JarvisEvo-style) -->
     <div class="hero-gallery-container">
-        <!-- Row 1: flows right-to-left, translates right on scroll -->
-        <div class="hero-gallery-row row-forward">
+        <!-- Row 1 -->
+        <div class="hero-gallery-row">
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
                 <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
@@ -79,8 +79,8 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
             </div>
         </div>
-        <!-- Row 2: flows left-to-right, translates left on scroll -->
-        <div class="hero-gallery-row row-reverse">
+        <!-- Row 2 -->
+        <div class="hero-gallery-row">
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/original_input_6.png" class="img-input" alt="Input 6">
                 <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">

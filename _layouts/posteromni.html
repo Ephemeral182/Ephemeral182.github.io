@@ -111,8 +111,7 @@
             min-height: calc(100vh + 1000px);
             perspective: 1000px;
             transform-style: preserve-3d;
-            overflow: clip;       /* clip during tilt (no scrollbar) */
-            overflow-x: visible;  /* allow gallery to scroll when flat */
+            overflow: hidden;
             background: transparent;
         }
 
@@ -162,53 +161,22 @@
             opacity: 0.2;
         }
 
-        /* Once gallery is flat, enable horizontal scroll */
-        .hero-gallery-container.is-flat {
-            overflow-x: auto;
-            overflow-y: hidden;
-            -webkit-overflow-scrolling: touch;
-            /* Subtle scrollbar */
-            scrollbar-width: thin;
-            scrollbar-color: rgba(0,0,0,0.15) transparent;
-        }
-        .hero-gallery-container.is-flat::-webkit-scrollbar {
-            height: 6px;
-        }
-        .hero-gallery-container.is-flat::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        .hero-gallery-container.is-flat::-webkit-scrollbar-thumb {
-            background: rgba(0,0,0,0.15);
-            border-radius: 3px;
-        }
-
         .hero-gallery-row {
             display: flex;
             gap: 24px;
             margin-bottom: 24px;
             will-change: transform;
-            /* Ensure the row never wraps and is wide enough */
-            width: max-content;
-            min-width: 100%;
         }
 
-        /* Row 1: flex-row-reverse (items flow right-to-left) during tilt */
+        /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
         .hero-gallery-row.row-forward {
             flex-direction: row-reverse;
             justify-content: center;
         }
-        /* Row 2: flex-row (items flow left-to-right) during tilt */
+        /* Row 2: flex-row (items flow left-to-right) */
         .hero-gallery-row.row-reverse {
             flex-direction: row;
             justify-content: center;
-        }
-        
-        /* When flat, both rows flow normally left-to-right and center */
-        .hero-gallery-container.is-flat .hero-gallery-row.row-forward,
-        .hero-gallery-container.is-flat .hero-gallery-row.row-reverse {
-            flex-direction: row;
-            justify-content: flex-start;
-            padding-left: 2rem;
         }
 
         .hero-gallery-item {
@@ -841,27 +809,15 @@
                     `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg) translateY(${translateY}px)`;
                 galleryContainer.style.opacity = opacity;
                 
-                // ---- Horizontal row translation (only during tilt phase) ----
-                if (tp < 1) {
-                    // Still tilting: animate horizontal split
-                    galleryContainer.classList.remove('is-flat');
-                    const translateX = ep * 150;
-                    rowsForward.forEach(row => {
-                        row.style.transform = `translateX(${translateX}px)`;
-                    });
-                    rowsReverse.forEach(row => {
-                        row.style.transform = `translateX(${-translateX}px)`;
-                    });
-                } else {
-                    // Fully flat: reset translateX, enable horizontal scroll
-                    galleryContainer.classList.add('is-flat');
-                    rowsForward.forEach(row => {
-                        row.style.transform = 'translateX(0)';
-                    });
-                    rowsReverse.forEach(row => {
-                        row.style.transform = 'translateX(0)';
-                    });
-                }
+                // ---- Horizontal row translation (only during tilt phase, stops when flat) ----
+                const translateX = ep * 200;
+                
+                rowsForward.forEach(row => {
+                    row.style.transform = `translateX(${translateX}px)`;
+                });
+                rowsReverse.forEach(row => {
+                    row.style.transform = `translateX(${-translateX}px)`;
+                });
                 
                 // ---- Input → Output image transition ----
                 // Start revealing output images when gallery is nearly flat (tp > 0.7)

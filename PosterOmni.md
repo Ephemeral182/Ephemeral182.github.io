@@ -53,17 +53,48 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </a>
     </div>
 
-    <!-- 3D Scrolling Gallery -->
+    <!-- 3D Scrolling Gallery: Input -> Output Reveal -->
     <div class="hero-gallery-container">
-        <!-- Displaying outputs as a gallery -->
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_1.png" alt="Demo Output 1"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_2.png" alt="Demo Output 2"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_3.png" alt="Demo Output 3"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_4.png" alt="Demo Output 4"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_5.png" alt="Demo Output 5"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_6.png" alt="Demo Output 6"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_7.png" alt="Demo Output 7"></div>
-        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_8.png" alt="Demo Output 8"></div>
+        <!-- Item 1 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
+            <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
+        </div>
+        <!-- Item 2 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_2.png" class="img-input" alt="Input 2">
+            <img src="/images/posteromni/demo_teaser/demo_output_2.png" class="img-output" alt="Output 2">
+        </div>
+        <!-- Item 3 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_3.png" class="img-input" alt="Input 3">
+            <img src="/images/posteromni/demo_teaser/demo_output_3.png" class="img-output" alt="Output 3">
+        </div>
+        <!-- Item 4 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_4.png" class="img-input" alt="Input 4">
+            <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
+        </div>
+        <!-- Item 5 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_5.png" class="img-input" alt="Input 5">
+            <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
+        </div>
+        <!-- Item 6 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_6.png" class="img-input" alt="Input 6">
+            <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
+        </div>
+        <!-- Item 7 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_7.png" class="img-input" alt="Input 7">
+            <img src="/images/posteromni/demo_teaser/demo_output_7.png" class="img-output" alt="Output 7">
+        </div>
+        <!-- Item 8 -->
+        <div class="hero-gallery-item">
+            <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
+            <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
+        </div>
     </div>
 </div>
 

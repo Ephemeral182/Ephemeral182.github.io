@@ -105,13 +105,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 6rem 2rem 10rem; /* 增加底部 padding 为 3D 图片留空间 */
+            padding: 6rem 2rem 10rem;
             position: relative;
             background: 
                 radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 25%);
             overflow: hidden;
-            perspective: 1000px; /* 为 3D 变换开启透视 */
+            perspective: 1000px;
         }
         
         /* 3D Gallery Effect */
@@ -119,12 +119,12 @@
             position: absolute;
             bottom: -5%;
             left: 50%;
-            transform: translateX(-50%) rotateX(20deg) scale(0.9); /* 初始倾斜状态 */
-            width: auto; /* 宽度自适应内容 */
+            transform: translateX(-50%) rotateX(20deg) scale(0.9);
+            width: auto;
             min-width: 100%;
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* 底部对齐，防止高度不一致导致参差不齐 */
+            align-items: flex-end;
             gap: 20px;
             opacity: 0.6;
             transition: transform 0.1s ease-out, opacity 0.1s ease-out;
@@ -136,20 +136,39 @@
         }
 
         .hero-gallery-item {
-            height: 300px; /* 固定高度 */
-            width: auto;   /* 宽度自适应 */
+            height: 300px;
+            width: auto; /* Allow width to adjust based on image aspect ratio */
+            min-width: 200px; /* Minimum width to prevent collapse */
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             background: #eee;
-            flex-shrink: 0; /* 防止被挤压 */
+            flex-shrink: 0;
+            position: relative; /* For absolute positioning of children */
         }
 
         .hero-gallery-item img {
-            height: 100%; /* 填满高度 */
-            width: auto;  /* 宽度保持比例 */
+            height: 100%;
+            width: auto;
             object-fit: cover;
-            display: block; /* 消除底部间隙 */
+            display: block;
+            position: absolute; /* Stack images */
+            top: 0;
+            left: 0;
+            transition: opacity 0.1s ease-out;
+        }
+        
+        /* Input image is visible by default */
+        .hero-gallery-item .img-input {
+            opacity: 1;
+            z-index: 1;
+            position: relative; /* Keep one relative to maintain width */
+        }
+        
+        /* Output image is hidden by default */
+        .hero-gallery-item .img-output {
+            opacity: 0;
+            z-index: 2;
         }
 
         /* Background Blur Elements */
@@ -707,27 +726,32 @@
             }
         });
 
-        // 3D Hero Scroll Effect
+        // 3D Hero Scroll Effect + Content Reveal
         const heroGallery = document.querySelector('.hero-gallery-container');
         if (heroGallery) {
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
                 const heroHeight = document.querySelector('.hero-section').offsetHeight;
                 
-                // Calculate progress (0 to 1) based on scroll position
-                // Start transforming immediately and finish when scrolled past hero
-                const progress = Math.min(Math.max(scrollY / (heroHeight * 0.8), 0), 1);
+                // Calculate progress (0 to 1)
+                // Start a bit earlier to make the effect visible sooner
+                const progress = Math.min(Math.max(scrollY / (heroHeight * 0.7), 0), 1);
                 
-                // Interpolate values
-                // RotateX: 20deg -> 0deg (flat)
-                // Scale: 0.9 -> 1 (full size)
-                // Opacity: 0.6 -> 1
+                // 1. Transform: Rotate & Scale
                 const rotateX = 20 - (progress * 20);
                 const scale = 0.9 + (progress * 0.1);
                 const opacity = 0.6 + (progress * 0.4);
                 
                 heroGallery.style.transform = `translateX(-50%) rotateX(${rotateX}deg) scale(${scale})`;
                 heroGallery.style.opacity = opacity;
+
+                // 2. Content Reveal: Input -> Output
+                // Fade in output image when near "flat" state (progress > 0.5)
+                const revealProgress = Math.min(Math.max((progress - 0.5) * 2, 0), 1);
+                
+                document.querySelectorAll('.img-output').forEach(img => {
+                    img.style.opacity = revealProgress;
+                });
             });
         }
     </script>

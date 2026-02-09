@@ -44,6 +44,8 @@ links:
     dropdown:
       - title: PosterCraft
         url: /PosterCraft/
+      - title: PosterOmni
+        url: /PosterOmni/
       - title: T3 DiffWeather
         url: /T3-DiffWeather/
       - title: UDR-S2Former

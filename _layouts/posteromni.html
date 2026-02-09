@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #ec4899;
+            --accent: #8b5cf6;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #0f172a;
+            --text-secondary: #475569;
+            --glass-border: rgba(255, 255, 255, 0.5);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--background);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 动态背景墙 */
+        .scrolling-bg-container {
+            position: fixed;
+            top: -20%;
+            left: -20%;
+            width: 140%;
+            height: 140%;
+            z-index: -1;
+            transform: rotate(-5deg);
+            overflow: hidden;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .bg-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 200px;
+            animation: scroll-vertical 60s linear infinite;
+        }
+
+        .bg-column:nth-child(even) {
+            animation-direction: reverse;
+            margin-top: -100px;
+        }
+
+        .bg-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        /* 强力遮罩 - 制造中间清晰四周模糊的效果 */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(248, 250, 252, 0.85) 0%, rgba(248, 250, 252, 0.95) 60%, rgba(248, 250, 252, 1) 100%);
+            z-index: -1;
+            backdrop-filter: blur(2px);
+        }
+
+        @keyframes scroll-vertical {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+        }
+
+        .hero-logo {
+            width: 100px; /* Adjust size */
+            height: auto;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 10px 20px rgba(99, 102, 241, 0.3));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .project-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--text-main);
+        }
+
+        .title-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: gradient-flow 5s ease infinite;
+        }
+
+        .project-subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Authors Styling */
+        .authors-container {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .author-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .author-name {
+            position: relative;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .author-name:hover {
+            color: var(--primary);
+        }
+
+        .author-sup {
+            color: var(--primary);
+            font-size: 0.75em;
+            font-weight: 700;
+            margin-left: 2px;
+        }
+
+        .affiliations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .affiliation-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contribution-note {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--text-main);
+            color: white;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--text-main);
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+        }
+
+        /* Glassmorphism Container for Abstract/Details */
+        .glass-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            margin: 4rem auto;
+            max-width: 1000px;
+            box-shadow: var(--glass-shadow);
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards 0.5s;
+        }
+
+        /* Markdown Content Styling */
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+
+        h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 4rem 0 2rem;
+            color: var(--text-main);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 6rem 1.5rem 3rem;
+            }
+            
+            .project-title {
+                font-size: 2.5rem;
+            }
+            
+            .glass-container {
+                padding: 2rem 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .bg-column {
+                width: 150px;
+            }
+        }
+    </style>
+    <!-- Custom CSS from page frontmatter -->
+    {% for css in page.extra_css %}
+    <link rel="stylesheet" href="{{ css }}">
+    {% endfor %}
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="bg-overlay"></div>
+    <div class="scrolling-bg-container" id="bgContainer">
+        <!-- JS will populate this -->
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">Ephemeral182</a>
+            <div class="nav-links">
+                <a href="#abstract">Abstract</a>
+                <a href="#method">Method</a>
+                <a href="#results">Results</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    {{ content }}
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 4rem 0; color: var(--text-secondary); font-size: 0.9rem;">
+        <p>© 2026 PosterOmni Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Populate Background Grid
+        const bgContainer = document.getElementById('bgContainer');
+        const imageUrls = [
+            '/images/postercraft/demo/demo1.png',
+            '/images/postercraft/demo/demo2.png',
+            '/images/postercraft/demo/demo3.png',
+            '/images/postercraft/demo/demo4.png',
+            '/images/postercraft/demo/demo5.png',
+            '/images/postercraft/demo/demo6.png',
+            '/images/postercraft/demo/demo7.png',
+            '/images/postercraft/demo/demo8.png'
+        ]; // Replace with actual PosterOmni images later
+
+        // Create 6 columns
+        for (let i = 0; i < 6; i++) {
+            const col = document.createElement('div');
+            col.className = 'bg-column';
+            // Duplicate images to create infinite scroll effect
+            const columnImages = [...imageUrls, ...imageUrls, ...imageUrls];
+            // Randomize order slightly
+            columnImages.sort(() => Math.random() - 0.5);
+            
+            columnImages.forEach(url => {
+                const img = document.createElement('img');
+                img.src = url;
+                img.className = 'bg-image';
+                img.loading = 'lazy';
+                col.appendChild(img);
+            });
+            bgContainer.appendChild(col);
+        }
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll rotate effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const container = document.querySelector('.scrolling-bg-container');
+            // Subtle rotation based on scroll
+            const rotation = -5 + (scrolled * 0.005);
+            if(container) {
+                container.style.transform = `rotate(${rotation}deg) scale(1.1)`;
+            }
+        });
+    </script>
+    
+    <!-- Custom JS from page frontmatter -->
+    {% for js in page.extra_js %}
+    <script src="{{ js }}"></script>
+    {% endfor %}
+</body>
+</html>

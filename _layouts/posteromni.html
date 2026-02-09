@@ -20,6 +20,12 @@
             --text-secondary: #475569;
             --glass-border: rgba(255, 255, 255, 0.6);
             --glass-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+            
+            /* Table Colors */
+            --rank-1-bg: #fef3c7;
+            --rank-1-text: #b45309;
+            --rank-2-bg: #e0f2fe;
+            --rank-2-text: #0369a1;
         }
 
         * {
@@ -281,6 +287,87 @@
             margin: 0;
         }
         
+        /* Table Styles */
+        .table-container {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            margin: 4rem 0;
+            box-shadow: var(--glass-shadow);
+            overflow: hidden;
+        }
+
+        .table-scroll-wrapper {
+            overflow-x: auto;
+            width: 100%;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .results-table th, .results-table td {
+            padding: 1rem 0.8rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .results-table th {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            color: var(--text-main);
+            text-align: left;
+        }
+        
+        .results-table th:not(:first-child) {
+            text-align: center;
+        }
+
+        .results-table td:first-child {
+            font-weight: 600;
+            color: var(--text-main);
+            text-align: left;
+        }
+        
+        .results-table td {
+            color: var(--text-secondary);
+            font-variant-numeric: tabular-nums; /* 等宽数字对齐 */
+        }
+
+        /* Highlight Row for Ours */
+        .row-ours {
+            background: rgba(99, 102, 241, 0.03);
+        }
+        
+        .row-ours td:first-child {
+            color: var(--primary-dark);
+        }
+
+        /* Rank Badges */
+        .rank-1 {
+            background: var(--rank-1-bg);
+            color: var(--rank-1-text);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .rank-2 {
+            background: var(--rank-2-bg);
+            color: var(--rank-2-text);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
         /* Gallery */
         .gallery-grid {
             display: grid;
@@ -312,6 +399,9 @@
             .project-title {
                 font-size: 2.5rem;
             }
+            .table-container {
+                padding: 1rem;
+            }
         }
     </style>
     <!-- Custom CSS from page frontmatter -->
@@ -327,9 +417,10 @@
             <a href="/" class="nav-logo">PosterOmni</a>
             <div class="nav-links">
                 <a href="#abstract">Abstract</a>
+                <a href="#features">Features</a>
                 <a href="#data">Data</a>
                 <a href="#method">Method</a>
-                <a href="#features">Features</a>
+                <a href="#results">Results</a>
             </div>
         </div>
     </nav>

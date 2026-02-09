@@ -26,6 +26,8 @@
             --rank-1-text: #b45309;
             --rank-2-bg: #e0f2fe;
             --rank-2-text: #0369a1;
+            --diff-bg: #dcfce7; /* 增长量背景 (绿色) */
+            --diff-text: #15803d; /* 增长量文字 (深绿) */
         }
 
         * {
@@ -316,23 +318,40 @@
             padding: 1rem 0.8rem;
             text-align: center;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
         }
 
+        /* Table Header Hover Effect */
         .results-table th {
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-weight: 700;
             color: var(--text-main);
-            text-align: left;
+            text-align: center;
+            cursor: default;
         }
         
-        .results-table th:not(:first-child) {
-            text-align: center;
+        .results-table th:first-child {
+            text-align: left;
         }
 
+        .results-table th:hover {
+            color: var(--primary);
+            transform: translateY(-2px); /* 轻微上浮 */
+        }
+
+        /* Model Name Hover Effect */
         .results-table td:first-child {
             font-weight: 600;
             color: var(--text-main);
             text-align: left;
+            transition: transform 0.2s ease, color 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .results-table tr:hover td:first-child {
+            transform: scale(1.05); /* 悬停放大 */
+            color: var(--primary);
+            padding-left: 1rem; /* 增加一点内边距让放大更明显不遮挡 */
         }
         
         .results-table td {
@@ -343,10 +362,32 @@
         /* Highlight Row for Ours */
         .row-ours {
             background: rgba(99, 102, 241, 0.03);
+            border-top: 2px solid var(--primary);
         }
         
         .row-ours td:first-child {
             color: var(--primary-dark);
+        }
+
+        /* Highlight Row for Baseline Comparison */
+        .row-baseline-diff {
+            background: rgba(220, 252, 231, 0.3); /* 浅绿色背景 */
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .row-baseline-diff td {
+            color: var(--diff-text); /* 深绿色文字 */
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .row-baseline-diff td:first-child {
+            font-style: italic;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transform: none !important; /* 不缩放 */
+            cursor: default;
         }
 
         /* Rank Badges */
@@ -366,6 +407,21 @@
             border-radius: 6px;
             font-weight: 600;
             display: inline-block;
+        }
+        
+        /* Badge for Benchmark Name */
+        .benchmark-badge {
+            background: linear-gradient(135deg, var(--text-main), #334155);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.6em;
+            vertical-align: middle;
+            margin-left: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
         }
 
         /* Gallery */

@@ -142,7 +142,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
     <!-- Results Table -->
     <div class="table-container" id="results">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">Quantitative Comparison</h2>
+        <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+            Quantitative Comparison <span class="benchmark-badge">PosterOmni-Bench</span>
+        </h2>
         <div class="table-scroll-wrapper">
             <table class="results-table">
                 <thead>
@@ -257,6 +259,16 @@ title: PosterOmni - Generalized Artistic Poster Creation
                         <td><span class="rank-1">4.20</span> / <span class="rank-1">4.35</span></td>
                         <td><span class="rank-2">3.99</span> / <span class="rank-1">4.36</span></td>
                         <td><span class="rank-2">4.27</span> / <span class="rank-1">4.37</span></td>
+                    </tr>
+                    <tr class="row-baseline-diff">
+                        <td>vs. Baseline (Qwen)</td>
+                        <td>+0.48 / +0.48</td>
+                        <td>+0.74 / +0.98</td>
+                        <td>+0.57 / +0.27</td>
+                        <td>+0.92 / +0.86</td>
+                        <td>+0.76 / +1.38</td>
+                        <td>+1.08 / +1.53</td>
+                        <td>+0.76 / +0.91</td>
                     </tr>
                 </tbody>
             </table>

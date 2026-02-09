@@ -55,7 +55,7 @@
         }
 
         .nav-content {
-            max-width: 1400px;
+            max-width: 1600px; /* 增加最大宽度，给大图更多空间 */
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -88,7 +88,7 @@
             color: var(--primary);
         }
 
-        /* Hero Section - 依然保持居中大标题 */
+        /* Hero Section */
         .hero-section {
             min-height: 90vh;
             display: flex;
@@ -163,16 +163,16 @@
 
         /* Split Layout Styles (JarvisEvo Style) */
         .content-wrapper {
-            max-width: 1400px;
+            max-width: 1600px; /* 增加整体宽度，适配大图 */
             margin: 0 auto;
             padding: 0 2rem 6rem;
         }
 
         .split-section {
             display: flex;
-            align-items: center; /* 垂直居中 */
-            gap: 4rem;
-            margin: 8rem 0; /* 增加垂直间距 */
+            align-items: center;
+            gap: 5rem; /* 增加间距 */
+            margin: 8rem 0;
             position: relative;
         }
 
@@ -182,20 +182,20 @@
 
         .split-text {
             flex: 1;
-            min-width: 300px;
+            min-width: 350px; /* 稍微增加文字最小宽度 */
         }
 
         .split-visual {
-            flex: 1.2;
+            flex: 1.6; /* 增加图片区域占比 (原1.2) */
             position: relative;
         }
 
         .split-visual img {
             width: 100%;
             border-radius: 16px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); /* 更强的阴影 */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
             background: white;
-            padding: 8px; /* 白色边框效果 */
+            padding: 8px;
             border: 1px solid rgba(0,0,0,0.05);
             transition: transform 0.5s ease;
         }
@@ -237,7 +237,7 @@
             border: 1px solid var(--glass-border);
             border-radius: 16px;
             padding: 1.5rem;
-            padding-left: 4.5rem; /* Space for the number */
+            padding-left: 4.5rem;
             position: relative;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -281,7 +281,7 @@
             margin: 0;
         }
         
-        /* 简单的两列 grid 用于 Gallery */
+        /* Gallery */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -297,13 +297,13 @@
         /* Responsive */
         @media (max-width: 968px) {
             .split-section {
-                flex-direction: column !important; /* 强制堆叠 */
+                flex-direction: column !important;
                 gap: 3rem;
                 margin: 4rem 0;
                 text-align: center;
             }
             .feature-item {
-                text-align: left; /* 卡片内容保持左对齐 */
+                text-align: left;
                 padding-left: 4.5rem;
             }
             .section-title {
@@ -327,9 +327,9 @@
             <a href="/" class="nav-logo">PosterOmni</a>
             <div class="nav-links">
                 <a href="#abstract">Abstract</a>
-                <a href="#features">Features</a>
-                <a href="#method">Method</a>
                 <a href="#data">Data</a>
+                <a href="#method">Method</a>
+                <a href="#features">Features</a>
             </div>
         </div>
     </nav>

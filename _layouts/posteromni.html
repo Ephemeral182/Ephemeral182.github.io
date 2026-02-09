@@ -166,17 +166,18 @@
             gap: 24px;
             margin-bottom: 24px;
             will-change: transform;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100%;
         }
 
         /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
         .hero-gallery-row.row-forward {
             flex-direction: row-reverse;
-            justify-content: center;
         }
         /* Row 2: flex-row (items flow left-to-right) */
         .hero-gallery-row.row-reverse {
             flex-direction: row;
-            justify-content: center;
         }
 
         .hero-gallery-item {
@@ -201,18 +202,17 @@
         .hero-gallery-item .img-input {
             display: block;
             height: 100%;
-            width: 100%;
+            width: auto;
             position: relative;
             z-index: 1;
             opacity: 1;
         }
         
-        /* Output image overlays on top, matching the same size */
+        /* Output image overlays on top, also height-aligned with auto width */
         .hero-gallery-item .img-output {
             display: block;
             height: 100%;
-            width: 100%;
-            object-fit: cover;
+            width: auto;
             position: absolute;
             top: 0;
             left: 0;

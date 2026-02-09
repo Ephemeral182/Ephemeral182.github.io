@@ -5,8 +5,8 @@ title: PosterOmni - Generalized Artistic Poster Creation
 ---
 
 <div class="hero-section">
-    <!-- Logo if available, otherwise omitted or use placeholder -->
-    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" class="hero-logo" onerror="this.style.display='none'">
+    <!-- Logo if available -->
+    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" style="width: 100px; margin-bottom: 2rem; display: none;" onerror="this.style.display='none'">
     
     <h1 class="project-title">
         <span class="title-gradient">PosterOmni</span>: Generalized Artistic Poster Creation via <br> Task Distillation and Unified Reward Feedback
@@ -26,79 +26,128 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </div>
         
         <div class="affiliations">
-            <span class="affiliation-item"><sup class="author-sup">1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span>
-            <span class="affiliation-item"><sup class="author-sup">2</sup>Meituan</span>
-            <span class="affiliation-item"><sup class="author-sup">3</sup>The Hong Kong University of Science and Technology</span>
-        </div>
-        
-        <div class="contribution-note">
-            *Core Contribution, †Corresponding Author
+            <span><sup class="author-sup">1</sup>HKUST(GZ)</span>
+            <span><sup class="author-sup">2</sup>Meituan</span>
+            <span><sup class="author-sup">3</sup>HKUST</span>
         </div>
     </div>
 
-    <div class="action-buttons">
-        <a href="https://arxiv.org/abs/2501.11646" class="btn btn-primary">
-            <span>📄</span> Paper
-        </a>
-        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn btn-secondary">
-            <span>💻</span> Code
-        </a>
-        <a href="https://huggingface.co/PosterOmni" class="btn btn-secondary">
-            <span>🤗</span> Model
-        </a>
-        <a href="#demo" class="btn btn-secondary">
-            <span>🚀</span> Demo
-        </a>
+    <div style="margin-top: 2rem;">
+        <a href="https://arxiv.org/abs/2501.11646" class="btn btn-primary"><span>📄</span> Paper</a>
+        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn btn-secondary"><span>💻</span> Code</a>
+        <a href="https://huggingface.co/PosterOmni" class="btn btn-secondary"><span>🤗</span> Model</a>
     </div>
 </div>
 
 <div class="content-wrapper">
-    <div class="glass-container" id="abstract">
-        <h2 style="margin-top: 0;">Abstract</h2>
-        <p style="text-align: justify;">
+
+    <!-- Abstract -->
+    <div style="max-width: 900px; margin: 0 auto 6rem; text-align: center; background: rgba(255,255,255,0.5); padding: 3rem; border-radius: 24px; backdrop-filter: blur(10px);" id="abstract">
+        <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
             PosterOmni is a generalized framework for artistic poster creation that leverages task distillation and unified reward feedback. 
-            Unlike previous methods that struggle with complex layouts or require manual intervention, PosterOmni automates the entire process 
-            from content understanding to visual composition. By integrating Multi-modal Large Language Models (MLLM) with a specialized 
-            layout generation and refinement pipeline, we achieve superior performance in both aesthetic quality and content fidelity.
-            Support for multi-language (Chinese/English), cross-style generation, and editable layers makes it a versatile tool for designers.
+            Unlike previous methods that struggle with complex layouts, PosterOmni automates the process from content understanding to visual composition, 
+            achieving superior performance in both aesthetic quality and content fidelity.
         </p>
     </div>
 
-    <!-- More sections can be added here following the glass-container style or others -->
-    
-    <section class="why-choose glass-container" id="features">
-        <h2>Key Features</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-            <div>
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🧠</div>
-                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Content Understanding</h3>
-                <p style="font-size: 0.95rem;">MLLM analyzes tone, scene, and emotion to generate precise visual instructions.</p>
-            </div>
-            <div>
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎨</div>
-                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Diverse Styles</h3>
-                <p style="font-size: 0.95rem;">Built-in templates for modern, business, minimalist, and tech styles with custom color palettes.</p>
-            </div>
-            <div>
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">📐</div>
-                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Smart Layout</h3>
-                <p style="font-size: 0.95rem;">Automatic hierarchy, spacing, and alignment for visual balance.</p>
-            </div>
-            <div>
-                <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛠️</div>
-                <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--text-main);">Editable</h3>
-                <p style="font-size: 0.95rem;">Layer-based generation allowing for easy modification of text, images, and layout.</p>
+    <!-- Section 1: Capabilities (Left Text, Right Image) -->
+    <div class="split-section" id="features">
+        <div class="split-text">
+            <span class="section-label">Capabilities</span>
+            <h2 class="section-title">Diverse Poster Creation Tasks</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="number-badge">1</div>
+                    <span class="feature-heading">Local Editing Precision</span>
+                    <p class="feature-desc">Performs precise local adjustments including extending, filling, rescaling, and identity-driven generation while preserving the original subject.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">2</div>
+                    <span class="feature-heading">Global Creation Reasoning</span>
+                    <p class="feature-desc">Handles abstract high-level tasks such as layout-driven and style-driven generation, ensuring aesthetic coherence across the entire poster.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">3</div>
+                    <span class="feature-heading">Unified Framework</span>
+                    <p class="feature-desc">Seamlessly integrates multiple editing and generation capabilities into a single model without switching pipelines.</p>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="split-visual">
+            <img src="/images/posteromni/teaser_0209.jpg" alt="PosterOmni Capabilities Teaser">
+        </div>
+    </div>
 
-    <section class="gallery glass-container" id="gallery">
-        <h2>Gallery</h2>
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-            <img src="/images/posteromni/case1.png" alt="Case 1" style="width: 100%; border-radius: 12px;" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case2.png" alt="Case 2" style="width: 100%; border-radius: 12px;" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case3.png" alt="Case 3" style="width: 100%; border-radius: 12px;" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case4.png" alt="Case 4" style="width: 100%; border-radius: 12px;" onerror="this.style.display='none'">
+    <!-- Section 2: Methodology (Left Image, Right Text) -->
+    <div class="split-section reverse" id="method">
+        <div class="split-text">
+            <span class="section-label">Methodology</span>
+            <h2 class="section-title">Progressive Training Pipeline</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="number-badge">1</div>
+                    <span class="feature-heading">Task-Specific SFT</span>
+                    <p class="feature-desc">Trains specialized experts for local editing and global creation to ensure high fidelity in distinct domains.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">2</div>
+                    <span class="feature-heading">Task Distillation</span>
+                    <p class="feature-desc">Distills knowledge from experts into a unified student model, merging pixel precision with aesthetic understanding.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">3</div>
+                    <span class="feature-heading">Unified Reward Feedback</span>
+                    <p class="feature-desc">Aligns with human preferences using a reward model that evaluates both aesthetic appeal and instruction adherence.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">4</div>
+                    <span class="feature-heading">Omni-Edit RL</span>
+                    <p class="feature-desc">Uses Reinforcement Learning to refine generation quality and align it with professional design standards.</p>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="split-visual">
+            <img src="/images/posteromni/overview.jpg" alt="PosterOmni Methodology Overview">
+        </div>
+    </div>
+
+    <!-- Section 3: Data Pipeline (Left Text, Right Image) -->
+    <div class="split-section" id="data">
+        <div class="split-text">
+            <span class="section-label">Data Engineering</span>
+            <h2 class="section-title">Automated Data Construction</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="number-badge">1</div>
+                    <span class="feature-heading">Prompt & Image Generation</span>
+                    <p class="feature-desc">Leverages GPT-4 and Qwen to generate diverse, structured prompts and initial images covering various themes.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">2</div>
+                    <span class="feature-heading">Multimodal Filtering</span>
+                    <p class="feature-desc">Employs OCR and VLM-based filtering to ensure textual correctness and layout-content consistency.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">3</div>
+                    <span class="feature-heading">Task-Specific Construction</span>
+                    <p class="feature-desc">Automatically synthesizes paired data for 6 specific tasks using tools like SAM-2 and BrushNet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="split-visual">
+            <img src="/images/posteromni/posteromni_datapipeline.jpg" alt="Data Construction Pipeline">
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div style="margin-top: 8rem;">
+        <h2 style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 3rem;">Gallery</h2>
+        <div class="gallery-grid">
+            <img src="/images/posteromni/case1.png" alt="Case 1" onerror="this.style.display='none'">
+            <img src="/images/posteromni/case2.png" alt="Case 2" onerror="this.style.display='none'">
+            <img src="/images/posteromni/case3.png" alt="Case 3" onerror="this.style.display='none'">
+            <img src="/images/posteromni/case4.png" alt="Case 4" onerror="this.style.display='none'">
+        </div>
+    </div>
+
 </div>

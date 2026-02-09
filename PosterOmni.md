@@ -5,24 +5,28 @@ title: PosterOmni - Generalized Artistic Poster Creation
 ---
 
 <div class="hero-section">
-    <!-- Logo if available -->
-    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" style="width: 100px; margin-bottom: 2rem; display: none;" onerror="this.style.display='none'">
+    <!-- Logo -->
+    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" style="width: 120px; margin-bottom: 1.5rem; display: none;" onerror="this.style.display='none'">
     
     <h1 class="project-title">
-        <span class="title-gradient">PosterOmni</span>: Generalized Artistic Poster Creation via <br> Task Distillation and Unified Reward Feedback
+        <span class="title-highlight">PosterOmni</span>
     </h1>
+    <h2 class="project-subtitle">
+        Generalized Artistic Poster Creation <br>
+        <span class="subtitle-part">via Task Distillation and Unified Reward Feedback</span>
+    </h2>
 
     <div class="authors-container">
         <div class="author-list">
-            <span class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></span>,
-            <span class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></span>,
-            <span class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></span>,
-            <span class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></span>,
-            <span class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></span>,
-            <span class="author-name">Tian Ye<sup class="author-sup">1</sup></span>,
-            <span class="author-name">Junfeng Luo<sup class="author-sup">2</sup></span>,
-            <span class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></span>,
-            <span class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></span>
+            <a href="#" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
+            <a href="#" class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></a>,
+            <a href="#" class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></a>,
+            <a href="#" class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></a>,
+            <a href="#" class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></a>,
+            <a href="#" class="author-name">Tian Ye<sup class="author-sup">1</sup></a>,
+            <a href="#" class="author-name">Junfeng Luo<sup class="author-sup">2</sup></a>,
+            <a href="#" class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></a>,
+            <a href="#" class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></a>
         </div>
         
         <div class="affiliations">
@@ -30,19 +34,44 @@ title: PosterOmni - Generalized Artistic Poster Creation
             <span><sup class="author-sup">2</sup>Meituan</span>
             <span><sup class="author-sup">3</sup>HKUST</span>
         </div>
+        
+        <div class="author-notes">
+            <span><i class="fas fa-star author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Equal Contribution</span>
+            <span><i class="fas fa-envelope author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Corresponding Author</span>
+        </div>
     </div>
 
-    <div style="margin-top: 2rem;">
-        <a href="https://arxiv.org/abs/2501.11646" class="btn btn-primary"><span>📄</span> Paper</a>
-        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn btn-secondary"><span>💻</span> Code</a>
-        <a href="https://huggingface.co/PosterOmni" class="btn btn-secondary"><span>🤗</span> Model</a>
+    <div class="action-buttons">
+        <a href="https://arxiv.org/abs/2501.11646" class="btn-capsule primary">
+            <i class="fas fa-file-alt btn-icon"></i> Paper
+        </a>
+        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule">
+            <i class="fab fa-github btn-icon"></i> Code
+        </a>
+        <a href="https://huggingface.co/PosterOmni" class="btn-capsule">
+            <i class="fas fa-cube btn-icon"></i> Model
+        </a>
+    </div>
+
+    <!-- 3D Scrolling Gallery -->
+    <div class="hero-gallery-container">
+        <!-- Displaying outputs as a gallery -->
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_1.png" alt="Demo Output 1"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_2.png" alt="Demo Output 2"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_3.png" alt="Demo Output 3"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_4.png" alt="Demo Output 4"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_5.png" alt="Demo Output 5"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_6.png" alt="Demo Output 6"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_7.png" alt="Demo Output 7"></div>
+        <div class="hero-gallery-item"><img src="/images/posteromni/demo_teaser/demo_output_8.png" alt="Demo Output 8"></div>
     </div>
 </div>
 
 <div class="content-wrapper">
 
-    <!-- Abstract -->
-    <div style="max-width: 1000px; margin: 0 auto 6rem; background: rgba(255,255,255,0.6); padding: 3rem; border-radius: 24px; backdrop-filter: blur(10px); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);" id="abstract">
+    <!-- Abstract Box -->
+    <div class="abstract-box" id="abstract">
+        <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Abstract</h2>
         <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
             Image-to-poster generation is a multi-dimensional process coupling <strong>entity-preserving local editing</strong> (such as rescaling, filling, and extending) with <strong>concept-driven global creation</strong> (like layout and style transfer).
         </p>

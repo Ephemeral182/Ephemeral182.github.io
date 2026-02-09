@@ -111,7 +111,8 @@
             min-height: calc(100vh + 1000px);
             perspective: 1000px;
             transform-style: preserve-3d;
-            overflow: hidden;
+            overflow: clip;       /* clip during tilt (no scrollbar) */
+            overflow-x: visible;  /* allow gallery to scroll when flat */
             background: transparent;
         }
 
@@ -840,15 +841,27 @@
                     `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg) translateY(${translateY}px)`;
                 galleryContainer.style.opacity = opacity;
                 
-                // ---- Horizontal row translation (only during tilt phase, stops when flat) ----
-                const translateX = ep * 200;
-                
-                rowsForward.forEach(row => {
-                    row.style.transform = `translateX(${translateX}px)`;
-                });
-                rowsReverse.forEach(row => {
-                    row.style.transform = `translateX(${-translateX}px)`;
-                });
+                // ---- Horizontal row translation (only during tilt phase) ----
+                if (tp < 1) {
+                    // Still tilting: animate horizontal split
+                    galleryContainer.classList.remove('is-flat');
+                    const translateX = ep * 150;
+                    rowsForward.forEach(row => {
+                        row.style.transform = `translateX(${translateX}px)`;
+                    });
+                    rowsReverse.forEach(row => {
+                        row.style.transform = `translateX(${-translateX}px)`;
+                    });
+                } else {
+                    // Fully flat: reset translateX, enable horizontal scroll
+                    galleryContainer.classList.add('is-flat');
+                    rowsForward.forEach(row => {
+                        row.style.transform = 'translateX(0)';
+                    });
+                    rowsReverse.forEach(row => {
+                        row.style.transform = 'translateX(0)';
+                    });
+                }
                 
                 // ---- Input → Output image transition ----
                 // Start revealing output images when gallery is nearly flat (tp > 0.7)

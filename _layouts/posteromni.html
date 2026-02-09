@@ -153,19 +153,29 @@
            opacity(0.2 → 1), rows translate horizontally in opposite dirs
            ============================================================ */
         .hero-gallery-container {
-            margin-top: 450px;  /* push below hero content */
+            margin-top: 400px;  /* push below hero content */
             padding: 0 2rem;
             will-change: transform, opacity;
-            transform-origin: center top;
-            /* Initial state (JS will override on scroll) */
-            transform: rotateX(25deg) translateY(-100px);
-            opacity: 0.15;
+            /* Initial state set by JS; fallback: */
+            transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
+            opacity: 0.2;
         }
 
         .hero-gallery-row {
             display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 24px;
+            margin-bottom: 24px;
+            will-change: transform;
+        }
+
+        /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
+        .hero-gallery-row.row-forward {
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        /* Row 2: flex-row (items flow left-to-right) */
+        .hero-gallery-row.row-reverse {
+            flex-direction: row;
             justify-content: center;
         }
 
@@ -755,47 +765,71 @@
         });
 
         // ================================================================
-        // 3D Parallax Gallery — clean rotateX tilt effect
-        //   rotateX: 25 → 0  (tilt to flat)
-        //   translateY: -100 → 0  (slide into place)
-        //   opacity: 0.15 → 1  (fade in)
-        //   Input → Output crossfade when nearly flat
+        // 3D Parallax Gallery — faithfully replicating JarvisEvo logic
+        //
+        // JarvisEvo uses framer-motion with:
+        //   rotateX:    [0, 0.2] → [15, 0]
+        //   rotateZ:    [0, 0.2] → [20, 0]
+        //   translateY: [0, 0.2] → [-250, 500]
+        //   opacity:    [0, 0.2] → [0.2, 1]
+        //   translateX (row-forward):  [0, 1] → [0, 1000]
+        //   translateX (row-reverse):  [0, 1] → [0, -1000]
+        //
+        // scrollYProgress is 0→1 over the element from "start start" to "end start"
         // ================================================================
         const heroSection = document.querySelector('.hero-section');
         const galleryContainer = document.querySelector('.hero-gallery-container');
+        const rowsForward = document.querySelectorAll('.hero-gallery-row.row-forward');
+        const rowsReverse = document.querySelectorAll('.hero-gallery-row.row-reverse');
         const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
         if (heroSection && galleryContainer) {
             const update = () => {
                 const rect = heroSection.getBoundingClientRect();
-                const scrollRange = heroSection.offsetHeight - window.innerHeight;
-                if (scrollRange <= 0) return;
+                const sectionHeight = heroSection.offsetHeight;
                 
-                // 0 at top, 1 when section fully scrolled
-                const scrollP = Math.min(Math.max(-rect.top / scrollRange, 0), 1);
+                // scrollYProgress: 0 when section top is at viewport top,
+                // 1 when section bottom reaches viewport top
+                // Matches framer-motion offset: ["start start", "end start"]
+                const scrollYProgress = Math.min(Math.max(-rect.top / (sectionHeight - window.innerHeight), 0), 1);
                 
-                // Tilt animation happens over first 40% of scroll (slower, more visible)
-                const tp = Math.min(scrollP / 0.4, 1);
+                // ---- Transform progress (happens in first 20% of scroll, matching [0, 0.2]) ----
+                const tp = Math.min(scrollYProgress / 0.2, 1);
+                
+                // Ease function (approximates spring feel)
                 const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
                 const ep = ease(tp);
                 
-                const rotateX = 25 * (1 - ep);        // 25° → 0°
-                const translateY = -100 * (1 - ep);    // -100px → 0
-                const opacity = 0.15 + 0.85 * ep;     // 0.15 → 1
+                const rotateX = 15 * (1 - ep);          // 15 → 0
+                const rotateZ = 20 * (1 - ep);          // 20 → 0
+                const translateY = -250 + (750 * ep);    // -250 → 500
+                const opacity = 0.2 + (0.8 * ep);       // 0.2 → 1
                 
-                galleryContainer.style.transform = `rotateX(${rotateX}deg) translateY(${translateY}px)`;
+                galleryContainer.style.transform = 
+                    `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg) translateY(${translateY}px)`;
                 galleryContainer.style.opacity = opacity;
                 
-                // Input → Output crossfade (starts at 60% of tilt animation)
-                const revealP = Math.min(Math.max((tp - 0.6) / 0.4, 0), 1);
+                // ---- Horizontal row translation (only during tilt phase, stops when flat) ----
+                const translateX = ep * 200;
+                
+                rowsForward.forEach(row => {
+                    row.style.transform = `translateX(${translateX}px)`;
+                });
+                rowsReverse.forEach(row => {
+                    row.style.transform = `translateX(${-translateX}px)`;
+                });
+                
+                // ---- Input → Output image transition ----
+                // Start revealing output images when gallery is nearly flat (tp > 0.7)
+                const revealProgress = Math.min(Math.max((tp - 0.7) / 0.3, 0), 1);
                 outputImages.forEach(img => {
-                    img.style.opacity = revealP;
+                    img.style.opacity = revealProgress;
                 });
             };
             
             window.addEventListener('scroll', update, { passive: true });
             window.addEventListener('resize', update, { passive: true });
-            update();
+            update(); // initial call
         }
     </script>
     

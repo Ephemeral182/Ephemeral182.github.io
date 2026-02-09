@@ -97,75 +97,44 @@
             color: var(--primary);
         }
 
-        /* Hero Section (Revamped) */
+        /* ============================================================
+           Hero Section — JarvisEvo-style parallax
+           The outer wrapper is tall so we have scroll room.
+           Hero text content is absolutely positioned on top.
+           The gallery lives in normal flow below and gets animated.
+           ============================================================ */
         .hero-section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Changed to start to push content up */
-            padding-top: 8rem; /* Add top padding */
-            align-items: center;
-            text-align: center;
-            padding-bottom: 0; /* Remove bottom padding to let gallery sit at bottom */
             position: relative;
+            min-height: calc(100vh + 1000px);
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            overflow: hidden;
             background: 
                 radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 25%);
-            overflow: hidden;
-            perspective: 1000px;
         }
-        
-        /* 3D Gallery Effect - GRID LAYOUT */
-        .hero-gallery-container {
+
+        /* Hero text content — floats on top */
+        .hero-content {
             position: absolute;
-            bottom: -10%; /* Start slightly lower */
-            left: 50%;
-            transform: translateX(-50%) rotateX(30deg) scale(0.9);
-            width: 100%;
-            max-width: 1600px; /* Wider container */
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columns */
-            gap: 20px;
-            opacity: 0.4; /* Start more transparent */
-            transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-            transform-style: preserve-3d;
-            mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 100%);
-            z-index: 1;
-            padding: 0 2rem;
-        }
-
-        .hero-gallery-item {
-            aspect-ratio: 16/9; /* Maintain aspect ratio */
-            width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            background: #eee;
-            position: relative; 
-        }
-
-        .hero-gallery-item img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            display: block;
-            position: absolute; 
             top: 0;
             left: 0;
-            transition: opacity 0.3s ease; /* Smoother transition */
+            right: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 6rem 2rem 4rem;
+            pointer-events: none; /* allow scroll through */
         }
-        
-        /* Input image is visible by default */
-        .hero-gallery-item .img-input {
-            opacity: 1;
-            z-index: 1;
-        }
-        
-        /* Output image is hidden by default */
-        .hero-gallery-item .img-output {
-            opacity: 0;
-            z-index: 2;
+        /* re-enable clicks on interactive elements */
+        .hero-content a,
+        .hero-content button,
+        .hero-content .action-buttons {
+            pointer-events: auto;
         }
 
         /* Background Blur Elements */
@@ -178,13 +147,84 @@
             height: 50%;
             background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
             filter: blur(80px);
-            z-index: -1;
+            z-index: 0;
             animation: drift 20s infinite alternate;
         }
 
         @keyframes drift {
             0% { transform: translate(0, 0); }
             100% { transform: translate(30px, 50px); }
+        }
+
+        /* ============================================================
+           3D Gallery — replicating JarvisEvo hero-parallax.tsx
+           rotateX(15) + rotateZ(20) → 0, translateY(-250 → 500),
+           opacity(0.2 → 1), rows translate horizontally in opposite dirs
+           ============================================================ */
+        .hero-gallery-container {
+            margin-top: 400px;  /* push below hero content */
+            padding: 0 2rem;
+            will-change: transform, opacity;
+            /* Initial state set by JS; fallback: */
+            transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
+            opacity: 0.2;
+        }
+
+        .hero-gallery-row {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            will-change: transform;
+        }
+
+        /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
+        .hero-gallery-row.row-forward {
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        /* Row 2: flex-row (items flow left-to-right) */
+        .hero-gallery-row.row-reverse {
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .hero-gallery-item {
+            position: relative;
+            height: 300px;
+            width: 420px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            background: #f0f0f0;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hero-gallery-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
+        }
+
+        .hero-gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .hero-gallery-item .img-input {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .hero-gallery-item .img-output {
+            opacity: 0;
+            z-index: 2;
         }
 
         /* Project Title Styling */
@@ -197,8 +237,6 @@
             letter-spacing: -0.03em;
             color: var(--text-main);
             max-width: 1300px;
-            position: relative;
-            z-index: 5;
         }
 
         .title-highlight {
@@ -214,8 +252,6 @@
             margin-bottom: 2.5rem;
             max-width: 1000px;
             line-height: 1.3;
-            position: relative;
-            z-index: 5;
         }
         
         .subtitle-part {
@@ -226,15 +262,13 @@
             margin-top: 0.5rem;
         }
 
-        /* Authors Styling (Revamped) */
+        /* Authors Styling */
         .authors-container {
             margin: 2rem 0 3rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
             align-items: center;
-            position: relative;
-            z-index: 5;
         }
 
         .author-list {
@@ -288,13 +322,6 @@
             gap: 0.3rem;
         }
         
-        .affiliation-logo {
-            height: 24px;
-            width: auto;
-            vertical-align: middle;
-            opacity: 0.8;
-        }
-        
         .author-notes {
             font-size: 0.9rem;
             color: var(--text-secondary);
@@ -311,8 +338,6 @@
             margin-top: 1rem;
             flex-wrap: wrap;
             justify-content: center;
-            position: relative;
-            z-index: 5;
         }
 
         .btn-capsule {
@@ -355,8 +380,8 @@
         /* Abstract Box (Floating Style) */
         .abstract-box {
             max-width: 1000px; 
-            margin: -4rem auto 6rem; /* Negative margin to overlap hero slightly if needed */
-            background: rgba(255,255,255,0.7); 
+            margin: 4rem auto 6rem;
+            background: rgba(255,255,255,0.85); 
             padding: 3rem; 
             border-radius: 24px; 
             backdrop-filter: blur(20px); 
@@ -657,7 +682,17 @@
 
         @media (max-width: 968px) {
             .hero-section {
+                min-height: calc(100vh + 600px);
+            }
+            .hero-content {
                 padding-top: 6rem;
+            }
+            .hero-gallery-container {
+                margin-top: 300px;
+            }
+            .hero-gallery-item {
+                height: 180px;
+                width: 260px;
             }
             .project-title {
                 font-size: 3.5rem;
@@ -677,9 +712,6 @@
             }
             .table-container {
                 padding: 1rem;
-            }
-            .hero-gallery-container {
-                grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile */
             }
         }
     </style>
@@ -723,36 +755,72 @@
             }
         });
 
-        // 3D Hero Scroll Effect + Content Reveal
-        const heroGallery = document.querySelector('.hero-gallery-container');
-        if (heroGallery) {
-            window.addEventListener('scroll', () => {
-                const scrollY = window.scrollY;
-                const windowHeight = window.innerHeight;
-                
-                // Use a larger range for the effect to last longer
-                const progress = Math.min(Math.max(scrollY / (windowHeight * 0.8), 0), 1);
-                
-                // 1. Transform: RotateX 30 -> 0, Scale 0.9 -> 1.0, TranslateX -50% (fixed)
-                const rotateX = 30 - (progress * 30);
-                const scale = 0.9 + (progress * 0.1);
-                // Opacity increases as we scroll
-                const opacity = 0.4 + (progress * 0.6);
-                
-                // Move it slightly up as it flattens to simulate "coming forward"
-                const translateY = 0 - (progress * 50); // move up 50px
+        // ================================================================
+        // 3D Parallax Gallery — faithfully replicating JarvisEvo logic
+        //
+        // JarvisEvo uses framer-motion with:
+        //   rotateX:    [0, 0.2] → [15, 0]
+        //   rotateZ:    [0, 0.2] → [20, 0]
+        //   translateY: [0, 0.2] → [-250, 500]
+        //   opacity:    [0, 0.2] → [0.2, 1]
+        //   translateX (row-forward):  [0, 1] → [0, 1000]
+        //   translateX (row-reverse):  [0, 1] → [0, -1000]
+        //
+        // scrollYProgress is 0→1 over the element from "start start" to "end start"
+        // ================================================================
+        const heroSection = document.querySelector('.hero-section');
+        const galleryContainer = document.querySelector('.hero-gallery-container');
+        const rowsForward = document.querySelectorAll('.hero-gallery-row.row-forward');
+        const rowsReverse = document.querySelectorAll('.hero-gallery-row.row-reverse');
+        const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
-                heroGallery.style.transform = `translateX(-50%) translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`;
-                heroGallery.style.opacity = opacity;
-
-                // 2. Content Reveal: Input -> Output
-                // Fade in output image when near "flat" state (progress > 0.4)
-                const revealProgress = Math.min(Math.max((progress - 0.4) * 2.5, 0), 1);
+        if (heroSection && galleryContainer) {
+            const update = () => {
+                const rect = heroSection.getBoundingClientRect();
+                const sectionHeight = heroSection.offsetHeight;
                 
-                document.querySelectorAll('.img-output').forEach(img => {
+                // scrollYProgress: 0 when section top is at viewport top,
+                // 1 when section bottom reaches viewport top
+                // Matches framer-motion offset: ["start start", "end start"]
+                const scrollYProgress = Math.min(Math.max(-rect.top / (sectionHeight - window.innerHeight), 0), 1);
+                
+                // ---- Transform progress (happens in first 20% of scroll, matching [0, 0.2]) ----
+                const tp = Math.min(scrollYProgress / 0.2, 1);
+                
+                // Ease function (approximates spring feel)
+                const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+                const ep = ease(tp);
+                
+                const rotateX = 15 * (1 - ep);          // 15 → 0
+                const rotateZ = 20 * (1 - ep);          // 20 → 0
+                const translateY = -250 + (750 * ep);    // -250 → 500
+                const opacity = 0.2 + (0.8 * ep);       // 0.2 → 1
+                
+                galleryContainer.style.transform = 
+                    `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg) translateY(${translateY}px)`;
+                galleryContainer.style.opacity = opacity;
+                
+                // ---- Horizontal row translation (continuous over full scroll) ----
+                const translateX = scrollYProgress * 1000;
+                
+                rowsForward.forEach(row => {
+                    row.style.transform = `translateX(${translateX}px)`;
+                });
+                rowsReverse.forEach(row => {
+                    row.style.transform = `translateX(${-translateX}px)`;
+                });
+                
+                // ---- Input → Output image transition ----
+                // Start revealing output images when gallery is nearly flat (tp > 0.7)
+                const revealProgress = Math.min(Math.max((tp - 0.7) / 0.3, 0), 1);
+                outputImages.forEach(img => {
                     img.style.opacity = revealProgress;
                 });
-            });
+            };
+            
+            window.addEventListener('scroll', update, { passive: true });
+            window.addEventListener('resize', update, { passive: true });
+            update(); // initial call
         }
     </script>
     

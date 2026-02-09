@@ -5,97 +5,105 @@ title: PosterOmni - Generalized Artistic Poster Creation
 ---
 
 <div class="hero-section">
-    <!-- Logo -->
-    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" style="width: 120px; margin-bottom: 1.5rem; display: none;" onerror="this.style.display='none'">
-    
-    <h1 class="project-title">
-        <span class="title-highlight">PosterOmni</span>
-    </h1>
-    <h2 class="project-subtitle">
-        Generalized Artistic Poster Creation <br>
-        <span class="subtitle-part">via Task Distillation and Unified Reward Feedback</span>
-    </h2>
 
-    <div class="authors-container">
-        <div class="author-list">
-            <a href="#" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
-            <a href="#" class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></a>,
-            <a href="#" class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></a>,
-            <a href="#" class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></a>,
-            <a href="#" class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></a>,
-            <a href="#" class="author-name">Tian Ye<sup class="author-sup">1</sup></a>,
-            <a href="#" class="author-name">Junfeng Luo<sup class="author-sup">2</sup></a>,
-            <a href="#" class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></a>,
-            <a href="#" class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></a>
+    <!-- Hero Content (absolutely positioned on top of gallery) -->
+    <div class="hero-content">
+        <h1 class="project-title">
+            <span class="title-highlight">PosterOmni</span>
+        </h1>
+        <h2 class="project-subtitle">
+            Generalized Artistic Poster Creation <br>
+            <span class="subtitle-part">via Task Distillation and Unified Reward Feedback</span>
+        </h2>
+
+        <div class="authors-container">
+            <div class="author-list">
+                <a href="#" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
+                <a href="#" class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></a>,
+                <a href="#" class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></a>,
+                <a href="#" class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></a>,
+                <a href="#" class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></a>,
+                <a href="#" class="author-name">Tian Ye<sup class="author-sup">1</sup></a>,
+                <a href="#" class="author-name">Junfeng Luo<sup class="author-sup">2</sup></a>,
+                <a href="#" class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></a>,
+                <a href="#" class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></a>
+            </div>
+            
+            <div class="affiliations">
+                <span><sup class="author-sup">1</sup>HKUST(GZ)</span>
+                <span><sup class="author-sup">2</sup>Meituan</span>
+                <span><sup class="author-sup">3</sup>HKUST</span>
+            </div>
+            
+            <div class="author-notes">
+                <span><i class="fas fa-star author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Equal Contribution</span>
+                <span><i class="fas fa-envelope author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Corresponding Author</span>
+            </div>
         </div>
-        
-        <div class="affiliations">
-            <span><sup class="author-sup">1</sup>HKUST(GZ)</span>
-            <span><sup class="author-sup">2</sup>Meituan</span>
-            <span><sup class="author-sup">3</sup>HKUST</span>
-        </div>
-        
-        <div class="author-notes">
-            <span><i class="fas fa-star author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Equal Contribution</span>
-            <span><i class="fas fa-envelope author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Corresponding Author</span>
+
+        <div class="action-buttons">
+            <a href="https://arxiv.org/abs/2501.11646" class="btn-capsule primary">
+                <i class="fas fa-file-alt btn-icon"></i> Paper
+            </a>
+            <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule">
+                <i class="fab fa-github btn-icon"></i> Code
+            </a>
+            <a href="https://huggingface.co/PosterOmni" class="btn-capsule">
+                <i class="fas fa-cube btn-icon"></i> Model
+            </a>
         </div>
     </div>
 
-    <div class="action-buttons">
-        <a href="https://arxiv.org/abs/2501.11646" class="btn-capsule primary">
-            <i class="fas fa-file-alt btn-icon"></i> Paper
-        </a>
-        <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule">
-            <i class="fab fa-github btn-icon"></i> Code
-        </a>
-        <a href="https://huggingface.co/PosterOmni" class="btn-capsule">
-            <i class="fas fa-cube btn-icon"></i> Model
-        </a>
-    </div>
-
-    <!-- 3D Scrolling Gallery: Input -> Output Reveal -->
+    <!-- 3D Parallax Gallery (behind hero content, JarvisEvo-style) -->
     <div class="hero-gallery-container">
-        <!-- Item 1 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
-            <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
+        <!-- Row 1: flows right-to-left, translates right on scroll -->
+        <div class="hero-gallery-row row-forward">
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
+                <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_2.png" class="img-input" alt="Input 2">
+                <img src="/images/posteromni/demo_teaser/demo_output_2.png" class="img-output" alt="Output 2">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_3.png" class="img-input" alt="Input 3">
+                <img src="/images/posteromni/demo_teaser/demo_output_3.png" class="img-output" alt="Output 3">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/original_input_4.jpg" class="img-input" alt="Input 4">
+                <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/original_input_5.jpg" class="img-input" alt="Input 5">
+                <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
+            </div>
         </div>
-        <!-- Item 2 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_2.png" class="img-input" alt="Input 2">
-            <img src="/images/posteromni/demo_teaser/demo_output_2.png" class="img-output" alt="Output 2">
-        </div>
-        <!-- Item 3 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_3.png" class="img-input" alt="Input 3">
-            <img src="/images/posteromni/demo_teaser/demo_output_3.png" class="img-output" alt="Output 3">
-        </div>
-        <!-- Item 4 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_4.png" class="img-input" alt="Input 4">
-            <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
-        </div>
-        <!-- Item 5 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_5.png" class="img-input" alt="Input 5">
-            <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
-        </div>
-        <!-- Item 6 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_6.png" class="img-input" alt="Input 6">
-            <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
-        </div>
-        <!-- Item 7 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_7.png" class="img-input" alt="Input 7">
-            <img src="/images/posteromni/demo_teaser/demo_output_7.png" class="img-output" alt="Output 7">
-        </div>
-        <!-- Item 8 -->
-        <div class="hero-gallery-item">
-            <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
-            <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
+        <!-- Row 2: flows left-to-right, translates left on scroll -->
+        <div class="hero-gallery-row row-reverse">
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/original_input_6.png" class="img-input" alt="Input 6">
+                <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/original_input_7.png" class="img-input" alt="Input 7">
+                <img src="/images/posteromni/demo_teaser/demo_output_7.png" class="img-output" alt="Output 7">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
+                <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_9.png" class="img-input" alt="Input 9">
+                <img src="/images/posteromni/demo_teaser/demo_output_9.png" class="img-output" alt="Output 9">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_10.png" class="img-input" alt="Input 10">
+                <img src="/images/posteromni/demo_teaser/demo_output_10.png" class="img-output" alt="Output 10">
+            </div>
         </div>
     </div>
+
 </div>
 
 <div class="content-wrapper">

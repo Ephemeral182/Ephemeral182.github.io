@@ -114,7 +114,7 @@
                 radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 25%);
         }
 
-        /* Hero text content — floats on top */
+        /* Hero text content — floats on top with readable background */
         .hero-content {
             position: absolute;
             top: 0;
@@ -129,6 +129,13 @@
             min-height: 100vh;
             padding: 6rem 2rem 4rem;
             pointer-events: none; /* allow scroll through */
+            /* Semi-transparent backdrop so text is always readable */
+            background: radial-gradient(
+                ellipse 80% 70% at 50% 45%,
+                rgba(255,255,255,0.92) 0%,
+                rgba(255,255,255,0.75) 60%,
+                transparent 100%
+            );
         }
         /* re-enable clicks on interactive elements */
         .hero-content a,
@@ -240,7 +247,10 @@
         }
 
         .title-highlight {
-            color: var(--text-main);
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%, #a855f7 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             position: relative;
             display: inline-block;
         }

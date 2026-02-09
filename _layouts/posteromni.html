@@ -359,6 +359,31 @@
             font-variant-numeric: tabular-nums; /* 等宽数字对齐 */
         }
 
+        /* Number Cells Hover Effect */
+        .results-table td:not(:first-child) {
+            transition: all 0.2s ease;
+            cursor: default;
+        }
+
+        .results-table td:not(:first-child):hover {
+            color: var(--primary-dark);
+            background: rgba(99, 102, 241, 0.05); /* 轻微的紫色背景 */
+            transform: scale(1.1); /* 放大 */
+            font-weight: 600;
+        }
+
+        /* Rank Badge Hover - ensure text remains readable or enhances */
+        .rank-1:hover, .rank-2:hover {
+            filter: brightness(0.95); /* 稍微变暗一点点增加对比 */
+            transform: scale(1.05);
+        }
+
+        /* Baseline Diff Row Hover */
+        .row-baseline-diff td:not(:first-child):hover {
+            color: #166534; /* 更深的绿色 */
+            background: rgba(220, 252, 231, 0.6);
+        }
+
         /* Highlight Row for Ours */
         .row-ours {
             background: rgba(99, 102, 241, 0.03);

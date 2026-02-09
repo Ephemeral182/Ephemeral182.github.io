@@ -6,7 +6,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
 <div class="hero-section">
     <!-- Logo if available, otherwise omitted or use placeholder -->
-    <img src="/images/posteromni/logo.png" alt="PosterOmni Logo" class="hero-logo" onerror="this.style.display='none'">
+    <img src="/images/posteromni/logo_svg.png" alt="PosterOmni Logo" class="hero-logo" onerror="this.style.display='none'">
     
     <h1 class="project-title">
         <span class="title-gradient">PosterOmni</span>: Generalized Artistic Poster Creation via <br> Task Distillation and Unified Reward Feedback

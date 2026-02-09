@@ -161,22 +161,53 @@
             opacity: 0.2;
         }
 
+        /* Once gallery is flat, enable horizontal scroll */
+        .hero-gallery-container.is-flat {
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            /* Subtle scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,0,0,0.15) transparent;
+        }
+        .hero-gallery-container.is-flat::-webkit-scrollbar {
+            height: 6px;
+        }
+        .hero-gallery-container.is-flat::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .hero-gallery-container.is-flat::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.15);
+            border-radius: 3px;
+        }
+
         .hero-gallery-row {
             display: flex;
             gap: 24px;
             margin-bottom: 24px;
             will-change: transform;
+            /* Ensure the row never wraps and is wide enough */
+            width: max-content;
+            min-width: 100%;
         }
 
-        /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
+        /* Row 1: flex-row-reverse (items flow right-to-left) during tilt */
         .hero-gallery-row.row-forward {
             flex-direction: row-reverse;
             justify-content: center;
         }
-        /* Row 2: flex-row (items flow left-to-right) */
+        /* Row 2: flex-row (items flow left-to-right) during tilt */
         .hero-gallery-row.row-reverse {
             flex-direction: row;
             justify-content: center;
+        }
+        
+        /* When flat, both rows flow normally left-to-right and center */
+        .hero-gallery-container.is-flat .hero-gallery-row.row-forward,
+        .hero-gallery-container.is-flat .hero-gallery-row.row-reverse {
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 2rem;
         }
 
         .hero-gallery-item {

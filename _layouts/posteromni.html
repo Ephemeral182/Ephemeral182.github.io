@@ -6,7 +6,7 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playwrite+CZ:wght@100..400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
     <style>
@@ -73,10 +73,13 @@
         }
 
         .nav-logo {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--text-main);
+            font-family: 'Playwrite CZ', cursive;
+            font-weight: 400;
+            font-size: 1.3rem;
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: none;
         }
 
@@ -109,9 +112,7 @@
             perspective: 1000px;
             transform-style: preserve-3d;
             overflow: hidden;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.08) 0%, transparent 25%);
+            background: transparent;
         }
 
         /* Hero text content — floats on top with readable background */
@@ -144,24 +145,7 @@
             pointer-events: auto;
         }
 
-        /* Background Blur Elements */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 50%;
-            height: 50%;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-            filter: blur(80px);
-            z-index: 0;
-            animation: drift 20s infinite alternate;
-        }
-
-        @keyframes drift {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(30px, 50px); }
-        }
+        /* (Background handled by fixed global gradient layers) */
 
         /* ============================================================
            3D Gallery — replicating JarvisEvo hero-parallax.tsx
@@ -247,12 +231,14 @@
         }
 
         .title-highlight {
+            font-family: 'Playwrite CZ', cursive;
             background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%, #a855f7 50%, #ec4899 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
             position: relative;
             display: inline-block;
+            letter-spacing: 0.01em;
         }
 
         .project-subtitle {
@@ -731,6 +717,16 @@
     {% endfor %}
 </head>
 <body>
+
+    <!-- Global Gradient Blur Background (JarvisEvo-style) -->
+    <div style="position:fixed;inset:0;z-index:0;pointer-events:none;">
+        <!-- Cool Blue Glow — top right -->
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at top right,rgba(70,130,180,0.35),transparent 70%);filter:blur(80px);"></div>
+        <!-- Soft Warm Glow — center -->
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at center,rgba(255,253,206,0.3),transparent 70%);mix-blend-mode:multiply;"></div>
+        <!-- Purple Glow — bottom left -->
+        <div style="position:absolute;inset:0;background-image:radial-gradient(circle at bottom left,rgba(147,112,219,0.3),transparent 70%);filter:blur(80px);"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar" id="navbar">

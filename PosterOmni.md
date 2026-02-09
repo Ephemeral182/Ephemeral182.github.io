@@ -78,8 +78,36 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </div>
     </div>
 
-    <!-- Section 2: Methodology (Left Image, Right Text) -->
-    <div class="split-section reverse" id="method">
+    <!-- Section 2: Data Pipeline (Right Text, Left Image - using reverse) -->
+    <div class="split-section reverse" id="data">
+        <div class="split-text">
+            <span class="section-label">Data Engineering</span>
+            <h2 class="section-title">Automated Data Construction</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="number-badge">1</div>
+                    <span class="feature-heading">Prompt & Image Generation</span>
+                    <p class="feature-desc">Leverages GPT-4 and Qwen to generate diverse, structured prompts and initial images covering various themes.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">2</div>
+                    <span class="feature-heading">Multimodal Filtering</span>
+                    <p class="feature-desc">Employs OCR and VLM-based filtering to ensure textual correctness and layout-content consistency.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="number-badge">3</div>
+                    <span class="feature-heading">Task-Specific Construction</span>
+                    <p class="feature-desc">Automatically synthesizes paired data for 6 specific tasks using tools like SAM-2 and BrushNet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="split-visual">
+            <img src="/images/posteromni/posteromni_datapipeline.jpg" alt="Data Construction Pipeline">
+        </div>
+    </div>
+
+    <!-- Section 3: Methodology (Left Text, Right Image) -->
+    <div class="split-section" id="method">
         <div class="split-text">
             <span class="section-label">Methodology</span>
             <h2 class="section-title">Progressive Training Pipeline</h2>
@@ -108,34 +136,6 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </div>
         <div class="split-visual">
             <img src="/images/posteromni/overview.jpg" alt="PosterOmni Methodology Overview">
-        </div>
-    </div>
-
-    <!-- Section 3: Data Pipeline (Left Text, Right Image) -->
-    <div class="split-section" id="data">
-        <div class="split-text">
-            <span class="section-label">Data Engineering</span>
-            <h2 class="section-title">Automated Data Construction</h2>
-            <div class="feature-list">
-                <div class="feature-item">
-                    <div class="number-badge">1</div>
-                    <span class="feature-heading">Prompt & Image Generation</span>
-                    <p class="feature-desc">Leverages GPT-4 and Qwen to generate diverse, structured prompts and initial images covering various themes.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="number-badge">2</div>
-                    <span class="feature-heading">Multimodal Filtering</span>
-                    <p class="feature-desc">Employs OCR and VLM-based filtering to ensure textual correctness and layout-content consistency.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="number-badge">3</div>
-                    <span class="feature-heading">Task-Specific Construction</span>
-                    <p class="feature-desc">Automatically synthesizes paired data for 6 specific tasks using tools like SAM-2 and BrushNet.</p>
-                </div>
-            </div>
-        </div>
-        <div class="split-visual">
-            <img src="/images/posteromni/posteromni_datapipeline.jpg" alt="Data Construction Pipeline">
         </div>
     </div>
 

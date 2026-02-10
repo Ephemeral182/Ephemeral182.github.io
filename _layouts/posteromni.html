@@ -42,7 +42,7 @@
             background: var(--background);
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
+            overflow-x: visible;
             -webkit-font-smoothing: antialiased;
         }
 
@@ -111,7 +111,8 @@
             min-height: calc(100vh + 1000px);
             perspective: 1000px;
             transform-style: preserve-3d;
-            overflow: hidden;
+            overflow-x: visible;
+            overflow-y: hidden;
             background: transparent;
         }
 
@@ -159,29 +160,8 @@
             /* Initial state set by JS; fallback: */
             transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
             opacity: 0.2;
-            transition: padding 0.5s ease;
-        }
-        
-        /* When gallery is flat (摆正), remove padding and enable scroll */
-        .hero-gallery-container.flat {
-            padding: 0;
-            overflow-x: auto;
-            overflow-y: hidden;
-            scrollbar-width: thin;
-            scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
-        }
-        
-        .hero-gallery-container.flat::-webkit-scrollbar {
-            height: 8px;
-        }
-        
-        .hero-gallery-container.flat::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        
-        .hero-gallery-container.flat::-webkit-scrollbar-thumb {
-            background: rgba(99, 102, 241, 0.3);
-            border-radius: 4px;
+            width: 100%;
+            overflow-x: visible;
         }
 
         .hero-gallery-row {
@@ -191,12 +171,7 @@
             will-change: transform;
             justify-content: center;
             flex-wrap: nowrap;
-            transition: justify-content 0.5s ease;
-        }
-        
-        /* When flat, align to start (no centering, enable full scroll) */
-        .hero-gallery-container.flat .hero-gallery-row {
-            justify-content: flex-start;
+            min-width: min-content;
         }
 
         /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
@@ -210,13 +185,15 @@
 
         .hero-gallery-item {
             position: relative;
+            height: 320px;
+            width: auto;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
             background: #f0f0f0;
             flex-shrink: 0;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.5s ease, height 0.5s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .hero-gallery-item:hover {
@@ -714,14 +691,10 @@
             }
             .hero-gallery-container {
                 margin-top: 300px;
-                padding: 0 1rem;
             }
-            .hero-gallery-container.flat {
-                padding: 0;
-            }
-            .hero-gallery-row {
-                gap: 16px;
-                margin-bottom: 16px;
+            .hero-gallery-item {
+                height: 180px;
+                width: 260px;
             }
             .project-title {
                 font-size: 3.5rem;
@@ -805,12 +778,10 @@
         const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
         if (heroSection && galleryContainer) {
-            let maxTiltedHeight = 0;
-            let maxFlatHeight = 0;
             let imagesLoaded = 0;
             const totalImages = galleryItems.length * 2; // input + output per item
             
-            // Calculate max heights after all images load
+            // Calculate sizes after all images load
             galleryItems.forEach(item => {
                 const inputImg = item.querySelector('.img-input');
                 const outputImg = item.querySelector('.img-output');
@@ -830,29 +801,28 @@
             });
             
             function calculateSizes() {
-                // 斜着状态：统一高度为280px，每张图按自己宽高比计算宽度
-                const tiltedTargetHeight = 280;
+                // Tilted state: unified height of 320px
+                const tiltedTargetHeight = 320;
                 
-                galleryItems.forEach(item => {
-                    const inputImg = item.querySelector('.img-input');
-                    const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
-                    const scaledWidth = tiltedTargetHeight * aspectRatio;
-                    
-                    item.dataset.tiltedHeight = tiltedTargetHeight;
-                    item.dataset.tiltedWidth = scaledWidth;
-                });
-                
-                // 摆正状态：统一高度为视口高度的50%，每张图按自己宽高比计算宽度
+                // Flat state: unified height (larger for better display)
                 const isMobile = window.innerWidth <= 968;
-                const flatTargetHeight = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.5;
+                const flatTargetHeight = isMobile ? 400 : 500;
                 
+                // Set sizes for both states
                 galleryItems.forEach(item => {
                     const inputImg = item.querySelector('.img-input');
                     const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
-                    const scaledWidth = flatTargetHeight * aspectRatio;
                     
+                    // Tilted state: height = 320px, width adapts to aspect ratio
+                    const tiltedWidth = tiltedTargetHeight * aspectRatio;
+                    item.dataset.tiltedHeight = tiltedTargetHeight;
+                    item.dataset.tiltedWidth = tiltedWidth;
+                    
+                    // Flat state: height = flatTargetHeight, width adapts to aspect ratio
+                    // This allows landscape images to be wider than portrait images
+                    const flatWidth = flatTargetHeight * aspectRatio;
                     item.dataset.flatHeight = flatTargetHeight;
-                    item.dataset.flatWidth = scaledWidth;
+                    item.dataset.flatWidth = flatWidth;
                 });
                 
                 // Apply initial sizes
@@ -864,8 +834,8 @@
                 galleryItems.forEach(item => {
                     const tiltedH = parseFloat(item.dataset.tiltedHeight) || 320;
                     const tiltedW = parseFloat(item.dataset.tiltedWidth) || 320;
-                    const flatH = parseFloat(item.dataset.flatHeight) || 400;
-                    const flatW = parseFloat(item.dataset.flatWidth) || 400;
+                    const flatH = parseFloat(item.dataset.flatHeight) || 500;
+                    const flatW = parseFloat(item.dataset.flatWidth) || 500;
                     
                     const currentH = tiltedH + (flatH - tiltedH) * progress;
                     const currentW = tiltedW + (flatW - tiltedW) * progress;

@@ -67,27 +67,23 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 <img src="/images/posteromni/demo_teaser/demo_output_3.png" class="img-output" alt="Output 3">
             </div>
             <div class="hero-gallery-item">
-                <img src="/images/posteromni/demo_teaser/original_input_4.jpg" class="img-input" alt="Input 4">
-                <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
-            </div>
-            <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/original_input_5.jpg" class="img-input" alt="Input 5">
                 <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/original_input_4.jpg" class="img-input" alt="Input 4">
+                <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
             </div>
         </div>
         <!-- Row 2: flows left-to-right, translates left on scroll -->
         <div class="hero-gallery-row row-reverse">
             <div class="hero-gallery-item">
-                <img src="/images/posteromni/demo_teaser/original_input_6.png" class="img-input" alt="Input 6">
-                <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
-            </div>
-            <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/original_input_7.png" class="img-input" alt="Input 7">
                 <img src="/images/posteromni/demo_teaser/demo_output_7.png" class="img-output" alt="Output 7">
             </div>
             <div class="hero-gallery-item">
-                <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
-                <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
+                <img src="/images/posteromni/demo_teaser/original_input_6.png" class="img-input" alt="Input 6">
+                <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
             </div>
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_9.png" class="img-input" alt="Input 9">
@@ -96,6 +92,10 @@ title: PosterOmni - Generalized Artistic Poster Creation
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_10.png" class="img-input" alt="Input 10">
                 <img src="/images/posteromni/demo_teaser/demo_output_10.png" class="img-output" alt="Output 10">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
+                <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
             </div>
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">

@@ -189,7 +189,8 @@
             display: inline-block;
             flex-shrink: 0;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.4s ease, height 0.4s ease;
+            overflow: visible;
         }
 
         .hero-gallery-item:hover {
@@ -814,23 +815,25 @@
                 // Tilted state: unified height of 320px
                 const tiltedTargetHeight = 320;
                 
-                // Flat state: unified height (larger for better display)
+                // Flat state: unified height (smaller for better display)
                 const isMobile = window.innerWidth <= 968;
-                const flatTargetHeight = isMobile ? 400 : 500;
+                const flatTargetHeight = isMobile ? 260 : 320;
                 
                 // Set sizes for both states
                 galleryItems.forEach(item => {
                     const inputImg = item.querySelector('.img-input');
-                    const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
+                    const outputImg = item.querySelector('.img-output');
                     
-                    // Tilted state: height = 320px, width adapts to aspect ratio
-                    const tiltedWidth = tiltedTargetHeight * aspectRatio;
+                    // Tilted state: height = 320px, width adapts to INPUT image aspect ratio
+                    const inputAspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
+                    const tiltedWidth = tiltedTargetHeight * inputAspectRatio;
                     item.dataset.tiltedHeight = tiltedTargetHeight;
                     item.dataset.tiltedWidth = tiltedWidth;
                     
-                    // Flat state: height = flatTargetHeight, width adapts to aspect ratio
-                    // This allows landscape images to be wider than portrait images
-                    const flatWidth = flatTargetHeight * aspectRatio;
+                    // Flat state: height = flatTargetHeight, width adapts to OUTPUT image aspect ratio
+                    // This allows landscape output images to be wider than portrait input images
+                    const outputAspectRatio = outputImg.naturalWidth / outputImg.naturalHeight;
+                    const flatWidth = flatTargetHeight * outputAspectRatio;
                     item.dataset.flatHeight = flatTargetHeight;
                     item.dataset.flatWidth = flatWidth;
                 });

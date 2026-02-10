@@ -59,10 +59,6 @@ title: PosterOmni - Generalized Artistic Poster Creation
         <!-- Row 1: flows right-to-left, translates right on scroll -->
         <div class="hero-gallery-row row-forward">
             <div class="hero-gallery-item">
-                <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
-                <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
-            </div>
-            <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_2.png" class="img-input" alt="Input 2">
                 <img src="/images/posteromni/demo_teaser/demo_output_2.png" class="img-output" alt="Output 2">
             </div>
@@ -100,6 +96,10 @@ title: PosterOmni - Generalized Artistic Poster Creation
             <div class="hero-gallery-item">
                 <img src="/images/posteromni/demo_teaser/demo_input_10.png" class="img-input" alt="Input 10">
                 <img src="/images/posteromni/demo_teaser/demo_output_10.png" class="img-output" alt="Output 10">
+            </div>
+            <div class="hero-gallery-item">
+                <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
+                <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
             </div>
         </div>
     </div>

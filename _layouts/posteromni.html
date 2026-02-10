@@ -186,11 +186,7 @@
         .hero-gallery-item {
             position: relative;
             height: 320px;
-            width: auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-            background: #f0f0f0;
+            display: inline-block;
             flex-shrink: 0;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -198,7 +194,6 @@
 
         .hero-gallery-item:hover {
             transform: translateY(-12px);
-            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
         }
 
         /* Input image is relative to define the container's width */
@@ -209,6 +204,14 @@
             position: relative;
             z-index: 1;
             opacity: 1;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            background: #f0f0f0;
+            transition: opacity 0.4s ease, box-shadow 0.3s ease;
+        }
+        
+        .hero-gallery-item:hover .img-input {
+            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
         }
         
         /* Output image overlays on top, also height-aligned with auto width */
@@ -221,7 +224,14 @@
             left: 0;
             z-index: 2;
             opacity: 0;
-            transition: opacity 0.4s ease;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            background: #f0f0f0;
+            transition: opacity 0.4s ease, box-shadow 0.3s ease;
+        }
+        
+        .hero-gallery-item:hover .img-output {
+            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
         }
 
         /* Project Title Styling */

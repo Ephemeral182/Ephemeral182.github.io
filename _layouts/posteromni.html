@@ -222,19 +222,6 @@
             background: #ffffff;
             border-radius: 16px;
         }
-        
-        /* Add a white background layer for Rescaling tasks to ensure it shows through */
-        .hero-gallery-item[data-task="Rescaling"]::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #ffffff;
-            z-index: 0;
-            border-radius: 16px;
-        }
 
         .hero-gallery-item:hover {
             transform: translateY(-12px);
@@ -250,7 +237,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 3;
+            z-index: 2;
             opacity: 0;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
@@ -275,25 +262,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 2;
+            z-index: 1;
             opacity: 1;
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
             object-fit: contain;
-            transition: opacity 0.4s ease, box-shadow 0.3s ease, visibility 0.4s ease;
+            transition: opacity 0.4s ease, box-shadow 0.3s ease;
         }
         
         .hero-gallery-item:hover .img-output {
             opacity: 0;
-            visibility: hidden;
             box-shadow: 0 16px 48px rgba(0,0,0,0.20);
-        }
-        
-        /* Special handling for Rescaling task - completely hide output on hover */
-        .hero-gallery-item[data-task="Rescaling"]:hover .img-output {
-            opacity: 0;
-            visibility: hidden;
-            display: none;
         }
 
         /* Before/After Label */
@@ -301,7 +280,7 @@
             position: absolute;
             top: 16px;
             left: 16px;
-            z-index: 4;
+            z-index: 3;
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.95), rgba(139, 92, 246, 0.95));
             color: white;
             padding: 8px 18px;
@@ -338,7 +317,7 @@
             bottom: 12px;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 4;
+            z-index: 3;
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.92));
             color: white;
             padding: 10px 20px;

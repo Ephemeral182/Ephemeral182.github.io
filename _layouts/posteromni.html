@@ -199,33 +199,15 @@
             flex-shrink: 0;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.4s ease, height 0.4s ease;
-            overflow: visible;
+            overflow: hidden;
         }
 
         .hero-gallery-item:hover {
             transform: translateY(-12px);
         }
 
-        /* Input image is relative to define the container's width */
+        /* Input image - hidden by default, shown on hover */
         .hero-gallery-item .img-input {
-            display: block;
-            height: 100%;
-            width: auto;
-            position: relative;
-            z-index: 1;
-            opacity: 1;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
-            background: #f0f0f0;
-            transition: opacity 0.4s ease, box-shadow 0.3s ease;
-        }
-        
-        .hero-gallery-item:hover .img-input {
-            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
-        }
-        
-        /* Output image overlays on top, also height-aligned with auto width */
-        .hero-gallery-item .img-output {
             display: block;
             height: 100%;
             width: auto;
@@ -240,8 +222,79 @@
             transition: opacity 0.4s ease, box-shadow 0.3s ease;
         }
         
+        .hero-gallery-item:hover .img-input {
+            opacity: 1;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.20);
+        }
+        
+        /* Output image - visible by default, hidden on hover */
+        .hero-gallery-item .img-output {
+            display: block;
+            height: 100%;
+            width: auto;
+            position: relative;
+            z-index: 1;
+            opacity: 1;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            background: #f0f0f0;
+            transition: opacity 0.4s ease, box-shadow 0.3s ease;
+        }
+        
         .hero-gallery-item:hover .img-output {
             box-shadow: 0 16px 48px rgba(0,0,0,0.20);
+        }
+
+        /* Before/After Label */
+        .image-label {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.75);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            backdrop-filter: blur(8px);
+            transition: all 0.4s ease;
+            pointer-events: none;
+            font-size: 0;
+        }
+
+        .image-label::before {
+            content: 'After';
+            font-size: 0.85rem;
+        }
+
+        .hero-gallery-item:hover .image-label {
+            background: rgba(99, 102, 241, 0.9);
+        }
+
+        .hero-gallery-item:hover .image-label::before {
+            content: 'Before';
+        }
+
+        /* Task Label */
+        .task-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3), transparent);
+            color: white;
+            padding: 24px 16px 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 0.05em;
+            border-radius: 0 0 16px 16px;
+            transition: all 0.3s ease;
+            pointer-events: none;
         }
 
         /* Project Title Styling */
@@ -735,6 +788,17 @@
             .table-container {
                 padding: 1rem;
             }
+            .image-label {
+                padding: 4px 10px;
+                font-size: 0;
+            }
+            .image-label::before {
+                font-size: 0.75rem;
+            }
+            .task-label {
+                font-size: 0.7rem;
+                padding: 20px 12px 10px;
+            }
         }
     </style>
     <!-- Custom CSS from page frontmatter -->
@@ -793,7 +857,6 @@
         const heroSection = document.querySelector('.hero-section');
         const galleryContainer = document.querySelector('.hero-gallery-container');
         const galleryItems = document.querySelectorAll('.hero-gallery-item');
-        const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
         if (heroSection && galleryContainer) {
             let imagesLoaded = 0;
@@ -830,17 +893,25 @@
                 galleryItems.forEach(item => {
                     const inputImg = item.querySelector('.img-input');
                     const outputImg = item.querySelector('.img-output');
+                    const taskType = item.dataset.task;
                     
-                    // Tilted state: height = 320px, width adapts to INPUT image aspect ratio
-                    const inputAspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
-                    const tiltedWidth = tiltedTargetHeight * inputAspectRatio;
+                    // Tilted state: height = 320px, width adapts to OUTPUT image aspect ratio (since output is default)
+                    const outputAspectRatio = outputImg.naturalWidth / outputImg.naturalHeight;
+                    const tiltedWidth = tiltedTargetHeight * outputAspectRatio;
                     item.dataset.tiltedHeight = tiltedTargetHeight;
                     item.dataset.tiltedWidth = tiltedWidth;
                     
-                    // Flat state: height = flatTargetHeight, width adapts to OUTPUT image aspect ratio
-                    // This allows landscape output images to be wider than portrait input images
-                    const outputAspectRatio = outputImg.naturalWidth / outputImg.naturalHeight;
-                    const flatWidth = flatTargetHeight * outputAspectRatio;
+                    // Flat state: height = flatTargetHeight
+                    // For Rescaling tasks, keep height constant and width adapts to output aspect ratio
+                    // For other tasks, width adapts to output aspect ratio
+                    let flatWidth;
+                    if (taskType === 'Rescaling') {
+                        // Rescaling: keep same height, width based on output aspect ratio
+                        flatWidth = flatTargetHeight * outputAspectRatio;
+                    } else {
+                        // Other tasks: width based on output aspect ratio
+                        flatWidth = flatTargetHeight * outputAspectRatio;
+                    }
                     item.dataset.flatHeight = flatTargetHeight;
                     item.dataset.flatWidth = flatWidth;
                 });
@@ -896,12 +967,6 @@
                 
                 // Apply dynamic sizes based on progress
                 applySizes(ep);
-                
-                // ---- Input → Output image transition ----
-                const revealProgress = Math.min(Math.max((tp - 0.7) / 0.3, 0), 1);
-                outputImages.forEach(img => {
-                    img.style.opacity = revealProgress;
-                });
             };
             
             window.addEventListener('scroll', update, { passive: true });

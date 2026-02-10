@@ -58,48 +58,68 @@ title: PosterOmni - Generalized Artistic Poster Creation
     <div class="hero-gallery-container">
         <!-- Row 1: flows right-to-left, translates right on scroll -->
         <div class="hero-gallery-row row-forward">
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Rescaling">
                 <img src="/images/posteromni/demo_teaser/demo_input_2.png" class="img-input" alt="Input 2">
                 <img src="/images/posteromni/demo_teaser/demo_output_2.png" class="img-output" alt="Output 2">
+                <span class="image-label">After</span>
+                <span class="task-label">Rescaling</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Rescaling">
                 <img src="/images/posteromni/demo_teaser/demo_input_3.png" class="img-input" alt="Input 3">
                 <img src="/images/posteromni/demo_teaser/demo_output_3.png" class="img-output" alt="Output 3">
+                <span class="image-label">After</span>
+                <span class="task-label">Rescaling</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Extending">
                 <img src="/images/posteromni/demo_teaser/original_input_5.jpg" class="img-input" alt="Input 5">
                 <img src="/images/posteromni/demo_teaser/demo_output_5.png" class="img-output" alt="Output 5">
+                <span class="image-label">After</span>
+                <span class="task-label">Extending</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Layout-driven">
                 <img src="/images/posteromni/demo_teaser/original_input_4.jpg" class="img-input" alt="Input 4">
                 <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="img-output" alt="Output 4">
+                <span class="image-label">After</span>
+                <span class="task-label">Layout-driven</span>
             </div>
         </div>
         <!-- Row 2: flows left-to-right, translates left on scroll -->
         <div class="hero-gallery-row row-reverse">
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Layout-driven">
                 <img src="/images/posteromni/demo_teaser/original_input_7.png" class="img-input" alt="Input 7">
                 <img src="/images/posteromni/demo_teaser/demo_output_7.png" class="img-output" alt="Output 7">
+                <span class="image-label">After</span>
+                <span class="task-label">Layout-driven</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Style-driven">
                 <img src="/images/posteromni/demo_teaser/original_input_6.png" class="img-input" alt="Input 6">
                 <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="img-output" alt="Output 6">
+                <span class="image-label">After</span>
+                <span class="task-label">Style-driven</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Extending">
                 <img src="/images/posteromni/demo_teaser/demo_input_9.png" class="img-input" alt="Input 9">
                 <img src="/images/posteromni/demo_teaser/demo_output_9.png" class="img-output" alt="Output 9">
+                <span class="image-label">After</span>
+                <span class="task-label">Extending</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Id-driven">
                 <img src="/images/posteromni/demo_teaser/demo_input_10.png" class="img-input" alt="Input 10">
                 <img src="/images/posteromni/demo_teaser/demo_output_10.png" class="img-output" alt="Output 10">
+                <span class="image-label">After</span>
+                <span class="task-label">Id-driven</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Filling">
                 <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="img-input" alt="Input 8">
                 <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="img-output" alt="Output 8">
+                <span class="image-label">After</span>
+                <span class="task-label">Filling</span>
             </div>
-            <div class="hero-gallery-item">
+            <div class="hero-gallery-item" data-task="Rescaling">
                 <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="img-input" alt="Input 1">
                 <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="img-output" alt="Output 1">
+                <span class="image-label">After</span>
+                <span class="task-label">Rescaling</span>
             </div>
         </div>
     </div>

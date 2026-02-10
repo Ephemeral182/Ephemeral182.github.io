@@ -136,8 +136,8 @@
             min-height: calc(100vh + 1000px);
             perspective: 1000px;
             transform-style: preserve-3d;
-            overflow: visible;
-            background: transparent;
+            overflow-x: hidden;
+            overflow-y: hidden;
             width: 100%;
         }
 
@@ -186,7 +186,7 @@
             transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
             opacity: 0.2;
             width: 100%;
-            overflow: visible;
+            width: 100%;
         }
 
         .hero-gallery-row {
@@ -219,7 +219,7 @@
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.4s ease, height 0.4s ease;
             overflow: hidden;
-            background: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.4s ease, height 0.4s ease;
             border-radius: 16px;
         }
 

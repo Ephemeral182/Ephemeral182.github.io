@@ -155,13 +155,13 @@
            ============================================================ */
         .hero-gallery-container {
             margin-top: 400px;  /* push below hero content */
-            padding: 0 2rem;
+            padding: 0;
             will-change: transform, opacity;
             /* Initial state set by JS; fallback: */
             transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
             opacity: 0.2;
             width: 100%;
-            overflow-x: visible;
+            overflow: visible;
         }
 
         .hero-gallery-row {
@@ -169,14 +169,23 @@
             gap: 24px;
             margin-bottom: 24px;
             will-change: transform;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: nowrap;
-            min-width: min-content;
+            overflow-x: auto;
+            overflow-y: visible;
+            padding: 0 2rem;
+            /* Hide scrollbar but keep scrolling */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        
+        .hero-gallery-row::-webkit-scrollbar {
+            display: none; /* Chrome/Safari/Opera */
         }
 
         /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
         .hero-gallery-row.row-forward {
-            flex-direction: row-reverse;
+            flex-direction: row;
         }
         /* Row 2: flex-row (items flow left-to-right) */
         .hero-gallery-row.row-reverse {
@@ -783,8 +792,6 @@
         // ================================================================
         const heroSection = document.querySelector('.hero-section');
         const galleryContainer = document.querySelector('.hero-gallery-container');
-        const rowsForward = document.querySelectorAll('.hero-gallery-row.row-forward');
-        const rowsReverse = document.querySelectorAll('.hero-gallery-row.row-reverse');
         const galleryItems = document.querySelectorAll('.hero-gallery-item');
         const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
@@ -889,16 +896,6 @@
                 
                 // Apply dynamic sizes based on progress
                 applySizes(ep);
-                
-                // ---- Horizontal row translation ----
-                const translateX = ep * 200;
-                
-                rowsForward.forEach(row => {
-                    row.style.transform = `translateX(${translateX}px)`;
-                });
-                rowsReverse.forEach(row => {
-                    row.style.transform = `translateX(${-translateX}px)`;
-                });
                 
                 // ---- Input → Output image transition ----
                 const revealProgress = Math.min(Math.max((tp - 0.7) / 0.3, 0), 1);

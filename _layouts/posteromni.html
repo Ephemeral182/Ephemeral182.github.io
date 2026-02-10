@@ -830,16 +830,9 @@
             });
             
             function calculateSizes() {
-                // Find max natural height for tilted state (基于320px高度)
-                const tiltedTargetHeight = 320;
-                galleryItems.forEach(item => {
-                    const inputImg = item.querySelector('.img-input');
-                    if (inputImg.naturalHeight > maxTiltedHeight) {
-                        maxTiltedHeight = inputImg.naturalHeight;
-                    }
-                });
+                // 斜着状态：统一高度为280px，每张图按自己宽高比计算宽度
+                const tiltedTargetHeight = 280;
                 
-                // Set tilted state sizes (等比例缩放到统一高度)
                 galleryItems.forEach(item => {
                     const inputImg = item.querySelector('.img-input');
                     const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
@@ -849,29 +842,17 @@
                     item.dataset.tiltedWidth = scaledWidth;
                 });
                 
-                // Calculate flat state sizes (基于视口宽度)
+                // 摆正状态：统一高度为视口高度的50%，每张图按自己宽高比计算宽度
                 const isMobile = window.innerWidth <= 968;
-                const flatTargetWidth = isMobile ? window.innerWidth * 0.7 : window.innerWidth * 0.4;
-                maxFlatHeight = 0;
+                const flatTargetHeight = isMobile ? window.innerHeight * 0.4 : window.innerHeight * 0.5;
                 
                 galleryItems.forEach(item => {
                     const inputImg = item.querySelector('.img-input');
                     const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
-                    const scaledHeight = flatTargetWidth / aspectRatio;
+                    const scaledWidth = flatTargetHeight * aspectRatio;
                     
-                    item.dataset.flatWidth = flatTargetWidth;
-                    item.dataset.flatHeight = scaledHeight;
-                    
-                    if (scaledHeight > maxFlatHeight) {
-                        maxFlatHeight = scaledHeight;
-                    }
-                });
-                
-                // Normalize flat heights to use the max
-                galleryItems.forEach(item => {
-                    const aspectRatio = item.querySelector('.img-input').naturalWidth / item.querySelector('.img-input').naturalHeight;
-                    item.dataset.flatWidth = maxFlatHeight * aspectRatio;
-                    item.dataset.flatHeight = maxFlatHeight;
+                    item.dataset.flatHeight = flatTargetHeight;
+                    item.dataset.flatWidth = scaledWidth;
                 });
                 
                 // Apply initial sizes

@@ -159,6 +159,29 @@
             /* Initial state set by JS; fallback: */
             transform: rotateX(15deg) rotateZ(20deg) translateY(-250px);
             opacity: 0.2;
+            transition: padding 0.5s ease;
+        }
+        
+        /* When gallery is flat (摆正), remove padding and enable scroll */
+        .hero-gallery-container.flat {
+            padding: 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(99, 102, 241, 0.3) transparent;
+        }
+        
+        .hero-gallery-container.flat::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .hero-gallery-container.flat::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .hero-gallery-container.flat::-webkit-scrollbar-thumb {
+            background: rgba(99, 102, 241, 0.3);
+            border-radius: 4px;
         }
 
         .hero-gallery-row {
@@ -167,8 +190,13 @@
             margin-bottom: 24px;
             will-change: transform;
             justify-content: center;
-            flex-wrap: wrap;
-            max-width: 100%;
+            flex-wrap: nowrap;
+            transition: justify-content 0.5s ease;
+        }
+        
+        /* When flat, align to start (no centering, enable full scroll) */
+        .hero-gallery-container.flat .hero-gallery-row {
+            justify-content: flex-start;
         }
 
         /* Row 1 & 3: flex-row-reverse (items flow right-to-left) */
@@ -182,15 +210,13 @@
 
         .hero-gallery-item {
             position: relative;
-            height: 320px;
-            width: auto;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
             background: #f0f0f0;
             flex-shrink: 0;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, width 0.5s ease, height 0.5s ease;
         }
 
         .hero-gallery-item:hover {
@@ -688,10 +714,14 @@
             }
             .hero-gallery-container {
                 margin-top: 300px;
+                padding: 0 1rem;
             }
-            .hero-gallery-item {
-                height: 180px;
-                width: 260px;
+            .hero-gallery-container.flat {
+                padding: 0;
+            }
+            .hero-gallery-row {
+                gap: 16px;
+                margin-bottom: 16px;
             }
             .project-title {
                 font-size: 3.5rem;
@@ -765,51 +795,138 @@
         });
 
         // ================================================================
-        // 3D Parallax Gallery — faithfully replicating JarvisEvo logic
-        //
-        // JarvisEvo uses framer-motion with:
-        //   rotateX:    [0, 0.2] → [15, 0]
-        //   rotateZ:    [0, 0.2] → [20, 0]
-        //   translateY: [0, 0.2] → [-250, 500]
-        //   opacity:    [0, 0.2] → [0.2, 1]
-        //   translateX (row-forward):  [0, 1] → [0, 1000]
-        //   translateX (row-reverse):  [0, 1] → [0, -1000]
-        //
-        // scrollYProgress is 0→1 over the element from "start start" to "end start"
+        // 3D Parallax Gallery — with dynamic sizing based on scroll state
         // ================================================================
         const heroSection = document.querySelector('.hero-section');
         const galleryContainer = document.querySelector('.hero-gallery-container');
         const rowsForward = document.querySelectorAll('.hero-gallery-row.row-forward');
         const rowsReverse = document.querySelectorAll('.hero-gallery-row.row-reverse');
+        const galleryItems = document.querySelectorAll('.hero-gallery-item');
         const outputImages = document.querySelectorAll('.hero-gallery-item .img-output');
 
         if (heroSection && galleryContainer) {
+            let maxTiltedHeight = 0;
+            let maxFlatHeight = 0;
+            let imagesLoaded = 0;
+            const totalImages = galleryItems.length * 2; // input + output per item
+            
+            // Calculate max heights after all images load
+            galleryItems.forEach(item => {
+                const inputImg = item.querySelector('.img-input');
+                const outputImg = item.querySelector('.img-output');
+                
+                const checkLoaded = () => {
+                    imagesLoaded++;
+                    if (imagesLoaded === totalImages) {
+                        calculateSizes();
+                    }
+                };
+                
+                if (inputImg.complete) checkLoaded();
+                else inputImg.addEventListener('load', checkLoaded);
+                
+                if (outputImg.complete) checkLoaded();
+                else outputImg.addEventListener('load', checkLoaded);
+            });
+            
+            function calculateSizes() {
+                // Find max natural height for tilted state (基于320px高度)
+                const tiltedTargetHeight = 320;
+                galleryItems.forEach(item => {
+                    const inputImg = item.querySelector('.img-input');
+                    if (inputImg.naturalHeight > maxTiltedHeight) {
+                        maxTiltedHeight = inputImg.naturalHeight;
+                    }
+                });
+                
+                // Set tilted state sizes (等比例缩放到统一高度)
+                galleryItems.forEach(item => {
+                    const inputImg = item.querySelector('.img-input');
+                    const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
+                    const scaledWidth = tiltedTargetHeight * aspectRatio;
+                    
+                    item.dataset.tiltedHeight = tiltedTargetHeight;
+                    item.dataset.tiltedWidth = scaledWidth;
+                });
+                
+                // Calculate flat state sizes (基于视口宽度)
+                const isMobile = window.innerWidth <= 968;
+                const flatTargetWidth = isMobile ? window.innerWidth * 0.7 : window.innerWidth * 0.4;
+                maxFlatHeight = 0;
+                
+                galleryItems.forEach(item => {
+                    const inputImg = item.querySelector('.img-input');
+                    const aspectRatio = inputImg.naturalWidth / inputImg.naturalHeight;
+                    const scaledHeight = flatTargetWidth / aspectRatio;
+                    
+                    item.dataset.flatWidth = flatTargetWidth;
+                    item.dataset.flatHeight = scaledHeight;
+                    
+                    if (scaledHeight > maxFlatHeight) {
+                        maxFlatHeight = scaledHeight;
+                    }
+                });
+                
+                // Normalize flat heights to use the max
+                galleryItems.forEach(item => {
+                    const aspectRatio = item.querySelector('.img-input').naturalWidth / item.querySelector('.img-input').naturalHeight;
+                    item.dataset.flatWidth = maxFlatHeight * aspectRatio;
+                    item.dataset.flatHeight = maxFlatHeight;
+                });
+                
+                // Apply initial sizes
+                applySizes(0);
+            }
+            
+            function applySizes(progress) {
+                // progress: 0 = tilted, 1 = flat
+                galleryItems.forEach(item => {
+                    const tiltedH = parseFloat(item.dataset.tiltedHeight) || 320;
+                    const tiltedW = parseFloat(item.dataset.tiltedWidth) || 320;
+                    const flatH = parseFloat(item.dataset.flatHeight) || 400;
+                    const flatW = parseFloat(item.dataset.flatWidth) || 400;
+                    
+                    const currentH = tiltedH + (flatH - tiltedH) * progress;
+                    const currentW = tiltedW + (flatW - tiltedW) * progress;
+                    
+                    item.style.height = `${currentH}px`;
+                    item.style.width = `${currentW}px`;
+                });
+            }
+
             const update = () => {
                 const rect = heroSection.getBoundingClientRect();
                 const sectionHeight = heroSection.offsetHeight;
                 
-                // scrollYProgress: 0 when section top is at viewport top,
-                // 1 when section bottom reaches viewport top
-                // Matches framer-motion offset: ["start start", "end start"]
                 const scrollYProgress = Math.min(Math.max(-rect.top / (sectionHeight - window.innerHeight), 0), 1);
                 
-                // ---- Transform progress (happens in first 20% of scroll, matching [0, 0.2]) ----
+                // ---- Transform progress (happens in first 20% of scroll) ----
                 const tp = Math.min(scrollYProgress / 0.2, 1);
                 
-                // Ease function (approximates spring feel)
+                // Ease function
                 const ease = t => t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
                 const ep = ease(tp);
                 
-                const rotateX = 15 * (1 - ep);          // 15 → 0
-                const rotateZ = 20 * (1 - ep);          // 20 → 0
-                const translateY = -250 + (750 * ep);    // -250 → 500
-                const opacity = 0.2 + (0.8 * ep);       // 0.2 → 1
+                const rotateX = 15 * (1 - ep);
+                const rotateZ = 20 * (1 - ep);
+                const translateY = -250 + (750 * ep);
+                const opacity = 0.2 + (0.8 * ep);
                 
                 galleryContainer.style.transform = 
                     `rotateX(${rotateX}deg) rotateZ(${rotateZ}deg) translateY(${translateY}px)`;
                 galleryContainer.style.opacity = opacity;
                 
-                // ---- Horizontal row translation (only during tilt phase, stops when flat) ----
+                // Toggle 'flat' class when fully flat (ep >= 0.95)
+                if (ep >= 0.95) {
+                    galleryContainer.classList.add('flat');
+                } else {
+                    galleryContainer.classList.remove('flat');
+                }
+                
+                // Apply dynamic sizes based on progress
+                applySizes(ep);
+                
+                // ---- Horizontal row translation ----
                 const translateX = ep * 200;
                 
                 rowsForward.forEach(row => {
@@ -820,7 +937,6 @@
                 });
                 
                 // ---- Input → Output image transition ----
-                // Start revealing output images when gallery is nearly flat (tp > 0.7)
                 const revealProgress = Math.min(Math.max((tp - 0.7) / 0.3, 0), 1);
                 outputImages.forEach(img => {
                     img.style.opacity = revealProgress;
@@ -828,7 +944,10 @@
             };
             
             window.addEventListener('scroll', update, { passive: true });
-            window.addEventListener('resize', update, { passive: true });
+            window.addEventListener('resize', () => {
+                calculateSizes();
+                update();
+            }, { passive: true });
             update(); // initial call
         }
     </script>

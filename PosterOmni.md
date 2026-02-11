@@ -387,13 +387,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">BAGEL</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 95%">
-                        <span class="bar-label">95%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 95%"></div>
                     <div class="bar-segment tie" style="width: 3%"></div>
-                    <div class="bar-segment lose" style="width: 2%">
-                        <span class="bar-label">2%</span>
-                    </div>
+                    <div class="bar-segment lose" style="width: 2%"></div>
                 </div>
             </div>
 
@@ -404,15 +400,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">FLUX.1 Kontext</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 73%">
-                        <span class="bar-label">73%</span>
-                    </div>
-                    <div class="bar-segment tie" style="width: 15%">
-                        <span class="bar-label">15%</span>
-                    </div>
-                    <div class="bar-segment lose" style="width: 12%">
-                        <span class="bar-label">12%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 73%"></div>
+                    <div class="bar-segment tie" style="width: 15%"></div>
+                    <div class="bar-segment lose" style="width: 12%"></div>
                 </div>
             </div>
 
@@ -423,15 +413,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">Qwen-Image-Edit</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 62%">
-                        <span class="bar-label">62%</span>
-                    </div>
-                    <div class="bar-segment tie" style="width: 19%">
-                        <span class="bar-label">19%</span>
-                    </div>
-                    <div class="bar-segment lose" style="width: 19%">
-                        <span class="bar-label">19%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 62%"></div>
+                    <div class="bar-segment tie" style="width: 19%"></div>
+                    <div class="bar-segment lose" style="width: 19%"></div>
                 </div>
             </div>
 
@@ -442,15 +426,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">UniWorld-V2</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 68%">
-                        <span class="bar-label">68%</span>
-                    </div>
-                    <div class="bar-segment tie" style="width: 17%">
-                        <span class="bar-label">17%</span>
-                    </div>
-                    <div class="bar-segment lose" style="width: 15%">
-                        <span class="bar-label">15%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 68%"></div>
+                    <div class="bar-segment tie" style="width: 17%"></div>
+                    <div class="bar-segment lose" style="width: 15%"></div>
                 </div>
             </div>
 
@@ -461,15 +439,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">Seedream-3.0</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 71%">
-                        <span class="bar-label">71%</span>
-                    </div>
-                    <div class="bar-segment tie" style="width: 16%">
-                        <span class="bar-label">16%</span>
-                    </div>
-                    <div class="bar-segment lose" style="width: 13%">
-                        <span class="bar-label">13%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 71%"></div>
+                    <div class="bar-segment tie" style="width: 16%"></div>
+                    <div class="bar-segment lose" style="width: 13%"></div>
                 </div>
             </div>
 
@@ -480,15 +452,9 @@ title: PosterOmni - Generalized Artistic Poster Creation
                     <span class="model-name right">Seedream-4.0</span>
                 </div>
                 <div class="comparison-bar">
-                    <div class="bar-segment win" style="width: 41%">
-                        <span class="bar-label">41%</span>
-                    </div>
-                    <div class="bar-segment tie" style="width: 19%">
-                        <span class="bar-label">19%</span>
-                    </div>
-                    <div class="bar-segment lose" style="width: 40%">
-                        <span class="bar-label">40%</span>
-                    </div>
+                    <div class="bar-segment win" style="width: 42%"></div>
+                    <div class="bar-segment tie" style="width: 18%"></div>
+                    <div class="bar-segment lose" style="width: 40%"></div>
                 </div>
             </div>
         </div>

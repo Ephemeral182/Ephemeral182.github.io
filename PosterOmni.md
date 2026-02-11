@@ -366,6 +366,148 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </p>
     </div>
 
+    <!-- User Study Comparison -->
+    <div style="margin-top: 8rem;" id="user-study">
+        <h2 style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Human Evaluation Results</h2>
+        <p style="text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 3.5rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            Head-to-head comparison showcasing <strong>PosterOmni's Overall Preference</strong> win rates against state-of-the-art baseline models based on comprehensive human expert evaluation.
+        </p>
+        
+        <div class="user-study-container">
+            <div class="comparison-bar-wrapper" data-win="95" data-tie="3" data-lose="2">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">BAGEL</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 95%">
+                        <span class="bar-label">95%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 3%"></div>
+                    <div class="bar-segment lose" style="width: 2%">
+                        <span class="bar-label">2%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-bar-wrapper" data-win="73" data-tie="15" data-lose="12">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">FLUX.1 Kontext</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 73%">
+                        <span class="bar-label">73%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 15%">
+                        <span class="bar-label">15%</span>
+                    </div>
+                    <div class="bar-segment lose" style="width: 12%">
+                        <span class="bar-label">12%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-bar-wrapper" data-win="62" data-tie="19" data-lose="19">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">Qwen-Image-Edit</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 62%">
+                        <span class="bar-label">62%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 19%">
+                        <span class="bar-label">19%</span>
+                    </div>
+                    <div class="bar-segment lose" style="width: 19%">
+                        <span class="bar-label">19%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-bar-wrapper" data-win="68" data-tie="17" data-lose="15">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">UniWorld-V2</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 68%">
+                        <span class="bar-label">68%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 17%">
+                        <span class="bar-label">17%</span>
+                    </div>
+                    <div class="bar-segment lose" style="width: 15%">
+                        <span class="bar-label">15%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-bar-wrapper" data-win="71" data-tie="16" data-lose="13">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">Seedream-3.0</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 71%">
+                        <span class="bar-label">71%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 16%">
+                        <span class="bar-label">16%</span>
+                    </div>
+                    <div class="bar-segment lose" style="width: 13%">
+                        <span class="bar-label">13%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-bar-wrapper" data-win="41" data-tie="19" data-lose="40">
+                <div class="comparison-labels">
+                    <span class="model-name left">PosterOmni</span>
+                    <span class="vs-badge">vs</span>
+                    <span class="model-name right">Seedream-4.0</span>
+                </div>
+                <div class="comparison-bar">
+                    <div class="bar-segment win" style="width: 41%">
+                        <span class="bar-label">41%</span>
+                    </div>
+                    <div class="bar-segment tie" style="width: 19%">
+                        <span class="bar-label">19%</span>
+                    </div>
+                    <div class="bar-segment lose" style="width: 40%">
+                        <span class="bar-label">40%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend-container">
+            <div class="legend-item">
+                <span class="legend-color win"></span>
+                <span class="legend-text">PosterOmni Win Rate</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color tie"></span>
+                <span class="legend-text">Tie Rate</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-color lose"></span>
+                <span class="legend-text">PosterOmni Lose Rate</span>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary); font-size: 0.9rem; font-style: italic; line-height: 1.6;">
+            Human experts evaluated PosterOmni against baseline models across multiple dimensions.<br>
+            Results demonstrate PosterOmni's superior performance in aesthetic quality and task alignment.
+        </p>
+    </div>
+
     <!-- Gallery Section -->
     <div style="margin-top: 8rem;">
         <h2 style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 3rem;">Gallery</h2>

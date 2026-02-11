@@ -813,6 +813,165 @@
             box-shadow: var(--glass-shadow);
         }
 
+        /* User Study Comparison Styles */
+        .user-study-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .comparison-bar-wrapper {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .comparison-bar-wrapper:hover {
+            background: rgba(255, 255, 255, 0.85);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-labels {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .model-name {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-main);
+            flex: 1;
+        }
+
+        .model-name.left {
+            text-align: left;
+            color: var(--primary);
+        }
+
+        .model-name.right {
+            text-align: right;
+            color: var(--text-secondary);
+        }
+
+        .vs-badge {
+            background: linear-gradient(135deg, var(--text-main), #334155);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .comparison-bar {
+            display: flex;
+            height: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .comparison-bar::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: rgba(0, 0, 0, 0.15);
+            z-index: 1;
+        }
+
+        .bar-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .bar-segment.win {
+            background: linear-gradient(90deg, #e5e6fa 0%, #c7cbf8 100%);
+        }
+
+        .bar-segment.tie {
+            background: linear-gradient(90deg, #e0e0e0 0%, #cccccc 100%);
+        }
+
+        .bar-segment.lose {
+            background: linear-gradient(90deg, #ffc5bb 0%, #fa8072 100%);
+        }
+
+        .comparison-bar-wrapper:hover .bar-segment {
+            filter: brightness(1.05);
+        }
+
+        .bar-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+            z-index: 2;
+        }
+
+        .bar-segment.tie .bar-label,
+        .bar-segment.lose .bar-label {
+            font-size: 0.85rem;
+        }
+
+        .legend-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .legend-color {
+            width: 32px;
+            height: 16px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .legend-color.win {
+            background: linear-gradient(90deg, #e5e6fa 0%, #c7cbf8 100%);
+        }
+
+        .legend-color.tie {
+            background: linear-gradient(90deg, #e0e0e0 0%, #cccccc 100%);
+        }
+
+        .legend-color.lose {
+            background: linear-gradient(90deg, #ffc5bb 0%, #fa8072 100%);
+        }
+
+        .legend-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
         @media (max-width: 968px) {
             .hero-section {
                 min-height: calc(100vh + 600px);
@@ -857,6 +1016,52 @@
                 font-size: 0.75rem;
                 padding: 8px 16px;
             }
+            
+            /* User Study Mobile Styles */
+            .comparison-bar-wrapper {
+                padding: 1.5rem;
+            }
+            
+            .comparison-labels {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .model-name {
+                text-align: center !important;
+                font-size: 0.95rem;
+            }
+            
+            .vs-badge {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.8rem;
+            }
+            
+            .comparison-bar {
+                height: 40px;
+            }
+            
+            .bar-label {
+                font-size: 0.8rem;
+            }
+            
+            .bar-segment.tie .bar-label,
+            .bar-segment.lose .bar-label {
+                font-size: 0.75rem;
+            }
+            
+            .legend-container {
+                gap: 1.5rem;
+            }
+            
+            .legend-item {
+                gap: 0.6rem;
+            }
+            
+            .legend-text {
+                font-size: 0.85rem;
+            }
         }
     </style>
     <!-- Custom CSS from page frontmatter -->
@@ -886,6 +1091,7 @@
                 <a href="#data">Data</a>
                 <a href="#method">Method</a>
                 <a href="#results">Results</a>
+                <a href="#user-study">User Study</a>
             </div>
         </div>
     </nav>

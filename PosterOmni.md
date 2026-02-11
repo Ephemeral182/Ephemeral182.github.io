@@ -18,7 +18,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
         <div class="task-support-banner">
             <p class="task-support-text">
-                We support <span class="task-category local">Local Editing</span> <span class="task-list">(Rescaling, Filling, Extending, Identity-driven)</span>, <span class="task-category global">Global Creation</span> <span class="task-list">(Layout-driven, Style-driven)</span>, and <span class="task-category local">Unified Framework</span>.
+                We support <span class="task-category local">Poster Local Editing</span> <span class="task-list">(Rescaling, Filling, Extending, Identity-driven)</span>, <span class="task-category global">Poster Global Creation</span> <span class="task-list">(Layout-driven, Style-driven)</span>, and <span class="task-category local">Unified Framework</span>.
             </p>
         </div>
 

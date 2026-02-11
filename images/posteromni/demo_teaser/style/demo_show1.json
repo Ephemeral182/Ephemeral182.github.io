@@ -1,0 +1,12 @@
+{
+    "original_prompt": "Refer to the style of this poster and generate a design featuring a geometric perfume bottle centered as the main subject, accompanied by three abstract feathers, simplified brush strokes, and geometric stars. Include the text \"Source of Inspiration\" at the top and \"Creativity On the Go\" at the bottom of the poster.",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/nature_public_service_prompts/good/images/task9222/1_1664x928_seed2798842549_original.jpg"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_19000steps_2511_omni_0203_merged_transformer/style_transfer/346_style_transfer/generated_img_1_seed_513546981.png",
+            "seed": 513546981
+        }
+    ]
+}

@@ -135,7 +135,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
 <div class="content-wrapper">
 
     <!-- Abstract Box -->
-    <div class="abstract-box" id="abstract">
+    <div class="abstract-box fade-scale" id="abstract">
         <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.5rem; margin-bottom: 1rem; text-align: center;">Abstract</h2>
         <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; text-align: justify; margin-bottom: 1.5rem;">
             Image-to-poster generation is a multi-dimensional process coupling <strong>entity-preserving local editing</strong> (such as rescaling, filling, and extending) with <strong>concept-driven global creation</strong> (like layout and style transfer).
@@ -147,7 +147,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
     <!-- Section 1: Capabilities (Left Text, Right Image) -->
     <div class="split-section" id="features">
-        <div class="split-text">
+        <div class="split-text slide-in-left">
             <span class="section-label">Capabilities</span>
             <h2 class="section-title">Diverse Poster Creation Tasks</h2>
             <div class="feature-list">
@@ -168,14 +168,14 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
         </div>
-        <div class="split-visual">
+        <div class="split-visual slide-in-right">
             <img src="/images/posteromni/teaser_0209.jpg" alt="PosterOmni Capabilities Teaser">
         </div>
     </div>
 
     <!-- Section 2: Data Pipeline (Right Text, Left Image - using reverse) -->
     <div class="split-section reverse" id="data">
-        <div class="split-text">
+        <div class="split-text slide-in-right">
             <span class="section-label">Data Engineering</span>
             <h2 class="section-title">Automated Data Construction</h2>
             <div class="feature-list">
@@ -196,14 +196,14 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
         </div>
-        <div class="split-visual">
+        <div class="split-visual slide-in-left">
             <img src="/images/posteromni/posteromni_datapipeline.jpg" alt="Data Construction Pipeline">
         </div>
     </div>
 
     <!-- Section 3: Methodology (Left Text, Right Image) -->
     <div class="split-section" id="method">
-        <div class="split-text">
+        <div class="split-text slide-in-left">
             <span class="section-label">Methodology</span>
             <h2 class="section-title">Progressive Training Pipeline</h2>
             <div class="feature-list">
@@ -229,14 +229,14 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
         </div>
-        <div class="split-visual">
+        <div class="split-visual slide-in-right">
             <img src="/images/posteromni/overview.jpg" alt="PosterOmni Methodology Overview">
         </div>
     </div>
 
     <!-- Results Table -->
-    <div class="table-container" id="results">
-        <h2 style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <div class="table-container fade-scale" id="results">
+        <h2 class="scroll-animate" style="text-align: center; margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif;">
             Quantitative Comparison <span class="benchmark-badge">PosterOmni-Bench</span>
         </h2>
         <div class="table-scroll-wrapper">
@@ -367,15 +367,15 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </tbody>
             </table>
         </div>
-        <p style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
+        <p class="scroll-animate" style="text-align: center; margin-top: 1.5rem; color: var(--text-secondary); font-size: 0.9rem;">
             Table 1: Quantitative comparison results on PosterOmni-Bench. <span class="rank-1">Gold</span> indicates the best performance, and <span class="rank-2">Blue</span> indicates the second best.
         </p>
     </div>
 
     <!-- User Study Comparison -->
     <div style="margin-top: 8rem;" id="user-study">
-        <h2 style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Human Evaluation Results</h2>
-        <p style="text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 3.5rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+        <h2 class="scroll-animate" style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Human Evaluation Results</h2>
+        <p class="scroll-animate" style="text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 3.5rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.6;">
             Head-to-head comparison showcasing <strong>PosterOmni's Overall Preference</strong> win rates against state-of-the-art baseline models based on comprehensive human expert evaluation.
         </p>
         
@@ -459,7 +459,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
             </div>
         </div>
 
-        <div class="legend-container">
+        <div class="legend-container scroll-animate">
             <div class="legend-item">
                 <span class="legend-color win"></span>
                 <span class="legend-text">PosterOmni Win Rate</span>
@@ -474,7 +474,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
             </div>
         </div>
         
-        <p style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary); font-size: 0.9rem; font-style: italic; line-height: 1.6;">
+        <p class="scroll-animate" style="text-align: center; margin-top: 2.5rem; color: var(--text-secondary); font-size: 0.9rem; font-style: italic; line-height: 1.6;">
             Human experts evaluated PosterOmni against baseline models across multiple dimensions.<br>
             Results demonstrate PosterOmni's superior performance in aesthetic quality and task alignment.
         </p>
@@ -482,8 +482,8 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
     <!-- Gallery Section -->
     <div style="margin-top: 8rem;">
-        <h2 style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 3rem;">Gallery</h2>
-        <div class="gallery-grid">
+        <h2 class="scroll-animate" style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 3rem;">Gallery</h2>
+        <div class="gallery-grid fade-scale">
             <img src="/images/posteromni/case1.png" alt="Case 1" onerror="this.style.display='none'">
             <img src="/images/posteromni/case2.png" alt="Case 2" onerror="this.style.display='none'">
             <img src="/images/posteromni/case3.png" alt="Case 3" onerror="this.style.display='none'">

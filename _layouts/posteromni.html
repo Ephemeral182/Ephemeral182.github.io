@@ -576,6 +576,16 @@
             color: var(--primary);
             margin-bottom: 1rem;
             display: block;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .slide-in-left.animate-in .section-label,
+        .slide-in-right.animate-in .section-label {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
         }
 
         .section-title {
@@ -585,6 +595,16 @@
             color: var(--text-main);
             margin-bottom: 2rem;
             line-height: 1.2;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .slide-in-left.animate-in .section-title,
+        .slide-in-right.animate-in .section-title {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.15s;
         }
 
         /* Feature List Cards */
@@ -604,11 +624,17 @@
             position: relative;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+        }
+
+        .slide-in-left.animate-in .feature-item,
+        .slide-in-right.animate-in .feature-item {
+            opacity: 1;
         }
 
         .feature-item:hover {
             background: rgba(255, 255, 255, 0.9);
-            transform: translateY(-2px) translateX(5px);
+            transform: translateY(-2px) translateX(5px) !important;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
 
@@ -834,7 +860,7 @@
 
         .comparison-bar-wrapper:hover {
             background: rgba(255, 255, 255, 0.85);
-            transform: translateY(-4px);
+            transform: translateY(-4px) !important;
             box-shadow: 0 12px 24px -3px rgba(0, 0, 0, 0.1);
         }
 
@@ -972,6 +998,136 @@
             color: var(--text-secondary);
         }
 
+        /* Scroll Animation Styles */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animate.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Slide from left */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-left.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Slide from right */
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slide-in-right.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Fade and scale up */
+        .fade-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-scale.animate-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger animation for feature items - only when parent is animated */
+        .slide-in-left.animate-in .feature-item,
+        .slide-in-right.animate-in .feature-item {
+            animation: featureSlideIn 0.6s ease forwards;
+        }
+
+        .slide-in-left.animate-in .feature-item:nth-child(1),
+        .slide-in-right.animate-in .feature-item:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .slide-in-left.animate-in .feature-item:nth-child(2),
+        .slide-in-right.animate-in .feature-item:nth-child(2) {
+            animation-delay: 0.35s;
+        }
+
+        .slide-in-left.animate-in .feature-item:nth-child(3),
+        .slide-in-right.animate-in .feature-item:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .slide-in-left.animate-in .feature-item:nth-child(4),
+        .slide-in-right.animate-in .feature-item:nth-child(4) {
+            animation-delay: 0.65s;
+        }
+
+        @keyframes featureSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Table rows stagger animation */
+        .results-table tbody tr {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .results-table.animate-in tbody tr {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .results-table.animate-in tbody tr:nth-child(1) { transition-delay: 0.05s; }
+        .results-table.animate-in tbody tr:nth-child(2) { transition-delay: 0.1s; }
+        .results-table.animate-in tbody tr:nth-child(3) { transition-delay: 0.15s; }
+        .results-table.animate-in tbody tr:nth-child(4) { transition-delay: 0.2s; }
+        .results-table.animate-in tbody tr:nth-child(5) { transition-delay: 0.25s; }
+        .results-table.animate-in tbody tr:nth-child(6) { transition-delay: 0.3s; }
+        .results-table.animate-in tbody tr:nth-child(7) { transition-delay: 0.35s; }
+        .results-table.animate-in tbody tr:nth-child(8) { transition-delay: 0.4s; }
+        .results-table.animate-in tbody tr:nth-child(9) { transition-delay: 0.45s; }
+        .results-table.animate-in tbody tr:nth-child(10) { transition-delay: 0.5s; }
+
+        /* Comparison bars stagger animation */
+        .comparison-bar-wrapper {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .comparison-bar-wrapper.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .user-study-container .comparison-bar-wrapper:nth-child(1).animate-in { transition-delay: 0.1s; }
+        .user-study-container .comparison-bar-wrapper:nth-child(2).animate-in { transition-delay: 0.2s; }
+        .user-study-container .comparison-bar-wrapper:nth-child(3).animate-in { transition-delay: 0.3s; }
+        .user-study-container .comparison-bar-wrapper:nth-child(4).animate-in { transition-delay: 0.4s; }
+        .user-study-container .comparison-bar-wrapper:nth-child(5).animate-in { transition-delay: 0.5s; }
+        .user-study-container .comparison-bar-wrapper:nth-child(6).animate-in { transition-delay: 0.6s; }
+
         @media (max-width: 968px) {
             .hero-section {
                 min-height: calc(100vh + 600px);
@@ -1061,6 +1217,33 @@
             
             .legend-text {
                 font-size: 0.85rem;
+            }
+
+            /* Reduce animation intensity on mobile */
+            .slide-in-left, .slide-in-right {
+                transform: translateX(0);
+                opacity: 0;
+            }
+
+            .scroll-animate {
+                transform: translateY(20px);
+            }
+        }
+
+        /* Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            .scroll-animate,
+            .slide-in-left,
+            .slide-in-right,
+            .fade-scale,
+            .comparison-bar-wrapper,
+            .feature-item,
+            .section-label,
+            .section-title {
+                transition: none !important;
+                animation: none !important;
+                opacity: 1 !important;
+                transform: none !important;
             }
         }
     </style>
@@ -1247,6 +1430,39 @@
             }, { passive: true });
             update(); // initial call
         }
+
+        // ================================================================
+        // Scroll Animation Observer
+        // ================================================================
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const animateOnScroll = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate sections
+            const animatedElements = document.querySelectorAll(
+                '.scroll-animate, .slide-in-left, .slide-in-right, .fade-scale'
+            );
+            animatedElements.forEach(el => animateOnScroll.observe(el));
+
+            // Animate comparison bars
+            const comparisonBars = document.querySelectorAll('.comparison-bar-wrapper');
+            comparisonBars.forEach(bar => animateOnScroll.observe(bar));
+
+            // Animate tables
+            const tables = document.querySelectorAll('.results-table');
+            tables.forEach(table => animateOnScroll.observe(table));
+        });
     </script>
     
     <!-- Custom JS from page frontmatter -->

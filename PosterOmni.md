@@ -16,6 +16,12 @@ title: PosterOmni - Generalized Artistic Poster Creation
             <span class="subtitle-part">via Task Distillation and Unified Reward Feedback</span>
         </h2>
 
+        <div class="task-support-banner">
+            <p class="task-support-text">
+                We support <span class="task-category local">Local Editing</span> <span class="task-list">(Rescaling, Filling, Extending, Identity-driven)</span>, <span class="task-category global">Global Creation</span> <span class="task-list">(Layout-driven, Style-driven)</span>, and <span class="task-category local">Unified Framework</span>.
+            </p>
+        </div>
+
         <div class="authors-container">
             <div class="author-list">
                 <a href="https://ephemeral182.github.io/" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
@@ -30,9 +36,18 @@ title: PosterOmni - Generalized Artistic Poster Creation
             </div>
             
             <div class="affiliations">
-                <span><sup class="author-sup">1</sup>HKUST(GZ)</span>
-                <span><sup class="author-sup">2</sup>Meituan</span>
-                <span><sup class="author-sup">3</sup>HKUST</span>
+                <span>
+                    <img src="/images/posteromni/hkust_logo.png" alt="HKUST Logo" class="affiliation-logo">
+                    <sup class="author-sup">1</sup>HKUST(GZ)
+                </span>
+                <span>
+                    <img src="/images/posteromni/meituan_logo.png" alt="Meituan Logo" class="affiliation-logo">
+                    <sup class="author-sup">2</sup>Meituan
+                </span>
+                <span>
+                    <img src="/images/posteromni/hkust_logo.png" alt="HKUST Logo" class="affiliation-logo">
+                    <sup class="author-sup">3</sup>HKUST
+                </span>
             </div>
             
             <div class="author-notes">

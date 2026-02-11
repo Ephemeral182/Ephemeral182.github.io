@@ -18,15 +18,15 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
         <div class="authors-container">
             <div class="author-list">
-                <a href="#" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
-                <a href="#" class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></a>,
-                <a href="#" class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></a>,
-                <a href="#" class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></a>,
-                <a href="#" class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></a>,
-                <a href="#" class="author-name">Tian Ye<sup class="author-sup">1</sup></a>,
-                <a href="#" class="author-name">Junfeng Luo<sup class="author-sup">2</sup></a>,
-                <a href="#" class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></a>,
-                <a href="#" class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></a>
+                <a href="https://ephemeral182.github.io/" class="author-name">Sixiang Chen<sup class="author-sup">1,2,*</sup></a>,
+                <a href="https://alexlai2860.github.io/" class="author-name">Jianyu Lai<sup class="author-sup">1,2,*</sup></a>,
+                <a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN" class="author-name">Jialin Gao<sup class="author-sup">2,*</sup></a>,
+                <a href="https://openreview.net/profile?id=%7EHengyu_Shi1" class="author-name">Hengyu Shi<sup class="author-sup">2,*</sup></a>,
+                <a href="https://openreview.net/profile?id=~Zhongying_Liu1" class="author-name">Zhongying Liu<sup class="author-sup">2,*</sup></a>,
+                <a href="https://owen718.github.io/" class="author-name">Tian Ye<sup class="author-sup">1</sup></a>,
+                <a href="https://openreview.net/profile?id=~Junfeng_Luo1" class="author-name">Junfeng Luo<sup class="author-sup">2</sup></a>,
+                <a href="https://scholar.google.com/citations?user=JXV5yrZxj5MC&hl=zh-CN" class="author-name">Xiaoming Wei<sup class="author-sup">2</sup></a>,
+                <a href="https://sites.google.com/site/indexlzhu/home" class="author-name">Lei Zhu<sup class="author-sup">1,3,†</sup></a>
             </div>
             
             <div class="affiliations">
@@ -36,7 +36,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
             </div>
             
             <div class="author-notes">
-                <span><i class="fas fa-star author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Equal Contribution</span>
+                <span><i class="fas fa-star author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Core Contribution</span>
                 <span><i class="fas fa-envelope author-note-symbol" style="color: var(--primary); font-size: 0.8em;"></i> Corresponding Author</span>
             </div>
         </div>
@@ -50,6 +50,12 @@ title: PosterOmni - Generalized Artistic Poster Creation
             </a>
             <a href="https://huggingface.co/PosterOmni" class="btn-capsule">
                 <i class="fas fa-cube btn-icon"></i> Model
+            </a>
+            <a href="https://huggingface.co/spaces/PosterOmni" class="btn-capsule">
+                <i class="fas fa-rocket btn-icon"></i> Demo
+            </a>
+            <a href="https://huggingface.co/datasets/PosterOmni" class="btn-capsule">
+                <i class="fas fa-database btn-icon"></i> Dataset
             </a>
         </div>
     </div>

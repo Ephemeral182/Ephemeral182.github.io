@@ -168,23 +168,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </p>
 
         <div class="task-showcase-grid">
-            <!-- Task 1: Extending - Indie Game -->
-            <div class="task-demo-card fade-scale">
-                <div class="demo-prompt-header">
-                    <div class="demo-prompt-label">Shared Prompt:</div>
-                    <div class="demo-prompt-text">Independent Game Demo poster, Film & Entertainment category, Swiss New Grid design with geometric composition, retro game controller, pixelated game screen showing colorful sprites, vintage cassette tape, muted gray-blue background, vibrant pixel hues (red/yellow/cyan), metallic silver accents, nostalgic playful atmosphere, bold title at top "Indie Demo Showcase", subtle tagline below "Play, Discover, Create"</div>
-                </div>
-                <div class="demo-comparison-container">
-                    <span class="demo-task-badge">↔️ Extending</span>
-                    <div class="demo-image-wrapper">
-                        <img src="/images/posteromni/demo_teaser/extend/demo_show1.png" class="demo-image demo-input" alt="Input" style="display:none;">
-                        <img src="/images/posteromni/demo_teaser/extend/demo_output1.png" class="demo-image demo-output" alt="Output">
-                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task 2: Extending - IP Collection -->
+            <!-- Task 1: Extending -->
             <div class="task-demo-card fade-scale">
                 <div class="demo-prompt-header">
                     <div class="demo-prompt-label">Shared Prompt:</div>
@@ -200,23 +184,39 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
 
-            <!-- Task 3: Layout-driven - Interactive Experience -->
+            <!-- Task 2: Filling -->
             <div class="task-demo-card fade-scale">
                 <div class="demo-prompt-header">
                     <div class="demo-prompt-label">Shared Prompt:</div>
-                    <div class="demo-prompt-text">Refer to the layout of this poster and create a new one featuring a prominently displayed handheld game console as the main subject. Beside it, place a ceramic bowl filled with blue paint, stacked bright color cards, and a sliced smart wristband disk. The text should read "Creative Interactive Experience" at the top and "Instant Activation" at the bottom.</div>
+                    <div class="demo-prompt-text">Three orange emergency kits, featuring reflective strips and black shoulder straps, neatly arranged. Made from durable, sturdy materials and brightly colored to enhance visibility.</div>
                 </div>
                 <div class="demo-comparison-container">
-                    <span class="demo-task-badge">📋 Layout-driven</span>
+                    <span class="demo-task-badge">🖌️ Filling</span>
                     <div class="demo-image-wrapper">
-                        <img src="/images/posteromni/demo_teaser/layout/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
-                        <img src="/images/posteromni/demo_teaser/layout/demo_output1.png" class="demo-image demo-output" alt="Output">
+                        <img src="/images/posteromni/demo_teaser/fill/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/fill/demo_output1.png" class="demo-image demo-output" alt="Output">
                         <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Task 4: Layout-driven - Smart Space -->
+            <!-- Task 3: Rescaling -->
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Instruction:</div>
+                    <div class="demo-prompt-text">rescale this poster from 4:3 to 9:16</div>
+                </div>
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">📐 Rescaling</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/rescale/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/rescale/demo_output1.png" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 4: Layout-driven -->
             <div class="task-demo-card fade-scale">
                 <div class="demo-prompt-header">
                     <div class="demo-prompt-label">Shared Prompt:</div>
@@ -232,23 +232,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
 
-            <!-- Task 5: Style-driven - Perfume Design -->
-            <div class="task-demo-card fade-scale">
-                <div class="demo-prompt-header">
-                    <div class="demo-prompt-label">Shared Prompt:</div>
-                    <div class="demo-prompt-text">Refer to the style of this poster and generate a design featuring a geometric perfume bottle centered as the main subject, accompanied by three abstract feathers, simplified brush strokes, and geometric stars. Include the text "Source of Inspiration" at the top and "Creativity On the Go" at the bottom of the poster.</div>
-                </div>
-                <div class="demo-comparison-container">
-                    <span class="demo-task-badge">🎭 Style-driven</span>
-                    <div class="demo-image-wrapper">
-                        <img src="/images/posteromni/demo_teaser/style/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
-                        <img src="/images/posteromni/demo_teaser/style/demo_ouput1.jpg" class="demo-image demo-output" alt="Output">
-                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Task 6: Style-driven - Future Tech -->
+            <!-- Task 5: Style-driven -->
             <div class="task-demo-card fade-scale">
                 <div class="demo-prompt-header">
                     <div class="demo-prompt-label">Shared Prompt:</div>
@@ -264,17 +248,17 @@ title: PosterOmni - Generalized Artistic Poster Creation
                 </div>
             </div>
 
-            <!-- Task 7: Identity-driven - Greenery -->
+            <!-- Task 6: Id-driven -->
             <div class="task-demo-card fade-scale">
                 <div class="demo-prompt-header">
                     <div class="demo-prompt-label">Shared Prompt:</div>
-                    <div class="demo-prompt-text">3D anime-inspired poster with intricate details and vivid lighting, exuding a sense of aesthetic beauty. On the left side of the image, a lush potted bamboo plant features vibrant, dew-kissed leaves gently swaying in the breeze, slender green stalks reaching upward, and a pot that embodies antiquity and elegance. In the lower right corner, a uniquely shaped cactus stands resilient in a simple terracotta pot, its surface covered with fine fuzz and sharp spines. The background showcases a bright, transparent indoor greenhouse space. Main title: "Bursting with Vitality" Style: Color: Vibrant green. Subtitle: "Breathe Purely, Feel Alive" Style: Color: Soft ivory.</div>
+                    <div class="demo-prompt-text">3D anime-inspired poster with intricate details and vivid lighting, exuding a sense of aesthetic beauty. On the left side of the image, a lush potted bamboo plant features vibrant, dew-kissed leaves gently swaying in the breeze, slender green stalks reaching upward, and a pot that embodies antiquity and elegance. In the lower right corner, a uniquely shaped cactus stands resilient in a simple terracotta pot, its surface covered with fine fuzz and sharp spines. The background showcases a bright, transparent indoor greenhouse space, where soft natural light pours in through the top and sides, creating a warm and tranquil atmosphere. The air is filled with the fresh scent of greenery, accompanied by a misty green glow and delicate particles of dust dancing in the sunlight. The entire scene conveys a sense of ethereal, semi-transparent structure, as if you are immersed in a vibrant, dreamlike oasis. Main title: "Bursting with Vitality" Style: Color: Vibrant green; energetic style; extended lettering with smooth strokes to create a refreshing, premium feel. Subtitle: "Breathe Purely, Feel Alive" Style: Color: Soft ivory; slender, elegant font strokes to deliver serenity and a sense of healing.</div>
                 </div>
                 <div class="demo-comparison-container">
                     <span class="demo-task-badge">👤 Identity-driven</span>
                     <div class="demo-image-wrapper">
                         <div class="demo-reference-grid demo-input" style="display:none;">
-                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref1.jpg" class="demo-reference-image" alt="Reference 1">
+                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref1.png" class="demo-reference-image" alt="Reference 1">
                             <img src="/images/posteromni/demo_teaser/id/demo_show1_ref2.jpg" class="demo-reference-image" alt="Reference 2">
                         </div>
                         <img src="/images/posteromni/demo_teaser/id/demo_ouput1.jpg" class="demo-image demo-output" alt="Output">

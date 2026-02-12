@@ -1,0 +1,12 @@
+{
+    "original_prompt": "Refer to the layout of this poster and create a new one featuring a prominently displayed handheld game console as the main subject. Beside it, place a ceramic bowl filled with blue paint, stacked bright color cards, and a sliced smart wristband disk. The text should read Creative Interactive Experience at the top and Instant Activation at the bottom.",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/food_drink_prompts/good/images/task44954/4_1664x928_seed361863254_original.jpg"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_9000steps_180steps_qwen3vl_rl_2511_omni_0203_merged_transformer/layout_transfer/366_layout_transfer/generated_img_1_seed_538667684.png",
+            "seed": 538667684
+        }
+    ]
+}

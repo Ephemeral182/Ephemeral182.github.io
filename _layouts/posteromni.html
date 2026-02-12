@@ -912,6 +912,115 @@
             box-shadow: var(--glass-shadow);
         }
 
+        /* Task Showcase Styles (Chat-like Interface) */
+        .task-showcase-section {
+            margin: 8rem 0;
+        }
+
+        .task-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .task-chat-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .task-chat-card:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+        }
+
+        .task-chat-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            letter-spacing: 0.02em;
+        }
+
+        /* User Message (Input) */
+        .chat-message-user {
+            margin-bottom: 1.5rem;
+        }
+
+        .chat-bubble-user {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.08));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .chat-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chat-label i {
+            font-size: 1em;
+        }
+
+        .chat-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .chat-image {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .chat-image:hover {
+            transform: scale(1.02);
+        }
+
+        /* System Message (Output) */
+        .chat-message-system {
+            margin-top: 1.5rem;
+        }
+
+        .chat-bubble-system {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(251, 146, 60, 0.06));
+            border: 1px solid rgba(236, 72, 153, 0.15);
+            border-radius: 20px;
+            padding: 1.2rem;
+        }
+
+        .chat-label.system {
+            color: var(--secondary);
+        }
+
+        .chat-arrow {
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1.5rem;
+            color: var(--primary);
+            opacity: 0.6;
+        }
+
         /* User Study Comparison Styles */
         .user-study-container {
             max-width: 900px;
@@ -1201,6 +1310,25 @@
         .user-study-container .comparison-bar-wrapper:nth-child(5).animate-in { transition-delay: 0.5s; }
         .user-study-container .comparison-bar-wrapper:nth-child(6).animate-in { transition-delay: 0.6s; }
 
+        /* Task chat cards stagger animation */
+        .task-chat-card {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .task-chat-card.animate-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .task-showcase-grid .task-chat-card:nth-child(1).animate-in { transition-delay: 0.1s; }
+        .task-showcase-grid .task-chat-card:nth-child(2).animate-in { transition-delay: 0.2s; }
+        .task-showcase-grid .task-chat-card:nth-child(3).animate-in { transition-delay: 0.3s; }
+        .task-showcase-grid .task-chat-card:nth-child(4).animate-in { transition-delay: 0.4s; }
+        .task-showcase-grid .task-chat-card:nth-child(5).animate-in { transition-delay: 0.5s; }
+        .task-showcase-grid .task-chat-card:nth-child(6).animate-in { transition-delay: 0.6s; }
+
         @media (max-width: 968px) {
             .hero-section {
                 min-height: calc(100vh + 600px);
@@ -1315,6 +1443,24 @@
 
             .affiliation-logo {
                 height: 18px;
+            }
+
+            /* Task showcase mobile */
+            .task-showcase-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .task-chat-card {
+                padding: 1.5rem;
+            }
+
+            .task-chat-title {
+                font-size: 1.1rem;
+            }
+
+            .chat-text {
+                font-size: 0.9rem;
             }
         }
 
@@ -1542,6 +1688,10 @@
                 '.scroll-animate, .slide-in-left, .slide-in-right, .fade-scale'
             );
             animatedElements.forEach(el => animateOnScroll.observe(el));
+
+            // Animate task chat cards
+            const taskCards = document.querySelectorAll('.task-chat-card');
+            taskCards.forEach(card => animateOnScroll.observe(card));
 
             // Animate comparison bars
             const comparisonBars = document.querySelectorAll('.comparison-bar-wrapper');

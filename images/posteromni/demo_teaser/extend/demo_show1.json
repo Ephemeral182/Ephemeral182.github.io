@@ -1,0 +1,12 @@
+{
+    "original_prompt": "Independent Game Demo poster, Film & Entertainment category, Swiss New Grid design with geometric composition, retro game controller, pixelated game screen showing colorful sprites, vintage cassette tape, muted gray-blue background, vibrant pixel hues (red/yellow/cyan), metallic silver accents, nostalgic playful atmosphere, bold title at top \"Indie Demo Showcase\", subtle tagline below \"Play, Discover, Create\"",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/entertainment_media_prompts/good/images/task27959/2_1328x1328_seed1369996891_final_composite.png"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_19000steps_60steps_qwen3vl_aidet_ocr_2511_omni_0203_merged_transformer_single_image/extend/24_extend/generated_img_1_seed_1699735271.png",
+            "seed": 1699735271
+        }
+    ]
+}

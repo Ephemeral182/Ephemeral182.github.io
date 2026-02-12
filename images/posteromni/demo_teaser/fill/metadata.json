@@ -1,0 +1,17 @@
+{
+    "original_prompt": "Three orange emergency kits, featuring reflective strips and black shoulder straps, neatly arranged. Made from durable, sturdy materials and brightly colored to enhance visibility.",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/nature_public_service_prompts/good/images/task34094/3_1584x1056_seed669381908_test_benchmark_composite.jpg",
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/nature_public_service_prompts/good/images/task34094/3_1584x1056_seed669381908_test_benchmark_mask.jpg"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_9000steps_2511_omni_0203_pairs/fill/259_fill/generated_img_1_seed_165559388.png",
+            "seed": 165559388
+        },
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_9000steps_2511_omni_0203_pairs/fill/259_fill/generated_img_2_seed_2003648966.png",
+            "seed": 2003648966
+        }
+    ]
+}

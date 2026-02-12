@@ -160,6 +160,130 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </p>
     </div>
 
+    <!-- Task Showcase Section -->
+    <div class="task-showcase-section">
+        <h2 class="scroll-animate" style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">Task Demonstrations</h2>
+        <p class="scroll-animate" style="text-align: center; color: var(--text-secondary); font-size: 1.05rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Interactive examples showcasing PosterOmni's capabilities across six distinct poster generation tasks.
+        </p>
+
+        <div class="task-showcase-grid">
+            <!-- Task 1: Rescaling -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">📐 Poster Rescaling</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> Rescale the poster from (width: height) 2:3 to 4:3</p>
+                        <img src="/images/posteromni/demo_teaser/demo_input_1.png" class="chat-image" alt="Rescaling Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_1.png" class="chat-image" alt="Rescaling Output">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 2: Filling -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">🎨 Poster Filling</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> Three orange emergency kits, featuring reflective strips and black shoulder straps, neatly arranged. Made from durable, sturdy materials and brightly colored to enhance visibility.</p>
+                        <img src="/images/posteromni/demo_teaser/demo_input_8.png" class="chat-image" alt="Filling Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_8.png" class="chat-image" alt="Filling Output">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 3: Extending -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">↔️ Poster Extending</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> Independent Game Demo poster, Film & Entertainment category, Swiss New Grid design with geometric composition, retro game controller, pixelated game screen showing colorful sprites, vintage cassette tape, muted gray-blue background, vibrant pixel hues (red/yellow/cyan), metallic silver accents, nostalgic playful atmosphere, bold title at top "Indie Demo Showcase", subtle tagline below "Play, Discover, Create"</p>
+                        <img src="/images/posteromni/demo_teaser/demo_input_9.png" class="chat-image" alt="Extending Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_9.png" class="chat-image" alt="Extending Output">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 4: Identity-driven -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">👤 Identity-driven Generation</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> 3D anime-inspired poster with intricate details and vivid lighting. On the left, a lush potted bamboo plant with vibrant leaves; in the lower right corner, a uniquely shaped cactus in a terracotta pot. Bright indoor greenhouse space with soft natural light. Main title: "Bursting with Vitality" in vibrant green. Subtitle: "Breathe Purely, Feel Alive" in soft ivory.</p>
+                        <img src="/images/posteromni/demo_teaser/demo_input_10.png" class="chat-image" alt="Identity Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_10.png" class="chat-image" alt="Identity Output">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 5: Layout-driven -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">📋 Layout-driven Generation</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> Refer to the layout of this poster and create a new one featuring a prominently displayed handheld game console as the main subject. Beside it, place a ceramic bowl filled with blue paint, stacked bright color cards, and a sliced smart wristband disk. The text should read "Creative Interactive Experience" at the top and "Instant Activation" at the bottom.</p>
+                        <img src="/images/posteromni/demo_teaser/original_input_4.jpg" class="chat-image" alt="Layout Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_4.png" class="chat-image" alt="Layout Output">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task 6: Style-driven -->
+            <div class="task-chat-card fade-scale">
+                <h3 class="task-chat-title">🎭 Style-driven Generation</h3>
+                <div class="chat-message-user">
+                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
+                    <div class="chat-bubble-user">
+                        <p class="chat-text"><strong>Prompt:</strong> Refer to the style of this poster and generate a design featuring a geometric perfume bottle centered as the main subject, accompanied by three abstract feathers, simplified brush strokes, and geometric stars. Include the text "Source of Inspiration" at the top and "Creativity On the Go" at the bottom of the poster.</p>
+                        <img src="/images/posteromni/demo_teaser/original_input_6.png" class="chat-image" alt="Style Input">
+                    </div>
+                </div>
+                <div class="chat-arrow">↓</div>
+                <div class="chat-message-system">
+                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
+                    <div class="chat-bubble-system">
+                        <img src="/images/posteromni/demo_teaser/demo_output_6.png" class="chat-image" alt="Style Output">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Section 1: Capabilities (Left Text, Right Image) -->
     <div class="split-section" id="features">
         <div class="split-text slide-in-left">

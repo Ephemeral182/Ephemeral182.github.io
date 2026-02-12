@@ -1,0 +1,12 @@
+{
+    "original_prompt": "Refer to the layout of this poster and create a new poster featuring a large beige speaker cabinet filled with plush toys. Next to it, place a metal high stool and a paintbrush with a wooden handle. On the right side, include a cluster of blooming light purple 3D-printed models. Add the text \"Smart Space: Innovative Living\" at the top and \"Collaborative Exploration, Enhanced Experience\" at the bottom.",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/nature_public_service_prompts/good/images/task32792/4_1328x1328_seed853383062_original.jpg"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_9000steps_180steps_qwen3vl_rl_2511_omni_0203_merged_transformer/layout_transfer/341_layout_transfer/generated_img_1_seed_1443204292.png",
+            "seed": 1443204292
+        }
+    ]
+}

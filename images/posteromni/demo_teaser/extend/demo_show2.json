@@ -1,0 +1,12 @@
+{
+    "original_prompt": "A vibrant pop art poster for an IP limited edition product line, featuring a bold red sneaker with a graphic print on the left, a sleek blue smartphone case with a metallic logo in the center, and a gold collectible pin with a character design on the right—all set against a dynamic background of comic book dots and stripes. At the top is the title \"IP Limited Edition Collection\", and in the center is the text \"Exclusive Drops Available Now\".",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/originize_filters/organized_output/products_commerce_prompts/good/images/task22967/4_1664x928_seed1076593054_final_composite.png"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_19000steps_60steps_qwen3vl_aidet_ocr_2511_omni_0203_merged_transformer_single_image/extend/11_extend/generated_img_1_seed_1281851522.png",
+            "seed": 1281851522
+        }
+    ]
+}

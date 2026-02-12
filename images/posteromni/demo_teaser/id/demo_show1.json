@@ -1,0 +1,13 @@
+{
+    "original_prompt": "3D anime-inspired poster with intricate details and vivid lighting, exuding a sense of aesthetic beauty. On the left side of the image, a lush potted bamboo plant features vibrant, dew-kissed leaves gently swaying in the breeze, slender green stalks reaching upward, and a pot that embodies antiquity and elegance. In the lower right corner, a uniquely shaped cactus stands resilient in a simple terracotta pot, its surface covered with fine fuzz and sharp spines. The background showcases a bright, transparent indoor greenhouse space, where soft natural light pours in through the top and sides, creating a warm and tranquil atmosphere. The air is filled with the fresh scent of greenery, accompanied by a misty green glow and delicate particles of dust dancing in the sunlight. The entire scene conveys a sense of ethereal, semi-transparent structure, as if you are immersed in a vibrant, dreamlike oasis.Main title: \"Bursting with Vitality\"  Style: Color: Vibrant green; energetic style; extended lettering with smooth strokes to create a refreshing, premium feel.Subtitle: \"Breathe Purely, Feel Alive\"  Style: Color: Soft ivory; slender, elegant font strokes to deliver serenity and a sense of healing.",
+    "original_images": [
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/shihengyu02/projects/poster_omni/id_consisit/imgs/task50718/refer/0.jpg",
+        "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/shihengyu02/projects/poster_omni/id_consisit/imgs/task50718/refer/1.jpg"
+    ],
+    "generated_results": [
+        {
+            "output_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-mtcv/sixiangchen/qwen_image_gen_image/inference_posteromni_bench/.inference_posteromni_bench_en_merger_24000_19000_9000steps_150steps_qwen3vl_rl_2511_omni_0203_merged_transformer/id_consistency/394_id_consistency/generated_img_1_seed_3149859246.png",
+            "seed": 3149859246
+        }
+    ]
+}

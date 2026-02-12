@@ -604,15 +604,5 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </p>
     </div>
 
-    <!-- Gallery Section -->
-    <div style="margin-top: 8rem;">
-        <h2 class="scroll-animate" style="text-align: center; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; margin-bottom: 3rem;">Gallery</h2>
-        <div class="gallery-grid fade-scale">
-            <img src="/images/posteromni/case1.png" alt="Case 1" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case2.png" alt="Case 2" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case3.png" alt="Case 3" onerror="this.style.display='none'">
-            <img src="/images/posteromni/case4.png" alt="Case 4" onerror="this.style.display='none'">
-        </div>
-    </div>
 
 </div>

@@ -57,7 +57,7 @@ title: PosterOmni - Generalized Artistic Poster Creation
         </div>
 
         <div class="action-buttons">
-            <a href="https://arxiv.org/abs/2501.11646" class="btn-capsule primary">
+            <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule primary">
                 <i class="fas fa-file-alt btn-icon"></i> Paper
             </a>
             <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule">

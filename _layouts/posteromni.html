@@ -912,113 +912,179 @@
             box-shadow: var(--glass-shadow);
         }
 
-        /* Task Showcase Styles (Chat-like Interface) */
+        /* Task Showcase Styles (Compact Card Interface) */
         .task-showcase-section {
             margin: 8rem 0;
         }
 
         .task-showcase-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
-        .task-chat-card {
-            background: rgba(255, 255, 255, 0.6);
+        @media (max-width: 1200px) {
+            .task-showcase-grid {
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
+        }
+
+        .task-demo-card {
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
-            border-radius: 24px;
-            padding: 2rem;
+            border-radius: 20px;
+            overflow: hidden;
             box-shadow: var(--glass-shadow);
             transition: all 0.3s ease;
         }
 
-        .task-chat-card:hover {
-            background: rgba(255, 255, 255, 0.8);
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+        .task-demo-card:hover {
+            background: rgba(255, 255, 255, 0.85);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
         }
 
-        .task-chat-title {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            text-align: center;
-            letter-spacing: 0.02em;
+        /* Prompt Header */
+        .demo-prompt-header {
+            background: linear-gradient(135deg, rgba(226, 232, 240, 0.5), rgba(241, 245, 249, 0.4));
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
 
-        /* User Message (Input) */
-        .chat-message-user {
-            margin-bottom: 1.5rem;
-        }
-
-        .chat-bubble-user {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.08));
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 20px;
-            padding: 1.2rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .chat-label {
-            font-size: 0.8rem;
+        .demo-prompt-label {
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            letter-spacing: 0.12em;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            opacity: 0.7;
         }
 
-        .chat-label i {
-            font-size: 1em;
-        }
-
-        .chat-text {
-            font-size: 0.95rem;
-            line-height: 1.7;
+        .demo-prompt-text {
+            font-size: 0.88rem;
+            line-height: 1.65;
             color: var(--text-main);
+            font-weight: 450;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .demo-prompt-text:hover {
+            -webkit-line-clamp: unset;
+        }
+
+        /* Task Title Badge */
+        .demo-task-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.45rem 1.1rem;
+            border-radius: 24px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Image Comparison Container */
+        .demo-comparison-container {
+            position: relative;
+            padding: 2rem 1.5rem;
+        }
+
+        .demo-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s ease;
+            background: rgba(248, 250, 252, 0.5);
+        }
+
+        .demo-image-wrapper:hover {
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .demo-image-wrapper:hover .demo-image-toggle {
+            opacity: 1;
+        }
+
+        .demo-image {
+            width: 100%;
+            display: block;
+            border-radius: 12px;
+            transition: opacity 0.3s ease;
+        }
+
+        .demo-image.demo-input,
+        .demo-image.demo-output {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .demo-image.demo-output {
+            position: relative;
+        }
+
+        /* Before/After Toggle */
+        .demo-image-toggle {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--text-main);
+            padding: 0.6rem 1.2rem;
+            border-radius: 24px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            z-index: 1;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0.85;
+        }
+
+        .demo-image-toggle:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+            border-color: var(--primary);
+            opacity: 1;
+        }
+
+        .demo-image-toggle:active {
+            transform: translateY(0);
+        }
+
+        /* Grid layout for reference images */
+        .demo-reference-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
             margin-bottom: 1rem;
         }
 
-        .chat-image {
+        .demo-reference-image {
             width: 100%;
-            border-radius: 12px;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .chat-image:hover {
-            transform: scale(1.02);
-        }
-
-        /* System Message (Output) */
-        .chat-message-system {
-            margin-top: 1.5rem;
-        }
-
-        .chat-bubble-system {
-            background: linear-gradient(135deg, rgba(236, 72, 153, 0.08), rgba(251, 146, 60, 0.06));
-            border: 1px solid rgba(236, 72, 153, 0.15);
-            border-radius: 20px;
-            padding: 1.2rem;
-        }
-
-        .chat-label.system {
-            color: var(--secondary);
-        }
-
-        .chat-arrow {
-            text-align: center;
-            margin: 1rem 0;
-            font-size: 1.5rem;
-            color: var(--primary);
-            opacity: 0.6;
         }
 
         /* User Study Comparison Styles */
@@ -1310,24 +1376,25 @@
         .user-study-container .comparison-bar-wrapper:nth-child(5).animate-in { transition-delay: 0.5s; }
         .user-study-container .comparison-bar-wrapper:nth-child(6).animate-in { transition-delay: 0.6s; }
 
-        /* Task chat cards stagger animation */
-        .task-chat-card {
+        /* Task demo cards stagger animation */
+        .task-demo-card {
             opacity: 0;
             transform: scale(0.95);
             transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
-        .task-chat-card.animate-in {
+        .task-demo-card.animate-in {
             opacity: 1;
             transform: scale(1);
         }
 
-        .task-showcase-grid .task-chat-card:nth-child(1).animate-in { transition-delay: 0.1s; }
-        .task-showcase-grid .task-chat-card:nth-child(2).animate-in { transition-delay: 0.2s; }
-        .task-showcase-grid .task-chat-card:nth-child(3).animate-in { transition-delay: 0.3s; }
-        .task-showcase-grid .task-chat-card:nth-child(4).animate-in { transition-delay: 0.4s; }
-        .task-showcase-grid .task-chat-card:nth-child(5).animate-in { transition-delay: 0.5s; }
-        .task-showcase-grid .task-chat-card:nth-child(6).animate-in { transition-delay: 0.6s; }
+        .task-showcase-grid .task-demo-card:nth-child(1).animate-in { transition-delay: 0.1s; }
+        .task-showcase-grid .task-demo-card:nth-child(2).animate-in { transition-delay: 0.2s; }
+        .task-showcase-grid .task-demo-card:nth-child(3).animate-in { transition-delay: 0.3s; }
+        .task-showcase-grid .task-demo-card:nth-child(4).animate-in { transition-delay: 0.4s; }
+        .task-showcase-grid .task-demo-card:nth-child(5).animate-in { transition-delay: 0.5s; }
+        .task-showcase-grid .task-demo-card:nth-child(6).animate-in { transition-delay: 0.6s; }
+        .task-showcase-grid .task-demo-card:nth-child(7).animate-in { transition-delay: 0.7s; }
 
         @media (max-width: 968px) {
             .hero-section {
@@ -1451,16 +1518,31 @@
                 gap: 2rem;
             }
 
-            .task-chat-card {
-                padding: 1.5rem;
+            .demo-prompt-header {
+                padding: 0.875rem 1rem;
             }
 
-            .task-chat-title {
-                font-size: 1.1rem;
+            .demo-prompt-text {
+                font-size: 0.85rem;
             }
 
-            .chat-text {
-                font-size: 0.9rem;
+            .demo-comparison-container {
+                padding: 1.5rem 1rem;
+                min-height: 300px;
+            }
+
+            .demo-task-badge {
+                font-size: 0.7rem;
+                padding: 0.35rem 0.85rem;
+                top: 0.75rem;
+                left: 0.75rem;
+            }
+
+            .demo-image-toggle {
+                font-size: 0.75rem;
+                padding: 0.5rem 1rem;
+                bottom: 0.75rem;
+                right: 0.75rem;
             }
         }
 
@@ -1689,8 +1771,8 @@
             );
             animatedElements.forEach(el => animateOnScroll.observe(el));
 
-            // Animate task chat cards
-            const taskCards = document.querySelectorAll('.task-chat-card');
+            // Animate task demo cards
+            const taskCards = document.querySelectorAll('.task-demo-card');
             taskCards.forEach(card => animateOnScroll.observe(card));
 
             // Animate comparison bars

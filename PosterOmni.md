@@ -169,137 +169,116 @@ title: PosterOmni - Generalized Artistic Poster Creation
 
         <div class="task-showcase-grid">
             <!-- Task 1: Extending - Indie Game -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">↔️ Poster Extending</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> Independent Game Demo poster, Film & Entertainment category, Swiss New Grid design with geometric composition, retro game controller, pixelated game screen showing colorful sprites, vintage cassette tape, muted gray-blue background, vibrant pixel hues (red/yellow/cyan), metallic silver accents, nostalgic playful atmosphere, bold title at top "Indie Demo Showcase", subtle tagline below "Play, Discover, Create"</p>
-                        <img src="/images/posteromni/demo_teaser/extend/demo_show1.png" class="chat-image" alt="Extending Input">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">Independent Game Demo poster, Film & Entertainment category, Swiss New Grid design with geometric composition, retro game controller, pixelated game screen showing colorful sprites, vintage cassette tape, muted gray-blue background, vibrant pixel hues (red/yellow/cyan), metallic silver accents, nostalgic playful atmosphere, bold title at top "Indie Demo Showcase", subtle tagline below "Play, Discover, Create"</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/extend/demo_output1.png" class="chat-image" alt="Extending Output">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">↔️ Extending</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/extend/demo_show1.png" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/extend/demo_output1.png" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 2: Extending - IP Collection -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">↔️ Poster Extending</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> A vibrant pop art poster for an IP limited edition product line, featuring a bold red sneaker with a graphic print on the left, a sleek blue smartphone case with a metallic logo in the center, and a gold collectible pin with a character design on the right—all set against a dynamic background of comic book dots and stripes. At the top is the title "IP Limited Edition Collection", and in the center is the text "Exclusive Drops Available Now".</p>
-                        <img src="/images/posteromni/demo_teaser/extend/demo_show2.png" class="chat-image" alt="Extending Input 2">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">A vibrant pop art poster for an IP limited edition product line, featuring a bold red sneaker with a graphic print on the left, a sleek blue smartphone case with a metallic logo in the center, and a gold collectible pin with a character design on the right—all set against a dynamic background of comic book dots and stripes. At the top is the title "IP Limited Edition Collection", and in the center is the text "Exclusive Drops Available Now".</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/extend/demo_output2.png" class="chat-image" alt="Extending Output 2">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">↔️ Extending</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/extend/demo_show2.png" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/extend/demo_output2.png" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 3: Layout-driven - Interactive Experience -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">📋 Layout-driven Generation</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> Refer to the layout of this poster and create a new one featuring a prominently displayed handheld game console as the main subject. Beside it, place a ceramic bowl filled with blue paint, stacked bright color cards, and a sliced smart wristband disk. The text should read "Creative Interactive Experience" at the top and "Instant Activation" at the bottom.</p>
-                        <img src="/images/posteromni/demo_teaser/layout/demo_show1.jpg" class="chat-image" alt="Layout Input">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">Refer to the layout of this poster and create a new one featuring a prominently displayed handheld game console as the main subject. Beside it, place a ceramic bowl filled with blue paint, stacked bright color cards, and a sliced smart wristband disk. The text should read "Creative Interactive Experience" at the top and "Instant Activation" at the bottom.</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/layout/demo_output1.png" class="chat-image" alt="Layout Output">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">📋 Layout-driven</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/layout/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/layout/demo_output1.png" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 4: Layout-driven - Smart Space -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">📋 Layout-driven Generation</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> Refer to the layout of this poster and create a new poster featuring a large beige speaker cabinet filled with plush toys. Next to it, place a metal high stool and a paintbrush with a wooden handle. On the right side, include a cluster of blooming light purple 3D-printed models. Add the text "Smart Space: Innovative Living" at the top and "Collaborative Exploration, Enhanced Experience" at the bottom.</p>
-                        <img src="/images/posteromni/demo_teaser/layout/demo_show2.jpg" class="chat-image" alt="Layout Input 2">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">Refer to the layout of this poster and create a new poster featuring a large beige speaker cabinet filled with plush toys. Next to it, place a metal high stool and a paintbrush with a wooden handle. On the right side, include a cluster of blooming light purple 3D-printed models. Add the text "Smart Space: Innovative Living" at the top and "Collaborative Exploration, Enhanced Experience" at the bottom.</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/layout/demo_output2.png" class="chat-image" alt="Layout Output 2">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">📋 Layout-driven</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/layout/demo_show2.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/layout/demo_output2.png" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 5: Style-driven - Perfume Design -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">🎭 Style-driven Generation</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> Refer to the style of this poster and generate a design featuring a geometric perfume bottle centered as the main subject, accompanied by three abstract feathers, simplified brush strokes, and geometric stars. Include the text "Source of Inspiration" at the top and "Creativity On the Go" at the bottom of the poster.</p>
-                        <img src="/images/posteromni/demo_teaser/style/demo_show1.jpg" class="chat-image" alt="Style Input">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">Refer to the style of this poster and generate a design featuring a geometric perfume bottle centered as the main subject, accompanied by three abstract feathers, simplified brush strokes, and geometric stars. Include the text "Source of Inspiration" at the top and "Creativity On the Go" at the bottom of the poster.</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/style/demo_ouput1.jpg" class="chat-image" alt="Style Output">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">🎭 Style-driven</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/style/demo_show1.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/style/demo_ouput1.jpg" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 6: Style-driven - Future Tech -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">🎭 Style-driven Generation</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> Referencing the style of this poster, create an illustration featuring a colorful library at the center of the image, with a cartoon robot in the foreground, a beam-of-light tunnel at the upper right, and a giant Rubik's cube at the bottom. Include the text "Future Tech Playground" at the top and "Explore Infinite Possibilities" at the center of the image.</p>
-                        <img src="/images/posteromni/demo_teaser/style/demo_show2.jpg" class="chat-image" alt="Style Input 2">
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">Referencing the style of this poster, create an illustration featuring a colorful library at the center of the image, with a cartoon robot in the foreground, a beam-of-light tunnel at the upper right, and a giant Rubik's cube at the bottom. Include the text "Future Tech Playground" at the top and "Explore Infinite Possibilities" at the center of the image.</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/style/demo_ouput2.jpg" class="chat-image" alt="Style Output 2">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">🎭 Style-driven</span>
+                    <div class="demo-image-wrapper">
+                        <img src="/images/posteromni/demo_teaser/style/demo_show2.jpg" class="demo-image demo-input" alt="Input" style="display:none;">
+                        <img src="/images/posteromni/demo_teaser/style/demo_ouput2.jpg" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'block' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>
 
             <!-- Task 7: Identity-driven - Greenery -->
-            <div class="task-chat-card fade-scale">
-                <h3 class="task-chat-title">👤 Identity-driven Generation</h3>
-                <div class="chat-message-user">
-                    <div class="chat-label"><i class="fas fa-user"></i> User Input</div>
-                    <div class="chat-bubble-user">
-                        <p class="chat-text"><strong>Prompt:</strong> 3D anime-inspired poster with intricate details and vivid lighting, exuding a sense of aesthetic beauty. On the left side of the image, a lush potted bamboo plant features vibrant, dew-kissed leaves gently swaying in the breeze, slender green stalks reaching upward, and a pot that embodies antiquity and elegance. In the lower right corner, a uniquely shaped cactus stands resilient in a simple terracotta pot, its surface covered with fine fuzz and sharp spines. The background showcases a bright, transparent indoor greenhouse space. Main title: "Bursting with Vitality" Style: Color: Vibrant green. Subtitle: "Breathe Purely, Feel Alive" Style: Color: Soft ivory.</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-top: 1rem;">
-                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref1.jpg" class="chat-image" alt="ID Demo Reference 1">
-                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref2.jpg" class="chat-image" alt="ID Demo Reference 2">
-                        </div>
-                    </div>
+            <div class="task-demo-card fade-scale">
+                <div class="demo-prompt-header">
+                    <div class="demo-prompt-label">Shared Prompt:</div>
+                    <div class="demo-prompt-text">3D anime-inspired poster with intricate details and vivid lighting, exuding a sense of aesthetic beauty. On the left side of the image, a lush potted bamboo plant features vibrant, dew-kissed leaves gently swaying in the breeze, slender green stalks reaching upward, and a pot that embodies antiquity and elegance. In the lower right corner, a uniquely shaped cactus stands resilient in a simple terracotta pot, its surface covered with fine fuzz and sharp spines. The background showcases a bright, transparent indoor greenhouse space. Main title: "Bursting with Vitality" Style: Color: Vibrant green. Subtitle: "Breathe Purely, Feel Alive" Style: Color: Soft ivory.</div>
                 </div>
-                <div class="chat-arrow">↓</div>
-                <div class="chat-message-system">
-                    <div class="chat-label system"><i class="fas fa-robot"></i> PosterOmni Output</div>
-                    <div class="chat-bubble-system">
-                        <img src="/images/posteromni/demo_teaser/id/demo_ouput1.jpg" class="chat-image" alt="ID Demo Output">
+                <div class="demo-comparison-container">
+                    <span class="demo-task-badge">👤 Identity-driven</span>
+                    <div class="demo-image-wrapper">
+                        <div class="demo-reference-grid demo-input" style="display:none;">
+                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref1.jpg" class="demo-reference-image" alt="Reference 1">
+                            <img src="/images/posteromni/demo_teaser/id/demo_show1_ref2.jpg" class="demo-reference-image" alt="Reference 2">
+                        </div>
+                        <img src="/images/posteromni/demo_teaser/id/demo_ouput1.jpg" class="demo-image demo-output" alt="Output">
+                        <div class="demo-image-toggle" onclick="this.closest('.demo-comparison-container').querySelector('.demo-input').style.display = this.closest('.demo-comparison-container').querySelector('.demo-input').style.display === 'none' ? 'grid' : 'none'; this.closest('.demo-comparison-container').querySelector('.demo-output').style.display = this.closest('.demo-comparison-container').querySelector('.demo-output').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Show Input' ? 'Show Output' : 'Show Input';">Show Input</div>
                     </div>
                 </div>
             </div>

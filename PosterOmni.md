@@ -60,10 +60,10 @@ title: PosterOmni - Generalized Artistic Poster Creation
             <a href="https://arxiv.org/abs/2602.12127" class="btn-capsule primary">
                 <i class="fas fa-file-alt btn-icon"></i> Paper
             </a>
-            <a href="https://github.com/Ephemeral182/PosterOmni" class="btn-capsule">
+            <a href="https://github.com/MeiGen-AI/PosterOmni" class="btn-capsule">
                 <i class="fab fa-github btn-icon"></i> Code
             </a>
-            <a href="https://huggingface.co/PosterOmni" class="btn-capsule">
+            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1" class="btn-capsule">
                 <i class="fas fa-cube btn-icon"></i> Model
             </a>
             <a href="https://huggingface.co/spaces/PosterOmni" class="btn-capsule">

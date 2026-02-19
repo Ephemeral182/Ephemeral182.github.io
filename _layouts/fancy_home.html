@@ -19,11 +19,11 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #f8fafc;
+            color: #0f172a;
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
-            background-color: #020617;
+            background-color: #f1f5f9;
             position: relative;
         }
 
@@ -37,12 +37,12 @@
 
         body::before {
             background: url('{{ "/images/background/building-small-island-bled-slovenia-surrounded-by-high-mountains.jpg" | relative_url }}') center / cover no-repeat;
-            filter: saturate(1) brightness(0.95);
-            opacity: 0.75;
+            filter: saturate(1.05) brightness(1.05);
+            opacity: 0.65;
         }
 
         body::after {
-            background: radial-gradient(circle at top, rgba(2, 6, 23, 0.55), rgba(2, 6, 23, 0.65));
+            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.25));
             z-index: -1;
         }
         
@@ -51,17 +51,17 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
             z-index: 1000;
             padding: 1rem 0;
             transition: all 0.3s ease;
         }
         
         .navbar.scrolled {
-            background: rgba(10, 10, 10, 0.95);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 20px rgba(15, 23, 42, 0.15);
         }
         
         .nav-container {
@@ -95,7 +95,7 @@
         }
         
         .nav-menu a {
-            color: #a1a1aa;
+            color: #1f2937;
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
@@ -105,8 +105,8 @@
         }
         
         .nav-menu a:hover {
-            color: #ffffff;
-            background: rgba(99, 102, 241, 0.1);
+            color: #0f172a;
+            background: rgba(99, 102, 241, 0.15);
         }
         
         .nav-menu a::after {
@@ -132,10 +132,10 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            background: rgba(3, 7, 18, 0.4);
+            background: rgba(255, 255, 255, 0.92);
             border-radius: 28px;
-            box-shadow: 0 25px 60px rgba(2, 6, 23, 0.3);
-            backdrop-filter: blur(8px);
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
+            backdrop-filter: blur(6px);
         }
         
         /* Hero区域 */
@@ -176,21 +176,21 @@
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            color: #ffffff;
+            color: #0f172a;
             font-family: 'Inter', 'Helvetica Neue', sans-serif;
             letter-spacing: -0.02em;
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
-            color: #a1a1aa;
+            color: #475569;
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
-        
+
         .hero-description {
             font-size: 1.1rem;
-            color: #d1d5db;
+            color: #1f2937;
             margin-bottom: 3rem;
             line-height: 1.8;
             animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -212,10 +212,10 @@
             min-width: 50px;
             height: 50px;
             padding: 0 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(15, 23, 42, 0.1);
             border-radius: 12px;
-            color: #a1a1aa;
+            color: #1f2937;
             text-decoration: none;
             font-size: 1.2rem;
             transition: all 0.4s ease;
@@ -254,29 +254,29 @@
         .social-link:hover {
             transform: translateY(-5px) scale(1.05);
             color: #ffffff;
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(99, 102, 241, 0.5);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: rgba(99, 102, 241, 0.8);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
         }
         
         .social-link.github:hover {
-            background: linear-gradient(135deg, rgba(36, 41, 46, 0.8), rgba(88, 96, 105, 0.3));
-            box-shadow: 0 10px 25px rgba(36, 41, 46, 0.3);
+            background: linear-gradient(135deg, #1f2937, #475569);
+            box-shadow: 0 10px 25px rgba(31, 41, 55, 0.25);
         }
         
         .social-link.scholar:hover {
-            background: linear-gradient(135deg, rgba(66, 133, 244, 0.3), rgba(52, 168, 83, 0.3));
-            box-shadow: 0 10px 25px rgba(66, 133, 244, 0.3);
+            background: linear-gradient(135deg, #2563eb, #34a853);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
         }
         
         .social-link.twitter:hover {
-            background: linear-gradient(135deg, rgba(29, 161, 242, 0.3), rgba(64, 191, 255, 0.3));
-            box-shadow: 0 10px 25px rgba(29, 161, 242, 0.3);
+            background: linear-gradient(135deg, #0ea5e9, #0284c7);
+            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
         }
         
         .social-link.wechat:hover {
-            background: linear-gradient(135deg, rgba(82, 196, 26, 0.3), rgba(114, 224, 61, 0.3));
-            box-shadow: 0 10px 25px rgba(82, 196, 26, 0.3);
+            background: linear-gradient(135deg, #16a34a, #0d9488);
+            box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
         }
         
         /* 响应式设计 - 移动端调整 */
@@ -311,8 +311,8 @@
         }
         
         .info-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(15, 23, 42, 0.08);
             border-radius: 20px;
             padding: 2rem;
             transition: all 0.5s ease;
@@ -354,9 +354,9 @@
         
         .info-card:hover {
             transform: translateY(-10px) scale(1.02);
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            background: #ffffff;
+            border-color: rgba(99, 102, 241, 0.25);
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
         }
         
         .card-icon {
@@ -380,18 +380,18 @@
             font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: #ffffff;
+            color: #0f172a;
         }
         
         .card-content {
-            color: #a1a1aa;
+            color: #1f2937;
             line-height: 1.6;
         }
         
         /* 新闻滚动区域 */
         .news-section {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(15, 23, 42, 0.08);
             border-radius: 20px;
             padding: 2rem;
             margin: 2rem 0;
@@ -437,21 +437,21 @@
             overflow-y: auto;
             border-radius: 12px;
             padding: 15px;
-            background-color: rgba(255, 255, 255, 0.02);
+            background-color: rgba(248, 250, 252, 0.9);
             list-style: none;
         }
         
         .scrollable-news li {
             margin-bottom: 8px;
             padding: 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(15, 23, 42, 0.08);
             line-height: 1.4;
             transition: all 0.4s ease;
             border-radius: 8px;
         }
         
         .scrollable-news li:hover {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(99, 102, 241, 0.08);
             transform: translateX(10px) scale(1.02);
             border-color: rgba(99, 102, 241, 0.3);
         }
@@ -466,7 +466,7 @@
         }
         
         .scrollable-news::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(15, 23, 42, 0.05);
             border-radius: 10px;
         }
         

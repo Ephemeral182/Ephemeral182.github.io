@@ -52,11 +52,13 @@ title: Publications
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
-          </div>
-          <div class="repo-buttons">
             <a class="repo-chip repo-link" href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
-            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
-            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterOmni GitHub Fork"></iframe>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
+            </span>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterOmni GitHub Fork"></iframe>
+            </span>
           </div>
         </div>
       </article>
@@ -74,11 +76,13 @@ title: Publications
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
-          </div>
-          <div class="repo-buttons">
             <a class="repo-chip repo-link" href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">GitHub</a>
-            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
-            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterCraft GitHub Fork"></iframe>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
+            </span>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterCraft GitHub Fork"></iframe>
+            </span>
           </div>
         </div>
       </article>
@@ -371,12 +375,6 @@ title: Publications
   text-decoration: none;
   color: #0f62fe;
 }
-.repo-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-  margin-top: 0.6rem;
-}
 .repo-chip {
   display: inline-flex;
   align-items: center;
@@ -393,11 +391,15 @@ title: Publications
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
   color: #fff;
 }
-.gh-btn {
-  border: none;
-  width: 100px;
-  height: 20px;
+.gh-btn-wrap {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.35rem;
+  background: #fff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
 }
+.gh-btn-wrap iframe {border: none;}
 .timeline-block {margin-top: 4rem;}
 .timeline-heading {margin-bottom: 1rem;}
 .timeline-heading h2 {margin: 0; font-size: 2.2rem; color: #0f172a;}

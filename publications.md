@@ -294,7 +294,7 @@ title: Publications
   position: relative;
   display: flex;
   gap: 1.4rem;
-  padding: 1.4rem 1.6rem 1.4rem 2.8rem;
+  padding: 1.4rem 1.6rem 1.4rem 2.6rem;
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(15, 23, 42, 0.05);
@@ -305,24 +305,24 @@ title: Publications
 .highlight-card::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 18px;
-  border-radius: 28px 0 0 28px;
+  left: -6px;
+  top: 18px;
+  bottom: 18px;
+  width: 10px;
+  border-radius: 999px;
   background: linear-gradient(180deg, #34d399, #0ea5e9);
-  box-shadow: inset -4px 0 12px rgba(14, 165, 233, 0.25);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.35);
 }
 .highlight-card::after {
   content: '';
   position: absolute;
-  left: -8px;
-  top: 8px;
-  bottom: 8px;
-  width: 28px;
-  border-radius: 34px;
-  background: linear-gradient(180deg, rgba(52, 211, 153, 0.18), rgba(14, 165, 233, 0.14));
-  filter: blur(4px);
+  left: -12px;
+  top: 10px;
+  bottom: 10px;
+  width: 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(52, 211, 153, 0.16), rgba(14, 165, 233, 0.12));
+  filter: blur(5px);
   z-index: -1;
 }
 .highlight-media {flex: 0 0 220px; position: relative;}

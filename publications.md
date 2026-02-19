@@ -376,19 +376,12 @@ title: Publications
   align-items: center;
 }
 .resource-list a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #f8fafc;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
-  color: #0f172a;
+  color: #0f62fe;
 }
-.resource-list a:hover {background: #e2e8f0;}
+.resource-list a:hover {text-decoration: underline;}
 .repo-chip {
   display: inline-flex;
   align-items: center;
@@ -400,17 +393,19 @@ title: Publications
   font-size: 0.85rem;
   font-weight: 600;
   color: #0f172a;
+  text-decoration: none;
 }
 .repo-chip.repo-link {
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
   color: #fff;
 }
+.repo-chip:hover {text-decoration: none;}
 .gh-btn-wrap {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
   padding: 0.15rem 0.35rem;
-  background: #f8fafc;
+  background: #fff;
   border: 1px solid rgba(15, 23, 42, 0.12);
 }
 .gh-btn-wrap iframe {border: none;}

@@ -52,6 +52,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
             <a href="https://github.com/MeiGen-AI/PosterOmni">💻 Code</a>
+            <span class="star-tag">⭐ 320+</span>
             <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
           </div>
         </div>
@@ -70,6 +71,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://github.com/Ephemeral182/PosterCraft">💻 Code</a>
+            <span class="star-tag">⭐ 410+</span>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
           </div>
         </div>
@@ -88,6 +90,7 @@ title: Publications
             <a href="https://ephemeral182.github.io">📄 PDF</a>
             <a href="https://ephemeral182.github.io">🌐 Project</a>
             <a href="https://ephemeral182.github.io">💻 Code</a>
+            <span class="star-tag">⭐ 250+</span>
           </div>
         </div>
       </article>
@@ -291,22 +294,35 @@ title: Publications
   position: relative;
   display: flex;
   gap: 1.4rem;
-  padding: 1.2rem 1.2rem 1.2rem 1.6rem;
+  padding: 1.4rem 1.4rem 1.4rem 1.9rem;
   border-radius: 26px;
   background: linear-gradient(135deg, #fdfefe, #eef4ff);
   border: 1px solid #dbeafe;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  overflow: visible;
 }
 .highlight-card::before {
   content: '';
   position: absolute;
-  left: -22px;
-  top: 26px;
-  bottom: 26px;
-  width: 12px;
+  left: -30px;
+  top: 24px;
+  bottom: 24px;
+  width: 14px;
   border-radius: 12px;
   background: linear-gradient(180deg, #22c55e, #0ea5e9);
-  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+  box-shadow: 0 12px 28px rgba(34, 197, 94, 0.3);
+}
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  left: -48px;
+  top: 12px;
+  bottom: 12px;
+  width: 32px;
+  border: 3px solid rgba(14, 116, 144, 0.45);
+  border-right: none;
+  border-radius: 32px 0 0 32px;
+  opacity: 0.8;
 }
 .highlight-media {flex: 0 0 220px; position: relative;}
 .highlight-media img {width: 100%; height: 150px; object-fit: cover; border-radius: 18px;}
@@ -333,6 +349,16 @@ title: Publications
   font-weight: 600;
   text-decoration: none;
   color: #0f62fe;
+}
+.star-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 .timeline-block {margin-top: 4rem;}
 .timeline-heading {margin-bottom: 1rem;}

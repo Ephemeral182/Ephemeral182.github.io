@@ -288,19 +288,31 @@ title: Publications
 .section-header h2 {margin: 0.3rem 0 0; font-size: 2rem; color: #0f172a;}
 .highlight-list {display: flex; flex-direction: column; gap: 1.5rem;}
 .highlight-card {
+  position: relative;
   display: flex;
   gap: 1.4rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.2rem 1.2rem 1.6rem;
   border-radius: 26px;
   background: linear-gradient(135deg, #fdfefe, #eef4ff);
   border: 1px solid #dbeafe;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 26px;
+  bottom: 26px;
+  width: 12px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #22c55e, #0ea5e9);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.25);
+}
 .highlight-media {flex: 0 0 220px; position: relative;}
 .highlight-media img {width: 100%; height: 150px; object-fit: cover; border-radius: 18px;}
 .badge {
   position: absolute;
-  top: 12px; left: 12px;
+  top: -8px; left: -12px;
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
   font-size: 0.75rem;

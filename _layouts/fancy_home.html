@@ -23,7 +23,27 @@
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
-            background: linear-gradient(rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.85)), url('{{ "/images/background/building-small-island-bled-slovenia-surrounded-by-high-mountains.jpg" | relative_url }}') center / cover fixed no-repeat;
+            background-color: #020617;
+            position: relative;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+        }
+
+        body::before {
+            background: url('{{ "/images/background/building-small-island-bled-slovenia-surrounded-by-high-mountains.jpg" | relative_url }}') center / cover no-repeat;
+            filter: saturate(0.9) brightness(0.8);
+            opacity: 0.9;
+        }
+
+        body::after {
+            background: radial-gradient(circle at top, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.92));
+            z-index: -1;
         }
         
         /* 导航栏 */

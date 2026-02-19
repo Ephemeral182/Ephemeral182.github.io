@@ -336,14 +336,20 @@ title: Publications
   z-index: -1;
 }
 .highlight-media {
-  flex: 0 0 260px;
+  flex: 0 0 280px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .highlight-media img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
   border-radius: 22px;
+  background: #fff;
+  padding: 0.35rem;
 }
 .badge {
   position: absolute;

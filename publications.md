@@ -35,7 +35,7 @@ title: Publications
   <section class="highlight-block">
     <div class="section-header">
       <p class="eyebrow">Highlight Research</p>
-      <h2>Flagship systems leading structured creativity</h2>
+      <h2>Highlight Research</h2>
     </div>
 
     <div class="highlight-list">
@@ -46,7 +46,7 @@ title: Publications
         </div>
         <div class="highlight-content">
           <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
-          <p class="authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
+          <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
           <p class="summary">A unified agent distills local editing, layout completion, and unified reward feedback. Releases include dataset, model, and online demo for reproducible poster design.</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
@@ -70,7 +70,7 @@ title: Publications
         </div>
         <div class="highlight-content">
           <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
-          <p class="authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
+          <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
           <p class="summary">Combines composition planning with stylized diffusion to convert natural prompts into production-ready posters. Accepted to ICLR 2026 with full code release.</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
@@ -94,7 +94,7 @@ title: Publications
         </div>
         <div class="highlight-content">
           <h3>JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
-          <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, Sixiang Chen, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
+          <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
           <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-list">
             <a href="https://ephemeral182.github.io">📄 PDF</a>
@@ -111,7 +111,7 @@ title: Publications
         </div>
         <div class="highlight-content">
           <h3>GenHaze — One-step Controllable Haze Generation for Real-World Dehazing</h3>
-          <p class="authors">Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu✉️</p>
+          <p class="authors"><strong>Sixiang Chen*</strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu✉️</p>
           <p class="summary">Synthesizes realistic haze with physical controls to create paired data for downstream restoration. Enables single-step controllable data generation.</p>
           <div class="resource-list">
             <a href="https://ephemeral182.github.io">📄 PDF</a>
@@ -124,8 +124,8 @@ title: Publications
 
   <section class="timeline-block">
     <div class="timeline-heading">
-      <p class="eyebrow accent">Recent</p>
-      <h2>Projects</h2>
+      <p class="eyebrow accent">Selected</p>
+      <h2>Selected Publications</h2>
     </div>
     <div class="timeline-list">
       <article class="timeline-row">

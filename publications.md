@@ -294,24 +294,36 @@ title: Publications
   position: relative;
   display: flex;
   gap: 1.4rem;
-  padding: 1.4rem 1.4rem 1.4rem 2.2rem;
-  border-radius: 26px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(15, 118, 220, 0.08);
+  padding: 1.4rem 1.6rem 1.4rem 2.8rem;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(15, 23, 42, 0.05);
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
   overflow: visible;
 }
 .highlight-card::before {
   content: '';
   position: absolute;
-  left: -28px;
-  top: 18px;
-  bottom: 18px;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 18px;
-  border-radius: 20px;
-  background: linear-gradient(210deg, #22d3ee, #34d399);
-  box-shadow: 0 14px 32px rgba(34, 211, 238, 0.35);
+  border-radius: 28px 0 0 28px;
+  background: linear-gradient(180deg, #34d399, #0ea5e9);
+  box-shadow: inset -4px 0 12px rgba(14, 165, 233, 0.25);
+}
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  bottom: 8px;
+  width: 28px;
+  border-radius: 34px;
+  background: linear-gradient(180deg, rgba(52, 211, 153, 0.18), rgba(14, 165, 233, 0.14));
+  filter: blur(4px);
+  z-index: -1;
 }
 .highlight-media {flex: 0 0 220px; position: relative;}
 .highlight-media img {width: 100%; height: 150px; object-fit: cover; border-radius: 18px;}

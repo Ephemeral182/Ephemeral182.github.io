@@ -133,13 +133,6 @@
             margin-left: auto;
             margin-right: auto;
         }
-
-        .hero-overlay {
-            background: rgba(255, 255, 255, 0.75);
-            border-radius: 32px;
-            padding: 2.5rem;
-            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
-        }
         
         /* Hero区域 */
         .hero {
@@ -197,6 +190,11 @@
             margin-bottom: 3rem;
             line-height: 1.8;
             animation: fadeInUp 0.8s ease-out 0.4s both;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 24px;
+            padding: 1.5rem;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
+            backdrop-filter: blur(6px);
         }
         
         /* 社交媒体链接 - 更新样式以支持文字标签 */
@@ -851,7 +849,7 @@
     </nav>
     
     <!-- 主要内容 -->
-    <main class="main-content hero-overlay">
+    <main class="main-content">
         {{ content }}
     </main>
     

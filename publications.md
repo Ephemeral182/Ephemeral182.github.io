@@ -340,7 +340,13 @@ title: Publications
 .badge-green {background: #16a34a;}
 .badge-cyan {background: #0ea5e9;}
 .badge-purple {background: #9333ea;}
-.highlight-content h3 {margin: 0 0 0.4rem; font-size: 1.25rem;}
+.highlight-content h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 700;
+  white-space: normal;
+}
 .authors {margin: 0 0 0.6rem; font-size: 0.85rem; color: #475569;}
 .summary {margin: 0; font-size: 0.95rem; color: #1e293b;}
 .resource-list {margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.6rem;}

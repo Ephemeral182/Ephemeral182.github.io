@@ -10,7 +10,7 @@ layout: fancy_home
         </div>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
-            My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a first-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.
+            My name is <span class="highlight">Sixiang Chen (陈思翔)</span>. I received my bachelor degree in Communication Engineering from the School of Ocean Information Engineering at Jimei University, where I was extremely fortunate to be supervised by <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=hWo1RTsAAAAJ"><strong>Dr. Erkang Chen</strong></a> and <a href="https://scholar.google.com.hk/citations?user=9fjHp-EAAAAJ&hl=zh-CN"><strong>Dr. Yun Liu</strong></a> (Southwest University). My research interests lie in the AIGC and low-level vision. I am currently a second-year PhD student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, supervised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>.
         </div>
         <div class="social-links">
             <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
@@ -77,6 +77,8 @@ layout: fancy_home
     <h2 class="news-title">📰 News and Updates</h2>
     <div class="scrollable-news">
         <ul>
+            <li><strong>Feb. 2026：</strong>🆕 We present <a href="https://ephemeral182.github.io/PosterOmni/"><strong>PosterOmni</strong></a>, a generalized artistic poster creation framework built with task distillation and unified reward feedback.</li>
+            <li><strong>Jan. 2026：</strong>🎓 <strong>PosterCraft</strong> has been accepted by <strong>ICLR'2026</strong>.</li>
             <li><strong>Jun. 2025：</strong>🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterCraft/"><strong>PosterCraft</strong></a>! A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework".<br>✨ <span class="highlight">From your prompts to high-quality aesthetic posters!</span></li>
             <li><strong>Jun. 2025：</strong>🎉 Luckily, GenHaze has been accepted by <strong>ICCV'2025</strong>.</li>
             <li><strong>Apr. 2025：</strong>📄 Our comprehensive <strong>GPT-4o Image Generation Capabilities</strong> evaluation report is now available on arXiv!</li>

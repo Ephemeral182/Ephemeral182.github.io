@@ -83,6 +83,37 @@ title: Publications
   <span><strong><sup>✉️</sup></strong> - Corresponding Author</span>
 </div>
 
+    <div class="year-section">
+        <h3 class="year-title">2026</h3>
+
+        <div class="publication-item fade-in">
+            <div class="pub-content">
+                <div class="pub-image">
+                    <a href="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" target="_blank" title="Click to view full image">
+                        <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni teaser">
+                    </a>
+                </div>
+                <div class="pub-details">
+                    <h4 class="pub-title">PosterOmni: Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h4>
+                    <div class="pub-tags">
+                        <span class="paper-tag tag-method">Task Distillation</span>
+                        <span class="paper-tag tag-application">Unified Poster Creation</span>
+                    </div>
+                    <div class="pub-authors">
+                        <strong><u>Sixiang Chen*</u></strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu<sup>✉️</sup>.
+                    </div>
+                    <div class="pub-venue"><em>arXiv</em>, 2026</div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2602.12127" class="custom-link custom-link-paper">Paper</a>
+                        <a href="https://github.com/MeiGen-AI/PosterOmni" class="custom-link custom-link-code">GitHub</a>
+                        <a href="https://ephemeral182.github.io/PosterOmni/" class="custom-link custom-link-project">Project Website</a>
+                        <a href="https://huggingface.co/spaces/PosterOmni" class="custom-link custom-link-hf">HF Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 2025年论文 - 完整版本 -->
 <div class="year-section">
         <h3 class="year-title">2025</h3>
@@ -96,7 +127,7 @@ title: Publications
                     </a>
                 </div>
                 <div class="pub-details">
-                    <h4 class="pub-title">🔥🔥🔥 PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
+                    <h4 class="pub-title">🔥🔥🔥 <strong>ICLR 2026</strong> | PosterCraft: Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h4>
                     <div class="pub-tags">
           <span class="paper-tag tag-method">Unified Framework</span>
                         <span class="paper-tag tag-application">Aesthetic Poster Generation</span>
@@ -1129,4 +1160,3 @@ title: Publications
     }
 }
 </style>
-

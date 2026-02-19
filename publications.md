@@ -403,10 +403,9 @@ title: Publications
 .gh-btn-wrap {
   display: inline-flex;
   align-items: center;
-  border-radius: 999px;
-  padding: 0.15rem 0.35rem;
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 .gh-btn-wrap iframe {border: none;}
 .timeline-block {margin-top: 4rem;}

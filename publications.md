@@ -53,16 +53,10 @@ title: Publications
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
           </div>
-          <div class="repo-stats" data-repo="MeiGen-AI/PosterOmni">
+          <div class="repo-buttons">
             <a class="repo-chip repo-link" href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
-            <span class="repo-chip" data-stat="stars">
-              <span class="label">Star</span>
-              <span class="count">--</span>
-            </span>
-            <span class="repo-chip" data-stat="forks">
-              <span class="label">Fork</span>
-              <span class="count">--</span>
-            </span>
+            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
+            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterOmni GitHub Fork"></iframe>
           </div>
         </div>
       </article>
@@ -81,16 +75,10 @@ title: Publications
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
           </div>
-          <div class="repo-stats" data-repo="Ephemeral182/PosterCraft">
+          <div class="repo-buttons">
             <a class="repo-chip repo-link" href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">GitHub</a>
-            <span class="repo-chip" data-stat="stars">
-              <span class="label">Star</span>
-              <span class="count">--</span>
-            </span>
-            <span class="repo-chip" data-stat="forks">
-              <span class="label">Fork</span>
-              <span class="count">--</span>
-            </span>
+            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
+            <iframe class="gh-btn" src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterCraft GitHub Fork"></iframe>
           </div>
         </div>
       </article>
@@ -310,13 +298,14 @@ title: Publications
 .highlight-card {
   position: relative;
   display: flex;
-  gap: 1.4rem;
-  padding: 1.4rem 1.6rem 1.4rem 2.6rem;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.82);
+  align-items: stretch;
+  gap: 1.8rem;
+  padding: 1.6rem 1.8rem 1.6rem 2.8rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(15, 23, 42, 0.05);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-  backdrop-filter: blur(8px);
+  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(10px);
   overflow: visible;
 }
 .highlight-card::before {
@@ -342,8 +331,16 @@ title: Publications
   filter: blur(5px);
   z-index: -1;
 }
-.highlight-media {flex: 0 0 220px; position: relative;}
-.highlight-media img {width: 100%; height: 150px; object-fit: cover; border-radius: 18px;}
+.highlight-media {
+  flex: 0 0 260px;
+  position: relative;
+}
+.highlight-media img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 22px;
+}
 .badge {
   position: absolute;
   top: -8px; left: -12px;
@@ -374,7 +371,7 @@ title: Publications
   text-decoration: none;
   color: #0f62fe;
 }
-.repo-stats {
+.repo-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
@@ -392,10 +389,14 @@ title: Publications
   font-weight: 600;
   color: #0f172a;
 }
-.repo-chip .count {font-weight: 700;}
 .repo-chip.repo-link {
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
   color: #fff;
+}
+.gh-btn {
+  border: none;
+  width: 100px;
+  height: 20px;
 }
 .timeline-block {margin-top: 4rem;}
 .timeline-heading {margin-bottom: 1rem;}
@@ -448,44 +449,3 @@ title: Publications
   .timeline-meta {text-align: left;}
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const blocks = Array.from(document.querySelectorAll('.repo-stats[data-repo]'));
-  if (!blocks.length) return;
-
-  const cache = {};
-  const applyStats = (block, data) => {
-    block.querySelectorAll('[data-stat]').forEach(el => {
-      const type = el.dataset.stat;
-      const countEl = el.querySelector('.count');
-      if (!countEl) return;
-      if (type === 'stars' && typeof data.stargazers_count === 'number') {
-        countEl.textContent = data.stargazers_count.toLocaleString();
-      }
-      if (type === 'forks' && typeof data.forks_count === 'number') {
-        countEl.textContent = data.forks_count.toLocaleString();
-      }
-    });
-  };
-
-  blocks.forEach(block => {
-    const repo = block.dataset.repo;
-    if (!repo) return;
-
-    if (cache[repo]) {
-      applyStats(block, cache[repo]);
-      return;
-    }
-
-    fetch(`https://api.github.com/repos/${repo}`)
-      .then(res => (res.ok ? res.json() : null))
-      .then(data => {
-        if (!data) return;
-        cache[repo] = data;
-        applyStats(block, data);
-      })
-      .catch(() => {});
-  });
-});
-</script>

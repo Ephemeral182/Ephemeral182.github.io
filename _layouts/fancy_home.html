@@ -19,138 +19,11 @@
         
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: #0a0a0a;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
-        }
-        
-        /* 动态背景渐变 */
-        .bg-gradient {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(ellipse at top, #1a1a2e 0%, #16213e 25%, #0f0f23 50%, #000000 100%);
-            z-index: -2;
-        }
-        
-        /* 极光背景效果 */
-        .aurora-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
-            opacity: 0.6;
-            filter: blur(100px);
-        }
-        
-        .aurora-bg::before,
-        .aurora-bg::after {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            border-radius: 50%;
-            mix-blend-mode: screen;
-            animation: aurora-flow 25s infinite linear alternate;
-        }
-        
-        .aurora-bg::before {
-            background: radial-gradient(circle, rgba(66, 165, 245, 0.7) 0%, transparent 70%);
-            top: -20%;
-            left: -20%;
-        }
-        
-        .aurora-bg::after {
-            background: radial-gradient(circle, rgba(173, 216, 230, 0.6) 0%, transparent 70%);
-            bottom: -20%;
-            right: -20%;
-            animation-delay: -12.5s;
-            animation-direction: alternate-reverse;
-        }
-        
-        @keyframes aurora-flow {
-            0% {
-                transform: translate(0, 0) rotate(0deg) scale(1);
-            }
-            100% {
-                transform: translate(100px, 50px) rotate(180deg) scale(1.2);
-            }
-        }
-        
-        /* 增强的漂浮几何图形 */
-        .geometric-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
-            overflow: hidden;
-        }
-        
-        .shape {
-            position: absolute;
-            border-radius: 20%;
-            opacity: 0.15;
-            animation: float-rotate 30s infinite linear alternate;
-        }
-        
-        .shape-1 {
-            width: 150px; height: 150px;
-            background: linear-gradient(45deg, #8ec5fc, #e0c3fc);
-            top: 10%; left: 15%;
-            animation-duration: 35s;
-        }
-        .shape-2 {
-            width: 80px; height: 80px;
-            background: linear-gradient(45deg, #e0c3fc, #9bb5ff);
-            top: 60%; left: 70%;
-            animation-duration: 28s;
-            animation-delay: -5s;
-        }
-        .shape-3 {
-            width: 0; height: 0;
-            border-left: 60px solid transparent;
-            border-right: 60px solid transparent;
-            border-bottom: 100px solid #a8edea;
-            background-color: transparent !important;
-            border-radius: 0;
-            top: 30%; left: 40%;
-            animation-duration: 40s;
-            animation-delay: -15s;
-        }
-        .shape-4 {
-            width: 120px; height: 120px;
-            background: linear-gradient(45deg, #f0e68c, #96fbc4);
-            top: 75%; left: 10%;
-            border-radius: 50%;
-            animation-duration: 32s;
-            animation-delay: -10s;
-        }
-        .shape-5 {
-            width: 100px; height: 100px;
-            background: linear-gradient(45deg, #ffecd2, #fcb69f);
-            top: 45%; left: 85%;
-            border-radius: 30%;
-            animation-duration: 38s;
-            animation-delay: -20s;
-        }
-        
-        @keyframes float-rotate {
-            0% {
-                transform: translateY(0) rotate(0deg) scale(1);
-            }
-            100% {
-                transform: translateY(-60px) rotate(360deg) scale(1.15);
-            }
+            min-height: 100vh;
+            background: linear-gradient(rgba(3, 7, 18, 0.65), rgba(3, 7, 18, 0.7)), url('{{ "/images/background/castle-lake-view.jpg" | relative_url }}') center / cover fixed no-repeat;
         }
         
         /* 导航栏 */
@@ -929,17 +802,6 @@
     </style>
 </head>
 <body>
-    <!-- 背景效果 -->
-    <div class="bg-gradient"></div>
-    <div class="aurora-bg"></div>
-    <div class="geometric-bg">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-        <div class="shape shape-4"></div>
-        <div class="shape shape-5"></div>
-    </div>
-    
     <!-- 导航栏 -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">

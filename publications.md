@@ -368,22 +368,36 @@ title: Publications
 }
 .authors {margin: 0 0 0.6rem; font-size: 0.85rem; color: #475569;}
 .summary {margin: 0; font-size: 0.95rem; color: #1e293b;}
-.resource-list {margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.6rem;}
+.resource-list {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
 .resource-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #f8fafc;
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
-  color: #0f62fe;
+  color: #0f172a;
 }
+.resource-list a:hover {background: #e2e8f0;}
 .repo-chip {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.25rem 0.7rem;
+  padding: 0.35rem 0.9rem;
   border-radius: 999px;
   border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #fff;
-  font-size: 0.8rem;
+  background: #f8fafc;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #0f172a;
 }
@@ -396,7 +410,7 @@ title: Publications
   align-items: center;
   border-radius: 999px;
   padding: 0.15rem 0.35rem;
-  background: #fff;
+  background: #f8fafc;
   border: 1px solid rgba(15, 23, 42, 0.12);
 }
 .gh-btn-wrap iframe {border: none;}

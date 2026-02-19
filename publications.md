@@ -52,7 +52,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
-            <a class="repo-chip repo-link" href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">🐙 GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
             </span>
@@ -76,7 +76,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
-            <a class="repo-chip repo-link" href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">🐙 GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
             </span>
@@ -382,21 +382,6 @@ title: Publications
   color: #0f62fe;
 }
 .resource-list a:hover {text-decoration: underline;}
-.repo-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.3rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #fff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #0f172a;
-  text-decoration: none;
-}
-.repo-chip.repo-link {background: #fff; color: #0f172a; border-color: rgba(15, 23, 42, 0.12);}
-.repo-chip:hover {text-decoration: none;}
 .gh-btn-wrap {
   display: inline-flex;
   align-items: center;

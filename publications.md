@@ -386,19 +386,16 @@ title: Publications
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  padding: 0.35rem 0.9rem;
+  padding: 0.3rem 0.85rem;
   border-radius: 999px;
   border: 1px solid rgba(15, 23, 42, 0.12);
-  background: #f8fafc;
+  background: #fff;
   font-size: 0.85rem;
   font-weight: 600;
   color: #0f172a;
   text-decoration: none;
 }
-.repo-chip.repo-link {
-  background: linear-gradient(90deg, #0f172a, #1e3a8a);
-  color: #fff;
-}
+.repo-chip.repo-link {background: #fff; color: #0f172a; border-color: rgba(15, 23, 42, 0.12);}
 .repo-chip:hover {text-decoration: none;}
 .gh-btn-wrap {
   display: inline-flex;

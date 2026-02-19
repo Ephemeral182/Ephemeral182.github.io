@@ -45,15 +45,24 @@ title: Publications
           <span class="badge badge-blue">Tech Report 2026</span>
         </div>
         <div class="highlight-content">
-          <h3>PosterOmni · Generalized Artistic Poster Creation</h3>
+          <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
           <p class="summary">A unified agent distills local editing, layout completion, and unified reward feedback. Releases include dataset, model, and online demo for reproducible poster design.</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
-            <a href="https://github.com/MeiGen-AI/PosterOmni">💻 Code</a>
-            <span class="star-tag">⭐ 320+</span>
             <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
+          </div>
+          <div class="repo-stats" data-repo="MeiGen-AI/PosterOmni">
+            <a class="repo-chip repo-link" href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
+            <span class="repo-chip" data-stat="stars">
+              <span class="label">Star</span>
+              <span class="count">--</span>
+            </span>
+            <span class="repo-chip" data-stat="forks">
+              <span class="label">Fork</span>
+              <span class="count">--</span>
+            </span>
           </div>
         </div>
       </article>
@@ -64,15 +73,24 @@ title: Publications
           <span class="badge badge-green">ICLR 2026</span>
         </div>
         <div class="highlight-content">
-          <h3>PosterCraft · Unified High-Quality Poster Diffusion</h3>
+          <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
           <p class="summary">Combines composition planning with stylized diffusion to convert natural prompts into production-ready posters. Accepted to ICLR 2026 with full code release.</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
-            <a href="https://github.com/Ephemeral182/PosterCraft">💻 Code</a>
-            <span class="star-tag">⭐ 410+</span>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
+          </div>
+          <div class="repo-stats" data-repo="Ephemeral182/PosterCraft">
+            <a class="repo-chip repo-link" href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">GitHub</a>
+            <span class="repo-chip" data-stat="stars">
+              <span class="label">Star</span>
+              <span class="count">--</span>
+            </span>
+            <span class="repo-chip" data-stat="forks">
+              <span class="label">Fork</span>
+              <span class="count">--</span>
+            </span>
           </div>
         </div>
       </article>
@@ -83,14 +101,13 @@ title: Publications
           <span class="badge badge-cyan">CVPR 2025</span>
         </div>
         <div class="highlight-content">
-          <h3>JarvisIR · Intelligent Restoration for Autonomous Driving</h3>
+          <h3>JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
           <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, Sixiang Chen, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
           <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-list">
             <a href="https://ephemeral182.github.io">📄 PDF</a>
             <a href="https://ephemeral182.github.io">🌐 Project</a>
             <a href="https://ephemeral182.github.io">💻 Code</a>
-            <span class="star-tag">⭐ 250+</span>
           </div>
         </div>
       </article>
@@ -101,7 +118,7 @@ title: Publications
           <span class="badge badge-purple">ICCV 2025</span>
         </div>
         <div class="highlight-content">
-          <h3>GenHaze · Controllable Haze Generation</h3>
+          <h3>GenHaze — One-step Controllable Haze Generation for Real-World Dehazing</h3>
           <p class="authors">Sixiang Chen*, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu✉️</p>
           <p class="summary">Synthesizes realistic haze with physical controls to create paired data for downstream restoration. Enables single-step controllable data generation.</p>
           <div class="resource-list">
@@ -125,7 +142,7 @@ title: Publications
           <span class="meta-date">Feb 2026</span>
         </div>
         <div class="timeline-body">
-          <h3>PosterOmni · Generalized Artistic Poster Creation</h3>
+          <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p>Synthesizes poster layout, editing, and reward control inside a single agent with public demo and dataset releases.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterOmni/">Project Page</a>
@@ -140,7 +157,7 @@ title: Publications
           <span class="meta-date">Jan 2026</span>
         </div>
         <div class="timeline-body">
-          <h3>PosterCraft · Unified Poster Diffusion (ICLR 2026)</h3>
+          <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework (ICLR 2026)</h3>
           <p>Prompt-to-poster system combining composition reasoning with stylized generation for production-ready assets.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
@@ -155,7 +172,7 @@ title: Publications
           <span class="meta-date">Feb 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>SnowMaster · Desnowing via Multi-Model Feedback (CVPR 2025)</h3>
+          <h3>SnowMaster — Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization (CVPR 2025)</h3>
           <p>MLLM controller fuses multiple expert opinions to adaptively desnow real driving scenes.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -170,7 +187,7 @@ title: Publications
           <span class="meta-date">Feb 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>Detect Any Mirrors · Iterative Data Engine (CVPR 2025)</h3>
+          <h3>Detect Any Mirrors — Boosting Learning Reliability with an Iterative Data Engine (CVPR 2025)</h3>
           <p>Large-scale pseudo-labeling loop plus curated verification for mirror detection reliability in robotics.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -185,7 +202,7 @@ title: Publications
           <span class="meta-date">Apr 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>GPT-4o Image Generation Study</h3>
+          <h3>An Empirical Study of GPT-4o Image Generation Capabilities</h3>
           <p>Comprehensive evaluation of GPT-4o image generation covering fidelity, alignment, and safety.</p>
           <div class="resource-inline">
             <a href="https://arxiv.org/abs/2504.05979">Paper</a>
@@ -199,7 +216,7 @@ title: Publications
           <span class="meta-date">Jan 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>PromptHaze · Depth-prompted Real-world Dehazing (AAAI 2025)</h3>
+          <h3>PromptHaze — Prompting Real-world Dehazing via Depth Anything (AAAI 2025)</h3>
           <p>Aligns promptable depth priors with restoration networks for plug-and-play real-world dehazing.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -214,7 +231,7 @@ title: Publications
           <span class="meta-date">Sept 2024</span>
         </div>
         <div class="timeline-body">
-          <h3>T3-DiffWeather · Text-to-Task Diffusion for Adverse Weather (ECCV 2024)</h3>
+          <h3>T3-DiffWeather — Text-to-Task Diffusion for Adverse Weather (ECCV 2024)</h3>
           <p>Generates controllable weather degradations so restoration agents can be trained with diverse adverse scenarios.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/T3-DiffWeather/">Project Page</a>
@@ -229,7 +246,7 @@ title: Publications
           <span class="meta-date">Jul 2024</span>
         </div>
         <div class="timeline-body">
-          <h3>AGLLDiff · Training-free Low-Light Enhancement</h3>
+          <h3>AGLLDiff — Guiding Diffusion Models for Training-Free Low-Light Enhancement</h3>
           <p>Guided diffusion pipeline enhances low-light imagery without paired datasets for rapid adoption.</p>
           <div class="resource-inline">
             <a href="https://aglldiff.github.io/">Project Page</a>
@@ -357,15 +374,28 @@ title: Publications
   text-decoration: none;
   color: #0f62fe;
 }
-.star-tag {
+.repo-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.6rem;
+}
+.repo-chip {
   display: inline-flex;
   align-items: center;
+  gap: 0.3rem;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.08);
-  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #fff;
   font-size: 0.8rem;
   font-weight: 600;
+  color: #0f172a;
+}
+.repo-chip .count {font-weight: 700;}
+.repo-chip.repo-link {
+  background: linear-gradient(90deg, #0f172a, #1e3a8a);
+  color: #fff;
 }
 .timeline-block {margin-top: 4rem;}
 .timeline-heading {margin-bottom: 1rem;}
@@ -418,3 +448,44 @@ title: Publications
   .timeline-meta {text-align: left;}
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const blocks = Array.from(document.querySelectorAll('.repo-stats[data-repo]'));
+  if (!blocks.length) return;
+
+  const cache = {};
+  const applyStats = (block, data) => {
+    block.querySelectorAll('[data-stat]').forEach(el => {
+      const type = el.dataset.stat;
+      const countEl = el.querySelector('.count');
+      if (!countEl) return;
+      if (type === 'stars' && typeof data.stargazers_count === 'number') {
+        countEl.textContent = data.stargazers_count.toLocaleString();
+      }
+      if (type === 'forks' && typeof data.forks_count === 'number') {
+        countEl.textContent = data.forks_count.toLocaleString();
+      }
+    });
+  };
+
+  blocks.forEach(block => {
+    const repo = block.dataset.repo;
+    if (!repo) return;
+
+    if (cache[repo]) {
+      applyStats(block, cache[repo]);
+      return;
+    }
+
+    fetch(`https://api.github.com/repos/${repo}`)
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => {
+        if (!data) return;
+        cache[repo] = data;
+        applyStats(block, data);
+      })
+      .catch(() => {});
+  });
+});
+</script>

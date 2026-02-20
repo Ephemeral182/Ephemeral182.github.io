@@ -37,16 +37,6 @@ layout: fancy_home
 </div>
 
 <div class="info-cards">
-    <div class="info-card fade-in" style="animation-delay: 0.1s;">
-        <div class="card-icon">🎓</div>
-        <h3 class="card-title">Education</h3>
-        <div class="card-content">
-            <p><strong>Sept. 2024 - Present:</strong> The Hong Kong University of Science and Technology (Guangzhou) (PhD)</p>
-            <p><strong>Aug. 2023 - Aug. 2024:</strong> The Hong Kong University of Science and Technology (Guangzhou) (RA)</p>
-            <p><strong>Sept. 2019 - Jun. 2023:</strong> Jimei University (B.Eng.)</p>
-        </div>
-    </div>
-    
     <div class="info-card fade-in" style="animation-delay: 0.3s;">
         <div class="card-icon">🔬</div>
         <h3 class="card-title">Research Interests</h3>
@@ -117,6 +107,7 @@ layout: fancy_home
         <div class="card-icon">📝</div>
         <h3 class="card-title">Academic Service & Awards</h3>
         <div class="card-content">
+            <p><strong>Program Committee / Reviewer:</strong></p>
             <div class="service-list">
                 <p>International Conference on Computer Vision (<strong>ICCV'2025</strong>)</p>
                 <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2025</strong>)</p>
@@ -183,5 +174,19 @@ layout: fancy_home
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="experience-section">
+    <div class="experience-header">
+        <i class="fas fa-book-open" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="experience-title">Educations & Experience</h2>
+    </div>
+    <div class="experience-card">
+        <ul class="experience-list">
+            <li><strong>Sept. 2024 – Present:</strong> PhD Student, The Hong Kong University of Science and Technology (Guangzhou)</li>
+            <li><strong>Aug. 2023 – Aug. 2024:</strong> Research Assistant, The Hong Kong University of Science and Technology (Guangzhou)</li>
+            <li><strong>Sept. 2019 – Jun. 2023:</strong> B.Eng., Jimei University</li>
+        </ul>
     </div>
 </div>

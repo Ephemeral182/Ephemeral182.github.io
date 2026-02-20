@@ -878,6 +878,83 @@
             font-weight: bold;
         }
 
+        /* Experience Section 样式 - 仿照 Reference Image */
+        .experience-section {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.85); /* 浅色背景 */
+            border-radius: 16px;
+            padding: 2.5rem;
+            color: #1f2937; /* 深色文字 */
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+        }
+
+        .experience-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .experience-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #8b5cf6; /* 紫色圆点 */
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        .experience-list li:hover {
+            transform: translateX(10px);
+            color: #6366f1;
+        }
+
         /* 移除原有的逐字动画样式，替换为Typed.js样式 */
         .typing-text-container {
             margin: 0.5rem 0 1.5rem 0;

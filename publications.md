@@ -161,7 +161,7 @@ title: Publications
           <span class="meta-date">Apr 2025</span>
         </div>
         <div class="timeline-body">
-          <h3><span class="pub-prefix">[ICLR 2026]</span> An Empirical Study of GPT-4o Image Generation Capabilities</h3>
+          <h3><span class="pub-prefix">[Tech Report 2025]</span> An Empirical Study of GPT-4o Image Generation Capabilities</h3>
           <p class="timeline-authors">Sixiang Chen, Jinbin Bai, Zhuoran Zhao, Tian Ye, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
           <p>Comprehensive evaluation of GPT-4o image generation covering fidelity, alignment, and safety.</p>
           <div class="resource-inline">

@@ -826,6 +826,58 @@
             }
         }
         
+        /* Awards 列表样式 */
+        .awards-list {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .award-icon {
+            color: #f59e0b; /* 金色 */
+            font-size: 1.1rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        .award-content {
+            flex: 1;
+        }
+
+        .award-title {
+            font-weight: 600;
+            color: #1e293b;
+            line-height: 1.4;
+        }
+
+        .award-desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-top: 2px;
+        }
+        
+        /* 稍微调整一下 Academic Service 的列表样式 */
+        .service-list p {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .service-list p::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+        }
+
         /* 移除原有的逐字动画样式，替换为Typed.js样式 */
         .typing-text-container {
             margin: 0.5rem 0 1.5rem 0;

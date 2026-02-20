@@ -128,11 +128,10 @@ title: Publications
     <div class="timeline-list">
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Feb 2026</span>
         </div>
         <div class="timeline-body">
-          <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
+          <h3>[Tech Report 2026] PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="timeline-authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
           <p>Synthesizes poster layout, editing, and reward control inside a single agent with public demo and dataset releases.</p>
           <div class="resource-inline">
@@ -144,11 +143,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Jan 2026</span>
         </div>
         <div class="timeline-body">
-          <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework (ICLR 2026)</h3>
+          <h3>[ICLR 2026] PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="timeline-authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
           <p>Prompt-to-poster system combining composition reasoning with stylized generation for production-ready assets.</p>
           <div class="resource-inline">
@@ -160,11 +158,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Apr 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>An Empirical Study of GPT-4o Image Generation Capabilities</h3>
+          <h3>[ICLR 2026] An Empirical Study of GPT-4o Image Generation Capabilities</h3>
           <p class="timeline-authors">Sixiang Chen, Jinbin Bai, Zhuoran Zhao, Tian Ye, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
           <p>Comprehensive evaluation of GPT-4o image generation covering fidelity, alignment, and safety.</p>
           <div class="resource-inline">
@@ -175,11 +172,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Feb 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>SnowMaster — Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization (CVPR 2025)</h3>
+          <h3>[CVPR 2025] SnowMaster — Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h3>
           <p class="timeline-authors">Jianyu Lai*, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Wei Wang, Lei Zhu</p>
           <p>MLLM controller fuses multiple expert opinions to adaptively desnow real driving scenes.</p>
           <div class="resource-inline">
@@ -191,11 +187,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Feb 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>Detect Any Mirrors — Boosting Learning Reliability with an Iterative Data Engine (CVPR 2025)</h3>
+          <h3>[CVPR 2025] Detect Any Mirrors — Boosting Learning Reliability with an Iterative Data Engine</h3>
           <p class="timeline-authors">Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, Sixiang Chen, Wenxue Li, Guang Liu, Lei Zhu</p>
           <p>Large-scale pseudo-labeling loop plus curated verification for mirror detection reliability in robotics.</p>
           <div class="resource-inline">
@@ -207,11 +202,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Jan 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>PromptHaze — Prompting Real-world Dehazing via Depth Anything (AAAI 2025)</h3>
+          <h3>[AAAI 2025] PromptHaze — Prompting Real-world Dehazing via Depth Anything</h3>
           <p class="timeline-authors">Tian Ye, Sixiang Chen, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu</p>
           <p>Aligns promptable depth priors with restoration networks for plug-and-play real-world dehazing.</p>
           <div class="resource-inline">
@@ -223,11 +217,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Jan 2025</span>
         </div>
         <div class="timeline-body">
-          <h3>AGLLDiff — Guiding Diffusion Models Towards Unsupervised Training-Free Real-World Low-Light Image Enhancement (AAAI 2025)</h3>
+          <h3>[AAAI 2025] AGLLDiff — Guiding Diffusion Models Towards Unsupervised Training-Free Real-World Low-Light Image Enhancement</h3>
           <p class="timeline-authors">Yunlong Lin, Tian Ye, Sixiang Chen, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding</p>
           <p>Guides diffusion sampling with adaptive priors to brighten real driving scenes without paired data.</p>
           <div class="resource-inline">
@@ -238,11 +231,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Dec 2024</span>
         </div>
         <div class="timeline-body">
-          <h3>RestoreAgent — Autonomous Image Restoration Agent via Multimodal Large Language Models (NeurIPS 2024)</h3>
+          <h3>[NeurIPS 2024] RestoreAgent — Autonomous Image Restoration Agent via Multimodal Large Language Models</h3>
           <p class="timeline-authors">Haoyu Chen, Wenxue Li, Jinjin Gu, Jingjing Ren, Sixiang Chen, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu</p>
           <p>Multimodal LLM planner coordinates restoration tools for end-to-end autonomous enhancement.</p>
           <div class="resource-inline">
@@ -254,11 +246,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Oct 2024</span>
         </div>
         <div class="timeline-body">
-          <h3>Teaching Tailored to Talent — Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint (ECCV 2024)</h3>
+          <h3><span class="pub-prefix">[ECCV 2024]</span> Teaching Tailored to Talent — Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</h3>
           <p class="timeline-authors">Sixiang Chen, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu</p>
           <p>Pairs prompt libraries with depth-aware constraints to customize restoration for each degradation.</p>
           <div class="resource-inline">
@@ -270,26 +261,10 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
-          <span class="meta-date">Sept 2024</span>
-        </div>
-        <div class="timeline-body">
-          <h3>T3-DiffWeather — Text-to-Task Diffusion for Adverse Weather (ECCV 2024)</h3>
-          <p>Generates controllable weather degradations so restoration agents can be trained with diverse adverse scenarios.</p>
-          <div class="resource-inline">
-            <a href="https://ephemeral182.github.io/T3-DiffWeather/">Project Page</a>
-            <a href="https://arxiv.org/abs/2409.15739">Paper</a>
-            <a href="https://github.com/Ephemeral182/T3-DiffWeather">Code</a>
-          </div>
-        </div>
-      </article>
-      <article class="timeline-row">
-        <div class="timeline-meta">
-          <span class="meta-type">Publication</span>
           <span class="meta-date">Jun 2024</span>
         </div>
         <div class="timeline-body">
-          <h3>Learning Diffusion Texture Priors for Image Restoration (CVPR 2024 Highlight)</h3>
+          <h3><span class="pub-prefix">[CVPR 2024 Highlight]</span> Learning Diffusion Texture Priors for Image Restoration</h3>
           <p class="timeline-authors">Tian Ye, Sixiang Chen, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu</p>
           <p>Introduces texture-consistent diffusion priors that boost restoration fidelity on challenging details.</p>
           <div class="resource-inline">
@@ -484,6 +459,11 @@ title: Publications
   color: #111827;
 }
 .timeline-body h3 {margin: 0 0 0.35rem; font-size: 1.25rem;}
+.timeline-body .pub-prefix {
+  color: #b91c1c;
+  font-weight: 700;
+  margin-right: 0.4rem;
+}
 .timeline-authors {
   margin: 0.2rem 0 0.35rem;
   font-size: 0.9rem;

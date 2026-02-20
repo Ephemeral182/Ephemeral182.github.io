@@ -460,7 +460,7 @@ title: Publications
 }
 .timeline-body h3 {margin: 0 0 0.35rem; font-size: 1.25rem;}
 .timeline-body .pub-prefix {
-  color: #16a34a;
+  color: #2563eb;
   font-weight: 700;
   margin-right: 0.4rem;
 }

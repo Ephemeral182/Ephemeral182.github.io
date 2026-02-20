@@ -34,7 +34,6 @@ title: Publications
 
   <section class="highlight-block">
     <div class="section-header">
-      <p class="eyebrow">Highlight Research</p>
       <h2>Highlight Research</h2>
     </div>
 
@@ -124,7 +123,6 @@ title: Publications
 
   <section class="timeline-block">
     <div class="timeline-heading">
-      <p class="eyebrow accent">Selected</p>
       <h2>Selected Publications</h2>
     </div>
     <div class="timeline-list">
@@ -297,7 +295,16 @@ title: Publications
 .counter-value {font-size: 2.1rem; font-weight: 700; color: #0f62fe;}
 .counter-label {font-size: 0.9rem; color: #475569; margin-top: 0.4rem;}
 .section-header {margin: 3rem 0 1.5rem;}
-.section-header h2 {margin: 0.3rem 0 0; font-size: 2rem; color: #0f172a;}
+.section-header h2,
+.timeline-heading h2 {
+  margin: 0;
+  font-size: 0.85rem;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #d73030;
+  font-weight: 600;
+}
 .highlight-list {display: flex; flex-direction: column; gap: 1.5rem;}
 .highlight-card {
   position: relative;
@@ -398,7 +405,6 @@ title: Publications
 .gh-btn-wrap iframe {border: none;}
 .timeline-block {margin-top: 4rem;}
 .timeline-heading {margin-bottom: 1rem;}
-.timeline-heading h2 {margin: 0; font-size: 2.2rem; color: #0f172a;}
 .timeline-list {border-top: 2px solid #e5e7eb;}
 .timeline-row {
   display: flex;

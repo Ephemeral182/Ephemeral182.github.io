@@ -52,9 +52,8 @@ layout: fancy_home
         <h3 class="card-title">Recent Achievements</h3>
         <div class="card-content">
             <p>• Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
-            <p>• <strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
-            <p>• Released PosterCraft, a unified framework for high-quality aesthetic poster generation.</p>
-            <p>• <strong>1 paper accepted</strong> by ICCV'2025</p>. GenHaze, a one-step controllable haze generation method.
+            <p>• Released <strong>PosterCraft [ICLR'2026]</strong>, a unified framework for high-quality aesthetic poster generation.</p>
+            <p>• <strong>1 paper accepted</strong> by ICCV'2025.</p>
             <p>• <strong>GPT-4o evaluation report</strong> published on arXiv</p>
             <p>• <strong>3 papers accepted</strong> by CVPR'2025</p>
             <p>• <strong>4 papers accepted</strong> by AAAI'2025</p>

@@ -36,29 +36,36 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="info-cards">
-    <div class="info-card fade-in" style="animation-delay: 0.3s;">
-        <div class="card-icon">🔬</div>
-        <h3 class="card-title">Research Interests</h3>
-        <div class="card-content">
-            <p>• Explore the applications of <strong>AIGC</strong> (Artificial Intelligence Generated Content) technology</p>
-            <p>• Perform <strong>image restoration</strong> under real-world conditions</p>
-            <p>• <strong>Multimodal large language models (MLLM)</strong> for intelligent visual application</p>
+<div class="service-section">
+    <div class="service-header">
+        <i class="fas fa-microscope" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Research Interests</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p>Explore the applications of <strong>AIGC</strong> (Artificial Intelligence Generated Content) technology</p>
+            <p>Perform <strong>image restoration</strong> under real-world conditions</p>
+            <p><strong>Multimodal large language models (MLLM)</strong> for intelligent visual application</p>
         </div>
     </div>
-    
-    <div class="info-card fade-in" style="animation-delay: 0.5s;">
-        <div class="card-icon">🏆</div>
-        <h3 class="card-title">Recent Achievements</h3>
-        <div class="card-content">
-            <p>• Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
-            <p>• Released <strong>PosterCraft [ICLR'2026]</strong>, a unified framework for high-quality aesthetic poster generation.</p>
-            <p>• <strong>1 paper accepted</strong> by ICCV'2025.</p>
-            <p>• <strong>GPT-4o evaluation report</strong> published on arXiv</p>
-            <p>• <strong>3 papers accepted</strong> by CVPR'2025</p>
-            <p>• <strong>4 papers accepted</strong> by AAAI'2025</p>
-            <p>• <strong>1 paper accepted</strong> by NeurIPS'2024</p>
-            <p>• <strong>2 papers accepted</strong> by ECCV'2024</p>
+</div>
+
+<div class="service-section">
+    <div class="service-header">
+        <i class="fas fa-trophy" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Recent Achievements</h2>
+    </div>
+    <div class="service-card">
+        <div class="service-list">
+            <p>Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
+            <p><strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
+            <p>Released <strong>PosterCraft</strong>, a unified framework for high-quality aesthetic poster generation.</p>
+            <p><strong>1 paper accepted</strong> by ICCV'2025. GenHaze, a one-step controllable haze generation method.</p>
+            <p><strong>GPT-4o evaluation report</strong> published on arXiv</p>
+            <p><strong>3 papers accepted</strong> by CVPR'2025</p>
+            <p><strong>4 papers accepted</strong> by AAAI'2025</p>
+            <p><strong>1 paper accepted</strong> by NeurIPS'2024</p>
+            <p><strong>2 papers accepted</strong> by ECCV'2024</p>
         </div>
     </div>
 </div>

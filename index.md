@@ -102,75 +102,75 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="info-cards">
-    <div class="info-card fade-in" style="animation-delay: 0.2s;">
-        <div class="card-icon">📝</div>
-        <h3 class="card-title">Academic Service & Awards</h3>
-        <div class="card-content">
-            <p><strong>Program Committee / Reviewer:</strong></p>
-            <div class="service-list">
-                <p>International Conference on Computer Vision (<strong>ICCV'2025</strong>)</p>
-                <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2025</strong>)</p>
-                <p>IEEE Transactions on Image Processing (<strong>TIP</strong>)</p>
-                <p>International Conference on Machine Learning (<strong>ICML'2025</strong>)</p>
-                <p>Conference on Computer Vision and Pattern Recognition (<strong>CVPR'2025</strong>)</p>
-                <p>International Conference on Learning Representations (<strong>ICLR'2025</strong>)</p>
-                <p>IEEE Transactions on Intelligent Transportation Systems (<strong>TITS</strong>)</p>
-                <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2024</strong>)</p>
-                <p>European Conference on Computer Vision (<strong>ECCV'2024</strong>)</p>
-                <p>IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>)</p>
-                <p>IEEE Transactions on Multimedia (<strong>TMM</strong>)</p>
-                <p>ACM Multimedia (<strong>ACM MM'2023 / 2024</strong>)</p>
-                <p>International Conference on Computer Vision (<strong>ICCV'2023</strong>)</p>
-                <p>International Conference on Robotics and Automation (<strong>ICRA'2023</strong>)</p>
-                <p>Asian Conference on Computer Vision (<strong>ACCV'2022</strong>)</p>
+<div class="service-section">
+    <div class="service-header">
+        <i class="fas fa-award" style="font-size: 2rem; color: #6366f1;"></i>
+        <h2 class="service-title">Academic Service & Awards</h2>
+    </div>
+    <div class="service-card">
+        <p><strong>Program Committee / Reviewer:</strong></p>
+        <div class="service-list">
+            <p>International Conference on Computer Vision (<strong>ICCV'2025</strong>)</p>
+            <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2025</strong>)</p>
+            <p>IEEE Transactions on Image Processing (<strong>TIP</strong>)</p>
+            <p>International Conference on Machine Learning (<strong>ICML'2025</strong>)</p>
+            <p>Conference on Computer Vision and Pattern Recognition (<strong>CVPR'2025</strong>)</p>
+            <p>International Conference on Learning Representations (<strong>ICLR'2025</strong>)</p>
+            <p>IEEE Transactions on Intelligent Transportation Systems (<strong>TITS</strong>)</p>
+            <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2024</strong>)</p>
+            <p>European Conference on Computer Vision (<strong>ECCV'2024</strong>)</p>
+            <p>IEEE Transactions on Circuits and Systems for Video Technology (<strong>TCSVT</strong>)</p>
+            <p>IEEE Transactions on Multimedia (<strong>TMM</strong>)</p>
+            <p>ACM Multimedia (<strong>ACM MM'2023 / 2024</strong>)</p>
+            <p>International Conference on Computer Vision (<strong>ICCV'2023</strong>)</p>
+            <p>International Conference on Robotics and Automation (<strong>ICRA'2023</strong>)</p>
+            <p>Asian Conference on Computer Vision (<strong>ACCV'2022</strong>)</p>
+        </div>
+        <br>
+        <p><strong>Awards:</strong></p>
+        <div class="awards-list">
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">Third Place, <a href="https://lixinustc.github.io/CVPR-NTIRE2025-RainDrop-Competition.github.io/">NTIRE 2025 Challenge on Day and Night Raindrop Removal</a></div>
+                    <div class="award-desc">CVPR Workshop</div>
+                </div>
             </div>
-            <br>
-            <p><strong>Awards:</strong></p>
-            <div class="awards-list">
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">Third Place, <a href="https://lixinustc.github.io/CVPR-NTIRE2025-RainDrop-Competition.github.io/">NTIRE 2025 Challenge on Day and Night Raindrop Removal</a></div>
-                        <div class="award-desc">CVPR Workshop</div>
-                    </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">Fifth Place, <a href="https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Liu_NTIRE_2024_Challenge_on_Low_Light_Image_Enhancement_Methods_and_CVPRW_2024_paper.html">NTIRE 2024 Challenge on Low Light Image Enhancement</a></div>
+                    <div class="award-desc">CVPR Workshop</div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">Fifth Place, <a href="https://openaccess.thecvf.com/content/CVPR2024W/NTIRE/html/Liu_NTIRE_2024_Challenge_on_Low_Light_Image_Enhancement_Methods_and_CVPRW_2024_paper.html">NTIRE 2024 Challenge on Low Light Image Enhancement</a></div>
-                        <div class="award-desc">CVPR Workshop</div>
-                    </div>
+            </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">PG Scholarship of HKUST(GZ), 2024</div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">PG Scholarship of HKUST(GZ), 2024</div>
-                    </div>
+            </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">Outstanding Graduate in Jimei University, 2023</div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">Outstanding Graduate in Jimei University, 2023</div>
-                    </div>
+            </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">International Third Prize (Team Leader), Mathematical Contest In Modeling, 2022</div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">International Third Prize (Team Leader), Mathematical Contest In Modeling, 2022</div>
-                    </div>
+            </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">National Second Prize (Team Leader), China Undergraduate Mathematical Contest in Modeling, 2021</div>
                 </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">National Second Prize (Team Leader), China Undergraduate Mathematical Contest in Modeling, 2021</div>
-                    </div>
-                </div>
-                <div class="award-item">
-                    <i class="fas fa-trophy award-icon"></i>
-                    <div class="award-content">
-                        <div class="award-title">National Second Prize (Team Leader), Mathorcup Mathematical Contest in Modeling, 2021</div>
-                    </div>
+            </div>
+            <div class="award-item">
+                <i class="fas fa-trophy award-icon"></i>
+                <div class="award-content">
+                    <div class="award-title">National Second Prize (Team Leader), Mathorcup Mathematical Contest in Modeling, 2021</div>
                 </div>
             </div>
         </div>

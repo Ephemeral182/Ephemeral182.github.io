@@ -36,7 +36,7 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="service-section">
+<div class="service-section fade-in">
     <div class="service-header">
         <i class="fas fa-microscope" style="font-size: 2rem; color: #6366f1;"></i>
         <h2 class="service-title">Research Experience</h2>
@@ -51,7 +51,7 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="service-section">
+<div class="service-section fade-in">
     <div class="service-header">
         <i class="fas fa-trophy" style="font-size: 2rem; color: #6366f1;"></i>
         <h2 class="service-title">Recent Achievements</h2>
@@ -114,7 +114,7 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="service-section">
+<div class="service-section fade-in">
     <div class="service-header">
         <i class="fas fa-award" style="font-size: 2rem; color: #6366f1;"></i>
         <h2 class="service-title">Academic Service & Awards</h2>
@@ -192,7 +192,7 @@ layout: fancy_home
     </div>
 </div>
 
-<div class="experience-section">
+<div class="experience-section fade-in">
     <div class="experience-header">
         <i class="fas fa-book-open" style="font-size: 2rem; color: #6366f1;"></i>
         <h2 class="experience-title">Educations & Experience</h2>

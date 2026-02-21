@@ -94,7 +94,7 @@ title: Publications
         <div class="highlight-content">
           <h3>JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
           <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
-          <p class="summary">A robust multimodal agent that reasons about adverse scenarios and calls on specialized restoration experts to stabilize the perception.</p>
+          <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-list">
             <a href="https://ephemeral182.github.io">📄 PDF</a>
             <a href="https://ephemeral182.github.io">🌐 Project</a>
@@ -133,7 +133,7 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[Tech Report 2026]</span> PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
-          <p>Synthesizes poster layout, editing, and reward control inside a single agent with public demo and dataset releases.</p>
+          <p>One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. ✨ Your intelligent assistant for high-quality aesthetic poster creation!</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterOmni/">Project Page</a>
             <a href="https://arxiv.org/abs/2602.12127">Paper</a>
@@ -148,11 +148,25 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICLR 2026]</span> PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
-          <p>Prompt-to-poster system combining composition reasoning with stylized generation for production-ready assets.</p>
+          <p>A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". ✨ From your prompts to high-quality aesthetic posters!</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
             <a href="https://arxiv.org/abs/2506.10741">Paper</a>
             <a href="https://github.com/Ephemeral182/PosterCraft">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Oct 2025</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[ICCV 2025]</span> GenHaze — One-step Controllable Haze Generation for Real-World Dehazing</h3>
+          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu</p>
+          <p>Proposes a one-step, reference-controllable haze generator that better matches real-world haze complexity than classic physics pipelines, creating high-quality paired data to boost real-world dehazing performance.</p>
+          <div class="resource-inline">
+            <a href="https://ephemeral182.github.io">Project Page</a>
+            <a href="https://ephemeral182.github.io">Paper</a>
           </div>
         </div>
       </article>
@@ -166,6 +180,21 @@ title: Publications
           <p>Provides a systematic benchmark study of GPT-4o image generation across 20+ tasks (text-to-image, image-to-image, image-to-3D, image-to-X), summarizing strengths/limitations and what they imply for unified multimodal generation.</p>
           <div class="resource-inline">
             <a href="https://arxiv.org/abs/2504.05979">Paper</a>
+            <a href="https://ephemeral182.github.io">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Feb 2025</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[CVPR 2025]</span> JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
+          <p class="timeline-authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding</p>
+          <p>A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
+          <div class="resource-inline">
+            <a href="https://ephemeral182.github.io">Project Page</a>
+            <a href="https://ephemeral182.github.io">Paper</a>
             <a href="https://ephemeral182.github.io">Code</a>
           </div>
         </div>
@@ -221,7 +250,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[AAAI 2025]</span> AGLLDiff — Guiding Diffusion Models Towards Unsupervised Training-Free Real-World Low-Light Image Enhancement</h3>
-          <p class="timeline-authors">Yunlong Lin, Tian Ye, <strong>Sixiang Chen</strong>, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding</p>
+          <p class="timeline-authors">Yunlong Lin*, Tian Ye*, <strong>Sixiang Chen*</strong>, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding</p>
           <p>Proposes a training-free, unsupervised diffusion guidance framework that steers a pretrained diffusion model using attribute-based guidance for effective real-world low-light enhancement.</p>
           <div class="resource-inline">
             <a href="https://aglldiff.github.io/">Project Page</a>

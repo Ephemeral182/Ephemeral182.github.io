@@ -8,26 +8,26 @@ title: Publications
   <section class="intro">
     <div class="intro-text">
       <p class="eyebrow">Research Snapshot</p>
-      <h1>Systems, Agents & Creative Vision</h1>
-      <p>My publications sit at the intersection of structured AIGC, multimodal agents, and physics-aware restoration. I release comprehensive project pages, benchmarks, and demos for every flagship work so collaborators can reproduce results quickly.</p>
+      <h1>Visual Frontiers & Generative Intelligence</h1>
+      <p>My research lies at the intersection of <strong>Unified Generative Models</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
       <div class="intro-tags">
-        <span>AIGC Posters</span>
-        <span>Vision-Language Agents</span>
-        <span>Low-Level Weather</span>
+        <span>Generative model</span>
+        <span>Reward Modeling</span>
+        <span>Vision Agents</span>
       </div>
     </div>
     <div class="intro-counters">
       <div class="counter-card">
         <div class="counter-value">11</div>
-        <div class="counter-label">CVPR / ICCV / ECCV / NeurIPS</div>
+        <div class="counter-label">CVPR / ICCV / ECCV</div>
       </div>
       <div class="counter-card">
-        <div class="counter-value">9</div>
-        <div class="counter-label">AAAI / IJCAI / ACM MM / MICCAI</div>
+        <div class="counter-value">2</div>
+        <div class="counter-label">NeurIPS / ICLR / ICML</div>
       </div>
       <div class="counter-card">
-        <div class="counter-value">100%</div>
-        <div class="counter-label">Open Resources Released</div>
+        <div class="counter-value">10</div>
+        <div class="counter-label">AAAI / IJCAI / ACM MM</div>
       </div>
     </div>
   </section>

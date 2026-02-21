@@ -838,6 +838,14 @@
             display: flex;
             align-items: flex-start;
             gap: 12px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .award-item:hover {
+            transform: translateX(10px);
+            background: rgba(99, 102, 241, 0.05);
         }
 
         .award-icon {
@@ -868,6 +876,14 @@
             margin-bottom: 0.5rem;
             padding-left: 1rem;
             position: relative;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        
+        .service-list p:hover {
+            transform: translateX(10px);
+            color: #6366f1;
+            background: rgba(99, 102, 241, 0.05);
         }
         
         .service-list p::before {
@@ -907,6 +923,13 @@
             border: 1px solid rgba(15, 23, 42, 0.08);
             position: relative;
             overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .experience-card:hover, .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.2);
+            background: #ffffff;
         }
 
         .experience-card::before, .service-card::before {

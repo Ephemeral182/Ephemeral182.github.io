@@ -76,6 +76,7 @@ title: Publications
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
             <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">🤗 Model</a>
+            <a href="https://huggingface.co/PosterCraft">🤗 Dataset</a>
             <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">🐙 GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
@@ -158,6 +159,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2506.10741">Paper</a>
             <a href="https://github.com/Ephemeral182/PosterCraft">Code</a>
             <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">Model</a>
+            <a href="https://huggingface.co/PosterCraft">Dataset</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">Demo</a>
           </div>
         </div>

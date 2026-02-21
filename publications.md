@@ -117,8 +117,7 @@ title: Publications
           <p class="authors"><strong>Sixiang Chen</strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu✉️</p>
           <p class="summary">Proposes a one-step, reference-controllable haze generator that better matches real-world haze complexity than classic physics pipelines, creating high-quality paired data to boost real-world dehazing performance.</p>
           <div class="resource-list">
-            <a href="https://ephemeral182.github.io">📄 PDF</a>
-            <a href="https://ephemeral182.github.io">🌐 Project</a>
+            <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_GenHaze_Pioneering_Controllable_One-Step_Realistic_Haze_Generation_for_Real-World_Dehazing_ICCV_2025_paper.pdf">📄 PDF</a>
           </div>
         </div>
       </article>
@@ -173,8 +172,7 @@ title: Publications
           <p class="timeline-authors"><strong>Sixiang Chen</strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu</p>
           <p>Proposes a one-step, reference-controllable haze generator that better matches real-world haze complexity than classic physics pipelines, creating high-quality paired data to boost real-world dehazing performance.</p>
           <div class="resource-inline">
-            <a href="https://ephemeral182.github.io">Project Page</a>
-            <a href="https://ephemeral182.github.io">Paper</a>
+            <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_GenHaze_Pioneering_Controllable_One-Step_Realistic_Haze_Generation_for_Real-World_Dehazing_ICCV_2025_paper.pdf">Paper</a>
           </div>
         </div>
       </article>
@@ -188,7 +186,7 @@ title: Publications
           <p>Provides a systematic benchmark study of GPT-4o image generation across 20+ tasks (text-to-image, image-to-image, image-to-3D, image-to-X), summarizing strengths/limitations and what they imply for unified multimodal generation.</p>
           <div class="resource-inline">
             <a href="https://arxiv.org/abs/2504.05979">Paper</a>
-            <a href="https://ephemeral182.github.io">Code</a>
+            <a href="https://github.com/ephemeral182/empirical-study-of-gpt-4o-image-gen">Code</a>
           </div>
         </div>
       </article>
@@ -264,7 +262,8 @@ title: Publications
           <p>Proposes a training-free, unsupervised diffusion guidance framework that steers a pretrained diffusion model using attribute-based guidance for effective real-world low-light enhancement.</p>
           <div class="resource-inline">
             <a href="https://aglldiff.github.io/">Project Page</a>
-            <a href="https://arxiv.org/abs/2407.18035">Paper</a>
+            <a href="https://arxiv.org/abs/2407.14900">Paper</a>
+            <a href="https://github.com/LYL1015/AGLLDiff">Code</a>
           </div>
         </div>
       </article>
@@ -322,7 +321,8 @@ title: Publications
           <p class="timeline-authors">Tian Ye*, <strong>Sixiang Chen*</strong>, Jinbin Bai*, Shi Jun, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu</p>
           <p>Formulates adverse weather removal as matching and fusing degraded features with high-quality priors stored in a learned codebook.</p>
           <div class="resource-inline">
-            <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Ye_Adverse_Weather_Removal_with_Codebook_Priors_ICCV_2023_paper.html">Paper</a>
+            <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Ye_Adverse_Weather_Removal_with_Codebook_Priors_ICCV_2023_paper.pdf">Paper</a>
+            <a href="https://github.com/Owen718/AWRCP">Code</a>
           </div>
         </div>
       </article>
@@ -336,8 +336,8 @@ title: Publications
           <p>A transformer that uses sparse sampling attention to model global rain degradation relations and an uncertainty-driven ranking strategy to focus on hard-to-restore regions for unified deraining.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">Project Page</a>
-            <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Chen_Sparse_Sampling_Transformer_with_Uncertainty-Driven_Ranking_for_Unified_Removal_of_ICCV_2023_paper.html">Paper</a>
-            <a href="https://github.com/Ephemeral182/UDR_S2Former_deraining">Code</a>
+            <a href="https://arxiv.org/abs/2308.14153">Paper</a>
+            <a href="https://github.com/Ephemeral182/UDR-S2Former_deraining">Code</a>
           </div>
         </div>
       </article>
@@ -350,8 +350,8 @@ title: Publications
           <p class="timeline-authors">Tian Ye*, Yunchen Zhang*, Mingchao Jiang*, Liang Chen, Yun Liu, <strong>Sixiang Chen</strong>, Erkang Chen</p>
           <p>Argues that dehazing hinges on haze density perception, introducing Separable Hybrid Attention and density modeling to handle uneven haze distribution.</p>
           <div class="resource-inline">
-            <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5576_ECCV_2022_paper.php">Paper</a>
-            <a href="https://github.com/yetian11/PMD-Dehazing">Code</a>
+            <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136790126.pdf">Paper</a>
+            <a href="https://github.com/Owen718/ECCV22-Perceiving-and-Modeling-Density-for-Image-Dehazing">Code</a>
           </div>
         </div>
       </article>

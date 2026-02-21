@@ -9,7 +9,7 @@ title: Publications
     <div class="intro-text">
       <p class="eyebrow">Research Snapshot</p>
       <h1>Visual Frontiers & Generative Intelligence</h1>
-      <p>My research lies at the intersection of <strong>Unified Generative Models</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
+      <p>My research lies at the intersection of <strong>Generative Models and Reward Modeling</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
       <div class="intro-tags">
         <span>Generative model</span>
         <span>Reward Modeling</span>
@@ -399,6 +399,9 @@ title: Publications
 }
 .intro-text {flex: 1 1 360px;}
 .intro-text h1 {margin: 0.4rem 0 1rem; font-size: 2.4rem;}
+.intro-tags {
+  margin-top: 1.5rem;
+}
 .intro-tags span {
   display: inline-block;
   padding: 0.4rem 1rem;

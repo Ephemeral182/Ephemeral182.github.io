@@ -126,7 +126,7 @@ layout: fancy_home
         <div class="service-list">
             <p>Conference on Computer Vision and Pattern Recognition (<strong>CVPR'2026</strong>)</p>
             <p>International Conference on Learning Representations (<strong>ICLR'2026</strong>)</p>
-            <p>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI'2026</strong>)</p>
+            <p>IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>)</p>
             <p>International Conference on Computer Vision (<strong>ICCV'2025</strong>)</p>
             <p>Conference on Neural Information Processing Systems (<strong>NeurIPS'2025</strong>)</p>
             <p>IEEE Transactions on Image Processing (<strong>TIP</strong>)</p>

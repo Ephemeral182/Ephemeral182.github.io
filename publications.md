@@ -46,7 +46,7 @@ title: Publications
         <div class="highlight-content">
           <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">A unified agent distills local editing, layout completion, and unified reward feedback. Releases include dataset, model, and online demo for reproducible poster design.</p>
+          <p class="summary">One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. ✨ Your intelligent assistant for high-quality aesthetic poster creation!</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
@@ -70,7 +70,7 @@ title: Publications
         <div class="highlight-content">
           <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">Combines composition planning with stylized diffusion to convert natural prompts into production-ready posters. Accepted to ICLR 2026 with full code release.</p>
+          <p class="summary">A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". ✨ From your prompts to high-quality aesthetic posters!</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
@@ -94,7 +94,7 @@ title: Publications
         <div class="highlight-content">
           <h3>JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
           <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
-          <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
+          <p class="summary">A robust multimodal agent that reasons about adverse scenarios and calls on specialized restoration experts to stabilize the perception.</p>
           <div class="resource-list">
             <a href="https://ephemeral182.github.io">📄 PDF</a>
             <a href="https://ephemeral182.github.io">🌐 Project</a>
@@ -162,7 +162,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[Tech Report 2025]</span> An Empirical Study of GPT-4o Image Generation Capabilities</h3>
-          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Jinbin Bai, Zhuoran Zhao, Tian Ye, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
+          <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jinbin Bai*, Zhuoran Zhao*, Tian Ye*, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
           <p>Comprehensive evaluation of GPT-4o image generation covering fidelity, alignment, and safety.</p>
           <div class="resource-inline">
             <a href="https://arxiv.org/abs/2504.05979">Paper</a>

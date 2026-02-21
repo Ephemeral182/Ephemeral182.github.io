@@ -41,7 +41,7 @@ title: Publications
       <article class="highlight-card">
         <div class="highlight-media">
           <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni teaser">
-          <span class="badge badge-blue">Tech Report 2026</span>
+          <span class="badge badge-cyan">CVPR 2026</span>
         </div>
         <div class="highlight-content">
           <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
@@ -134,7 +134,7 @@ title: Publications
           <span class="meta-date">Feb 2026</span>
         </div>
         <div class="timeline-body">
-          <h3><span class="pub-prefix">[Tech Report 2026]</span> PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
+          <h3><span class="pub-prefix">[CVPR 2026]</span> PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
           <p>One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. ✨ Your intelligent assistant for high-quality aesthetic poster creation!</p>
           <div class="resource-inline">

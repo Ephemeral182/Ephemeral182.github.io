@@ -57,6 +57,7 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
+            <p><strong>PosterOmni</strong> accepted by <strong>CVPR'2026</strong></p>
             <p>Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
             <p><strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
             <p>Released <strong>PosterCraft</strong>, a unified framework for high-quality aesthetic poster generation.</p>
@@ -75,6 +76,7 @@ layout: fancy_home
     <h2 class="news-title">📰 News and Updates</h2>
     <div class="scrollable-news">
         <ul>
+            <li><strong>Feb. 2026：</strong>🎓 <strong>PosterOmni</strong> has been accepted by <strong>CVPR'2026</strong>.</li>
             <li><strong>Feb. 2026：</strong>🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterOmni/"><strong>PosterOmni</strong></a>! One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation.<br>✨ <span class="highlight">Your intelligent assistant for high-quality aesthetic poster creation!</span></li>
             <li><strong>Jan. 2026：</strong>🎓 <strong>PosterCraft</strong> has been accepted by <strong>ICLR'2026</strong>.</li>
             <li><strong>Jun. 2025：</strong>🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterCraft/"><strong>PosterCraft</strong></a>! A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework".<br>✨ <span class="highlight">From your prompts to high-quality aesthetic posters!</span></li>

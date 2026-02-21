@@ -10,7 +10,7 @@ layout: fancy_home
         </div>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
-            I’m <span class="highlight">Sixiang Chen (陈思翔)</span>, a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a> advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>. I interned as a research scientist at Meigen-AI. My work explores generative and unified models to unlock new potential in image understanding and creation. I believe research should matter to real users—some projects I lead, including PosterCraft, PosterOmni, and PosterReward, are built to become dependable tools for designers and broader creative communities.
+            I’m <span class="highlight">Sixiang Chen (陈思翔)</span>, a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a> advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>. I interned as a research scientist at Meigen-AI. My work explores generative and unified models to unlock new potential in image understanding and creation. I believe research should matter to real users—some projects I lead, including <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>PosterReward</strong>, are built to become dependable tools for designers and broader creative communities.
         </div>
         <div class="social-links">
             <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
@@ -51,6 +51,8 @@ layout: fancy_home
         <div class="card-icon">🏆</div>
         <h3 class="card-title">Recent Achievements</h3>
         <div class="card-content">
+            <p>• Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
+            <p>• <strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
             <p>• Released PosterCraft, a unified framework for high-quality aesthetic poster generation.</p>
             <p>• <strong>1 paper accepted</strong> by ICCV'2025</p>. GenHaze, a one-step controllable haze generation method.
             <p>• <strong>GPT-4o evaluation report</strong> published on arXiv</p>

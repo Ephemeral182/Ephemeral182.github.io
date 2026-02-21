@@ -39,7 +39,7 @@ layout: fancy_home
 <div class="service-section">
     <div class="service-header">
         <i class="fas fa-microscope" style="font-size: 2rem; color: #6366f1;"></i>
-        <h2 class="service-title">Research Interests</h2>
+        <h2 class="service-title">Research Experience</h2>
     </div>
     <div class="service-card">
         <div class="service-list">

@@ -132,7 +132,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[Tech Report 2026]</span> PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
-          <p class="timeline-authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
+          <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
           <p>Synthesizes poster layout, editing, and reward control inside a single agent with public demo and dataset releases.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterOmni/">Project Page</a>
@@ -147,7 +147,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICLR 2026]</span> PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
-          <p class="timeline-authors">Sixiang Chen*, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
+          <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
           <p>Prompt-to-poster system combining composition reasoning with stylized generation for production-ready assets.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
@@ -162,7 +162,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[Tech Report 2025]</span> An Empirical Study of GPT-4o Image Generation Capabilities</h3>
-          <p class="timeline-authors">Sixiang Chen, Jinbin Bai, Zhuoran Zhao, Tian Ye, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
+          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Jinbin Bai, Zhuoran Zhao, Tian Ye, Qingyu Shi, Donghao Zhou, Wenhao Chai, Xin Lin, Jianzong Wu, Chao Tang, Shilin Xu, Tao Zhang, Haobo Yuan, Yikang Zhou, Wei Chow, Linfeng Li, Xiangtai Li, Lei Zhu, Lu Qi</p>
           <p>Comprehensive evaluation of GPT-4o image generation covering fidelity, alignment, and safety.</p>
           <div class="resource-inline">
             <a href="https://arxiv.org/abs/2504.05979">Paper</a>
@@ -176,7 +176,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[CVPR 2025]</span> SnowMaster — Comprehensive Real-world Image Desnowing via MLLM with Multi-Model Feedback Optimization</h3>
-          <p class="timeline-authors">Jianyu Lai*, Sixiang Chen*, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Wei Wang, Lei Zhu</p>
+          <p class="timeline-authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Yunlong Lin, Tian Ye, Yun Liu, Song Fei, Zhaohu Xing, Hongtao Wu, Wei Wang, Lei Zhu</p>
           <p>MLLM controller fuses multiple expert opinions to adaptively desnow real driving scenes.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -191,7 +191,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[CVPR 2025]</span> Detect Any Mirrors — Boosting Learning Reliability with an Iterative Data Engine</h3>
-          <p class="timeline-authors">Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, Sixiang Chen, Wenxue Li, Guang Liu, Lei Zhu</p>
+          <p class="timeline-authors">Zhaohu Xing, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, <strong>Sixiang Chen</strong>, Wenxue Li, Guang Liu, Lei Zhu</p>
           <p>Large-scale pseudo-labeling loop plus curated verification for mirror detection reliability in robotics.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -206,7 +206,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[AAAI 2025]</span> PromptHaze — Prompting Real-world Dehazing via Depth Anything</h3>
-          <p class="timeline-authors">Tian Ye, Sixiang Chen, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu</p>
+          <p class="timeline-authors">Tian Ye, <strong>Sixiang Chen</strong>, Haoyu Chen, Wenhao Chai, Jingjing Ren, Zhaohu Xing, Wenxue Li, Lei Zhu</p>
           <p>Aligns promptable depth priors with restoration networks for plug-and-play real-world dehazing.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -221,7 +221,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[AAAI 2025]</span> AGLLDiff — Guiding Diffusion Models Towards Unsupervised Training-Free Real-World Low-Light Image Enhancement</h3>
-          <p class="timeline-authors">Yunlong Lin, Tian Ye, Sixiang Chen, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding</p>
+          <p class="timeline-authors">Yunlong Lin, Tian Ye, <strong>Sixiang Chen</strong>, Zhenqi Fu, Yingying Wang, Wenhao Chai, Zhaohu Xing, Lei Zhu, Xinghao Ding</p>
           <p>Guides diffusion sampling with adaptive priors to brighten real driving scenes without paired data.</p>
           <div class="resource-inline">
             <a href="https://aglldiff.github.io/">Project Page</a>
@@ -235,7 +235,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[NeurIPS 2024]</span> RestoreAgent — Autonomous Image Restoration Agent via Multimodal Large Language Models</h3>
-          <p class="timeline-authors">Haoyu Chen, Wenxue Li, Jinjin Gu, Jingjing Ren, Sixiang Chen, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu</p>
+          <p class="timeline-authors">Haoyu Chen, Wenxue Li, Jinjin Gu, Jingjing Ren, <strong>Sixiang Chen</strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu</p>
           <p>Multimodal LLM planner coordinates restoration tools for end-to-end autonomous enhancement.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -250,7 +250,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ECCV 2024]</span> Teaching Tailored to Talent — Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</h3>
-          <p class="timeline-authors">Sixiang Chen, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu</p>
+          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Tian Ye, Kai Zhang, Zhaohu Xing, Yunlong Lin, Lei Zhu</p>
           <p>Pairs prompt libraries with depth-aware constraints to customize restoration for each degradation.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
@@ -265,12 +265,54 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[CVPR 2024 Highlight]</span> Learning Diffusion Texture Priors for Image Restoration</h3>
-          <p class="timeline-authors">Tian Ye, Sixiang Chen, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu</p>
+          <p class="timeline-authors">Tian Ye, <strong>Sixiang Chen</strong>, Wenhao Chai, Zhaohu Xing, Jing Qin, Ge Lin, Lei Zhu</p>
           <p>Introduces texture-consistent diffusion priors that boost restoration fidelity on challenging details.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>
             <a href="https://ephemeral182.github.io">Paper</a>
             <a href="https://ephemeral182.github.io">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Oct 2023</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[ICCV 2023]</span> Adverse Weather Removal with Codebook Priors</h3>
+          <p class="timeline-authors">Tian Ye*, <strong>Sixiang Chen*</strong>, Jinbin Bai*, Shi Jun, Chenghao Xue, Jingjia Jiang, Junjie Yin, Erkang Chen, Yun Liu</p>
+          <p>Leverages codebook priors to handle complex adverse weather conditions for robust image restoration.</p>
+          <div class="resource-inline">
+            <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Ye_Adverse_Weather_Removal_with_Codebook_Priors_ICCV_2023_paper.html">Paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Oct 2023</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[ICCV 2023]</span> Sparse Sampling Transformer with Uncertainty-Driven Ranking for Unified Removal of Raindrops and Rain Streaks</h3>
+          <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Tian Ye*, Jinbin Bai, Jun Shi, Erkang Chen, Lei Zhu</p>
+          <p>A unified framework using sparse sampling and uncertainty ranking to remove both raindrops and rain streaks.</p>
+          <div class="resource-inline">
+            <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">Project Page</a>
+            <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Chen_Sparse_Sampling_Transformer_with_Uncertainty-Driven_Ranking_for_Unified_Removal_of_ICCV_2023_paper.html">Paper</a>
+            <a href="https://github.com/Ephemeral182/UDR_S2Former_deraining">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Oct 2022</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[ECCV 2022 Oral]</span> Perceiving and Modeling Density for Image Dehazing</h3>
+          <p class="timeline-authors">Tian Ye*, Yunchen Zhang*, Mingchao Jiang*, Liang Chen, Yun Liu, <strong>Sixiang Chen</strong>, Erkang Chen</p>
+          <p>Proposes a density-aware approach for effective image dehazing, selected as an oral presentation at ECCV 2022.</p>
+          <div class="resource-inline">
+            <a href="https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/5576_ECCV_2022_paper.php">Paper</a>
+            <a href="https://github.com/yetian11/PMD-Dehazing">Code</a>
           </div>
         </div>
       </article>

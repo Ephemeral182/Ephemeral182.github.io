@@ -50,7 +50,7 @@ title: Publications
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
-            <a href="https://huggingface.co/spaces/PosterOmni">🚀 Demo</a>
+            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">🤗 Model</a>
             <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">🐙 GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
@@ -75,6 +75,7 @@ title: Publications
             <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
             <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
+            <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">🤗 Model</a>
             <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">🐙 GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
@@ -96,9 +97,11 @@ title: Publications
           <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
           <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-list">
-            <a href="https://ephemeral182.github.io">📄 PDF</a>
-            <a href="https://ephemeral182.github.io">🌐 Project</a>
-            <a href="https://ephemeral182.github.io">💻 Code</a>
+            <a href="https://arxiv.org/abs/2504.04158">📄 PDF</a>
+            <a href="https://cvpr2025-jarvisir.github.io/">🌐 Project</a>
+            <a href="https://huggingface.co/spaces/LYL1015/JarvisIR">🚀 Demo</a>
+            <a href="https://huggingface.co/LYL1015/JarvisIR">🤗 Model</a>
+            <a href="https://github.com/LYL1015/JarvisIR" target="_blank" rel="noopener">🐙 GitHub</a>
           </div>
         </div>
       </article>
@@ -138,6 +141,7 @@ title: Publications
             <a href="https://ephemeral182.github.io/PosterOmni/">Project Page</a>
             <a href="https://arxiv.org/abs/2602.12127">Paper</a>
             <a href="https://github.com/MeiGen-AI/PosterOmni">Code</a>
+            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">Model</a>
           </div>
         </div>
       </article>
@@ -153,6 +157,8 @@ title: Publications
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
             <a href="https://arxiv.org/abs/2506.10741">Paper</a>
             <a href="https://github.com/Ephemeral182/PosterCraft">Code</a>
+            <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">Model</a>
+            <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">Demo</a>
           </div>
         </div>
       </article>
@@ -193,9 +199,11 @@ title: Publications
           <p class="timeline-authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding</p>
           <p>A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-inline">
-            <a href="https://ephemeral182.github.io">Project Page</a>
-            <a href="https://ephemeral182.github.io">Paper</a>
-            <a href="https://ephemeral182.github.io">Code</a>
+            <a href="https://cvpr2025-jarvisir.github.io/">Project Page</a>
+            <a href="https://arxiv.org/abs/2504.04158">Paper</a>
+            <a href="https://github.com/LYL1015/JarvisIR">Code</a>
+            <a href="https://huggingface.co/LYL1015/JarvisIR">Model</a>
+            <a href="https://huggingface.co/spaces/LYL1015/JarvisIR">Demo</a>
           </div>
         </div>
       </article>

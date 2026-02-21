@@ -147,7 +147,7 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-date">Jan 2026</span>
+          <span class="meta-date">Jun 2025</span>
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICLR 2026]</span> PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
@@ -165,7 +165,7 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-date">Oct 2025</span>
+          <span class="meta-date">Jun 2025</span>
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICCV 2025]</span> GenHaze — One-step Controllable Haze Generation for Real-World Dehazing</h3>
@@ -269,7 +269,7 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-date">Dec 2024</span>
+          <span class="meta-date">Jul 2024</span>
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[NeurIPS 2024]</span> RestoreAgent — Autonomous Image Restoration Agent via Multimodal Large Language Models</h3>
@@ -284,7 +284,7 @@ title: Publications
       </article>
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-date">Oct 2024</span>
+          <span class="meta-date">Jun 2024</span>
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ECCV 2024]</span> Teaching Tailored to Talent — Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</h3>
@@ -338,6 +338,19 @@ title: Publications
             <a href="https://ephemeral182.github.io/UDR_S2Former_deraining/">Project Page</a>
             <a href="https://arxiv.org/abs/2308.14153">Paper</a>
             <a href="https://github.com/Ephemeral182/UDR-S2Former_deraining">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Oct 2023</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[ACM MM 2023]</span> Uncertainty-Driven Dynamic Degradation Perceiving and Background Modeling for Efficient Single Image Desnowing</h3>
+          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Tian Ye, Chenghao Xue, Haoyu Chen, Yun Liu, Erkang Chen, Lei Zhu</p>
+          <p>Proposes an efficient single image desnowing framework by modeling uncertainty in degradation perception and background reconstruction.</p>
+          <div class="resource-inline">
+            <a href="https://dl.acm.org/doi/10.1145/3581783.3612003">Paper</a>
           </div>
         </div>
       </article>

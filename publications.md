@@ -64,7 +64,7 @@ title: Publications
 
       <article class="highlight-card">
         <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/images/posterreward/teaser.png" alt="PosterReward">
+          <img src="https://ephemeral182.github.io/images/posterreward/teaser2.png" alt="PosterReward">
           <span class="badge badge-cyan">CVPR 2026</span>
         </div>
         <div class="highlight-content">

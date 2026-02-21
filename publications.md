@@ -64,6 +64,22 @@ title: Publications
 
       <article class="highlight-card">
         <div class="highlight-media">
+          <img src="https://ephemeral182.github.io/images/posterreward/teaser.png" alt="PosterReward">
+          <span class="badge badge-cyan">CVPR 2026</span>
+        </div>
+        <div class="highlight-content">
+          <h3>PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
+          <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
+          <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on a automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
+          <div class="resource-list">
+            <a href="https://ephemeral182.github.io/PosterReward/">🌐 Project</a>
+            <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">🐙 GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="highlight-card">
+        <div class="highlight-media">
           <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft">
           <span class="badge badge-green">ICLR 2026</span>
         </div>
@@ -106,21 +122,6 @@ title: Publications
           </div>
         </div>
       </article>
-
-      <article class="highlight-card">
-        <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/images/genhaze/teaser2.png" alt="GenHaze">
-          <span class="badge badge-purple">ICCV 2025</span>
-        </div>
-        <div class="highlight-content">
-          <h3>GenHaze — One-step Controllable Haze Generation for Real-World Dehazing</h3>
-          <p class="authors"><strong>Sixiang Chen</strong>, Tian Ye, Yunlong Lin, Yeying Jin, Yijun Yang, Haoyu Chen, Jianyu Lai, Song Fei, Zhaohu Xing, Fugee Tsung, Lei Zhu✉️</p>
-          <p class="summary">Proposes a one-step, reference-controllable haze generator that better matches real-world haze complexity than classic physics pipelines, creating high-quality paired data to boost real-world dehazing performance.</p>
-          <div class="resource-list">
-            <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Chen_GenHaze_Pioneering_Controllable_One-Step_Realistic_Haze_Generation_for_Real-World_Dehazing_ICCV_2025_paper.pdf">📄 PDF</a>
-          </div>
-        </div>
-      </article>
     </div>
   </section>
 
@@ -142,6 +143,20 @@ title: Publications
             <a href="https://arxiv.org/abs/2602.12127">Paper</a>
             <a href="https://github.com/MeiGen-AI/PosterOmni">Code</a>
             <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">Model</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Feb 2026</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[CVPR 2026]</span> PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
+          <p class="timeline-authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu</p>
+          <p>A comprehensive reward model for design aesthetics and typography, trained on automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
+          <div class="resource-inline">
+            <a href="https://ephemeral182.github.io/PosterReward/">Project Page</a>
+            <a href="https://github.com/MeiGen-AI/PosterReward">Code</a>
           </div>
         </div>
       </article>

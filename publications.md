@@ -288,7 +288,7 @@ title: Publications
         </div>
         <div class="timeline-body">
           <h3><span class="pub-prefix">[NeurIPS 2024]</span> RestoreAgent — Autonomous Image Restoration Agent via Multimodal Large Language Models</h3>
-          <p class="timeline-authors">Haoyu Chen, Wenxue Li, Jinjin Gu, Jingjing Ren, <strong>Sixiang Chen</strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu</p>
+          <p class="timeline-authors">Haoyu Chen, Wenbo Li, Jinjin Gu, Jingjing Ren, <strong>Sixiang Chen</strong>, Tian Ye, Renjing Pei, Kaiwen Zhou, Fenglong Song, Lei Zhu</p>
           <p>Proposes an MLLM-driven agent that diagnoses degradations and plans a task sequence + selects expert models from a tool/model pool to restore images.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io">Project Page</a>

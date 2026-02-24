@@ -427,16 +427,16 @@ body::before {
   display: inline-block;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  background: rgba(14, 165, 233, 0.08);
-  color: #0284c7;
-  border: 1px solid rgba(14, 165, 233, 0.2);
+  background: rgba(99, 102, 241, 0.08);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.2);
   margin: 0 0.5rem 0.5rem 0;
   font-size: 0.85rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 .intro-tags span:hover {
-  background: rgba(14, 165, 233, 0.15);
+  background: rgba(99, 102, 241, 0.15);
   transform: translateY(-1px);
 }
 .intro-counters {display: flex; flex: 1 1 260px; gap: 1rem;}
@@ -615,12 +615,12 @@ body::before {
 .authors strong,
 .timeline-authors strong {
   display: inline-block;
-  background: #0ea5e9;
+  background: #6366f1;
   color: white;
   padding: 1px 10px;
   border-radius: 12px;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
   transition: all 0.3s ease;
   margin: 0 2px;
 }
@@ -628,8 +628,8 @@ body::before {
 .authors strong:hover,
 .timeline-authors strong:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
-  background: #0284c7;
+  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
+  background: #4f46e5;
 }
 
 @media (max-width: 900px) {

@@ -448,7 +448,7 @@ body::before {
   text-align: center;
   padding: 1.2rem;
 }
-.counter-value {font-size: 2.1rem; font-weight: 700; color: #0f62fe;}
+.counter-value {font-size: 2.1rem; font-weight: 700; color: #6366f1;}
 .counter-label {font-size: 0.9rem; color: #475569; margin-top: 0.4rem;}
 .section-header {margin: 3rem 0 1.5rem;}
 .section-header h2,
@@ -483,8 +483,8 @@ body::before {
   bottom: 18px;
   width: 10px;
   border-radius: 999px;
-  background: linear-gradient(180deg, #34d399, #0ea5e9);
-  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.35);
+  background: linear-gradient(180deg, #a855f7, #6366f1);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
 }
 .highlight-card::after {
   content: '';
@@ -494,7 +494,7 @@ body::before {
   bottom: 10px;
   width: 22px;
   border-radius: 999px;
-  background: linear-gradient(180deg, rgba(52, 211, 153, 0.16), rgba(14, 165, 233, 0.12));
+  background: linear-gradient(180deg, rgba(168, 85, 247, 0.16), rgba(99, 102, 241, 0.12));
   filter: blur(5px);
   z-index: -1;
 }
@@ -548,7 +548,7 @@ body::before {
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
-  color: #0f62fe;
+  color: #6366f1;
 }
 .resource-list a:hover {text-decoration: underline;}
 .gh-btn-wrap {
@@ -586,7 +586,7 @@ body::before {
 }
 .timeline-body h3 {margin: 0 0 0.35rem; font-size: 1.25rem;}
 .timeline-body .pub-prefix {
-  color: #2563eb;
+  color: #6366f1;
   font-weight: 700;
   margin-right: 0.4rem;
 }

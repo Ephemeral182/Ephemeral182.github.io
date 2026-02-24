@@ -427,9 +427,17 @@ body::before {
   display: inline-block;
   padding: 0.4rem 1rem;
   border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.2);
+  background: rgba(14, 165, 233, 0.08);
+  color: #0284c7;
+  border: 1px solid rgba(14, 165, 233, 0.2);
   margin: 0 0.5rem 0.5rem 0;
   font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.intro-tags span:hover {
+  background: rgba(14, 165, 233, 0.15);
+  transform: translateY(-1px);
 }
 .intro-counters {display: flex; flex: 1 1 260px; gap: 1rem;}
 .counter-card {

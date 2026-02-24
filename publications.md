@@ -72,7 +72,7 @@ title: Publications
           <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
           <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on a automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
           <div class="resource-list">
-            <a href="https://ephemeral182.github.io/PosterReward/">🌐 Project</a>
+            <a href="https://alexlai2860.github.io/PosterReward/">🌐 Project</a>
             <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">🐙 GitHub</a>
           </div>
         </div>
@@ -155,7 +155,7 @@ title: Publications
           <p class="timeline-authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu</p>
           <p>A comprehensive reward model for design aesthetics and typography, trained on automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
           <div class="resource-inline">
-            <a href="https://ephemeral182.github.io/PosterReward/">Project Page</a>
+            <a href="https://alexlai2860.github.io/PosterReward/">Project Page</a>
             <a href="https://github.com/MeiGen-AI/PosterReward">Code</a>
           </div>
         </div>

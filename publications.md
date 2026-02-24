@@ -388,6 +388,12 @@ title: Publications
 </div>
 
 <style>
+/* Specific background adjustment for publications page */
+body::before {
+    filter: saturate(0.9) brightness(1.1) !important;
+    opacity: 0.3 !important;
+}
+
 .pub-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -596,6 +602,28 @@ title: Publications
   content: " | ";
   color: #b91c1c;
 }
+
+/* Author Name Highlight Effect */
+.authors strong,
+.timeline-authors strong {
+  display: inline-block;
+  background: #0ea5e9;
+  color: white;
+  padding: 1px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+  margin: 0 2px;
+}
+
+.authors strong:hover,
+.timeline-authors strong:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(14, 165, 233, 0.4);
+  background: #0284c7;
+}
+
 @media (max-width: 900px) {
   .intro {flex-direction: column;}
   .intro-counters {width: 100%;}

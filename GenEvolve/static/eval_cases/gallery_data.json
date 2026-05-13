@@ -1,0 +1,383 @@
+[
+  {
+    "idx": 0,
+    "dir": "case_0000",
+    "category": "Creative Transfer",
+    "raw_category": "grounded_creative_transfer",
+    "prompt": "Draw the Svalbard Global Seed Vault in the style of a Studio Ghibli animated film. Make sure the distinctive wedge-shaped entrance jutting out of the snow is clearly recognizable, but rendered in that soft, painted anime background aesthetic with dramatic lighting.",
+    "gen_prompt": "Use the first reference image for the exact shape, position, and design of the Svalbard Global Seed Vault's distinctive wedge-shaped entrance jutting out of the snow. Render the entire scene in the soft, hand-painted Studio Ghibli animated background aesthetic, with visible gentle watercolor brushstrokes, soft blended edges, and Ghibli's characteristic warm and cool color palette. Add dramatic lighting: low golden hour light from the left casting long soft shadows across the snow, with cool blue tint on shaded snow areas to emphasize arctic cold, volumetric light catching tiny floating snow particles around the vault entrance. Wide-angle eye-level shot with deep focus, subtle atmospheric haze in the distant arctic landscape behind the vault to create depth.",
+    "skills": [
+      "creative_drawing",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 23,
+    "dir": "case_0023",
+    "category": "Creative Transfer",
+    "raw_category": "grounded_creative_transfer",
+    "prompt": "Draw a cyberpunk comic book illustration of a Shoebill Stork sitting at a neon-lit diner counter. The bird should have its characteristic massive, clog-shaped beak and intense stare. It needs to be wearing a bright yellow rain jacket and holding a red coffee mug in one of its wings. Adapt its anatomy naturally to this semi-humanoid pose.",
+    "gen_prompt": "Cyberpunk comic book illustration, medium waist-up shot following rule of thirds with the subject at the left intersection point. Copy the shoebill stork's characteristic massive clog-shaped beak and intense forward stare from the first reference image. Adapt the stork's anatomy naturally to a semi-humanoid seated pose at the neon-lit diner counter copied from the second reference image: the stork wears a bright yellow waterproof rain jacket, sits on a diner stool with its left wing resting flat on the rain-slicked counter surface, its right wing curled securely around a glossy red ceramic coffee mug. Lighting: neon pink, electric blue, and purple rim lights from overhead diner signs cast vibrant reflections on the wet counter and stork's feathers, warm golden glow emanates from the coffee mug, high contrast bold black ink outlines with vibrant saturated colors, subtle retro comic film grain, shallow depth of field blurring the neon-lit diner background slightly to emphasize the stork subject.",
+    "skills": [
+      "creative_drawing",
+      "anatomy_body_coherence",
+      "attribute_binding",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": true
+  },
+  {
+    "idx": 37,
+    "dir": "case_0037",
+    "category": "Creative Transfer",
+    "raw_category": "grounded_creative_transfer",
+    "prompt": "Draw a shoebill stork in the style of a vintage 1920s rubber hose animation. It should be standing upright on the deck of a wooden riverboat, using one of its wings like an arm to steer a large ship's wheel. Make sure the stork's distinctive massive, clog-shaped beak and intense forward stare are clearly recognizable despite the cartoon transformation. The camera should be positioned low on the deck, looking up at the bird towering over the wheel against a cloudy sky.",
+    "gen_prompt": "1920s rubber hose animation style, following the art style of the second reference image. The scene is shot from a low camera angle on a weathered wooden riverboat deck, with a large simple ship's wheel in the lower center of the frame. In the midground, a shoebill stork (with the distinctive massive clog-shaped beak and intense forward stare from the first reference image) stands upright, towering 2x the height of the ship's wheel, facing directly forward towards the viewer. The stork's body is rendered in classic rubber hose style: rounded bouncy limbs, smooth curved edges, simple bold outlines, and bright muted vintage cartoon color palette. The stork uses one of its rubber hose-style wing limbs to grip the ship's wheel as if steering it. In the background, soft overcast cloudy sky fills the upper half of the frame, with soft diffused daylight illuminating the scene. Ensure the stork's iconic beak and intense stare remain clearly recognizable despite the cartoon transformation.",
+    "skills": [
+      "creative_drawing",
+      "anatomy_body_coherence",
+      "spatial_layout",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 3,
+    "dir": "case_0003",
+    "category": "Aesthetic & Lighting",
+    "raw_category": "grounded_aesthetic_lighting",
+    "prompt": "Draw a highly atmospheric, detailed architectural illustration of the Nakagin Capsule Tower in Tokyo during a heavy nighttime rainstorm. Use a cinematic neon-noir color palette with glowing blues and pinks reflecting off the building. The textures must feel physically grounded despite the illustrated style: the weathered, stained steel of the rectangular capsules and the smooth, wet glass of the circular windows should be clearly distinguishable and react accurately to the rain and neon lighting.",
+    "gen_prompt": "Highly detailed architectural illustration of the Nakagin Capsule Tower, copying the exact stacked rectangular capsule structure and circular window layout from the first reference image, set during a heavy nighttime rainstorm. Low-angle wide-angle shot looking up at the tower, cinematic neon-noir color palette with dominant glowing electric blue and magenta pink light from surrounding Tokyo neon signs, volumetric illuminated rain streaks filling the air. Physically grounded textures: weathered, stained matte steel of the rectangular capsules with visible water streaks and small rain droplets beading on the surface, smooth wet glass of the circular windows reflecting the neon blue and pink light, soft distorted reflections of the neon signs on the rain-slicked pavement at the base of the tower. Deep shadows in the gaps between capsules matching the direction of the neon light sources, high contrast with subtle film grain, deep focus keeping all texture details of the building and falling rain sharp.",
+    "skills": [
+      "aesthetic_drawing",
+      "physical_material_consistency",
+      "aesthetic_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": true
+  },
+  {
+    "idx": 65,
+    "dir": "case_0065",
+    "category": "Aesthetic & Lighting",
+    "raw_category": "grounded_aesthetic_lighting",
+    "prompt": "Generate a cinematic, synthwave-style image of the Atomium in Brussels. The iconic metallic spheres and tubes should be intertwined with massive, glowing cyan and magenta crystalline structures. The lighting must feature a vibrant retro-futuristic sunset with deep purple volumetric fog and anamorphic lens flares. Floating in the sky right above the top sphere, include a bright, holographic neon sign that clearly displays the word 'SYNTHETICA' in a bold, retro-80s font.",
+    "gen_prompt": "Cinematic synthwave-style image, using the first reference image as the exact reference for the Atomium's iconic metallic sphere and tube structure. Low-angle wide-angle shot looking up at the Atomium, intertwined with massive glowing cyan and magenta crystalline structures. Lighting: vibrant retro-futuristic sunset with deep purple volumetric fog, anamorphic horizontal lens flares, soft cyan and magenta rim lighting catching the metallic surfaces of the Atomium and crystals. Floating directly above the top sphere of the Atomium: bright holographic neon sign, rendered in bold retro 80s block sans-serif font, clearly spelling out the word \"SYNTHETICA\", glowing with cyan and magenta neon light that casts soft colored reflections on the fog and surrounding structures. Color grading: high contrast synthwave palette with dominant purple, cyan, and magenta tones, subtle film grain for retro texture, deep focus keeping both the Atomium and the floating sign sharp.",
+    "skills": [
+      "aesthetic_drawing",
+      "creative_drawing",
+      "text_rendering",
+      "aesthetic_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 8,
+    "dir": "case_0008",
+    "category": "Architecture",
+    "raw_category": "architecture_landmark",
+    "prompt": "Create a watercolor painting of the famous stacked-block housing complex built for Expo 67 in Montreal. Arrange the modular concrete cubes so they are floating in the sky, connected by glowing neon bridges. Ensure the original brutalist texture and window shapes of the cubes remain highly recognizable despite the artistic style.",
+    "gen_prompt": "Watercolor painting of the Habitat 67 housing complex, using the exact stacked modular concrete block shape, window arrangement, and rough brutalist concrete texture from the first reference image. The complex is floating gently in a soft pastel blue twilight sky with wispy clouds, connected by glowing neon bridges in soft pink and cyan hues that emit a gentle warm glow illuminating the edges of the concrete blocks. Soft blended watercolor brushstrokes, soft diffused lighting, dreamy whimsical atmosphere, no visible supports for the floating complex, the original architectural features of the blocks remain fully recognizable despite the artistic style.",
+    "skills": [
+      "creative_drawing",
+      "spatial_layout",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 26,
+    "dir": "case_0026",
+    "category": "Architecture",
+    "raw_category": "architecture_landmark",
+    "prompt": "I need a watercolor painting of the tallest brick minaret in the world. To make the scene lively, please add a bright red vintage bicycle leaning against a solid blue wooden bench at the base of the tower.",
+    "gen_prompt": "Loose, expressive watercolor painting of the Qutb Minar (the tallest brick minaret in the world, matching the architecture of the first reference image) as the central subject, positioned vertically centered in the frame. In the foreground at the bottom left of the frame, at the base of the minaret: a solid blue wooden bench, with a bright red vintage bicycle leaning against the left side of the bench, facing slightly toward the right. Soft, blended watercolor washes, subtle textured watercolor paper grain, warm golden hour daylight, soft diffused shadows, vibrant but muted color palette, gentle painterly brushstrokes, lively and cheerful atmosphere.",
+    "skills": [
+      "creative_drawing",
+      "attribute_binding",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 15,
+    "dir": "case_0015",
+    "category": "Material & Physics",
+    "raw_category": "grounded_material_physics",
+    "prompt": "Create a macro shot of a Glasswing butterfly resting on a rusted Cor-Ten steel surface right after a rainstorm. The butterfly's transparent wings should clearly distort and show the wet, textured rust behind them. There should be large, realistic water droplets on the steel reflecting the butterfly, with its delicate legs making contact with the wet metal.",
+    "gen_prompt": "Macro shot using a 100mm macro lens with shallow depth of field, soft diffused overcast post-rain light, warm rusty orange and cool metallic gray color palette, rule of thirds composition with negative space around the subject. The Glasswing butterfly from the first reference image rests on the wet rusted Cor-Ten steel surface from the second reference image, its delicate legs making firm contact with the textured wet metal. The butterfly's fully transparent wings clearly refract and distort the wet rust texture behind them, with subtle light refraction visible through the wing membrane. Large, rounded water droplets bead on the steel surface, each reflecting a slightly distorted, soft copy of the butterfly's wings and body. Soft, faint shadows from the butterfly extend slightly to the lower right of its legs, matching the overhead diffused light direction. All elements are physically grounded: the butterfly is supported entirely by the wet steel surface, reflections and refractions follow real-world optical physics.",
+    "skills": [
+      "physical_material_consistency",
+      "attribute_binding",
+      "aesthetic_drawing",
+      "spatial_layout",
+      "physical_material_consistency"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 22,
+    "dir": "case_0022",
+    "category": "Material & Physics",
+    "raw_category": "grounded_material_physics",
+    "prompt": "Create a stunning macro photograph of a Greta oto butterfly resting on the curved exterior of a classic Airstream trailer after a rainstorm. The butterfly's transparent wings should clearly refract and show the wet, riveted aluminum surface underneath them. The metal surface should have realistic water droplets and a distorted reflection of the sky.",
+    "gen_prompt": "Stunning macro photograph, 100mm f/2.8 macro lens, extremely shallow depth of field, soft diffused overcast post-rain light, cool silver and pale blue color palette with warm brown and orange accents from the butterfly. Greta oto butterfly matching the appearance of the first reference image rests on the curved wet riveted aluminum exterior of a classic Airstream trailer matching the appearance of the second reference image after a rainstorm. The butterfly's fully spread transparent wings clearly refract the wet aluminum surface underneath them, with small beaded water droplets on the butterfly's body and wing edges. The Airstream surface features evenly spaced rounded rivets, scattered clear water droplets beading on the polished aluminum, with a soft distorted reflection of pale blue post-storm sky visible across the curved metal surface. Soft, diffused shadows matching the overhead light direction fall gently under the butterfly's body and wing edges, adhering to gravity. Rule of thirds composition with the butterfly positioned at the upper left intersection point, negative space on the lower right showing more of the curved trailer surface.",
+    "skills": [
+      "physical_material_consistency",
+      "aesthetic_drawing",
+      "spatial_layout",
+      "physical_material_consistency"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 4,
+    "dir": "case_0004",
+    "category": "Text & Layout",
+    "raw_category": "grounded_text_layout",
+    "prompt": "Create a daytime image of the famous illuminated clock sign at the main entrance of Pike Place Market in Seattle. Ensure the large text 'PUBLIC MARKET CENTER' is perfectly readable and integrated into the neon sign's structure. Perched directly on the top edge of the sign, there must be exactly 5 seagulls.",
+    "gen_prompt": "Daytime bright natural daylight scene at the main entrance of Pike Place Market Seattle, featuring the illuminated neon clock sign copied exactly from the first reference image. The large bold glowing red neon text reading \"PUBLIC MARKET CENTER\" is perfectly readable, integrated seamlessly into the neon sign's metal frame structure, with soft neon glow illuminating the surrounding area. Exactly 5 seagulls are perched directly on the top horizontal edge of the sign: one seagull at the far left end of the top edge, a second seagull 25% of the way across the top edge from the left, a third seagull centered on the top edge, a fourth seagull 75% of the way across the top edge from the left, and a fifth seagull at the far right end of the top edge, for a total of exactly 5 seagulls. Bright blue daytime sky in the background, soft natural shadows cast by the sign and seagulls on the pavement below.",
+    "skills": [
+      "text_rendering",
+      "quantity_counting",
+      "text_rendering"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 39,
+    "dir": "case_0039",
+    "category": "Text & Layout",
+    "raw_category": "grounded_text_layout",
+    "prompt": "Create a beautiful watercolor illustration of a teal Smith Corona Corsair Deluxe typewriter sitting on a wooden desk. On the desk next to it, draw exactly 3 yellow unsharpened pencils. A piece of white paper is rolled into the typewriter with the words \"Chapter One\" typed on it. Make sure the manufacturer's brand name is accurately written on the typewriter's body just like the real vintage model.",
+    "gen_prompt": "Beautiful soft watercolor still life illustration with blended edges, visible light wash brushstrokes, and warm vintage color grading. A teal Smith Corona Corsair Deluxe typewriter matching the design of the first reference image sits centered on a weathered light brown wooden desk with visible grain. The accurate brand name \"SMITH-CORONA\" is rendered in the original vintage font on the front body of the typewriter, as shown in the first reference image. A sheet of cream white paper is rolled into the typewriter's platen, with the words \"Chapter One\" typed in classic black typewriter font, centered on the upper half of the paper, with subtle authentic ink smudging. Exactly 3 yellow unsharpened pencils are arranged in a horizontal row to the right of the typewriter: the first pencil at the far right of the row, the second pencil in the center of the row, the third pencil at the left of the row, all with flat unsharpened ends, for a total of 3 yellow unsharpened pencils. Soft diffused natural light falls from the upper left, casting gentle soft shadows under the typewriter and pencils, with a warm neutral out-of-focus background.",
+    "skills": [
+      "text_rendering",
+      "aesthetic_drawing",
+      "attribute_binding",
+      "quantity_counting",
+      "text_rendering"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 42,
+    "dir": "case_0042",
+    "category": "Spatial Composition",
+    "raw_category": "grounded_spatial_composition",
+    "prompt": "Design an Art Deco style travel poster. In the center midground, feature the iconic pale stone Stari Most bridge spanning across a vibrant turquoise river. In the bottom-left foreground, overlapping the frame slightly, draw a bright red vintage Vespa scooter parked on cobblestones. The whole image should have the clean lines and bold geometric shading typical of 1920s Art Deco illustrations.",
+    "gen_prompt": "1920s Art Deco travel poster, following the clean lines and bold geometric shading style of the second reference image. Depth layering: foreground (bottom-left of the frame, overlapping the left edge): bright red vintage Vespa scooter matching the design of the third reference image, parked on rough cobblestones, facing slightly right. Midground (centered in the frame): iconic pale stone Stari Most bridge spanning across a vibrant turquoise river matching the bridge and river design of the first reference image. Background: simplified stylized hills rendered with sharp geometric shapes and flat bold colors. Lighting: even high-key flat lighting typical of Art Deco illustrations, no soft gradients or shadows, thick clean black outlines separating all color blocks. Color palette: saturated high-contrast primary and secondary hues, symmetrical composition with the bridge as the central focal point, negative space at the top suitable for implied travel poster text.",
+    "skills": [
+      "spatial_layout",
+      "attribute_binding",
+      "aesthetic_drawing",
+      "spatial_layout"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 55,
+    "dir": "case_0055",
+    "category": "Spatial Composition",
+    "raw_category": "grounded_spatial_composition",
+    "prompt": "Create a detailed ink and watercolor scientific illustration of a Welwitschia mirabilis plant and a Namib Desert beetle. The Welwitschia plant should be in the center-background, sprawling its long, torn, leathery leaves across the sandy ground. In the extreme foreground on the bottom right corner, draw the Namib Desert beetle from a low angle as if it's crawling toward the viewer. The overall style should look like an 18th-century botanical field journal entry.",
+    "gen_prompt": "18th-century ink and watercolor scientific field journal illustration, matching the fine ink line work, soft muted watercolor washes, and aged off-white paper texture of the third reference image. Spatial layout: Foreground (bottom right corner of the frame): Namib Desert beetle copied from the second reference image, low angle view facing directly toward the viewer, crawling on pale sandy desert ground, occupying approximately 1/8 of the frame height. Midground/background: Welwitschia mirabilis plant copied from the first reference image, centered in the upper half of the frame, sprawling its long, torn, leathery leaves across the sandy ground, positioned behind the beetle so the beetle's rear legs are partially occluded by the plant's lower leaves, the beetle is significantly closer to the viewer so it appears larger in scale than the distant parts of the plant. Even diffused natural daylight, no harsh shadows, soft color palette of warm sand tones, deep green for the plant, and dark brown/black for the beetle, with subtle paper grain and slight yellowing to match 18th century field journal paper.",
+    "skills": [
+      "spatial_layout",
+      "aesthetic_drawing",
+      "spatial_layout"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 13,
+    "dir": "case_0013",
+    "category": "Anatomy & Pose",
+    "raw_category": "grounded_anatomy_pose",
+    "prompt": "Generate an image of a Caracal leaping high into the air to catch a flying insect. The wildcat should be caught mid-twist, with its body fully extended, hind legs kicking back, and one front paw swiping outward. Make sure its distinctive ear tufts and facial markings are perfectly accurate, and its spine and limbs look naturally proportioned for this acrobatic jump without any weird distortions.",
+    "gen_prompt": "Realistic high-action photograph of a caracal leaping high into the air to catch a small flying insect, using the first reference image for accurate caracal ear tufts, facial markings, and base fur color. The caracal is caught mid-twist: body fully extended, hind legs kicked back, one front paw swiping outward toward the insect, spine arched naturally for the acrobatic jump, all limbs proportioned correctly for a caracal with no distorted joints or weird anatomy. Bright natural daylight, soft blue sky background, sharp focus on the caracal, motion blur on the insect and trailing fur to emphasize movement.",
+    "skills": [
+      "anatomy_body_coherence",
+      "anatomy_body_coherence"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 46,
+    "dir": "case_0046",
+    "category": "Vehicle & Transport",
+    "raw_category": "vehicle_transport",
+    "prompt": "I need a beautiful architectural-style drafting illustration of a 1924 Brough Superior SS100 motorcycle. The background should be precise blueprint linework, but the motorcycle itself should be fully rendered with highly realistic materials. Ensure the fuel tank has its historically accurate dual-tone finish (the highly polished metal section and the painted section). Make sure the leather saddle looks properly worn and the exposed engine parts show realistic oily, brushed metal textures.",
+    "gen_prompt": "Architectural-style technical illustration, centered 1924 Brough Superior SS100 motorcycle matching the exact design and component layout of the first reference image, resting on its kickstand against a subtle light blue blueprint background with faint technical annotation linework. The motorcycle is rendered with photorealistic, physically accurate materials: fuel tank has historically accurate dual-tone finish, left half is highly polished chrome metal with bright soft reflections of the surrounding blueprint lines, right half is matte black painted metal with minor surface scuffs; dark brown full-grain leather saddle with visibly worn creases, faded patches, and subtle scuff marks from use; exposed engine components are brushed silver metal with a thin dark oily sheen, fine scratch details, and faint smudges of engine oil. Soft cool studio light from the upper left casts a soft, sharp shadow of the motorcycle extending to the lower right onto the blueprint background, with the motorcycle as the clear sharp focal point, the blueprint background slightly out of focus to keep attention on the bike's detailed materials.",
+    "skills": [
+      "physical_material_consistency",
+      "attribute_binding",
+      "aesthetic_drawing",
+      "physical_material_consistency"
+    ],
+    "refs": [
+      "ref_01.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 73,
+    "dir": "case_0073",
+    "category": "Vehicle & Transport",
+    "raw_category": "vehicle_transport",
+    "prompt": "Draw a highly detailed oil painting of Wojtek the Syrian brown bear riding in the passenger cab of a World War II Allied 2.5-ton cargo truck. The truck's door must clearly display the official emblem of the specific Polish artillery supply company that Wojtek belonged to. Pay close attention to the bear's heavy anatomical proportions fitting naturally inside the vehicle cab, the realistic textures of his fur against the truck's metal and glass, and ensure the company emblem is depicted with the correct design and colors.",
+    "gen_prompt": "Highly detailed realistic oil painting, 3/4 view of Wojtek the Syrian brown bear (matching the appearance of the second reference image) sitting comfortably in the passenger cab of a WWII Allied 2.5-ton cargo truck (matching the design of the third reference image). The truck's side door clearly displays the official 22nd Artillery Supply Company emblem (matching the design, colors, and details of the first reference image) affixed to the metal door. The bear has heavy, anatomically correct Syrian brown bear proportions, with thick, shaggy fur that rests naturally against the truck's weathered olive drab metal panels and clear glass cab window, with soft shadows cast by the bear's body onto the metal surface below. Warm, diffused overcast daylight from the upper left illuminates the scene, with soft golden highlights on the bear's fur and subtle reflections of the sky on the truck's glass and metal surfaces. The oil painting has rich, textured brushstrokes, a warm earthy color palette of olive green, brown, and soft cream, with deep focus keeping all elements of the cab and bear sharp, and a slight film grain texture to match traditional oil painting on canvas.",
+    "skills": [
+      "anatomy_body_coherence",
+      "aesthetic_drawing",
+      "attribute_binding",
+      "physical_material_consistency",
+      "anatomy_body_coherence"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 71,
+    "dir": "case_0071",
+    "category": "City & Street",
+    "raw_category": "city_street_scene",
+    "prompt": "I need a detailed pen-and-ink illustration of the main street in Shinsekai, Osaka at night. In the exact center background, draw the Tsutenkaku tower. In the upper foreground, hanging prominently over the street, draw the famous giant 3D blowfish restaurant sign that was permanently removed from that street in 2020. Even though it's a stylized black-and-white ink drawing, the geometric architecture of the tower and the exact shape and facial markings of the historical blowfish sign must be accurate.",
+    "gen_prompt": "Highly detailed black and white pen-and-ink illustration of the main night street in Shinsekai, Osaka. In the upper foreground, prominently placed, is the giant 3D pufferfish restaurant sign, with the exact shape, facial markings, and proportions copied from the second reference image, hanging over the street. In the midground, the narrow main street of Shinsekai is lined with low-rise Edo-period style buildings, with fine cross-hatching to show the texture of the facades and subtle light from shop windows. In the exact center of the background, the Tsutenkaku tower is drawn with the exact geometric architecture, structure, and proportions copied from the first reference image, towering over the street. The entire illustration uses fine pen line work, cross-hatching for shading, high contrast between deep black and bright white, deep focus with all key elements sharp, and leading lines of the street converging on the tower in the background, with subtle hatching to suggest the soft night glow of the tower and sign lights.",
+    "skills": [
+      "creative_drawing",
+      "spatial_layout",
+      "creative_drawing"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": true
+  },
+  {
+    "idx": 89,
+    "dir": "case_0089",
+    "category": "City & Street",
+    "raw_category": "city_street_scene",
+    "prompt": "A realistic street view of a steep San Francisco street in dense morning fog. In the center, a traditional Powell-Hyde cable car is heading down the hill. Parked parallel on the right curb is a classic Citroën DS. The damp pavement and the metal tracks should realistically reflect the warm glow of the cable car's headlights. Pay close attention to the spatial arrangement on the steep incline, the painted wood and brass details of the cable car, and the smooth, aerodynamic metal body of the Citroën.",
+    "gen_prompt": "Realistic photograph of a steep San Francisco street in dense morning fog, following the layout and atmosphere of the first reference image. Depth layering: Foreground is dark, damp asphalt pavement with faint, soft reflections. Midground: traditional Powell-Hyde cable car (with accurate painted wood and polished brass details from the first reference image) is centered in the frame, heading down the hill facing towards the bottom of the frame, resting securely on the embedded metal cable car tracks that run diagonally from the top left to bottom right of the frame following the steep incline. Right side of the frame: classic Citroën DS (with accurate smooth aerodynamic metal body from the second reference image) is parked parallel to the right curb, positioned on the upper third of the slope, facing the same direction as the cable car. Background is thick, obscuring fog that wraps around the upper edges of the cable car and hides distant buildings. Warm yellow glow from the cable car's headlights illuminates the front of the scene; the damp pavement and metal tracks reflect a slightly distorted, dimmed version of this warm headlight glow, plus the faint outline of the parked Citroën. The cable car's wood panels have a weathered matte finish, while its brass trim catches the warm headlight light. The Citroën's glossy metal body has soft, diffused reflections of the fog and surrounding environment with no harsh glare. All objects are properly grounded: the cable car sits flush on the tracks, the Citroën rests flush against the curb. Soft, diffused shadows match the overcast foggy morning light, with the cable car headlights as the only strong directional light source.",
+    "skills": [
+      "physical_material_consistency",
+      "spatial_layout",
+      "physical_material_consistency"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 12,
+    "dir": "case_0012",
+    "category": "Quantity & Counting",
+    "raw_category": "grounded_quantity_scene",
+    "prompt": "Create a photo showing exactly five red Daruma dolls arranged in a tight, even circle around a traditional Japanese bronze incense burner, all resting on a tatami mat.",
+    "gen_prompt": "Realistic photo, exactly five red Daruma dolls matching the design of the first reference image, arranged in a tight even circle around the traditional Japanese bronze incense burner matching the design of the second reference image, all resting on a textured woven tatami mat. The central bronze incense burner is positioned perfectly in the center of the frame, midground. The five Daruma dolls are spaced evenly 90 degrees apart around the burner: one at the top of the circle, one at top-right, one at bottom-right, one at bottom-left, one at top-left, all equidistant from the central burner, same depth as the burner, no overlapping. Each Daruma is glossy red lacquered wood with traditional painted facial features, the bronze incense burner has polished aged bronze finish with carved decorative motifs, the tatami mat has natural light brown woven straw texture filling the entire foreground and lower midground. Soft natural daylight from the upper left casts subtle soft shadows under each object, warm neutral color grading, sharp focus across the entire scene, total of exactly five Daruma dolls.",
+    "skills": [
+      "quantity_counting",
+      "spatial_layout",
+      "quantity_counting"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 116,
+    "dir": "case_0116",
+    "category": "Spatial Composition",
+    "raw_category": "grounded_spatial_composition",
+    "prompt": "Generate a street-level view looking toward the Flatiron Building in New York, which stands in the background. In the immediate foreground on the left, there is a classic green New York City subway entrance globe lamp mounted on a cast-iron post. Attached to the post is a weathered metal sign with the text '23 ST' painted in crisp white. Make sure the ribbed texture of the green glass globe and the rough cast iron are realistic, and the building in the background shows its iconic triangular limestone architecture.",
+    "gen_prompt": "Street-level eye-level view, natural overcast daylight, soft even lighting. In the immediate foreground, on the left side of the frame: a classic New York City green subway entrance globe lamp matching the second reference image, with a ribbed textured green glass globe mounted on a rough, weathered cast-iron post grounded on the concrete sidewalk. Attached to the front of the cast-iron post is a weathered dark metal sign, with the text \"23 ST\" rendered in crisp, bold white stenciled paint, the text slightly worn to match the sign's aged surface. In the background, centered in the frame, the iconic triangular limestone Flatiron Building of New York matching the first reference image, its full height and distinctive architecture clearly visible, with low-rise surrounding buildings and the street in the midground between the foreground entrance and the background building, all elements with realistic depth of field: foreground entrance is sharp, background building is slightly softer but fully recognizable.",
+    "skills": [
+      "spatial_layout",
+      "text_rendering",
+      "physical_material_consistency",
+      "spatial_layout"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  },
+  {
+    "idx": 19,
+    "dir": "case_0019",
+    "category": "Attribute Binding",
+    "raw_category": "grounded_attribute_binding",
+    "prompt": "Design a striking Art Deco style geometric illustration featuring two classic cameras sitting on a desk: a Rolleiflex 2.8F and a Polaroid SX-70. The Rolleiflex must be depicted with its black leatherette body and shiny chrome trim, while the Polaroid SX-70 needs to show its distinct folding silver metal frame and tan leather panels. Ensure the metallic and leather textures are rendered distinctly in the stylized drawing, capturing the glossy glass reflections in the Rolleiflex's twin lenses.",
+    "gen_prompt": "Striking Art Deco geometric illustration with bold angular linework, 1920s Art Deco decorative motifs, and high-contrast flat color blocking with subtle metallic accents. On the left side of a minimalist geometric desk surface sits the Rolleiflex 2.8F camera, copying its exact form from the first reference image: matte black textured leatherette body, polished shiny chrome trim, glossy glass twin lenses with soft reflections of the desk surface. On the right side of the desk sits the Polaroid SX-70 camera, copying its exact folded form from the second reference image: brushed silver metal frame, tan textured leather panels. Ensure distinct material rendering with no attribute leakage between the two cameras: matte leather texture for both bodies, reflective chrome trim only on the Rolleiflex, brushed silver finish only on the Polaroid's metal frame. Framed by subtle geometric Art Deco decorative borders, clean crisp composition.",
+    "skills": [
+      "attribute_binding",
+      "physical_material_consistency",
+      "aesthetic_drawing",
+      "attribute_binding"
+    ],
+    "refs": [
+      "ref_01.jpg",
+      "ref_02.jpg"
+    ],
+    "has_trajectory": false
+  }
+]

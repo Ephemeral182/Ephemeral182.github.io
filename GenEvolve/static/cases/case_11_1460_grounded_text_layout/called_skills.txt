@@ -1,0 +1,3 @@
+spatial_layout
+text_rendering
+aesthetic_drawing

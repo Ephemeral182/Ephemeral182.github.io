@@ -1,0 +1,264 @@
+[
+  {
+    "case_number": 1,
+    "category": "Architecture Landmark",
+    "prompt": "Create a detailed architectural watercolor and ink wash drawing of the Kunsthaus Graz museum in Austria. Parked directly in front of the building is a classic Airstream Bambi travel trailer. Make sure the distinct glossy blue, bio-morphic acrylic exterior of the museum is accurately depicted, while the trailer should clearly display its signature polished silver aluminum body. The watercolor style should beautifully capture the wet-looking reflections and highlights on both of these highly unusual, contrasting surfaces.",
+    "gen_prompt": "Architectural watercolor and ink wash drawing, eye-level wide-angle shot with deep focus, soft diffused overcast daylight. In the background, centered filling the upper 3/4 of the frame: the Kunsthaus Graz museum, accurately matching the biomorphic shape and glossy iridescent blue acrylic exterior f...",
+    "skills": [
+      "spatial_layout",
+      "aesthetic_drawing",
+      "attribute_binding"
+    ],
+    "ref_count": 2,
+    "dir": "case_01_10367_architecture_landmark",
+    "refs": [
+      "ref_01_IMG_002.jpg",
+      "ref_02_IMG_007.jpg"
+    ]
+  },
+  {
+    "case_number": 2,
+    "category": "City Street Scene",
+    "prompt": "Create an image of the famous Route 66 landmark, Roy's Motel and Café in Amboy. Show exactly four classic 1950s convertible cars parked out front, with two of them painted cherry red and two painted baby blue. Ensure the iconic giant mid-century arrow sign is prominently featured, displaying its actual exact wording in large neon letters. The scene should be set during a vibrant desert twilight.",
+    "gen_prompt": "Copy the architectural design of Roy's Motel and Café and its iconic 50ft neon arrow sign from the first reference image. The giant mid-century arrow sign is positioned prominently in the upper center of the frame, with glowing neon lettering clearly spelling out \"Roy's Motel & Café\" in bold mid-cen...",
+    "skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "text_rendering",
+      "spatial_layout",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_02_15389_city_street_scene",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_002.jpg"
+    ]
+  },
+  {
+    "case_number": 3,
+    "category": "Event Stage Sports",
+    "prompt": "Generate an image showing the original Jules Rimet Trophy standing next to the modern FIFA Women's World Cup Trophy on a velvet display table. Beside the trophies, place exactly 3 distinct winner's medals on ribbons (one gold, one silver, and one bronze). Behind the display, hang a large banner that clearly says 'GLOBAL GLORY'.",
+    "gen_prompt": "Realistic high-resolution studio photograph, soft warm overhead lighting. Depth layering: Background (upper half of frame, behind the display table): large matte white fabric banner spanning the full frame width, centered, with bold capital gold sans-serif letters clearly spelling \"GLOBAL GLORY\" cen...",
+    "skills": [
+      "spatial_layout",
+      "text_rendering",
+      "quantity_counting",
+      "physical_material_consistency"
+    ],
+    "ref_count": 2,
+    "dir": "case_03_18044_event_stage_sports",
+    "refs": [
+      "ref_01_IMG_002.jpg",
+      "ref_02_IMG_006.jpg"
+    ]
+  },
+  {
+    "case_number": 4,
+    "category": "Grounded Aesthetic Lighting",
+    "prompt": "Create a wide-angle cinematic shot of a 1954 Mercedes-Benz 300 SL Gullwing parked diagonally in a futuristic garage. In the foreground, out-of-focus mechanical tools are scattered. In the midground, a female mechanic is leaning against the open gullwing door of the car, wiping sweat from her brow in a natural, realistic pose. The garage is creatively overgrown with giant, glowing alien flora vines intertwining with the walls. The lighting should be a mix of golden hour sunlight streaming in, creating warm dramatic shadows, combined with neon reflections and anamorphic lens flares.",
+    "gen_prompt": "Wide-angle cinematic shot, 18mm lens, deep focus on midground, shallow depth of field blurring foreground elements. In the foreground along the bottom edge of the frame: scattered out-of-focus metallic mechanical tools. In the midground, parked diagonally at the right rule-of-thirds intersection: 19...",
+    "skills": [
+      "spatial_layout",
+      "aesthetic_drawing",
+      "anatomy_body_coherence"
+    ],
+    "ref_count": 2,
+    "dir": "case_04_3414_grounded_aesthetic_lighting",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_005.jpg"
+    ]
+  },
+  {
+    "case_number": 5,
+    "category": "Grounded Anatomy Pose",
+    "prompt": "Draw a highly detailed, aesthetic illustration of a Sunda pangolin hanging upside down from a mossy tree branch by its prehensile tail. It should be partially unrolled from its defensive ball, reaching out with its long, sticky tongue to catch a termite. Ensure the overlapping keratin scales look hard and accurately reflect light, contrasting with its softer underbelly hair. Its thick front claws must be visibly and correctly gripping the rough bark. Make the drawing look like a high-end natural history illustration.",
+    "gen_prompt": "Highly detailed natural history illustration of a Sunda pangolin, matching the anatomy and hanging pose from the first reference image, rendered in the scientific illustration style from the second reference image. The pangolin hangs upside down fully supported by its prehensile tail wrapped tightly...",
+    "skills": [
+      "anatomy_body_coherence",
+      "physical_material_consistency",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_05_10204_grounded_anatomy_pose",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_002.jpg"
+    ]
+  },
+  {
+    "case_number": 6,
+    "category": "Grounded Attribute Binding",
+    "prompt": "Create a highly detailed, retro-futuristic 3D render of a music studio desk. On the left side of the desk, place a Roland SH-101 synthesizer in its rare factory red color, highlighting its sleek plastic casing. On the right side, place a classic Moog Minimoog Model D, emphasizing its rich wooden cabinet and metallic faceplate. The lighting should be moody cyberpunk neon, casting reflections on the instruments.",
+    "gen_prompt": "Highly detailed retro-futuristic 3D render of a dark matte black music studio desk. Midground of the frame is fully occupied by the desk. On the left side of the frame (left half of the desk), place the rare factory red Roland SH-101 synthesizer copied from the first reference image, fully intact wi...",
+    "skills": [
+      "spatial_layout",
+      "attribute_binding",
+      "physical_material_consistency",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_06_2448_grounded_attribute_binding",
+    "refs": [
+      "ref_01_IMG_003.jpg",
+      "ref_02_IMG_006.jpg"
+    ]
+  },
+  {
+    "case_number": 7,
+    "category": "Grounded Creative Transfer",
+    "prompt": "Design a vibrant stained glass window featuring a Philippine Jeepney. On the hood of the Jeepney, place a giant bloom of the national flower of the Philippines. The Jeepney itself should be primarily neon green, and the flower must have glowing pink petals instead of its usual color. The background glass panes should be abstract geometric shapes in deep violet and indigo.",
+    "gen_prompt": "Vibrant stained glass window composition, with all elements separated by thin matte black lead came lines, backlit to make translucent glass colors pop. Midground: centered in the frame, classic Philippine Jeepney matching the shape and design of the first reference image, constructed entirely of ne...",
+    "skills": [
+      "spatial_layout",
+      "attribute_binding",
+      "physical_material_consistency"
+    ],
+    "ref_count": 2,
+    "dir": "case_07_5510_grounded_creative_transfer",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_004.jpg"
+    ]
+  },
+  {
+    "case_number": 8,
+    "category": "Grounded Material Physics",
+    "prompt": "Create a beautiful watercolor and ink architectural illustration of the Atomium in Brussels. Even though it's an illustration, the stainless steel spheres need to realistically reflect the surrounding structures and sky, showing accurate metallic gloss and spherical distortion.",
+    "gen_prompt": "Watercolor and ink architectural illustration of the Atomium in Brussels, using the accurate structural shape, sphere arrangement, and base from the first reference image, rendered in the soft black ink linework and translucent watercolor wash style from the second reference image. The stainless ste...",
+    "skills": [
+      "physical_material_consistency",
+      "creative_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_08_10745_grounded_material_physics",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_004.jpg"
+    ]
+  },
+  {
+    "case_number": 9,
+    "category": "Grounded Quantity Scene",
+    "prompt": "Generate an image of exactly four Blue-footed Boobies perched on a hexagonal basalt column. The birds should be arranged vertically, with each bird standing on a different tier of the rock formation, one directly above the other.",
+    "gen_prompt": "High-resolution wildlife photograph of exactly four Blue-footed Boobies, with each bird's appearance (plumage, bright blue webbed feet, natural perched posture) copied from the first reference image, perched on a tiered hexagonal basalt column formation copied from the second reference image. The fo...",
+    "skills": [
+      "quantity_counting",
+      "spatial_layout",
+      "anatomy_body_coherence",
+      "physical_material_consistency"
+    ],
+    "ref_count": 2,
+    "dir": "case_09_13022_grounded_quantity_scene",
+    "refs": [
+      "ref_01_IMG_002.jpg",
+      "ref_02_IMG_005.jpg"
+    ]
+  },
+  {
+    "case_number": 10,
+    "category": "Grounded Spatial Composition",
+    "prompt": "Generate an image in the style of a watercolor museum concept sketch. In the center, depict the main fragment of the Antikythera mechanism made of heavily corroded green bronze. Directly beneath it, acting as a pedestal, is a massive Bismuth crystal showing its signature geometric stair-step structure and iridescent metallic colors. In the upper left corner of the background, there should be a frosted glass plaque with the words 'ANCIENT TECH' cleanly engraved into it.",
+    "gen_prompt": "Watercolor museum concept sketch on rough textured watercolor paper, soft diffused cool gallery light from upper left casting subtle soft shadows extending to lower right, muted translucent watercolor washes with faint underlying pencil sketch lines, shallow depth of field with sharp focus on the ce...",
+    "skills": [
+      "spatial_layout",
+      "aesthetic_drawing",
+      "text_rendering",
+      "physical_material_consistency"
+    ],
+    "ref_count": 2,
+    "dir": "case_10_12847_grounded_spatial_composition",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_004.jpg"
+    ]
+  },
+  {
+    "case_number": 11,
+    "category": "Grounded Text Layout",
+    "prompt": "Generate a photo of the iconic neon sign above the entrance to the Bluebird Cafe in Nashville glowing at dusk. Just below the sign, leaning against the exterior wall, is a bright red acoustic guitar case. The guitar case has a bumper sticker on it that says 'Songwriter' in bold white letters.",
+    "gen_prompt": "Photorealistic photo of the Bluebird Cafe Nashville entrance at dusk, copying the iconic neon sign, exterior wall, and entrance facade exactly from the first reference image. The glowing neon sign is positioned in the top center of the frame (midground), matching its appearance in the first referenc...",
+    "skills": [
+      "spatial_layout",
+      "text_rendering",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_11_1460_grounded_text_layout",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_002.jpg"
+    ]
+  },
+  {
+    "case_number": 12,
+    "category": "Historical Artifact Object",
+    "prompt": "Draw a highly aesthetic watercolor and ink museum illustration featuring Fragment A of the Antikythera mechanism placed next to exactly 3 Roman dodecahedrons. The materials—heavily calcified and corroded bronze for the mechanism fragment, and smoother cast bronze for the dodecahedrons—must be clearly distinct and physically realistic despite the watercolor style.",
+    "gen_prompt": "Highly aesthetic watercolor and ink museum illustration. On the left side of a neutral light gray museum display plinth, copy the shape and fine structural details of Fragment A of the Antikythera Mechanism from the first reference image, rendered as heavily calcified, pitted, corroded bronze with g...",
+    "skills": [
+      "attribute_binding",
+      "quantity_counting",
+      "physical_material_consistency",
+      "creative_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_12_7336_historical_artifact_object",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_002.jpg"
+    ]
+  },
+  {
+    "case_number": 13,
+    "category": "Product Retro Device",
+    "prompt": "Generate an image of electronic music pioneer Delia Derbyshire in her typical 1960s BBC Radiophonic Workshop attire, standing and actively patching a pin into the matrix board of an EMS VCS 3 synthesizer. Make sure the wood casing and metal patch pins of the synth are highly detailed and realistic, and her hands are correctly positioned pinching the small pin to insert it.",
+    "gen_prompt": "Photorealistic medium waist-up shot of electronic music pioneer Delia Derbyshire, with her appearance, 1960s mod hairstyle and typical BBC Radiophonic Workshop work attire matching the first reference image. She is standing in a 1960s BBC workshop interior, facing an EMS VCS 3 synthesizer matching t...",
+    "skills": [
+      "anatomy_body_coherence",
+      "physical_material_consistency"
+    ],
+    "ref_count": 2,
+    "dir": "case_13_19546_product_retro_device",
+    "refs": [
+      "ref_01_IMG_002.jpg",
+      "ref_02_IMG_006.jpg"
+    ]
+  },
+  {
+    "case_number": 14,
+    "category": "Science Biology Microscopy",
+    "prompt": "Create an elegant, hand-drawn charcoal and chalk sketch of a human blood smear as seen through a light microscope. In this circular field of view, draw exactly one of each of the standard major types of human white blood cells floating among the red blood cells. Arrange them beautifully to showcase their different nuclear shapes.",
+    "gen_prompt": "Elegant hand-drawn charcoal and chalk sketch matching the style of the second reference image, depicting a human blood smear as seen through a light microscope, with a centered circular field of view. Use cell morphology and relative sizing exactly matching the first reference image, with exactly on...",
+    "skills": [
+      "quantity_counting",
+      "attribute_binding",
+      "spatial_layout",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_14_17325_science_biology_microscopy",
+    "refs": [
+      "ref_01_IMG_003.jpg",
+      "ref_02_IMG_006.jpg"
+    ]
+  },
+  {
+    "case_number": 15,
+    "category": "Vehicle Transport",
+    "prompt": "Create a vintage 1950s travel poster featuring two British engineering marvels: the LNER Class A4 'Mallard' locomotive and an Avro Vulcan bomber. The locomotive must clearly display its historic four-digit running number on the cab, and the bomber should be depicted in its original anti-flash white paint scheme flying above. Ensure the train is in its iconic garter blue color. Add bold, stylized text at the top of the poster saying 'SPEED AND POWER'.",
+    "gen_prompt": "Vintage 1950s British travel poster, lithograph print style. Centered in the top third of the frame, bold stylized 1950s thick sans-serif text rendered in bright red ink spelling out \"SPEED AND POWER\", fully legible with no distortion. In the upper midground, copy the Avro Vulcan bomber from the sec...",
+    "skills": [
+      "spatial_layout",
+      "text_rendering",
+      "attribute_binding",
+      "aesthetic_drawing"
+    ],
+    "ref_count": 2,
+    "dir": "case_15_5753_vehicle_transport",
+    "refs": [
+      "ref_01_IMG_001.jpg",
+      "ref_02_IMG_002.jpg"
+    ]
+  }
+]

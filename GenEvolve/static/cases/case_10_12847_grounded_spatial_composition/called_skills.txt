@@ -1,0 +1,4 @@
+spatial_layout
+aesthetic_drawing
+text_rendering
+physical_material_consistency

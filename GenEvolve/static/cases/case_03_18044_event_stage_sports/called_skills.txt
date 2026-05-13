@@ -1,0 +1,4 @@
+spatial_layout
+text_rendering
+quantity_counting
+physical_material_consistency

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "case_00000",
+    "prompt": "I'd like an artistic illustration of the Atomium in Brussels, but instead of its usual metal, imagine it is constructed entirely of delicate blown glass. Place it half-submerged in a shallow pool of water. Show realistic light refractions through the transparent glass spheres and distorted reflections of the structure on the ripples of the water surface.",
+    "gen_prompt": "Artistic illustration of the Brussels Atomium, using the exact structural design, proportion, and arrangement of spheres and connecting tubes from the first reference image. The entire structure is constructed of delicate clear blown glass with no metal components, half-submerged in a shallow pool of slightly rippling pale blue water, with its lower 4 spheres and bottom connecting tubes fully underwater, anchored firmly to the pool floor for structural stability under gravity. Soft golden hour sunlight from the upper right (3200K warm temperature) shines through the transparent glass spheres, creating bright, swirling caustic refraction patterns projected onto the pool floor and water surface, with visible refraction distortion at the water-glass boundary. The rippling water surface shows a slightly warped, inverted reflection of the upper half of the glass Atomium, matching the light direction. Style is soft watercolor blended with subtle digital line art, muted pastel color palette of pale blues, warm golds, and milky clear glass tones, with gentle fine film grain for a dreamy, delicate feel. Composition is low-angle eye-level shot using rule of thirds, with the Atomium positioned slightly left of center, negative space on the right highlighting the water and refraction patterns, deep focus keeping both the glass structure and all refraction/reflection details sharp.",
+    "category": "grounded_material_physics",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_002.jpg"
+    ]
+  },
+  {
+    "id": "case_00004",
+    "prompt": "Create an image of exactly three Glencairn whisky glasses sitting on a polished dark mahogany bar counter in the foreground. The glasses are made of clear crystal and are half-filled with amber liquid, casting realistic glass caustics onto the glossy wood. In the background, slightly out of focus, there should be exactly two large, aged oak Sherry butts with rusted iron hoops.",
+    "gen_prompt": "Photorealistic image with warm cinematic overhead bar lighting, shallow depth of field at f/1.8. In the sharp foreground (lower 2/3 of the frame): a glossy polished dark mahogany bar counter. Exactly three clear crystal Glencairn whisky glasses matching the first reference image, each half filled with amber whisky, arranged in a loose horizontal triangle: one at left foreground, one at center foreground, one at right foreground, all resting flat on the bar surface. The crystal glasses refract light to cast realistic golden caustic patterns onto the glossy mahogany, with soft subtle reflections of the glasses visible on the wood surface, and soft short shadows under each glass matching the overhead light direction. In the softly blurred background (upper 1/3 of the frame): exactly two large aged oak Sherry butts matching the second reference image, with rusted iron hoops, one positioned at left background and one at right background, with no overlap between the two barrels. Warm golden color grading, realistic textures for crystal, amber liquid, polished mahogany, aged oak, and rusted iron.",
+    "category": "grounded_spatial_composition",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_001.jpg",
+      "IMG_006.jpg"
+    ]
+  },
+  {
+    "id": "case_00039",
+    "prompt": "Create a 1920s Art Deco travel poster featuring the James Webb Space Telescope. The telescope must be hovering at the top of the poster, rendered with striking copper and teal geometric lines. Down in the bottom right corner, draw a retro astronaut holding a glowing green lantern.",
+    "gen_prompt": "Vertical 1920s Art Deco travel poster following the aesthetic, line work, and color styling conventions of the first reference image. Use the core structural shape of the James Webb Space Telescope from the second reference image, stylized with sharp striking copper and teal geometric Art Deco lines, hovering across the top 1/3 of the frame, facing slightly downward toward the viewer, 3x larger in scale than the astronaut. In the bottom right corner of the frame, a 1920s retro-futuristic astronaut in a puffy silver vintage space suit with Art Deco gold trim stands facing slightly upward toward the telescope, holding a glowing bright green lantern that casts soft warm light on his suit. The background is deep inky black space dotted with stylized geometric Art Deco star patterns, with wide empty negative space in the midground to balance the two subjects. The poster has a thin gold Art Deco border, bold clean outlines, flat saturated color blocks, subtle vintage film grain, high contrast, cool teal rim lighting around the telescope, and deep focus keeping all elements sharp.",
+    "category": "grounded_creative_transfer",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_002.jpg",
+      "IMG_006.jpg"
+    ]
+  },
+  {
+    "id": "case_00051",
+    "prompt": "Create an image of Sister Rosetta Tharpe performing at the 1964 Blues and Gospel Train concert at the Chorltonville train station in Manchester. She should be passionately singing while playing her signature white electric guitar. Show her standing on the outdoor platform, wearing the exact heavy winter coat she had on that day, with her left hand gripping the guitar fretboard and her right hand strumming.",
+    "gen_prompt": "Realistic photograph of Sister Rosetta Tharpe performing at the 1964 Blues and Gospel Train concert at Chorltonville train station in Manchester, copy all visual details of her heavy winter coat, signature white electric guitar, and the station platform setting from the first reference image. She is centered in the midground of the frame, standing full-body on the outdoor stone platform, turned 45 degrees towards the viewer with a passionate singing expression, mouth open mid-note. Her left hand grips the guitar fretboard with 5 anatomically correct distinct fingers, her right hand is in a strumming position above the guitar strings with 5 anatomically correct distinct fingers. In the foreground: the rough edge of the stone platform. In the background: disused train tracks to her right, 1960s red brick station building, overcast cool grey British sky, no modern elements present. Natural overcast daylight, sharp focus on Tharpe and her guitar, soft subtle bokeh on the background.",
+    "category": "public_figure_longtail",
+    "prompt_type": "T1",
+    "refs": [
+      "IMG_001.jpg"
+    ]
+  },
+  {
+    "id": "case_00069",
+    "prompt": "Generate an elegant watercolor painting of the famous Shakespeare and Company bookstore facade in Paris. Make sure the iconic rustic green and yellow storefront is accurate, including the exact typographic style of the painted store name above the door. In front of the shop, place a small wooden sandwich board sign that clearly reads 'Poetry Reading Tonight' in neat chalk handwriting. The scene should have a cozy, autumnal atmosphere.",
+    "gen_prompt": "Elegant traditional watercolor painting of the Shakespeare and Company Paris bookstore facade, matching the exact rustic green and yellow storefront colors and official painted store name typography above the door from the first reference image. Small weathered wooden sandwich board sign positioned in the foreground, slightly left of center directly in front of the shop entrance, with neat white chalk handwriting rendered clearly to read \"Poetry Reading Tonight\" on its front face. Cozy autumnal atmosphere: soft diffused golden hour late afternoon light with warm gentle shadows, scattered dry burnt orange and golden yellow fallen oak and maple leaves across the pavement around the sign, soft muted warm color palette, visible watercolor paper texture with subtle paint bleed edges, centered symmetrical composition, deep focus keeping both the facade and sign sharp, soft warm color grading for a inviting, nostalgic feel.",
+    "category": "grounded_text_layout",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_001.jpg"
+    ]
+  },
+  {
+    "id": "case_00041",
+    "prompt": "Create a street scene combining the iconic illuminated marquee of the Chicago Theatre attached to the distinctive red windmill facade of the Moulin Rouge in Paris. Park exactly five vintage blue bicycles in a row directly under the windmill. The Chicago Theatre marquee should retain its classic shape and colors, but change the main vertical illuminated letters to spell out the exact year the Moulin Rouge was founded instead of 'CHICAGO'.",
+    "gen_prompt": "Dusk street scene, centered midground is the Moulin Rouge red windmill facade matching the second reference image. Attached to the upper front of the windmill facade is the classic Chicago Theatre illuminated marquee matching the first reference image, retaining its original curved shape, red and gold trim, and glowing neon style, with the large vertical illuminated letters explicitly spelled out as \"1889\" (instead of CHICAGO) in the same bold bright white neon font as the original marquee letters. Directly under the windmill blades, along the bottom foreground edge of the frame, exactly five vintage blue bicycles arranged in a straight evenly spaced horizontal row: leftmost vintage blue bike, second vintage blue bike immediately to its right, third vintage blue bike at the center of the row, fourth vintage blue bike immediately to the right of center, fifth (rightmost) vintage blue bike, for a total of exactly five bicycles. Warm neon glow from the marquee casts soft light on the red windmill facade and the bicycles, darkening blue sky in the background, cinematic realistic photography, sharp focus, vibrant colors.",
+    "category": "architecture_landmark",
+    "prompt_type": "T1",
+    "refs": [
+      "IMG_001.jpg",
+      "IMG_002.jpg"
+    ]
+  },
+  {
+    "id": "case_00087",
+    "prompt": "Create a moody, neon-drenched cyberpunk vision of Kisho Kurokawa's Nakagin Capsule Tower. The distinct stacked-box architecture and circular windows should be clearly recognizable, but the building is now overgrown with massive, glowing amethyst crystals. The scene is set during a heavy downpour at night, illuminated by harsh pink and blue neon lights reflecting off the wet concrete and crystals. Shot with a wide-angle lens to capture the imposing scale, using a cinematic teal and orange color grade.",
+    "gen_prompt": "Moody neon-drenched cyberpunk scene of Kisho Kurokawa's Nakagin Capsule Tower, using the first reference image for the building's distinct stacked capsule architecture and circular windows, with massive glowing amethyst clusters (using the second reference image for crystal form and purple glow effect) growing out of gaps between the capsules, anchored securely to the concrete structure. The scene is set during heavy night downpour, illuminated by harsh pink and blue neon lights positioned at street level and on adjacent buildings, plus soft purple internal glow from the amethyst crystals. Shot with a 16mm wide-angle lens from a low angle looking up to emphasize the building's imposing scale, with deep focus keeping all details sharp from the foreground rain-slicked concrete street to the top of the tower. Color graded with cinematic teal and orange tones, high contrast, and subtle 35mm film grain. Rain droplets bead on both the rough concrete capsule surfaces and the faceted amethyst faces, with bright, crisp reflections of the neon lights and glowing amethyst mirrored on the wet street puddles and wet building surfaces. Volumetric light shafts cut through the falling rain and light mist, casting soft, diffused shadows that match the direction of the neon light sources. Symmetrical composition centered on the tower, with leading lines from the street curbs converging on the building to draw the eye to the overgrown crystal-covered facade.",
+    "category": "grounded_aesthetic_lighting",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_002.jpg",
+      "IMG_005.jpg"
+    ]
+  },
+  {
+    "id": "case_00122",
+    "prompt": "Draw a whimsical watercolor children's book illustration featuring exactly 5 pangolins sitting in a circle around a glowing purple crystal. Next to the crystal, there should be a small wooden sign with the text 'SCALY FRIENDS' written clearly on it.",
+    "gen_prompt": "Whimsical watercolor children's book illustration, matching the cute soft watercolor pangolin style from the first reference image and the whimsical watercolor object/scene style from the second reference image. Exactly 5 pangolins total, each with slight unique minor variations (one has a tiny daisy behind its ear, one is holding a small acorn, one has a lighter scale tone, one is curled slightly tighter, one is tilting its head) arranged in an even circle facing inwards towards the center: first pangolin at the top of the circle, second at top-right, third at bottom-right, fourth at bottom-left, fifth at top-left, all sitting comfortably on soft pastel green grass. Centered in the middle of the circle (midground, center of frame) is a glowing translucent purple crystal that casts soft violet light on the surrounding pangolins. 6 inches to the right of the purple crystal, at the same height, is a small weathered light brown wooden sign, with the text \"SCALY FRIENDS\" clearly rendered in bold rounded child-friendly dark brown sans-serif font, centered on the sign, slightly distressed to match the wood texture. Soft blurred pastel blue and yellow sky in the background, warm soft diffused daylight, no harsh shadows, cozy friendly magical atmosphere.",
+    "category": "grounded_quantity_scene",
+    "prompt_type": "T3",
+    "refs": [
+      "IMG_001.jpg",
+      "IMG_008.jpg"
+    ]
+  },
+  {
+    "id": "case_00107",
+    "prompt": "Create a historically accurate image of Laika, the Soviet space dog, strapped into her seat inside the Sputnik 2 capsule. Show the specific restraint harness she wore and the internal layout of the capsule around her. The camera should be positioned looking at her from slightly above, showing her full body safely secured within the tight, instrument-filled space.",
+    "gen_prompt": "Historically accurate photorealistic image of Laika the Soviet space dog, based on the first reference image. Camera positioned slightly above eye level relative to Laika, capturing her full body. Centered in the midground of the frame: Laika, a small light-furred stray mongrel, strapped securely into her unpainted aluminum seat, facing slightly toward the camera with her head held forward, ears perked in a calm expression, with anatomically correct canine proportions, four legs gently restrained by the harness, paws resting flat on the seat surface. Foreground: lower edge of the cabin's aluminum wall, with two small black analog instrument dials partially visible at the bottom left and right corners of the frame, partially occluding the edge of the seat. Background: tight, instrument-filled conical interior of the 1957 Sputnik 2 capsule, with brushed aluminum walls lined with black plastic-cased telemetry sensors, rubber-coated black wiring, and metal oxygen generation canisters mounted 6-12 inches around the seat on all sides, the cabin tapering upward toward the rear. The olive drab canvas harness with metal buckles is tightly secured around Laika's torso and upper legs, fastened firmly to the seat frame behind her. All hardware matches 1950s Soviet space equipment specifications, no floating objects, all components are securely mounted to the cabin structure. Soft cool white overhead cabin lighting casts soft, directionally consistent shadows from Laika and the instruments onto the seat and lower cabin walls, with subtle matte reflections on the aluminum surfaces.",
+    "category": "vehicle_transport",
+    "prompt_type": "T1",
+    "refs": [
+      "IMG_001.jpg"
+    ]
+  }
+]

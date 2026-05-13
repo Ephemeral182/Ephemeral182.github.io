@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenEvolve: Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo"><div class="logo-mark">G</div><span class="logo-text">GenEvolve</span></a>
+        <div class="nav-links">
+            <a href="#abstract">Abstract</a>
+            <a href="#method">Method</a>
+            <a href="#data">Data</a>
+            <a href="#results">Results</a>
+            <a href="#trajectory-demo">Trajectory</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+        <div class="nav-actions">
+            <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="btn-nav"><i class="fas fa-file-pdf"></i> Paper</a>
+            <a href="https://github.com/Ephemeral182/GenEvolve" target="_blank" class="btn-nav btn-nav-dark"><i class="fab fa-github"></i> Code</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+    <div class="hero-bg">
+        <div class="hero-gradient-orb orb-1"></div>
+        <div class="hero-gradient-orb orb-2"></div>
+        <div class="hero-gradient-orb orb-3"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">GenEvolve</span>
+            </h1>
+            <p class="hero-subtitle">Self-Evolving Image Generation Agents via<br>Tool-Orchestrated Visual Experience Distillation</p>
+            
+            <div class="hero-authors">
+                <div class="authors-text">
+                    <a href="https://ephemeral182.github.io/" target="_blank" class="author-name">Sixiang Chen</a><sup>1</sup>,
+                    <a href="https://alexlai2860.github.io/" target="_blank" class="author-name">Zhaohu Xing</a><sup>1</sup>,
+                    <a href="https://owen718.github.io/" target="_blank" class="author-name">Tian Ye</a><sup>1</sup>,
+                    <a href="https://scholar.google.com/citations?user=rYB-IBwAAAAJ&hl=zh-CN" target="_blank" class="author-name">Xinyu Geng</a><sup>2</sup>,
+                    <a href="https://lyl1015.github.io/" target="_blank" class="author-name">Yunlong Lin</a><sup>3</sup>,
+                    <a href="https://alexlai2860.github.io/" target="_blank" class="author-name">Jianyu Lai</a><sup>1</sup>,
+                    <a href="https://xuanhuahe.github.io/" target="_blank" class="author-name">Xuanhua He</a><sup>2</sup>,
+                    <a href="https://fuxiangzhai.github.io/" target="_blank" class="author-name">Fuxiang Zhai</a><sup>1</sup>,
+                    <a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN" target="_blank" class="author-name">Jialin Gao</a><sup>4</sup>,
+                    <a href="https://sites.google.com/site/indexlzhu/home" target="_blank" class="author-name">Lei Zhu</a><sup>1†</sup>
+                </div>
+                <div class="affiliations-text">
+                    <span class="affil"><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span>
+                    <span class="affil"><sup>2</sup>The Hong Kong University of Science and Technology</span>
+                    <span class="affil"><sup>3</sup>The Chinese University of Hong Kong</span>
+                    <span class="affil"><sup>4</sup>National University of Singapore</span>
+                    <span class="affil note"><sup>†</sup>Corresponding Author</span>
+                </div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Paper</a>
+                <a href="https://github.com/Ephemeral182/GenEvolve" target="_blank" class="btn btn-dark"><i class="fab fa-github"></i> Code</a>
+                <a href="#gallery" class="btn btn-ghost"><i class="fas fa-images"></i> Gallery</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="teaser-wrapper">
+                <img src="static/images/teaser_genevolve.jpg" alt="GenEvolve Generated Results" class="teaser-img">
+                <div class="teaser-caption">
+                    <span class="caption-icon">🎨</span> Representative images generated by <strong>GenEvolve</strong> agents with Nano Banana Pro &amp; Qwen-Image-Edit — spanning architecture, nature, creative transfer, street scenes, scientific illustration, and more.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Abstract -->
+<section class="section" id="abstract">
+    <div class="container container-narrow">
+        <div class="section-label">Abstract</div>
+        <div class="abstract-block">
+            <p>Open-ended image generation is no longer a simple prompt-to-image problem. High-quality generation often requires an agent to combine a model's internal generative ability with external resources. As requests become more diverse and demanding, we aim to develop a <strong>general image-generation agent</strong> that can self-evolve through trajectories and use tools more effectively across varied generation challenges.</p>
+            <p>To this end, we propose <span class="brand-text">GenEvolve</span>, a self-evolving framework based on <em>Tool-Orchestrated Visual Experience Distillation</em>. In GenEvolve, each generation attempt is modeled as a tool-orchestrated trajectory, where the agent gathers evidence, selects references, invokes generation skills, and composes them into a prompt-reference program. Unlike existing methods that rely on image-level scalar rewards, GenEvolve compares multiple trajectories and abstracts best-worst differences into <strong>structured visual experience</strong>, provided only to a privileged teacher branch. Inspired by on-policy self-distillation, <em>Visual Experience Distillation</em> provides dense token-level supervision for better tool orchestration.</p>
+            <p>We further construct <strong>GenEvolve-Data</strong> and <strong>GenEvolve-Bench</strong>. Experiments show substantial gains over strong baselines, achieving state-of-the-art performance among current image-generation frameworks.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Highlights -->
+<section class="section section-gray" id="highlights">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Contributions</div><h2 class="section-title">Key Highlights</h2></div>
+        <div class="cards-grid cards-4">
+            <div class="card card-hover"><div class="card-icon card-icon-purple"><i class="fas fa-project-diagram"></i></div><h3>Tool-Orchestrated Trajectories</h3><p>Models generation as multi-turn visual trajectories with external search, visual references, and callable generation knowledge.</p></div>
+            <div class="card card-hover"><div class="card-icon card-icon-blue"><i class="fas fa-brain"></i></div><h3>Visual Experience Distillation</h3><p>Converts best-worst trajectory differences into structured experience, enabling dense token-level supervision via privileged teacher distillation.</p></div>
+            <div class="card card-hover"><div class="card-icon card-icon-green"><i class="fas fa-sync-alt"></i></div><h3>Self-Evolving Loop</h3><p>GRPO + VED form a closed loop: stronger policies → better trajectories → richer experience → future improvements.</p></div>
+            <div class="card card-hover"><div class="card-icon card-icon-amber"><i class="fas fa-flask"></i></div><h3>GenEvolve-Data & Bench</h3><p>Comprehensive trajectory dataset and diagnostic benchmark spanning Knowledge-Anchored and Quality-Anchored challenges.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- Method -->
+<section class="section" id="method">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Methodology</div><h2 class="section-title">Framework Overview</h2></div>
+        <div class="figure-block"><img src="static/images/overview.png" alt="GenEvolve Framework" class="figure-full"><p class="figure-cap"><strong>Overview of GenEvolve.</strong> The student agent orchestrates search, references, and generation knowledge to produce a prompt-reference program. Multiple trajectories are judged; best-worst differences form visual experience injected into the teacher. GRPO + Visual Experience Self-Distillation closes the self-evolving loop.</p></div>
+        <div class="method-pipeline">
+            <div class="pipeline-step"><div class="pipe-num">1</div><div class="pipe-body"><h4>Tool-Orchestrated Trajectories</h4><p>The agent samples trajectories with three tool families: <code>search(q)</code> for textual evidence, <code>image_search(q)</code> for visual references, and <code>query_knowledge(skill)</code> for callable generation skills (text rendering, layout, anatomy, aesthetics, material, counting, etc.)</p></div></div>
+            <div class="pipeline-step"><div class="pipe-num">2</div><div class="pipe-body"><h4>Prompt-Reference Program Synthesis</h4><p>The trajectory outputs z=(g,R) — a targeted instruction with ordinal references, binding constraints from the user request, retrieved facts, selected references, and activated generation knowledge.</p></div></div>
+            <div class="pipeline-step"><div class="pipe-num">3</div><div class="pipe-body"><h4>Visual Experience Extraction</h4><p>Best-worst trajectory pairs are summarized into five structured experience slots: search strategy, knowledge activation, reference selection, prompt construction, and failure avoidance.</p></div></div>
+            <div class="pipeline-step"><div class="pipe-num">4</div><div class="pipe-body"><h4>Visual Experience Self-Distillation</h4><p>The teacher receives experience-patched context; student sees only normal context. Importance-weighted reverse-KL distillation provides dense token-level guidance without changing inference.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Data Section -->
+<section class="section section-gray" id="data">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Dataset</div><h2 class="section-title">GenEvolve-Data & GenEvolve-Bench</h2><p class="section-desc">A complete trajectory-level dataset for training and evaluating image-generation agents — from diverse prompts through tool-orchestrated teacher trajectories to filtered GT images.</p></div>
+        <div class="figure-block"><img src="static/images/datapipeline.png" alt="Data Pipeline" class="figure-full"><p class="figure-cap"><strong>Data construction pipeline.</strong> Diverse prompts → tool-orchestrated teacher trajectories → VLM audit → GT image rendering & filtering → splits for SFT cold-start, self-evolution, and held-out evaluation.</p></div>
+        <div class="data-pipeline-cards">
+            <div class="dp-card"><div class="dp-icon">📋</div><h4>Prompt Pool</h4><p>20K structured recipes spanning Knowledge-Anchored (entities, events, places) and Quality-Anchored (text, layout, counting, anatomy, material, aesthetics) generation challenges.</p></div>
+            <div class="dp-card"><div class="dp-icon">🔄</div><h4>Teacher Trajectories</h4><p>Each prompt is solved through a real multi-turn tool loop by strong teacher models (Seed2.0, Gemini 3 Pro), recording search queries, selected references, activated skills, and final programs.</p></div>
+            <div class="dp-card"><div class="dp-icon">🔍</div><h4>Filtering & Audit</h4><p>Programmatic checks + VLM judge remove incomplete tool loops, invalid reference selections, and underspecified programs. Only high-quality trajectories survive.</p></div>
+            <div class="dp-card"><div class="dp-icon">🎯</div><h4>GT Images & Splits</h4><p>Teacher programs are rendered into GT images by Nano Banana Pro, filtered for quality, then split into SFT (trajectories), self-evolution (image feedback), and GenEvolve-Bench (held-out eval).</p></div>
+        </div>
+
+        <div class="data-examples-header"><h3>📦 Data Examples</h3><p>Each entry contains a user request, full tool trajectory, selected references, and GT image.</p></div>
+        <div class="data-examples-grid" id="data-examples-grid"></div>
+    </div>
+</section>
+
+<!-- Trajectory Demo -->
+<section class="section" id="trajectory-demo">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Agent Workflow</div><h2 class="section-title">Trajectory Visualization</h2><p class="section-desc">See how GenEvolve orchestrates tools step-by-step: from user request through search, reference selection, skill activation, to the final generated image.</p></div>
+        <div class="traj-selector">
+            <button class="traj-tab active" data-case="case_0003">🏙️ Nakagin Tower Neon-Noir</button>
+            <button class="traj-tab" data-case="case_0023">🦅 Cyberpunk Shoebill</button>
+            <button class="traj-tab" data-case="case_0071">🏮 Shinsekai Osaka Night</button>
+        </div>
+        <div class="traj-viewer" id="traj-viewer"></div>
+    </div>
+</section>
+
+<!-- Results -->
+<section class="section section-gray" id="results">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Experiments</div><h2 class="section-title">Results</h2></div>
+        <div class="table-card"><div class="table-title"><i class="fas fa-chart-bar"></i> Main Comparison on GenEvolve-Bench</div><div class="table-scroll"><table class="data-table"><thead><tr><th rowspan="2" class="th-left">Method</th><th rowspan="2">Generator</th><th colspan="4" class="th-group-purple">Judge Dimensions</th><th colspan="3" class="th-group-blue">Benchmark Overall</th></tr><tr><th>Faith.</th><th>Vis.</th><th>Text</th><th>Aesth.</th><th>KScore</th><th>Know.</th><th>Qual.</th></tr></thead><tbody><tr class="group-row"><td colspan="9">Direct Generator Baselines</td></tr>
+<tr><td class="td-left">Lumina-Image 2.0</td><td>Lumina-Image 2.0</td><td>0.102</td><td>0.000</td><td>0.391</td><td>0.266</td><td>0.193</td><td>0.189</td><td>0.196</td></tr>
+<tr><td class="td-left">BAGEL</td><td>BAGEL</td><td>0.133</td><td>0.000</td><td>0.430</td><td>0.359</td><td>0.221</td><td>0.202</td><td>0.235</td></tr>
+<tr><td class="td-left">SD-3.5-Large</td><td>SD-3.5</td><td>0.148</td><td>0.000</td><td>0.438</td><td>0.406</td><td>0.231</td><td>0.215</td><td>0.242</td></tr>
+<tr><td class="td-left">FLUX.1-dev</td><td>FLUX.1</td><td>0.109</td><td>0.000</td><td>0.430</td><td>0.523</td><td>0.235</td><td>0.211</td><td>0.253</td></tr>
+<tr><td class="td-left">FLUX.2 Klein 4B</td><td>FLUX.2</td><td>0.297</td><td>0.016</td><td>0.422</td><td>0.602</td><td>0.265</td><td>0.256</td><td>0.272</td></tr>
+<tr><td class="td-left">Z-Image-Turbo</td><td>Z-Image</td><td>0.313</td><td>0.016</td><td>0.453</td><td>0.602</td><td>0.279</td><td>0.269</td><td>0.287</td></tr>
+<tr><td class="td-left">FLUX.2 Klein 9B</td><td>FLUX.2</td><td>0.359</td><td>0.016</td><td>0.430</td><td>0.664</td><td>0.281</td><td>0.282</td><td>0.280</td></tr>
+<tr><td class="td-left">Z-Image</td><td>Z-Image</td><td>0.414</td><td>0.008</td><td>0.477</td><td>0.500</td><td>0.285</td><td>0.276</td><td>0.292</td></tr>
+<tr><td class="td-left">Qwen-Image</td><td>Qwen-Image</td><td>0.344</td><td>0.086</td><td>0.453</td><td>0.695</td><td>0.320</td><td>0.302</td><td>0.332</td></tr>
+<tr><td class="td-left">Nano Banana Pro</td><td>Nano Banana Pro</td><td>0.727</td><td>0.250</td><td class="cell-best">0.570</td><td class="cell-second">0.883</td><td>0.489</td><td>0.498</td><td>0.482</td></tr>
+<tr class="group-row"><td colspan="9">Agentic Image-Generation Workflows</td></tr>
+<tr><td class="td-left">Gen-Searcher 8B</td><td>Qwen-Image-Edit</td><td>0.427</td><td>0.154</td><td>0.492</td><td>0.634</td><td>0.365</td><td>0.384</td><td>0.346</td></tr>
+<tr><td class="td-left">Gen-Searcher 8B</td><td>Nano Banana Pro</td><td class="cell-second">0.742</td><td class="cell-second">0.320</td><td class="cell-best">0.570</td><td>0.875</td><td class="cell-second">0.518</td><td class="cell-second">0.504</td><td class="cell-second">0.528</td></tr>
+<tr class="row-ours-light"><td class="td-left">GenEvolve (Ours)</td><td>Qwen-Image-Edit</td><td>0.473</td><td>0.188</td><td>0.508</td><td>0.603</td><td>0.386</td><td>0.407</td><td>0.370</td></tr>
+<tr class="row-ours"><td class="td-left">GenEvolve (Ours)</td><td>Nano Banana Pro</td><td class="cell-best">0.865</td><td class="cell-best">0.373</td><td>0.564</td><td class="cell-best">0.889</td><td class="cell-best">0.541</td><td class="cell-best">0.507</td><td class="cell-best">0.566</td></tr></tbody></table></div></div>
+
+        <div class="table-card">
+            <div class="table-title"><i class="fas fa-globe"></i> External Evaluation on WISE Benchmark</div>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead><tr><th class="th-left">Model</th><th>Cultural</th><th>Time</th><th>Space</th><th>Biology</th><th>Physics</th><th>Chemistry</th><th>Overall</th></tr></thead>
+                    <tbody>
+                        <tr class="group-row"><td colspan="8">Direct Generator Baselines</td></tr>
+                        <tr><td class="td-left">Emu3</td><td>0.34</td><td>0.45</td><td>0.48</td><td>0.41</td><td>0.45</td><td>0.27</td><td>0.39</td></tr>
+                        <tr><td class="td-left">SD-3.5-Large</td><td>0.44</td><td>0.50</td><td>0.58</td><td>0.44</td><td>0.52</td><td>0.31</td><td>0.46</td></tr>
+                        <tr><td class="td-left">FLUX.1-dev</td><td>0.48</td><td>0.58</td><td>0.62</td><td>0.42</td><td>0.51</td><td>0.35</td><td>0.50</td></tr>
+                        <tr><td class="td-left">Hunyuan-Image 3.0</td><td>0.58</td><td>0.57</td><td>0.70</td><td>0.56</td><td>0.63</td><td>0.31</td><td>0.57</td></tr>
+                        <tr><td class="td-left">Qwen-Image</td><td>0.62</td><td>0.63</td><td>0.77</td><td>0.57</td><td>0.75</td><td>0.40</td><td>0.62</td></tr>
+                        <tr><td class="td-left">LongCat-Image</td><td>0.66</td><td>0.61</td><td>0.72</td><td>0.66</td><td>0.72</td><td>0.49</td><td>0.65</td></tr>
+                        <tr><td class="td-left">DeepGen1.0</td><td>0.72</td><td class="cell-best">0.81</td><td>0.70</td><td>0.67</td><td class="cell-second">0.82</td><td>0.66</td><td>0.73</td></tr>
+                        <tr><td class="td-left">GPT-4o</td><td>0.81</td><td>0.71</td><td class="cell-best">0.89</td><td class="cell-best">0.83</td><td>0.79</td><td>0.74</td><td class="cell-second">0.80</td></tr>
+                        <tr class="group-row"><td colspan="8">Agentic Image-Generation Workflows</td></tr>
+                        <tr><td class="td-left">GenAgent</td><td>0.78</td><td>0.67</td><td>0.78</td><td>0.72</td><td>0.77</td><td>0.55</td><td>0.72</td></tr>
+                        <tr><td class="td-left">Gen-Searcher-8B + Qwen-Image</td><td>0.80</td><td>0.71</td><td>0.82</td><td>0.76</td><td>0.74</td><td class="cell-second">0.75</td><td>0.77</td></tr>
+                        <tr><td class="td-left">Mind-Brush</td><td class="cell-second">0.83</td><td>0.69</td><td>0.84</td><td>0.71</td><td class="cell-best">0.85</td><td>0.68</td><td>0.78</td></tr>
+                        <tr class="row-ours"><td class="td-left">GenEvolve (Ours)</td><td class="cell-best">0.84</td><td class="cell-second">0.74</td><td class="cell-second">0.87</td><td class="cell-best">0.83</td><td>0.81</td><td class="cell-best">0.83</td><td class="cell-best">0.82</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="figure-block"><img src="static/images/output.jpg" alt="Visual Comparison" class="figure-full"><p class="figure-cap"><strong>Visual comparison on GenEvolve-Bench.</strong> <span style="color:#e67e22;font-weight:600">Orange</span> = external knowledge requirements. <span style="color:#3498db;font-weight:600">Blue</span> = internal generation-knowledge requirements.</p></div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+    <div class="container">
+        <div class="section-header-center"><div class="section-label">Showcase</div><h2 class="section-title">Generation Gallery</h2><p class="section-desc">Click any card to view references, generated program, and full details.</p></div>
+        <div class="gallery-filters" id="gallery-filters"><button class="filter-pill active" data-filter="all">All</button></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+</section>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modal-backdrop"><div class="modal" id="modal"><button class="modal-x" id="modal-close">&times;</button><div class="modal-inner" id="modal-body"></div></div></div>
+
+<!-- BibTeX -->
+<section class="section section-gray" id="bibtex">
+    <div class="container container-narrow">
+        <div class="section-header-center"><div class="section-label">Citation</div><h2 class="section-title">BibTeX</h2></div>
+        <div class="code-block"><button class="code-copy" id="copy-bibtex"><i class="fas fa-copy"></i> Copy</button>
+<pre><code>@article{chen2026genevolve,
+  title   = {GenEvolve: Self-Evolving Image Generation Agents via 
+             Tool-Orchestrated Visual Experience Distillation},
+  author  = {Chen, Sixiang and Xing, Zhaohu and Ye, Tian and Geng, Xinyu 
+             and Lin, Yunlong and Lai, Jianyu and He, Xuanhua and Zhai, Fuxiang 
+             and Gao, Jialin and Zhu, Lei},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}</code></pre></div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer"><div class="container"><div class="footer-inner"><div class="footer-brand"><div class="logo-mark sm">G</div><span>GenEvolve</span></div><div class="footer-links"><a href="https://arxiv.org/abs/XXXX.XXXXX"><i class="fas fa-file-pdf"></i> arXiv</a><a href="https://github.com/Ephemeral182/GenEvolve"><i class="fab fa-github"></i> GitHub</a></div></div></div></footer>
+
+<script src="static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+quantity_counting
+spatial_layout
+anatomy_body_coherence
+physical_material_consistency

@@ -1,0 +1,3 @@
+anatomy_body_coherence
+physical_material_consistency
+aesthetic_drawing

@@ -1,0 +1,4 @@
+spatial_layout
+attribute_binding
+physical_material_consistency
+aesthetic_drawing

@@ -1,0 +1,110 @@
+{
+  "case_id": "case_0023",
+  "user_prompt": "Draw a cyberpunk comic book illustration of a Shoebill Stork sitting at a neon-lit diner counter. The bird should have its characteristic massive, clog-shaped beak and intense stare. It needs to be wearing a bright yellow rain jacket and holding a red coffee mug in one of its wings. Adapt its anatomy naturally to this semi-humanoid pose.",
+  "gen_prompt": "Cyberpunk comic book illustration, medium waist-up shot following rule of thirds with the subject at the left intersection point. Copy the shoebill stork's characteristic massive clog-shaped beak and intense forward stare from the first reference image. Adapt the stork's anatomy naturally to a semi-humanoid seated pose at the neon-lit diner counter copied from the second reference image: the stork wears a bright yellow waterproof rain jacket, sits on a diner stool with its left wing resting flat on the rain-slicked counter surface, its right wing curled securely around a glossy red ceramic coffee mug. Lighting: neon pink, electric blue, and purple rim lights from overhead diner signs cast vibrant reflections on the wet counter and stork's feathers, warm golden glow emanates from the coffee mug, high contrast bold black ink outlines with vibrant saturated colors, subtle retro comic film grain, shallow depth of field blurring the neon-lit diner background slightly to emphasize the stork subject.",
+  "steps": [
+    {
+      "type": "think",
+      "content": "Got it, let's tackle this. First, I need to get visual references for the key elements here. First, what does a shoebill stork look like, especially its beak and stare? Then, cyberpunk neon diner counter? Wait, also the shoebill in a humanoid pose? Wait no, first let's do an image search for shoebill stork to get the correct anatomy, beak shape, stare. Then maybe another image search for cyberpunk neon diner counter comic book style? Wait also, wait the user wants cyberpunk comic book illustration, so maybe first image search for shoebill stork reference, then another for cyberpunk diner comic style? Wait also, do I need any skill queries? Let's see: there's anatomy_body_coherence needed because we're adapting the shoebill's anatomy to a humanoid pose holding a mug. Also aesthetic_drawing for the cyberpunk comic style, lighting (neon). Also attribute_binding: the yellow rain jacket, red coffee mug, neon diner. Wait first, let's start with image search for shoebill stork to get the correct visual reference for its features.\nWait first tool call: image_search for \"shoebill stork close up characteristic beak intense stare\" to get the reference for the bird's appearance. Yeah that makes sense first.",
+      "action": "image_search({\"query\": \"shoebill stork close up characteristic beak intense stare\"})"
+    },
+    {
+      "type": "search_result",
+      "query": "shoebill stork close up characteristic beak intense stare",
+      "results": [
+        {
+          "id": "IMG_001",
+          "title": "Shoebill Stork Close Up with Intense Stare Stock Illustration -  Illustration of"
+        },
+        {
+          "id": "IMG_002",
+          "title": "Close Up of Shoebill Stork Head with Large Beak in African Wetland Habitat  for "
+        },
+        {
+          "id": "IMG_003",
+          "title": "Shoebill Stork: Bird Named For Its Beak Shape | PeckPerk"
+        },
+        {
+          "id": "IMG_004",
+          "title": "The Shoebill has the most intense stare of all birds! : r/interestingasfuck"
+        },
+        {
+          "id": "IMG_005",
+          "title": "Shoebill Stork Animal Facts - Balaeniceps rex - A-Z Animals"
+        }
+      ]
+    },
+    {
+      "type": "think",
+      "content": "Great, I have a good reference for the shoebill stork (IMG_001 is perfect, it has the intense stare and the correct clog-shaped beak). Now I need a reference for the cyberpunk neon-lit diner counter comic book style, right? That's the other key visual element. Let me do an image search for that. Also, later I might need to query some skills, but first get the second reference.",
+      "action": "image_search({\"query\": \"cyberpunk comic book illustration neon lit diner counter\"})"
+    },
+    {
+      "type": "search_result",
+      "query": "cyberpunk comic book illustration neon lit diner counter",
+      "results": [
+        {
+          "id": "IMG_006",
+          "title": "Cyberpunk Noodle Bar: People Eating in Neon Light Stock Illustration -  Illustra"
+        },
+        {
+          "id": "IMG_007",
+          "title": "Cyberpunk Night City Canvas Art: Neon Lights, Skyscraper Bar - Etsy"
+        },
+        {
+          "id": "IMG_008",
+          "title": "Cyberpunk Diner Night Scene Neon Lights and Futuristic Tech Stock Photo -  Image"
+        },
+        {
+          "id": "IMG_009",
+          "title": "Cyberpunk Kitchen Grungy Neon Diner Stock Illustration - Illustration of  kitche"
+        },
+        {
+          "id": "IMG_010",
+          "title": "Cyberpunk Neon City Poster Coffee Shop Futuristic Print Cyber Punk Wall Art  Syn"
+        }
+      ]
+    },
+    {
+      "type": "think",
+      "content": "Okay, now I have the two main reference images: IMG_001 for the shoebill stork, IMG_006 for the cyberpunk neon diner counter. Now I need to get the right skills. First, anatomy_body_coherence, because we need to adapt the shoebill's anatomy to a semi-humanoid pose holding a mug, so that the body parts make sense, no weird limbs. Then, aesthetic_drawing, to get the cyberpunk comic book style, neon lighting, color grading right. Also, attribute_binding, to make sure the bright yellow rain jacket, red coffee mug, and the shoebill's beak/stare are correctly assigned without leakage. Wait, let's start with anatomy_body_coherence first, that's critical for the pose adaptation.",
+      "action": "query_knowledge({\"skill_name\": \"anatomy_body_coherence\"})"
+    },
+    {
+      "type": "skill_result",
+      "skill_name": "anatomy_body_coherence",
+      "key_points": [
+        "Pose Specification (Avoid Ambiguity)",
+        "Hand & Finger Control",
+        "Face & Expression Coherence",
+        "Body Proportion Anchoring",
+        "Strategic Framing to Manage Difficulty",
+        "Animal & Creature Anatomy"
+      ],
+      "guidance_preview": "When this skill is active, rewrite the user's prompt by applying the following principles to maximize anatomical correctness:\n\n1. **Pose Specification (Avoid Ambiguity)**\n- Never leave the pose undefined. Specify exactly what each limb is doing.\n- Use known, stable poses: \"arms crossed over chest,\" "
+    },
+    {
+      "type": "think",
+      "content": "Great, I have the anatomy guidance. Now I need the aesthetic drawing guidance for the cyberpunk comic style, lighting, etc. Let's query that next.",
+      "action": "query_knowledge({\"skill_name\": \"aesthetic_drawing\"})"
+    },
+    {
+      "type": "skill_result",
+      "skill_name": "aesthetic_drawing",
+      "key_points": [
+        "Lighting Design (Illumination Control)",
+        "Camera & Lens Technique (Optical Control)",
+        "Color Palette & Grading (Chromatic Control)",
+        "Composition Framework (Visual Structure)",
+        "Atmosphere & Mood (Emotional Tone)"
+      ],
+      "guidance_preview": "When this skill is active, rewrite the user's prompt by integrating the following five technical visual dimensions:\n\n1. **Lighting Design (Illumination Control)**\n- Specify the type, direction, intensity, and color temperature of light sources.\n- Examples: \"a single warm spotlight from the upper lef"
+    },
+    {
+      "type": "think",
+      "content": "Perfect, now I have all the guidance I need. Let's put this all together. First, the reference images: I'll pick IMG_001 (shoebill stork, correct beak and intense stare) and IMG_006 (cyberpunk neon diner counter, comic style). Now the gen_prompt needs to include:\n1. Reference the first image for the shoebill's beak and intense stare, second for the cyberpunk diner counter.\n2. Apply anatomy guidance: specify the pose: sitting on a stool at the counter, one wing (right wing) curled around a red coffee mug, the other wing resting on the counter, natural stork wing structure adapted to the pose, no extra limbs, the massive clog-shaped beak is clearly defined, intense forward stare as in the first reference.\n3. Apply aesthetic guidance: cyberpunk comic book illustration style, neon blue, pink, and purple lighting from the diner signs casting rim light on the stork, warm orange glow from the coffee mug, medium shot (waist up) of the stork, rule of thirds composition with the stork at the left intersection, rain-slicked counter with neon reflections, high contrast, bold black ink outlines, vibrant saturated colors, film grain for retro comic feel.\nWait also make sure to mention the bright yellow rain jacket on the stork. Let's structure it properly. Then the reference_images list sorted by img_id: IMG_001 first, then IMG_006. Let's check the requirements: gen_prompt uses ordinal terms, reference_images sorted by img_id. Yep. Alright, let's write the final answer.",
+      "action": "FINAL_ANSWER"
+    }
+  ],
+  "num_messages": 11
+}

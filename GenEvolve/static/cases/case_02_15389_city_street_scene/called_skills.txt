@@ -1,0 +1,5 @@
+quantity_counting
+attribute_binding
+text_rendering
+spatial_layout
+aesthetic_drawing

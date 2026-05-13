@@ -1,0 +1,4 @@
+spatial_layout
+text_rendering
+attribute_binding
+aesthetic_drawing

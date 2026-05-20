@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GenEvolve · Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</title>
     <meta name="description" content="GenEvolve trains an image-generation agent that orchestrates external search, visual references, and internal generation knowledge into a prompt-reference program, and self-evolves through tool-orchestrated visual experience distillation.">
-    <link rel="canonical" href="https://meigen-ai.github.io/GenEvolve/">
+    <link rel="canonical" href="https://ephemeral182.github.io/GenEvolve/">
     <meta property="og:title" content="GenEvolve: Self-Evolving Image Generation Agents">
     <meta property="og:description" content="A tool-using image-generation agent that retrieves evidence, selects references, and self-evolves via Visual Experience Distillation. Stronger generator-transferable orchestration than direct generators.">
-    <meta property="og:url" content="https://meigen-ai.github.io/GenEvolve/">
-    <meta property="og:image" content="https://meigen-ai.github.io/GenEvolve/static/images/teaser_genevolve.jpg">
+    <meta property="og:url" content="https://ephemeral182.github.io/GenEvolve/">
+    <meta property="og:image" content="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="GenEvolve: Self-Evolving Image Generation Agents">
     <meta name="twitter:description" content="Tool-orchestrated visual experience distillation for image-generation agents.">
-    <meta name="twitter:image" content="https://meigen-ai.github.io/GenEvolve/static/images/teaser_genevolve.jpg">
+    <meta name="twitter:image" content="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Pinyon+Script:wght@400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -62,19 +62,18 @@
                     <a href="https://alexlai2860.github.io/" target="_blank" class="author-name">Zhaohu Xing</a><sup>1</sup>,
                     <a href="https://owen718.github.io/" target="_blank" class="author-name">Tian Ye</a><sup>1</sup>,
                     <a href="https://scholar.google.com/citations?user=rYB-IBwAAAAJ&hl=zh-CN" target="_blank" class="author-name">Xinyu Geng</a><sup>3</sup>,
-                    <a href="https://lyl1015.github.io/" target="_blank" class="author-name">Yunlong Lin</a><sup>4</sup>,
+                    <a href="https://lyl1015.github.io/" target="_blank" class="author-name">Yunlong Lin</a>,
                     <a href="https://alexlai2860.github.io/" target="_blank" class="author-name">Jianyu Lai</a><sup>1,2</sup>,
                     <a href="https://xuanhuahe.github.io/" target="_blank" class="author-name">Xuanhua He</a><sup>3</sup>,
                     <a href="https://fuxiangzhai.github.io/" target="_blank" class="author-name">Fuxiang Zhai</a><sup>1</sup>,
-                    <a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN" target="_blank" class="author-name">Jialin Gao</a><sup>5,&dagger;</sup>,
+                    <a href="https://scholar.google.com/citations?user=sj4FqEgAAAAJ&hl=zh-CN" target="_blank" class="author-name">Jialin Gao</a><sup>4,&dagger;</sup>,
                     <a href="https://sites.google.com/site/indexlzhu/home" target="_blank" class="author-name">Lei Zhu</a><sup>1,3,&#9993;</sup>
                 </div>
                 <div class="affiliations-text">
                     <span class="affil"><sup>1</sup>The Hong Kong University of Science and Technology (Guangzhou)</span>
                     <span class="affil"><sup>2</sup>Meitian</span>
                     <span class="affil"><sup>3</sup>The Hong Kong University of Science and Technology</span>
-                    <span class="affil"><sup>4</sup>The Chinese University of Hong Kong</span>
-                    <span class="affil"><sup>5</sup>National University of Singapore</span>
+                    <span class="affil"><sup>4</sup>National University of Singapore</span>
                     <span class="affil note"><sup>&dagger;</sup>Project Lead &nbsp;&middot;&nbsp; <sup>&#9993;</sup>Corresponding Author</span>
                 </div>
             </div>
@@ -170,21 +169,21 @@
     <div class="container">
         <div class="section-header-center"><div class="section-label">Experiments</div><h2 class="section-title">Results</h2></div>
         <div class="table-card"><div class="table-title"><i class="fas fa-chart-bar"></i> Main Comparison on GenEvolve-Bench</div><div class="table-scroll"><table class="data-table"><thead><tr><th rowspan="2" class="th-left">Method</th><th rowspan="2">Generator</th><th colspan="4" class="th-group-purple">Judge Dimensions</th><th colspan="3" class="th-group-blue">Benchmark Overall</th></tr><tr><th>Faith.</th><th>Vis.</th><th>Text</th><th>Aesth.</th><th>KScore</th><th>Know.</th><th>Qual.</th></tr></thead><tbody><tr class="group-row"><td colspan="9">Direct Generator Baselines</td></tr>
-<tr><td class="td-left">Lumina-Image 2.0</td><td>Lumina-Image 2.0</td><td>0.102</td><td>0.000</td><td>0.391</td><td>0.266</td><td>0.193</td><td>0.189</td><td>0.196</td></tr>
-<tr><td class="td-left">BAGEL</td><td>BAGEL</td><td>0.133</td><td>0.000</td><td>0.430</td><td>0.359</td><td>0.221</td><td>0.202</td><td>0.235</td></tr>
-<tr><td class="td-left">SD-3.5-Large</td><td>SD-3.5</td><td>0.148</td><td>0.000</td><td>0.438</td><td>0.406</td><td>0.231</td><td>0.215</td><td>0.242</td></tr>
-<tr><td class="td-left">FLUX.1-dev</td><td>FLUX.1</td><td>0.109</td><td>0.000</td><td>0.430</td><td>0.523</td><td>0.235</td><td>0.211</td><td>0.253</td></tr>
-<tr><td class="td-left">FLUX.2 Klein 4B</td><td>FLUX.2</td><td>0.297</td><td>0.016</td><td>0.422</td><td>0.602</td><td>0.265</td><td>0.256</td><td>0.272</td></tr>
-<tr><td class="td-left">Z-Image-Turbo</td><td>Z-Image</td><td>0.313</td><td>0.016</td><td>0.453</td><td>0.602</td><td>0.279</td><td>0.269</td><td>0.287</td></tr>
-<tr><td class="td-left">FLUX.2 Klein 9B</td><td>FLUX.2</td><td>0.359</td><td>0.016</td><td>0.430</td><td>0.664</td><td>0.281</td><td>0.282</td><td>0.280</td></tr>
-<tr><td class="td-left">Z-Image</td><td>Z-Image</td><td>0.414</td><td>0.008</td><td>0.477</td><td>0.500</td><td>0.285</td><td>0.276</td><td>0.292</td></tr>
-<tr><td class="td-left">Qwen-Image</td><td>Qwen-Image</td><td>0.344</td><td>0.086</td><td>0.453</td><td>0.695</td><td>0.320</td><td>0.302</td><td>0.332</td></tr>
-<tr><td class="td-left">Nano Banana Pro</td><td>Nano Banana Pro</td><td>0.727</td><td>0.250</td><td class="cell-best">0.570</td><td class="cell-second">0.883</td><td>0.489</td><td>0.498</td><td>0.482</td></tr>
+<tr><td class="td-left">Lumina-Image 2.0</td><td>Lumina-Image 2.0</td><td>0.1044</td><td>0.0000</td><td>0.3308</td><td>0.2694</td><td>0.1697</td><td>0.1528</td><td>0.1915</td></tr>
+<tr><td class="td-left">BAGEL</td><td>BAGEL</td><td>0.1212</td><td>0.0059</td><td>0.3721</td><td>0.4082</td><td>0.2041</td><td>0.1684</td><td>0.2504</td></tr>
+<tr><td class="td-left">SD-3.5-Large</td><td>SD-3.5</td><td>0.1456</td><td>0.0135</td><td>0.3872</td><td>0.4865</td><td>0.2235</td><td>0.1943</td><td>0.2612</td></tr>
+<tr><td class="td-left">FLUX.1-dev</td><td>FLUX.1</td><td>0.1574</td><td>0.0059</td><td>0.4150</td><td>0.5556</td><td>0.2396</td><td>0.2097</td><td>0.2784</td></tr>
+<tr><td class="td-left">FLUX.2 Klein 4B</td><td>FLUX.2</td><td>0.2525</td><td>0.0059</td><td>0.3847</td><td>0.5648</td><td>0.2380</td><td>0.2004</td><td>0.2865</td></tr>
+<tr><td class="td-left">Z-Image-Turbo</td><td>Z-Image</td><td>0.2837</td><td>0.0396</td><td>0.4369</td><td>0.6187</td><td>0.2808</td><td>0.2340</td><td>0.3413</td></tr>
+<tr><td class="td-left">FLUX.2 Klein 9B</td><td>FLUX.2</td><td>0.3662</td><td>0.0210</td><td>0.4192</td><td>0.6599</td><td>0.2787</td><td>0.2327</td><td>0.3382</td></tr>
+<tr><td class="td-left">Z-Image</td><td>Z-Image</td><td>0.3333</td><td>0.0278</td><td>0.4352</td><td>0.5429</td><td>0.2728</td><td>0.2203</td><td>0.3407</td></tr>
+<tr><td class="td-left">Qwen-Image</td><td>Qwen-Image</td><td>0.3729</td><td>0.0623</td><td>0.4226</td><td>0.6751</td><td>0.2987</td><td>0.2384</td><td>0.3768</td></tr>
+<tr><td class="td-left">Nano Banana Pro</td><td>Nano Banana Pro</td><td>0.7761</td><td>0.2837</td><td>0.6178</td><td>0.9158</td><td>0.5298</td><td>0.5160</td><td>0.5477</td></tr>
 <tr class="group-row"><td colspan="9">Agentic Image-Generation Workflows</td></tr>
-<tr><td class="td-left">Gen-Searcher 8B</td><td>Qwen-Image-Edit</td><td>0.427</td><td>0.154</td><td>0.492</td><td>0.634</td><td>0.365</td><td>0.384</td><td>0.346</td></tr>
-<tr><td class="td-left">Gen-Searcher 8B</td><td>Nano Banana Pro</td><td class="cell-second">0.742</td><td class="cell-second">0.320</td><td class="cell-best">0.570</td><td>0.875</td><td class="cell-second">0.518</td><td class="cell-second">0.504</td><td class="cell-second">0.528</td></tr>
-<tr class="row-ours-light"><td class="td-left">GenEvolve (Ours)</td><td>Qwen-Image-Edit</td><td>0.473</td><td>0.188</td><td>0.508</td><td>0.603</td><td>0.386</td><td>0.407</td><td>0.370</td></tr>
-<tr class="row-ours"><td class="td-left">GenEvolve (Ours)</td><td>Nano Banana Pro</td><td class="cell-best">0.865</td><td class="cell-best">0.373</td><td>0.564</td><td class="cell-best">0.889</td><td class="cell-best">0.541</td><td class="cell-best">0.507</td><td class="cell-best">0.566</td></tr></tbody></table></div></div>
+<tr><td class="td-left">Gen-Searcher 8B</td><td>Qwen-Image-Edit-2511</td><td>0.5284</td><td>0.1050</td><td>0.4768</td><td class="cell-second">0.6377</td><td>0.3493</td><td>0.3293</td><td>0.3745</td></tr>
+<tr><td class="td-left">Gen-Searcher 8B</td><td>Nano Banana Pro</td><td>0.7465</td><td>0.3378</td><td>0.6198</td><td>0.9036</td><td>0.5481</td><td>0.5472</td><td>0.5492</td></tr>
+<tr class="row-ours-light"><td class="td-left">GenEvolve (Ours)</td><td>Qwen-Image-Edit-2511</td><td class="cell-second">0.5303</td><td class="cell-second">0.1338</td><td class="cell-second">0.4907</td><td>0.6347</td><td class="cell-second">0.3663</td><td class="cell-second">0.3410</td><td class="cell-second">0.3990</td></tr>
+<tr class="row-ours"><td class="td-left">GenEvolve (Ours)</td><td>Nano Banana Pro</td><td class="cell-best">0.7970</td><td class="cell-best">0.3832</td><td class="cell-best">0.6218</td><td class="cell-best">0.9222</td><td class="cell-best">0.5739</td><td class="cell-best">0.5669</td><td class="cell-best">0.5830</td></tr></tbody></table></div></div>
 
         <div class="table-card">
             <div class="table-title"><i class="fas fa-globe"></i> External Evaluation on WISE Benchmark</div>
@@ -194,18 +193,23 @@
                     <tbody>
                         <tr class="group-row"><td colspan="8">Direct Generator Baselines</td></tr>
                         <tr><td class="td-left">Emu3</td><td>0.34</td><td>0.45</td><td>0.48</td><td>0.41</td><td>0.45</td><td>0.27</td><td>0.39</td></tr>
+                        <tr><td class="td-left">FLUX.1-schnell</td><td>0.39</td><td>0.44</td><td>0.50</td><td>0.31</td><td>0.44</td><td>0.26</td><td>0.40</td></tr>
+                        <tr><td class="td-left">SD-3-Medium</td><td>0.42</td><td>0.44</td><td>0.48</td><td>0.39</td><td>0.47</td><td>0.29</td><td>0.42</td></tr>
+                        <tr><td class="td-left">SD-3.5-Medium</td><td>0.43</td><td>0.50</td><td>0.52</td><td>0.41</td><td>0.53</td><td>0.33</td><td>0.45</td></tr>
                         <tr><td class="td-left">SD-3.5-Large</td><td>0.44</td><td>0.50</td><td>0.58</td><td>0.44</td><td>0.52</td><td>0.31</td><td>0.46</td></tr>
                         <tr><td class="td-left">FLUX.1-dev</td><td>0.48</td><td>0.58</td><td>0.62</td><td>0.42</td><td>0.51</td><td>0.35</td><td>0.50</td></tr>
                         <tr><td class="td-left">Hunyuan-Image 3.0</td><td>0.58</td><td>0.57</td><td>0.70</td><td>0.56</td><td>0.63</td><td>0.31</td><td>0.57</td></tr>
+                        <tr><td class="td-left">UniWorld-V2</td><td>0.60</td><td>0.61</td><td>0.70</td><td>0.53</td><td>0.64</td><td>0.32</td><td>0.58</td></tr>
                         <tr><td class="td-left">Qwen-Image</td><td>0.62</td><td>0.63</td><td>0.77</td><td>0.57</td><td>0.75</td><td>0.40</td><td>0.62</td></tr>
+                        <tr><td class="td-left">NextFlow-RL</td><td>0.63</td><td>0.63</td><td>0.77</td><td>0.58</td><td>0.67</td><td>0.39</td><td>0.62</td></tr>
                         <tr><td class="td-left">LongCat-Image</td><td>0.66</td><td>0.61</td><td>0.72</td><td>0.66</td><td>0.72</td><td>0.49</td><td>0.65</td></tr>
-                        <tr><td class="td-left">DeepGen1.0</td><td>0.72</td><td class="cell-best">0.81</td><td>0.70</td><td>0.67</td><td class="cell-second">0.82</td><td>0.66</td><td>0.73</td></tr>
+                        <tr><td class="td-left">DeepGen1.0</td><td>0.72</td><td class="cell-best">0.81</td><td>0.70</td><td>0.67</td><td>0.82</td><td>0.66</td><td>0.73</td></tr>
                         <tr><td class="td-left">GPT-4o</td><td>0.81</td><td>0.71</td><td class="cell-best">0.89</td><td class="cell-best">0.83</td><td>0.79</td><td>0.74</td><td class="cell-second">0.80</td></tr>
                         <tr class="group-row"><td colspan="8">Agentic Image-Generation Workflows</td></tr>
                         <tr><td class="td-left">GenAgent</td><td>0.78</td><td>0.67</td><td>0.78</td><td>0.72</td><td>0.77</td><td>0.55</td><td>0.72</td></tr>
-                        <tr><td class="td-left">Gen-Searcher-8B + Qwen-Image</td><td>0.80</td><td>0.71</td><td>0.82</td><td>0.76</td><td>0.74</td><td class="cell-second">0.75</td><td>0.77</td></tr>
+                        <tr><td class="td-left">Gen-Searcher-8B + Qwen-Image</td><td>0.80</td><td>0.71</td><td>0.82</td><td>0.76</td><td>0.74</td><td>0.75</td><td>0.77</td></tr>
                         <tr><td class="td-left">Mind-Brush</td><td class="cell-second">0.83</td><td>0.69</td><td>0.84</td><td>0.71</td><td class="cell-best">0.85</td><td>0.68</td><td>0.78</td></tr>
-                        <tr class="row-ours"><td class="td-left">GenEvolve (Ours)</td><td class="cell-best">0.84</td><td class="cell-second">0.74</td><td class="cell-second">0.87</td><td class="cell-best">0.83</td><td>0.81</td><td class="cell-best">0.83</td><td class="cell-best">0.82</td></tr>
+                        <tr class="row-ours"><td class="td-left">GenEvolve + Qwen-Image-Edit (Ours)</td><td class="cell-best">0.84</td><td class="cell-second">0.74</td><td class="cell-second">0.87</td><td class="cell-best">0.83</td><td>0.81</td><td class="cell-best">0.83</td><td class="cell-best">0.82</td></tr>
                     </tbody>
                 </table>
             </div>

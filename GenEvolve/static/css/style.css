@@ -128,29 +128,11 @@ body {
     font-size: 0.85rem; font-weight: 600; color: var(--gray-600);
     box-shadow: var(--shadow-sm);
 }
-/* Eyebrow — small kicker line above the title */
-.hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 6px 18px;
-    margin-bottom: 22px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.10), rgba(59, 130, 246, 0.10));
-    border: 1px solid rgba(124, 58, 237, 0.20);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.82rem; font-weight: 600;
-    color: var(--purple-700);
-    letter-spacing: 0.08em; text-transform: uppercase;
-    box-shadow: var(--shadow-sm);
-    animation: fadeUp 0.6s ease both;
-}
-.hero-eyebrow i { color: var(--purple-600); font-size: 0.85rem; }
-.hero-eyebrow .eyebrow-text { line-height: 1; }
-
-/* Hero title — artistic italic display */
+/* Hero title — artistic italic display, centered */
 .hero-title {
     position: relative;
     margin: 0 auto 18px;
-    display: inline-block;
+    text-align: center;
     animation: fadeUp 0.8s ease both;
 }
 .title-main {
@@ -179,25 +161,11 @@ body {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     opacity: 0.88;
-    transform-origin: left center;
+    transform-origin: center center;
     animation: titleUnderline 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both;
     pointer-events: none;
 }
 @keyframes titleUnderline { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 0.88; } }
-
-/* Decorative flourish ornament under the title */
-.title-flourish {
-    display: block;
-    margin: 10px auto 0;
-    font-family: 'Pinyon Script', 'Caveat', cursive;
-    font-style: normal;
-    font-size: 1.6rem;
-    line-height: 1;
-    background: linear-gradient(135deg, #c084fc, #ec4899);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0.7;
-}
 
 .hero-subtitle {
     font-family: 'Cormorant Garamond', 'Georgia', serif;
@@ -556,8 +524,6 @@ body {
 @media (max-width: 768px) {
     .title-main { font-size: 3.2rem; }
     .hero-subtitle { font-size: 1.1rem; }
-    .hero-eyebrow { font-size: 0.72rem; padding: 5px 14px; }
-    .title-flourish { font-size: 1.2rem; }
     .hero-subtitle .sub-deco { display: none; }
     .nav-links { display: none; }
     .cards-4 { grid-template-columns: 1fr; }

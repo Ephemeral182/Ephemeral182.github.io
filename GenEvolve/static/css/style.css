@@ -221,6 +221,12 @@ body {
     background: var(--gray-900); color: white;
 }
 .btn-dark:hover { background: var(--gray-700); transform: translateY(-1px); }
+.btn-hf {
+    background: linear-gradient(135deg, #ffd21e, #ffb000);
+    color: #1f1300; box-shadow: 0 4px 16px rgba(255, 176, 0, 0.30);
+}
+.btn-hf:hover { box-shadow: 0 6px 22px rgba(255, 176, 0, 0.42); transform: translateY(-1px); color: #1f1300; }
+
 .btn-ghost {
     background: transparent; color: var(--gray-600);
     border: 1.5px solid var(--gray-300);

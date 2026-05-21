@@ -4,80 +4,101 @@ layout: fancy_home
 
 <div class="hero">
     <div class="hero-content slide-in-left">
-        <h1 class="hero-title">About Me</h1>
+        <p class="hero-eyebrow"><span class="eyebrow-dot"></span>PhD Student · AI Researcher</p>
+        <h1 class="hero-title">Sixiang Chen <span class="hero-title-zh">陈思翔</span></h1>
         <div class="typing-text-container">
             <p id="motto" class="typed-motto"></p>
         </div>
-        <p class="hero-subtitle">PhD Student & AI Researcher</p>
+        <div class="hero-affiliation">
+            <span class="affil-tag"><i class="fas fa-university"></i> HKUST (Guangzhou)</span>
+            <span class="affil-tag"><i class="fas fa-flask"></i> Meigen-AI Intern</span>
+        </div>
         <div class="hero-description">
-            I’m <span class="highlight">Sixiang Chen (陈思翔)</span>, a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a> advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>. I interned as a research scientist at Meigen-AI. My work explores generative and unified models to unlock new potential in image understanding and creation. I believe research should matter to real users—some projects I lead, including <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, <strong>PosterReward</strong>, and <strong>GenEvolve</strong>, are built to become dependable tools for designers, creators, and broader creative communities.
+            I'm a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a>, advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>, and a research-scientist intern at Meigen-AI. My work explores <span class="highlight">generative and unified models</span> to unlock new potential in image understanding and creation. I believe research should matter to real users — projects I lead, including <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, <strong>PosterReward</strong>, and <strong>GenEvolve</strong>, are built to become dependable tools for designers, creators, and broader creative communities.
         </div>
         <div class="social-links">
-            <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
+            <a href="mailto:ephemeral182@gmail.com" class="social-link email" title="Email">
+                <i class="fas fa-envelope"></i>
+                <span class="social-text">Email</span>
+            </a>
+            <a href="https://scholar.google.com.hk/citations?user=EtljKSgAAAAJ&hl=zh-CN" target="_blank" rel="noopener" class="social-link scholar" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="social-text">Scholar</span>
+            </a>
+            <a href="https://github.com/Ephemeral182" target="_blank" rel="noopener" class="social-link github" title="GitHub">
                 <i class="fab fa-github"></i>
                 <span class="social-text">GitHub</span>
             </a>
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link scholar" title="Google Scholar">
-                <i class="fas fa-graduation-cap"></i>
-                <span class="social-text">Google Scholar</span>
-            </a>
-            <a href="https://twitter.com/YOUR_TWITTER" class="social-link twitter" title="Twitter">
-                <i class="fab fa-twitter"></i>
+            <a href="https://x.com/Ephemeral862641" target="_blank" rel="noopener" class="social-link twitter" title="Twitter / X">
+                <i class="fab fa-x-twitter"></i>
                 <span class="social-text">Twitter</span>
             </a>
-            <a href="#" class="social-link wechat" title="WeChat" onclick="alert('WeChat ID: csx18259166302')">
+            <a href="#" class="social-link wechat" title="WeChat" onclick="alert('WeChat ID: csx18259166302'); return false;">
                 <i class="fab fa-weixin"></i>
                 <span class="social-text">WeChat</span>
             </a>
         </div>
     </div>
     <div class="hero-image slide-in-right">
-        <img src="https://ephemeral182.github.io/csx5.jpg" alt="Sixiang Chen" class="profile-image">
+        <div class="profile-frame">
+            <img src="https://ephemeral182.github.io/csx5.jpg" alt="Sixiang Chen" class="profile-image">
+            <div class="profile-glow"></div>
+        </div>
     </div>
 </div>
 
 <div class="service-section fade-in">
     <div class="service-header">
         <i class="fas fa-microscope" style="font-size: 2rem; color: #6366f1;"></i>
-        <h2 class="service-title">Research Experience</h2>
+        <h2 class="service-title">Research Interests</h2>
     </div>
-    <div class="service-card">
-        <div class="service-list">
-            <p><strong>Visual Frontiers & Generative Models.</strong> I believe research should matter to real users. I lead the development of <strong>PosterCraft [ICLR'26]</strong>, <strong>PosterOmni [CVPR'26]</strong>, and <strong>GenEvolve [arXiv'26]</strong>, spanning high-quality poster creation, generalized artistic generation, and self-evolving image-generation agents.</p>
-            <p><strong>Reward Modeling & Foundation.</strong> I am passionate about discovering and designing reward models to align AI outputs with human aesthetic and functional standards. Through feedback optimization in <strong>PosterReward [CVPR'26]</strong> and <strong>SnowMaster [CVPR'25]</strong>, I establish robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
-            <p><strong>Beyond Synthesis: Exploring Diffusion Priors.</strong> I leverage diffusion priors to build methods that generalize across tasks, including <strong>Restoration (DTPM [CVPR'24]; AGLLDiff [AAAI'25])</strong> and <strong>Perception (GenHaze [ICCV'25]; Detect Any Mirrors [CVPR'25])</strong>, bridging the gap between synthesis and visual perception.</p>
-            <p><strong>Agents & Unified Reasoning.</strong> I am dedicated to advancing the reasoning frontiers of unified models and visual understanding. Beyond autonomous agents (<strong>JarvisIR [CVPR'25]</strong>; <strong>RestoreAgent [NeurIPS'24]</strong>), I develop <strong>GenEvolve [arXiv'26]</strong> to study tool-orchestrated image-generation agents that retrieve evidence, select references, and self-evolve from visual experience.</p>
+    <div class="research-grid">
+        <div class="research-card" data-color="violet">
+            <div class="research-icon"><i class="fas fa-palette"></i></div>
+            <h3 class="research-card-title">Visual Frontiers & Generative Models</h3>
+            <p class="research-card-desc">Building generative systems that matter to real users — from poster creation to generalized artistic generation and self-evolving image-generation agents.</p>
+            <div class="research-tags">
+                <span class="tag">PosterCraft <em>ICLR'26</em></span>
+                <span class="tag">PosterOmni <em>CVPR'26</em></span>
+                <span class="tag">GenEvolve <em>arXiv'26</em></span>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="service-section fade-in">
-    <div class="service-header">
-        <i class="fas fa-trophy" style="font-size: 2rem; color: #6366f1;"></i>
-        <h2 class="service-title">Recent Achievements</h2>
-    </div>
-    <div class="service-card">
-        <div class="service-list">
-            <p>Released <strong>GenEvolve</strong>, a self-evolving image-generation agent via tool-orchestrated visual experience distillation.</p>
-            <p><strong>PosterOmni</strong> accepted by <strong>CVPR'2026</strong></p>
-            <p>Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
-            <p><strong>PosterReward</strong> accepted by <strong>CVPR'2026</strong></p>
-            <p>Released <strong>PosterReward</strong>, a comprehensive reward model for design aesthetics and typography.</p>
-            <p><strong>PosterCraft</strong> accepted by <strong>ICLR'2026</strong></p>
-            <p>Released <strong>PosterCraft</strong>, a unified framework for high-quality aesthetic poster generation.</p>
-            <p><strong>1 paper accepted</strong> by ICCV'2025. GenHaze, a one-step controllable haze generation method.</p>
-            <p><strong>GPT-4o evaluation report</strong> published on arXiv</p>
-            <p><strong>3 papers accepted</strong> by CVPR'2025</p>
-            <p><strong>4 papers accepted</strong> by AAAI'2025</p>
-            <p><strong>1 paper accepted</strong> by NeurIPS'2024</p>
-            <p><strong>2 papers accepted</strong> by ECCV'2024</p>
+        <div class="research-card" data-color="amber">
+            <div class="research-icon"><i class="fas fa-award"></i></div>
+            <h3 class="research-card-title">Reward Modeling & Foundation</h3>
+            <p class="research-card-desc">Designing reward models to align AI outputs with human aesthetic and functional standards, empowering foundation models with professional-grade design capabilities.</p>
+            <div class="research-tags">
+                <span class="tag">PosterReward <em>CVPR'26</em></span>
+                <span class="tag">SnowMaster <em>CVPR'25</em></span>
+            </div>
+        </div>
+        <div class="research-card" data-color="cyan">
+            <div class="research-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+            <h3 class="research-card-title">Beyond Synthesis: Diffusion Priors</h3>
+            <p class="research-card-desc">Leveraging diffusion priors for tasks across restoration and perception, bridging the gap between synthesis and visual understanding.</p>
+            <div class="research-tags">
+                <span class="tag">DTPM <em>CVPR'24</em></span>
+                <span class="tag">AGLLDiff <em>AAAI'25</em></span>
+                <span class="tag">GenHaze <em>ICCV'25</em></span>
+                <span class="tag">DAM <em>CVPR'25</em></span>
+            </div>
+        </div>
+        <div class="research-card" data-color="rose">
+            <div class="research-icon"><i class="fas fa-robot"></i></div>
+            <h3 class="research-card-title">Agents & Unified Reasoning</h3>
+            <p class="research-card-desc">Advancing reasoning frontiers of unified models and visual understanding via tool-orchestrated agents that retrieve, reference, and self-evolve from visual experience.</p>
+            <div class="research-tags">
+                <span class="tag">GenEvolve <em>arXiv'26</em></span>
+                <span class="tag">JarvisIR <em>CVPR'25</em></span>
+                <span class="tag">RestoreAgent <em>NeurIPS'24</em></span>
+            </div>
         </div>
     </div>
 </div>
 
 
 <div class="news-section fade-in">
-    <h2 class="news-title">📰 News and Updates</h2>
+    <h2 class="news-title"><i class="fas fa-bullhorn"></i> News & Updates</h2>
     <div class="scrollable-news">
         <ul>
             <li><strong>May 2026：</strong>🚀 Released <a href="https://ephemeral182.github.io/GenEvolve/"><strong>GenEvolve</strong></a>! A self-evolving image-generation agent that orchestrates search, visual references, and generation tools through visual experience distillation.</li>

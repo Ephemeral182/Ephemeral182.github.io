@@ -17,13 +17,26 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --c-violet: #6366f1;
+            --c-violet-2: #8b5cf6;
+            --c-cyan: #06b6d4;
+            --c-amber: #f59e0b;
+            --c-rose: #ec4899;
+            --c-ink: #0f172a;
+            --c-ink-2: #334155;
+            --c-mute: #64748b;
+            --c-line: rgba(15, 23, 42, 0.08);
+            --c-glass: rgba(255, 255, 255, 0.78);
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: #0f172a;
+            color: var(--c-ink);
             line-height: 1.6;
             overflow-x: hidden;
             min-height: 100vh;
-            background-color: #f1f5f9;
+            background-color: #f6f7fb;
             position: relative;
         }
 
@@ -33,16 +46,24 @@
             position: fixed;
             inset: 0;
             z-index: -2;
+            pointer-events: none;
         }
 
+        /* 柔和的多层渐变背景，替代之前抢戏的风景图 */
         body::before {
-            background: url('{{ "/images/background/building-small-island-bled-slovenia-surrounded-by-high-mountains.jpg" | relative_url }}') center / cover no-repeat;
-            filter: saturate(1.05) brightness(1.05);
-            opacity: 0.65;
+            background:
+                radial-gradient(900px 600px at 12% -10%, rgba(99, 102, 241, 0.18), transparent 60%),
+                radial-gradient(700px 500px at 100% 10%, rgba(236, 72, 153, 0.12), transparent 60%),
+                radial-gradient(900px 700px at 50% 110%, rgba(6, 182, 212, 0.14), transparent 60%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
         }
 
+        /* 极淡网格点缀，增加质感 */
         body::after {
-            background: radial-gradient(circle at top, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.25));
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.06) 1px, transparent 0);
+            background-size: 28px 28px;
+            opacity: 0.45;
             z-index: -1;
         }
         
@@ -149,52 +170,136 @@
         }
         
         .hero-image {
-            flex: 0 0 400px;
+            flex: 0 0 360px;
             position: relative;
         }
-        
+
+        .profile-frame {
+            position: relative;
+            border-radius: 28px;
+            padding: 8px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(236, 72, 153, 0.35) 50%, rgba(6, 182, 212, 0.4));
+            box-shadow: 0 30px 60px -20px rgba(99, 102, 241, 0.35), 0 10px 30px -15px rgba(15, 23, 42, 0.2);
+            transition: transform 0.5s cubic-bezier(.2,.8,.2,1);
+        }
+
+        .profile-frame:hover {
+            transform: translateY(-8px);
+        }
+
         .profile-image {
+            display: block;
             width: 100%;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 22px;
             transition: all 0.5s ease;
-            filter: brightness(1);
+            filter: saturate(1.02);
         }
-        
-        .profile-image:hover {
-            transform: translateY(-15px) rotateY(5deg);
-            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4);
-            filter: brightness(1.1);
+
+        .profile-glow {
+            position: absolute;
+            inset: -20px;
+            border-radius: 36px;
+            background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.35), transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.28), transparent 60%);
+            filter: blur(40px);
+            z-index: -1;
+            opacity: 0.7;
         }
-        
+
+        /* 小标签 eyebrow */
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--c-violet);
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.25);
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .eyebrow-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--c-violet);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18); }
+            50% { box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.05); }
+        }
+
         .hero-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.6rem, 5.2vw, 4.2rem);
             font-weight: 800;
-            margin-bottom: 1.5rem;
-            color: #0f172a;
+            margin-bottom: 0.5rem;
+            color: var(--c-ink);
             font-family: 'Inter', 'Helvetica Neue', sans-serif;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.025em;
+            line-height: 1.05;
+        }
+        .hero-title-zh {
+            font-weight: 600;
+            font-size: 0.65em;
+            color: var(--c-mute);
+            margin-left: 0.4em;
+            letter-spacing: 0;
         }
 
         .hero-subtitle {
-            font-size: 1.25rem;
-            color: #475569;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            color: var(--c-ink-2);
+            margin-bottom: 1.5rem;
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
-        .hero-description {
-            font-size: 1.1rem;
-            color: #1f2937;
-            margin-bottom: 3rem;
-            line-height: 1.8;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
+        /* affiliation 小徽章 */
+        .hero-affiliation {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1rem 0 1.5rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+        .affil-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--c-ink-2);
             background: rgba(255, 255, 255, 0.7);
-            border-radius: 24px;
-            padding: 1.5rem;
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.12);
-            backdrop-filter: blur(6px);
+            border: 1px solid var(--c-line);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .affil-tag i { color: var(--c-violet); font-size: 0.9em; }
+        .affil-tag:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.35);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.12);
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--c-ink-2);
+            margin-bottom: 2rem;
+            line-height: 1.78;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            background: var(--c-glass);
+            border: 1px solid var(--c-line);
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1);
+            backdrop-filter: blur(8px);
         }
         
         /* 社交媒体链接 - 更新样式以支持文字标签 */
@@ -207,27 +312,27 @@
         }
         
         .social-link {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
+            gap: 8px;
             min-width: 50px;
-            height: 50px;
-            padding: 0 15px;
+            height: 46px;
+            padding: 0 16px;
             background: rgba(255, 255, 255, 0.85);
-            border: 1px solid rgba(15, 23, 42, 0.1);
+            border: 1px solid var(--c-line);
             border-radius: 12px;
-            color: #1f2937;
+            color: var(--c-ink-2);
             text-decoration: none;
-            font-size: 1.2rem;
-            transition: all 0.4s ease;
+            font-size: 1.05rem;
+            transition: all 0.35s cubic-bezier(.2,.8,.2,1);
             position: relative;
             overflow: hidden;
             white-space: nowrap;
         }
-        
+
         .social-link i {
-            margin-right: 8px;
-            font-size: 1.2rem;
+            font-size: 1.05rem;
         }
         
         .social-text {
@@ -271,10 +376,15 @@
         }
         
         .social-link.twitter:hover {
-            background: linear-gradient(135deg, #0ea5e9, #0284c7);
-            box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3);
         }
-        
+
+        .social-link.email:hover {
+            background: linear-gradient(135deg, #ef4444, #f97316);
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.25);
+        }
+
         .social-link.wechat:hover {
             background: linear-gradient(135deg, #16a34a, #0d9488);
             box-shadow: 0 10px 25px rgba(22, 163, 74, 0.25);
@@ -437,10 +547,19 @@
         }
         
         .news-title {
-            font-size: 1.5rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
+            color: var(--c-ink);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.01em;
+        }
+        .news-title i {
+            font-size: 1.6rem;
+            color: var(--c-violet);
+            background: linear-gradient(135deg, var(--c-violet), var(--c-rose));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -699,8 +818,8 @@
         
         a:hover {
             color: #8b5cf6;
-            text-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
         }
+        .social-link:hover { color: #fff !important; }
         
         /* 更柔和的突出自己名字的样式 - 稍微调暗版本 */
         .pub-authors strong u,
@@ -992,6 +1111,127 @@
             color: #6366f1;
         }
 
+        /* ===== Research Interests 卡片网格 ===== */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .research-card {
+            position: relative;
+            padding: 1.8rem 1.6rem 1.6rem;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--c-line);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px -15px rgba(15, 23, 42, 0.12);
+            transition: all 0.4s cubic-bezier(.2,.8,.2,1);
+            overflow: hidden;
+            backdrop-filter: blur(6px);
+        }
+
+        .research-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--accent, var(--c-violet));
+            opacity: 0.85;
+        }
+
+        .research-card::after {
+            content: '';
+            position: absolute;
+            top: -40%; right: -30%;
+            width: 220px; height: 220px;
+            background: var(--accent, var(--c-violet));
+            opacity: 0.08;
+            filter: blur(40px);
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -20px var(--accent-shadow, rgba(99, 102, 241, 0.35));
+            border-color: var(--accent-border, rgba(99, 102, 241, 0.35));
+        }
+
+        .research-card:hover::after {
+            opacity: 0.18;
+            transform: scale(1.15);
+        }
+
+        .research-card[data-color="violet"] { --accent: #6366f1; --accent-shadow: rgba(99, 102, 241, 0.3); --accent-border: rgba(99, 102, 241, 0.35); }
+        .research-card[data-color="amber"]  { --accent: #f59e0b; --accent-shadow: rgba(245, 158, 11, 0.3); --accent-border: rgba(245, 158, 11, 0.4); }
+        .research-card[data-color="cyan"]   { --accent: #06b6d4; --accent-shadow: rgba(6, 182, 212, 0.3);  --accent-border: rgba(6, 182, 212, 0.4); }
+        .research-card[data-color="rose"]   { --accent: #ec4899; --accent-shadow: rgba(236, 72, 153, 0.3); --accent-border: rgba(236, 72, 153, 0.4); }
+
+        .research-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent, var(--c-violet)), color-mix(in srgb, var(--accent, var(--c-violet)) 60%, white));
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 18px -6px var(--accent-shadow, rgba(99, 102, 241, 0.4));
+        }
+
+        .research-card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--c-ink);
+            margin: 0 0 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .research-card-desc {
+            font-size: 0.95rem;
+            color: var(--c-ink-2);
+            line-height: 1.65;
+            margin: 0 0 1rem;
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .research-tags .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--c-ink-2);
+            background: rgba(15, 23, 42, 0.04);
+            border: 1px solid var(--c-line);
+            padding: 4px 10px;
+            border-radius: 8px;
+            transition: all 0.25s ease;
+        }
+        .research-tags .tag em {
+            font-style: normal;
+            font-weight: 500;
+            color: var(--accent, var(--c-violet));
+            font-size: 0.92em;
+        }
+        .research-tags .tag:hover {
+            background: rgba(15, 23, 42, 0.07);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 768px) {
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* 移除原有的逐字动画样式，替换为Typed.js样式 */
         .typing-text-container {
             margin: 0.5rem 0 1.5rem 0;
@@ -1004,17 +1244,16 @@
         /* Typed.js 打字机效果样式 - 更新为更优雅的字体 */
         .typed-motto {
             font-style: italic;
-            font-size: 1.6rem;
-            margin: 20px 0;
-            min-height: 40px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7);
+            font-size: 1.4rem;
+            margin: 8px 0 4px;
+            min-height: 36px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            font-family: 'EB Garamond', 'Georgia', serif;  /* 更优雅的字体组合 */
+            font-family: 'EB Garamond', 'Georgia', serif;
             font-weight: 500;
             text-align: left;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
             letter-spacing: 0.02em;
             line-height: 1.4;
         }

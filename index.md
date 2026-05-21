@@ -10,7 +10,7 @@ layout: fancy_home
         </div>
         <p class="hero-subtitle">PhD Student & AI Researcher</p>
         <div class="hero-description">
-            I’m <span class="highlight">Sixiang Chen (陈思翔)</span>, a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a> advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>. I interned as a research scientist at Meigen-AI. My work explores generative and unified models to unlock new potential in image understanding and creation. I believe research should matter to real users—some projects I lead, including <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>PosterReward</strong>, are built to become dependable tools for designers and broader creative communities.
+            I’m <span class="highlight">Sixiang Chen (陈思翔)</span>, a second-year Ph.D. student at HKUST@<a href="https://www.hkust-gz.edu.cn/academics/hubs-and-thrust-areas/systems-hub/robotics-and-autonomous-systems/">ROAS</a> advised by <a href="https://sites.google.com/site/indexlzhu/home?authuser=0"><strong>Prof. Lei Zhu</strong></a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/"><strong>Prof. Fugee Tsung</strong></a>. I interned as a research scientist at Meigen-AI. My work explores generative and unified models to unlock new potential in image understanding and creation. I believe research should matter to real users—some projects I lead, including <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, <strong>PosterReward</strong>, and <strong>GenEvolve</strong>, are built to become dependable tools for designers, creators, and broader creative communities.
         </div>
         <div class="social-links">
             <a href="https://github.com/Ephemeral182" class="social-link github" title="GitHub">
@@ -43,10 +43,10 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
-            <p><strong>Visual Frontiers & Generative Models.</strong> I believe research should matter to real users. I lead the development of <strong>PosterCraft [ICLR'26]</strong> and <strong>PosterOmni [CVPR'26]</strong>, which redefine artistic creation, pushing the boundaries of high-quality aesthetic content, achieving widespread community adoption and industrial applications.</p>
+            <p><strong>Visual Frontiers & Generative Models.</strong> I believe research should matter to real users. I lead the development of <strong>PosterCraft [ICLR'26]</strong>, <strong>PosterOmni [CVPR'26]</strong>, and <strong>GenEvolve [arXiv'26]</strong>, spanning high-quality poster creation, generalized artistic generation, and self-evolving image-generation agents.</p>
             <p><strong>Reward Modeling & Foundation.</strong> I am passionate about discovering and designing reward models to align AI outputs with human aesthetic and functional standards. Through feedback optimization in <strong>PosterReward [CVPR'26]</strong> and <strong>SnowMaster [CVPR'25]</strong>, I establish robust optimization signals that empower foundation models to achieve professional-grade design capabilities.</p>
             <p><strong>Beyond Synthesis: Exploring Diffusion Priors.</strong> I leverage diffusion priors to build methods that generalize across tasks, including <strong>Restoration (DTPM [CVPR'24]; AGLLDiff [AAAI'25])</strong> and <strong>Perception (GenHaze [ICCV'25]; Detect Any Mirrors [CVPR'25])</strong>, bridging the gap between synthesis and visual perception.</p>
-            <p><strong>Agents & Unified Reasoning.</strong> I am dedicated to advancing the reasoning frontiers of unified models and visual understanding. Beyond autonomous agents (<strong>JarvisIR [CVPR'25]</strong>; <strong>RestoreAgent [NeurIPS'24]</strong>), I focus on the evolution of reasoning capabilities within understanding tasks, aiming to build unified models that not only perceive but deeply reason about visual content, transforming static perception into dynamic, intelligent problem-solving systems.</p>
+            <p><strong>Agents & Unified Reasoning.</strong> I am dedicated to advancing the reasoning frontiers of unified models and visual understanding. Beyond autonomous agents (<strong>JarvisIR [CVPR'25]</strong>; <strong>RestoreAgent [NeurIPS'24]</strong>), I develop <strong>GenEvolve [arXiv'26]</strong> to study tool-orchestrated image-generation agents that retrieve evidence, select references, and self-evolve from visual experience.</p>
         </div>
     </div>
 </div>
@@ -58,6 +58,7 @@ layout: fancy_home
     </div>
     <div class="service-card">
         <div class="service-list">
+            <p>Released <strong>GenEvolve</strong>, a self-evolving image-generation agent via tool-orchestrated visual experience distillation.</p>
             <p><strong>PosterOmni</strong> accepted by <strong>CVPR'2026</strong></p>
             <p>Released <strong>PosterOmni</strong>, your intelligent assistant for high-quality aesthetic poster creation!</p>
             <p><strong>PosterReward</strong> accepted by <strong>CVPR'2026</strong></p>
@@ -79,6 +80,7 @@ layout: fancy_home
     <h2 class="news-title">📰 News and Updates</h2>
     <div class="scrollable-news">
         <ul>
+            <li><strong>May 2026：</strong>🚀 Released <a href="https://ephemeral182.github.io/GenEvolve/"><strong>GenEvolve</strong></a>! A self-evolving image-generation agent that orchestrates search, visual references, and generation tools through visual experience distillation.</li>
             <li><strong>Feb. 2026：</strong>🎓 <strong>PosterOmni</strong> has been accepted by <strong>CVPR'2026</strong>.</li>
             <li><strong>Feb. 2026：</strong>🎓 <strong>PosterReward</strong> has been accepted by <strong>CVPR'2026</strong>.</li>
             <li><strong>Feb. 2026：</strong>🚀 Announcing the release of <a href="https://ephemeral182.github.io/PosterOmni/"><strong>PosterOmni</strong></a>! One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation.<br>✨ <span class="highlight">Your intelligent assistant for high-quality aesthetic poster creation!</span></li>

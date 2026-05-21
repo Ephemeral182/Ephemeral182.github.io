@@ -8,7 +8,7 @@ title: Research Atlas
   <div class="hero-text">
     <p class="eyebrow">Curated Research Map</p>
     <h1>Systems, Agents, and Low-Level Vision</h1>
-    <p>Three streams drive my current research. AIGC systems push structured creativity, vision-language agents reason over complex scenes, and low-level restoration builds the reliable backbone beneath both. The gallery below highlights representative works in each space.</p>
+    <p>Three streams drive my current research. AIGC systems push structured creativity and self-evolving generation agents, vision-language agents reason over complex scenes, and low-level restoration builds the reliable backbone beneath both. The gallery below highlights representative works in each space.</p>
     <div class="hero-tags">
       <span>AIGC</span>
       <span>Vision-Language Agents</span>
@@ -36,8 +36,8 @@ title: Research Atlas
     <div class="category-headline">
       <div>
         <p class="eyebrow">AIGC Systems</p>
-        <h2>Structure-Aware Poster Generation</h2>
-        <p>Unified workflows for controllable poster generation, combining task distillation, reward modeling, and data curation.</p>
+        <h2>Creative Generation Systems</h2>
+        <p>Unified workflows for controllable visual creation, combining tool-orchestrated agents, task distillation, reward modeling, and data curation.</p>
       </div>
       <div class="category-stat">
         <span class="stat-label">Flagship Venues</span>
@@ -45,6 +45,17 @@ title: Research Atlas
       </div>
     </div>
     <div class="paper-grid">
+      <article class="paper-card">
+        <img src="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve" class="paper-image">
+        <div class="paper-meta">Image Agents · arXiv 2026</div>
+        <h3>GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
+        <p>A self-evolving image-generation agent that retrieves evidence, selects visual references, and distills structured visual experience to improve tool-orchestrated generation.</p>
+        <div class="paper-links">
+          <a href="https://ephemeral182.github.io/GenEvolve/" class="pill-link">Project</a>
+          <a href="https://github.com/MeiGen-AI/GenEvolve" class="pill-link">Code</a>
+          <a href="https://huggingface.co/MeiGen-AI/GenEvolve" class="pill-link">Model</a>
+        </div>
+      </article>
       <article class="paper-card">
         <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni" class="paper-image">
         <div class="paper-meta">Poster Design · arXiv 2026</div>

@@ -9,7 +9,7 @@ title: Publications
     <div class="intro-text">
       <p class="eyebrow">Research Snapshot</p>
       <h1>Visual Frontiers & Generative Intelligence</h1>
-      <p>My research lies at the intersection of <strong>Generative Models and Reward Modeling</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong> and <strong>PosterOmni</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
+      <p>My research lies at the intersection of <strong>Generative Models and Reward Modeling</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>GenEvolve</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
       <div class="intro-tags">
         <span>Generative model</span>
         <span>Reward Modeling</span>
@@ -38,6 +38,30 @@ title: Publications
     </div>
 
     <div class="highlight-list">
+      <article class="highlight-card">
+        <div class="highlight-media">
+          <img src="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve teaser">
+          <span class="badge badge-cyan">arXiv 2026</span>
+        </div>
+        <div class="highlight-content">
+          <h3>GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
+          <p class="authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu✉️</p>
+          <p class="summary">A self-evolving image-generation agent that orchestrates external search, visual references, and generation knowledge into prompt-reference programs, then improves through tool-orchestrated visual experience distillation.</p>
+          <div class="resource-list">
+            <a href="https://ephemeral182.github.io/GenEvolve/">🌐 Project</a>
+            <a href="https://github.com/MeiGen-AI/GenEvolve" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://huggingface.co/MeiGen-AI/GenEvolve">🤗 Model</a>
+            <a href="https://huggingface.co/datasets/MeiGen-AI/GenEvolve-Data-Bench">🤗 Dataset</a>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=GenEvolve&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="GenEvolve GitHub Star"></iframe>
+            </span>
+            <span class="gh-btn-wrap">
+              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=GenEvolve&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="GenEvolve GitHub Fork"></iframe>
+            </span>
+          </div>
+        </div>
+      </article>
+
       <article class="highlight-card">
         <div class="highlight-media">
           <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni teaser">
@@ -130,6 +154,22 @@ title: Publications
       <h2>Selected Publications</h2>
     </div>
     <div class="timeline-list">
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">May 2026</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[arXiv 2026]</span> GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
+          <p class="timeline-authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu</p>
+          <p>A self-evolving image-generation agent that orchestrates search, visual references, and internal generation knowledge into prompt-reference programs, learning better tool use through visual experience distillation.</p>
+          <div class="resource-inline">
+            <a href="https://ephemeral182.github.io/GenEvolve/">Project Page</a>
+            <a href="https://github.com/MeiGen-AI/GenEvolve">Code</a>
+            <a href="https://huggingface.co/MeiGen-AI/GenEvolve">Model</a>
+            <a href="https://huggingface.co/datasets/MeiGen-AI/GenEvolve-Data-Bench">Dataset</a>
+          </div>
+        </div>
+      </article>
       <article class="timeline-row">
         <div class="timeline-meta">
           <span class="meta-date">Feb 2026</span>

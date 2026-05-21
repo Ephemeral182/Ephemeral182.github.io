@@ -1,1 +1,6 @@
 /jarvisevo-main/
+.bundle/
+Gemfile
+Gemfile.lock
+vendor/
+_site/

@@ -46,7 +46,7 @@ title: Research Atlas
     </div>
     <div class="paper-grid">
       <article class="paper-card">
-        <img src="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve" class="paper-image">
+        <img src="/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve" class="paper-image">
         <div class="paper-meta">Image Agents · arXiv 2026</div>
         <h3>GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
         <p>A self-evolving image-generation agent that retrieves evidence, selects visual references, and distills structured visual experience to improve tool-orchestrated generation.</p>

@@ -7,13 +7,15 @@ title: Publications
 <div class="pub-container">
   <section class="intro">
     <div class="intro-text">
-      <p class="eyebrow">Research Snapshot</p>
-      <h1>Visual Frontiers & Generative Intelligence</h1>
-      <p>My research lies at the intersection of <strong>Generative Models and Reward Modeling</strong>, <strong>Autonomous Agents</strong>, and <strong>Visual Perception</strong>. I build generalized frameworks like <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>GenEvolve</strong> to redefine artistic creation, design reward models for human-aligned generation <strong>PosterReward</strong>, and empower agents with reasoning capabilities for open-world understanding.</p>
+      <p class="eyebrow">§ Publications — Research Snapshot</p>
+      <h1>Agentic Reasoning &amp; <em>Unified Vision Models</em></h1>
+      <p>My research centers on <strong>Multi-modal Agentic RL</strong>, <strong>Unified Models</strong>, and <strong>Reward Modeling</strong> — designing large-scale <em>post-training</em> recipes that align unified generation models with human preferences, and building agents that reason, retrieve, and self-evolve by interacting with real-world tools and visual experience. My work has long lived in <strong>visual generation</strong>: <strong>GenEvolve</strong> pushes agentic visual reasoning over unified models; <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>PosterReward</strong> turn unified generation and reward-driven post-training into dependable creative tools.</p>
       <div class="intro-tags">
-        <span>Generative model</span>
+        <span>Agentic RL</span>
+        <span>Unified Models</span>
         <span>Reward Modeling</span>
-        <span>Vision Agents</span>
+        <span>Post-training</span>
+        <span>Image Generation</span>
       </div>
     </div>
     <div class="intro-counters">
@@ -34,13 +36,13 @@ title: Publications
 
   <section class="highlight-block">
     <div class="section-header">
-      <h2>Highlight Research</h2>
+      <h2>Highlight <em>Research</em></h2>
     </div>
 
     <div class="highlight-list">
       <article class="highlight-card">
         <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve teaser">
+          <img src="/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve teaser">
           <span class="badge badge-cyan">arXiv 2026</span>
         </div>
         <div class="highlight-content">
@@ -48,10 +50,10 @@ title: Publications
           <p class="authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu✉️</p>
           <p class="summary">A self-evolving image-generation agent that orchestrates external search, visual references, and generation knowledge into prompt-reference programs, then improves through tool-orchestrated visual experience distillation.</p>
           <div class="resource-list">
-            <a href="https://ephemeral182.github.io/GenEvolve/">🌐 Project</a>
-            <a href="https://github.com/MeiGen-AI/GenEvolve" target="_blank" rel="noopener">🐙 GitHub</a>
-            <a href="https://huggingface.co/MeiGen-AI/GenEvolve">🤗 Model</a>
-            <a href="https://huggingface.co/datasets/MeiGen-AI/GenEvolve-Data-Bench">🤗 Dataset</a>
+            <a href="https://ephemeral182.github.io/GenEvolve/">Project</a>
+            <a href="https://github.com/MeiGen-AI/GenEvolve" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://huggingface.co/MeiGen-AI/GenEvolve">Model</a>
+            <a href="https://huggingface.co/datasets/MeiGen-AI/GenEvolve-Data-Bench">Dataset</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=GenEvolve&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="GenEvolve GitHub Star"></iframe>
             </span>
@@ -70,12 +72,12 @@ title: Publications
         <div class="highlight-content">
           <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. ✨ Your intelligent assistant for high-quality aesthetic poster creation!</p>
+          <p class="summary">One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. Your intelligent assistant for high-quality aesthetic poster creation!</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2602.12127">📄 PDF</a>
-            <a href="https://ephemeral182.github.io/PosterOmni/">🌐 Project</a>
-            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">🤗 Model</a>
-            <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://arxiv.org/abs/2602.12127">PDF</a>
+            <a href="https://ephemeral182.github.io/PosterOmni/">Project</a>
+            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">Model</a>
+            <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
             </span>
@@ -96,8 +98,8 @@ title: Publications
           <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
           <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on a automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
           <div class="resource-list">
-            <a href="https://alexlai2860.github.io/PosterReward/">🌐 Project</a>
-            <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://alexlai2860.github.io/PosterReward/">Project</a>
+            <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
@@ -110,14 +112,14 @@ title: Publications
         <div class="highlight-content">
           <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". ✨ From your prompts to high-quality aesthetic posters!</p>
+          <p class="summary">A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". From your prompts to high-quality aesthetic posters!</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2506.10741">📄 PDF</a>
-            <a href="https://ephemeral182.github.io/PosterCraft/">🌐 Project</a>
-            <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">🚀 Demo</a>
-            <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">🤗 Model</a>
-            <a href="https://huggingface.co/PosterCraft">🤗 Dataset</a>
-            <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://arxiv.org/abs/2506.10741">PDF</a>
+            <a href="https://ephemeral182.github.io/PosterCraft/">Project</a>
+            <a href="https://huggingface.co/spaces/Ephemeral182/PosterCraft">Demo</a>
+            <a href="https://huggingface.co/PosterCraft/PosterCraft-v1_RL">Model</a>
+            <a href="https://huggingface.co/PosterCraft">Dataset</a>
+            <a href="https://github.com/Ephemeral182/PosterCraft" target="_blank" rel="noopener">GitHub</a>
             <span class="gh-btn-wrap">
               <iframe src="https://ghbtns.com/github-btn.html?user=Ephemeral182&repo=PosterCraft&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterCraft GitHub Star"></iframe>
             </span>
@@ -138,11 +140,11 @@ title: Publications
           <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
           <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2504.04158">📄 PDF</a>
-            <a href="https://cvpr2025-jarvisir.github.io/">🌐 Project</a>
-            <a href="https://huggingface.co/spaces/LYL1015/JarvisIR">🚀 Demo</a>
-            <a href="https://huggingface.co/LYL1015/JarvisIR">🤗 Model</a>
-            <a href="https://github.com/LYL1015/JarvisIR" target="_blank" rel="noopener">🐙 GitHub</a>
+            <a href="https://arxiv.org/abs/2504.04158">PDF</a>
+            <a href="https://cvpr2025-jarvisir.github.io/">Project</a>
+            <a href="https://huggingface.co/spaces/LYL1015/JarvisIR">Demo</a>
+            <a href="https://huggingface.co/LYL1015/JarvisIR">Model</a>
+            <a href="https://github.com/LYL1015/JarvisIR" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
@@ -151,7 +153,7 @@ title: Publications
 
   <section class="timeline-block">
     <div class="timeline-heading">
-      <h2>Selected Publications</h2>
+      <h2>Selected <em>Publications</em></h2>
     </div>
     <div class="timeline-list">
       <article class="timeline-row">
@@ -177,7 +179,7 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[CVPR 2026]</span> PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
-          <p>One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. ✨ Your intelligent assistant for high-quality aesthetic poster creation!</p>
+          <p>One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. Your intelligent assistant for high-quality aesthetic poster creation!</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterOmni/">Project Page</a>
             <a href="https://arxiv.org/abs/2602.12127">Paper</a>
@@ -207,7 +209,7 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICLR 2026]</span> PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
-          <p>A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". ✨ From your prompts to high-quality aesthetic posters!</p>
+          <p>A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". From your prompts to high-quality aesthetic posters!</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
             <a href="https://arxiv.org/abs/2506.10741">Paper</a>
@@ -428,169 +430,284 @@ title: Publications
 </div>
 
 <style>
-/* Specific background adjustment for publications page */
-body::before {
-    filter: saturate(0.9) brightness(1.1) !important;
-    opacity: 0.3 !important;
+/* ============================================================
+   Publications — 杂志风（与首页一致）
+   ============================================================ */
+.pub-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 56px) 96px;
+  color: var(--ink);
+  font-family: var(--font-sans);
 }
 
-.pub-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  color: #0f172a;
-}
+/* ---------- Intro / Hero ---------- */
 .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.85rem;
-  margin: 0;
-  color: #d73030;
+  color: var(--accent);
+  margin: 0 0 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
-.eyebrow.accent {color: #c4002f;}
+.eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  display: inline-block;
+}
+
 .intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  padding: clamp(40px, 6vw, 72px) 0 clamp(36px, 5vw, 56px);
+  border-bottom: 1px solid var(--rule);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.intro-text { min-width: 0; }
+.intro-text h1 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+.intro-text h1 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+.intro-text p {
+  font-family: var(--font-serif);
+  font-size: clamp(16.5px, 1.2vw, 18px);
+  line-height: 1.62;
+  color: var(--ink-2);
+  margin: 0 0 18px;
+  max-width: 640px;
+  letter-spacing: -0.003em;
+}
+.intro-text p strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.intro-tags {
+  margin-top: 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2.5rem;
-  border-radius: 32px;
-  background: #f8fafc;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
-}
-.intro-text {flex: 1 1 360px;}
-.intro-text h1 {margin: 0.4rem 0 1rem; font-size: 2.4rem;}
-.intro-tags {
-  margin-top: 1.5rem;
+  gap: 6px;
 }
 .intro-tags span {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  background: rgba(99, 102, 241, 0.08);
-  color: #6366f1;
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  margin: 0 0.5rem 0.5rem 0;
-  font-size: 0.85rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  background: transparent;
+  color: var(--ink-3);
+  border: 1px solid var(--rule);
+  margin: 0;
+  transition: all 0.18s ease;
 }
 .intro-tags span:hover {
-  background: rgba(99, 102, 241, 0.15);
-  transform: translateY(-1px);
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: none;
+  background: transparent;
 }
-.intro-counters {display: flex; flex: 1 1 260px; gap: 1rem;}
+
+.intro-counters {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
 .counter-card {
-  flex: 1;
-  background: white;
-  border-radius: 22px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  text-align: center;
-  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 14px;
+  flex: none;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid var(--rule-2);
+  text-align: left;
+  padding: 14px 0;
 }
-.counter-value {font-size: 2.1rem; font-weight: 700; color: #6366f1;}
-.counter-label {font-size: 0.9rem; color: #475569; margin-top: 0.4rem;}
-.section-header {margin: 3rem 0 1.5rem;}
+.counter-card:last-child { border-bottom: none; }
+.counter-value {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.counter-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0;
+}
+
+/* ---------- Section header ---------- */
+.section-header { margin: clamp(48px, 6vw, 72px) 0 28px; }
 .section-header h2,
 .timeline-heading h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-transform: none;
+  color: var(--ink);
   margin: 0;
-  font-size: 1.25rem;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #d73030;
-  font-weight: 600;
 }
-.highlight-list {display: flex; flex-direction: column; gap: 1.5rem;}
+.section-header h2 em,
+.timeline-heading h2 em {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* ---------- Highlight cards ---------- */
+.highlight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
 .highlight-card {
   position: relative;
-  display: flex;
-  align-items: stretch;
-  gap: 1.8rem;
-  padding: 1.6rem 1.8rem 1.6rem 2.8rem;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(15, 23, 42, 0.05);
-  box-shadow: 0 25px 65px rgba(15, 23, 42, 0.12);
-  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 26px 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--rule-2);
+  box-shadow: none;
+  backdrop-filter: none;
   overflow: visible;
+  transition: background 0.15s ease;
 }
-.highlight-card::before {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 18px;
-  bottom: 18px;
-  width: 10px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, #a855f7, #6366f1);
-  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
-}
-.highlight-card::after {
-  content: '';
-  position: absolute;
-  left: -12px;
-  top: 10px;
-  bottom: 10px;
-  width: 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(168, 85, 247, 0.16), rgba(99, 102, 241, 0.12));
-  filter: blur(5px);
-  z-index: -1;
-}
+.highlight-card:hover { background: var(--paper-2); }
+.highlight-card::before,
+.highlight-card::after { display: none; }
+
 .highlight-media {
-  flex: 0 0 280px;
+  flex: none;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+  min-height: 160px;
 }
 .highlight-media img {
   width: 100%;
   height: auto;
-  max-height: 220px;
+  max-height: 320px;
   object-fit: contain;
-  border-radius: 22px;
-  background: #fff;
-  padding: 0.35rem;
+  border-radius: 0;
+  background: var(--paper-2);
+  padding: 6px;
+  display: block;
 }
 .badge {
   position: absolute;
-  top: -8px; left: -12px;
-  padding: 0.3rem 0.8rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
+  top: 10px;
+  left: 10px;
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: #fff;
+  background: var(--ink);
+  border: none;
 }
-.badge-blue {background: #2563eb;}
-.badge-green {background: #16a34a;}
-.badge-cyan {background: #0ea5e9;}
-.badge-purple {background: #9333ea;}
+.badge-blue   { background: var(--ink); }
+.badge-green  { background: var(--ink); }
+.badge-cyan   { background: var(--accent); }
+.badge-purple { background: var(--ink); }
+
+.highlight-content { min-width: 0; }
 .highlight-content h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1.15rem;
-  line-height: 1.35;
-  font-weight: 700;
-  white-space: normal;
+  font-family: var(--font-serif);
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.012em;
 }
-.authors {margin: 0 0 0.6rem; font-size: 0.85rem; color: #475569;}
-.summary {margin: 0; font-size: 0.95rem; color: #1e293b;}
+.authors {
+  font-family: var(--font-sans);
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  color: var(--ink-3);
+  line-height: 1.5;
+}
+.summary {
+  font-family: var(--font-serif);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  letter-spacing: -0.003em;
+}
+
 .resource-list {
-  margin-top: 0.8rem;
+  margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 4px 14px;
   align-items: center;
 }
 .resource-list a {
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none;
-  color: #6366f1;
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  padding: 1px 1px;
+  transition: background 0.15s, color 0.15s;
 }
-.resource-list a:hover {text-decoration: underline;}
+.resource-list a:hover {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
 .gh-btn-wrap {
   display: inline-flex;
   align-items: center;
@@ -598,86 +715,150 @@ body::before {
   border: none;
   background: transparent;
 }
-.gh-btn-wrap iframe {border: none;}
-.timeline-block {margin-top: 4rem;}
-.timeline-heading {margin-bottom: 1rem;}
-.timeline-list {border-top: 2px solid #e5e7eb;}
-.timeline-row {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1.6rem 0;
-  border-bottom: 1px solid #e5e7eb;
+.gh-btn-wrap iframe { border: none; }
+
+/* ---------- Timeline (Selected Publications) ---------- */
+.timeline-block { margin-top: clamp(48px, 6vw, 80px); }
+.timeline-heading { margin-bottom: 28px; }
+
+.timeline-list {
+  border-top: 1px solid var(--rule);
 }
+.timeline-row {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 28px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule-2);
+  align-items: baseline;
+  transition: background 0.15s ease;
+}
+.timeline-row:hover { background: var(--paper-2); }
 .timeline-meta {
-  min-width: 150px;
-  text-align: right;
+  min-width: 0;
+  text-align: left;
+  font-family: var(--font-mono);
 }
 .meta-type {
   display: block;
-  font-size: 0.8rem;
+  font-size: 9.5px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #9ca3af;
+  letter-spacing: 0.08em;
+  color: var(--ink-4);
+  margin-bottom: 4px;
 }
 .meta-date {
-  margin-top: 0.3rem;
-  font-weight: 600;
-  color: #111827;
+  margin-top: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ink-3);
 }
-.timeline-body h3 {margin: 0 0 0.35rem; font-size: 1.25rem;}
+
+.timeline-body { min-width: 0; }
+.timeline-body h3 {
+  font-family: var(--font-serif);
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.012em;
+}
 .timeline-body .pub-prefix {
-  color: #6366f1;
-  font-weight: 700;
-  margin-right: 0.4rem;
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 8px;
+  vertical-align: 0.1em;
 }
 .timeline-authors {
-  margin: 0.2rem 0 0.35rem;
-  font-size: 0.9rem;
-  color: #6b7280;
+  font-family: var(--font-sans);
+  margin: 4px 0 6px;
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.5;
 }
-.timeline-body p {margin: 0; color: #475569;}
+.timeline-body p {
+  font-family: var(--font-serif);
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
 .resource-inline {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  color: #b91c1c;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--ink-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
 }
 .resource-inline a {
-  color: #b91c1c;
+  font-family: var(--font-mono);
+  color: var(--ink);
   font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none;
+  border-bottom: 1px solid var(--accent);
+  padding: 1px 1px;
+  transition: background 0.15s, color 0.15s;
+}
+.resource-inline a:hover {
+  background: var(--accent);
+  color: #fff;
 }
 .resource-inline a + a::before {
-  content: " | ";
-  color: #b91c1c;
+  content: '';
+  margin: 0;
+  color: transparent;
 }
 
-/* Author Name Highlight Effect */
+/* ---------- Author name highlight (subtle) ---------- */
 .authors strong,
 .timeline-authors strong {
-  display: inline-block;
-  background: #6366f1;
-  color: white;
-  padding: 1px 10px;
-  border-radius: 12px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
-  transition: all 0.3s ease;
-  margin: 0 2px;
+  display: inline;
+  background: transparent;
+  color: var(--ink);
+  padding: 0;
+  border-radius: 0;
+  font-weight: 700;
+  box-shadow: none;
+  transition: none;
+  margin: 0;
+  border-bottom: 1.5px solid var(--accent);
 }
-
 .authors strong:hover,
 .timeline-authors strong:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(99, 102, 241, 0.4);
-  background: #4f46e5;
+  transform: none;
+  box-shadow: none;
+  background: var(--accent);
+  color: #fff;
 }
 
 @media (max-width: 900px) {
-  .intro {flex-direction: column;}
-  .intro-counters {width: 100%;}
-  .highlight-card {flex-direction: column;}
-  .highlight-media {width: 100%;}
-  .timeline-row {flex-direction: column;}
-  .timeline-meta {text-align: left;}
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .intro-counters { width: 100%; }
+  .highlight-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .highlight-media { width: 100%; }
+  .highlight-media img { max-height: 240px; }
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .timeline-meta { text-align: left; }
 }
 </style>

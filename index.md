@@ -88,7 +88,7 @@ layout: fancy_home
         <article class="industry-card is-now">
             <header class="industry-card-head">
                 <span class="industry-status"><span class="industry-dot"></span>Active · Now</span>
-                <span class="industry-date">Aug 2025 — Present</span>
+                <span class="industry-date">May 2026 — Present</span>
             </header>
             <div class="industry-card-body">
                 <h3 class="industry-card-title">
@@ -107,7 +107,7 @@ layout: fancy_home
         <article class="industry-card">
             <header class="industry-card-head">
                 <span class="industry-status industry-status-past">Previously</span>
-                <span class="industry-date">2024 — Jul 2025</span>
+                <span class="industry-date">Apr 2025 — May 2026</span>
             </header>
             <div class="industry-card-body">
                 <h3 class="industry-card-title">

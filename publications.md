@@ -50,6 +50,7 @@ title: Publications
           <p class="authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu✉️</p>
           <p class="summary">A self-evolving image-generation agent that orchestrates external search, visual references, and generation knowledge into prompt-reference programs, then improves through tool-orchestrated visual experience distillation.</p>
           <div class="resource-list">
+            <a href="https://arxiv.org/abs/2605.21605">PDF</a>
             <a href="https://ephemeral182.github.io/GenEvolve/">Project</a>
             <a href="https://github.com/MeiGen-AI/GenEvolve" target="_blank" rel="noopener">GitHub</a>
             <a href="https://huggingface.co/MeiGen-AI/GenEvolve">Model</a>
@@ -165,6 +166,7 @@ title: Publications
           <p class="timeline-authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu</p>
           <p>A self-evolving image-generation agent that orchestrates search, visual references, and internal generation knowledge into prompt-reference programs, learning better tool use through visual experience distillation.</p>
           <div class="resource-inline">
+            <a href="https://arxiv.org/abs/2605.21605">Paper</a>
             <a href="https://ephemeral182.github.io/GenEvolve/">Project Page</a>
             <a href="https://github.com/MeiGen-AI/GenEvolve">Code</a>
             <a href="https://huggingface.co/MeiGen-AI/GenEvolve">Model</a>

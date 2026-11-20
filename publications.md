@@ -8,14 +8,15 @@ title: Publications
   <section class="intro">
     <div class="intro-text">
       <p class="eyebrow">§ Publications — Research Snapshot</p>
-      <h1>Agentic Reasoning &amp; <em>Unified Vision Models</em></h1>
-      <p>My research centers on <strong>Multi-modal Agentic RL</strong>, <strong>Unified Models</strong>, and <strong>Reward Modeling</strong> — designing large-scale <em>post-training</em> recipes that align unified generation models with human preferences, and building agents that reason, retrieve, and self-evolve by interacting with real-world tools and visual experience. My work has long lived in <strong>visual generation</strong>: <strong>GenEvolve</strong> pushes agentic visual reasoning over unified models; <strong>PosterCraft</strong>, <strong>PosterOmni</strong>, and <strong>PosterReward</strong> turn unified generation and reward-driven post-training into dependable creative tools.</p>
+      <h1>Multimodal Agents &amp; <em>Coding</em></h1>
+      <p>My research focuses on <strong>Multimodal Agents</strong> and <strong>Generative Models</strong>, with an emphasis on <strong>Multimodal Coding</strong>, <strong>Computer Use</strong>, and <strong>Verifiable Feedback</strong>. My work spans multimodal coding, rubric-based reward modeling, and visual generation. I have contributed to projects including <strong>HunyuanImage 3.5</strong>, <strong>GenEvolve</strong>, <strong>JarvisHub</strong>, <strong>DeepSearch-World</strong>, <strong>Trinity</strong>, and <strong>PosterCraft</strong>. Across these efforts, I aim to connect perception, reasoning, coding, and computer use, while exploring physical AI to extend agent capabilities from digital environments into the physical world.</p>
       <div class="intro-tags">
-        <span>Agentic RL</span>
-        <span>Unified Models</span>
-        <span>Reward Modeling</span>
+        <span>Multimodal Agents</span>
+        <span>Multimodal Coding</span>
+        <span>Computer-use Agents</span>
+        <span>Reward &amp; Verification</span>
         <span>Post-training</span>
-        <span>Image Generation</span>
+        <span>Agent Learning</span>
       </div>
     </div>
     <div class="intro-counters">
@@ -24,7 +25,7 @@ title: Publications
         <div class="counter-label">CVPR / ICCV / ECCV</div>
       </div>
       <div class="counter-card">
-        <div class="counter-value">2</div>
+        <div class="counter-value">3</div>
         <div class="counter-label">NeurIPS / ICLR / ICML</div>
       </div>
       <div class="counter-card">
@@ -42,8 +43,24 @@ title: Publications
     <div class="highlight-list">
       <article class="highlight-card">
         <div class="highlight-media">
+          <img src="/images/hunyuan-image35-preview.png" alt="Hy Image3.5 Preview release artwork and brand mark">
+          <span class="badge badge-cyan">Preview 2026</span>
+        </div>
+        <div class="highlight-content">
+          <h3>HunyuanImage 3.5 (Preview)</h3>
+          <p class="authors">Tencent Hunyuan</p>
+          <p class="summary">Released in September 2026. An image generation and editing model with SOTA-level performance, supporting text-to-image generation, reference-based generation, and multi-turn editing.</p>
+          <div class="resource-list">
+            <a href="https://cloud.tencent.com/document/product/1823/135745">Official Documentation</a>
+            <a href="https://finance.sina.com.cn/roll/2026-09-22/doc-inissitf7049858.shtml">Release &amp; Evaluation</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="highlight-card">
+        <div class="highlight-media">
           <img src="/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve teaser">
-          <span class="badge badge-cyan">arXiv 2026</span>
+          <span class="badge badge-cyan">NeurIPS 2026</span>
         </div>
         <div class="highlight-content">
           <h3>GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
@@ -65,42 +82,65 @@ title: Publications
         </div>
       </article>
 
-      <article class="highlight-card">
+      <article class="highlight-card" id="deepsearch-world">
         <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni teaser">
-          <span class="badge badge-cyan">CVPR 2026</span>
+          <img src="/images/deepsearch-world-paper.png" alt="DeepSearch-World paper: verified self-evolving distillation overview">
+          <span class="badge badge-cyan">arXiv 2026</span>
         </div>
         <div class="highlight-content">
-          <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
-          <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Hengyu Shi*, Zhongying Liu*, Tian Ye, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">One model for poster creation—unifying local edits and global design for generalized multi-task image/poster-to-poster generation. Your intelligent assistant for high-quality aesthetic poster creation!</p>
+          <h3>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3>
+          <p class="authors">Xinyu Geng*, Xuanhua He*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p class="summary">A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2602.12127">PDF</a>
-            <a href="https://ephemeral182.github.io/PosterOmni/">Project</a>
-            <a href="https://huggingface.co/MeiGen-AI/PosterOmni_v1">Model</a>
-            <a href="https://github.com/MeiGen-AI/PosterOmni" target="_blank" rel="noopener">GitHub</a>
-            <span class="gh-btn-wrap">
-              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=star&count=true&size=small" frameborder="0" scrolling="0" width="100" height="20" title="PosterOmni GitHub Star"></iframe>
-            </span>
-            <span class="gh-btn-wrap">
-              <iframe src="https://ghbtns.com/github-btn.html?user=MeiGen-AI&repo=PosterOmni&type=fork&count=true&size=small" frameborder="0" scrolling="0" width="98" height="20" title="PosterOmni GitHub Fork"></iframe>
-            </span>
+            <a href="https://arxiv.org/abs/2607.07820">Paper</a>
+            <a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env">Dataset</a>
           </div>
         </div>
       </article>
 
-      <article class="highlight-card">
+      <article class="highlight-card" id="jarvishub">
         <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/images/posterreward/teaser2.png" alt="PosterReward">
-          <span class="badge badge-cyan">CVPR 2026</span>
+          <img src="/images/jarvishub-paper.png" alt="JarvisHub paper: canvas-native creative agent harness overview">
+          <span class="badge badge-cyan">arXiv 2026</span>
         </div>
         <div class="highlight-content">
-          <h3>PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
-          <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
-          <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on a automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
+          <h3>JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</h3>
+          <p class="authors">Yunlong Lin, Zixu Lin, Zhaohu Xing, …, <strong>Sixiang Chen</strong>, et al.</p>
+          <p class="summary">A canvas-native harness that represents artifacts, dependencies, versions, and feedback as persistent project state, supporting inspectable planning, tool use, revision, and recovery across interactions.</p>
           <div class="resource-list">
-            <a href="https://alexlai2860.github.io/PosterReward/">Project</a>
-            <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://arxiv.org/abs/2607.23588">Paper</a>
+            <a href="https://www.jarvishub.site/">Project</a>
+            <a href="https://github.com/LYL1015/JarvisHub">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="highlight-card" id="trinity">
+        <div class="highlight-media">
+          <img src="/images/trinity-paper.png" alt="Trinity paper Figure 1: professional graphic design outputs">
+          <span class="badge badge-cyan">Code-Driven Agents</span>
+        </div>
+        <div class="highlight-content">
+          <h3>Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic Design Creation</h3>
+          <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p class="summary">A code-driven multi-agent framework for professional graphic design creation, connecting design instructions with programmatic construction of visual artifacts.</p>
+          <div class="resource-list">
+            <a href="https://openreview.net/forum?id=r4tXmY8RcN">Paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="highlight-card" id="jarvisvid">
+        <div class="highlight-media">
+          <img src="/images/jarvisvid-paper.png" alt="JarvisVid comparison of one-step, workflow-based, and closed-loop agentic video generation">
+          <span class="badge badge-cyan">Video Agents</span>
+        </div>
+        <div class="highlight-content">
+          <h3>JarvisVid: Agentic Video Storytelling via Closed-Loop Trajectory Planning</h3>
+          <p class="authors">Zhaohu Xing*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p class="summary">An agentic approach to video storytelling through closed-loop trajectory planning, extending the focus from individual images to long-horizon video creation.</p>
+          <div class="resource-list">
+            <a href="https://openreview.net/forum?id=OICnFEqMlM">Paper</a>
           </div>
         </div>
       </article>
@@ -113,7 +153,7 @@ title: Publications
         <div class="highlight-content">
           <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu✉️</p>
-          <p class="summary">A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". From your prompts to high-quality aesthetic posters!</p>
+          <p class="summary">A framework for aesthetic poster creation that combines visual generation with rubric-guided evaluation and post-training feedback.</p>
           <div class="resource-list">
             <a href="https://arxiv.org/abs/2506.10741">PDF</a>
             <a href="https://ephemeral182.github.io/PosterCraft/">Project</a>
@@ -133,19 +173,16 @@ title: Publications
 
       <article class="highlight-card">
         <div class="highlight-media">
-          <img src="https://ephemeral182.github.io/images/cvpr25_jarvisir.png" alt="JarvisIR">
-          <span class="badge badge-cyan">CVPR 2025</span>
+          <img src="https://ephemeral182.github.io/images/posterreward/teaser2.png" alt="PosterReward">
+          <span class="badge badge-cyan">CVPR 2026</span>
         </div>
         <div class="highlight-content">
-          <h3>JarvisIR — Elevating Autonomous Driving Perception with Intelligent Image Restoration</h3>
-          <p class="authors">Yunlong Lin*, Zixu Lin*, Haoyu Chen*, Panwang Pan*, Chenxin Li, <strong>Sixiang Chen</strong>, Kairun Wen, Yeying Jin, Wenbo Li, Xinghao Ding✉️</p>
-          <p class="summary">A multimodal agent reasons about adverse scenes, calling specialized restoration experts to stabilize perception stacks for autonomous vehicles.</p>
+          <h3>PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
+          <p class="authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu✉️</p>
+          <p class="summary">A comprehensive reward model for design aesthetics and typography, trained on an automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2504.04158">PDF</a>
-            <a href="https://cvpr2025-jarvisir.github.io/">Project</a>
-            <a href="https://huggingface.co/spaces/LYL1015/JarvisIR">Demo</a>
-            <a href="https://huggingface.co/LYL1015/JarvisIR">Model</a>
-            <a href="https://github.com/LYL1015/JarvisIR" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://alexlai2860.github.io/PosterReward/">Project</a>
+            <a href="https://github.com/MeiGen-AI/PosterReward" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
@@ -159,10 +196,25 @@ title: Publications
     <div class="timeline-list">
       <article class="timeline-row">
         <div class="timeline-meta">
-          <span class="meta-date">May 2026</span>
+          <span class="meta-date">Sept 2026</span>
         </div>
         <div class="timeline-body">
-          <h3><span class="pub-prefix">[arXiv 2026]</span> GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
+          <h3><span class="pub-prefix">[Model Release]</span> HunyuanImage 3.5 (Preview)</h3>
+          <p class="timeline-authors">Tencent Hunyuan</p>
+          <p>An image generation and editing model with SOTA-level performance, supporting text-to-image generation, reference-based generation, and multi-turn editing.</p>
+          <div class="resource-inline">
+            <a href="https://cloud.tencent.com/document/product/1823/135745">Official Documentation</a>
+            <a href="https://finance.sina.com.cn/roll/2026-09-22/doc-inissitf7049858.shtml">Release &amp; Evaluation</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="timeline-row">
+        <div class="timeline-meta">
+          <span class="meta-date">Sept 2026</span>
+        </div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[NeurIPS 2026]</span> GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
           <p class="timeline-authors"><strong>Sixiang Chen</strong>, Zhaohu Xing, Tian Ye, Xinyu Geng, Yunlong Lin, Jianyu Lai, Xuanhua He, Fuxiang Zhai, Jialin Gao, Lei Zhu</p>
           <p>A self-evolving image-generation agent that orchestrates search, visual references, and internal generation knowledge into prompt-reference programs, learning better tool use through visual experience distillation.</p>
           <div class="resource-inline">
@@ -171,6 +223,53 @@ title: Publications
             <a href="https://github.com/MeiGen-AI/GenEvolve">Code</a>
             <a href="https://huggingface.co/MeiGen-AI/GenEvolve">Model</a>
             <a href="https://huggingface.co/datasets/MeiGen-AI/GenEvolve-Data-Bench">Dataset</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta"><span class="meta-date">Jul 2026</span></div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[arXiv 2026]</span> DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3>
+          <p class="timeline-authors">Xinyu Geng*, Xuanhua He*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p>A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
+          <div class="resource-inline">
+            <a href="https://arxiv.org/abs/2607.07820">Paper</a>
+            <a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env">Dataset</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta"><span class="meta-date">Jul 2026</span></div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[arXiv 2026]</span> JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</h3>
+          <p class="timeline-authors">Yunlong Lin, Zixu Lin, Zhaohu Xing, …, <strong>Sixiang Chen</strong>, et al.</p>
+          <p>A canvas-native harness that represents artifacts, dependencies, versions, and feedback as persistent project state, supporting inspectable planning, tool use, revision, and recovery across interactions.</p>
+          <div class="resource-inline">
+            <a href="https://arxiv.org/abs/2607.23588">Paper</a>
+            <a href="https://www.jarvishub.site/">Project</a>
+            <a href="https://github.com/LYL1015/JarvisHub">Code</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta"><span class="meta-date">2026</span></div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[Code-Driven Agents]</span> Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic Design Creation</h3>
+          <p class="timeline-authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p>A code-driven multi-agent framework for professional graphic design creation, connecting design instructions with programmatic construction of visual artifacts.</p>
+          <div class="resource-inline">
+            <a href="https://openreview.net/forum?id=r4tXmY8RcN">Paper</a>
+          </div>
+        </div>
+      </article>
+      <article class="timeline-row">
+        <div class="timeline-meta"><span class="meta-date">2026</span></div>
+        <div class="timeline-body">
+          <h3><span class="pub-prefix">[Video Agents]</span> JarvisVid: Agentic Video Storytelling via Closed-Loop Trajectory Planning</h3>
+          <p class="timeline-authors">Zhaohu Xing*, <strong>Sixiang Chen*</strong>, et al.</p>
+          <p>An agentic approach to video storytelling through closed-loop trajectory planning, extending the focus from individual images to long-horizon video creation.</p>
+          <div class="resource-inline">
+            <a href="https://openreview.net/forum?id=OICnFEqMlM">Paper</a>
           </div>
         </div>
       </article>
@@ -197,7 +296,7 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[CVPR 2026]</span> PosterReward: Unlocking Accurate Evaluation for High-Quality Graphic Design Generation</h3>
           <p class="timeline-authors">Jianyu Lai*, <strong>Sixiang Chen*</strong>, Jialin Gao*, Hengyu Shi, Zhongying Liu, Fuxiang Zhai, Junfeng Luo, Xiaoming Wei, Lujia Wang, Lei Zhu</p>
-          <p>A comprehensive reward model for design aesthetics and typography, trained on automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
+          <p>A comprehensive reward model for design aesthetics and typography, trained on an automated preference dataset to unlock accurate evaluation for high-quality graphic design generation.</p>
           <div class="resource-inline">
             <a href="https://alexlai2860.github.io/PosterReward/">Project Page</a>
             <a href="https://github.com/MeiGen-AI/PosterReward">Code</a>
@@ -211,7 +310,7 @@ title: Publications
         <div class="timeline-body">
           <h3><span class="pub-prefix">[ICLR 2026]</span> PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
           <p class="timeline-authors"><strong>Sixiang Chen*</strong>, Jianyu Lai*, Jialin Gao*, Tian Ye, Haoyu Chen, Hengyu Shi, Shitong Shao, Yunlong Lin, Song Fei, Zhaohu Xing, Yeying Jin, Junfeng Luo, Xiaoming Wei, Lei Zhu</p>
-          <p>A new framework for "Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework". From your prompts to high-quality aesthetic posters!</p>
+          <p>A framework for aesthetic poster creation that combines visual generation with rubric-guided evaluation and post-training feedback.</p>
           <div class="resource-inline">
             <a href="https://ephemeral182.github.io/PosterCraft/">Project Page</a>
             <a href="https://arxiv.org/abs/2506.10741">Paper</a>

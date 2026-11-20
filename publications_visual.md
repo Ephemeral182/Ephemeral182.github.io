@@ -7,12 +7,12 @@ title: Research Atlas
 <div class="pub-hero">
   <div class="hero-text">
     <p class="eyebrow">Curated Research Map</p>
-    <h1>Systems, Agents, and Low-Level Vision</h1>
-    <p>Three streams drive my current research. AIGC systems push structured creativity and self-evolving generation agents, vision-language agents reason over complex scenes, and low-level restoration builds the reliable backbone beneath both. The gallery below highlights representative works in each space.</p>
+    <h1>Multimodal Agents, Coding, and Visual Models</h1>
+    <p>My work connects multimodal agents, code-driven creation, and verifiable feedback. These projects span self-improving search agents, persistent agent runtimes, visual generation, and perception.</p>
     <div class="hero-tags">
-      <span>AIGC</span>
-      <span>Vision-Language Agents</span>
-      <span>Low-Level Restoration</span>
+      <span>Multimodal Coding</span>
+      <span>Multimodal Agents</span>
+      <span>Reward &amp; Verification</span>
     </div>
   </div>
   <div class="hero-notes">
@@ -22,7 +22,7 @@ title: Research Atlas
     </div>
     <div class="note-card">
       <div class="note-value">3</div>
-      <div class="note-label">Research axes<br>AIGC · VLM · Low-Level</div>
+      <div class="note-label">Research axes<br>Agents · Coding · Vision</div>
     </div>
     <div class="note-card">
       <div class="note-value">∞</div>
@@ -37,17 +37,17 @@ title: Research Atlas
       <div>
         <p class="eyebrow">AIGC Systems</p>
         <h2>Creative Generation Systems</h2>
-        <p>Unified workflows for controllable visual creation, combining tool-orchestrated agents, task distillation, reward modeling, and data curation.</p>
+        <p>Tool-driven workflows for controllable visual creation, combining tool-orchestrated agents, task distillation, reward modeling, and data curation.</p>
       </div>
       <div class="category-stat">
         <span class="stat-label">Flagship Venues</span>
-        <span class="stat-value">ICLR'26 · arXiv'26</span>
+        <span class="stat-value">ICLR'26 · NeurIPS'26</span>
       </div>
     </div>
     <div class="paper-grid">
       <article class="paper-card">
         <img src="/GenEvolve/static/images/teaser_genevolve.jpg" alt="GenEvolve" class="paper-image">
-        <div class="paper-meta">Image Agents · arXiv 2026</div>
+        <div class="paper-meta">Image Agents · NeurIPS 2026</div>
         <h3>GenEvolve — Self-Evolving Image Generation Agents via Tool-Orchestrated Visual Experience Distillation</h3>
         <p>A self-evolving image-generation agent that retrieves evidence, selects visual references, and distills structured visual experience to improve tool-orchestrated generation.</p>
         <div class="paper-links">
@@ -58,7 +58,7 @@ title: Research Atlas
       </article>
       <article class="paper-card">
         <img src="https://ephemeral182.github.io/images/posteromni/teaser_0209.jpg" alt="PosterOmni" class="paper-image">
-        <div class="paper-meta">Poster Design · arXiv 2026</div>
+        <div class="paper-meta">Poster Design · CVPR 2026</div>
         <h3>PosterOmni — Generalized Artistic Poster Creation via Task Distillation and Unified Reward Feedback</h3>
         <p>A generalist system that distills local editing, global layout, and reward feedback into a single controllable workflow with public demos and datasets.</p>
         <div class="paper-links">
@@ -69,7 +69,7 @@ title: Research Atlas
       </article>
       <article class="paper-card">
         <img src="https://ephemeral182.github.io/images/postercraft/pub/fig1.png" alt="PosterCraft" class="paper-image">
-        <div class="paper-meta">ICLR 2026 · Unified Diffusion</div>
+        <div class="paper-meta">ICLR 2026 · Poster Generation</div>
         <h3>PosterCraft — Rethinking High-Quality Aesthetic Poster Generation in a Unified Framework</h3>
         <p>Accepted by ICLR'26, PosterCraft couples layout planning and stylized diffusion to translate prompts directly into production-ready posters with consistent typography.</p>
         <div class="paper-links">
@@ -95,8 +95,8 @@ title: Research Atlas
     <div class="category-headline">
       <div>
         <p class="eyebrow">Vision-Language & Agents</p>
-        <h2>Reasoning-Centric Restoration Agents</h2>
-        <p>MLLMs and autonomous agents coordinate perception, planning, and feedback loops for adverse-weather driving and iterative data engines.</p>
+        <h2>Learning and Long-Horizon Agent Systems</h2>
+        <p>Self-distillation, persistent project state, and closed-loop planning support agents that learn from experience and carry out long-horizon work.</p>
       </div>
       <div class="category-stat">
         <span class="stat-label">Flagship Venues</span>
@@ -104,6 +104,30 @@ title: Research Atlas
       </div>
     </div>
     <div class="paper-grid">
+      <article class="paper-card">
+        <img style="object-fit: contain; background: #fff;" src="/images/deepsearch-world-paper.png" alt="DeepSearch-World paper: verified self-evolving distillation overview" class="paper-image">
+        <div class="paper-meta">arXiv 2026 · Self-Improving Search Agents</div>
+        <h3>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3><p>A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
+        <div class="paper-links"><a href="https://arxiv.org/abs/2607.07820" class="pill-link">Paper</a><a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env" class="pill-link">Dataset</a></div>
+      </article>
+      <article class="paper-card">
+        <img style="object-fit: contain; background: #fff;" src="/images/jarvishub-paper.png" alt="JarvisHub paper: canvas-native creative agent harness overview" class="paper-image">
+        <div class="paper-meta">arXiv 2026 · Agent Runtime / Harness</div>
+        <h3>JarvisHub: An Open Harness for Canvas-Native Multimodal Creative Agents</h3><p>A canvas-native harness that represents artifacts, dependencies, versions, and feedback as persistent project state, supporting inspectable planning, tool use, revision, and recovery across interactions.</p>
+        <div class="paper-links"><a href="https://arxiv.org/abs/2607.23588" class="pill-link">Paper</a><a href="https://www.jarvishub.site/" class="pill-link">Project</a><a href="https://github.com/LYL1015/JarvisHub" class="pill-link">Code</a></div>
+      </article>
+      <article class="paper-card">
+        <img style="object-fit: contain; background: #fff;" src="/images/trinity-paper.png" alt="Trinity paper Figure 1: professional graphic design outputs" class="paper-image">
+        <div class="paper-meta">Code-Driven Agents · Code-Driven Design Agents</div>
+        <h3>Trinity: A Code-Driven Multi-Agent Framework for Professional Graphic Design Creation</h3><p>A code-driven multi-agent framework for professional graphic design creation, connecting design instructions with programmatic construction of visual artifacts.</p>
+        <div class="paper-links"><a href="https://openreview.net/forum?id=r4tXmY8RcN" class="pill-link">Paper</a></div>
+      </article>
+      <article class="paper-card">
+        <img src="/images/jarvisvid-paper.png" alt="JarvisVid comparison of one-step, workflow-based, and closed-loop agentic video generation" class="paper-image" style="object-fit: contain; background: #fff;">
+        <div class="paper-meta">Video Agents · Closed-Loop Video Planning</div>
+        <h3>JarvisVid: Agentic Video Storytelling via Closed-Loop Trajectory Planning</h3><p>An agentic approach to video storytelling through closed-loop trajectory planning, extending the focus from individual images to long-horizon video creation.</p>
+        <div class="paper-links"><a href="https://openreview.net/forum?id=OICnFEqMlM" class="pill-link">Paper</a></div>
+      </article>
       <article class="paper-card">
         <img src="https://ephemeral182.github.io/images/cvpr_snowmaster.png" alt="SnowMaster" class="paper-image">
         <div class="paper-meta">CVPR 2025 · Multi-Model Feedback</div>

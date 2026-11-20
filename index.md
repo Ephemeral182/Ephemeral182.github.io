@@ -139,7 +139,7 @@ layout: fancy_home
             <div class="research-tags">
                 <span class="tag">GenEvolve <em>NeurIPS'26</em></span>
                 <span class="tag">JarvisHub</span>
-                <span class="tag">DeepSearch-World</span>
+                <span class="tag">DeepSearch-World <em>EMNLP'26</em></span>
                 <span class="tag">JarvisIR <em>CVPR'25</em></span>
                 <span class="tag">RestoreAgent <em>NeurIPS'24</em></span>
             </div>

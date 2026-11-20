@@ -106,9 +106,9 @@ title: Research Atlas
     <div class="paper-grid">
       <article class="paper-card">
         <img style="object-fit: contain; background: #fff;" src="/images/deepsearch-world-paper.png" alt="DeepSearch-World paper: verified self-evolving distillation overview" class="paper-image">
-        <div class="paper-meta">arXiv 2026 · Self-Improving Search Agents</div>
+        <div class="paper-meta">EMNLP 2026 · Self-Improving Search Agents</div>
         <h3>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3><p>A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
-        <div class="paper-links"><a href="https://arxiv.org/abs/2607.07820" class="pill-link">Paper</a><a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env" class="pill-link">Dataset</a></div>
+        <div class="paper-links"><a href="https://aclanthology.org/2026.emnlp-main.1117/" class="pill-link">Paper</a><a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env" class="pill-link">Dataset</a></div>
       </article>
       <article class="paper-card">
         <img style="object-fit: contain; background: #fff;" src="/images/jarvishub-paper.png" alt="JarvisHub paper: canvas-native creative agent harness overview" class="paper-image">

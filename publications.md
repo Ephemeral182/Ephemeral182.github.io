@@ -85,14 +85,14 @@ title: Publications
       <article class="highlight-card" id="deepsearch-world">
         <div class="highlight-media">
           <img src="/images/deepsearch-world-paper.png" alt="DeepSearch-World paper: verified self-evolving distillation overview">
-          <span class="badge badge-cyan">arXiv 2026</span>
+          <span class="badge badge-cyan">EMNLP 2026</span>
         </div>
         <div class="highlight-content">
           <h3>DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3>
           <p class="authors">Xinyu Geng*, Xuanhua He*, <strong>Sixiang Chen*</strong>, et al.</p>
           <p class="summary">A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
           <div class="resource-list">
-            <a href="https://arxiv.org/abs/2607.07820">Paper</a>
+            <a href="https://aclanthology.org/2026.emnlp-main.1117/">Paper</a>
             <a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env">Dataset</a>
           </div>
         </div>
@@ -229,11 +229,11 @@ title: Publications
       <article class="timeline-row">
         <div class="timeline-meta"><span class="meta-date">Jul 2026</span></div>
         <div class="timeline-body">
-          <h3><span class="pub-prefix">[arXiv 2026]</span> DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3>
+          <h3><span class="pub-prefix">[EMNLP 2026]</span> DeepSearch-World: Self-Distillation for Deep Search Agents in a Verifiable Environment</h3>
           <p class="timeline-authors">Xinyu Geng*, Xuanhua He*, <strong>Sixiang Chen*</strong>, et al.</p>
           <p>A reproducible web-search environment and self-distillation framework for learning from verified trajectories, progress checks, grounded reflection, and failure recovery.</p>
           <div class="resource-inline">
-            <a href="https://arxiv.org/abs/2607.07820">Paper</a>
+            <a href="https://aclanthology.org/2026.emnlp-main.1117/">Paper</a>
             <a href="https://huggingface.co/datasets/Ornamentt/DeepSearch-World-Env">Dataset</a>
           </div>
         </div>
